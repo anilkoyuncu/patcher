@@ -9,5 +9,4 @@ dependencies:
   - redis-py
   - scikit-learn
   - networkx=2.1
-  - tqdm
 
