@@ -27,6 +27,10 @@ if __name__ == '__main__':
 		print(output)
 		print(e)
 		print(join(ROOT_DIR, 'patches', patchName + spfile + '.txt'))
+		cmd = 'more '+join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
 		# g = Github("access_token")
 
 	except Exception as e:
