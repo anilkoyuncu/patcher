@@ -20,9 +20,9 @@ before_script:
     - export USE_CCACHE=1
     - conda env create -f environment.yml
     - conda activate fixminerEnv
-    - opam update
     - opam init -y
     - eval $(opam env)
+    - opam update 
     - opam install "coccinelle>=1.0.8" -y
     # - git submodule update --init
 #     - bash build_dependencies.sh
