@@ -12,8 +12,9 @@ if __name__ == '__main__':
 		sys.path.append(args.root)
 		files = args.job
 		print(files)
+		logging.info(files)
 		ROOT_DIR = args.root
-		cmd = 'spatch --sp-file ' + join(DATASET,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(pathManyBug,manybug,'patches',patchName) + ' > ' + join(pathManyBug, manybug, 'patches', patchName + spfile + '.txt')
+		# cmd = 'spatch --sp-file ' + join(DATASET,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(pathManyBug,manybug,'patches',patchName) + ' > ' + join(pathManyBug, manybug, 'patches', patchName + spfile + '.txt')
 
 	except Exception as e:
 		logging.error(e)
