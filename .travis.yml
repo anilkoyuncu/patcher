@@ -2,8 +2,11 @@ sudo: required
 dist: bionic
 language: python
 os: linux
-install: test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
-
+# install: test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
+addons:
+  homebrew:
+    packages:
+      - coccinelle
 # addons:
 #   apt:
 #     packages:
@@ -22,8 +25,8 @@ before_script:
     # - git submodule update --init
 #     - bash build_dependencies.sh
 script:
-    - bash -ex .travis-opam.sh
-    - opam install coccinelle
+    # - bash -ex .travis-opam.sh
+    # - opam install coccinelle
     - echo $TRAVIS_COMMIT_RANGE
     - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
     - echo $CHANGED_FILES
