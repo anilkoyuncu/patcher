@@ -24,5 +24,5 @@ script:
     - echo $CHANGED_FILES
     - spatch --version
     - conda activate fixminerEnv
-    - bash patcher.sh $CHANGED_FILES
+    - bash patcher.sh CHANGED_FILES
 #     - make build
