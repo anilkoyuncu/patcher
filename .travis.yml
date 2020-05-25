@@ -16,4 +16,5 @@ script:
     - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
     - echo $CHANGED_FILES
     - spatch --version
+    - bash patcher.sh $CHANGED_FILES
 #     - make build
