@@ -3,7 +3,7 @@ import logging
 import sys
 import gzip
 import numpy as np
-from tqdm import tqdm
+import tqdm
 import shutil
 import itertools
 
