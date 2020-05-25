@@ -23,7 +23,8 @@ before_script:
 #     - bash build_dependencies.sh
 script:
     # - bash -ex .travis-opam.sh
-    # - eval $(opam env)
+    - opam init -y
+    - eval $(opam env)
     - opam install coccinelle -y
     - echo $TRAVIS_COMMIT_RANGE
     - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
