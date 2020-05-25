@@ -1,5 +1,5 @@
 dist: bionic
-language: c
+language: python
 os: linux
 addons:
   apt:
@@ -9,6 +9,7 @@ before_script:
     - ccache --version
     - ccache --zero-stats
     - export USE_CCACHE=1
+    - conda env create -f environment.yml
     # - git submodule update --init
 #     - bash build_dependencies.sh
 script:
