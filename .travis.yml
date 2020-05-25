@@ -7,8 +7,7 @@ os: linux
 addons:
   apt:
     packages:
-      - ocaml
-      - coccinelle
+      - opam
 before_script:
     - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
     - bash miniconda.sh -b -p $HOME/miniconda
@@ -25,7 +24,7 @@ before_script:
 script:
     # - bash -ex .travis-opam.sh
     # - eval $(opam env)
-    # - opam install coccinelle -y
+    - opam install coccinelle -y
     - echo $TRAVIS_COMMIT_RANGE
     - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
     - echo $CHANGED_FILES
