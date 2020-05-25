@@ -1,5 +1,6 @@
 from common.commons import *
 
+from github import Github
 
 
 
@@ -25,6 +26,8 @@ if __name__ == '__main__':
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
+		print(join(ROOT_DIR, 'patches', patchName + spfile + '.txt'))
+		# g = Github("access_token")
 
 	except Exception as e:
 		logging.error(e)
