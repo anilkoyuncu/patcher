@@ -19,13 +19,15 @@ before_script:
     - export USE_CCACHE=1
     - conda env create -f environment.yml
     - conda activate fixminerEnv
-    - opam init --compiler=4.08.0 -y
+    - opam init --compiler=4.05.0 -y
+    - opam update 
     - eval $(opam env)
     - opam install "coccinelle>=1.0.8" -y
     # - git submodule update --init
 #     - bash build_dependencies.sh
 script:
     # - bash -ex .travis-opam.sh
+
     - echo $TRAVIS_COMMIT_RANGE
     - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
     - echo $CHANGED_FILES
