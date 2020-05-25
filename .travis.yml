@@ -1,3 +1,4 @@
+sudo: required
 dist: bionic
 language: python
 os: linux
@@ -28,3 +29,5 @@ script:
     - conda activate fixminerEnv
     - bash patcher.sh $CHANGED_FILES
 #     - make build
+after_success:
+    - more /home/travis/build/anilkoyuncu/patcher/patches/inflate.cfor_14_10.cocci.txt
