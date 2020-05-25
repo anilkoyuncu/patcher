@@ -171,7 +171,7 @@ def getRun():
 
     args = parser.parse_args()
 
-    if args.root is None or args.job is None or args.prop is None:
+    if args.root is None or args.job is None:
         parser.print_help()
         raise AttributeError
     return args
