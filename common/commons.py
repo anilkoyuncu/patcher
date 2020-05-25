@@ -3,7 +3,7 @@ import logging
 import sys
 import gzip
 import numpy as np
-import tqdm
+# from tqdm import tqdm
 import shutil
 import itertools
 
@@ -392,116 +392,116 @@ def RR_XGB(x,ao,column):
     else:
         return 0
 
-def parallelRunNo(coreFun,elements,*args):
-    with concurrent.futures.ProcessPoolExecutor(max_workers=int(8)) as executor:
-        try:
-            futures = {executor.submit(coreFun, l,*args): l for l in elements}
+# def parallelRunNo(coreFun,elements,*args):
+#     with concurrent.futures.ProcessPoolExecutor(max_workers=int(8)) as executor:
+#         try:
+#             futures = {executor.submit(coreFun, l,*args): l for l in elements}
 
-            kwargs = {
-                'total': len(futures),
-                'unit': 'files',
-                'unit_scale': True,
-                'leave': False
-            }
+#             kwargs = {
+#                 'total': len(futures),
+#                 'unit': 'files',
+#                 'unit_scale': True,
+#                 'leave': False
+#             }
 
-            for future in tqdm(concurrent.futures.as_completed(futures), **kwargs):
-                url = futures[future]
-                try:
-                    data = future.result(timeout=None)
-
-
-                except Exception as exc:
-                    logging.error('%r generated an exception: %s' % (url, exc))
-                    raise
-
-        except Exception as e:
-            logging.error(e)
-            executor.shutdown()
-            raise
+#             for future in tqdm(concurrent.futures.as_completed(futures), **kwargs):
+#                 url = futures[future]
+#                 try:
+#                     data = future.result(timeout=None)
 
 
-def parallelRun(coreFun,elements,*args,max_workers=os.cpu_count()):
-    with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
-        try:
-            futures = {executor.submit(coreFun, l,*args): l for l in elements}
+#                 except Exception as exc:
+#                     logging.error('%r generated an exception: %s' % (url, exc))
+#                     raise
 
-            kwargs = {
-                'total': len(futures),
-                'unit': 'files',
-                'unit_scale': True,
-                'leave': False
-            }
-
-            for future in tqdm(concurrent.futures.as_completed(futures), **kwargs):
-                url = futures[future]
-                try:
-                    data = future.result()
-                except Exception as exc:
-                    logging.error('%r generated an exception: %s' % (url, exc))
-                    raise
-        except Exception as e:
-            logging.error(e)
-            executor.shutdown()
-            raise
+#         except Exception as e:
+#             logging.error(e)
+#             executor.shutdown()
+#             raise
 
 
-def parallelRunMerge(coreFun,elements,*args,max_workers=os.cpu_count()):
-    dataL = []
-    with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
-        try:
-            futures = {executor.submit(coreFun, l,*args): l for l in elements}
-            kwargs = {
-                'total': len(futures),
-                'unit': 'files',
-                'unit_scale': True,
-                'leave': False
-            }
-            for future in tqdm(concurrent.futures.as_completed(futures), **kwargs):
-                url = futures[future]
-                try:
-                    data = future.result()
-                    dataL.append(data)
+# def parallelRun(coreFun,elements,*args,max_workers=os.cpu_count()):
+#     with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
+#         try:
+#             futures = {executor.submit(coreFun, l,*args): l for l in elements}
 
-                except Exception as exc:
-                    logging.error('%r generated an exception: %s' % (url, exc))
-                    raise
+#             kwargs = {
+#                 'total': len(futures),
+#                 'unit': 'files',
+#                 'unit_scale': True,
+#                 'leave': False
+#             }
 
-            return dataL
-        except Exception as e:
-            logging.error(e)
-            executor.shutdown()
-            raise
+#             for future in tqdm(concurrent.futures.as_completed(futures), **kwargs):
+#                 url = futures[future]
+#                 try:
+#                     data = future.result()
+#                 except Exception as exc:
+#                     logging.error('%r generated an exception: %s' % (url, exc))
+#                     raise
+#         except Exception as e:
+#             logging.error(e)
+#             executor.shutdown()
+#             raise
 
 
-def parallelRunMergeNew(coreFun,elements,*args,max_workers=os.cpu_count()):
+# def parallelRunMerge(coreFun,elements,*args,max_workers=os.cpu_count()):
+#     dataL = []
+#     with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
+#         try:
+#             futures = {executor.submit(coreFun, l,*args): l for l in elements}
+#             kwargs = {
+#                 'total': len(futures),
+#                 'unit': 'files',
+#                 'unit_scale': True,
+#                 'leave': False
+#             }
+#             for future in tqdm(concurrent.futures.as_completed(futures), **kwargs):
+#                 url = futures[future]
+#                 try:
+#                     data = future.result()
+#                     dataL.append(data)
 
-    res = []
-    with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
-        try:
-            futures = {executor.submit(coreFun, l,*args): l for l in elements}
+#                 except Exception as exc:
+#                     logging.error('%r generated an exception: %s' % (url, exc))
+#                     raise
 
-            kwargs = {
-                'total': len(futures),
-                'unit': 'files',
-                'unit_scale': True,
-                'leave': False
-            }
+#             return dataL
+#         except Exception as e:
+#             logging.error(e)
+#             executor.shutdown()
+#             raise
 
-            for future in tqdm(concurrent.futures.as_completed(futures), **kwargs):
-                url = futures[future]
-                try:
-                    data = future.result()
-                    res.append(data)
-                except Exception as exc:
-                    logging.error('%r generated an exception: %s' % (url, exc))
-                    raise
 
-        except Exception as e:
-            logging.error(e)
-            executor.shutdown()
-            raise
-    aDF = pd.concat(res)
-    return aDF
+# def parallelRunMergeNew(coreFun,elements,*args,max_workers=os.cpu_count()):
+
+#     res = []
+#     with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
+#         try:
+#             futures = {executor.submit(coreFun, l,*args): l for l in elements}
+
+#             kwargs = {
+#                 'total': len(futures),
+#                 'unit': 'files',
+#                 'unit_scale': True,
+#                 'leave': False
+#             }
+
+#             for future in tqdm(concurrent.futures.as_completed(futures), **kwargs):
+#                 url = futures[future]
+#                 try:
+#                     data = future.result()
+#                     res.append(data)
+#                 except Exception as exc:
+#                     logging.error('%r generated an exception: %s' % (url, exc))
+#                     raise
+
+#         except Exception as e:
+#             logging.error(e)
+#             executor.shutdown()
+#             raise
+#     aDF = pd.concat(res)
+#     return aDF
 
 def get_filepaths(directory,extension):
 
