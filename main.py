@@ -23,15 +23,17 @@ if __name__ == '__main__':
 		patchName = 'inflate.c'
 		srcPath = 'inflate.c'
 
-		cmd = 'more '+ join(ROOT_DIR,'cocci',spfile)
-		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
+		print(os.listdir())
+
+
 
 		cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
+
+		fils = get_filepaths(join(ROOT_DIR,'patches'), '.c')
+		print(fils)
 		print(join(ROOT_DIR, 'patches', patchName + spfile + '.txt'))
 		cmd = 'more '+join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
 		output, e = shellGitCheckout(cmd)
