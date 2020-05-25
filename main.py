@@ -11,6 +11,7 @@ if __name__ == '__main__':
 		args = getRun()
 		sys.path.append(args.root)
 		files = args.job
+		print('test')
 		print(files)
 		logging.info(files)
 		ROOT_DIR = args.root
