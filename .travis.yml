@@ -16,7 +16,6 @@ before_script:
     - export USE_CCACHE=1
     - conda env create -f environment.yml
     - conda activate fixminerEnv
-    - pip install tqdm
     # - git submodule update --init
 #     - bash build_dependencies.sh
 script:
