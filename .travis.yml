@@ -33,6 +33,7 @@ script:
     - conda activate fixminerEnv
     - bash patcher.sh $CHANGED_FILES
 #     - make build
-
+env:
+    - OCAML_VERSION=4.05
 after_success:
     - more /home/travis/build/anilkoyuncu/patcher/patches/inflate.cfor_14_10.cocci.txt
