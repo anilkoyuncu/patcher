@@ -25,7 +25,7 @@ script:
     # - bash -ex .travis-opam.sh
     - opam init --compiler=4.05.0 -y
     - eval $(opam env)
-    - opam install coccinelle -y
+    - opam install "coccinelle>=1.0.8" -y
     - echo $TRAVIS_COMMIT_RANGE
     - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
     - echo $CHANGED_FILES
