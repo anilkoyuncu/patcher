@@ -28,6 +28,7 @@ if __name__ == '__main__':
 
 
 		cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
+		print(cmd)
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
