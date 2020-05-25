@@ -4,7 +4,7 @@ channels:
   - defaults
 dependencies:
   - numpy
-  - tqdm
+  - conda-forge::tqdm
   - pandas
   - pyyaml
   - redis-py
