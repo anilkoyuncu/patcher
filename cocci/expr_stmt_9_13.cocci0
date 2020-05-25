@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- assert((E0 & 0777) == (archive_entry_mode(E1) & 0777)); 
++ assert((mode_t)(E0 & 0777) == (archive_entry_mode(E1) & 0777)); 
+// Infered from: (libarchive/{prevFiles/prev_01580b_c477ed_libarchive#test#test_acl_posix1e.c,revFiles/01580b_c477ed_libarchive#test#test_acl_posix1e.c}: compare_acls), (libarchive/{prevFiles/prev_d2d75e_82d66e_libarchive#test#test_acl_pax.c,revFiles/d2d75e_82d66e_libarchive#test#test_acl_pax.c}: compare_acls), (libarchive/{prevFiles/prev_d2d75e_82d66e_libarchive#test#test_acl_posix1e.c,revFiles/d2d75e_82d66e_libarchive#test#test_acl_posix1e.c}: compare_acls), (libarchive/{prevFiles/prev_01580b_c477ed_libarchive#test#test_acl_pax.c,revFiles/01580b_c477ed_libarchive#test#test_acl_pax.c}: compare_acls)
+// Recall: 0.31, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

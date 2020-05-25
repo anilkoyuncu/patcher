@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- if ((E0->options & SSL_OP_NO_TICKET) != 0 && SSL_IS_TLS13(E0))  
++ if (((E0->options & SSL_OP_NO_TICKET) != 0 || E0->max_early_data > 0) && SSL_IS_TLS13(  E0))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_e880d4_6cc0b3_ssl#statem#statem_srvr.c,revFiles/e880d4_6cc0b3_ssl#statem#statem_srvr.c}: tls_construct_new_session_ticket)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/7(85%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_5dba4c_b45a31_ffmpeg.c: transcode_init
+*/
+
+// ---------------------------------------------

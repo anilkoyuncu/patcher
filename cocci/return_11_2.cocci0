@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return error_errno(_("could not write eol to '%s"), E0); 
++ return error_errno(_("could not write eol to '%s'"), E0); 
+// Infered from: (git/{prevFiles/prev_358718_2ae38f_sequencer.c,revFiles/358718_2ae38f_sequencer.c}: write_message)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

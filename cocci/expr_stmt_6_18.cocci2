@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E0 + E1 / 60; 
++ E0 = (E0 + E1 / 60) % 24; 
+// Infered from: (codeflaws/{prevFiles/prev_622-B-16220893-16220932.c,revFiles/622-B-16220893-16220932.c}: main)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

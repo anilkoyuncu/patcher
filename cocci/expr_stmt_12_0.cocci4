@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef guint32;
+@@
+- proto_item_append_text(E0, "%s %lu", E1, E2); 
++ proto_item_append_text(E0, "%s %u", E1, (guint32 )E2); 
+// Infered from: (wireshark/{prevFiles/prev_1ac9db_070e56_epan#dissectors#packet-protobuf.c,revFiles/1ac9db_070e56_epan#dissectors#packet-protobuf.c}: protobuf_dissect_field_value)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

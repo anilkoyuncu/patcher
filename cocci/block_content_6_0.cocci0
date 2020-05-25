@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef guint32;
+@@
+- guint32 I0 = pntoh32(E1->data); 
++ guint32 I0; 
++ memcpy(&I0, E1->data, 4); 
+// Infered from: (wireshark/{prevFiles/prev_7782cb_0af6ba_sharkd_session.c,revFiles/7782cb_0af6ba_sharkd_session.c}: sharkd_session_geoip_addr)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

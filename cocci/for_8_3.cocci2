@@ -1,0 +1,41 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = E1 - 1;E0 > 0;E0--)  
++ for(E0 = E1 - 2;E0 >= 0;E0--)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_632-A-16460027-16462886.c,revFiles/632-A-16460027-16462886.c}: main)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.84, Precision: 0.73
+// -- Node Change --
+// Recall: 0.80, Precision: 0.55
+// -- General --
+// Functions fully changed: 12/25(48%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_148-A-17419064-17419117.c: main
+ - codeflaws/prevFiles/prev_567-B-13872078-13872203.c: main
+ - codeflaws/prevFiles/prev_148-A-17412106-17412149.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_sack_chunk
+ - wireshark/prevFiles/prev_f15488_6f112a_epan#dissectors#packet-icmpv6.c: dissect_mldrv2
+ - wireshark/prevFiles/prev_fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_nr_sack_chunk
+ - wireshark/prevFiles/prev_fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_outgoing_ssn_reset_request_parameter
+ - codeflaws/prevFiles/prev_110-B-1946038-1946080.c: main
+ - wireshark/prevFiles/prev_fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_supported_address_types_parameter
+ - wireshark/prevFiles/prev_fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_missing_mandatory_parameters_cause
+ - codeflaws/prevFiles/prev_6-B-14639350-14639420.c: main
+ - codeflaws/prevFiles/prev_426-B-6497124-6497197.c: main
+ - wireshark/prevFiles/prev_fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_incoming_ssn_reset_request_parameter
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  struct sockaddr_in6 *I0 = (const  struct sockaddr_in6 *)E1; 
++ const  struct sockaddr_in6 *I0 = (const  struct sockaddr_in6 *)(void *)E1; 
+// Infered from: (curl/{prevFiles/prev_119037_710bb8_lib#if2ip.c,revFiles/119037_710bb8_lib#if2ip.c}: Curl_ipv6_scope)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

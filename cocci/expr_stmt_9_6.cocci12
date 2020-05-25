@@ -1,0 +1,30 @@
+@@
+expression E0, E1;
+@@
+- gtk_menu_append(GTK_MENU(E0), E1); 
++ gtk_menu_shell_append(GTK_MENU_SHELL(E0), E1); 
+// Infered from: (wireshark/{prevFiles/prev_56206e0_cd7405_gtk#expert_dlg.c,revFiles/56206e0_cd7405_gtk#expert_dlg.c}: expert_dlg_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 13 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.94, Precision: 0.96
+// -- General --
+// Functions fully changed: 28/33(84%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_f95627_5a0c88_demos#gtk-demo#sliding_puzzle.c: start_puzzle
+ - gtk/prevFiles/prev_6b1cfd_22e078_demos#gtk-demo#sliding_puzzle.c: start_puzzle
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_21dbeb_86e475_arch#powerpc#kernel#smp.c: smp_cpus_done
+ - linux/prevFiles/prev_ed1bbd_8b108c_arch#mips#kernel#cpufreq#loongson2_cpufreq.c: loongson2_cpufreq_target
+ - linux/prevFiles/prev_59a2f7_5f6c477a_arch#sh#kernel#cpufreq.c: sh_cpufreq_target
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+identifier I0;
+expression E1;
+typedef gint;
+@@
+- gint I0; 
+  ...
+- I0 = E1; 
+// Infered from: (wireshark/{prevFiles/prev_00d378_c588ff_epan#dissectors#packet-clnp.c,revFiles/00d378_c588ff_epan#dissectors#packet-clnp.c}: dissect_clnp)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_c7793ac_117289_drivers#net#ixgb#ixgb_main.c: ixgb_alloc_rx_buffers
+ - wireshark/prevFiles/prev_d2269c_dfdeeb_epan#dissectors#packet-gsm_a_gm.c: de_sm_pdp_addr
+*/
+
+// ---------------------------------------------

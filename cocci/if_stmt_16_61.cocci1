@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- if (E0->oc[1].status != OC_LOCKED)  
++ if (E0->oc[1].status != OC_LOCKED && E0->oc[0].status != OC_NONE)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_122d5c_f89584c_libavcodec#aacdec.c,revFiles/122d5c_f89584c_libavcodec#aacdec.c}: pop_output_configuration)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_122d5c_f89584c_libavcodec#aacdec.c: push_output_configuration
+*/
+
+// ---------------------------------------------

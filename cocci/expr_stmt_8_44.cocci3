@@ -1,0 +1,9 @@
+@@
+expression E1, E2, E0;
+@@
+- assert(E0 *  E1 ==  E2); 
++ assert(2 * VOFW == VOF); 
+// Infered from: (FFmpeg/{prevFiles/prev_5a352b_d85d7a_libswscale#swscale.c,revFiles/5a352b_d85d7a_libswscale#swscale.c}: sws_getContext)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

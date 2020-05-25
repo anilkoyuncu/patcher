@@ -1,0 +1,45 @@
+@@
+@@
+- return VLC_ENOVAR; 
++ return VLC_EBADVAR; 
+// Infered from: (vlc/{prevFiles/prev_f11c73_b4d2a2_modules#misc#audioscrobbler.c,revFiles/f11c73_b4d2a2_modules#misc#audioscrobbler.c}: Handshake)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.13, Precision: 1.00
+// -- Node Change --
+// Recall: 0.13, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/23(8%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_b87e0b_73d483_modules#audio_output#oss.c: Start
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_3814ee_fb5d02_epan#dissectors#packet-l2tp.c: dissect_l2tp_ericsson_avps
+ - php-src/prevFiles/prev_16a35c_44e9e9_ext#wddx#wddx.c: php_wddx_serialize_var
+ - FFmpeg/prevFiles/prev_13ee10_7992c2_libavcodec#prores_metadata_bsf.c: prores_metadata_init
+ - wireshark/prevFiles/prev_595a89_e157cf_epan#dissectors#packet-bssgp.c: de_bssgp_rim_pdu_indications
+ - FFmpeg/prevFiles/prev_da5bca_b5852e_libavcodec#targaenc.c: targa_encode_frame
+ - wireshark/prevFiles/prev_8d5cb2_bed8eb_echld#parent.c: hello_cb
+ - FFmpeg/prevFiles/prev_a1c701_8fcc5d_fftools#ffplay.c: event_loop
+ - wireshark/prevFiles/prev_8bdf0d_da5269_echld#parent.c: parent_get_hello
+ - wireshark/prevFiles/prev_8d5cb2_bed8eb_echld#parent.c: parent_get_hello
+ - vlc/prevFiles/prev_f11c73_b4d2a2_modules#misc#audioscrobbler.c: Run
+ - FFmpeg/prevFiles/prev_da5bca_b5852e_libavcodec#targaenc.c: 
+ - vlc/prevFiles/prev_5d168c_44bd78_modules#codec#adpcm.c: OpenDecoder
+ - vlc/prevFiles/prev_d83bc6_209985_modules#audio_output#file.c: 
+ - vlc/prevFiles/prev_29ed18_773121_modules#audio_output#sndio.c: Start
+ - wireshark/prevFiles/prev_8bdf0d_da5269_echld#parent.c: echld_reqh
+ - php-src/prevFiles/prev_5ae8f6_713b69_sapi#phpdbg#phpdbg_info.c: PHPDBG_INFO
+ - wireshark/prevFiles/prev_3814ee_fb5d02_epan#dissectors#packet-l2tp.c: 
+ - FFmpeg/prevFiles/prev_07f2a5_2efcf2_libavcodec#utils.c: av_get_bits_per_sample
+ - vlc/prevFiles/prev_2f4f8c_3b3575_modules#access#v4l2#demux.c: GetMaxFPS
+ - vlc/prevFiles/prev_d83bc6_209985_modules#audio_output#file.c: Start
+*/
+
+// ---------------------------------------------

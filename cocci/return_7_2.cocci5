@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- return dvb_set_props(E0, 5, DTV_CLEAR, 0, DTV_DELIVERY_SYSTEM,  SYS_DVBC_ANNEX_AC, DTV_FREQUENCY, E1, DTV_MODULATION,  E2, DTV_SYMBOL_RATE, E3, DTV_INNER_FEC, E4); 
++ return dvb_set_props(E0, 6, DTV_CLEAR, 0, DTV_DELIVERY_SYSTEM,  SYS_DVBC_ANNEX_AC, DTV_FREQUENCY, E1, DTV_MODULATION,  E2, DTV_SYMBOL_RATE, E3, DTV_INNER_FEC, E4); 
+// Infered from: (vlc/{prevFiles/prev_001cbd_cf2dd9_modules#access#dtv#linux.c,revFiles/001cbd_cf2dd9_modules#access#dtv#linux.c}: dvb_set_dvbc)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 0.86
+// -- Node Change --
+// Recall: 0.86, Precision: 0.86
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_d2b076_331299_modules#access#dtv#linux.c: dvb_set_dvbt2
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_f4601d_b4c285a_Objects#longobject.c: _PyLong_FromSize_t
+*/
+
+// ---------------------------------------------

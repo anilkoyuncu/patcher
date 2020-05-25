@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- printf(E0 > 1e-7 ? "%f\n" :"My poor head =(\n", E0); 
++ printf(E0 > 1e-7 ? "%.9f\n" :"My poor head =(\n", E0); 
+// Infered from: (codeflaws/{prevFiles/prev_99-E-729775-729777.c,revFiles/99-E-729775-729777.c}: main)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_0164b7_cc286b_epan#dissectors#packet-netflow.c: proto_tree_add_mpls_label
+ - ompi/prevFiles/prev_6d026b_d96003_orte#mca#plm#rsh#plm_rsh_module.c: setup_launch
+*/
+
+// ---------------------------------------------

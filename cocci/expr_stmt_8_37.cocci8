@@ -1,0 +1,8 @@
+@@
+@@
+- text_input_preedit(global, global->text_input, "", 0, 0); 
++ text_input_preedit(global, global->text_input, NULL, 0, 0); 
+// Infered from: (gtk/{prevFiles/prev_fcf28d_1e69d2_gtk#gtkimcontextwayland.c,revFiles/fcf28d_1e69d2_gtk#gtkimcontextwayland.c}: gtk_im_context_wayland_focus_out)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

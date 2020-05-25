@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef ap_os_file_t;
+@@
+- (*E0) = ap_pcalloc(E1, sizeof(ap_os_file_t *)); 
++ (*E0) = ap_pcalloc(E1, sizeof(struct file_t )); 
+// Infered from: (apr/{prevFiles/prev_337a9b_157b6d_file_io#unix#open.c,revFiles/337a9b_157b6d_file_io#unix#open.c}: ap_open_stderr)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

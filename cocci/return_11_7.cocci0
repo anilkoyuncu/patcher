@@ -1,0 +1,10 @@
+@@
+typedef AVVDPAUContext;
+typedef VDPAUHWContext;
+@@
+- return av_mallocz(sizeof(AVVDPAUContext )); 
++ return av_mallocz(sizeof(VDPAUHWContext )); 
+// Infered from: (FFmpeg/{prevFiles/prev_3a6ded_c87bb9_libavcodec#vdpau.c,revFiles/3a6ded_c87bb9_libavcodec#vdpau.c}: av_vdpau_alloc_context)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,26 @@
+@@
+expression E1, E0;
+@@
+- if (E0)  
+- {
+- config_ChainDestroy(E1->p_cfg); 
+- }
+// Infered from: (vlc/{prevFiles/prev_758052_7f7c05_src#misc#filter_chain.c,revFiles/758052_7f7c05_src#misc#filter_chain.c}: filter_chain_DeleteFilter)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.57, Precision: 1.00
+// -- Node Change --
+// Recall: 0.53, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_758052_7f7c05_src#misc#filter_chain.c: filter_chain_AppendFromString
+ - ompi/prevFiles/prev_88e26c_13bbc3_oshmem#mca#spml#ucx#spml_ucx.c: mca_spml_ucx_add_procs
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- vlc_input_item_Clean(E0); 
++ vlc_input_item_Clean(&E0->input); 
+// Infered from: (vlc/{prevFiles/prev_60568b_bfda68_src#playlist#item.c,revFiles/60568b_bfda68_src#playlist#item.c}: playlist_ItemDelete)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef GtkDialogPrivate;
+@@
+  GtkDialogPrivate *I0 = E1->priv; 
+  ...
+- gtk_widget_show(GTK_WIDGET(E2)); 
++ gtk_widget_show(GTK_WIDGET(I0->action_box)); 
+// Infered from: (gtk/{prevFiles/prev_108928_cd591a_gtk#gtkdialog.c,revFiles/108928_cd591a_gtk#gtkdialog.c}: add_cb)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

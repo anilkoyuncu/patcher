@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0 /= 1000; 
++ E0 = (E0 + 999) / 1000; 
+// Infered from: (vlc/{prevFiles/prev_113ded_5daf66_src#win32#thread.c,revFiles/113ded_5daf66_src#win32#thread.c}: mwait)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch did not apply:
+ - apr/prevFiles/prev_023aec_3e75ca_test#testtime.c: print_time
+*/
+
+// ---------------------------------------------

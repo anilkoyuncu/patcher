@@ -1,0 +1,34 @@
+@@
+expression E0, E1;
+@@
+- g_set_error(E0, GDK_PIXBUF_ERROR, GDK_PIXBUF_ERROR_BAD_OPTION,  _("Color profile has invalid length '%d'."), E1); 
+// Infered from: (gtk/{prevFiles/prev_479c7b_c939fd_gdk-pixbuf#io-png.c,revFiles/479c7b_c939fd_gdk-pixbuf#io-png.c}: real_save_png), (gtk/{prevFiles/prev_147240_c12194_gdk-pixbuf#io-png.c,revFiles/147240_c12194_gdk-pixbuf#io-png.c}: real_save_png)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.20, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/10(0%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_147240_c12194_gdk-pixbuf#io-png.c: real_save_png
+ - gtk/prevFiles/prev_479c7b_c939fd_gdk-pixbuf#io-png.c: real_save_png
+ - tcl/prevFiles/prev_a0482f_20b06d_generic#tclStringObj.c: TclStringRepeat
+ - tcl/prevFiles/prev_a0482f_20b06d_generic#tclStringObj.c: TclStringCatObjv
+*/
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_1b9fa9_694c8d_gdk#win32#gdkdisplay-win32.c: _clipboard_window_procedure
+ - gtk/prevFiles/prev_10b2f6_ef2daa_gdk#win32#gdkclipdrop-win32.c: process_retrieve
+ - gtk/prevFiles/prev_1b9fa9_694c8d_gdk#win32#gdkevents-win32.c: gdk_event_translate
+ - gtk/prevFiles/prev_efefc4_f0d337a_modules#printbackends#cups#gtkcupsutils.c: _get_read_data
+ - gtk/prevFiles/prev_efefc4_f0d337a_modules#printbackends#cups#gtkprintbackendcups.c: _cairo_write_to_cups
+ - gtk/prevFiles/prev_1b9fa9_694c8d_gdk#win32#gdkevents-win32.c: _gdk_win32_window_procedure
+*/
+
+// ---------------------------------------------

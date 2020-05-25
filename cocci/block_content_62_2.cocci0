@@ -1,0 +1,21 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = devm_kzalloc(&E1->dev, sizeof(*E0), GFP_KERNEL); 
++ E0 = devm_kzalloc(dev, sizeof(*E0), GFP_KERNEL); 
+  ...
+- E2->parent = &E1->dev; 
++ E2->parent = dev; 
+  ...
+- watchdog_init_timeout(E2, timeout, &E1->dev); 
++ watchdog_init_timeout(E2, timeout, dev); 
+  ...
+- E3 = devm_watchdog_register_device(&E1->dev, E2); 
++ E3 = devm_watchdog_register_device(dev, E2); 
+  ...
+- dev_info(&E1->dev, "EP93XX watchdog driver %s\n",  (E4 & 0x08) ? " (nCS1 disable detected)" :""); 
++ dev_info(dev, "EP93XX watchdog driver %s\n",  (E4 & 0x08) ? " (nCS1 disable detected)" :""); 
+// Infered from: (linux/{prevFiles/prev_d6ab05_cecda0_drivers#watchdog#ep93xx_wdt.c,revFiles/d6ab05_cecda0_drivers#watchdog#ep93xx_wdt.c}: ep93xx_wdt_probe)
+// Recall: 0.45, Precision: 1.00, Matching recall: 0.91
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- ape_tag_read_field(E0); 
++ if (ape_tag_read_field(E0) < 0)  
++ {
++ break; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_698438_22667e_libavformat#ape.c,revFiles/698438_22667e_libavformat#ape.c}: ape_parse_tag)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

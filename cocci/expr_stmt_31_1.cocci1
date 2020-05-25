@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- WARN(1, "timed out waiting for port %c ready: got 0x%x, expected 0x%x\n",  port_name(E0->base.port), I915_READ(E1) & E2, E3); 
++ WARN(1,  "timed out waiting for [ENCODER:%d:%s] port ready: got 0x%x, expected 0x%x\n",  E0->base.base.base.id, E0->base.base.name, I915_READ(E1) & E2, E3); 
+// Infered from: (linux/{prevFiles/prev_66a990_75427b_drivers#gpu#drm#i915#display#intel_display.c,revFiles/66a990_75427b_drivers#gpu#drm#i915#display#intel_display.c}: vlv_wait_port_ready)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

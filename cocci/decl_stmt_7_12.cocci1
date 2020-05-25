@@ -1,0 +1,9 @@
+@@
+typedef wilc_sdio_t;
+@@
+- memset(&g_sdio, 0, sizeof(wilc_sdio_t )); 
++ memset(&g_sdio, 0, sizeof(struct wilc_sdio )); 
+// Infered from: (linux/{prevFiles/prev_6a707a9_5bc321_drivers#staging#wilc1000#wilc_sdio.c,revFiles/6a707a9_5bc321_drivers#staging#wilc1000#wilc_sdio.c}: sdio_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

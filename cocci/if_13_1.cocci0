@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (smp_cpus > E0->max_cpus)  
++ if (max_cpus > E0->max_cpus)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_c00cd9_719cac1_vl.c,revFiles/c00cd9_719cac1_vl.c}: main)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

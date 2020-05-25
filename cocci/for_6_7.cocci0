@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E3;
+binary operator B2 = {+ ,- };
+@@
+- for(E0 = E1 B2 1;E0 < E3;E0++)  
++ for(E0 = E1;E0 < E3;E0++)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_d6b6ab_d342eb_hw#nvram#fw_cfg.c,revFiles/d6b6ab_d342eb_hw#nvram#fw_cfg.c}: fw_cfg_modify_file), (codeflaws/{prevFiles/prev_38-A-14999208-14999227.c,revFiles/38-A-14999208-14999227.c}: main), (FFmpeg/{prevFiles/prev_bbc8f3_0c6105_libavfilter#vf_framerate.c,revFiles/bbc8f3_0c6105_libavfilter#vf_framerate.c}: uninit), (codeflaws/{prevFiles/prev_174-B-1501641-1501825.c,revFiles/174-B-1501641-1501825.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

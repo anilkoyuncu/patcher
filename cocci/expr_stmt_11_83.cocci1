@@ -1,0 +1,25 @@
+@@
+expression E0;
+typedef QVirtioPCIDevice;
+@@
+- g_free(E0->dev); 
++ qvirtio_pci_device_free((QVirtioPCIDevice *)E0->dev); 
+// Infered from: (qemu/{prevFiles/prev_3caab5_448fe3_tests#virtio-scsi-test.c,revFiles/3caab5_448fe3_tests#virtio-scsi-test.c}: qvirtio_scsi_pci_free), (qemu/{prevFiles/prev_2b880b_3caab5_tests#virtio-9p-test.c,revFiles/2b880b_3caab5_tests#virtio-9p-test.c}: qvirtio_9p_pci_stop)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_e5f9bf_0be4d3_gtk#tools#gdkpixbufutils.c: load_symbolic_svg
+ - gtk/prevFiles/prev_e5f9bf_0be4d3_gtk#gtkicontheme.c: gtk_icon_info_load_symbolic_svg
+*/
+
+// ---------------------------------------------

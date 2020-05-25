@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef mca_btl_base_module_t;
+@@
+- E0 = (mca_btl_base_module_t **)malloc(sizeof(mca_btl_base_module_t *) * mca_bml_r2.num_btl_modules - 1); 
++ E0 = (mca_btl_base_module_t **)malloc(sizeof(mca_btl_base_module_t *) * (  mca_bml_r2.num_btl_modules - 1)); 
+// Infered from: (ompi/{prevFiles/prev_4f23d8_1ae397_ompi#mca#bml#r2#bml_r2.c,revFiles/4f23d8_1ae397_ompi#mca#bml#r2#bml_r2.c}: mca_bml_r2_del_btl)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

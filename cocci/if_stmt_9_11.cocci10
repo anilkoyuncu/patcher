@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- ZVAL_UNDEF(&E0.parameter); 
+// Infered from: (php-src/{prevFiles/prev_c5f9b8_35f22f_ext#pdo#pdo_stmt.c,revFiles/c5f9b8_35f22f_ext#pdo#pdo_stmt.c}: register_bound_param)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef ITypeLib;
+@@
+- ITypeLib *I0 = *(ITypeLib **)E1; 
++ ITypeLib *I0 = (ITypeLib *)E1; 
+// Infered from: (php-src/{prevFiles/prev_21ac19_99211d_ext#com_dotnet#com_typeinfo.c,revFiles/21ac19_99211d_ext#com_dotnet#com_typeinfo.c}: php_com_typelibrary_dtor), (php-src/{prevFiles/prev_1ba89b_e84d56_ext#com_dotnet#com_typeinfo.c,revFiles/1ba89b_e84d56_ext#com_dotnet#com_typeinfo.c}: php_com_typelibrary_dtor)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- GST_WARNING("skipping test, no playbin2 or fakesink element(s)"); 
++ GST_WARNING("skipping test, no playbin or fakesink element(s)"); 
+// Infered from: (gstreamer/{prevFiles/prev_21d81e_f1d298_tests#check#elements#dataurisrc.c,revFiles/21d81e_f1d298_tests#check#elements#dataurisrc.c}: GST_START_TEST)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

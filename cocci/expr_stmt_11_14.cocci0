@@ -1,0 +1,10 @@
+@@
+type T0;
+expression E1;
+@@
+- kfree((T0 *)E1); 
++ kfree(E1); 
+// Infered from: (linux/{prevFiles/prev_2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_mlme.c,revFiles/2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_mlme.c}: rtw_set_auth), (linux/{prevFiles/prev_2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_mlme.c,revFiles/2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_mlme.c}: rtw_set_key), (linux/{prevFiles/prev_2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_mlme.c,revFiles/2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_mlme.c}: rtw_set_key), (linux/{prevFiles/prev_2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_mlme.c,revFiles/2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_mlme.c}: rtw_set_key), (linux/{prevFiles/prev_2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_cmd.c,revFiles/2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_cmd.c}: rtw_free_cmd_obj), (linux/{prevFiles/prev_2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_cmd.c,revFiles/2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_cmd.c}: rtw_free_cmd_obj), (linux/{prevFiles/prev_2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_ap.c,revFiles/2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_ap.c}: rtw_ap_set_pairwise_key), (linux/{prevFiles/prev_2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_ap.c,revFiles/2dac96b_8fd1fe_drivers#staging#rtl8723bs#core#rtw_ap.c}: rtw_ap_set_key)
+// Recall: 0.87, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

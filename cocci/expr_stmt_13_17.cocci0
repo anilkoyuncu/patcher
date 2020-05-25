@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- ff_thread_await_progress(&E0->next_picture_ptr->f, E0->mb_y - 1, 0); 
++ ff_thread_await_progress(&E0->next_picture_ptr->f, FFMAX(0, E0->mb_y - 1), 0); 
+// Infered from: (FFmpeg/{prevFiles/prev_3547f8_e1e369_libavcodec#rv34.c,revFiles/3547f8_e1e369_libavcodec#rv34.c}: rv34_decode_mv)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

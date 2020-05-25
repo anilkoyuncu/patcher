@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (deny_non_fast_forwards && !is_null_sha1(E0) && !is_null_sha1(E1) && !strncmp(  E2, "refs/heads/", 11))  
++ if (deny_non_fast_forwards && !is_null_sha1(E0) && !is_null_sha1(E1) && !prefixcmp(  E2, "refs/heads/"))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_cc44c7_cff030_receive-pack.c,revFiles/cc44c7_cff030_receive-pack.c}: update)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

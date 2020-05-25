@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- stfq_p(E0, E1->fpr[E2]); 
++ stfq_p(E0, E1->fpr[E2 - 32]); 
+// Infered from: (qemu/{prevFiles/prev_8d4acf_2cbd94_gdbstub.c,revFiles/8d4acf_2cbd94_gdbstub.c}: cpu_gdb_read_register)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

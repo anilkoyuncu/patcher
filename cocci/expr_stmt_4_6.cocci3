@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = ((E1[E2] + E3->bias[0]) << 1) | (E4 & 1); 
++ E0 = ((E1[E2] + E3->bias[0]) * 2) | (E4 & 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_1b7d02_c54b9f_libavcodec#ralf.c,revFiles/1b7d02_c54b9f_libavcodec#ralf.c}: decode_block)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

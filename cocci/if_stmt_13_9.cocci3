@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (avpicture_alloc(&E0->pict_tmp, E1->pix_fmt, E1->width, E1->height))  
++ if (avpicture_alloc(&E0->pict_tmp, PIX_FMT_YUV420P, E1->width, E1->height))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_50ee2c_42608d_ffmpeg.c,revFiles/50ee2c_42608d_ffmpeg.c}: av_encode)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

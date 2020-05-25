@@ -1,0 +1,8 @@
+@@
+@@
+- printf("%d", a[i]); 
++ printf("%d", a[r]); 
+// Infered from: (codeflaws/{prevFiles/prev_550-C-12558182-12558217.c,revFiles/550-C-12558182-12558217.c}: main)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

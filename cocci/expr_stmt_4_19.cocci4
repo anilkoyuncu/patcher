@@ -1,0 +1,40 @@
+@@
+expression E0;
+@@
+- return E0->exception_index != 0; 
++ return tcg_enabled() && E0->exception_index != -1; 
+// Infered from: (qemu/{prevFiles/prev_adee64_f9d8f6_exec.c,revFiles/adee64_f9d8f6_exec.c}: cpu_common_exception_index_needed)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.26, Precision: 1.00
+// -- Node Change --
+// Recall: 0.27, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/19(21%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_60d798_f174df0_src#video_output#video_output.c: InitThread
+*/
+/*
+Functions where the patch did not apply:
+ - tmux/prevFiles/prev_7be152_d0fa48_cmd-queue.c: cmdq_new
+ - codeflaws/prevFiles/prev_570-A-16196292-16196313.c: main
+ - qemu/prevFiles/prev_adee64_f9d8f6_exec.c: cpu_common_pre_load
+ - codeflaws/prevFiles/prev_74-A-1808756-1808772.c: main
+ - vlc/prevFiles/prev_60d798_f174df0_src#video_output#video_output.c: __vout_CreateThread
+ - FFmpeg/prevFiles/prev_cae5b3_9d1e98_libavcodec#h264dec.c: idr
+ - codeflaws/prevFiles/prev_298-A-5928224-5928235.c: main
+ - qemu/prevFiles/prev_ee0dc6_b5937f_target-s390x#kvm.c: kvm_s390_interrupt_internal
+ - qemu/prevFiles/prev_ee0dc6_b5937f_target-sh4#helper.c: cpu_sh4_handle_mmu_fault
+ - codeflaws/prevFiles/prev_214-A-18162404-18162485.c: main
+ - qemu/prevFiles/prev_ee0dc6_b5937f_target-s390x#kvm.c: s390_cpu_restart
+ - codeflaws/prevFiles/prev_61-D-13942552-13942558.c: main
+ - qemu/prevFiles/prev_ee0dc6_b5937f_target-alpha#helper.c: do_interrupt
+ - git/prevFiles/prev_a4e9d7_12cb81_builtin-rev-list.c: find_bisection
+*/
+
+// ---------------------------------------------

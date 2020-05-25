@@ -1,0 +1,58 @@
+@@
+assignment operator A2;
+expression E3, E1, E0;
+@@
+- for(E0 = 0;E0 < 23;E0++)  
+- {
+- E1 A2 E3; 
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_50001c_57750b_libavcodec#cook.c,revFiles/50001c_57750b_libavcodec#cook.c}: init_gain_table)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 23 rules):
+// -- Edit Location --
+// Recall: 0.73, Precision: 0.73
+// -- Node Change --
+// Recall: 0.64, Precision: 0.60
+// -- General --
+// Functions fully changed: 15/42(35%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_227878_f4e5e6_libavcodec#vorbis_enc.c: window
+ - wireshark/prevFiles/prev_800a02_5b78bb_epan#dissectors#packet-nvme.c: dissect_nvme_identify_ctrl_resp
+ - FFmpeg/prevFiles/prev_50001c_57750b_libavcodec#cook.c: init_gain_table
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_a813fe_8a273c_target-ppc#int_helper.c: get_national_digit
+ - codeflaws/prevFiles/prev_245-A-14699141-14699206.c: main
+ - linux/prevFiles/prev_4101e9_13c3ab_drivers#isdn#hardware#mISDN#mISDNinfineon.c: reset_inf
+ - qemu/prevFiles/prev_424ad8_c36ed0_hw#alpha#typhoon.c: cchip_write
+ - wireshark/prevFiles/prev_2e4969_a3a899_epan#dissectors#packet-csn1.c: csnStreamDissector
+ - apr/prevFiles/prev_3c0e24_9f3060_test#testglobalmutex.c: launch_child
+ - FFmpeg/prevFiles/prev_425503_e4fdeb_libavcodec#libvpxenc.c: vpx_encode
+ - qemu/prevFiles/prev_a813fe_8a273c_target-ppc#int_helper.c: set_national_digit
+ - qemu/prevFiles/prev_0d10f6_e32605_hw#zynq_slcr.c: zynq_slcr_read_imp
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_20cdb9_219d46_src#cairo-path-fixed.c: _cairo_path_fixed_move_to
+ - cairo/prevFiles/prev_20cdb9_219d46_src#cairo-path-fixed.c: _cairo_path_fixed_iter_is_fill_box
+ - git/prevFiles/prev_af04b12_8c02ee_builtin-fmt-merge-msg.c: handle_line
+ - qemu/prevFiles/prev_819e71_28b9b5_hw#adb.c: adb_kbd_receive_packet
+ - redis/prevFiles/prev_3ccdcb_d044e3_src#t_stream.c: streamIteratorStart
+ - qemu/prevFiles/prev_e309de_10d315_hw#fdc.c: fdctrl_write_data
+ - cairo/prevFiles/prev_20cdb9_219d46_src#cairo-path-fixed.c: _cairo_path_fixed_line_to
+ - FFmpeg/prevFiles/prev_e15824_604c4e_libavformat#rtpdec_h261.c: ff_h261_handle_packet
+ - cairo/prevFiles/prev_20cdb9_219d46_src#cairo-path-fixed.c: _cairo_path_fixed_is_box
+ - qemu/prevFiles/prev_e309de_10d315_hw#fdc.c: fdctrl_format_sector
+ - qemu/prevFiles/prev_e309de_10d315_hw#fdc.c: fdctrl_start_transfer
+ - qemu/prevFiles/prev_424ad8_c36ed0_hw#alpha#typhoon.c: cchip_read
+ - qemu/prevFiles/prev_819e71_28b9b5_hw#adb.c: adb_mouse_receive_packet
+ - linux/prevFiles/prev_4101e9_13c3ab_drivers#isdn#hardware#mISDN#mISDNinfineon.c: inf_probe
+ - vlc/prevFiles/prev_981f85_abb027_modules#audio_filter#converter#dtstospdif.c: DoWork
+*/
+
+// ---------------------------------------------

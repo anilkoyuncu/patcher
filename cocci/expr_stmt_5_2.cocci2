@@ -1,0 +1,28 @@
+@@
+@@
+- CG(zend_lineno)++; 
++ CG(zend_lineno) = -2; 
+// Infered from: (php-src/{prevFiles/prev_64f775_78bf1d_sapi#fastcgi#fastcgi.c,revFiles/64f775_78bf1d_sapi#fastcgi#fastcgi.c}: fastcgi_module_main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 0.50
+// -- Node Change --
+// Recall: 0.80, Precision: 0.57
+// -- General --
+// Functions fully changed: 3/7(42%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_095373_100293_libavcodec#nellymoser.c: signed_shift
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_cbbd33_c3f10e_libavcodec#alsdec.c: decode_rice
+ - FFmpeg/prevFiles/prev_cbbd33_c3f10e_libavcodec#alsdec.c: get_block_sizes
+ - FFmpeg/prevFiles/prev_cbbd33_c3f10e_libavcodec#alsdec.c: decode_block
+*/
+
+// ---------------------------------------------

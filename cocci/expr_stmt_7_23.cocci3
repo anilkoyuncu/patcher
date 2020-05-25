@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->i_output_max = E0->p_context->channels * sizeof(int33_t) * E0->p_context->sample_rate * 2; 
++ E0->i_output_max = E0->p_context->channels * sizeof(int32_t) * E0->p_context->sample_rate * 2; 
+// Infered from: (vlc/{prevFiles/prev_5300a9_055bd9_modules#codec#avcodec#audio.c,revFiles/5300a9_055bd9_modules#codec#avcodec#audio.c}: InitAudioDec)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

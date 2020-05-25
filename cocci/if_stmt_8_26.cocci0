@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (ioctl(E0->fd, FIONREAD, &E1) || E1 == 0 || E1 <= 4 * 1024)  
++ if (ioctl(E0->fd, FIONREAD, &E1) || E1 <= 4 * 1024)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (lighttpd1.4/{prevFiles/prev_acad2c_393dfd_src#mod_cgi.c,revFiles/acad2c_393dfd_src#mod_cgi.c}: cgi_demux_response), (lighttpd1.4/{prevFiles/prev_acad2c_393dfd_src#connections-glue.c,revFiles/acad2c_393dfd_src#connections-glue.c}: connection_handle_read)
+// Recall: 0.16, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2;
+@@
+- ff_combine_frame(E0, END_NOT_FOUND, &E1, &E2); 
++ if (ff_combine_frame(E0, END_NOT_FOUND, &E1, &E2) != -1)  
++ {
++ return AVERROR(ENOMEM); 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_189fbc_6078bd_libavcodec#tak_parser.c,revFiles/189fbc_6078bd_libavcodec#tak_parser.c}: tak_parse)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

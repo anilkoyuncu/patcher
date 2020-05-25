@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef uint8_t;
+@@
+- const  uint8_t *I0 = rtcp_digest(E1->rtp.mac, E2, E3); 
++ const  uint8_t *I0 = rtcp_digest(E1->rtcp.mac, E2, E3); 
+// Infered from: (vlc/{prevFiles/prev_d7e490_618592_libs#srtp#srtp.c,revFiles/d7e490_618592_libs#srtp#srtp.c}: srtcp_send), (vlc/{prevFiles/prev_d7e490_618592_libs#srtp#srtp.c,revFiles/d7e490_618592_libs#srtp#srtp.c}: srtcp_recv)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

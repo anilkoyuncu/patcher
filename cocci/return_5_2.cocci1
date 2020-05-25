@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- E0.buf_end = E0.buffer + E1; 
+// Infered from: (FFmpeg/{prevFiles/prev_143bf7_ebd624_libavformat#mov.c,revFiles/143bf7_ebd624_libavformat#mov.c}: mov_read_cmov)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

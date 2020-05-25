@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->initial_fullscreen_monitor < gdk_screen_get_n_monitors(E1))  
++ if (E0->initial_fullscreen_monitor >= 0 && E0->initial_fullscreen_monitor < gdk_screen_get_n_monitors(  E1))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_83b7a0_b2b4a3_gdk#wayland#gdkwindow-wayland.c,revFiles/83b7a0_b2b4a3_gdk#wayland#gdkwindow-wayland.c}: gdk_wayland_window_create_xdg_surface)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

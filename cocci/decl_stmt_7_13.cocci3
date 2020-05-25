@@ -1,0 +1,45 @@
+@@
+expression E0, E1;
+@@
+- E0[--E1] = '\n'; 
++ E0[E1] = '\n'; 
+// Infered from: (wireshark/{prevFiles/prev_dd8518_d89ef8_gtk#follow_dlg.c,revFiles/dd8518_d89ef8_gtk#follow_dlg.c}: follow_add_to_gtk_text)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.26, Precision: 1.00
+// -- Node Change --
+// Recall: 0.23, Precision: 0.69
+// -- General --
+// Functions fully changed: 2/19(10%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_c59429_df7648_src#winvlc.c: WinMain
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_f3499c_32f005_src#misc#messages.c: vlc_vaLog
+ - gmp/prevFiles/prev_eb5248_b3c9c1_mpn#generic#gcdext.c: 
+ - wireshark/prevFiles/prev_7b254f_69901e_gtk#capture_if_details_dlg_win32.c: 
+ - wireshark/prevFiles/prev_8dd0e7_44028f_wiretap#catapult_dct2000.c: 
+ - openssl/prevFiles/prev_260c497_313fce_crypto#camellia#cmll_cfb.c: Camellia_cfbr_encrypt_block
+ - wireshark/prevFiles/prev_dd8518_d89ef8_gtk#follow_dlg.c: follow_read_stream
+ - vlc/prevFiles/prev_3717fc_a51071_modules#codec#faad.c: DecodeBlock
+ - vlc/prevFiles/prev_8ecb5b_5339bb_src#libvlc.c: Usage
+ - cairo/prevFiles/prev_1bcc27_b1a1df_perf#micro#hash-table.c: do_hash_table
+ - qemu/prevFiles/prev_89c9bc_c6c506_block.c: bdrv_open
+ - gmp/prevFiles/prev_eb5248_b3c9c1_mpn#generic#gcdext.c: mpn_gcdext
+ - vlc/prevFiles/prev_c59429_df7648_src#winvlc.c: wWinMain
+ - vlc/prevFiles/prev_8ecb5b_5339bb_src#stream_output#sdp.c: vlc_sdp_Start
+ - qemu/prevFiles/prev_0d460d_7ef6d3_block#vvfat.c: check_directory_consistency
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_ac7ff0_623cfc_libavcodec#aacdec.c: apply_tns
+ - FFmpeg/prevFiles/prev_6d5b00_140367_libavcodec#aacdec.c: apply_tns
+*/
+
+// ---------------------------------------------

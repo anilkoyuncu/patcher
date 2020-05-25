@@ -1,0 +1,20 @@
+@@
+expression E0, E1;
+typedef bool;
+@@
+- *E0 = (bool )(E1->state == TFTP_STATE_FIN); 
++ *E0 = (E1->state == TFTP_STATE_FIN) ? TRUE :FALSE; 
+// Infered from: (curl/{prevFiles/prev_a50210_eb44ac_lib#tftp.c,revFiles/a50210_eb44ac_lib#tftp.c}: tftp_multi_statemach), (curl/{prevFiles/prev_a50210_eb44ac_lib#tftp.c,revFiles/a50210_eb44ac_lib#tftp.c}: tftp_multi_statemach)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

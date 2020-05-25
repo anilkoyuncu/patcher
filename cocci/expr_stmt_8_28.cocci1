@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- wait_event_interruptible(E0->wait, (E0->buffer_status & E1)); 
++ wait_event_interruptible(E0->wait, E0->buffer_status & E1); 
+// Infered from: (linux/{prevFiles/prev_d7d3e8_b30367_drivers#staging#goldfish#goldfish_audio.c,revFiles/d7d3e8_b30367_drivers#staging#goldfish#goldfish_audio.c}: goldfish_audio_read), (linux/{prevFiles/prev_d7d3e8_b30367_drivers#staging#goldfish#goldfish_audio.c,revFiles/d7d3e8_b30367_drivers#staging#goldfish#goldfish_audio.c}: goldfish_audio_write)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

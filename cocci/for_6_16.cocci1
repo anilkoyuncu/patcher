@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = E1 = strdup(E0);E0;E0 = E2)  
++ for(E0 = E1 = av_strdup(E0);E0;E0 = E2)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_69aab6_57149a_libavfilter#libmpcodecs#vf_detc.c,revFiles/69aab6_57149a_libavfilter#libmpcodecs#vf_detc.c}: parse_args)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

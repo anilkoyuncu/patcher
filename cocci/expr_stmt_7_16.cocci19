@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- usage(E0); 
++ usage(); 
+// Infered from: (libarchive/{prevFiles/prev_d19d99_5726fc_tar#bsdtar.c,revFiles/d19d99_5726fc_tar#bsdtar.c}: main)
+// False positives: (git/revFiles/e40a9e_1ed481_send-pack.c: main)
+// Recall: 0.01, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

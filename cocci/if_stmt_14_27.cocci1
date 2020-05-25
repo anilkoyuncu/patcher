@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (E0->slots < E1->slots)  
++ if (ORTE_FLAG_TEST(E0, ORTE_NODE_FLAG_SLOTS_GIVEN) && E0->slots < E1->slots)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_2fbce9_99c748_orte#util#hostfile#hostfile.c,revFiles/2fbce9_99c748_orte#util#hostfile#hostfile.c}: orte_util_filter_hostfile_nodes)
+// Recall: 0.67, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/1(100%)
+
+
+// ---------------------------------------------

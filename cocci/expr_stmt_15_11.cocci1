@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- strcpy(E0.name, "pax_global_header"); 
++ xsnprintf(E0.name, sizeof(E0.name), "pax_global_header"); 
+// Infered from: (git/{prevFiles/prev_5096d4_db85a8_archive-tar.c,revFiles/5096d4_db85a8_archive-tar.c}: write_global_extended_header)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

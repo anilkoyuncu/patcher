@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- cairo_matrix_init_translate(&E0.base.matrix, -E1->extents.x, -E1->extents.y); 
++ cairo_matrix_init_translate(&E0.base.matrix, E1->extents.x, E1->extents.y); 
+// Infered from: (cairo/{prevFiles/prev_c39cb7_b2cb9e_src#cairo-surface-subsurface.c,revFiles/c39cb7_b2cb9e_src#cairo-surface-subsurface.c}: _cairo_surface_subsurface_snapshot)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

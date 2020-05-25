@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef proto_item;
+@@
+- proto_item *I0; 
+- I0 = proto_tree_add_text(E1, E2, E3, -1,  "Frame contains more FP channels than currently supported (%u supported)",  MAX_FP_CHANS); 
++ proto_tree_add_text(E1, E2, E3, -1,  "Frame contains more FP channels than currently supported (%u supported)",  MAX_FP_CHANS); 
+// Infered from: (wireshark/{prevFiles/prev_de4c6f_55669f_epan#dissectors#packet-fp_hint.c,revFiles/de4c6f_55669f_epan#dissectors#packet-fp_hint.c}: assign_fph_dch), (wireshark/{prevFiles/prev_de4c6f_55669f_epan#dissectors#packet-fp_hint.c,revFiles/de4c6f_55669f_epan#dissectors#packet-fp_hint.c}: assign_fph_edch)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

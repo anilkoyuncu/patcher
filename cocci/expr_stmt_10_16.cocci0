@@ -1,0 +1,9 @@
+@@
+identifier I0 = {md5_digest ,md5_update };
+expression E1, E2, E3;
+@@
+- I0(E1, E2, E3); 
+// Infered from: (curl/{prevFiles/prev_4f334b_33b896_lib#vtls#gtls.c,revFiles/4f334b_33b896_lib#vtls#gtls.c}: Curl_gtls_md5sum), (curl/{prevFiles/prev_4f334b_33b896_lib#vtls#gtls.c,revFiles/4f334b_33b896_lib#vtls#gtls.c}: Curl_gtls_md5sum)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

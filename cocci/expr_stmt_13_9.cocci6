@@ -1,0 +1,27 @@
+@@
+@@
+- serverLog(LL_WARNING,  "Failed trying to rename the temp DB into dump.rdb in MASTER <-> REPLICA synchronization: %s",  strerror(errno)); 
++ serverLog(LL_WARNING,  "Failed trying to rename the temp DB into %s in MASTER <-> REPLICA synchronization: %s",  server.rdb_filename, strerror(errno)); 
+// Infered from: (redis/{prevFiles/prev_76f207_b27032_src#replication.c,revFiles/76f207_b27032_src#replication.c}: readSyncBulkPayload)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.70, Precision: 1.00
+// -- Node Change --
+// Recall: 0.64, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/10(60%)
+
+/*
+Functions where the patch applied partially:
+ - cairo/prevFiles/prev_d962d6_ac59c7_src#cairo-pdf-surface.c: _cairo_pdf_surface_emit_type1_font
+*/
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_9bc25f_32833d_orte#mca#smr#bproc#smr_bproc.c: update_registry
+ - gstreamer/prevFiles/prev_ac320f_194424_gst#registries#gstxmlregistry.c: gst_xml_registry_add_path_list_func
+*/
+
+// ---------------------------------------------

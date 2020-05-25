@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- TclNRAddCallback(E0, NREUnwind_callback, E1[0], E1[1], &E2, NULL); 
++ Tcl_NRAddCallback(E0, NREUnwind_callback, E1[0], E1[1], &E2, NULL); 
+// Infered from: (tcl/{prevFiles/prev_f889df_f63493_generic#tclTest.c,revFiles/f889df_f63493_generic#tclTest.c}: NREUnwind_callback)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

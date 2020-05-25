@@ -1,0 +1,30 @@
+@@
+expression E0;
+@@
+- if (E0->fb)  
++ if (E0->primary->fb)  
+  {
+  ...
+- to_psb_fb(E0->fb) 
++ to_psb_fb(E0->primary->fb) 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#gma_display.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#gma500#gma_display.c}: gma_crtc_disable)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.29, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#oaktrail_crtc.c: oaktrail_pipe_set_base
+ - linux/prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#gma_display.c: gma_pipe_set_base
+*/
+
+// ---------------------------------------------

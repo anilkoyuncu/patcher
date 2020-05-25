@@ -1,0 +1,31 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  struct mapping **I0; 
++ const  void **I0; 
+  ...
+- return var_SetInteger(E1, "key-action", (*I0)->action); 
++ return var_SetInteger(E1, "key-action", ent->action); 
+// Infered from: (vlc/{prevFiles/prev_a934d9_45b0cc_src#misc#actions.c,revFiles/a934d9_45b0cc_src#misc#actions.c}: vlc_key_to_action)
+// Recall: 0.31, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.85, Precision: 0.92
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_a934d9_45b0cc_src#misc#actions.c: vlc_key_to_action
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_7eba90_3ebf5b_ext#exif#exif.c: exif_read_file
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5, E6;
+typedef GtkTooltips;
+@@
+- GtkTooltips *I0; 
+- I0 = gtk_tooltips_new(); 
+  ...
+- gtk_tooltips_set_tip(I0, E1, E2, NULL); 
++ gtk_widget_set_tooltip_text(E1, E2); 
+  ...
+- gtk_tooltips_set_tip(I0, E1, E3, NULL); 
+  ...
+- gtk_tooltips_set_tip(I0, E1, E4, NULL); 
+  ...
+- gtk_tooltips_set_tip(I0, E1, E5, NULL); 
+  ...
+- gtk_tooltips_set_tip(I0, E1, E6, NULL); 
+// Infered from: (wireshark/{prevFiles/prev_fb1694_2aff1d_gtk#main_statusbar.c,revFiles/fb1694_2aff1d_gtk#main_statusbar.c}: status_expert_new)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

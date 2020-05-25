@@ -1,0 +1,27 @@
+@@
+identifier I1 = {proto_tree_add_ipv4 ,proto_tree_add_uint }, I3;
+expression E0, E2, E4, E5, E6;
+@@
+- E0 = I1(E2, I3, E4, E5, 4, E6); 
++ I1(E2, I3, E4, E5, 4, E6); 
+// Infered from: (wireshark/{prevFiles/prev_7be108_dd33c4_epan#dissectors#packet-rtps.c,revFiles/7be108_dd33c4_epan#dissectors#packet-rtps.c}: dissect_INFO_SRC), (wireshark/{prevFiles/prev_7be108_dd33c4_epan#dissectors#packet-rtps.c,revFiles/7be108_dd33c4_epan#dissectors#packet-rtps.c}: dissect_INFO_SRC)
+// False positives: (wireshark/revFiles/7be108_dd33c4_epan#dissectors#packet-rtps.c: rtps_util_add_ipv4_address_t), (wireshark/revFiles/7be108_dd33c4_epan#dissectors#packet-rtps.c: rtps_util_add_locator_udp_v4), (wireshark/revFiles/7be108_dd33c4_epan#dissectors#packet-rtps.c: rtps_util_add_port)
+// Recall: 0.33, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.50
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_7be108_dd33c4_epan#dissectors#packet-rtps.c: rtps_util_add_locator_udp_v4
+ - wireshark/prevFiles/prev_7be108_dd33c4_epan#dissectors#packet-rtps.c: rtps_util_add_ipv4_address_t
+ - wireshark/prevFiles/prev_7be108_dd33c4_epan#dissectors#packet-rtps.c: rtps_util_add_port
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,31 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- if (!CreateProcess(NULL, E0, &E1, &E1, E1.bInheritHandle,  NORMAL_PRIORITY_CLASS, E2, E3, &E4, &E5))  
++ if (!CreateProcess(NULL, E0, &E1, &E1, E1.bInheritHandle,  NORMAL_PRIORITY_CLASS | CREATE_NO_WINDOW, E2, E3, &E4, &E5))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_8f0d69_3da21d_TSRM#tsrm_win32.c,revFiles/8f0d69_3da21d_TSRM#tsrm_win32.c}: popen_ex), (php-src/{prevFiles/prev_7ef062_7da784_TSRM#tsrm_win32.c,revFiles/7ef062_7da784_TSRM#tsrm_win32.c}: popen_ex)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 0.91
+// -- General --
+// Functions fully changed: 9/12(75%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_2a612e_b96462_ext#opcache#Optimizer#zend_optimizer.c: zend_optimizer_lookup_cv
+ - openssl/prevFiles/prev_1446f7_ec04e8_apps#sess_id.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_1446f7_ec04e8_apps#sess_id.c: sess_id_main
+*/
+
+// ---------------------------------------------

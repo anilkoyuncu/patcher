@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0 = gsm_sms_char_7bit_unpack(E1, E2, sizeof(E3), tvb_get_ptr(E4, E5, E2), E3); 
++ E0 = gsm_sms_char_7bit_unpack(E1, E2, SMS_MAX_MESSAGE_SIZE,  tvb_get_ptr(E4, E5, E2), E3); 
+// Infered from: (wireshark/{prevFiles/prev_d630c2_a40cf0_epan#dissectors#packet-gsm_sms.c,revFiles/d630c2_a40cf0_epan#dissectors#packet-gsm_sms.c}: dis_field_ud)
+// False positives: (wireshark/revFiles/d630c2_a40cf0_epan#dissectors#packet-gsm_sms.c: dis_field_addr)
+// Recall: 0.12, Precision: 0.75, Matching recall: 0.50
+
+// ---------------------------------------------

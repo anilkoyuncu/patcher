@@ -1,0 +1,21 @@
+@@
+identifier I0;
+typedef bool;
+@@
+- bool I0 = false; 
+- return I0; 
++ return false; 
+// Infered from: (linux/{prevFiles/prev_e623d0_8b9733c_drivers#staging#rtl8192e#rtl819x_HTProc.c,revFiles/e623d0_8b9733c_drivers#staging#rtl8192e#rtl819x_HTProc.c}: HTIOTActIsDisableMCS15)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

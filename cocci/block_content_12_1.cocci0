@@ -1,0 +1,10 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- set_irq_chip_and_handler(E0, &I1, I2); 
++ irq_set_chip_and_handler(E0, &I1, I2); 
+// Infered from: (linux/{prevFiles/prev_e4ec79_9efbc3_arch#mips#txx9#rbtx4939#irq.c,revFiles/e4ec79_9efbc3_arch#mips#txx9#rbtx4939#irq.c}: rbtx4939_irq_setup), (linux/{prevFiles/prev_de2e95a_808339_arch#frv#kernel#irq.c,revFiles/de2e95a_808339_arch#frv#kernel#irq.c}: init_IRQ), (linux/{prevFiles/prev_e4ec79_9efbc3_arch#mips#txx9#rbtx4927#irq.c,revFiles/e4ec79_9efbc3_arch#mips#txx9#rbtx4927#irq.c}: toshiba_rbtx4927_irq_ioc_init), (linux/{prevFiles/prev_e4ec79_9efbc3_arch#mips#kernel#irq-rm9000.c,revFiles/e4ec79_9efbc3_arch#mips#kernel#irq-rm9000.c}: rm9k_cpu_irq_init), (linux/{prevFiles/prev_de2e95a_808339_arch#frv#kernel#irq-mb93091.c,revFiles/de2e95a_808339_arch#frv#kernel#irq-mb93091.c}: fpga_init), (linux/{prevFiles/prev_e4ec79_9efbc3_arch#mips#txx9#generic#irq_tx4939.c,revFiles/e4ec79_9efbc3_arch#mips#txx9#generic#irq_tx4939.c}: tx4939_irq_init), (linux/{prevFiles/prev_e4ec79_9efbc3_arch#mips#txx9#rbtx4938#irq.c,revFiles/e4ec79_9efbc3_arch#mips#txx9#rbtx4938#irq.c}: toshiba_rbtx4938_irq_ioc_init), (linux/{prevFiles/prev_60af3ab_a9554c_arch#frv#kernel#irq.c,revFiles/60af3ab_a9554c_arch#frv#kernel#irq.c}: init_IRQ), (linux/{prevFiles/prev_e4ec79_9efbc3_arch#mips#ath79#irq.c,revFiles/e4ec79_9efbc3_arch#mips#ath79#irq.c}: ath79_misc_irq_init), (linux/{prevFiles/prev_60af3ab_a9554c_arch#frv#kernel#irq-mb93091.c,revFiles/60af3ab_a9554c_arch#frv#kernel#irq-mb93091.c}: fpga_init), (linux/{prevFiles/prev_e4ec79_9efbc3_arch#mips#txx9#jmr3927#irq.c,revFiles/e4ec79_9efbc3_arch#mips#txx9#jmr3927#irq.c}: jmr3927_irq_setup)
+// Recall: 0.54, Precision: 1.00, Matching recall: 0.64
+
+// ---------------------------------------------

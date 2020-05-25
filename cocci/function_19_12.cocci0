@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.event_mask = GDK_VISIBILITY_NOTIFY_MASK | GDK_BUTTON_MOTION_MASK | GDK_TOUCH_MASK; 
++ E0.event_mask = GDK_VISIBILITY_NOTIFY_MASK | GDK_BUTTON_MOTION_MASK | GDK_TOUCH_MASK | GDK_EXPOSURE_MASK; 
+// Infered from: (gtk/{prevFiles/prev_4c9db1_5e55bf_gtk#gtkscrolledwindow.c,revFiles/4c9db1_5e55bf_gtk#gtkscrolledwindow.c}: gtk_scrolled_window_realize)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

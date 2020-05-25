@@ -1,0 +1,28 @@
+@@
+expression E0, E1, E2;
+typedef uint64_t;
+@@
+- if (E0->fe_logical + E1 > E2)  
++ if (E0->fe_logical + E1 > (uint64_t )E2)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_d2d75e_82d66e_libarchive#archive_read_disk_entry_from_file.c,revFiles/d2d75e_82d66e_libarchive#archive_read_disk_entry_from_file.c}: setup_sparse), (libarchive/{prevFiles/prev_01580b_c477ed_libarchive#archive_read_disk_entry_from_file.c,revFiles/01580b_c477ed_libarchive#archive_read_disk_entry_from_file.c}: setup_sparse)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - libarchive/prevFiles/prev_d2d75e_82d66e_libarchive#archive_read_disk_entry_from_file.c: archive_read_disk_entry_from_file
+ - libarchive/prevFiles/prev_01580b_c477ed_libarchive#archive_read_disk_entry_from_file.c: archive_read_disk_entry_from_file
+*/
+
+// ---------------------------------------------

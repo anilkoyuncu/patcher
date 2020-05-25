@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- *E0 = (double )stream_Tell(E1->s) / (double )E2; 
++ *E0 = ((double )1.0) * stream_Tell(E1->s) / (double )E2; 
+// Infered from: (vlc/{prevFiles/prev_7027d3_5b8476_modules#demux#ty.c,revFiles/7027d3_5b8476_modules#demux#ty.c}: Control)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

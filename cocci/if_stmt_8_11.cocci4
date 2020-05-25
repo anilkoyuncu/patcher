@@ -1,0 +1,13 @@
+@@
+type T0;
+expression E1, E2;
+@@
+- if ((T0 *)(&E1->args[1]) >= E2)  
++ if ((T0 *)(&E1->args[0]) >= E2)  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_9b496a_ba2ec8_src#cairo-truetype-subset.c,revFiles/9b496a_ba2ec8_src#cairo-truetype-subset.c}: cairo_truetype_font_remap_composite_glyph)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

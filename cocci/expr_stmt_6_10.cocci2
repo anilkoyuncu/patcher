@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 += E1 % 2; 
++ E0 += (E1 % 7) % 2; 
+// Infered from: (codeflaws/{prevFiles/prev_670-A-17977538-17977571.c,revFiles/670-A-17977538-17977571.c}: main)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

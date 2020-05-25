@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- if (atk_object_get_parent(E0))  
++ if (GTK_IS_ACCESSIBLE(atk_object_get_parent(E0)))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_bd6b79_784e4a_tests#a11y#accessibility-dump.c,revFiles/bd6b79_784e4a_tests#a11y#accessibility-dump.c}: dump_accessible)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - cairo/prevFiles/prev_97c88f_d20e5f_src#cairo-surface.c: cairo_surface_set_mime_data
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->psz_demux && strncmp(E0->psz_demux, "es", 3))  
++ if (*E0->psz_demux && strncmp(E0->psz_demux, "es", 3))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_39124c_0d972b_plugins#mpeg_system#mpeg_es.c,revFiles/39124c_0d972b_plugins#mpeg_system#mpeg_es.c}: ESInit), (vlc/{prevFiles/prev_39124c_0d972b_plugins#mpeg_system#mpeg_es.c,revFiles/39124c_0d972b_plugins#mpeg_system#mpeg_es.c}: ESInit)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+identifier I0;
+typedef int64_t;
+typedef uint32_t;
+@@
+- uint32_t I0; 
++ int64_t I0; 
+  ...
+- I0 = php_mt_rand() >> 1; 
++ I0 = (int64_t )php_mt_rand() >> 1; 
+// Infered from: (php-src/{prevFiles/prev_2b0710_cf0844_ext#standard#mt_rand.c,revFiles/2b0710_cf0844_ext#standard#mt_rand.c}: php_mt_rand_common)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

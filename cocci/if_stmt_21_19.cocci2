@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ompi_comm_dup(E0, &E1->c_local_comm, 1); 
++ ompi_comm_dup(E0, &E1->c_local_comm, 0); 
+// Infered from: (ompi/{prevFiles/prev_1adb3a_4712a7_ompi#communicator#comm.c,revFiles/1adb3a_4712a7_ompi#communicator#comm.c}: ompi_comm_set), (ompi/{prevFiles/prev_1adb3a_4712a7_ompi#communicator#comm.c,revFiles/1adb3a_4712a7_ompi#communicator#comm.c}: ompi_comm_set)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

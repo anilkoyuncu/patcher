@@ -1,0 +1,9 @@
+@@
+@@
+- goto  skip_phar; 
++ return FAILURE; 
+// Infered from: (php-src/{prevFiles/prev_b3a266_b4b9e0_ext#phar#phar.c,revFiles/b3a266_b4b9e0_ext#phar#phar.c}: phar_zend_open)
+// False positives: (php-src/revFiles/b3a266_b4b9e0_ext#phar#phar.c: phar_zend_open)
+// Recall: 0.11, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

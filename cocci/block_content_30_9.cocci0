@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- E0->dsr = dma_alloc_coherent(&E1->dev, sizeof(*E0->dsr), &E0->dsrbase,  GFP_KERNEL); 
++ E0->dsr = dma_zalloc_coherent(&E1->dev, sizeof(*E0->dsr), &E0->dsrbase,  GFP_KERNEL); 
+  ...
+- memset(E0->dsr, 0, sizeof(*E0->dsr)); 
+// Infered from: (linux/{prevFiles/prev_583556_d78756_drivers#infiniband#hw#vmw_pvrdma#pvrdma_main.c,revFiles/583556_d78756_drivers#infiniband#hw#vmw_pvrdma#pvrdma_main.c}: pvrdma_pci_probe)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- macio_ide_register_dma(&E0->ide[0], E1->dbdma, 0x1a); 
++ macio_ide_register_dma(&E0->ide[1], E1->dbdma, 0x1a); 
+// Infered from: (qemu/{prevFiles/prev_02d583_806f35_hw#macio.c,revFiles/02d583_806f35_hw#macio.c}: macio_newworld_initfn)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

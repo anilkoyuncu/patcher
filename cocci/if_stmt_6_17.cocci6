@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 - E1 > E2 - E3 || E0 - E1 > E2 - E3)  
++ if (E0 - E1 > E2 - E3 || E1 - E0 > E2 - E3)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_538-C-13218399-13218451.c,revFiles/538-C-13218399-13218451.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

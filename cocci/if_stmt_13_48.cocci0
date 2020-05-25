@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->fax_opts & 2)  
++ if ((E0->fax_opts & 2) && E0->compr == TIFF_G3)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_dd1b4e_38025e_libavcodec#tiff.c,revFiles/dd1b4e_38025e_libavcodec#tiff.c}: tiff_unpack_fax)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

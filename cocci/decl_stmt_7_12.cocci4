@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef ldlm_ns_hash_def_t;
+@@
+- ldlm_ns_hash_def_t *I0; 
++ struct ldlm_ns_hash_def *I0; 
+// Infered from: (linux/{prevFiles/prev_38d676_095125_drivers#staging#lustre#lustre#ldlm#ldlm_resource.c,revFiles/38d676_095125_drivers#staging#lustre#lustre#ldlm#ldlm_resource.c}: ldlm_namespace_new)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

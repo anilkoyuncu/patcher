@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- E0 = g_file_get_parse_name(g_file_get_parent(E1)); 
++ parent = g_file_get_parent(E1); 
++ E0 = g_file_get_parse_name(parent); 
++ g_object_unref(parent); 
+// Infered from: (gtk/{prevFiles/prev_7fbf6a_63bb83_gtk#gtkprintunixdialog.c,revFiles/7fbf6a_63bb83_gtk#gtkprintunixdialog.c}: error_dialogs)
+// Recall: 0.27, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_976620_b0e901_qom#object.c: object_property_get_uint16List
+ - qemu/prevFiles/prev_976620_b0e901_qom#object.c: object_property_get_enum
+ - gtk/prevFiles/prev_7fbf6a_63bb83_gtk#gtkprintunixdialog.c: error_dialogs
+*/
+
+// ---------------------------------------------

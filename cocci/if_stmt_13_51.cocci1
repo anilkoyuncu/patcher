@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (!wtap_seek_read(E0->wth, E0->file_off, E1, E2, E0->tvb.length, &E3, &E4))  
++ if (!wtap_seek_read(E0->wth, E0->file_off, E1, E2,  E0->tvb.length + E0->offset, &E3, &E4))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_94e8dd_b99a65_frame_tvbuff.c,revFiles/94e8dd_b99a65_frame_tvbuff.c}: frame_read)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - cairo/prevFiles/prev_538fa0_719bef_src#cairo-clip-boxes.c: _cairo_clip_intersect_rectilinear_path
+*/
+
+// ---------------------------------------------

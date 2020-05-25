@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(E0->info->device,  "%s: len=%zu can't be larger than 32 when using 'startbyte'\n",  __func__, E1); 
++ dev_err(E0->info->device,  "len=%zu can't be larger than 32 when using 'startbyte'\n", E1); 
+// Infered from: (wireshark/{prevFiles/prev_ecc7e43_854c70_capture_loop.c,revFiles/ecc7e43_854c70_capture_loop.c}: capture_loop_start), (linux/{prevFiles/prev_aed1c7_14f63e_drivers#staging#fbtft#fbtft-io.c,revFiles/aed1c7_14f63e_drivers#staging#fbtft#fbtft-io.c}: fbtft_read_spi)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

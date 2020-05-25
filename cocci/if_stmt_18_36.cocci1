@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- e1000x_inc_reg_if_not_full(E0->mac_reg, RUC); 
+// Infered from: (qemu/{prevFiles/prev_427ceb_23bfaf_hw#net#e1000.c,revFiles/427ceb_23bfaf_hw#net#e1000.c}: e1000_receive_iov)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

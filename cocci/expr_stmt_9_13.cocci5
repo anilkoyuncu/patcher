@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef guint16;
+@@
+- dissect_media_tlv(E0, E1, E2, (E3 + 5), (E4 - 3)); 
++ dissect_media_tlv(E0, E1, E2, (E3 + 5), (guint16 )(E4 - 3)); 
+// Infered from: (wireshark/{prevFiles/prev_dce67e_e8dd2e_epan#dissectors#packet-lldp.c,revFiles/dce67e_e8dd2e_epan#dissectors#packet-lldp.c}: dissect_organizational_specific_tlv)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (!cairo_test_is_target_enabled(&E0, "svg"))  
++ if (!(cairo_test_is_target_enabled(&E0, "svg11") || cairo_test_is_target_enabled(  &E0, "svg12")))  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_cca1fc_39e4a0_test#svg-clip.c,revFiles/cca1fc_39e4a0_test#svg-clip.c}: main), (cairo/{prevFiles/prev_cca1fc_39e4a0_test#svg-surface.c,revFiles/cca1fc_39e4a0_test#svg-surface.c}: main)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

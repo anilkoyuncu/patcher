@@ -1,0 +1,29 @@
+@@
+expression E0, E1, E2;
+@@
+- memcpy(E0, E1, E2->width * ((E2->bpp + 1) >> 3)); 
++ memcpy(E0, E1, img_size); 
+// Infered from: (FFmpeg/{prevFiles/prev_351423_ed040f_libavcodec#targa.c,revFiles/351423_ed040f_libavcodec#targa.c}: decode_frame), (FFmpeg/{prevFiles/prev_7782cb_56cbc5_libavcodec#targa.c,revFiles/7782cb_56cbc5_libavcodec#targa.c}: decode_frame)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.09
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 1.00
+// -- Node Change --
+// Recall: 0.14, Precision: 0.83
+// -- General --
+// Functions fully changed: 0/6(0%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_7782cb_56cbc5_libavcodec#targa.c: targa_decode_rle
+ - FFmpeg/prevFiles/prev_351423_ed040f_libavcodec#targa.c: targa_decode_rle
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_351423_ed040f_libavcodec#targa.c: decode_frame
+ - FFmpeg/prevFiles/prev_7782cb_56cbc5_libavcodec#targa.c: decode_frame
+*/
+
+// ---------------------------------------------

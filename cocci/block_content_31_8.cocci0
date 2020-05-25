@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+typedef amqp_channel_t;
+typedef guint32;
+@@
+- E0 = (amqp_channel_t *)wmem_map_lookup(E1->channels, GUINT_TO_POINTER(E2)); 
++ E0 = (amqp_channel_t *)wmem_map_lookup(E1->channels,  GUINT_TO_POINTER((guint32 )E2)); 
+// Infered from: (wireshark/{prevFiles/prev_c7d98e1_6d7b29_epan#dissectors#packet-amqp.c,revFiles/c7d98e1_6d7b29_epan#dissectors#packet-amqp.c}: get_conversation_channel)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

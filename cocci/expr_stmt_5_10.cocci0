@@ -1,0 +1,14 @@
+@@
+identifier I0, I2;
+expression E1;
+@@
+- if (zend_hash_index_find(I0->value.ht, E1, (void **)&I2) == FAILURE)  
++ if (zend_hash_index_find(Z_ARRVAL_PP(I0), E1, (void **)&I2) == FAILURE)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_8a6f3f_4638a90_ext#dbase#dbase.c,revFiles/8a6f3f_4638a90_ext#dbase#dbase.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_8a6f3f_4638a90_ext#dbase#dbase.c,revFiles/8a6f3f_4638a90_ext#dbase#dbase.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/7f7c14_1ca7f0_ext#dbase#dbase.c: PHP_FUNCTION), (php-src/revFiles/8a6f3f_4638a90_ext#dbase#dbase.c: PHP_FUNCTION), (php-src/revFiles/93acbe_20c007_ext#dbase#dbase.c: PHP_FUNCTION)
+// Recall: 0.26, Precision: 0.40, Matching recall: 0.26
+
+// ---------------------------------------------

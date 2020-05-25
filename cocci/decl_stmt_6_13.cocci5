@@ -1,0 +1,14 @@
+@@
+expression E0;
+typedef bool;
+@@
+- return (bool )(E0 == TLD_SUCCESS); 
++ if (E0 != TLD_SUCCESS)  
++ {
++ return FALSE; 
++ }
++ return TRUE; 
+// Infered from: (curl/{prevFiles/prev_bd7430_6e5acc_lib#url.c,revFiles/bd7430_6e5acc_lib#url.c}: tld_check_name)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

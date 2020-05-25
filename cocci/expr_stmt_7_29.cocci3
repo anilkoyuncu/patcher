@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- col_add_str(E0->cinfo, COL_INFO, "%s",  val_to_str(E1, asf_type_vals, "Unknown (0x%02x)")); 
++ col_add_str(E0->cinfo, COL_INFO,  val_to_str(E1, asf_type_vals, "Unknown (0x%02x)")); 
+// Infered from: (wireshark/{prevFiles/prev_101d2e_407faa_epan#dissectors#packet-asf.c,revFiles/101d2e_407faa_epan#dissectors#packet-asf.c}: dissect_asf)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+
+// ---------------------------------------------

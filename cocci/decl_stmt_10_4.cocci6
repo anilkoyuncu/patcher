@@ -1,0 +1,34 @@
+@@
+identifier I0;
+expression E1;
+@@
+- char **I0 = subtitles_Detect(E1, "", E1->psz_source); 
++ char **I0 = subtitles_Detect(E1, "", E1->psz_name); 
+// Infered from: (vlc/{prevFiles/prev_b47baf_060650_src#input#input.c,revFiles/b47baf_060650_src#input#input.c}: InitThread)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.89, Precision: 0.80
+// -- Node Change --
+// Recall: 0.74, Precision: 0.70
+// -- General --
+// Functions fully changed: 6/11(54%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_b47baf_060650_src#input#input.c: InitThread
+*/
+/*
+Functions where the patch did not apply:
+ - gstreamer/prevFiles/prev_dcc6ab_4cd488_tools#gst-inspect.c: print_all_uri_handlers
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_ef4548_27d3e1_ompi#mca#bml#r2#bml_r2.c: mca_bml_r2_add_procs
+ - ompi/prevFiles/prev_fc96b0_e97e4c_ompi#mca#bml#r2#bml_r2.c: mca_bml_r2_add_procs
+ - ompi/prevFiles/prev_ef4548_27d3e1_ompi#mca#bml#r2#bml_r2.c: mca_bml_r2_del_procs
+*/
+
+// ---------------------------------------------

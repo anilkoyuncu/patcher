@@ -1,0 +1,13 @@
+@@
+identifier I0, I1;
+@@
+- char *I0 = NULL; 
+  ...
+- if (I1 != I0)  
+- {
+- free(I0); 
+- }
+// Infered from: (ompi/{prevFiles/prev_562808_8f10c2_orte#mca#pls#rsh#pls_rsh_module.c,revFiles/562808_8f10c2_orte#mca#pls#rsh#pls_rsh_module.c}: orte_pls_rsh_launch), (ompi/{prevFiles/prev_8f10c2_c4a38f_orte#runtime#orte_cr.c,revFiles/8f10c2_c4a38f_orte#runtime#orte_cr.c}: orte_cr_coord_pre_ckpt)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

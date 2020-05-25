@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (E0->vram_size < (E0->vram_size_mb << 20) && E0->vram_size < (256 << 20))  
++ while (E0->vram_size < (E0->vram_size_mb << 20) && E0->vram_size < (512 << 20))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_876d51_03d982_hw#display#vga.c,revFiles/876d51_03d982_hw#display#vga.c}: vga_common_init)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

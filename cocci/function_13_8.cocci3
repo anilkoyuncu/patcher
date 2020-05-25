@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- if (E0.sa_sigaction != zend_signal_handler_defer)  
++ if (E0.sa_sigaction != zend_signal_handler_defer && E0.sa_sigaction != (  void *)SIG_IGN)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_38f128_68fd43_Zend#zend_signal.c,revFiles/38f128_68fd43_Zend#zend_signal.c}: zend_signal_deactivate)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.18
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.12, Precision: 0.67
+// -- Node Change --
+// Recall: 0.46, Precision: 0.68
+// -- General --
+// Functions fully changed: 2/18(11%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_38f128_68fd43_Zend#zend_signal.c: zend_signal_handler_unblock
+*/
+
+// ---------------------------------------------

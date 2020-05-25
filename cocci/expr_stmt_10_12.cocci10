@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- gen_op_st_v(E0, MO_16, cpu_T[0], cpu_A0); 
++ gen_op_st_v(E0, MO_16, cpu_T[1], cpu_A0); 
+// Infered from: (qemu/{prevFiles/prev_ee3138_b5afc1_target-i386#translate.c,revFiles/ee3138_b5afc1_target-i386#translate.c}: gen_push_T1)
+// False positives: (qemu/revFiles/ee3138_b5afc1_target-i386#translate.c: disas_insn), (qemu/revFiles/ee3138_b5afc1_target-i386#translate.c: gen_push_T0)
+// Recall: 0.05, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

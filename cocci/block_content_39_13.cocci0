@@ -1,0 +1,15 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef PyObject;
+@@
+- PyObject *I0; 
+  ...
+- I0 = E1; 
+- E1 = E2; 
+- Py_DECREF(I0); 
++ Py_SETREF(E1, E2); 
+// Infered from: (cpython/{prevFiles/prev_1ed017_726fc1_Modules#_collectionsmodule.c,revFiles/1ed017_726fc1_Modules#_collectionsmodule.c}: deque_ass_item), (cpython/{prevFiles/prev_1ed017_726fc1_Objects#listobject.c,revFiles/1ed017_726fc1_Objects#listobject.c}: list_ass_item)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

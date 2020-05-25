@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (tvb_offset_exists(E0, E1))  
++ if (tvb_reported_length_remaining(E0, E1) > 0)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_4943a1_ffac66_packet-mip.c,revFiles/4943a1_ffac66_packet-mip.c}: dissect_mip)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

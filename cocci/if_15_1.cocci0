@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2;
+@@
+- if (PyString_Check(E0))  
++ if (PyUnicode_Check(E0))  
+  {
+- strncpy(E1, PyString_AS_STRING(E0), E2); 
++ strncpy(E1, PyUnicode_AsString(E0), E2); 
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_826b9d_5b2221_Objects#classobject.c,revFiles/826b9d_5b2221_Objects#classobject.c}: getclassname)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

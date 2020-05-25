@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- if (!strcmp(E0->iformat->name, "mp3") || !strcmp(E0->iformat->name, "aac"))  
++ if (!strcmp(E0->iformat->name, "mp3") || !strcmp(E0->iformat->name, "aac") || !strcmp(  E0->iformat->name, "tta"))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e997af_9ea7ff_libavformat#utils.c,revFiles/e997af_9ea7ff_libavformat#utils.c}: avformat_open_input)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.75
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_cada99_a12a61_libavformat#utils.c: avformat_open_input
+*/
+
+// ---------------------------------------------

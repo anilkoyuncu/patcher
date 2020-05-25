@@ -1,0 +1,36 @@
+@@
+@@
+- if (s[i] == '1' && s[i + 1] == '1' && s[i + 2] == '4')  
++ if (s[i] == '1' && s[i + 1] == '4' && s[i + 2] == '4')  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_320-A-17314140-17314148.c,revFiles/320-A-17314140-17314148.c}: main)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 0.80
+// -- General --
+// Functions fully changed: 6/10(60%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_48-A-18336507-18336566.c: main
+ - codeflaws/prevFiles/prev_149-B-1170437-1170470.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_b328f8_ca954f_gdbstub.c: gdb_handle_packet
+ - codeflaws/prevFiles/prev_664-A-17590501-17590517.c: main
+*/
+
+// ---------------------------------------------

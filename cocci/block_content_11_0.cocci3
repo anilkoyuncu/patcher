@@ -1,0 +1,27 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef GtkTreeModel;
+@@
+- GtkTreeModel *I0; 
+  ...
+- I0 = create_and_fill_model(E1, TRUE, GTK_TREE_VIEW(E2)); 
++ create_and_fill_model(E1, TRUE, GTK_TREE_VIEW(E2)); 
+// Infered from: (wireshark/{prevFiles/prev_45c65a_286480_gtk#capture_dlg.c,revFiles/45c65a_286480_gtk#capture_dlg.c}: capture_prep_cb)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.88
+// -- Node Change --
+// Recall: 1.00, Precision: 0.88
+// -- General --
+// Functions fully changed: 7/8(87%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_67900c_5f6a57_plugins#unistim#packet-unistim.c: dissect_payload
+*/
+
+// ---------------------------------------------

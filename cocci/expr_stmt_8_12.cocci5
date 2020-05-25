@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- col_append_sep_fstr(E0->pinfo->cinfo, COL_INFO, NSIP_SEP, "Reset"); 
++ col_append_sep_str(E0->pinfo->cinfo, COL_INFO, NSIP_SEP, "Reset"); 
+// Infered from: (wireshark/{prevFiles/prev_9d1f2e_522532_epan#dissectors#packet-nsip.c,revFiles/9d1f2e_522532_epan#dissectors#packet-nsip.c}: decode_iei_reset_flag)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 17/17(100%)
+
+
+// ---------------------------------------------

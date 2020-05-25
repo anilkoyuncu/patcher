@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- blkverify_err(E0, "contents mismatch in sector %ld",  E0->sector_num + (E1 / BDRV_SECTOR_SIZE)); 
++ blkverify_err(E0, "contents mismatch in sector %lld",  E0->sector_num + (E1 / BDRV_SECTOR_SIZE)); 
+// Infered from: (qemu/{prevFiles/prev_a77cff_191c28_block#blkverify.c,revFiles/a77cff_191c28_block#blkverify.c}: blkverify_verify_readv)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

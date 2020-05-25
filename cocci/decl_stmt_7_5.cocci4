@@ -1,0 +1,37 @@
+@@
+identifier I0, I1;
+typedef vlc_cond_t;
+typedef vlc_mutex_t;
+@@
+- struct vlc_mutex_t I0; 
+- struct vlc_cond_t I1; 
++ vlc_mutex_t I0; 
++ vlc_cond_t I1; 
+// Infered from: (vlc/{prevFiles/prev_076dc4_936ac4_src#misc#mtime.c,revFiles/076dc4_936ac4_src#misc#mtime.c}: mwait)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.92, Precision: 0.80
+// -- Node Change --
+// Recall: 0.89, Precision: 0.81
+// -- General --
+// Functions fully changed: 11/16(68%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_076dc4_936ac4_src#misc#mtime.c: mwait
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_adcc3c_cd86cb_modules#access#v4l2#controls.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_076dc4_936ac4_src#misc#mtime.c: msleep
+ - vlc/prevFiles/prev_076dc4_936ac4_src#misc#mtime.c: mdate
+ - vlc/prevFiles/prev_076dc4_936ac4_src#misc#mtime.c: NTPtime64
+*/
+
+// ---------------------------------------------

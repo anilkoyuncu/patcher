@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (mpegts_resync(E0->pb) < 0)  
++ if (mpegts_resync(E0) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_04ac0d_e2c213_libavformat#mpegts.c,revFiles/04ac0d_e2c213_libavformat#mpegts.c}: mpegts_get_pcr)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

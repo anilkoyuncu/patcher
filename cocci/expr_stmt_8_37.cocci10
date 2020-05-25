@@ -1,0 +1,37 @@
+@@
+expression E0;
+@@
+- gtk_selection_data_set(E0, gdk_atom_intern_static_string("NULL"), 32, "", 0); 
++ gtk_selection_data_set(E0, gdk_atom_intern_static_string("NULL"), 32, NULL, 0); 
+// Infered from: (gtk/{prevFiles/prev_c43a3a_d020cb_gtk#gtkselection.c,revFiles/c43a3a_d020cb_gtk#gtkselection.c}: gtk_selection_default_handler)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.61, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 0.92
+// -- General --
+// Functions fully changed: 9/18(50%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_3f3e340_781065_sapi#phpdbg#phpdbg_cmd.c: phpdbg_param_debug
+*/
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_caaa20_ebcbd1_src#mca#coll#base#coll_base_comm_select.c: mca_coll_base_comm_select
+ - php-src/prevFiles/prev_af3c72_c61bf4_sapi#phpdbg#phpdbg_opcode.c: phpdbg_decode_op
+ - cpython/prevFiles/prev_a5892a_9cdfd1_PC#launcher.c: maybe_handle_shebang
+ - git/prevFiles/prev_d64db5_76a7bc_builtin#column.c: cmd_column
+ - vlc/prevFiles/prev_a7f577_a912158_src#audio_output#common.c: aout_ChangeFilterString
+ - php-src/prevFiles/prev_491d00_7567bf1_ext#mbstring#mbstring.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_3f3e340_781065_sapi#phpdbg#phpdbg_cmd.c: phpdbg_param_tostring
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_cb6e4c_d6e4d5_src#test#url.c: main
+*/
+
+// ---------------------------------------------

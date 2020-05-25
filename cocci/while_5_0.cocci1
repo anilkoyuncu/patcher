@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2;
+@@
+- while (E0 < E1 && E2[E0]->hash && E2[E0]->hash == E2[E0 - 1]->hash)  
++ while (E0 && E0 < E1 && E2[E0]->hash && E2[E0]->hash == E2[E0 - 1]->hash)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_6fc747_9288be_builtin-pack-objects.c,revFiles/6fc747_9288be_builtin-pack-objects.c}: ll_find_deltas)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_eef33d_34fdc5_gtk#gtkwidget.c: _gtk_widget_emulate_press
+ - wireshark/prevFiles/prev_45c465_69ef14_epan#dissectors#packet-ua3g.c: decode_ip_device_routing
+*/
+
+// ---------------------------------------------

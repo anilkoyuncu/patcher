@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2;
+@@
+- write(E0.in, E1, E2); 
++ write_or_die(E0.in, E1, E2); 
+// Infered from: (git/{prevFiles/prev_95693d_35cda0_bundle.c,revFiles/95693d_35cda0_bundle.c}: create_bundle), (git/{prevFiles/prev_95693d_35cda0_bundle.c,revFiles/95693d_35cda0_bundle.c}: create_bundle), (git/{prevFiles/prev_95693d_35cda0_bundle.c,revFiles/95693d_35cda0_bundle.c}: create_bundle)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.80
+// -- Node Change --
+// Recall: 1.00, Precision: 0.69
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_ae878b_e58972_ui#vnc-auth-sasl.c: protocol_client_auth_sasl_mechname
+ - git/prevFiles/prev_95693d_35cda0_bundle.c: create_bundle
+ - qemu/prevFiles/prev_ae878b_e58972_ui#vnc-auth-sasl.c: vnc_sasl_client_cleanup
+*/
+
+// ---------------------------------------------

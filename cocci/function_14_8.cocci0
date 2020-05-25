@@ -1,0 +1,26 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef ev_timer;
+typedef ev_tstamp;
+@@
+- ev_timer I0; 
+- ev_init(&I0, timeout_watcher_cb); 
+- ev_timer_set(&I0, ((ev_tstamp )E1) / 1000.0, 0.0); 
+- ev_timer_start(E2->libev_loop, &I0); 
++ if (!E1)  
++ {
++ E1 = 1; 
++ }
++ ev_init(&I0.w, NULL); 
++ ev_set_cb(&I0.timer, timeout_watcher_cb); 
++ I0.timer.repeat = ((ev_tstamp )E1) / 1000.0; 
++ assert(I0.timer.repeat); 
++ ev_timer_again(E2->libev_loop, &I0.timer); 
+  ...
+- ev_timer_stop(E2->libev_loop, &I0); 
++ ev_timer_stop(E2->libev_loop, &I0.timer); 
+// Infered from: (FFmpeg/{prevFiles/prev_db2caf_86476c_libavcodec#options.c,revFiles/db2caf_86476c_libavcodec#options.c}: avcodec_copy_context), (lighttpd1.4/{prevFiles/prev_3caf47_680b71_src#fdevent_libev.c,revFiles/3caf47_680b71_src#fdevent_libev.c}: fdevent_libev_poll)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.93
+
+// ---------------------------------------------

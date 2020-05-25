@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (char *)E1->p_rcv_buff_va[E2]; 
++ E0 = E1->p_rcv_buff_va[E2]; 
+// Infered from: (linux/{prevFiles/prev_c2fd03_2c20889_drivers#net#fddi#defxx.c,revFiles/c2fd03_2c20889_drivers#net#fddi#defxx.c}: dfx_rcv_queue_process)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

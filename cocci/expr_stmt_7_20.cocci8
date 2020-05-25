@@ -1,0 +1,62 @@
+@@
+identifier I0, I1, I2, I3;
+expression E4;
+typedef video_format_t;
+typedef vlc_fourcc_t;
+typedef vlc_gl_t;
+typedef vlc_viewpoint_t;
+typedef vout_display_opengl_t;
+@@
+  vout_display_opengl_t *vout_display_opengl_New(video_format_t *I0,  const  vlc_fourcc_t **I1,  vlc_gl_t *I2,  const  vlc_viewpoint_t *I3)  
+  {
+  ...
+- E4->fmt.orientation = ORIENT_NORMAL; 
++ E4->fmt.orientation = I0->orientation; 
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_d61a3e_844729_modules#video_output#opengl#vout_helper.c,revFiles/d61a3e_844729_modules#video_output#opengl#vout_helper.c}: vout_display_opengl_New)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.38, Precision: 0.62
+// -- Node Change --
+// Recall: 0.36, Precision: 0.61
+// -- General --
+// Functions fully changed: 9/32(28%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_906a3b_54b1df_modules#access#udp.c: BlockChoose
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_2e3023_7d8246_slirp#tcp_subr.c: tcp_respond
+ - FFmpeg/prevFiles/prev_789cd1_cb4d05_libavcodec#pcm-dvd.c: pcm_dvd_decode_samples
+ - FFmpeg/prevFiles/prev_21ffd4_f4ca97_libavcodec#pcm-dvd.c: pcm_dvd_decode_samples
+ - qemu/prevFiles/prev_18f88f_48bb9f_hw#hid.c: hid_pointer_event_combine
+ - gtk/prevFiles/prev_3c279b_9eea72_gtk#gtkicontheme.c: symbolic_pixbuf_cache_free
+ - vlc/prevFiles/prev_857531_fe99a2_modules#access#pvr#pvr.c: Read
+ - ompi/prevFiles/prev_d981a9_5bc9d9d_opal#mca#patcher#overwrite#patcher_overwrite_module.c: mca_patcher_overwrite_patch_address
+ - ompi/prevFiles/prev_d981a9_5bc9d9d_opal#mca#patcher#overwrite#patcher_overwrite_module.c: mca_patcher_overwrite_apply_patch
+ - vlc/prevFiles/prev_f581d0_724a57_modules#codec#avcodec#audio.c: DecodeAudio
+ - cpython/prevFiles/prev_9b1e03_4190fb_Modules#cPickle.c: dump
+ - FFmpeg/prevFiles/prev_39da3b_632eb1_avconv.c: do_video_out
+ - gtk/prevFiles/prev_de6896_50178c_gdk#wayland#gdkselection-wayland.c: _gdk_wayland_display_get_selection_property
+ - FFmpeg/prevFiles/prev_42b9f4_5dae74_libavformat#ffm.c: ffm_write_packet
+ - FFmpeg/prevFiles/prev_354fda_5d0cfb_libavfilter#vf_uspp.c: config_input
+ - wireshark/prevFiles/prev_f4fd1a_8634ce_ui#commandline.c: commandline_other_options
+ - php-src/prevFiles/prev_7557b3_805917_ext#pdo_mysql#mysql_driver.c: mysql_handle_closer
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - lighttpd2/prevFiles/prev_2ac5c5_5dde1f_src#http_headers.c: http_header_find_next
+ - lighttpd2/prevFiles/prev_2ac5c5_5dde1f_src#http_headers.c: http_header_find_first
+ - lighttpd2/prevFiles/prev_2ac5c5_5dde1f_src#http_headers.c: http_header_find_last
+ - curl/prevFiles/prev_50ef91_62a809_docs#examples#multi-uv.c: handle_socket
+ - gtk/prevFiles/prev_5c46c8_c6fa3c_gdk#x11#gdkdnd-x11.c: send_client_message_async_cb
+ - curl/prevFiles/prev_50ef91_62a809_docs#examples#multi-uv.c: create_curl_context
+*/
+
+// ---------------------------------------------

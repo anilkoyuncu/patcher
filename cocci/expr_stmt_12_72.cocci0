@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- proto_tree_add_text(E0, E1, E2 + 12, tvb_get_ntohs(E1, E2 + 6) - 8,  "Classifier: %s",  tvb_get_ephemeral_faked_unicode(E1, E2 + 12,  (tvb_get_ntohs(E1, E2 + 6) - 8) / 2,  FALSE)); 
++ proto_tree_add_text(E0, E1, E2 + 12, tvb_get_ntohs(E1, E2 + 6) - 8,  "Classifier: %s",  tvb_get_ephemeral_unicode_string(E1, E2 + 12,  (tvb_get_ntohs(E1,  E2 + 6) - 8) / 2,  ENC_BIG_ENDIAN)); 
+// Infered from: (wireshark/{prevFiles/prev_d7a1840_051d46_epan#dissectors#packet-pnrp.c,revFiles/d7a1840_051d46_epan#dissectors#packet-pnrp.c}: dissect_pnrp)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

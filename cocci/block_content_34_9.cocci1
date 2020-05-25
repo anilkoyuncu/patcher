@@ -1,0 +1,29 @@
+@@
+expression E1, E0, E2;
+@@
+- gst_element_connect(E0, "src", E1, "sink"); 
+- gst_bin_add(GST_BIN(E2), E0); 
+- gst_bin_add(GST_BIN(E2), E1); 
++ gst_element_connect(E0, E1); 
++ gst_bin_add_many(GST_BIN(E2), E0, E1, NULL); 
+// Infered from: (gstreamer/{prevFiles/prev_2b51cb_4f9dad_testsuite#cleanup#cleanup2.c,revFiles/2b51cb_4f9dad_testsuite#cleanup#cleanup2.c}: create_pipeline), (gstreamer/{prevFiles/prev_2b51cb_4f9dad_tests#old#testsuite#cleanup#cleanup2.c,revFiles/2b51cb_4f9dad_tests#old#testsuite#cleanup#cleanup2.c}: create_pipeline), (gstreamer/{prevFiles/prev_2b51cb_4f9dad_testsuite#cleanup#cleanup1.c,revFiles/2b51cb_4f9dad_testsuite#cleanup#cleanup1.c}: create_pipeline), (gstreamer/{prevFiles/prev_2b51cb_4f9dad_tests#old#testsuite#cleanup#cleanup1.c,revFiles/2b51cb_4f9dad_tests#old#testsuite#cleanup#cleanup1.c}: create_pipeline)
+// Recall: 0.37, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/8(50%)
+
+/*
+Functions where the patch applied partially:
+ - gstreamer/prevFiles/prev_2b51cb_4f9dad_tests#old#testsuite#cleanup#cleanup2.c: main
+ - gstreamer/prevFiles/prev_2b51cb_4f9dad_testsuite#cleanup#cleanup1.c: main
+ - gstreamer/prevFiles/prev_2b51cb_4f9dad_testsuite#cleanup#cleanup2.c: main
+ - gstreamer/prevFiles/prev_2b51cb_4f9dad_tests#old#testsuite#cleanup#cleanup1.c: main
+*/
+
+// ---------------------------------------------

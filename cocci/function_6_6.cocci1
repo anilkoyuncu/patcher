@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->op_array->filename; 
++ include_filename = E0 = E1->op_array->filename; 
+// Infered from: (php-src/{prevFiles/prev_800c67_e4f905_Zend#zend_builtin_functions.c,revFiles/800c67_e4f905_Zend#zend_builtin_functions.c}: ZEND_FUNCTION)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------

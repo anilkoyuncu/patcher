@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->flags &= ~(GTK_STATE_FLAG_INSENSITIVE | GTK_STATE_FLAG_FOCUSED); 
++ E0->flags &= ~GTK_STATE_FLAG_FOCUSED; 
+// Infered from: (gtk/{prevFiles/prev_23f9bd_1c20c9_gtk#gtkwidget.c,revFiles/23f9bd_1c20c9_gtk#gtkwidget.c}: gtk_widget_propagate_state)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

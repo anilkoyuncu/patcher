@@ -1,0 +1,42 @@
+@@
+type T3;
+expression E0, E1, E2, E4;
+@@
+- OSC_RDMA_VERBOSE(MCA_BASE_VERBOSE_TRACE,  "using internal buffer %p in fragment %p for get of size %lu bytes, source address 0x%lx",  E0, (void *)E1, E2, (T3 )E4); 
++ OSC_RDMA_VERBOSE(MCA_BASE_VERBOSE_TRACE,  "using internal buffer %p in fragment %p for get of size %lu bytes, source address 0x%lx",  E0, (void *)E1, (T3 )E2, (T3 )E4); 
+// Infered from: (ompi/{prevFiles/prev_e8ef50_b11c95_ompi#mca#osc#rdma#osc_rdma_comm.c,revFiles/e8ef50_b11c95_ompi#mca#osc#rdma#osc_rdma_comm.c}: ompi_osc_rdma_get_contig)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.35, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/23(30%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_4f334b_33b896_lib#vtls#gtls.c: Curl_gtls_md5sum
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_251882_b9c0c9_ext#gd#libgd#gd_gd.c: _gdPutColors
+ - curl/prevFiles/prev_c26ec4_8337a3_ares#ares_getnameinfo.c: lookup_service
+ - wireshark/prevFiles/prev_ee2885_80c070_epan#dissectors#packet-corosync-totemnet.c: dissect_corosynec_totemnet_with_decryption
+ - qemu/prevFiles/prev_59df4c_09cec7_hw#acpi_piix4.c: pm_ioport_read
+ - redis/prevFiles/prev_73a78a_c7c3b2_src#server.c: genRedisInfoString
+ - qemu/prevFiles/prev_59df4c_09cec7_hw#acpi_piix4.c: pm_ioport_write
+ - php-src/prevFiles/prev_172386_94be83_ext#gd#libgd#gd_wbmp.c: gd_putout
+ - vlc/prevFiles/prev_8955d6_50ce52_modules#audio_output#auhal.c: Open
+ - curl/prevFiles/prev_5bd8c3_ba1dbd_docs#examples#getinmemory.c: main
+ - git/prevFiles/prev_4c267f_3013df_strbuf.c: strbuf_add_urlencode
+ - vlc/prevFiles/prev_1aacba_204e8b_src#text#url.c: vlc_uri_putc
+ - wireshark/prevFiles/prev_76729e_d3d3f9_wiretap#catapult_dct2000.c: catapult_dct2000_seek_read
+ - wireshark/prevFiles/prev_76729e_d3d3f9_wiretap#catapult_dct2000.c: wth_hash_func
+ - vlc/prevFiles/prev_ff3de9_0918962_modules#misc#gnutls.c: gnutls_BeginHandshake
+ - cpython/prevFiles/prev_da0625_0c0834_Python#marshal.c: w_complex_object
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- read(E0->fd, &E1, 1); 
++ if (read(E0->fd, &E1, 1) != 1)  
++ {
++ return -1; 
++ }
+// Infered from: (qemu/{prevFiles/prev_00ccf9_5fdb3a_block#bochs.c,revFiles/00ccf9_5fdb3a_block#bochs.c}: seek_to_sector)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_ead46d_2008a8_TSRM#tsrm_virtual_cwd.c: virtual_access
+ - php-src/prevFiles/prev_acb6ad8_30a2f9_TSRM#tsrm_virtual_cwd.c: virtual_fopen
+*/
+
+// ---------------------------------------------

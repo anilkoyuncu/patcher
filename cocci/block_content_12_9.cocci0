@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- size_t I0; 
++ int I0; 
+  ...
+- if ((E1->length != I0) || strncasecmp(E2, E3, I0))  
++ if ((E1->length != (int )I0) || strncasecmp(E2, E3, I0))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_fa0f83_96562f_crypto#x509v3#v3_ncons.c,revFiles/fa0f83_96562f_crypto#x509v3#v3_ncons.c}: nc_uri)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

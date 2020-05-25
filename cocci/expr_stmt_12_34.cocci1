@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = kzalloc(sizeof(struct mtd_info ) * E1, GFP_KERNEL); 
++ E0 = kzalloc(sizeof(*E0) * E1, GFP_KERNEL); 
+// Infered from: (linux/{prevFiles/prev_e02625_bb6a7755_drivers#mtd#maps#physmap_of.c,revFiles/e02625_bb6a7755_drivers#mtd#maps#physmap_of.c}: of_flash_probe)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

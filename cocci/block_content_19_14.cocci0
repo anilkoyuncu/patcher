@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- EVP_MD_CTX_create() 
++ EVP_MD_CTX_new() 
+  ...
+- EVP_MD_CTX_destroy(E0); 
++ EVP_MD_CTX_free(E0); 
+// Infered from: (openssl/{prevFiles/prev_bfb064_959ed5_apps#ts.c,revFiles/bfb064_959ed5_apps#ts.c}: create_digest), (openssl/{prevFiles/prev_bfb064_959ed5_ssl#record#ssl3_record.c,revFiles/bfb064_959ed5_ssl#record#ssl3_record.c}: n_ssl3_mac), (openssl/{prevFiles/prev_bfb064_959ed5_ssl#record#ssl3_record.c,revFiles/bfb064_959ed5_ssl#record#ssl3_record.c}: tls1_mac)
+// Recall: 0.86, Precision: 1.00, Matching recall: 0.86
+
+// ---------------------------------------------

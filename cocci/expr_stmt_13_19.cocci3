@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- msg_Err(E0, "Error creating SVG reader: %s", E1->message); 
++ msg_Err(E0, "Error creating SVG reader"); 
+// Infered from: (vlc/{prevFiles/prev_8bee22_3efb87_modules#misc#svg.c,revFiles/8bee22_3efb87_modules#misc#svg.c}: svg_RenderPicture)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

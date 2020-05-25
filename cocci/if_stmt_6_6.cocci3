@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((E0 == HTTP_OK) && move_temp_to_file(E1.buf, E2))  
++ if (E0 == HTTP_OK && move_temp_to_file(E1.buf, E2))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_3d1fb7_02a110_http.c,revFiles/3d1fb7_02a110_http.c}: http_get_file)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

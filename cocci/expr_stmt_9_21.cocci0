@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 |= GETSOCK_WRITESOCK(1); 
++ E0 |= GETSOCK_WRITESOCK(1) | GETSOCK_READSOCK(1); 
+// Infered from: (curl/{prevFiles/prev_7ad50a_155921_lib#ftp.c,revFiles/7ad50a_155921_lib#ftp.c}: ftp_domore_getsock)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

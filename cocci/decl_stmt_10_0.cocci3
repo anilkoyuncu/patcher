@@ -1,0 +1,9 @@
+@@
+expression list E1;
+expression E0;
+@@
+- E0 = av_mallocz (E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_8f68977_4972e5_libavcodec#kmvc.c,revFiles/8f68977_4972e5_libavcodec#kmvc.c}: decode_init), (FFmpeg/{prevFiles/prev_8f68977_4972e5_libavcodec#kmvc.c,revFiles/8f68977_4972e5_libavcodec#kmvc.c}: decode_init)
+// Recall: 0.00, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->array)  
++ if (E0->array && !GC_G(gc_active))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_a21243_379c32_ext#spl#spl_fixedarray.c,revFiles/a21243_379c32_ext#spl#spl_fixedarray.c}: spl_fixedarray_object_get_properties), (php-src/{prevFiles/prev_f57cbf_e1a544_ext#spl#spl_fixedarray.c,revFiles/f57cbf_e1a544_ext#spl#spl_fixedarray.c}: spl_fixedarray_object_get_properties), (php-src/{prevFiles/prev_0afd4b_087a13_ext#spl#spl_fixedarray.c,revFiles/0afd4b_087a13_ext#spl#spl_fixedarray.c}: spl_fixedarray_object_get_properties)
+// False positives: (php-src/revFiles/0afd4b_087a13_ext#spl#spl_fixedarray.c: spl_fixedarray_object_count_elements), (php-src/revFiles/0afd4b_087a13_ext#spl#spl_fixedarray.c: spl_fixedarray_object_free_storage), (php-src/revFiles/a21243_379c32_ext#spl#spl_fixedarray.c: spl_fixedarray_object_count_elements), (php-src/revFiles/a21243_379c32_ext#spl#spl_fixedarray.c: spl_fixedarray_object_free_storage), (php-src/revFiles/f57cbf_e1a544_ext#spl#spl_fixedarray.c: spl_fixedarray_object_count_elements), (php-src/revFiles/f57cbf_e1a544_ext#spl#spl_fixedarray.c: spl_fixedarray_object_free_storage)
+// Recall: 0.50, Precision: 0.33, Matching recall: 0.50
+
+// ---------------------------------------------

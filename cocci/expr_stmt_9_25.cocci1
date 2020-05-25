@@ -1,0 +1,36 @@
+@@
+identifier I0, I1, I2, I3;
+expression E4, E5, E6;
+typedef FILE;
+typedef gdImagePtr;
+@@
+  void gdImagePngEx(gdImagePtr I0, FILE *I1, int I2, int I3)  
+  {
+  ...
+- gdImagePngCtxEx(E4, E5, E6, -1); 
++ gdImagePngCtxEx(E4, E5, E6, I3); 
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_20f1d3_75f4f9_ext#gd#libgd#gd_png.c,revFiles/20f1d3_75f4f9_ext#gd#libgd#gd_png.c}: gdImagePngEx)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 0.83
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_159f6e_bad6b1_crypto#pem#pvkfmt.c: write_rsa
+ - cpython/prevFiles/prev_222dfc_8912d1_Modules#socketmodule.c: sock_call_ex
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_65efca_2cb16b_epan#dissectors#packet-lapsat.c: dissect_lapsat
+*/
+
+// ---------------------------------------------

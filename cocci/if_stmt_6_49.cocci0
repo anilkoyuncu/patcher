@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (*E0 >= 0 && *E0 <= '9')  
++ if (*E0 >= '0' && *E0 <= '9')  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_1ee0eb_4aede6_libarchive#test#test_write_format_cpio_newc.c,revFiles/1ee0eb_4aede6_libarchive#test#test_write_format_cpio_newc.c}: is_hex)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[--E1] = '\n'; 
++ E0[E1] = '\n'; 
+// Infered from: (wireshark/{prevFiles/prev_dd8518_d89ef8_gtk#follow_dlg.c,revFiles/dd8518_d89ef8_gtk#follow_dlg.c}: follow_add_to_gtk_text)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

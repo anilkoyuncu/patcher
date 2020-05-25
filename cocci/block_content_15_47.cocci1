@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- struct irq_chip *I0 = get_irq_chip(E1); 
++ struct irq_chip *I0 = irq_get_chip(E1); 
+// Infered from: (linux/{prevFiles/prev_53c909_e3d781_arch#ia64#hp#sim#hpsim_irq.c,revFiles/53c909_e3d781_arch#ia64#hp#sim#hpsim_irq.c}: hpsim_irq_init)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

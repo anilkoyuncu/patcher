@@ -1,0 +1,11 @@
+@@
+@@
+- if ((strcmp(sapi_module.name, "cgi") != 0) && (strcmp(sapi_module.name, "cli") != 0))  
++ if ((strncmp(sapi_module.name, "cgi", 3) != 0) && (strcmp(sapi_module.name,  "cli") != 0))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_938a78_65d211_ext#standard#dl.c,revFiles/938a78_65d211_ext#standard#dl.c}: PHP_FUNCTION)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

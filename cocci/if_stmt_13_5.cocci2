@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->block_align == 1 && E0->codec_id == CODEC_ID_MP3)  
++ if ((E0->block_align == 1 || E0->block_align == 1152) && E0->codec_id == CODEC_ID_MP3)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_5dba4c_b45a31_ffmpeg.c,revFiles/5dba4c_b45a31_ffmpeg.c}: transcode_init)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

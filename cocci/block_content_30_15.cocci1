@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "# %d\n", E0); 
++ fprintf(stderr, "# %zd\n", E0); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_a4be52_151daf_src#array.c,revFiles/a4be52_151daf_src#array.c}: array_print), (lighttpd1.4/{prevFiles/prev_a4be52_151daf_src#array.c,revFiles/a4be52_151daf_src#array.c}: array_print)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

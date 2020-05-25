@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0->write(E1->opaque, E2 - E0->offset, E3); 
++ E0->write(E1->opaque, E2, E3); 
+// Infered from: (qemu/{prevFiles/prev_563ea48_a5e1cb_memory.c,revFiles/563ea48_a5e1cb_memory.c}: memory_region_iorange_write)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

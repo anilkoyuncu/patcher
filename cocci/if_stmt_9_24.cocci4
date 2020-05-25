@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->vdev->binding->set_guest_notifiers(E0->vdev->binding_opaque, true) != 0)  
++ if (E0->vdev->binding->set_guest_notifiers(E0->vdev->binding_opaque, 1, true) != 0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_b8bec4_53510b_hw#dataplane#virtio-blk.c,revFiles/b8bec4_53510b_hw#dataplane#virtio-blk.c}: virtio_blk_data_plane_start)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+identifier I0;
+expression E1;
+typedef guint;
+@@
+- guint I0; 
+- I0 = E1->index; 
++ guint idx; 
++ idx = E1->index; 
+  ...
+- if (I0 != E1->index)  
++ if (idx != E1->index)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_7397bb0a_cbec3d_gtk#bootp_stat.c,revFiles/7397bb0a_cbec3d_gtk#bootp_stat.c}: dhcpstat_draw)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

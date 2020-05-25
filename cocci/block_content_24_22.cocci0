@@ -1,0 +1,9 @@
+@@
+identifier I0 = {crit_enter ,crit_exit ,pth_mutex_release };
+expression E1;
+@@
+- return I0(E1); 
+// Infered from: (php-src/{prevFiles/prev_a57ce9_87eb2a_TSRM#TSRM.c,revFiles/a57ce9_87eb2a_TSRM#TSRM.c}: tsrm_mutex_lock), (php-src/{prevFiles/prev_a57ce9_87eb2a_TSRM#TSRM.c,revFiles/a57ce9_87eb2a_TSRM#TSRM.c}: tsrm_mutex_unlock), (php-src/{prevFiles/prev_a57ce9_87eb2a_TSRM#TSRM.c,revFiles/a57ce9_87eb2a_TSRM#TSRM.c}: tsrm_mutex_unlock), (php-src/{prevFiles/prev_ade44c_a04bcd_TSRM#TSRM.c,revFiles/ade44c_a04bcd_TSRM#TSRM.c}: tsrm_mutex_lock), (php-src/{prevFiles/prev_ade44c_a04bcd_TSRM#TSRM.c,revFiles/ade44c_a04bcd_TSRM#TSRM.c}: tsrm_mutex_unlock), (php-src/{prevFiles/prev_ade44c_a04bcd_TSRM#TSRM.c,revFiles/ade44c_a04bcd_TSRM#TSRM.c}: tsrm_mutex_unlock)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.21
+
+// ---------------------------------------------

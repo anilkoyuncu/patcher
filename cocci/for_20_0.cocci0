@@ -1,0 +1,9 @@
+@@
+identifier I0;
+expression E1;
+@@
+- snprintf(I0, sizeof(I0), "in%d", E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_7b56dd_20361b_libavfilter#af_amerge.c,revFiles/7b56dd_20361b_libavfilter#af_amerge.c}: init), (FFmpeg/{prevFiles/prev_5301a0_124cb4_libavformat#utils.c,revFiles/5301a0_124cb4_libavformat#utils.c}: av_write_trailer)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------

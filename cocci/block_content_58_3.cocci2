@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- isc_encode_timestamp(&I0, &E1[E2].val.tsval); 
++ isc_encode_timestamp(I0, &E1[E2].val.tsval); 
+// Infered from: (php-src/{prevFiles/prev_204c32_3fb8be_ext#interbase#ibase_query.c,revFiles/204c32_3fb8be_ext#interbase#ibase_query.c}: _php_ibase_bind), (php-src/{prevFiles/prev_c69555_930ac9_ext#interbase#ibase_query.c,revFiles/c69555_930ac9_ext#interbase#ibase_query.c}: _php_ibase_bind)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

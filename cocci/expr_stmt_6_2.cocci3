@@ -1,0 +1,48 @@
+@@
+expression E0;
+@@
+- E0 = &param[TYPE_MUL_N]; 
+- COPY(TYPE_SQR); 
++ E0 = &param[TYPE_MULLOW_N]; 
++ COPY(TYPE_MUL_N); 
+// Infered from: (gmp/{prevFiles/prev_ae0ff5_8077df_tests#devel#try.c,revFiles/ae0ff5_8077df_tests#devel#try.c}: param_init)
+// False positives: (gmp/revFiles/ae0ff5_8077df_tests#devel#try.c: param_init)
+// Recall: 0.08, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.22, Precision: 1.00
+// -- Node Change --
+// Recall: 0.24, Precision: 0.67
+// -- General --
+// Functions fully changed: 3/23(13%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_583-A-14352884-14352890.c: main
+ - php-src/prevFiles/prev_8fe3c0_07efbf_ext#standard#base64.c: php_base64_decode
+ - FFmpeg/prevFiles/prev_177766_90b1b9_libavcodec#opus_silk.c: silk_stabilize_lsf
+ - ompi/prevFiles/prev_518d1f_ebf441_opal#mca#db#pmi#db_pmi.c: store
+ - codeflaws/prevFiles/prev_615-A-18070872-18070885.c: main
+ - codeflaws/prevFiles/prev_365-A-12905209-12905248.c: main
+ - vlc/prevFiles/prev_22c3b9_7a7630_bin#winvlc.c: WinMain
+ - FFmpeg/prevFiles/prev_df8394_aaf65b_libavcodec#hevc.c: hls_transform_unit
+ - FFmpeg/prevFiles/prev_bdddcb_a1f8f1_libavformat#mov.c: mov_read_sidx
+ - linux/prevFiles/prev_956837_a1889c0_drivers#net#niu.c: niu_ldg_init
+ - FFmpeg/prevFiles/prev_f61d44_91c2a3_libavcodec#opus_silk.c: silk_stabilize_lsf
+ - ompi/prevFiles/prev_5f686a_8f235e_ompi#mca#coll#basic#coll_basic_alltoallw.c: mca_coll_basic_alltoallw_intra_inplace
+ - cpython/prevFiles/prev_c90516_0d3b2f_Modules#gcmodule.c: collect
+ - linux/prevFiles/prev_ca9380f_8d34e6_sound#core#pcm_compat.c: snd_pcm_ioctl_xfern_compat
+ - cairo/prevFiles/prev_bd4445_c13249_src#cairo-scaled-font-subsets.c: _cairo_sub_font_map_glyph
+ - codeflaws/prevFiles/prev_627-C-17178899-17178911.c: Greedy
+ - qemu/prevFiles/prev_541637_f34c9d_exec.c: cpu_physical_memory_rw
+ - codeflaws/prevFiles/prev_315-A-8342400-8342437.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gmp/prevFiles/prev_ae0ff5_8077df_tests#devel#try.c: param_init
+ - codeflaws/prevFiles/prev_330-C-4119460-4119684.c: main
+*/
+
+// ---------------------------------------------

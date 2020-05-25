@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->image->parent = NULL; 
++ to_image_surface(E0->image)->parent = NULL; 
+// Infered from: (cairo/{prevFiles/prev_83af31_df608e_src#win32#cairo-win32-display-surface.c,revFiles/83af31_df608e_src#win32#cairo-win32-display-surface.c}: _cairo_win32_display_surface_finish)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

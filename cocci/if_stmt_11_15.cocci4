@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (p_stream->i_interpolated_pcr < E0->i_pcr)  
++ if (p_stream->i_interpolated_pcr > 0 && p_stream->i_interpolated_pcr < E0->i_pcr)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_3d6389_490316_modules#demux#ogg.c,revFiles/3d6389_490316_modules#demux#ogg.c}: Demux)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

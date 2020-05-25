@@ -1,0 +1,33 @@
+@@
+expression E0, E1;
+@@
+- E0 = E0 * 8 + E1 - '0'; 
++ E0 = (E0 * 8 + E1 - '0') & 255; 
+// Infered from: (cpython/{prevFiles/prev_94c345_137507_Modules#pypcre.c,revFiles/94c345_137507_Modules#pypcre.c}: check_escape), (cpython/{prevFiles/prev_3b96d0_a6a0ab_Modules#pypcre.c,revFiles/3b96d0_a6a0ab_Modules#pypcre.c}: check_escape)
+// False positives: (cpython/revFiles/94c345_137507_Modules#pypcre.c: check_escape)
+// Recall: 0.12, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 12 rules):
+// -- Edit Location --
+// Recall: 0.87, Precision: 0.81
+// -- Node Change --
+// Recall: 0.88, Precision: 0.74
+// -- General --
+// Functions fully changed: 11/18(61%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_509322_2ec1d3_epan#dissectors#packet-nas_5gs.c: de_nas_5gs_mm_sal
+ - vlc/prevFiles/prev_9868c4_0ecc0a_modules#codec#cea708.c: CEA708_Decode_C1
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_6a6a06_750b10_libavcodec#r210dec.c: decode_frame
+ - qemu/prevFiles/prev_d6c140_f08320_hw#intc#apic.c: apic_get_ppr
+ - qemu/prevFiles/prev_d6c140_f08320_hw#intc#apic.c: apic_set_tpr
+ - cpython/prevFiles/prev_94c345_137507_Modules#pypcre.c: check_escape
+ - FFmpeg/prevFiles/prev_9d1301_1c3260_libavcodec#mpeg12.c: mpeg_decode_mb
+*/
+
+// ---------------------------------------------

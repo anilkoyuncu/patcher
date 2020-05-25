@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- return Py_BuildValue("i", E0); 
++ return Py_BuildValue("l", E0); 
+// Infered from: (cpython/{prevFiles/prev_7760cf_4a5eb9_Modules#gcmodule.c,revFiles/7760cf_4a5eb9_Modules#gcmodule.c}: gc_collect)
+// False positives: (cpython/revFiles/7760cf_4a5eb9_Modules#gcmodule.c: gc_get_debug), (cpython/revFiles/7760cf_4a5eb9_Modules#gcmodule.c: gc_isenabled)
+// Recall: 0.03, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

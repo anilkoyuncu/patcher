@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef uint64_t;
+@@
+- uint64_t I0 = av_rescale_q(E1->max_chunk_duration, AV_TIME_BASE_Q,  E2->time_base); 
++ uint64_t I0 = av_rescale_q_rnd(E1->max_chunk_duration, AV_TIME_BASE_Q,  E2->time_base, AV_ROUND_UP); 
+// Infered from: (FFmpeg/{prevFiles/prev_cae11e_5c7e9e_libavformat#mux.c,revFiles/cae11e_5c7e9e_libavformat#mux.c}: ff_interleave_add_packet)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

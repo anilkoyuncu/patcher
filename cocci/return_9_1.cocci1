@@ -1,0 +1,38 @@
+@@
+expression E0;
+@@
+- return qemu_get_fd(E0->file); 
++ return E0->migration_state->fd; 
+// Infered from: (qemu/{prevFiles/prev_e65958_b823ce_migration.c,revFiles/e65958_b823ce_migration.c}: buffered_get_fd)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.15, Precision: 0.67
+// -- Node Change --
+// Recall: 0.15, Precision: 0.50
+// -- General --
+// Functions fully changed: 1/14(7%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_3bd4be_d30df5_hw#lsi53c895a.c: lsi_ram_readw
+ - wireshark/prevFiles/prev_1cf6d3_fdc884_epan#dissectors#packet-mqtt.c: dissect_mqtt
+ - wireshark/prevFiles/prev_f2d94e_219cf3_epan#dissectors#packet-pim.c: dissect_pimv1
+ - qemu/prevFiles/prev_3bd4be_d30df5_hw#lsi53c895a.c: lsi_ram_readl
+ - wireshark/prevFiles/prev_92be91_1cf6d3_epan#dissectors#packet-twamp.c: dissect_owamp_test
+ - wireshark/prevFiles/prev_f711fb_fb11b8_epan#dissectors#packet-iso14443.c: dissect_iso14443_cmd_type_attrib
+ - apr/prevFiles/prev_059f8a_4bdb4d_file_io#os2#open.c: ap_open
+ - FFmpeg/prevFiles/prev_f4f395_88eb36_libavformat#matroskadec.c: matroska_parse_webvtt
+ - wireshark/prevFiles/prev_92be91_1cf6d3_epan#dissectors#packet-twamp.c: dissect_twamp_test
+ - wireshark/prevFiles/prev_1420f4_202b6e_epan#dissectors#packet-sbus.c: dissect_sbus
+ - wireshark/prevFiles/prev_64e30a_af50b7_epan#dissectors#packet-sprt.c: dissect_sprt_data
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_c8dca5_3a94f4_src#cairo-xcb-shm.c: _cairo_xcb_shm_mem_pool_init
+ - cairo/prevFiles/prev_c8dca5_3a94f4_src#cairo-xcb-shm.c: _cairo_xcb_connection_allocate_shm_info
+*/
+
+// ---------------------------------------------

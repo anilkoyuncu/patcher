@@ -1,0 +1,45 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- printf(" %s %.*s{%s => %s} (%d%%)\n", E0, E1 - E2->old_name, E2->old_name,  E1, E3, E2->score); 
++ printf(" %s %.*s{%s => %s} (%d%%)\n", E0, (int )(E1 - E2->old_name),  E2->old_name, E1, E3, E2->score); 
+// Infered from: (git/{prevFiles/prev_e30e81_6aa33f_apply.c,revFiles/e30e81_6aa33f_apply.c}: show_rename_copy)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 22 rules):
+// -- Edit Location --
+// Recall: 0.73, Precision: 0.91
+// -- Node Change --
+// Recall: 0.70, Precision: 0.86
+// -- General --
+// Functions fully changed: 27/44(61%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_12ea5b_d4703f_lib#curl_ntlm_core.c: Curl_ntlm_core_mk_nt_hash
+ - FFmpeg/prevFiles/prev_b821ae_1964ae_libavformat#async.c: async_buffer_task
+*/
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_41e6b9_195b7c_vcs-svn#fast_export.c: fast_export_commit
+ - curl/prevFiles/prev_db05d7_cd2b73_src#tool_paramhlp.c: checkpasswd
+ - git/prevFiles/prev_8cc299_be919d_vcs-svn#fast_export.c: fast_export_commit
+ - qemu/prevFiles/prev_b80a55_861bbc_kvm-all.c: kvm_dirty_pages_log_change
+ - FFmpeg/prevFiles/prev_b821ae_1964ae_libavformat#async.c: 
+ - wireshark/prevFiles/prev_fef6b0_b6f0d1_epan#column-utils.c: col_cleanup
+ - cpython/prevFiles/prev_efc118_770acd_Objects#unicodeobject.c: PyUnicode_Format
+ - cpython/prevFiles/prev_efc118_770acd_Objects#stringobject.c: PyString_Format
+ - vlc/prevFiles/prev_9ce573_34df80_modules#visualization#goom.c: FillBuffer
+ - wireshark/prevFiles/prev_cf2b47_c86c616_inet_ntop.c: inet_ntop6
+ - qemu/prevFiles/prev_29f917_c31772_hw#vhost_net.c: vhost_net_init
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_3f576c_1fa83e_modules#codec#avcodec#dxva2.c: DxFindVideoServiceConversion
+ - vlc/prevFiles/prev_f4dd0b_2d61d6_modules#access#cdda.c: GetTracks
+ - curl/prevFiles/prev_5c8fc7_e8d371_lib#hostares.c: Curl_wait_for_resolv
+ - vlc/prevFiles/prev_3f576c_1fa83e_modules#codec#avcodec#dxva2.c: DxCreateVideoDecoder
+*/
+
+// ---------------------------------------------

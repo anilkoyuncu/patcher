@@ -1,0 +1,10 @@
+@@
+identifier I0 = {col_append_fstr ,g_snprintf };
+expression E1, E2, E5, E6, E4, E3;
+@@
+- I0(E1, E2, E3, ep_address_to_str(E4), E5, E6); 
++ I0(E1, E2, E3, address_to_str(wmem_packet_scope(), E4), E5, E6); 
+// Infered from: (wireshark/{prevFiles/prev_7fea55_021e7a_epan#dissectors#packet-rtcp.c,revFiles/7fea55_021e7a_epan#dissectors#packet-rtcp.c}: add_roundtrip_delay_info), (wireshark/{prevFiles/prev_7fea55_021e7a_epan#dissectors#packet-iax2.c,revFiles/7fea55_021e7a_epan#dissectors#packet-iax2.c}: key_to_str)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

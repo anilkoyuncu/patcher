@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef uintptr_t;
+@@
+- E0->value = (void *)((uintptr_t )E1 | (E2 ? 3 :1)); 
++ E0->value = (void *)((uintptr_t )E1 | (E2 ? 3 :2)); 
+// Infered from: (nginx/{prevFiles/prev_134d1a_540ce1_src#core#ngx_hash.c,revFiles/134d1a_540ce1_src#core#ngx_hash.c}: ngx_hash_wildcard_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

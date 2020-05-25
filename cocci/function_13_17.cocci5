@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- OpenConnection(E0); 
++ if (OpenConnection(E0))  
++ {
++ return VLC_EGENERIC; 
++ }
+// Infered from: (vlc/{prevFiles/prev_83c846_13b97d_modules#access#mms#mmsh.c,revFiles/83c846_13b97d_modules#access#mms#mmsh.c}: Describe), (vlc/{prevFiles/prev_83c846_13b97d_modules#access#mms#mmsh.c,revFiles/83c846_13b97d_modules#access#mms#mmsh.c}: Start)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,21 @@
+@@
+expression E0;
+@@
+- E0->dma = kmalloc(sizeof(*E0->dma), GFP_KERNEL); 
++ E0->dma = kzalloc(sizeof(*E0->dma), GFP_KERNEL); 
+  ...
+- memset(E0->dma, 0, sizeof(*E0->dma)); 
+// Infered from: (linux/{prevFiles/prev_6ebc22e_96525a_drivers#gpu#drm#drm_dma.c,revFiles/6ebc22e_96525a_drivers#gpu#drm#drm_dma.c}: drm_dma_setup)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

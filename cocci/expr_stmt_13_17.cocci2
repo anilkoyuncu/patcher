@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->length = FFMIN(E0->length, get_bits_left(&E1->gb) / 8); 
++ E0->length = FFMIN(E0->length, FFMAX(get_bits_left(&E1->gb) / 8, 0)); 
+// Infered from: (FFmpeg/{prevFiles/prev_0f13cc_f09539_libavcodec#diracdec.c,revFiles/0f13cc_f09539_libavcodec#diracdec.c}: decode_component)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

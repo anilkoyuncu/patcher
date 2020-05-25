@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- *E0 = E1 - E2; 
++ *E0 = curlx_uitous(E1 - E2); 
+// Infered from: (curl/{prevFiles/prev_107cb7_696bc6_lib#vtls#schannel.c,revFiles/107cb7_696bc6_lib#vtls#schannel.c}: schannel_connect_step1)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

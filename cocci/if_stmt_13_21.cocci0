@@ -1,0 +1,12 @@
+@@
+identifier I1;
+expression E0;
+@@
+- if (policy_may_be_visible (E0->I1))  
+- {
+  ...
+- }
+// Infered from: (gtk/{prevFiles/prev_901e5ff_7e201e_gtk#gtkscrolledwindow.c,revFiles/901e5ff_7e201e_gtk#gtkscrolledwindow.c}: gtk_scrolled_window_measure), (gtk/{prevFiles/prev_901e5ff_7e201e_gtk#gtkscrolledwindow.c,revFiles/901e5ff_7e201e_gtk#gtkscrolledwindow.c}: gtk_scrolled_window_measure)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+binary operator B2 = {== ,!= };
+expression E0, E1, E3;
+@@
+- if (E0[E1] B2 E0[E3])  
++ if (E0[E1] B2 E0[E3 - 1])  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_c1acef_3e524b_ssl#t1_lib.c,revFiles/c1acef_3e524b_ssl#t1_lib.c}: sig_cb), (codeflaws/{prevFiles/prev_420-A-13091991-13091997.c,revFiles/420-A-13091991-13091997.c}: main)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

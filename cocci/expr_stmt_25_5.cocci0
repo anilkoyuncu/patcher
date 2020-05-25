@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = v4l2_subdev_call(E1->cx25840, core, s_io_pin_config,  sizeof(cxusub_medion_pin_config) / sizeof(cxusub_medion_pin_config[  0]),  cxusub_medion_pin_config); 
++ E0 = v4l2_subdev_call(E1->cx25840, core, s_io_pin_config,  ARRAY_SIZE(cxusub_medion_pin_config),  cxusub_medion_pin_config); 
+// Infered from: (linux/{prevFiles/prev_e86711_69fbb3f_drivers#media#usb#dvb-usb#cxusb-analog.c,revFiles/e86711_69fbb3f_drivers#media#usb#dvb-usb#cxusb-analog.c}: cxusb_medion_analog_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

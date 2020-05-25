@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = E1->mv.x + E2 + 8; 
++ int I0 = (E1->mv.x >> 2) + E2 + 8; 
+// Infered from: (FFmpeg/{prevFiles/prev_7e1302_fa2d5d_libavcodec#vp8.c,revFiles/7e1302_fa2d5d_libavcodec#vp8.c}: prefetch_motion)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

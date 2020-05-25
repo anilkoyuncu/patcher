@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- *E0 = E1->info.timecond; 
++ *E0 = E1->info.timecond ? 1L :0L; 
+// Infered from: (curl/{prevFiles/prev_0d9e65_c983aa_lib#getinfo.c,revFiles/0d9e65_c983aa_lib#getinfo.c}: getinfo_long)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

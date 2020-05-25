@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[65].destination = &(E1->ssl_honor_cipher_order); 
++ E0[66].destination = &(E1->ssl_honor_cipher_order); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_7bdb75_d964e4_src#configfile.c,revFiles/7bdb75_d964e4_src#configfile.c}: config_insert)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

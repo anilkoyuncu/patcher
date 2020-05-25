@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef EGLDisplay;
+@@
+- EGLDisplay *I0; 
++ EGLDisplay I0; 
+// Infered from: (gtk/{prevFiles/prev_3b1157_31b77a_gtk#inspector#general.c,revFiles/3b1157_31b77a_gtk#inspector#general.c}: init_gl)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- ext_menubar_add_generic_entry(EXT_MENUBAR_SEPARATOR, E0, g_strdup("-"), NULL,  NULL, NULL); 
++ ext_menubar_add_generic_entry(EXT_MENUBAR_SEPARATOR, E0, "-", NULL, NULL,  NULL); 
+// Infered from: (wireshark/{prevFiles/prev_1ebbb0_8569b8_epan#plugin_if.c,revFiles/1ebbb0_8569b8_epan#plugin_if.c}: ext_menubar_add_separator)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.88, Precision: 1.00
+// -- Node Change --
+// Recall: 0.90, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/8(87%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_5569ad0_67a0ff_Zend#zend_execute.c: zend_echo_handler
+*/
+
+// ---------------------------------------------

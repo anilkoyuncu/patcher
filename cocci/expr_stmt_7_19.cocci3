@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->f_offset = E0->f_view_extent * ((E1 * E0->f_etype_size - E0->f_disp) / E0->f_view_size); 
++ E0->f_offset = (E0->f_view_extent * ((E1 * E0->f_etype_size) / E0->f_view_size)) + E0->f_disp; 
+// Infered from: (ompi/{prevFiles/prev_91c857_23c2a3_ompi#mca#io#ompio#io_ompio.c,revFiles/91c857_23c2a3_ompi#mca#io#ompio#io_ompio.c}: ompi_io_ompio_set_explicit_offset)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- printf("%lf", arr[E0] * E0 + arr[0] / 2.0 * E0); 
++ printf("%lf", arr[E0] * E0 + arr[E0] / 2.0 * E0); 
+// Infered from: (codeflaws/{prevFiles/prev_557-B-17172272-17172312.c,revFiles/557-B-17172272-17172312.c}: main)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

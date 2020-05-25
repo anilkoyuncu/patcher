@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- av_new_packet(E0, E1); 
++ if (av_new_packet(E0, E1) < 0)  
++ {
++ return AVERROR(ENOMEM); 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_bb5024_8cbb8f_libavformat#nutdec.c,revFiles/bb5024_8cbb8f_libavformat#nutdec.c}: decode_frame), (FFmpeg/{prevFiles/prev_3ca8a2_bb5024_libavformat#audiointerleave.c,revFiles/3ca8a2_bb5024_libavformat#audiointerleave.c}: ff_interleave_new_audio_packet), (FFmpeg/{prevFiles/prev_adc61d_ca28cb_libavformat#bit.c,revFiles/adc61d_ca28cb_libavformat#bit.c}: read_packet)
+// Recall: 0.47, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

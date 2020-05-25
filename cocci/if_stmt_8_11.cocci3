@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0->cr[11] & 0x80) && E0->cr_index <= 7)  
++ if ((E0->cr[0x11] & 0x80) && E0->cr_index <= 7)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_f6c958_9bb34e_hw#vga.c,revFiles/f6c958_9bb34e_hw#vga.c}: vga_ioport_write)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

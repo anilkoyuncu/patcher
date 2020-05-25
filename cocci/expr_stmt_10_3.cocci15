@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(E0->class_dev, "%s called with invalid register %d\n", __func__, E1); 
++ dev_err(E0->class_dev, "called with invalid register %d\n", E1); 
+// Infered from: (linux/{prevFiles/prev_ce82410c_99beca1_drivers#staging#comedi#drivers#ni_mio_common.c,revFiles/ce82410c_99beca1_drivers#staging#comedi#drivers#ni_mio_common.c}: ni_set_bitfield)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- strcpy(E0, "unix:"); 
++ pstrcpy(E0, 256, "unix:"); 
+// Infered from: (qemu/{prevFiles/prev_bc575e_00766a_vnc.c,revFiles/bc575e_00766a_vnc.c}: vnc_display_open)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

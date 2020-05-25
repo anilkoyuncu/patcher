@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef guint8;
+@@
+- guint8 I0[QUIC_LONG_HEADER_LENGTH]; 
++ guint8 I0[QUIC_LONG_HEADER_MAX_LENGTH]; 
+// Infered from: (wireshark/{prevFiles/prev_a8b714_2ce6ce1_epan#dissectors#packet-quic.c,revFiles/a8b714_2ce6ce1_epan#dissectors#packet-quic.c}: quic_decrypt_message)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

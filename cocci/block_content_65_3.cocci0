@@ -1,0 +1,12 @@
+@@
+identifier I0;
+@@
+- if (I0 == -1UL)  
++ if (I0 == -1)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_decbc8_394cfa_hw#s390x#ipl.c,revFiles/decbc8_394cfa_hw#s390x#ipl.c}: s390_ipl_init), (qemu/{prevFiles/prev_376827_b15654_hw#s390x#ipl.c,revFiles/376827_b15654_hw#s390x#ipl.c}: s390_ipl_init)
+// Recall: 0.43, Precision: 1.00, Matching recall: 0.43
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- goto  exit_picture; 
++ return VLC_ENOMEM; 
+// Infered from: (vlc/{prevFiles/prev_81b485_828af6_modules#video_output#kva.c,revFiles/81b485_828af6_modules#video_output#kva.c}: OpenDisplay)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.10
+
+// ---------------------------------------------

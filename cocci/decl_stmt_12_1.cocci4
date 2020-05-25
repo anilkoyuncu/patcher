@@ -1,0 +1,37 @@
+@@
+expression E0, E1;
+@@
+- if (E0 ==  E1)  
++ if (E1 ==  E0)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#testall_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#testall_f.c}: mpi_testall_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#waitall_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#waitall_f.c}: mpi_waitall_f)
+// False positives: (ompi/revFiles/cd8f55_eb8cba_src#mpi#f77#testall_f.c: mpi_testall_f), (ompi/revFiles/cd8f55_eb8cba_src#mpi#f77#testsome_f.c: mpi_testsome_f), (ompi/revFiles/cd8f55_eb8cba_src#mpi#f77#type_create_struct_f.c: mpi_type_create_struct_f), (ompi/revFiles/cd8f55_eb8cba_src#mpi#f77#type_struct_f.c: mpi_type_struct_f), (ompi/revFiles/cd8f55_eb8cba_src#mpi#f77#waitall_f.c: mpi_waitall_f), (ompi/revFiles/cd8f55_eb8cba_src#mpi#f77#waitsome_f.c: mpi_waitsome_f), (php-src/revFiles/f18aae_79e835_ext#json#json_encoder.c: json_encode_array)
+// Recall: 0.31, Precision: 0.76, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.47, Precision: 0.88
+// -- Node Change --
+// Recall: 0.60, Precision: 0.93
+// -- General --
+// Functions fully changed: 0/16(0%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#testsome_f.c: mpi_testsome_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#waitall_f.c: mpi_waitall_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#startall_f.c: mpi_startall_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#waitsome_f.c: mpi_waitsome_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#testall_f.c: mpi_testall_f
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_struct_f.c: mpi_type_struct_f
+ - php-src/prevFiles/prev_f18aae_79e835_ext#json#json_encoder.c: json_encode_array
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_struct_f.c: mpi_type_create_struct_f
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (qemu_send_packet_async(&E0->nc, E0->buf, E1, net_socket_send_completed) == 0)  
++ if (qemu_send_packet_async(&E0->nc, E0->buf, E0->packet_len,  net_socket_send_completed) == 0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_091f1f_f73ca7_net#socket.c,revFiles/091f1f_f73ca7_net#socket.c}: net_socket_send)
+// False positives: (qemu/revFiles/091f1f_f73ca7_net#socket.c: net_socket_send_dgram)
+// Recall: 0.09, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

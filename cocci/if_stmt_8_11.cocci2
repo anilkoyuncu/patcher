@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0[0] == 1 || E0[0] == 2 || E0[1] == 1 || E0[2] == 2)  
++ if (E0[0] == 1 || E0[0] == 2 || E0[1] == 1 || E0[1] == 2)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_16d550_284b08f_hw#omap2.c,revFiles/16d550_284b08f_hw#omap2.c}: omap_prcm_apll_update)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

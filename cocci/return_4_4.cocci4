@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- dissect_tss_mo_state(E0, E1, E2); 
+- E1 += 4; 
++ E1 += dissect_tss_mo_state(E0, E1, E2); 
+// Infered from: (wireshark/{prevFiles/prev_088e40_1be02f_epan#dissectors#packet-gsm_abis_om2000.c,revFiles/088e40_1be02f_epan#dissectors#packet-gsm_abis_om2000.c}: dissect_om2k_attrs)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

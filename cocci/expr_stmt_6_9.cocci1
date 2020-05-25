@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0.y += E1->height - (E0.height * E2); 
++ E0.y += E1->height - E0.height; 
+// Infered from: (gtk/{prevFiles/prev_d000b21_5a8378_gtk#gtkrange.c,revFiles/d000b21_5a8378_gtk#gtkrange.c}: gtk_range_allocate_trough)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

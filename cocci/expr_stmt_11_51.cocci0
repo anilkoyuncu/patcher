@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef uint32_t;
+@@
+- E0 = g_malloc0_n(E1->nr_ring_ref, sizeof(uint32_t )); 
++ E0 = g_new0(uint32_t , E1->nr_ring_ref); 
+// Infered from: (qemu/{prevFiles/prev_a3fd78_b62b7e_hw#block#xen_disk.c,revFiles/a3fd78_b62b7e_hw#block#xen_disk.c}: blk_connect)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

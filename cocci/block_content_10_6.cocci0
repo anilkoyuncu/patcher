@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef tcp_graph_type;
+@@
+- I0 = GPOINTER_TO_INT(g_object_get_data(G_OBJECT(E1), "new-graph-type")); 
++ I0 = (tcp_graph_type )GPOINTER_TO_INT(g_object_get_data(G_OBJECT(E1),  "new-graph-type")); 
+// Infered from: (wireshark/{prevFiles/prev_0ead8d_abfc95_ui#gtk#tcp_graph.c,revFiles/0ead8d_abfc95_ui#gtk#tcp_graph.c}: callback_graph_type)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

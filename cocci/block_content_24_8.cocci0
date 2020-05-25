@@ -1,0 +1,11 @@
+@@
+identifier I4;
+expression E0, E1, E2, E3;
+typedef time_t;
+@@
+- E0 = Curl_socket_check(E1, CURL_SOCKET_BAD, E2, E3 ? 0 :I4); 
++ E0 = Curl_socket_check(E1, CURL_SOCKET_BAD, E2, E3 ? 0 :(time_t )I4); 
+// Infered from: (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#polarssl.c,revFiles/527461_96a3ab_lib#vtls#polarssl.c}: polarssl_connect_common), (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#openssl.c,revFiles/527461_96a3ab_lib#vtls#openssl.c}: ossl_connect_common), (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#sectransp.c,revFiles/527461_96a3ab_lib#vtls#sectransp.c}: sectransp_connect_common), (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#schannel.c,revFiles/527461_96a3ab_lib#vtls#schannel.c}: schannel_connect_common), (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#mesalink.c,revFiles/527461_96a3ab_lib#vtls#mesalink.c}: mesalink_connect_common), (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#mbedtls.c,revFiles/527461_96a3ab_lib#vtls#mbedtls.c}: mbed_connect_common)
+// Recall: 0.46, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

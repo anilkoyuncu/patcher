@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->input_info.ds0mask |= (*(E1 + K12_SRCDESC_HWPART + K12_SRCDESC_DS0_MASK + E2) == 0xff) ? 0x1 << (  31 - E2) :0x0; 
++ E0->input_info.ds0mask |= (*(E1 + K12_SRCDESC_HWPART + K12_SRCDESC_DS0_MASK + E2) == 0xff) ? 1U << (  31 - E2) :0x0; 
+// Infered from: (wireshark/{prevFiles/prev_9fba5f_d2b02e_wiretap#k12.c,revFiles/9fba5f_d2b02e_wiretap#k12.c}: k12_open)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+identifier I1, I3;
+expression E0, E2;
+typedef time_t;
+@@
+- E0->I1 = E2 / I3; 
++ E0->secs = (time_t )(E2 / SCRHZ); 
+// Infered from: (wireshark/{prevFiles/prev_ae8b29_4533ff_epan#dissectors#packet-mpeg-pes.c,revFiles/ae8b29_4533ff_epan#dissectors#packet-mpeg-pes.c}: decode_clock_reference), (wireshark/{prevFiles/prev_ae8b29_4533ff_asn1#mpeg#packet-mpeg-pes-template.c,revFiles/ae8b29_4533ff_asn1#mpeg#packet-mpeg-pes-template.c}: decode_clock_reference)
+// False positives: (wireshark/revFiles/ae8b29_4533ff_asn1#mpeg#packet-mpeg-pes-template.c: decode_time_stamp), (wireshark/revFiles/ae8b29_4533ff_epan#dissectors#packet-mpeg-pes.c: decode_time_stamp)
+// Recall: 0.50, Precision: 0.67, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

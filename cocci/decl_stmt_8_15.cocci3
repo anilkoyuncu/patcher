@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- return Py_BuildValue("N(O)l", _PyObject_GetBuiltin("iter"), E0->it_seq,  E0->it_index); 
++ return Py_BuildValue("N(O)n", _PyObject_GetBuiltin("iter"), E0->it_seq,  E0->it_index); 
+// Infered from: (cpython/{prevFiles/prev_7660b8_9a644b_Objects#listobject.c,revFiles/7660b8_9a644b_Objects#listobject.c}: listiter_reduce_general)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_7660b8_9a644b_Objects#listobject.c: 
+*/
+
+// ---------------------------------------------

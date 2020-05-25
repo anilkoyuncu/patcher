@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = proto_tree_add_uint_format(E1, hf_sm_msg_type, E2, 0, 4, E3,  "Message type: %s (0x%0x)",  val_to_str(E3, sm_pdu_type_value, "reserved"),  E3); 
++ E0 = proto_tree_add_uint_format(E1, hf_sm_msg_type, E2, 8, 2, E3,  "Message type: %s (0x%0x)",  val_to_str(E3, sm_pdu_type_value, "reserved"),  E3); 
+// Infered from: (wireshark/{prevFiles/prev_be5514_faffc4_plugins#ciscosm#packet-sm.c,revFiles/be5514_faffc4_plugins#ciscosm#packet-sm.c}: dissect_sm)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

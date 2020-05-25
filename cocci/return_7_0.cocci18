@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return error("Unknown signed-tag mode: %s", E0); 
++ return error("Unknown signed-tags mode: %s", E0); 
+// Infered from: (git/{prevFiles/prev_04a74b_06cb84_builtin#fast-export.c,revFiles/04a74b_06cb84_builtin#fast-export.c}: parse_opt_signed_tag_mode)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

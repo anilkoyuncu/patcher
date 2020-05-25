@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+@@
+- fseek(E0, E1, SEEK_SET); 
++ if (fseek(E0, E1, SEEK_SET) < 0)  
++ {
++ fprintf(stderr, "seek failed\n"); 
++ return 1; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_8ab0b9_a5e004_tools#trasher.c,revFiles/8ab0b9_a5e004_tools#trasher.c}: main)
+// False positives: (FFmpeg/revFiles/8ab0b9_a5e004_tools#trasher.c: main)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

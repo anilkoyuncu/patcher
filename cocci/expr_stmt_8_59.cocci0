@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- assert(NCH(E0) >= 3); 
++ assert(NCH(E0) == 5); 
+// Infered from: (cpython/{prevFiles/prev_aa8b6c_15e627_Python#ast.c,revFiles/aa8b6c_15e627_Python#ast.c}: ast_for_ifexpr)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

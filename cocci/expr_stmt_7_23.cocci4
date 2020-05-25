@@ -1,0 +1,12 @@
+@@
+expression E0;
+typedef guint16;
+typedef guint32;
+@@
+- E0 += (int )sizeof(guint32 ); 
++ E0 += (int )sizeof(guint16 ); 
+// Infered from: (wireshark/{prevFiles/prev_28481c_a461e2_plugins#ethercat#packet-ams.c,revFiles/28481c_a461e2_plugins#ethercat#packet-ams.c}: dissect_ams_pdu)
+// False positives: (wireshark/revFiles/28481c_a461e2_plugins#ethercat#packet-ams.c: dissect_ams_pdu)
+// Recall: 0.09, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

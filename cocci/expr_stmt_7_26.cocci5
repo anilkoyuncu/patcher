@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- execlp(E0, E0, (char *)NULL); 
++ execlp(E0, E0, (const  char *)NULL); 
+// Infered from: (vlc/{prevFiles/prev_d9d911_c2c02e_modules#stream_filter#decomp.c,revFiles/d9d911_c2c02e_modules#stream_filter#decomp.c}: Open)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

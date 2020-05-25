@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!g_hash_table_contains(ifaces, E0))  
++ if (g_hash_table_lookup(ifaces, E0) == NULL)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_e28f49_8fee04_extcap.c,revFiles/e28f49_8fee04_extcap.c}: extcap_if_add)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 < E1 && (!E2 || !GST_MEMORY_IS_NO_SHARE(E3)))  
++ if (E0 < E1 && !E2 && !GST_MEMORY_IS_NO_SHARE(E3))  
+  {
+  ...
+  }
+// Infered from: (gstreamer/{prevFiles/prev_2ca004_615a8a_gst#gstbuffer.c,revFiles/2ca004_615a8a_gst#gstbuffer.c}: gst_buffer_copy_into)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->codec->sample_rate > 0 && E0->codec->sample_rate < 32000)  
++ if (E0->codecpar->sample_rate > 0 && E0->codecpar->sample_rate < 32000)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_fe483a_fc1c83_libavformat#mpegtsenc.c,revFiles/fe483a_fc1c83_libavformat#mpegtsenc.c}: mpegts_write_pmt)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- E0 = setup_freqs_table(E1, ARRAY_AND_SIZE(I2)); 
++ E0 = setup_freqs_table(E1, I2, ARRAY_SIZE(I2)); 
+// Infered from: (linux/{prevFiles/prev_8ee3f8_4a511de_drivers#cpufreq#pxa3xx-cpufreq.c,revFiles/8ee3f8_4a511de_drivers#cpufreq#pxa3xx-cpufreq.c}: pxa3xx_cpufreq_init), (linux/{prevFiles/prev_8ee3f8_4a511de_drivers#cpufreq#pxa3xx-cpufreq.c,revFiles/8ee3f8_4a511de_drivers#cpufreq#pxa3xx-cpufreq.c}: pxa3xx_cpufreq_init)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

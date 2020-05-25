@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!TEST_ptr(E0 = EC_GROUP_new_by_curve_name(NID_secp224r1)) || !TEST_ptr(  E1 = EC_GROUP_get_ecparameters(E0, NULL)) || !TEST_ptr(E2 = EC_GROUP_new_from_ecparameters(  E1)) || !TEST_int_eq(  EC_GROUP_cmp(E0, E2, NULL), 0))  
++ if (!TEST_ptr(E0 = EC_GROUP_new_by_curve_name(NID_secp384r1)) || !TEST_ptr(  E1 = EC_GROUP_get_ecparameters(E0, NULL)) || !TEST_ptr(E2 = EC_GROUP_new_from_ecparameters(  E1)) || !TEST_int_eq(  EC_GROUP_cmp(E0, E2, NULL), 0))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_f5b7f9_189dbd_test#ectest.c,revFiles/f5b7f9_189dbd_test#ectest.c}: parameter_test)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

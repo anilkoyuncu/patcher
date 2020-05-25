@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0 = zend_hash_str_find(E1, "date", sizeof("data") - 1); 
++ E0 = zend_hash_str_find(E1, "date", sizeof("date") - 1); 
+// Infered from: (php-src/{prevFiles/prev_e3255a_175f4f_ext#date#php_date.c,revFiles/e3255a_175f4f_ext#date#php_date.c}: php_date_initialize_from_hash)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,20 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef regmatch_t;
+@@
+- regmatch_t I0[NS]; 
++ regmatch_t *I0; 
+  ...
+- E1 = regexec(&E2, E3, (size_t )NS, I0, E4); 
++ I0 = (regmatch_t *)ecalloc(sizeof(regmatch_t ), E2.re_nsub + 1); 
++ if (!I0)  
++ {
++ php_error(E_WARNING, "Unable to allocate memory in php_ereg"); 
++ RETURN_FALSE; 
++ }
++ E1 = regexec(&E2, E3, E2.re_nsub + 1, I0, 0); 
+// Infered from: (php-src/{prevFiles/prev_cc4b27_4214a0_ext#ereg#ereg.c,revFiles/cc4b27_4214a0_ext#ereg#ereg.c}: php_ereg), (php-src/{prevFiles/prev_cc4b27_4214a0_ext#standard#reg.c,revFiles/cc4b27_4214a0_ext#standard#reg.c}: php_ereg)
+// Recall: 0.36, Precision: 1.00, Matching recall: 0.73
+
+// ---------------------------------------------

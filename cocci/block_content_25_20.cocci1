@@ -1,0 +1,10 @@
+@@
+identifier I3;
+expression E0, E1, E4, E2;
+@@
+- col_append_fstr(E0->cinfo, COL_INFO, E1, val_to_str(E2, I3, E4)); 
++ col_append_fstr(E0->cinfo, COL_INFO, E1, val_to_str_const(E2, I3, E4)); 
+// Infered from: (wireshark/{prevFiles/prev_c5a71b_a3fca2_epan#dissectors#packet-btbnep.c,revFiles/c5a71b_a3fca2_epan#dissectors#packet-btbnep.c}: dissect_control), (wireshark/{prevFiles/prev_c5a71b_a3fca2_epan#dissectors#packet-btbnep.c,revFiles/c5a71b_a3fca2_epan#dissectors#packet-btbnep.c}: dissect_btbnep)
+// Recall: 0.64, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

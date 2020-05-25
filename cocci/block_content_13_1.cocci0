@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- SEPARATE_ZVAL_NOREF (E0); 
++ zval_ptr_dtor(E0); 
+// Infered from: (php-src/{prevFiles/prev_40ecad_e511f1_ext#intl#grapheme#grapheme_string.c,revFiles/40ecad_e511f1_ext#intl#grapheme#grapheme_string.c}: PHP_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

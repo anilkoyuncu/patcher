@@ -1,0 +1,28 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef VAAPIEncodeH264Context;
+@@
+  VAAPIEncodeH264Context *I0 = E1->priv_data; 
+  ...
+- E2->pic_order_cnt_lsb = E3->display_order & ((1 << (4 + E4->seq_fields.bits.log2_max_pic_order_cnt_lsb_minus4)) - 1); 
++ E2->pic_order_cnt_lsb = (E3->display_order - I0->last_idr_frame) & ((  1 << (  4 + E4->seq_fields.bits.log2_max_pic_order_cnt_lsb_minus4)) - 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_9b1db2_d08e02_libavcodec#vaapi_encode_h264.c,revFiles/9b1db2_d08e02_libavcodec#vaapi_encode_h264.c}: vaapi_encode_h264_init_slice_params), (FFmpeg/{prevFiles/prev_e72662_30ebab_libavcodec#vaapi_encode_h264.c,revFiles/e72662_30ebab_libavcodec#vaapi_encode_h264.c}: vaapi_encode_h264_init_slice_params)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_9b1db2_d08e02_libavcodec#vaapi_encode_h264.c: vaapi_encode_h264_init_picture_params
+ - FFmpeg/prevFiles/prev_e72662_30ebab_libavcodec#vaapi_encode_h264.c: vaapi_encode_h264_init_picture_params
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = av_get_channel_layout_nb_channels(E1->channel_layout); 
++ int I0 = av_frame_get_channels(E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_9dd0b7_80e9e6_libavcodec#utils.c,revFiles/9dd0b7_80e9e6_libavcodec#utils.c}: update_frame_pool)
+// False positives: (FFmpeg/revFiles/9dd0b7_80e9e6_libavcodec#utils.c: avcodec_open2)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

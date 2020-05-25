@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(E0->dev, "%s: Media device registration failed (%d)\n", __func__, E1); 
++ dev_err(E0->dev, "Media device registration failed (%d)\n", E1); 
+// Infered from: (linux/{prevFiles/prev_8c6ccb_aed1c7_drivers#staging#media#omap4iss#iss.c,revFiles/8c6ccb_aed1c7_drivers#staging#media#omap4iss#iss.c}: iss_register_entities)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

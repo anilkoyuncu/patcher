@@ -1,0 +1,28 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5, E6;
+typedef e_prefs;
+@@
+- e_prefs *I0; 
++ e_prefs *prefs_p; 
+  ...
+- I0 = read_prefs(&E1, &E2, &E3, &E4, &E5, &E6); 
++ prefs_p = read_prefs(&E1, &E2, &E3, &E4, &E5, &E6); 
+// Infered from: (wireshark/{prevFiles/prev_e4d661_9cc7ad_dftest.c,revFiles/e4d661_9cc7ad_dftest.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_00236c_230325_gtk#deprecated#gtktable.c: gtk_table_size_allocate_pass1
+*/
+
+// ---------------------------------------------

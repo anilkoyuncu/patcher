@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 >= E1->offset + E1->size || E0 + E2->size <= E1->offset)  
++ if (E0 >= E1->addr + E1->size || E0 + E2->size <= E1->addr)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_860329_be9c41_memory.c,revFiles/860329_be9c41_memory.c}: memory_region_add_subregion_common)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

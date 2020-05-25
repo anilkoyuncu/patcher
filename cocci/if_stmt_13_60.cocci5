@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0; 
+- I0 = strlen(E1); 
++ size_t I0 = strlen(E1); 
+// Infered from: (curl/{prevFiles/prev_33eaf2_a054e5_ares#ares_init.c,revFiles/33eaf2_a054e5_ares#ares_init.c}: try_option)
+// False positives: (curl/revFiles/76241d_89227a_ares#ares_init.c: try_config), (curl/revFiles/76241d_89227a_ares#ares_init.c: try_option)
+// Recall: 0.17, Precision: 0.44, Matching recall: 0.80
+
+// ---------------------------------------------

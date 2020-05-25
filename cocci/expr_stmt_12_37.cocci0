@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- watchdog_unregister_device(&E0->wdd); 
+// Infered from: (linux/{prevFiles/prev_4b448c9_64b849e_drivers#watchdog#tegra_wdt.c,revFiles/4b448c9_64b849e_drivers#watchdog#tegra_wdt.c}: tegra_wdt_remove)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

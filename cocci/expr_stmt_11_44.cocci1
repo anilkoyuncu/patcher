@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- input_Control(E0, INPUT_ADD_INFO, E1, vlc_gettext(E2[E3]),  vlc_meta_GetExtra(&E4, E2[E3])); 
++ input_Control(E0, INPUT_ADD_INFO, E1, vlc_gettext(E2[E3]),  vlc_meta_GetExtra(E4, E2[E3])); 
+// Infered from: (vlc/{prevFiles/prev_9027ae_64e4f6_src#input#es_out.c,revFiles/9027ae_64e4f6_src#input#es_out.c}: EsOutProgramMeta)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_138e83_2c1d3b_modules#audio_output#directx.c: VolumeSet
+ - gtk/prevFiles/prev_3833ef_b3dd3a_gtk#gtklabel.c: gtk_label_class_init
+*/
+
+// ---------------------------------------------

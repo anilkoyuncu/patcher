@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.fd = ngx_open_file(E0.name.data, NGX_FILE_RDONLY, 0, 0); 
++ E0.fd = ngx_open_file(E0.name.data, NGX_FILE_RDONLY, NGX_FILE_OPEN, 0); 
+// Infered from: (nginx/{prevFiles/prev_b986b4_32c7bd_src#event#ngx_event_openssl.c,revFiles/b986b4_32c7bd_src#event#ngx_event_openssl.c}: ngx_ssl_session_ticket_keys)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

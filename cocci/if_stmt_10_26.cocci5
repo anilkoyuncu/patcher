@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (compare_sectors(E0 + E1 * 512, E2 + E1 * 512, E3, &E4))  
++ if (compare_sectors(E0 + E1 * 512, E2 + E1 * 512, E3 - E1, &E4))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_60b1bd_4805bb_qemu-img.c,revFiles/60b1bd_4805bb_qemu-img.c}: img_rebase)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

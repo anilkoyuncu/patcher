@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+@@
+- if (!E0->codec_tag && E1 == CODEC_ID_MP2)  
++ if (!E0->codec_tag && E1 == AV_CODEC_ID_MP2)  
+  {
+- E1 = CODEC_ID_MP3; 
++ E1 = AV_CODEC_ID_MP3; 
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_7a4eb7_cde81e_modules#demux#avformat#mux.c,revFiles/7a4eb7_cde81e_modules#demux#avformat#mux.c}: AddStream)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

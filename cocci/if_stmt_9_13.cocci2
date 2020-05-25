@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (OPAL_SUCCESS != (E0 = opal_crs_base_open()))  
++ if (OPAL_SUCCESS != (E0 = opal_crs_base_open(MCA_BASE_OPEN_DEFAULT)))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_b42aad_b95a9d_opal#tools#opal-restart#opal-restart.c,revFiles/b42aad_b95a9d_opal#tools#opal-restart#opal-restart.c}: main)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

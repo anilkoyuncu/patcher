@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- if (s[E0] == s[E0 - 1])  
++ if (s[E0] == s[E0 - 1])  
+  {
+- a[E1]++; 
++ a[E1 - 1]++; 
+  }
+- else
++ else
+  {
+- s[E1] = s[E0], a[E1] = 1, E1++; 
++ s[E1] = s[E0], a[E1] = 1, E1++; 
+  }
+// Infered from: (codeflaws/{prevFiles/prev_154-A-1224915-1225089.c,revFiles/154-A-1224915-1225089.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

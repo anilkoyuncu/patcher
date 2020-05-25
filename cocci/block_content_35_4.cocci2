@@ -1,0 +1,38 @@
+@@
+expression E0, E1, E2;
+@@
+- memory_device_check_addable(E0, E1, E2); 
+- if (*E2)  
++ memory_device_check_addable(E0, E1, &err); 
++ if (err)  
+  {
++ error_propagate(E2, err); 
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_8574c9_292743_hw#mem#memory-device.c,revFiles/8574c9_292743_hw#mem#memory-device.c}: memory_device_get_free_addr)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.71, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/7(0%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_f6166a4_bc0e33_hw#ipmi#pci_ipmi_kcs.c: pci_ipmi_kcs_realize
+ - qemu/prevFiles/prev_0325e5_3d5083_target#s390x#cpu_models.c: set_feature
+ - qemu/prevFiles/prev_0325e5_3d5083_target#s390x#cpu_models.c: set_feature_group
+ - qemu/prevFiles/prev_f6166a4_bc0e33_hw#ipmi#pci_ipmi_bt.c: pci_ipmi_bt_realize
+ - qemu/prevFiles/prev_8574c9_292743_hw#mem#memory-device.c: memory_device_get_free_addr
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_f6166a4_bc0e33_hw#ipmi#isa_ipmi_bt.c: isa_ipmi_bt_realize
+ - qemu/prevFiles/prev_f6166a4_bc0e33_hw#ipmi#isa_ipmi_kcs.c: ipmi_isa_realize
+*/
+
+// ---------------------------------------------

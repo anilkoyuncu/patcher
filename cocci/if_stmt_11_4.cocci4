@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0 || !bdrv_is_inserted(E0) || bdrv_is_read_only(E0))  
++ if (!E0 || !bdrv_is_inserted(E0) || bdrv_is_read_only(E0) || bdrv_is_sg(E0))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_1b6bc9_b192af_block#io.c,revFiles/1b6bc9_b192af_block#io.c}: bdrv_co_flush)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

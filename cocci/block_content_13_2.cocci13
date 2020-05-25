@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = write(E1, E2, E3); 
++ E0 = write_in_full(E1, E2, E3); 
+// Infered from: (git/{prevFiles/prev_93822c_93d26e_entry.c,revFiles/93822c_93d26e_entry.c}: write_entry), (git/{prevFiles/prev_93822c_93d26e_entry.c,revFiles/93822c_93d26e_entry.c}: write_entry)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

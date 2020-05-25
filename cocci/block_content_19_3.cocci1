@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+typedef CPUState;
+@@
+  CPUState *I0; 
+  ...
+- cpu_ppc_register (cpu_single_env, E1); 
++ cpu_ppc_register (I0, E1); 
+// Infered from: (qemu/{prevFiles/prev_c68ea7_173d6c_linux-user#main.c,revFiles/c68ea7_173d6c_linux-user#main.c}: main)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

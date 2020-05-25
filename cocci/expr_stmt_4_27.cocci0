@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- *E0 = E1->source; 
+// Infered from: (vlc/{prevFiles/prev_b22442_f3fa48_modules#video_output#win32#direct3d11.c,revFiles/b22442_f3fa48_modules#video_output#win32#direct3d11.c}: Direct3D11Open), (vlc/{prevFiles/prev_9fc05d_b46963_modules#video_output#win32#direct3d11.c,revFiles/9fc05d_b46963_modules#video_output#win32#direct3d11.c}: D3D11SetColorSpace)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

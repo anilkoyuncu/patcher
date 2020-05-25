@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- asprintf(&E0, "mpirun -npernode %d ./ziaprobe %d %d", E1, E2.tv_sec,  E2.tv_usec); 
++ asprintf(&E0, "mpirun -npernode %d ./ziaprobe %ld %d", E1, (long )E2.tv_sec,  E2.tv_usec); 
+// Infered from: (ompi/{prevFiles/prev_c9e3f2_07179e_orte#test#mpi#ziatest.c,revFiles/c9e3f2_07179e_orte#test#mpi#ziatest.c}: main)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

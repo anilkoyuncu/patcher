@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = IDirect3DDeviceManager9_GetVideoService(E1->devmng, E2,  &IID_IDirectXVideoDecoderService,  &E3); 
++ E0 = IDirect3DDeviceManager9_GetVideoService(E1->devmng, E2,  &IID_IDirectXVideoDecoderService,  (void **)&E3); 
+// Infered from: (vlc/{prevFiles/prev_3f576c_1fa83e_modules#codec#avcodec#dxva2.c,revFiles/3f576c_1fa83e_modules#codec#avcodec#dxva2.c}: DxCreateVideoService)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

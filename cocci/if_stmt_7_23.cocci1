@@ -1,0 +1,47 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef FILE;
+@@
+- int I0; 
++ int I0 = 0; 
+  ...
+- FILE *I1; 
++ FILE *I1 = NULL; 
+  ...
+- if (E2)  
+- {
+  ...
+- }
+// Infered from: (wireshark/{prevFiles/prev_a19c12_fb9ce2_extcap#udpdump.c,revFiles/a19c12_fb9ce2_extcap#udpdump.c}: run_listener)
+// False positives: (wireshark/revFiles/a19c12_fb9ce2_extcap#udpdump.c: run_listener)
+// Recall: 0.14, Precision: 0.80, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.22, Precision: 1.00
+// -- Node Change --
+// Recall: 0.38, Precision: 0.92
+// -- General --
+// Functions fully changed: 0/9(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_df05db_12a8c3_ext#json#json_encoder.c: php_json_encode_array
+*/
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_a19c26_6d1495_ompi#mca#osc#rdma#osc_rdma_active_target.c: ompi_osc_rdma_complete_atomic
+ - qemu/prevFiles/prev_2fe5a9_4525c1_hw#scsi#scsi-disk.c: scsi_block_new_request
+ - wireshark/prevFiles/prev_a19c12_fb9ce2_extcap#udpdump.c: setup_dumpfile
+ - FFmpeg/prevFiles/prev_528070_4a9f46_libavcodec#pcm-mpeg.c: pcm_bluray_parse_header
+ - cpython/prevFiles/prev_abed54_6dc61b_Modules#regexpr.c: re_match
+ - php-src/prevFiles/prev_351a0a_97424c_phpdbg.c: phpdbg_sigint_handler
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_a19c12_fb9ce2_extcap#udpdump.c: run_listener
+*/
+
+// ---------------------------------------------

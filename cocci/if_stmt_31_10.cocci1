@@ -1,0 +1,33 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->common.arg_info[E1].class_name.v && strcmp(E0->common.arg_info[  E1].class_name.s,  E2->common.arg_info[  E1].class_name.s) != 0)  
++ if (E0->common.arg_info[E1].class_name.v && (E0->common.arg_info[E1].class_name_len != E2->common.arg_info[  E1].class_name_len || (!UG(  unicode) && zend_binary_strcasecmp(  E0->common.arg_info[  E1].class_name.s,  E0->common.arg_info[  E1].class_name_len,  E2->common.arg_info[  E1].class_name.s,  E2->common.arg_info[  E1].class_name_len) != 0) || (  UG(unicode) && zend_u_binary_strcasecmp(  E0->common.arg_info[E1].class_name.u,  E0->common.arg_info[E1].class_name_len,  E2->common.arg_info[E1].class_name.u,  E2->common.arg_info[E1].class_name_len) != 0)))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_cbd40d_1f4d9f_Zend#zend_compile.c,revFiles/cbd40d_1f4d9f_Zend#zend_compile.c}: zend_do_perform_implementation_check)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.46, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/6(16%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_50ade2_7229af_Zend#zend_compile.c: zend_do_perform_implementation_check
+ - php-src/prevFiles/prev_a96426_fcff17_Zend#zend_compile.c: zend_do_perform_implementation_check
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_a96426_fcff17_Zend#zend_compile.c: do_inheritance_check_on_method
+ - php-src/prevFiles/prev_cbd40d_1f4d9f_Zend#zend_compile.c: do_inherit_method_check
+ - php-src/prevFiles/prev_50ade2_7229af_Zend#zend_compile.c: do_inheritance_check_on_method
+*/
+
+// ---------------------------------------------

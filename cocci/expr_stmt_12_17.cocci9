@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef AtkObject;
+@@
+- AtkObject *I0; 
++ AtkObject *I0 = NULL; 
+  ...
+- E1 = gtk_menu_button_get_popup(GTK_MENU_BUTTON(E2)); 
++ E1 = GTK_WIDGET(gtk_menu_button_get_popup(GTK_MENU_BUTTON(E2))); 
+// Infered from: (gtk/{prevFiles/prev_1bfe9d_18d439_gtk#a11y#gtkmenubuttonaccessible.c,revFiles/1bfe9d_18d439_gtk#a11y#gtkmenubuttonaccessible.c}: gtk_menu_button_accessible_ref_child)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- return gtk_notebook_insert_notebook_page(E0, E1, E2); 
++ ret = gtk_notebook_insert_notebook_page(E0, E1, E2); 
++ g_object_unref(E1); 
++ return ret; 
+// Infered from: (gtk/{prevFiles/prev_c1ad72_f11d01_gtk#gtknotebook.c,revFiles/c1ad72_f11d01_gtk#gtknotebook.c}: gtk_notebook_real_insert_page)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

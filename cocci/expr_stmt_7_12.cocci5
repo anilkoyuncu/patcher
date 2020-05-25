@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = pci_host_data_register_mmio(&E1->host_state); 
++ E0 = pci_host_data_register_mmio(&E1->host_state, 1); 
+// Infered from: (qemu/{prevFiles/prev_c9a43a_952760_hw#apb_pci.c,revFiles/c9a43a_952760_hw#apb_pci.c}: pci_pbm_init_device)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

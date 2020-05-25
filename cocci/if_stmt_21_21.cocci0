@@ -1,0 +1,10 @@
+@@
+identifier I4;
+expression E0, E1, E2, E3, E5;
+@@
+- E0 = proto_tree_add_text(E1, E2, E3 / 8, 1 + (E3 % 8) / 5, I4[E5].strptr); 
++ E0 = proto_tree_add_text(E1, E2, E3 / 8, 1 + (E3 % 8) / 5, "%s",  I4[E5].strptr); 
+// Infered from: (wireshark/{prevFiles/prev_d0e33b_186a69d_epan#dissectors#packet-amr.c,revFiles/d0e33b_186a69d_epan#dissectors#packet-amr.c}: dissect_amr_be), (wireshark/{prevFiles/prev_d0e33b_186a69d_epan#dissectors#packet-amr.c,revFiles/d0e33b_186a69d_epan#dissectors#packet-amr.c}: dissect_amr_be)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

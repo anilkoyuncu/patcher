@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- gtk_list_store_set(E0, &E1, CONV_COLUMN_SRC_ADDR,  get_conversation_address(&E2->src_address,  E3->resolve_names),  CONV_COLUMN_SRC_PORT,  get_conversation_port(E2->src_port, E2->ptype,  E3->resolve_names),  CONV_COLUMN_DST_ADDR,  get_conversation_address(&E2->dst_address,  E3->resolve_names),  CONV_COLUMN_DST_PORT,  get_conversation_port(E2->src_port, E2->ptype,  E3->resolve_names),  -1); 
++ gtk_list_store_set(E0, &E1, CONV_COLUMN_SRC_ADDR,  get_conversation_address(&E2->src_address,  E3->resolve_names),  CONV_COLUMN_SRC_PORT,  get_conversation_port(E2->src_port, E2->ptype,  E3->resolve_names),  CONV_COLUMN_DST_ADDR,  get_conversation_address(&E2->dst_address,  E3->resolve_names),  CONV_COLUMN_DST_PORT,  get_conversation_port(E2->dst_port, E2->ptype,  E3->resolve_names),  -1); 
+// Infered from: (wireshark/{prevFiles/prev_7a7a72_50b6e1_ui#gtk#conversations_table.c,revFiles/7a7a72_50b6e1_ui#gtk#conversations_table.c}: draw_ct_table_addresses)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

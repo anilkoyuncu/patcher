@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2;
+typedef uint64_t;
+@@
+- E0 = (((uint64_t )E1) << 32) | ((uint64_t )E2); 
++ E0 = (((uint64_t )p_key) << 32) | ((uint64_t )r_key); 
+// Infered from: (ompi/{prevFiles/prev_a5e9c3_5e302f_ompi#mpi#c#type_create_f90_complex.c,revFiles/a5e9c3_5e302f_ompi#mpi#c#type_create_f90_complex.c}: MPI_Type_create_f90_complex), (ompi/{prevFiles/prev_a5e9c3_5e302f_ompi#mpi#c#type_create_f90_real.c,revFiles/a5e9c3_5e302f_ompi#mpi#c#type_create_f90_real.c}: MPI_Type_create_f90_real)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.22
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.56, Precision: 0.83
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_a5e9c3_5e302f_ompi#mpi#c#type_create_f90_complex.c: MPI_Type_create_f90_complex
+ - ompi/prevFiles/prev_a5e9c3_5e302f_ompi#mpi#c#type_create_f90_real.c: MPI_Type_create_f90_real
+*/
+
+// ---------------------------------------------

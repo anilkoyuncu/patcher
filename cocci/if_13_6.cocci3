@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- if (E0->fmt_out.audio.i_channels > ARRAY_SIZE(pi_channels_maps))  
++ if (E0->fmt_out.audio.i_channels >= ARRAY_SIZE(pi_channels_maps))  
+  {
+- msg_Err(E0, "invalid number of channels (not between 1 and %lu): %i",  ARRAY_SIZE(pi_channels_maps), E0->fmt_out.audio.i_channels); 
++ msg_Err(E0, "invalid number of channels (1-%zu): %i",  ARRAY_SIZE(pi_channels_maps), E0->fmt_out.audio.i_channels); 
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_b54f2c_f25e44_modules#codec#vorbis.c,revFiles/b54f2c_f25e44_modules#codec#vorbis.c}: ProcessHeaders)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

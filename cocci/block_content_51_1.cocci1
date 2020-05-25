@@ -1,0 +1,20 @@
+@@
+identifier I1 = {PMPI_Dist_graph_create ,PMPI_Dist_graph_create_adjacent };
+expression list E2;
+expression E0;
+@@
+- *E0 = OMPI_INT_2_FINT(I1(E2)); 
+- if (OMPI_SUCCESS == OMPI_FINT_2_INT(*E0))  
++ c_ierr = I1(E2); 
++ if (NULL != E0)  
+  {
++ *E0 = OMPI_INT_2_FINT(c_ierr); 
++ }
++ if (OMPI_SUCCESS == c_ierr)  
++ {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_223e6c_020a59_ompi#mpi#fortran#mpif-h#dist_graph_create_adjacent_f.c,revFiles/223e6c_020a59_ompi#mpi#fortran#mpif-h#dist_graph_create_adjacent_f.c}: pompi_dist_graph_create_adjacent_f), (ompi/{prevFiles/prev_223e6c_020a59_ompi#mpi#fortran#mpif-h#dist_graph_create_f.c,revFiles/223e6c_020a59_ompi#mpi#fortran#mpif-h#dist_graph_create_f.c}: pompi_dist_graph_create_f)
+// Recall: 0.43, Precision: 1.00, Matching recall: 0.86
+
+// ---------------------------------------------

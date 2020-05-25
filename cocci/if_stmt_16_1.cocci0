@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->hwaccel)  
++ if (!E0->hwaccel && !(E0->codec->capabilities & CODEC_CAP_HWACCEL_VDPAU))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_941b224_a614f8_libavcodec#mpegvideo.c,revFiles/941b224_a614f8_libavcodec#mpegvideo.c}: ff_MPV_frame_start)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

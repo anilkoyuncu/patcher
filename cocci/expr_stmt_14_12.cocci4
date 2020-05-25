@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- label_fill_descr(E0, 0, E1, get_ether_name(E2),  address_to_str(wmem_packet_scope(), &E3)); 
++ label_fill_descr(E0, 0, E1, get_ether_name(E2), ep_address_to_str(&E3)); 
+// Infered from: (wireshark/{prevFiles/prev_bd1953_9fbede_epan#proto.c,revFiles/bd1953_9fbede_epan#proto.c}: proto_item_fill_label)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

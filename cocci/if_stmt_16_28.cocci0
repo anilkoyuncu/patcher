@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->segmentation.enabled && !E0->segmentation.update_map)  
++ if (E0->segmentation.enabled && !E0->segmentation.update_map && !E0->keyframe && !E0->intraonly)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_acafbb_4a55bf_libavcodec#vp9.c,revFiles/acafbb_4a55bf_libavcodec#vp9.c}: vp9_alloc_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

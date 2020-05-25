@@ -1,0 +1,14 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- set_irq_type(E0->chained_irq, IRQ_TYPE_EDGE_RISING); 
+- set_irq_data(E0->chained_irq, E0); 
+- set_irq_chained_handler(E1, I2); 
++ irq_set_irq_type(E0->chained_irq, IRQ_TYPE_EDGE_RISING); 
++ irq_set_handler_data(E0->chained_irq, E0); 
++ irq_set_chained_handler(E1, I2); 
+// Infered from: (linux/{prevFiles/prev_d5bb122_c22435a3_drivers#mfd#htc-egpio.c,revFiles/d5bb122_c22435a3_drivers#mfd#htc-egpio.c}: egpio_probe)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

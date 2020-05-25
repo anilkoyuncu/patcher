@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- printf("%d\n", E0 * (2 * E1 - 2 * E0 - 1)); 
++ printf("%lld\n", E0 * (2 * E1 - 2 * E0 - 1ll)); 
+// Infered from: (codeflaws/{prevFiles/prev_645-B-16799165-16799183.c,revFiles/645-B-16799165-16799183.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+identifier I0 = {g_assert ,zval_ptr_dtor }, I1 = {EX ,PROTO_ITEM_IS_GENERATED };
+expression E2;
+@@
+- I0(I1(E2)); 
+// Infered from: (php-src/{prevFiles/prev_061c0e_ca0bb7_Zend#zend_API.c,revFiles/061c0e_ca0bb7_Zend#zend_API.c}: zend_ctor_make_null), (wireshark/{prevFiles/prev_956447_c7c28d_proto_hier_stats.c,revFiles/956447_c7c28d_proto_hier_stats.c}: process_node)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

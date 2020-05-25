@@ -1,0 +1,18 @@
+@@
+expression E0, E1;
+@@
+- E0 += sizeof(E1.sa_unix.sun_len) + 1; 
+// Infered from: (php-src/{prevFiles/prev_4c583d_83657d_sapi#cgi#fastcgi.c,revFiles/4c583d_83657d_sapi#cgi#fastcgi.c}: fcgi_listen), (php-src/{prevFiles/prev_d19c10_73e491_sapi#cgi#fastcgi.c,revFiles/d19c10_73e491_sapi#cgi#fastcgi.c}: fcgi_listen)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

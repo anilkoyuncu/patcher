@@ -1,0 +1,11 @@
+@@
+type T3;
+identifier I0;
+expression E1, E2, E4;
+@@
+- int I0 = (E1->m.dsp.pix_norm1(E2, E1->m.linesize) - (((T3 )(E4 * E4)) >> 8) + 128) >> 8; 
++ int I0 = (E1->m.dsp.pix_norm1(E2, E1->m.linesize) - (((T3 )E4 * E4) >> 8) + 128) >> 8; 
+// Infered from: (FFmpeg/{prevFiles/prev_d341d5_05c8f1_libavcodec#dnxhdenc.c,revFiles/d341d5_05c8f1_libavcodec#dnxhdenc.c}: dnxhd_mb_var_thread)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

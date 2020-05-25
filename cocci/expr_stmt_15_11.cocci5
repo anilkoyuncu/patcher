@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- sprintf(E0->ident, ": %s $", sha1_to_hex(E1)); 
++ xsnprintf(E0->ident, sizeof(E0->ident), ": %s $", sha1_to_hex(E1)); 
+// Infered from: (git/{prevFiles/prev_5096d4_db85a8_convert.c,revFiles/5096d4_db85a8_convert.c}: ident_filter)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/7(100%)
+
+
+// ---------------------------------------------

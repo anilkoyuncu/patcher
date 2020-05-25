@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- GST_CAT_INFO(GST_CAT_EVENT, "creating new event %p %d", E0, E1); 
++ GST_CAT_INFO(GST_CAT_EVENT, "creating new event type %d: %p", E1, E0); 
+// Infered from: (gstreamer/{prevFiles/prev_56e7e5_ccd846_gst#gstevent.c,revFiles/56e7e5_ccd846_gst#gstevent.c}: gst_event_new)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,29 @@
+@@
+identifier I0 = {strcmp ,strncmp };
+expression list E1;
+@@
+- return I0(E1); 
++ return !I0(E1); 
+// Infered from: (php-src/{prevFiles/prev_26f7af_634d8a_ext#standard#basic_functions.c,revFiles/26f7af_634d8a_ext#standard#basic_functions.c}: php_ini_check_path), (vlc/{prevFiles/prev_e05f79_d78921_src#text#unicode.c,revFiles/e05f79_d78921_src#text#unicode.c}: find_charset)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.54, Precision: 1.00
+// -- Node Change --
+// Recall: 0.42, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/13(53%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_4f26258f_c3f11d_libavcodec#dtsdec.c: dts_decode_init
+ - FFmpeg/prevFiles/prev_4f26258f_c3f11d_libavcodec#dtsdec.c: dts_decode_frame
+ - linux/prevFiles/prev_3ec6080_01ebd7_drivers#staging#cxt1e1#linux.c: do_set_port
+ - vlc/prevFiles/prev_e05f79_d78921_src#text#unicode.c: LocaleFree
+ - cpython/prevFiles/prev_4b430e_e2f48b_Modules#_pickle.c: _pickle_Unpickler___init___impl
+ - linux/prevFiles/prev_3ec6080_01ebd7_drivers#staging#brcm80211#brcmfmac#wl_iw.c: wl_iw_iscan_set_scan
+*/
+
+// ---------------------------------------------

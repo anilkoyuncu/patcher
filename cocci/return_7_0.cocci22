@@ -1,0 +1,19 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- const  char *I0; 
+- if (*E1 && E1[strlen(E1) - 1] != '\n')  
+- {
+- I0 = "%s\n"; 
+- }
+- else
+- {
+- I0 = "%s"; 
+- }
+- return write_file(am_path(E2, E3), I0, E1); 
++ return write_file(am_path(E2, E3), "%s", E1); 
+// Infered from: (git/{prevFiles/prev_e7ffa3_12d6ce_builtin#am.c,revFiles/e7ffa3_12d6ce_builtin#am.c}: write_state_text)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

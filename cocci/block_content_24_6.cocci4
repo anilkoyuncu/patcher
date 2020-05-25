@@ -1,0 +1,10 @@
+@@
+@@
+- printf("VNC server running on `%s'\n", vnc_display_local_addr("default")); 
++ char *ret = vnc_display_local_addr("default"); 
++ printf("VNC server running on `%s'\n", ret); 
++ g_free(ret); 
+// Infered from: (qemu/{prevFiles/prev_bd4baf_7df057_vl.c,revFiles/bd4baf_7df057_vl.c}: main)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

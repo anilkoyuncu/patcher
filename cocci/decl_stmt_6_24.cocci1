@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef hwaddr;
+@@
+- hwaddr I0 = E1.pte1; 
++ hwaddr I0 = E1.pte1 & HPTE64_R_RPN; 
+// Infered from: (qemu/{prevFiles/prev_75d5ec_6d11d9_target-ppc#mmu-hash64.c,revFiles/75d5ec_6d11d9_target-ppc#mmu-hash64.c}: ppc_hash64_pte_raddr)
+// False positives: (qemu/revFiles/75d5ec_6d11d9_target-ppc#mmu-hash32.c: ppc_hash32_pte_raddr)
+// Recall: 0.23, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

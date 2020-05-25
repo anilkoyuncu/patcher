@@ -1,0 +1,11 @@
+@@
+identifier I5;
+expression E0, E1, E2, E3, E4;
+typedef guint16;
+@@
+- E0 = dissect_smb_tid(E1, E2, E3, E0, E4->tid, I5, FALSE); 
++ E0 = dissect_smb_tid(E1, E2, E3, E0, (guint16 )E4->tid, I5, FALSE); 
+// Infered from: (wireshark/{prevFiles/prev_f1a58d_898b59_epan#dissectors#packet-smb.c,revFiles/f1a58d_898b59_epan#dissectors#packet-smb.c}: dissect_smb), (wireshark/{prevFiles/prev_f1a58d_898b59_epan#dissectors#packet-smb.c,revFiles/f1a58d_898b59_epan#dissectors#packet-smb.c}: dissect_smb)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

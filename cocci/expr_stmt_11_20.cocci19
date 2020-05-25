@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "Kernel image must be specified\n"); 
++ error_report("Kernel image must be specified"); 
+// Infered from: (qemu/{prevFiles/prev_45876e_f90ea7_hw#m68k#an5206.c,revFiles/45876e_f90ea7_hw#m68k#an5206.c}: an5206_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- msg_Err(E0, "Unable to login with username = '%s', domain = '%s'", E1, E2); 
++ msg_Err(E0, "Unable to login"); 
+// Infered from: (vlc/{prevFiles/prev_fd0ac3_5eb91b_modules#access#dsm#access.c,revFiles/fd0ac3_5eb91b_modules#access#dsm#access.c}: login)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

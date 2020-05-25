@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = wmem_strsplit(NULL, E1[E2], ",", E3); 
++ E0 = g_strsplit(E1[E2], ",", E3); 
+  ...
+- wmem_free(NULL, E0); 
++ g_strfreev(E0); 
+// Infered from: (wireshark/{prevFiles/prev_e2e20c_60d728_epan#dissectors#packet-ssl.c,revFiles/e2e20c_60d728_epan#dissectors#packet-ssl.c}: ssl_parse_old_keys), (wireshark/{prevFiles/prev_e2e20c_60d728_epan#dissectors#packet-dtls.c,revFiles/e2e20c_60d728_epan#dissectors#packet-dtls.c}: dtls_parse_old_keys)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

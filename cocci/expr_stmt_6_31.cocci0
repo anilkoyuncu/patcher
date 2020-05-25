@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = E0 * 2; 
++ E0 = (E0 * 2) % no; 
+// Infered from: (codeflaws/{prevFiles/prev_319-A-6330477-6330517.c,revFiles/319-A-6330477-6330517.c}: main)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- gdk_wayland_device_request_selection_content(E0, gdk_atom_name(E1),  _request_generic_cb, E2); 
++ mime_type = gdk_atom_name(E1); 
++ gdk_wayland_device_request_selection_content(E0, mime_type,  _request_generic_cb, E2); 
++ g_free(mime_type); 
+// Infered from: (gtk/{prevFiles/prev_2df617_1f2ed3_gtk#gtkclipboard-wayland.c,revFiles/2df617_1f2ed3_gtk#gtkclipboard-wayland.c}: gtk_clipboard_wayland_request_contents)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

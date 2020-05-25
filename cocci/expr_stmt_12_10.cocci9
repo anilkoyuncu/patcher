@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- fprintf(stderr,  "mapping (0x%x): begin, end = %d, %d, dir_index = %d, first_mapping_index = %d, name = %s, mode = 0x%x, ",  (int )E0, E0->begin, E0->end, E0->dir_index, E0->first_mapping_index,  E0->path, E0->mode); 
+// Infered from: (qemu/{prevFiles/prev_3e89cb_792b45_block#vvfat.c,revFiles/3e89cb_792b45_block#vvfat.c}: print_mapping)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

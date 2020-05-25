@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef PCRE2_SPTR;
+@@
+- int I0 = pcre2_match(E1->re, E2, strlen(E2), 0, 0, E3, E4); 
++ int I0 = pcre2_match(E1->re, (PCRE2_SPTR )E2, strlen(E2), 0, 0, E3, E4); 
+// Infered from: (php-src/{prevFiles/prev_20d930_13696d_ext#opcache#zend_accelerator_blacklist.c,revFiles/20d930_13696d_ext#opcache#zend_accelerator_blacklist.c}: zend_accel_blacklist_is_blacklisted)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

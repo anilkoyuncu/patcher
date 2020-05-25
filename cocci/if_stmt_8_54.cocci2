@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->new_bs->backing)  
++ if (E0->overlay_appended)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_067acf_88f9d1_blockdev.c,revFiles/067acf_88f9d1_blockdev.c}: external_snapshot_abort)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

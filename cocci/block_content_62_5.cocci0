@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+@@
+- object_initialize(&E0->cpus, sizeof(E0->cpus), TYPE_RISCV_HART_ARRAY); 
+- object_property_add_child(E1, "cpus", OBJECT(&E0->cpus), &error_abort); 
++ object_initialize_child(E1, "cpus", &E0->cpus, sizeof(E0->cpus),  TYPE_RISCV_HART_ARRAY, &error_abort, NULL); 
+  ...
+- object_initialize(&E0->gem, sizeof(E0->gem), TYPE_CADENCE_GEM); 
+- qdev_set_parent_bus(DEVICE(&E0->gem), sysbus_get_default()); 
++ sysbus_init_child_obj(E1, "gem", &E0->gem, sizeof(E0->gem), TYPE_CADENCE_GEM); 
+// Infered from: (qemu/{prevFiles/prev_4eea9d_54f314_hw#riscv#sifive_u.c,revFiles/4eea9d_54f314_hw#riscv#sifive_u.c}: riscv_sifive_u_soc_init)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = match_strval(E1[E2 + 3], major_vectors); 
++ E0 = val_to_str(E1[E2 + 3], major_vectors, "Unknown Major Vector: %d\n"); 
+// Infered from: (wireshark/{prevFiles/prev_274486_8eecc6_packet-trmac.c,revFiles/274486_8eecc6_packet-trmac.c}: dissect_trmac)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

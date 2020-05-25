@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef fddi_hdr;
+@@
+- const  fddi_hdr *I0 = (fddi_hdr *)E1; 
++ const  fddi_hdr *I0 = (const  fddi_hdr *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#hostlist_fddi.c,revFiles/3ae2e5_8aebe1_ui#gtk#hostlist_fddi.c}: fddi_hostlist_packet), (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#conversations_fddi.c,revFiles/3ae2e5_8aebe1_ui#gtk#conversations_fddi.c}: fddi_conversation_packet)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

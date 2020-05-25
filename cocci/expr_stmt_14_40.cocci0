@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0 < 0) && ((errno == EAGAIN) || (errno == EWOULDBLOCK)))  
++ if ((E0 < 0) && ((SOCKERRNO == EAGAIN) || (SOCKERRNO == EWOULDBLOCK)))  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_e0ee3d_0f234a_lib#vquic#quiche.c,revFiles/e0ee3d_0f234a_lib#vquic#quiche.c}: process_ingress)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

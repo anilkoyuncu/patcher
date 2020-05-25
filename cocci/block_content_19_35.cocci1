@@ -1,0 +1,25 @@
+@@
+identifier I0;
+@@
+- I0 = 1; 
++ I0 = true; 
+// Infered from: (linux/{prevFiles/prev_939d9f_b2cbb6_sound#soc#soc-core.c,revFiles/939d9f_b2cbb6_sound#soc#soc-core.c}: snd_soc_put_volsw), (linux/{prevFiles/prev_648957_74d04c_sound#soc#soc-core.c,revFiles/648957_74d04c_sound#soc#soc-core.c}: snd_soc_put_volsw)
+// False positives: (linux/revFiles/648957_74d04c_sound#soc#soc-core.c: snd_soc_limit_volume), (linux/revFiles/939d9f_b2cbb6_sound#soc#soc-core.c: snd_soc_limit_volume)
+// Recall: 0.50, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.50
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_939d9f_b2cbb6_sound#soc#soc-core.c: snd_soc_limit_volume
+ - linux/prevFiles/prev_648957_74d04c_sound#soc#soc-core.c: snd_soc_limit_volume
+*/
+
+// ---------------------------------------------

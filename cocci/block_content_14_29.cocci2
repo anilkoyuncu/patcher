@@ -1,0 +1,20 @@
+@@
+expression E0;
+@@
+- list_splice(&adapter_list, &to_be_deleted); 
+- INIT_LIST_HEAD (E0); 
++ list_splice_init(&adapter_list, &to_be_deleted); 
+// Infered from: (linux/{prevFiles/prev_393c80_151770_drivers#scsi#bnx2fc#bnx2fc_fcoe.c,revFiles/393c80_151770_drivers#scsi#bnx2fc#bnx2fc_fcoe.c}: bnx2fc_mod_exit)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+
+// ---------------------------------------------

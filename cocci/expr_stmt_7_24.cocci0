@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef uint32;
+@@
+- E0 = (E1 >> 6) & 0x3; 
++ E0 = (uint32 )((E1 >> 6) & 0x3); 
+// Infered from: (libtiff/{prevFiles/prev_9c57ea_8b57e5_libtiff#tif_next.c,revFiles/9c57ea_8b57e5_libtiff#tif_next.c}: NeXTDecode)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- E0->crs_sys_disable = 1; 
++ E0->crs_sys_disable = true; 
+// Infered from: (linux/{prevFiles/prev_3db1cd5_a8e510_drivers#net#wireless#b43#phy_lp.c,revFiles/3db1cd5_a8e510_drivers#net#wireless#b43#phy_lp.c}: lpphy_set_deaf)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_19cd22_a568dc_drivers#staging#rtl8192u#r8192U_dm.c: dm_rf_pathcheck_workitemcallback
+ - linux/prevFiles/prev_698149_2b8f942_fs#udf#inode.c: inode_getblk
+*/
+
+// ---------------------------------------------

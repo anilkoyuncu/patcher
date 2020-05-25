@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- if (zend_hash_find(E0, "type", 6, (void **)&E1) == FAILURE)  
++ if (zend_hash_find(E0, "type", 4, (void **)&E1) == FAILURE)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_f56450_e3e0db_ext#dio#dio.c,revFiles/f56450_e3e0db_ext#dio#dio.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_f56450_e3e0db_ext#dio#dio.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = E1 >= E2 ? E2 :E1; 
++ int I0 = (E1 >= E2 ? E2 :E1); 
+// Infered from: (curl/{prevFiles/prev_b0f548_364d76_lib#pop3.c,revFiles/b0f548_364d76_lib#pop3.c}: Curl_pop3_write)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

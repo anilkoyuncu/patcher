@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = kmalloc(E1->length, GFP_KERNEL); 
+- if (E0 == NULL)  
++ E0 = memdup_user(E1->pointer, E1->length); 
++ if (IS_ERR(E0))  
+  {
+- return -ENOMEM; 
++ return PTR_ERR(E0); 
+  }
+- if (copy_from_user(E0, E1->pointer, E1->length))  
+- {
+- E2 = -EFAULT; 
+- goto  out; 
+- }
+// Infered from: (linux/{prevFiles/prev_8432ebd_c2da913_drivers#net#wireless#intersil#hostap#hostap_ioctl.c,revFiles/8432ebd_c2da913_drivers#net#wireless#intersil#hostap#hostap_ioctl.c}: prism2_ioctl_priv_download), (linux/{prevFiles/prev_8432ebd_c2da913_drivers#net#wireless#intersil#hostap#hostap_ioctl.c,revFiles/8432ebd_c2da913_drivers#net#wireless#intersil#hostap#hostap_ioctl.c}: prism2_ioctl_priv_hostapd)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

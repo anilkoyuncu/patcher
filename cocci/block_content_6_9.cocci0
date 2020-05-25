@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- ff_set_common_formats(E0, ff_make_format_list(E1)); 
+- return 0; 
++ return ff_set_common_formats(E0, ff_make_format_list(E1)); 
+// Infered from: (FFmpeg/{prevFiles/prev_6aaac2_8ededd_libavfilter#vf_maskedmerge.c,revFiles/6aaac2_8ededd_libavfilter#vf_maskedmerge.c}: query_formats), (FFmpeg/{prevFiles/prev_6aaac2_8ededd_libavfilter#vf_displace.c,revFiles/6aaac2_8ededd_libavfilter#vf_displace.c}: query_formats), (FFmpeg/{prevFiles/prev_6aaac2_8ededd_libavfilter#vf_neighbor.c,revFiles/6aaac2_8ededd_libavfilter#vf_neighbor.c}: query_formats)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((optopt = (int )*E0++) == (int )':' || !(E1 = strchr(E2, optopt)))  
++ if ((optopt = (int )*E0++) == (int )':' || (E1 = strchr(E2, optopt)) == NULL)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_26aead_d0a4b5_ares#ares_getopt.c,revFiles/26aead_d0a4b5_ares#ares_getopt.c}: ares_getopt)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

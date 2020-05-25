@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- archive_set_error(&E0->archive, ARCHIVE_ERRNO_MISC,  "cpio: unknown keyword ``%s''", E1); 
+// Infered from: (libarchive/{prevFiles/prev_57c71c_c16873_libarchive#archive_read_support_format_cpio.c,revFiles/57c71c_c16873_libarchive#archive_read_support_format_cpio.c}: archive_read_format_cpio_options), (libarchive/{prevFiles/prev_f30dc3_1ecb1b_libarchive#archive_read_support_format_cpio.c,revFiles/f30dc3_1ecb1b_libarchive#archive_read_support_format_cpio.c}: archive_read_format_cpio_options)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 0.60
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - libarchive/prevFiles/prev_f30dc3_1ecb1b_libarchive#archive_read_support_format_cpio.c: archive_read_format_cpio_options
+ - libarchive/prevFiles/prev_57c71c_c16873_libarchive#archive_read_support_format_cpio.c: archive_read_format_cpio_options
+*/
+
+// ---------------------------------------------

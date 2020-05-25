@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- init_get_bits(&E0, E1->extradata, E1->extradata_size * 8); 
++ int ret; 
++ if ((ret = init_get_bits8(&E0, E1->extradata, E1->extradata_size)) < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_4484c7_1146bbc_libavcodec#alsdec.c,revFiles/4484c7_1146bbc_libavcodec#alsdec.c}: read_specific_config)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

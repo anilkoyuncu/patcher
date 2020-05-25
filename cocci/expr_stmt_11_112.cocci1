@@ -1,0 +1,21 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- gtk_size_request_get_width(E0, &E1, NULL); 
+- gtk_size_request_get_height_for_width(E0, E1, E2, E3); 
++ GTK_SIZE_REQUEST_GET_IFACE(E0)->get_width(E0, &E1, NULL); 
++ GTK_SIZE_REQUEST_GET_IFACE(E0)->get_height_for_width(E0, E1, E2, E3); 
+// Infered from: (gtk/{prevFiles/prev_c29f0a_8960d6_gtk#gtkmenu.c,revFiles/c29f0a_8960d6_gtk#gtkmenu.c}: gtk_menu_get_height)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

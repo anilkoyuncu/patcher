@@ -1,0 +1,11 @@
+@@
+expression E0;
+typedef guint;
+typedef guint32;
+@@
+- return (E0->tag >> 32) ^ ((guint32 )E0->tag); 
++ return (guint )((E0->tag >> 32) ^ ((guint32 )E0->tag)); 
+// Infered from: (wireshark/{prevFiles/prev_799479_411249_epan#dissectors#packet-pvfs2.c,revFiles/799479_411249_epan#dissectors#packet-pvfs2.c}: pvfs2_io_tracking_hash)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

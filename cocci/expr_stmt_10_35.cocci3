@@ -1,0 +1,10 @@
+@@
+expression E4, E5, E6, E0, E1, E2, E3;
+@@
+- E0 = _cairo_surface_offset_paint(E1, -E2, -E3, E4, E5, E6); 
++ E0 = _cairo_surface_offset_paint(E1, E2, E3, E4, E5, E6); 
+// Infered from: (cairo/{prevFiles/prev_e68eb8_dd73ad_src#cairo-fallback-compositor.c,revFiles/e68eb8_dd73ad_src#cairo-fallback-compositor.c}: _cairo_fallback_compositor_paint), (cairo/{prevFiles/prev_6816f7_4c3276_src#cairo-gl-operand.c,revFiles/6816f7_4c3276_src#cairo-gl-operand.c}: _cairo_gl_pattern_texture_setup)
+// False positives: (cairo/revFiles/c39cb7_b2cb9e_src#cairo-surface-subsurface.c: _cairo_surface_subsurface_paint)
+// Recall: 0.22, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

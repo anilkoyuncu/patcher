@@ -1,0 +1,12 @@
+@@
+expression E1, E0, E2;
+@@
+- if (memcmp(E0->data[0] + E1 * E0->linesize[0],  E2->previous_frame.data[0] + E1 * E0->linesize[0], E0->linesize[  0]))  
++ if (memcmp(E0->data[0] + E1 * E0->linesize[0],  E2->previous_frame.data[0] + E1 * E2->previous_frame.linesize[  0], line_size))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_9867a1_b10d7e_libavcodec#qtrleenc.c,revFiles/9867a1_b10d7e_libavcodec#qtrleenc.c}: encode_frame), (FFmpeg/{prevFiles/prev_9867a1_b10d7e_libavcodec#qtrleenc.c,revFiles/9867a1_b10d7e_libavcodec#qtrleenc.c}: encode_frame)
+// Recall: 0.44, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

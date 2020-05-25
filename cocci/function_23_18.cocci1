@@ -1,0 +1,40 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef uint32_t;
+typedef uint8_t;
+@@
+- uint8_t *I0; 
+- I0 = av_malloc(E1 + FF_INPUT_BUFFER_PADDING_SIZE); 
+- if (!I0)  
++ av_fast_padded_malloc(&E2->buffer, &E2->buffer_size, E1); 
++ if (!E2->buffer)  
+  {
+  ...
+  }
+  ...
+- E2->dsp.bswap_buf((uint32_t *)I0, (const  uint32_t *)E3, E1 >> 2); 
+- E4 = tm2_read_header(E2, I0); 
++ E2->dsp.bswap_buf((uint32_t *)E2->buffer, (const  uint32_t *)E3, E1 >> 2); 
++ E4 = tm2_read_header(E2, E2->buffer); 
+  ...
+- av_free(I0); 
+// Infered from: (FFmpeg/{prevFiles/prev_e8b060_126b04_libavcodec#truemotion2.c,revFiles/e8b060_126b04_libavcodec#truemotion2.c}: decode_frame)
+// Recall: 0.23, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.10, Precision: 1.00
+// -- Node Change --
+// Recall: 0.28, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/10(10%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_922144_361e03_libavcodec#tiff.c: tiff_unpack_fax
+ - FFmpeg/prevFiles/prev_e0c6b3_9d83b2_libavcodec#pngdec.c: decode_frame_apng
+*/
+
+// ---------------------------------------------

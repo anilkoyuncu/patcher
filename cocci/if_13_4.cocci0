@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- if (strncmp(E0, "sctp,stat,", 11) == 0)  
++ if (strncmp(E0, "sctp,stat,", 10) == 0)  
+  {
+- E1 = E0 + 11; 
++ E1 = E0 + 10; 
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_56b098_89693f_gtk#sctp_chunk_stat.c,revFiles/56b098_89693f_gtk#sctp_chunk_stat.c}: sctpstat_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

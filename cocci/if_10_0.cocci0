@@ -1,0 +1,16 @@
+@@
+expression E0, E1;
+@@
+- if (E0 <  E1)  
+- {
+  ...
+- while (E0 < E1)  
+- {
+  ...
+- }
+- ...
+- }
+// Infered from: (wireshark/{prevFiles/prev_b6c31d_a673a5_epan#dissectors#packet-rtcp.c,revFiles/b6c31d_a673a5_epan#dissectors#packet-rtcp.c}: dissect_rtcp_app_mcpt)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

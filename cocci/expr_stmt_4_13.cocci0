@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = E0 / E1; 
++ E0 = E0 / 2; 
+// Infered from: (codeflaws/{prevFiles/prev_9-A-17766560-17766602.c,revFiles/9-A-17766560-17766602.c}: main)
+// False positives: (codeflaws/revFiles/9-A-17766560-17766602.c: main)
+// Recall: 0.20, Precision: 0.29, Matching recall: 1.00
+
+// ---------------------------------------------

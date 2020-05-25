@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- gdk_directfb_window_get_pointer(_gdk_windowing_window_at_pointer(E0, NULL,  NULL, NULL),  E1, E2, E3); 
++ gdk_directfb_window_get_pointer(_gdk_windowing_window_at_pointer(E0, NULL,  NULL, NULL,  FALSE),  E1, E2, E3); 
+// Infered from: (gtk/{prevFiles/prev_59177b_f3013b_gdk#directfb#gdkwindow-directfb.c,revFiles/59177b_f3013b_gdk#directfb#gdkwindow-directfb.c}: _gdk_windowing_get_pointer)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

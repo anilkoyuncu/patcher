@@ -1,0 +1,12 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- set_irq_chip(E0, E1); 
+- set_irq_handler(E0, I2); 
++ irq_set_chip(E0, E1); 
++ irq_set_handler(E0, I2); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#plat-pxa#gpio.c,revFiles/6845664a_25a566_arch#arm#plat-pxa#gpio.c}: pxa_init_gpio), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-ixp2000#ixdp2x00.c,revFiles/6845664a_25a566_arch#arm#mach-ixp2000#ixdp2x00.c}: ixdp2x00_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-ns9xxx#board-a9m9750dev.c,revFiles/6845664a_25a566_arch#arm#mach-ns9xxx#board-a9m9750dev.c}: board_a9m9750dev_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-netx#generic.c,revFiles/6845664a_25a566_arch#arm#mach-netx#generic.c}: netx_init_irq), (linux/{prevFiles/prev_d5bb122_c22435a3_drivers#mfd#htc-egpio.c,revFiles/d5bb122_c22435a3_drivers#mfd#htc-egpio.c}: egpio_remove), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-h720x#cpu-h7202.c,revFiles/6845664a_25a566_arch#arm#mach-h720x#cpu-h7202.c}: h7202_init_irq)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

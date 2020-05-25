@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = 100.0 * (float )E1 / (float )E2; 
++ E0 = (float )E1 / (float )E2; 
+// Infered from: (vlc/{prevFiles/prev_47512c_f2d57a_src#misc#update.c,revFiles/47512c_f2d57a_src#misc#update.c}: update_DownloadReal)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if ((E0 = php_crypt(E1, E2, E3, E4)) == NULL)  
++ if ((E0 = php_crypt(E1, (int )E2, E3, (int )E4)) == NULL)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_4fa924_5b9f3a_ext#standard#password.c,revFiles/4fa924_5b9f3a_ext#standard#password.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_f58edc_09a01a_ext#standard#crypt.c,revFiles/f58edc_09a01a_ext#standard#crypt.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/4fa924_5b9f3a_ext#standard#password.c: PHP_FUNCTION)
+// Recall: 0.45, Precision: 0.83, Matching recall: 0.45
+
+// ---------------------------------------------

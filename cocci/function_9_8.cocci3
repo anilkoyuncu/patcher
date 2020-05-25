@@ -1,0 +1,41 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- snprintf(E0 + strlen(E0), E1 - strlen(E0), ", %d kb/s", I2 / 1000); 
+// Infered from: (FFmpeg/{prevFiles/prev_040ddd_72db5e_libavcodec#utils.c,revFiles/040ddd_72db5e_libavcodec#utils.c}: avcodec_string)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.17, Precision: 1.00
+// -- Node Change --
+// Recall: 0.12, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/18(11%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_040ddd_72db5e_libavcodec#utils.c: avcodec_string
+*/
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_ac1172d_c9c3941_drivers#net#ethernet#cavium#octeon#octeon_mgmt.c: octeon_mgmt_xmit
+ - FFmpeg/prevFiles/prev_040ddd_72db5e_libavcodec#utils.c: get_bit_rate
+ - curl/prevFiles/prev_fdbe0d_93d595_src#main.c: my_fread
+ - qemu/prevFiles/prev_a3f0ecf_55ef32_hw#arm#boot.c: arm_load_elf
+ - php-src/prevFiles/prev_bcf457_35f78f_ext#session#session.c: 
+ - linux/prevFiles/prev_2b49117a_b78ac6e_drivers#net#ethernet#micrel#ks8851_mll.c: ks_start_xmit
+ - linux/prevFiles/prev_fe7235_0c13b8d_drivers#net#ethernet#amd#xgbe#xgbe-drv.c: xgbe_xmit
+ - qemu/prevFiles/prev_c6c506_31abf9_tci.c: tci_read_label
+ - curl/prevFiles/prev_fdbe0d_93d595_src#main.c: my_fwrite
+ - linux/prevFiles/prev_0c13b8d_81255af_drivers#net#ethernet#broadcom#bcm63xx_enet.c: bcm_enet_start_xmit
+ - qemu/prevFiles/prev_7d2a92_10adb8_ui#vnc-tls.c: vnc_tls_initialize_anon_cred
+ - php-src/prevFiles/prev_576797c_20fc94_ext#session#session.c: php_session_destroy
+ - php-src/prevFiles/prev_576797c_20fc94_ext#session#session.c: 
+ - php-src/prevFiles/prev_bcf457_35f78f_ext#session#session.c: php_session_destroy
+ - php-src/prevFiles/prev_7cf682_637e9f_ext#standard#pack.c: php_unpack
+*/
+
+// ---------------------------------------------

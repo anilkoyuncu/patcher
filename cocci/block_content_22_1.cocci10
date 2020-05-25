@@ -1,0 +1,55 @@
+@@
+identifier I0;
+expression E1;
+typedef va_list;
+@@
+  va_list I0; 
+  ...
+- return E1; 
++ ret = E1; 
++ va_end(I0); 
++ return ret; 
+// Infered from: (curl/{prevFiles/prev_50a74b_8c1e3b_lib#easy.c,revFiles/50a74b_8c1e3b_lib#easy.c}: curl_easy_getinfo)
+// False positives: (curl/revFiles/50a74b_8c1e3b_lib#easy.c: curl_easy_setopt)
+// Recall: 0.05, Precision: 0.44, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.94, Precision: 0.84
+// -- Node Change --
+// Recall: 0.78, Precision: 0.83
+// -- General --
+// Functions fully changed: 0/20(0%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_142424_c599ca_read-tree.c: unpack_tree
+ - curl/prevFiles/prev_50a74b_8c1e3b_lib#easy.c: curl_easy_getinfo
+ - qemu/prevFiles/prev_6a9b11_f401c0_target#alpha#translate.c: gen_fbcond
+ - gtk/prevFiles/prev_168c1f_33a8ef_testsuite#gtk#maplistmodel.c: get
+ - php-src/prevFiles/prev_468fd7_e2589b_main#streams#filter.c: php_stream_filter_register_factory
+ - gstreamer/prevFiles/prev_36267c_162fc1_libs#gst#check#gstharness.c: gst_pad_is_request_pad
+ - gtk/prevFiles/prev_168c1f_33a8ef_testsuite#gtk#slicelistmodel.c: get
+ - ompi/prevFiles/prev_f3ce12_d6e9a1_ompi#mca#pml#v#pml_v_component.c: mca_pml_v_component_open
+ - gtk/prevFiles/prev_168c1f_33a8ef_testsuite#gtk#treelistmodel.c: get
+ - gtk/prevFiles/prev_168c1f_33a8ef_testsuite#gtk#sortlistmodel.c: get
+ - gtk/prevFiles/prev_c1ad72_f11d01_gtk#gtknotebook.c: gtk_notebook_real_insert_page
+ - git/prevFiles/prev_1fb23e_721308_sha1_file.c: force_object_loose
+ - gtk/prevFiles/prev_168c1f_33a8ef_testsuite#gtk#filterlistmodel.c: get
+ - gtk/prevFiles/prev_168c1f_33a8ef_testsuite#gtk#flattenlistmodel.c: get
+ - linux/prevFiles/prev_995c77_9e98c67_arch#arm#mach-sunxi#mc_smp.c: sunxi_core_is_cortex_a15
+ - php-src/prevFiles/prev_fc0349_0ed538_ext#libxml#libxml.c: php_libxml_register_export
+*/
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_c1ad72_f11d01_gtk#gtknotebook.c: gtk_notebook_insert_notebook_page
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_1fb23e_721308_sha1_file.c: write_sha1_file
+ - curl/prevFiles/prev_50a74b_8c1e3b_lib#easy.c: curl_easy_setopt
+ - qemu/prevFiles/prev_6a9b11_f401c0_target#alpha#translate.c: gen_bcond
+*/
+
+// ---------------------------------------------

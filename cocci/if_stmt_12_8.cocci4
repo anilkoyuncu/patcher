@@ -1,0 +1,7 @@
+@@
+@@
+- intf_ErrMsg("ipv6 error: setsockopt JOIN_GROUP failed"); 
+// Infered from: (vlc/{prevFiles/prev_9915a8_d68093_plugins#network#ipv6.c,revFiles/9915a8_d68093_plugins#network#ipv6.c}: OpenUDP)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

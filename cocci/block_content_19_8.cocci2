@@ -1,0 +1,10 @@
+@@
+@@
+- bbt = kmalloc(ebcnt, GFP_KERNEL); 
++ bbt = kzalloc(ebcnt, GFP_KERNEL); 
+  ...
+- memset(bbt, 0, ebcnt); 
+// Infered from: (linux/{prevFiles/prev_2bfefa4c_ecce2a_drivers#mtd#tests#mtd_stresstest.c,revFiles/2bfefa4c_ecce2a_drivers#mtd#tests#mtd_stresstest.c}: scan_for_bad_eraseblocks), (linux/{prevFiles/prev_2bfefa4c_ecce2a_drivers#mtd#tests#mtd_readtest.c,revFiles/2bfefa4c_ecce2a_drivers#mtd#tests#mtd_readtest.c}: scan_for_bad_eraseblocks)
+// Recall: 0.23, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

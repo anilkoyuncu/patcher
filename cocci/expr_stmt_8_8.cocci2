@@ -1,0 +1,8 @@
+@@
+@@
+- error_report("Warning: the guest sent a self-referencing 9P flush request"); 
++ warn_report("the guest sent a self-referencing 9P flush request"); 
+// Infered from: (qemu/{prevFiles/prev_3dc6f8_97f403_hw#9pfs#9p.c,revFiles/3dc6f8_97f403_hw#9pfs#9p.c}: v9fs_flush)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

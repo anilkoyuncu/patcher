@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- cvpxpic_attach(E0, CVPixelBufferRetain((void *)E1->p_sys)); 
++ cvpxpic_attach(E0, (void *)E1->p_sys); 
+// Infered from: (vlc/{prevFiles/prev_af4d4a_720149_modules#codec#vt_utils.c,revFiles/af4d4a_720149_modules#codec#vt_utils.c}: cvpxpic_unmap)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

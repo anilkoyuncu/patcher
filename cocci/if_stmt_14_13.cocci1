@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- asprintf(&E0, "%s:%s", E1->proxy.psz_username,  E1->proxy.psz_password ? E1->proxy.psz_password :""); 
++ if (asprintf(&E0, "%s:%s", E1->proxy.psz_username,  E1->proxy.psz_password ? E1->proxy.psz_password :"") == -1)  
++ {
++ return VLC_ENOMEM; 
++ }
+// Infered from: (vlc/{prevFiles/prev_c0ab9a_3bb560_modules#access#mms#mmsh.c,revFiles/c0ab9a_3bb560_modules#access#mms#mmsh.c}: OpenConnection)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

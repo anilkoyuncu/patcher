@@ -1,0 +1,23 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- struct drm_display_mode *I0 = &E1->config->base.adjusted_mode; 
++ struct drm_display_mode *adjusted_mode = &E1->config->base.adjusted_mode; 
+  ...
+- E2->eld[6] = drm_av_sync_delay(E2, I0) / 2; 
++ E2->eld[6] = drm_av_sync_delay(E2, adjusted_mode) / 2; 
+// Infered from: (linux/{prevFiles/prev_124abe0_286940_drivers#gpu#drm#i915#intel_audio.c,revFiles/124abe0_286940_drivers#gpu#drm#i915#intel_audio.c}: intel_audio_codec_enable)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

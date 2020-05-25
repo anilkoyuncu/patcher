@@ -1,0 +1,20 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- char I0 = E1[E2]; 
++ char I0 = tolower(E1[E2]); 
+// Infered from: (codeflaws/{prevFiles/prev_290-D-3442905-3443400.c,revFiles/290-D-3442905-3443400.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

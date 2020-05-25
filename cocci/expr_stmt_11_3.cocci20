@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2;
+@@
+- (void )CC_MD4(E0, 2 * E1, E2); 
+// Infered from: (curl/{prevFiles/prev_12ea5b_d4703f_lib#curl_ntlm_core.c,revFiles/12ea5b_d4703f_lib#curl_ntlm_core.c}: Curl_ntlm_core_mk_nt_hash)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

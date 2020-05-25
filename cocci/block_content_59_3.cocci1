@@ -1,0 +1,28 @@
+@@
+expression E2, E0, E1, E3, E4;
+@@
+- grid_move_lines(E0, E1, E2, (E3 + 1) - E1 - E4); 
++ ny2 = E3 + 1 - E1 - E4; 
++ grid_move_lines(E0, E1, E2, ny2); 
++ grid_clear(E0, 0, E1 + ny2, E0->sx, E4 - ny2); 
+// Infered from: (tmux/{prevFiles/prev_295879_e07344_grid-view.c,revFiles/295879_e07344_grid-view.c}: grid_view_delete_lines_region), (tmux/{prevFiles/prev_86c93c_643c21_grid-view.c,revFiles/86c93c_643c21_grid-view.c}: grid_view_delete_lines_region)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - tmux/prevFiles/prev_295879_e07344_grid-view.c: grid_view_delete_lines_region
+ - tmux/prevFiles/prev_86c93c_643c21_grid-view.c: grid_view_delete_lines_region
+ - tmux/prevFiles/prev_86c93c_643c21_grid-view.c: grid_view_insert_lines_region
+ - tmux/prevFiles/prev_295879_e07344_grid-view.c: grid_view_insert_lines_region
+*/
+
+// ---------------------------------------------

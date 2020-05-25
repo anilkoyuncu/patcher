@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = memchr(E1, 'S', sizeof(E1))))  
++ if ((E0 = memchr(E1, 'S', sizeof(E1) - 5)))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_73039e_cc04af_libavformat#mpeg.c,revFiles/73039e_cc04af_libavformat#mpeg.c}: mpegps_read_header)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

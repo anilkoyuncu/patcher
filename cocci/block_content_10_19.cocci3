@@ -1,0 +1,31 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = GTK_WIDGET(g_object_get_data(G_OBJECT(E1), PRINT_COL_HEADINGS_CB_KEY)); 
++ GTK_WIDGET(g_object_get_data(G_OBJECT(E1), PRINT_COL_HEADINGS_CB_KEY)); 
+// Infered from: (wireshark/{prevFiles/prev_95a68d_e13d73_ui#gtk#print_dlg.c,revFiles/95a68d_e13d73_ui#gtk#print_dlg.c}: print_cmd_toggle_detail)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.80
+// -- Node Change --
+// Recall: 0.50, Precision: 0.67
+// -- General --
+// Functions fully changed: 0/5(0%)
+
+/*
+Functions where the patch applied partially:
+ - gstreamer/prevFiles/prev_0e9496_8ba64e_tests#check#elements#multiqueue.c: GST_START_TEST
+ - wireshark/prevFiles/prev_2428b7_914f06_epan#dissectors#packet-rohc.c: dissect_compressed_list
+ - wireshark/prevFiles/prev_95a68d_e13d73_ui#gtk#print_dlg.c: print_cmd_toggle_detail
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gstreamer/prevFiles/prev_0e9496_8ba64e_tests#check#elements#queue2.c: GST_START_TEST
+ - gstreamer/prevFiles/prev_0e9496_8ba64e_tests#check#elements#queue2.c: do_test_simple_shutdown_while_running
+*/
+
+// ---------------------------------------------

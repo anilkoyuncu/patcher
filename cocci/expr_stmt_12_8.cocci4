@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- OPAL_MODEX_RECV(E0, &mca_btl_portals4_component.super.btl_version, E1,  (void **)&E2, &E3); 
++ OPAL_MODEX_RECV(E0, &mca_btl_portals4_component.super.btl_version,  &E1->proc_name, (void **)&E2, &E3); 
+// Infered from: (ompi/{prevFiles/prev_3afac9_54a406_opal#mca#btl#portals4#btl_portals4.c,revFiles/3afac9_54a406_opal#mca#btl#portals4#btl_portals4.c}: mca_btl_portals4_add_procs)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

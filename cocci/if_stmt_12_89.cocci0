@@ -1,0 +1,12 @@
+@@
+binary operator B1 = {< ,>= }, B2 = {&& ,|| }, B3 = {< ,> };
+expression E0, E4;
+@@
+- if ((E0 B1 0) B2 (E0 B3 E4))  
+- {
+  ...
+- }
+// Infered from: (qemu/{prevFiles/prev_1b27d7_37a05a_hw#ivshmem.c,revFiles/1b27d7_37a05a_hw#ivshmem.c}: ivshmem_io_writel), (qemu/{prevFiles/prev_1b27d7_37a05a_hw#ivshmem.c,revFiles/1b27d7_37a05a_hw#ivshmem.c}: ivshmem_io_writel)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->adjustment = g_object_ref_sink(E1); 
++ E0->adjustment = GTK_ADJUSTMENT(g_object_ref_sink(E1)); 
+// Infered from: (gtk/{prevFiles/prev_072f06_1c9e3a_gtk#gtkcellrendererspin.c,revFiles/072f06_1c9e3a_gtk#gtkcellrendererspin.c}: gtk_cell_renderer_spin_set_property)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

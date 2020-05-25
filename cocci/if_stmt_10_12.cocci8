@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (!CreateProcess(utf8_to_16(E0[0]), utf_8to16(E1->str), NULL, NULL, TRUE,  CREATE_NEW_CONSOLE, NULL, NULL, &E2, &E3))  
++ if (!CreateProcess(utf_8to16(E0[0]), utf_8to16(E1->str), NULL, NULL, TRUE,  CREATE_NEW_CONSOLE, NULL, NULL, &E2, &E3))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_47cc02_a273d9_capchild#capture_sync.c,revFiles/47cc02_a273d9_capchild#capture_sync.c}: sync_pipe_start), (wireshark/{prevFiles/prev_47cc02_a273d9_capchild#capture_sync.c,revFiles/47cc02_a273d9_capchild#capture_sync.c}: sync_pipe_open_command)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = aprintf("%s:%hu", E1, E2); 
++ E0 = aprintf("%s:%d", E1, E2); 
+// Infered from: (curl/{prevFiles/prev_eb4968_4062bc_lib#http_proxy.c,revFiles/eb4968_4062bc_lib#http_proxy.c}: CONNECT)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

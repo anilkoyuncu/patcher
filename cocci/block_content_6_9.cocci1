@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ff_isom_write_hvcc(E0, E1->extradata, E1->extradata_size, 0); 
+- return 0; 
+// Infered from: (FFmpeg/{prevFiles/prev_34e381_2968da_libavformat#matroskaenc.c,revFiles/34e381_2968da_libavformat#matroskaenc.c}: mkv_write_native_codecprivate)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

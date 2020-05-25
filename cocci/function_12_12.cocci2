@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- E0 = PyList_New(E1); 
++ if (!(E0 = PyList_New(E1)))  
++ {
++ goto  error; 
++ }
+// Infered from: (cpython/{prevFiles/prev_5c170f_a5a070_Modules#almodule.c,revFiles/5c170f_a5a070_Modules#almodule.c}: al_GetParams)
+// False positives: (cpython/revFiles/5c170f_a5a070_Modules#almodule.c: al_GetParams), (cpython/revFiles/5c170f_a5a070_Modules#almodule.c: al_QueryValues)
+// Recall: 0.18, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

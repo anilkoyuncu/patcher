@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->b_update)  
++ if (!E0->b_update || (E0->i_update <= 0))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_ad2ce2_4b1fd5_modules#video_filter#osdmenu.c,revFiles/ad2ce2_4b1fd5_modules#video_filter#osdmenu.c}: Filter)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

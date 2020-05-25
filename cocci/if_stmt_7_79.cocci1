@@ -1,0 +1,12 @@
+@@
+expression list E0;
+expression E1;
+@@
+- if (Z_STRVAL_PP (E0) && E1)  
+- {
+  ...
+- }
+// Infered from: (php-src/{prevFiles/prev_5ad3d2_f2ec3f_ext#standard#head.c,revFiles/5ad3d2_f2ec3f_ext#standard#head.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_5ad3d2_f2ec3f_ext#standard#head.c,revFiles/5ad3d2_f2ec3f_ext#standard#head.c}: PHP_FUNCTION)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

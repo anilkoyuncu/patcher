@@ -1,0 +1,32 @@
+@@
+identifier I0, I4;
+expression E3, E1, E2;
+typedef input_thread_t;
+@@
+- input_thread_t *I0 = (input_thread_t *)vlc_object_get(E1, E2); 
+- if (E3)  
+- {
+- int I4 = var_GetInteger(I0, "state"); 
+- ...
+- vlc_object_release(I0); 
+- }
+- else
+- {
+- ...
+- }
+- msleep(10000); 
++ msleep(10 * INTF_IDLE_SLEEP); 
+// Infered from: (vlc/{prevFiles/prev_ace408_aba3de_modules#services_discovery#shout.c,revFiles/ace408_aba3de_modules#services_discovery#shout.c}: Run)
+// Recall: 0.68, Precision: 1.00, Matching recall: 0.81
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.84, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+
+// ---------------------------------------------

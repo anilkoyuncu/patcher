@@ -1,0 +1,8 @@
+@@
+@@
+- gen_op_divs(0); 
++ gen_op_divs(2); 
+// Infered from: (qemu/{prevFiles/prev_2d37be_483dcf_target-m68k#translate.c,revFiles/2d37be_483dcf_target-m68k#translate.c}: DISAS_INSN)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

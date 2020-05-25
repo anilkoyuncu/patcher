@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+@@
+  char I0[MAX_PATH]; 
+  ...
+- E1 = FromLocaleDup(MAX_PATH + 1); 
++ E1 = FromLocaleDup(I0); 
+// Infered from: (vlc/{prevFiles/prev_491060_fdb956_modules#access_filter#timeshift.c,revFiles/491060_fdb956_modules#access_filter#timeshift.c}: GetTmpFilePath)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

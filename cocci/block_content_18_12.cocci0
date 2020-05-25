@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = proto_tree_add_text(E1, E2, *E3, 1, "Alert Count: 0x%02x", E4); 
++ proto_tree_add_text(E1, E2, *E3, 1, "Alert Count: 0x%02x", E4); 
+// Infered from: (wireshark/{prevFiles/prev_64834e_a5e8bb_epan#dissectors#packet-zbee-zcl-ha.c,revFiles/64834e_a5e8bb_epan#dissectors#packet-zbee-zcl-ha.c}: dissect_zcl_appl_evtalt_get_alerts_rsp)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (E0->block.p_current && E0->i_pos + E0->block.p_current->i_buffer <= E1)  
++ while (E0->block.p_current && E0->i_pos + E0->block.p_current->i_buffer < E1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_c482de_9d349e_src#input#stream.c,revFiles/c482de_9d349e_src#input#stream.c}: AStreamSeekBlock)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

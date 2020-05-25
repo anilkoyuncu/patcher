@@ -1,0 +1,38 @@
+@@
+expression E0;
+@@
+- return Split(E0); 
++ v = Split(E0); 
++ PyMem_Free(E0); 
++ return v; 
+// Infered from: (cpython/{prevFiles/prev_d1c551_20b15b_Modules#_tkinter.c,revFiles/d1c551_20b15b_Modules#_tkinter.c}: Tkapp_Split)
+// False positives: (cpython/revFiles/d1c551_20b15b_Modules#_tkinter.c: SplitObj)
+// Recall: 0.14, Precision: 0.50, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 0.83
+// -- Node Change --
+// Recall: 0.71, Precision: 0.83
+// -- General --
+// Functions fully changed: 0/7(0%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_d56b8d_de59a2_ompi#mca#common#sm#common_sm_mmap.c: mca_common_sm_mmap_init_group
+ - cpython/prevFiles/prev_502168_7b5ce7_Modules#timemodule.c: time_strptime
+ - cpython/prevFiles/prev_95e2cc_5944e2_Modules#_collectionsmodule.c: deque_repeat
+ - vlc/prevFiles/prev_14ddd4_9bc4f8_src#control#hierarchical_media_list_view.c: hierarch_media_list_view_children_at_index
+ - cpython/prevFiles/prev_d1c551_20b15b_Modules#_tkinter.c: Tkapp_Split
+*/
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_d1c551_20b15b_Modules#_tkinter.c: Tkapp_SplitList
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_d1c551_20b15b_Modules#_tkinter.c: SplitObj
+*/
+
+// ---------------------------------------------

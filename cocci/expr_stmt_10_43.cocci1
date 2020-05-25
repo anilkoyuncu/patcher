@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- ngx_log_error(NGX_LOG_ALERT, E0->log, ngx_errno, "epoll_wait() timedout"); 
++ ngx_log_error(NGX_LOG_ALERT, E0->log, NGX_ETIMEDOUT, "epoll_wait() timed out"); 
+// Infered from: (nginx/{prevFiles/prev_785060_12f436_src#event#modules#ngx_epoll_module.c,revFiles/785060_12f436_src#event#modules#ngx_epoll_module.c}: ngx_epoll_module_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

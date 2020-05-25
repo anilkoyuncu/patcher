@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- strdup(E0) 
++ g_strdup(E0) 
+  ... when any
+// Infered from: (qemu/{prevFiles/prev_d3c481_302d9d_target-i386#cpuid.c,revFiles/d3c481_302d9d_target-i386#cpuid.c}: cpudef_setfield)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.70, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_e49f82_049105_tests#libqos#virtio.c: qvirtqueue_kick
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef bool;
+@@
+- bool I0 = (E1->data->multi && Curl_multi_canPipeline(E1->data->multi)); 
++ bool I0 = (bool )(E1->data->multi && Curl_multi_canPipeline(E1->data->multi)); 
+// Infered from: (curl/{prevFiles/prev_cdbbb7_2bf4d9_lib#sendf.c,revFiles/cdbbb7_2bf4d9_lib#sendf.c}: Curl_read)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- sprintf(E0, "%04x", E1 + E2); 
++ xsnprintf(E0, sizeof(E0), "%04x", E1 + E2); 
+// Infered from: (git/{prevFiles/prev_5096d4_db85a8_sideband.c,revFiles/5096d4_db85a8_sideband.c}: send_sideband), (git/{prevFiles/prev_5096d4_db85a8_sideband.c,revFiles/5096d4_db85a8_sideband.c}: send_sideband)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+type T2;
+expression E0, E1, E3, E4;
+@@
+- snprintf(E0, E1, "%u:%02u.%02u", (T2 )MINUTES(E3->tv_sec),  (T2 )SECONDS(E3->tv_sec), (T2 )E4 * 100); 
++ snprintf(E0, E1, "%u:%02u.%02u", (T2 )MINUTES(E3->tv_sec),  (T2 )SECONDS(E3->tv_sec), (T2 )(E4 * 100)); 
+// Infered from: (qemu/{prevFiles/prev_bcd249_77bec6_cmd.c,revFiles/bcd249_77bec6_cmd.c}: timestr)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

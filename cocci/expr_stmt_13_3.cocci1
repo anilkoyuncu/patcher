@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- monitor_printf(E0, "host forwarding rule for %s %s\n", E1,  E2 ? "removed" :"not found"); 
++ monitor_printf(E0, "host forwarding rule for %s %s\n", E1,  E2 ? "not found" :"removed"); 
+// Infered from: (qemu/{prevFiles/prev_b15ba6_7b011f_net#slirp.c,revFiles/b15ba6_7b011f_net#slirp.c}: net_slirp_hostfwd_remove)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

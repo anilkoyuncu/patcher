@@ -1,0 +1,10 @@
+@@
+expression E1, E2, E0;
+@@
+- printf(E0, E1[E2]); 
++ printf(E0, E1[E2 - 1]); 
+// Infered from: (codeflaws/{prevFiles/prev_509-A-15912013-15912025.c,revFiles/509-A-15912013-15912025.c}: main), (codeflaws/{prevFiles/prev_672-A-18140251-18140254.c,revFiles/672-A-18140251-18140254.c}: main)
+// False positives: (codeflaws/revFiles/670-B-17921728-17921751.c: main)
+// Recall: 0.36, Precision: 0.62, Matching recall: 0.83
+
+// ---------------------------------------------

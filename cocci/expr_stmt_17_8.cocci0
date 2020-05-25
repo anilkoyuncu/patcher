@@ -1,0 +1,10 @@
+@@
+identifier I0 = {failf ,proto_item_append_text };
+expression E1, E3, E4, E2;
+@@
+- I0(E1, E2, E3 ? E3 :E4); 
++ I0(E1, E2, E3); 
+// Infered from: (curl/{prevFiles/prev_b430cb_99eafc49_lib#rtsp.c,revFiles/b430cb_99eafc49_lib#rtsp.c}: rtsp_do), (wireshark/{prevFiles/prev_181751_c5f9ea_epan#dissectors#packet-gsm_a_bssmap.c,revFiles/181751_c5f9ea_epan#dissectors#packet-gsm_a_bssmap.c}: be_cell_id_list)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

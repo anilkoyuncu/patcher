@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->pix_fmt == AV_PIX_FMT_XVMC_MPEG2_IDCT || E0->hwaccel)  
++ if (E0->pix_fmt == AV_PIX_FMT_XVMC_MPEG2_IDCT || E0->hwaccel || uses_vdpau(  E0))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_c65eb7_db6e2e_libavcodec#mpeg12.c,revFiles/c65eb7_db6e2e_libavcodec#mpeg12.c}: mpeg_decode_postinit), (FFmpeg/{prevFiles/prev_c65eb7_db6e2e_libavcodec#mpeg12.c,revFiles/c65eb7_db6e2e_libavcodec#mpeg12.c}: vcr2_init_sequence)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

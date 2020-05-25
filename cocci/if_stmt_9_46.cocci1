@@ -1,0 +1,43 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 & 0x0001)  
++ if (E0 & 0x0001)  
+  {
+- E1 = add_item_text(E2, "Function code not implemented", E1); 
++ add_item_text(E2, "Function code not implemented", E1); 
+  }
+// Infered from: (wireshark/{prevFiles/prev_1f0cbf_26566d_epan#dissectors#packet-dnp.c,revFiles/1f0cbf_26566d_epan#dissectors#packet-dnp.c}: dnp3_al_process_iin)
+// False positives: (wireshark/revFiles/1f0cbf_26566d_epan#dissectors#packet-dnp.c: dnp3_al_process_iin)
+// Recall: 0.12, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.14, Precision: 1.00
+// -- Node Change --
+// Recall: 0.18, Precision: 0.60
+// -- General --
+// Functions fully changed: 1/14(7%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_771999_01f88e_epan#dissectors#packet-tds.c: dissect_tds_env_chg
+ - wireshark/prevFiles/prev_64ff87_aa3598_epan#dissectors#packet-s7comm.c: s7comm_decode_ud_tis_param
+ - cpython/prevFiles/prev_f97632_993952_Objects#stringobject.c: formatstring
+ - wireshark/prevFiles/prev_771999_01f88e_epan#dissectors#packet-tds.c: dissect_tds_login_ack_token
+ - wireshark/prevFiles/prev_4d30e7_843f04_plugins#wimax#wimax_compact_dlmap_ie_decoder.c: wimax_compact_dlmap_ie_decoder
+ - vlc/prevFiles/prev_72ddab_c1ec23_modules#demux#mp4#mp4.c: MP4_TrackGetDTS
+ - linux/prevFiles/prev_3342b9_335e3b8_sound#oss#sb_ess.c: es_rec_set_recmask
+ - wireshark/prevFiles/prev_e1a876_2df91a_epan#dissectors#packet-couchbase.c: dissect_value
+ - wireshark/prevFiles/prev_e4e084_fd7658_epan#dissectors#packet-isis-hello.c: dissect_hello_mt_port_cap_spb_mcid_clv
+ - wireshark/prevFiles/prev_1f0cbf_26566d_epan#dissectors#packet-dnp.c: dissect_dnp3_message
+ - wireshark/prevFiles/prev_4d30e7_843f04_plugins#wimax#wimax_compact_ulmap_ie_decoder.c: wimax_compact_ulmap_ie_decoder
+ - wireshark/prevFiles/prev_64ff87_aa3598_epan#dissectors#packet-s7comm.c: s7comm_decode_ud_tis_bstack
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_1f0cbf_26566d_epan#dissectors#packet-dnp.c: dnp3_al_process_iin
+*/
+
+// ---------------------------------------------

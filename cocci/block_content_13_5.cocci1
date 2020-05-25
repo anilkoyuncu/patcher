@@ -1,0 +1,12 @@
+@@
+identifier I0;
+typedef uint16_t;
+typedef uint32_t;
+@@
+- uint16_t I0 = 0x0; 
++ uint32_t I0 = 0x0; 
+// Infered from: (vlc/{prevFiles/prev_5763e8_61ed60_modules#mux#mp4.c,revFiles/5763e8_61ed60_modules#mux#mp4.c}: GetMoofBox), (vlc/{prevFiles/prev_5763e8_61ed60_modules#mux#mp4.c,revFiles/5763e8_61ed60_modules#mux#mp4.c}: GetMoofBox)
+// False positives: (vlc/revFiles/5763e8_61ed60_modules#mux#mp4.c: GetMoovBox)
+// Recall: 0.20, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

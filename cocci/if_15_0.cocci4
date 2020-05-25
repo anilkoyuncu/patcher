@@ -1,0 +1,18 @@
+@@
+expression E0, E1;
+@@
+- if (E0->nr_of_pages > 0)  
++ if (E0->nr_of_pages_to_print > 0)  
+  {
+- E1 = g_strdup_printf(_("Preparing %d"), E0->nr_of_pages); 
++ E1 = g_strdup_printf(_("Preparing %d"), E0->nr_of_pages_to_print); 
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_9b7fa7_122e0b_gtk#gtkprintoperation.c,revFiles/9b7fa7_122e0b_gtk#gtkprintoperation.c}: update_progress)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

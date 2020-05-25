@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef TIFFFieldInfo;
+@@
+- return ((const  TIFFFieldInfo *)lfind(&E0, E1->tif_fieldinfo,  E1->tif_nfields,  sizeof(TIFFFieldInfo ), tagNameCompare)); 
++ return ((const  TIFFFieldInfo *)lfind(&E0, E1->tif_fieldinfo,  &E1->tif_nfields,  sizeof(TIFFFieldInfo ), tagNameCompare)); 
+// Infered from: (libtiff/{prevFiles/prev_6e5ba7_c508cf_libtiff#tif_dirinfo.c,revFiles/6e5ba7_c508cf_libtiff#tif_dirinfo.c}: _TIFFFindFieldInfoByName)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

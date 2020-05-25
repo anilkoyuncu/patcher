@@ -1,0 +1,22 @@
+@@
+@@
+- gen_op_divu(0); 
++ gen_op_divu(2); 
+// Infered from: (qemu/{prevFiles/prev_2d37be_483dcf_target-m68k#translate.c,revFiles/2d37be_483dcf_target-m68k#translate.c}: DISAS_INSN)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.88, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_2d37be_483dcf_target-m68k#translate.c: DISAS_INSN
+*/
+
+// ---------------------------------------------

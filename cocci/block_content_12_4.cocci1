@@ -1,0 +1,15 @@
+@@
+identifier I0;
+typedef cairo_int_status_t;
+typedef cairo_status_t;
+@@
+- cairo_status_t I0; 
++ cairo_int_status_t I0; 
+  ...
+- assert(I0 == CAIRO_STATUS_SUCCESS); 
++ assert(I0 == CAIRO_INT_STATUS_SUCCESS); 
+// Infered from: (cairo/{prevFiles/prev_9fcb42_2c45fd_src#win32#cairo-win32-printing-surface.c,revFiles/9fcb42_2c45fd_src#win32#cairo-win32-printing-surface.c}: _cairo_win32_printing_surface_paint_recording_pattern)
+// False positives: (cairo/revFiles/9fcb42_2c45fd_src#win32#cairo-win32-printing-surface.c: _cairo_win32_printing_surface_paint_linear_pattern)
+// Recall: 0.40, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------

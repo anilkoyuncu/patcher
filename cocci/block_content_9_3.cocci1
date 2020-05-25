@@ -1,0 +1,25 @@
+@@
+expression E1, E0;
+@@
+- E0 = E1; 
+- return E0; 
++ return E1; 
+// Infered from: (linux/{prevFiles/prev_df08e3_180a41b_drivers#staging#gasket#apex_driver.c,revFiles/df08e3_180a41b_drivers#staging#gasket#apex_driver.c}: apex_reset), (linux/{prevFiles/prev_730b3c_fa008fd_drivers#staging#fsl-dpaa2#ethsw#ethsw.c,revFiles/730b3c_fa008fd_drivers#staging#fsl-dpaa2#ethsw#ethsw.c}: ethsw_port_init), (linux/{prevFiles/prev_004936_c896c8_drivers#staging#rtl8188eu#core#rtw_mlme.c,revFiles/004936_c896c8_drivers#staging#rtl8188eu#core#rtw_mlme.c}: rtw_set_key), (linux/{prevFiles/prev_3df316_14e9bb_drivers#staging#pi433#rf69.c,revFiles/3df316_14e9bb_drivers#staging#pi433#rf69.c}: rf69_set_preamble_length), (linux/{prevFiles/prev_283a9e_95313752_drivers#staging#wilc1000#wilc_spi.c,revFiles/283a9e_95313752_drivers#staging#wilc1000#wilc_spi.c}: wilc_spi_clear_int_ext), (linux/{prevFiles/prev_1862eec_e20af8_drivers#staging#gdm72xx#gdm_qos.c,revFiles/1862eec_e20af8_drivers#staging#gdm72xx#gdm_qos.c}: alloc_qos_entry), (linux/{prevFiles/prev_d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c,revFiles/d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c}: gpio_ctrl), (linux/{prevFiles/prev_fb6e3c_bd4fcda_drivers#staging#emxx_udc#emxx_udc.c,revFiles/fb6e3c_bd4fcda_drivers#staging#emxx_udc#emxx_udc.c}: nbu2ss_gad_get_frame)
+// False positives: (linux/revFiles/d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c: __gc2235_set_exposure)
+// Recall: 0.97, Precision: 0.92, Matching recall: 0.97
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.92
+// -- Node Change --
+// Recall: 1.00, Precision: 0.92
+// -- General --
+// Functions fully changed: 11/12(91%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c: __gc2235_set_exposure
+*/
+
+// ---------------------------------------------

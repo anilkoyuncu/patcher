@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- isc_encode_sql_time(&I0, &E1[E2].val.tmval); 
++ isc_encode_sql_time(I0, &E1[E2].val.tmval); 
+// Infered from: (php-src/{prevFiles/prev_204c32_3fb8be_ext#interbase#ibase_query.c,revFiles/204c32_3fb8be_ext#interbase#ibase_query.c}: _php_ibase_bind), (php-src/{prevFiles/prev_c69555_930ac9_ext#interbase#ibase_query.c,revFiles/c69555_930ac9_ext#interbase#ibase_query.c}: _php_ibase_bind)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.17, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_c69555_930ac9_ext#interbase#ibase_query.c: _php_ibase_bind
+ - php-src/prevFiles/prev_204c32_3fb8be_ext#interbase#ibase_query.c: _php_ibase_bind
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+@@
+- char *I0 = strdup(E1); 
++ char *I0 = g_strdup(E1); 
+  ...
+- free(I0); 
++ g_free(I0); 
+// Infered from: (qemu/{prevFiles/prev_d3f8e1_c64f50_hw#9pfs#virtio-9p-local.c,revFiles/d3f8e1_c64f50_hw#9pfs#virtio-9p-local.c}: local_mapped_attr_path), (qemu/{prevFiles/prev_d3f8e1_c64f50_hw#9pfs#virtio-9p-local.c,revFiles/d3f8e1_c64f50_hw#9pfs#virtio-9p-local.c}: local_create_mapped_attr_dir)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

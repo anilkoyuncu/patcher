@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->p_input_resource = input_resource_New(VLC_OBJECT(E1)); 
++ E0->p_input_resource = input_resource_New(E0->p_parent); 
+// Infered from: (vlc/{prevFiles/prev_ba66ad_cdc856_src#input#vlm.c,revFiles/ba66ad_cdc856_src#input#vlm.c}: vlm_MediaInstanceNew)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

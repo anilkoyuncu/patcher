@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 - E1 > 0.000000001)  
++ if (E0 >= E1)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_9-B-1970440-1970445.c,revFiles/9-B-1970440-1970445.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0[0] == E0[1])  
++ if (E0[0] == E0[1] && E0[5] == E0[4])  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_471-A-15956940-15957234.c,revFiles/471-A-15956940-15957234.c}: main), (codeflaws/{prevFiles/prev_471-A-15957158-15957234.c,revFiles/471-A-15957158-15957234.c}: main)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

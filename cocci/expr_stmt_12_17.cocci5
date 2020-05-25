@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = proto_tree_get_parent(E1); 
++ E0 = proto_item_get_parent(proto_tree_get_parent(E1)); 
+// Infered from: (wireshark/{prevFiles/prev_89c5e9_2aa931_epan#dissectors#packet-iax2.c,revFiles/89c5e9_2aa931_epan#dissectors#packet-iax2.c}: desegment_iax)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

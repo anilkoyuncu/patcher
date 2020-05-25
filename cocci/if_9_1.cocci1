@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0 > FF_INPUT_BUFFER_PADDING_SIZE)  
++ if (E0 > AV_INPUT_BUFFER_PADDING_SIZE)  
+  {
+- E0 = FF_INPUT_BUFFER_PADDING_SIZE; 
++ E0 = AV_INPUT_BUFFER_PADDING_SIZE; 
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e6debc_50e30d_tools#target_dec_fuzzer.c,revFiles/e6debc_50e30d_tools#target_dec_fuzzer.c}: FDBPrepare)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

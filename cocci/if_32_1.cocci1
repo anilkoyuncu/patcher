@@ -1,0 +1,30 @@
+@@
+expression E0;
+@@
+- if (E0)  
+- {
+- return NULL; 
+- }
+// Infered from: (php-src/{prevFiles/prev_a21243_379c32_ext#spl#spl_fixedarray.c,revFiles/a21243_379c32_ext#spl#spl_fixedarray.c}: spl_fixedarray_object_get_properties), (php-src/{prevFiles/prev_f57cbf_e1a544_ext#spl#spl_fixedarray.c,revFiles/f57cbf_e1a544_ext#spl#spl_fixedarray.c}: spl_fixedarray_object_get_properties), (php-src/{prevFiles/prev_0afd4b_087a13_ext#spl#spl_fixedarray.c,revFiles/0afd4b_087a13_ext#spl#spl_fixedarray.c}: spl_fixedarray_object_get_properties)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.33
+// -- Node Change --
+// Recall: 1.00, Precision: 0.50
+// -- General --
+// Functions fully changed: 3/9(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_f57cbf_e1a544_ext#spl#spl_fixedarray.c: spl_fixedarray_object_free_storage
+ - php-src/prevFiles/prev_a21243_379c32_ext#spl#spl_fixedarray.c: spl_fixedarray_object_count_elements
+ - php-src/prevFiles/prev_f57cbf_e1a544_ext#spl#spl_fixedarray.c: spl_fixedarray_object_count_elements
+ - php-src/prevFiles/prev_a21243_379c32_ext#spl#spl_fixedarray.c: spl_fixedarray_object_free_storage
+ - php-src/prevFiles/prev_0afd4b_087a13_ext#spl#spl_fixedarray.c: spl_fixedarray_object_free_storage
+ - php-src/prevFiles/prev_0afd4b_087a13_ext#spl#spl_fixedarray.c: spl_fixedarray_object_count_elements
+*/
+
+// ---------------------------------------------

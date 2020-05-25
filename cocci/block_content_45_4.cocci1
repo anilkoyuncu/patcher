@@ -1,0 +1,18 @@
+@@
+identifier I0;
+expression E1;
+typedef robj;
+@@
+- robj *I0 = NULL; 
+- if ((I0 = lookupKeyReadOrReply(E1, E1->argv[1], shared.emptymultibulk)) == NULL || checkType(  E1, I0, OBJ_ZSET))  
++ robj *I0 = lookupKeyRead(E1->db, E1->argv[1]); 
++ if (I0 && checkType(E1, I0, OBJ_ZSET))  
+  {
+- return; 
++ return; 
+  }
+// Infered from: (redis/{prevFiles/prev_0f7225_913070_src#geo.c,revFiles/0f7225_913070_src#geo.c}: geohashCommand), (redis/{prevFiles/prev_913070_8444b4_src#geo.c,revFiles/913070_8444b4_src#geo.c}: geoposCommand)
+// False positives: (redis/revFiles/913070_8444b4_src#geo.c: geohashCommand)
+// Recall: 0.57, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I3, I0 = {GTK_COMBO_BOX ,GTK_OBJECT };
+expression E2, E1, E4;
+@@
+- g_signal_connect(I0(E1), E2, G_CALLBACK(I3), E4); 
++ g_signal_connect(E1, E2, G_CALLBACK(I3), E4); 
+// Infered from: (wireshark/{prevFiles/prev_72e160_095f4a_gtk#main_airpcap_toolbar.c,revFiles/72e160_095f4a_gtk#main_airpcap_toolbar.c}: airpcap_toolbar_new), (gtk/{prevFiles/prev_d9c581_65dee4e_modules#other#gail#tests#testimage.c,revFiles/d9c581_65dee4e_modules#other#gail#tests#testimage.c}: _check_arrows), (gtk/{prevFiles/prev_d9c581_65dee4e_modules#other#gail#tests#testimage.c,revFiles/d9c581_65dee4e_modules#other#gail#tests#testimage.c}: _check_arrows), (gtk/{prevFiles/prev_d9c581_65dee4e_modules#other#gail#tests#testbutton.c,revFiles/d9c581_65dee4e_modules#other#gail#tests#testbutton.c}: _check_object), (gtk/{prevFiles/prev_d9c581_65dee4e_modules#other#gail#tests#testtable.c,revFiles/d9c581_65dee4e_modules#other#gail#tests#testtable.c}: test_choice_gui), (gtk/{prevFiles/prev_d9c581_65dee4e_modules#other#gail#tests#testtable.c,revFiles/d9c581_65dee4e_modules#other#gail#tests#testtable.c}: test_choice_gui)
+// Recall: 0.60, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

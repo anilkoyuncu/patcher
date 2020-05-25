@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 += E1->p[E2].i_visible_pitch * E1->p[E2].i_visible_lines; 
++ E0 += E1->p[E2].i_pitch * E1->p[E2].i_lines; 
+// Infered from: (vlc/{prevFiles/prev_ba19bb_541b38_modules#demux#image.c,revFiles/ba19bb_541b38_modules#demux#image.c}: Decode)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

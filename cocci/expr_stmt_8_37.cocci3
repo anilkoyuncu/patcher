@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- de_mid(E0, E1, E2, E3, ""); 
++ de_mid(E0, E1, E2, E3, NULL); 
+// Infered from: (wireshark/{prevFiles/prev_0de3a3_32b4ba_epan#dissectors#packet-uma.c,revFiles/0de3a3_32b4ba_epan#dissectors#packet-uma.c}: dissect_uma_IE)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

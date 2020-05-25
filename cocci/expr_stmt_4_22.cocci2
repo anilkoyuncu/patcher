@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- E0 = 0; 
++ E0 = '\0'; 
+// Infered from: (git/{prevFiles/prev_699135_6cbf8b_builtin-fast-export.c,revFiles/699135_6cbf8b_builtin-fast-export.c}: import_marks), (ompi/{prevFiles/prev_7a8e64_43822c_opal#util#os_path.c,revFiles/7a8e64_43822c_opal#util#os_path.c}: opal_os_path)
+// False positives: (ompi/revFiles/7a8e64_43822c_opal#util#os_path.c: opal_os_path), (wireshark/revFiles/73eb16_346c18_epan#dissectors#packet-socks.c: clear_in_socks_dissector_flag), (wireshark/revFiles/73eb16_346c18_epan#dissectors#packet-socks.c: dissect_socks)
+// Recall: 0.43, Precision: 0.38, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 0.60
+// -- Node Change --
+// Recall: 0.57, Precision: 0.44
+// -- General --
+// Functions fully changed: 2/7(28%)
+
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_699135_6cbf8b_builtin-fast-export.c: export_marks
+ - wireshark/prevFiles/prev_73eb16_346c18_epan#dissectors#packet-socks.c: state_machine_v5
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_7a8e64_43822c_opal#util#os_path.c: opal_os_path
+ - wireshark/prevFiles/prev_73eb16_346c18_epan#dissectors#packet-socks.c: dissect_socks
+ - wireshark/prevFiles/prev_73eb16_346c18_epan#dissectors#packet-socks.c: clear_in_socks_dissector_flag
+*/
+
+// ---------------------------------------------

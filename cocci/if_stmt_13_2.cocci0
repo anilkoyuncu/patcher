@@ -1,0 +1,11 @@
+@@
+@@
+- if (SG(request_info).post_entry)  
++ if (SG(request_info).post_entry && SG(request_info).content_type_dup)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_e76703_4f0012_main#SAPI.c,revFiles/e76703_4f0012_main#SAPI.c}: sapi_handle_post)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

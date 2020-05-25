@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (AV_RB32(&E0->pc.state) == MKTAG('I', 'E', 'N', 'D'))  
++ if (E0->pc.state == MKBETAG('I', 'E', 'N', 'D'))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b3189a_d8fd18_libavcodec#png_parser.c,revFiles/b3189a_d8fd18_libavcodec#png_parser.c}: png_parse), (FFmpeg/{prevFiles/prev_3d42ad_16db88_libavcodec#png_parser.c,revFiles/3d42ad_16db88_libavcodec#png_parser.c}: png_parse)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

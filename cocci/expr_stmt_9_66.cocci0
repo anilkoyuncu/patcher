@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- assert(E0 <= INT32_MAX); 
++ assert(E0 <= 2147483647); 
+// Infered from: (cpython/{prevFiles/prev_b679a2_ad9a06_Python#compile.c,revFiles/b679a2_ad9a06_Python#compile.c}: compiler_addop_i)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

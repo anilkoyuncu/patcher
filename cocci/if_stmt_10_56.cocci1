@@ -1,0 +1,33 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->ini_exp_m_res || E0->res_exp_m_ini)  
++ if ((E0->ini_exp_m_res || E0->res_exp_m_ini) && E1 <= MPA_RESPONDER)  
+  {
+  ...
+  }
+  ...
+- if (E0->minfo[E1].valid && number_of_markers(E0, E2, E1) > 0)  
++ if (E1 <= MPA_RESPONDER && E0->minfo[E1].valid && number_of_markers(E0, E2,  E1) > 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_7b254f_69901e_epan#dissectors#packet-iwarp-mpa.c,revFiles/7b254f_69901e_epan#dissectors#packet-iwarp-mpa.c}: dissect_iwarp_mpa)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

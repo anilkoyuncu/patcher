@@ -1,0 +1,9 @@
+@@
+@@
+- goto  dsu_fail; 
++ return NULL; 
+// Infered from: (cpython/{prevFiles/prev_19cb19_e807da8_Objects#listobject.c,revFiles/19cb19_e807da8_Objects#listobject.c}: listsort)
+// False positives: (cpython/revFiles/19cb19_e807da8_Objects#listobject.c: listsort)
+// Recall: 0.11, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

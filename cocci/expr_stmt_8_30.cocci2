@@ -1,0 +1,57 @@
+@@
+expression E1, E0, E2, E3, E4, E5, E6, E7, E8, E9;
+@@
+- if (E0 &&  E1 && E2 != IP_PROTO_HOPOPTS && E2 != IP_PROTO_NONE)  
++ if (E0 &&  E1 && E2 != IP_PROTO_HOPOPTS && E2 != IP_PROTO_NONE)  
+  {
+  ...
+- E3 = proto_tree_add_uint_format_value(E4, hf_ipv6_plen, E5,  E6 + IP6H_CTL_PLEN, 2, E7->ip6_plen,  "%u bytes (reported as 0, presumed to be because of \"TCP segmentation offload\" (TSO))",  E7->ip6_plen); 
+  ...
+  }
+- else
++ else
+  {
+  ...
+- if (E8 ==  E9 && E2 != IP_PROTO_HOPOPTS && E2 != IP_PROTO_NONE)  
++ if (E8 ==  E9 && E2 != IP_PROTO_HOPOPTS && E2 != IP_PROTO_NONE)  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_267d0a_8eddb1_epan#dissectors#packet-ipv6.c,revFiles/267d0a_8eddb1_epan#dissectors#packet-ipv6.c}: dissect_ipv6)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.17, Precision: 1.00
+// -- Node Change --
+// Recall: 0.07, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/18(0%)
+
+/*
+Functions where the patch applied partially:
+ - redis/prevFiles/prev_11182a_fc7ecd_src#redis-check-aof.c: redis_check_aof_main
+ - gstreamer/prevFiles/prev_ae56d7_7c4e05_gst#gstelement.c: gst_element_add_pad
+ - wireshark/prevFiles/prev_267d0a_8eddb1_epan#dissectors#packet-ipv6.c: dissect_ipv6
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_c2804e_239618_net#slirp.c: slirp_smb
+ - qemu/prevFiles/prev_bc47d2_72375c_vnc-auth-sasl.c: vnc_client_write_sasl
+ - ompi/prevFiles/prev_1cbce8_f02bf7_ompi#mca#mtl#mxm#mtl_mxm_component.c: ompi_mtl_mxm_component_register
+ - lighttpd1.4/prevFiles/prev_bfef09_8f3bbd_src#mod_openssl.c: network_init_ssl
+ - ompi/prevFiles/prev_f677ef_3d7b5b_ompi#debuggers#ompi_dll.c: opal_list_t_init_parser
+ - nginx/prevFiles/prev_d52c87_693bf6_src#os#unix#ngx_process.c: ngx_process_get_status
+ - cpython/prevFiles/prev_674a42_702a5d_Objects#memoryobject.c: memory_getbuf
+ - qemu/prevFiles/prev_178a0a_427ceb_net#slirp.c: net_slirp_init
+ - qemu/prevFiles/prev_91fc21_2c6cad_vl.c: help
+ - vlc/prevFiles/prev_a326db_5a9b77_modules#stream_filter#smooth#downloader.c: Download
+ - cpython/prevFiles/prev_674a42_702a5d_Objects#memoryobject.c: equiv_structure
+ - libarchive/prevFiles/prev_449b73_bd3ddc_libarchive#test#test_read_format_lha_filename_utf16.c: test_read_format_lha_filename_UTF16_UTF8
+ - cairo/prevFiles/prev_d87892_b56075_src#cairo-ps-surface.c: _cairo_ps_surface_emit_type3_font_subset
+*/
+
+// ---------------------------------------------

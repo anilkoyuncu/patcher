@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef BYTE;
+typedef bitset;
+@@
+- bitset I0 = PyObject_MALLOC(sizeof(BYTE ) * E1); 
++ bitset I0 = (char *)PyObject_MALLOC(sizeof(BYTE ) * E1); 
+// Infered from: (cpython/{prevFiles/prev_114900_319c47_Parser#bitset.c,revFiles/114900_319c47_Parser#bitset.c}: newbitset)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

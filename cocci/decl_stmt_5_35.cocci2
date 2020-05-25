@@ -1,0 +1,21 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef bool;
+@@
+- bool I0 = (0 == fribidi_reorder_line(0, &E1->p_types[E2], 1 + E3 - E2, 0,  E1->paragraph_type, &E1->p_levels[  E2], 0, &E1->pi_reordered_indices[  E2])); 
++ bool I0 = (0 != fribidi_reorder_line(0, &E1->p_types[E2], 1 + E3 - E2, 0,  E1->paragraph_type, &E1->p_levels[  E2], 0, &E1->pi_reordered_indices[  E2])); 
+// Infered from: (vlc/{prevFiles/prev_b50d5c_4e6bdb_modules#text_renderer#freetype#text_layout.c,revFiles/b50d5c_4e6bdb_modules#text_renderer#freetype#text_layout.c}: LayoutLine)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

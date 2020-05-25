@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- while (E0--)  
++ while (E0-- > 1)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_246-A-4758567-4758584.c,revFiles/246-A-4758567-4758584.c}: main)
+// False positives: (vlc/revFiles/113f18_cba23b_modules#demux#aiff.c: GetF80BE)
+// Recall: 0.15, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

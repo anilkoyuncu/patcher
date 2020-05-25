@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (int )PyLong_AsLong(E1); 
++ E0 = _PyLong_AsInt(E1); 
+// Infered from: (cpython/{prevFiles/prev_56f6e7_7827a5_Python#Python-ast.c,revFiles/56f6e7_7827a5_Python#Python-ast.c}: obj2ast_int)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

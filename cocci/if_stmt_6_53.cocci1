@@ -1,0 +1,24 @@
+@@
+type T1;
+expression E0, E2, E3;
+typedef uint64_t;
+@@
+- if (E0 <= ((T1 )E2->p_sys->skeleton.i_index_intvl * 1000) || E3 <= 0xFFFF)  
++ if (E0 <= ((uint64_t )E2->p_sys->skeleton.i_index_intvl * 1000) || E3 <= 0xFFFF)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_85f92c_aacb2a_modules#mux#ogg.c,revFiles/85f92c_aacb2a_modules#mux#ogg.c}: AddIndexEntry)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

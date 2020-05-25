@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return (ompi_evsel->del(ompi_evbase, E0)); 
++ rc = (ompi_evsel->del(ompi_evbase, E0)); 
+// Infered from: (ompi/{prevFiles/prev_5a97a8_7bd0f1_src#event#event.c,revFiles/5a97a8_7bd0f1_src#event#event.c}: ompi_event_del_i), (ompi/{prevFiles/prev_5a97a8_7bd0f1_src#event#event.c,revFiles/5a97a8_7bd0f1_src#event#event.c}: ompi_event_del_i)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

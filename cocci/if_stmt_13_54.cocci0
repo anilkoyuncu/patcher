@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (TYPE(CHILD(E0, 1)) == list_iter)  
++ if (NCH(E0) > 1 && TYPE(CHILD(E0, 1)) == list_iter)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_87df80_dcb45c_Python#compile.c,revFiles/87df80_dcb45c_Python#compile.c}: com_listmaker)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

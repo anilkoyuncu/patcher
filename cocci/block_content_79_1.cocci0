@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- g_value_set_pointer(E0, E1->md5); 
+// Infered from: (gstreamer/{prevFiles/prev_194424_1d9413_plugins#elements#gstmd5sink.c,revFiles/194424_1d9413_plugins#elements#gstmd5sink.c}: gst_md5sink_get_property), (gstreamer/{prevFiles/prev_194424_1d9413_gst#elements#gstmd5sink.c,revFiles/194424_1d9413_gst#elements#gstmd5sink.c}: gst_md5sink_get_property)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.14
+
+// ---------------------------------------------

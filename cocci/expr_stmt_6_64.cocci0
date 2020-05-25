@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->limit_zone_set = 1; 
++ E0->main->limit_zone_set = 1; 
+// Infered from: (nginx/{prevFiles/prev_fe9a06_36fefe_src#http#modules#ngx_http_limit_zone_module.c,revFiles/fe9a06_36fefe_src#http#modules#ngx_http_limit_zone_module.c}: ngx_http_limit_zone_handler)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

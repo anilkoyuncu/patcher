@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- xasprintf(&E0, "%4x,%s", layout_checksum(E1), E1); 
++ xasprintf(&E0, "%04x,%s", layout_checksum(E1), E1); 
+// Infered from: (tmux/{prevFiles/prev_e0961d_446fb0_layout-custom.c,revFiles/e0961d_446fb0_layout-custom.c}: layout_dump), (tmux/{prevFiles/prev_a060aa_2ac650_layout-custom.c,revFiles/a060aa_2ac650_layout-custom.c}: layout_dump)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - tmux/prevFiles/prev_a060aa_2ac650_layout-custom.c: layout_construct
+ - tmux/prevFiles/prev_e0961d_446fb0_layout-custom.c: layout_construct
+*/
+
+// ---------------------------------------------

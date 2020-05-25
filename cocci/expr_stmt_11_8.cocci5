@@ -1,0 +1,37 @@
+@@
+expression E0, E1;
+typedef gchar;
+@@
+- lua_pushstring(E0,  (gchar *)tvb_get_ephemeral_string(E1->tvb->ws_tvb, E1->offset,  E1->len)); 
++ lua_pushlstring(E0,  (gchar *)tvb_get_ephemeral_string(E1->tvb->ws_tvb,  E1->offset, E1->len),  E1->len); 
+// Infered from: (wireshark/{prevFiles/prev_b3d0f0_dfb3cd_epan#wslua#wslua_tvb.c,revFiles/b3d0f0_dfb3cd_epan#wslua#wslua_tvb.c}: TvbRange_string)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 0.60
+// -- Node Change --
+// Recall: 0.62, Precision: 0.60
+// -- General --
+// Functions fully changed: 9/21(42%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_02085c_b91f7f_epan#dissectors#packet-ieee802154.c: dissect_ieee802154_decrypt
+ - php-src/prevFiles/prev_382653_bc220a_Zend#zend_llist.c: zend_llist_remove_tail
+ - php-src/prevFiles/prev_382653_bc220a_Zend#zend_llist.c: zend_llist_del_element
+ - wireshark/prevFiles/prev_d749be_913272_epan#dissectors#file-rfc7468.c: dissect_rfc7468
+ - wireshark/prevFiles/prev_757744_c858bd_epan#dissectors#packet-6lowpan.c: dissect_6lowpan_mesh
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_5eceb0_f5ac5c_block#sheepdog.c: co_write_request
+ - redis/prevFiles/prev_40acb4_2e2fe9_src#geo.c: geoposCommand
+ - php-src/prevFiles/prev_2e3903_695579_win32#codepage.c: php_win32_cp_conv_ascii_to_w
+ - redis/prevFiles/prev_74d6af_052e03_src#t_zset.c: blockingGenericZpopCommand
+ - qemu/prevFiles/prev_5eceb0_f5ac5c_block#sheepdog.c: aio_read_response
+ - qemu/prevFiles/prev_5eceb0_f5ac5c_block#sheepdog.c: restart_co_req
+*/
+
+// ---------------------------------------------

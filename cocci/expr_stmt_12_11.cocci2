@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef uint8_t;
+@@
+- E0->c.bytestream_end = E1 + E2; 
++ E0->c.bytestream_end = (uint8_t *)(E1 + E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_cb40d3_236ecc_libavcodec#ffv1.c,revFiles/cb40d3_236ecc_libavcodec#ffv1.c}: decode_frame)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

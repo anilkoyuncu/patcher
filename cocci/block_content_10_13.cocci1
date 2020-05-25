@@ -1,0 +1,8 @@
+@@
+@@
+- vm_stop(RUN_STATE_WATCHDOG); 
++ qemu_system_vmstop_request(RUN_STATE_WATCHDOG); 
+// Infered from: (qemu/{prevFiles/prev_30e521_f7f152_hw#watchdog#watchdog.c,revFiles/30e521_f7f152_hw#watchdog#watchdog.c}: watchdog_perform_action)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

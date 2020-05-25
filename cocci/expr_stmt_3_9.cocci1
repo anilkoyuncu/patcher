@@ -1,0 +1,8 @@
+@@
+@@
+- tmp = (team == 'y'); 
++ tmp = (team == 'a'); 
+// Infered from: (codeflaws/{prevFiles/prev_493-A-10851567-10851582.c,revFiles/493-A-10851567-10851582.c}: main)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

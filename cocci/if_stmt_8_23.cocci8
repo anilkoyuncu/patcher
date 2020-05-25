@@ -1,0 +1,36 @@
+@@
+expression E0, E1;
+@@
+- if (E0->procedure_hfs->len > E1)  
++ if (E0 && (E0->procedure_hfs->len > E1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_6cdabc_2872f8_epan#dissectors#packet-rpc.c,revFiles/6cdabc_2872f8_epan#dissectors#packet-rpc.c}: dissect_rpc_message)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.89, Precision: 0.80
+// -- Node Change --
+// Recall: 0.90, Precision: 0.82
+// -- General --
+// Functions fully changed: 8/11(72%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_359-A-9156471-9156476.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_6d1495_53185e_opal#mca#hwloc#base#hwloc_base_util.c: socket_core_to_cpu_set
+ - FFmpeg/prevFiles/prev_afdd82_8d6625b_libavformat#utils.c: av_close_input_file
+*/
+
+// ---------------------------------------------

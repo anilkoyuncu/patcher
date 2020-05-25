@@ -1,0 +1,9 @@
+@@
+expression E3, E0, E1, E2, E4;
+@@
+- playlist_AddExt(E0, E1[E2], E1[E2], E3, PLAYLIST_END, -1,  (const  char **)(E4 ? &E1[E2 + 1] :NULL), E4); 
++ playlist_PlaylistAddExt(E0, E1[E2], E1[E2], E3, PLAYLIST_END, -1,  (const  char **)(E4 ? &E1[E2 + 1] :NULL), E4); 
+// Infered from: (vlc/{prevFiles/prev_e148a4_1e0b16_src#misc#win32_specific.c,revFiles/e148a4_1e0b16_src#misc#win32_specific.c}: WMCOPYWNDPROC), (vlc/{prevFiles/prev_e148a4_1e0b16_src#misc#win32_specific.c,revFiles/e148a4_1e0b16_src#misc#win32_specific.c}: WMCOPYWNDPROC)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

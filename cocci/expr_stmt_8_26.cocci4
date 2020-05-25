@@ -1,0 +1,8 @@
+@@
+@@
+- mtp3_stat_draw(NULL); 
++ mtp3_stat_draw(&mtp3_stat); 
+// Infered from: (wireshark/{prevFiles/prev_be2148_c833b6_gtk#mtp3_stat.c,revFiles/be2148_c833b6_gtk#mtp3_stat.c}: mtp3_stat_gtk_cb)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

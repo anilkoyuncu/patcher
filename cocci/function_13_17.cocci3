@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- sscanf(E0, "%i", &E1); 
++ if (sscanf(E0, "%i", &E1) != 1)  
++ {
++ return NULL; 
++ }
+// Infered from: (ompi/{prevFiles/prev_7f8570_92bc8a_opal#mca#common#verbs#common_verbs_fake.c,revFiles/7f8570_92bc8a_opal#mca#common#verbs#common_verbs_fake.c}: fake_driver_init)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

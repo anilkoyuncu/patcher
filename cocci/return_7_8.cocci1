@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return request_irq(E0->pdev->irq, &atl2_intr, E1, E2->name, E2); 
++ return request_irq(E0->pdev->irq, atl2_intr, E1, E2->name, E2); 
+// Infered from: (linux/{prevFiles/prev_a0607f_2939e27_drivers#net#atlx#atl2.c,revFiles/a0607f_2939e27_drivers#net#atlx#atl2.c}: atl2_request_irq)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!isnan(E0) && fabs(E0) < AV_NOSYNC_THRESHOLD && !isnan(E1) && E1 > 0 && E1 < AV_NOSYNC_THRESHOLD && E0 + E1 - E2->frame_last_filter_delay < 0)  
++ if (!isnan(E0) && fabs(E0) < AV_NOSYNC_THRESHOLD && !isnan(E1) && E1 > 0 && E1 < AV_NOSYNC_THRESHOLD && E0 + E1 - E2->frame_last_filter_delay < 0 && E2->videoq.nb_packets)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b8facb_d14833_ffplay.c,revFiles/b8facb_d14833_ffplay.c}: get_video_frame)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

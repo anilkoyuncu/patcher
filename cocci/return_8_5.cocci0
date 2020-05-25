@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return avio_open(E0, E1, E2); 
++ return avio_open(E0, E1, E2 + 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_183401_90bcbc_libavformat#aviobuf.c,revFiles/183401_90bcbc_libavformat#aviobuf.c}: url_fopen)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- assert(E0->ref.count < E0.capacity); 
++ assert(E0->ref.count < E0->capacity); 
+// Infered from: (cpython/{prevFiles/prev_4c5be0_b1da05_Objects#obmalloc.c,revFiles/4c5be0_b1da05_Objects#obmalloc.c}: _PyMalloc_Free)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.70, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_4faa0e_13fd96_capture_sync.c: sync_pipe_do_capture
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_e785ef_83657f_libavformat#ffmdec.c: ffm_read_packet
+*/
+
+// ---------------------------------------------

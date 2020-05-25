@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (CONFIG_XVMC && E0->pack_pblocks)  
++ if ((CONFIG_MPEG1_XVMC_HWACCEL || CONFIG_MPEG2_XVMC_HWACCEL) && E0->pack_pblocks)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_c89262_4014b4_libavcodec#mpeg12dec.c,revFiles/c89262_4014b4_libavcodec#mpeg12dec.c}: mpeg_decode_mb), (FFmpeg/{prevFiles/prev_c89262_4014b4_libavcodec#mpeg12dec.c,revFiles/c89262_4014b4_libavcodec#mpeg12dec.c}: mpeg_decode_mb), (FFmpeg/{prevFiles/prev_c89262_4014b4_libavcodec#mpeg12dec.c,revFiles/c89262_4014b4_libavcodec#mpeg12dec.c}: mpeg_decode_slice)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

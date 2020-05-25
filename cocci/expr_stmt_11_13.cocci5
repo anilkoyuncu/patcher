@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- OBD_ALLOC(E0, E1->ioc_plen1); 
++ E0 = kzalloc(E1->ioc_plen1, GFP_NOFS); 
+  ...
+- OBD_FREE(E0, E1->ioc_plen1); 
++ kfree(E0); 
+// Infered from: (linux/{prevFiles/prev_d72790_c9b429_drivers#staging#lustre#lustre#obdclass#class_obd.c,revFiles/d72790_c9b429_drivers#staging#lustre#lustre#obdclass#class_obd.c}: class_handle_ioctl)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

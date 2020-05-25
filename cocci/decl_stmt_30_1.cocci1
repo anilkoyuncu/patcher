@@ -1,0 +1,30 @@
+@@
+expression E0, E1;
+@@
+- build_append_nameseg(E0, E1); 
++ build_append_nameseg(E0, "%s", E1); 
+// Infered from: (qemu/{prevFiles/prev_867d89_b2e239_hw#i386#acpi-build.c,revFiles/867d89_b2e239_hw#i386#acpi-build.c}: build_append_notify)
+// False positives: (qemu/revFiles/867d89_b2e239_hw#i386#acpi-build.c: build_ssdt)
+// Recall: 0.29, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 0.67
+// -- Node Change --
+// Recall: 0.57, Precision: 0.40
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_a77cff_191c28_block#blkverify.c: blkverify_err
+ - qemu/prevFiles/prev_52aa56_429cc0_io#channel-websock.c: qio_channel_websock_handshake_send_res
+ - qemu/prevFiles/prev_867d89_b2e239_hw#i386#acpi-build.c: build_append_nameseg
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_867d89_b2e239_hw#i386#acpi-build.c: build_ssdt
+*/
+
+// ---------------------------------------------

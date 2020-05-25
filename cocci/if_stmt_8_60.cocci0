@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > E1 + 1)  
++ if (E0 + 1 > E1)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_63ff89_ddc1caa_ssl#t1_trce.c,revFiles/63ff89_ddc1caa_ssl#t1_trce.c}: ssl_print_extension)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

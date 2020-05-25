@@ -1,0 +1,18 @@
+@@
+expression E0;
+@@
+- if (!E0)  
++ if (E0 == NULL)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_e38565_625146_crypto#async#arch#async_win.c,revFiles/e38565_625146_crypto#async#arch#async_win.c}: async_fibre_init_dispatcher)
+// False positives: (curl/revFiles/1ab6c3_5162cb_lib#ssh.c: ssh_block2waitfor), (openssl/revFiles/cc99bf_e44380_crypto#bio#bio_lib.c: BIO_find_type)
+// Recall: 0.05, Precision: 0.33, Matching recall: 0.50
+
+// ---------------------------------------------

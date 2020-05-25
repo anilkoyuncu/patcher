@@ -1,0 +1,39 @@
+@@
+expression E0;
+@@
+- if (E0->current_picture_ptr->pts)  
++ if (E0->current_picture_ptr->pts && E0->reordered_input_picture[1])  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_a62d75_fb85b0_libavcodec#h263.c,revFiles/a62d75_fb85b0_libavcodec#h263.c}: mpeg4_encode_gop_header)
+// False positives: (FFmpeg/revFiles/a62d75_fb85b0_libavcodec#h263.c: ff_set_mpeg4_time)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.40
+// -- Node Change --
+// Recall: 0.67, Precision: 0.33
+// -- General --
+// Functions fully changed: 1/6(16%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_89afa6_aef5c0_libswscale#swscale.c: sws_scale
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_a62d75_fb85b0_libavcodec#h263.c: ff_set_mpeg4_time
+ - FFmpeg/prevFiles/prev_2d3601_0bae10_libavcodec#mpegvideo.c: encode_thread
+ - FFmpeg/prevFiles/prev_a62d75_fb85b0_libavcodec#h263.c: ff_h263_decode_mb
+ - FFmpeg/prevFiles/prev_a62d75_fb85b0_libavcodec#h263.c: ff_mpeg4_decode_mb
+*/
+
+// ---------------------------------------------

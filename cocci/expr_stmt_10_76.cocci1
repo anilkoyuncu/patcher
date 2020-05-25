@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2;
+@@
+- cairo_set_source_surface(E0, E1, E2.x, E2.y); 
++ cairo_set_source_surface(E0, E1, -E2.x, -E2.y); 
+// Infered from: (gtk/{prevFiles/prev_7203b7_c6e58f_gdk#gdkcairo.c,revFiles/7203b7_c6e58f_gdk#gdkcairo.c}: gdk_cairo_region_create_from_surface)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 0.75
+// -- Node Change --
+// Recall: 0.75, Precision: 0.60
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_029c7a_f151f9_src#input#decoder.c: DecoderFixTs
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_748dcd_db4ee9_src#cairo-gl-spans-compositor.c: composite_boxes
+*/
+
+// ---------------------------------------------

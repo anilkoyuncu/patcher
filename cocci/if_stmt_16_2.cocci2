@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef bool;
+@@
+- if ((*E0 & MS_RDONLY) != (E1->s_flags & MS_RDONLY))  
++ if ((bool )(*E0 & MS_RDONLY) != sb_rdonly(E1))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_bc98a4_94e92e_drivers#staging#lustre#lustre#llite#llite_lib.c,revFiles/bc98a4_94e92e_drivers#staging#lustre#lustre#llite#llite_lib.c}: ll_remount_fs)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

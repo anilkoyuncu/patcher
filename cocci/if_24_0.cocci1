@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- if (!ldap_is_ldap_url(E0))  
++ if (E0 && !ldap_is_ldap_url(E0))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_747e93_65edf4_ext#ldap#ldap.c,revFiles/747e93_65edf4_ext#ldap#ldap.c}: PHP_FUNCTION)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_747e93_65edf4_ext#ldap#ldap.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

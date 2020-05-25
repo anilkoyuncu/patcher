@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0.repeat_pict = E1->i_nb_fields; 
++ E0.repeat_pict = 2 - E1->i_nb_fields; 
+// Infered from: (vlc/{prevFiles/prev_ab36db_95b4fb_modules#codec#ffmpeg#encoder.c,revFiles/ab36db_95b4fb_modules#codec#ffmpeg#encoder.c}: EncodeVideo)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

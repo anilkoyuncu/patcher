@@ -1,0 +1,8 @@
+@@
+expression E0, E2, E3, E1;
+@@
+- E0 = ts_allocate_id (E1, E2, E3); 
+// Infered from: (php-src/{prevFiles/prev_4a60ee_941757_ext#standard#fsock.c,revFiles/4a60ee_941757_ext#standard#fsock.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

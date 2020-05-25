@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- php_info_print_table_row(2, E0, E1.s->val); 
++ php_info_print_table_row(2, E0, E1.s ? E1.s->val :""); 
+// Infered from: (php-src/{prevFiles/prev_d660d7_9c96d9_ext#mysqlnd#php_mysqlnd.c,revFiles/d660d7_9c96d9_ext#mysqlnd#php_mysqlnd.c}: PHP_MINFO_FUNCTION), (php-src/{prevFiles/prev_d660d7_9c96d9_ext#mysqlnd#php_mysqlnd.c,revFiles/d660d7_9c96d9_ext#mysqlnd#php_mysqlnd.c}: PHP_MINFO_FUNCTION)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

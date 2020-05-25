@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- sdl2_window_destroy (E0); 
++ sdl2_window_resize(E0); 
+// Infered from: (qemu/{prevFiles/prev_64bf97_656282_ui#sdl2.c,revFiles/64bf97_656282_ui#sdl2.c}: handle_keydown)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

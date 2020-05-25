@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!FIELD_PICTURE && E0->current_slice)  
++ if (!FIELD_PICTURE && E0->current_slice && !E0->sps.new)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_695af8_0e9b9a_libavcodec#h264.c,revFiles/695af8_0e9b9a_libavcodec#h264.c}: field_end)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

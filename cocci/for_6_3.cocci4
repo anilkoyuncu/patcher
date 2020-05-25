@@ -1,0 +1,28 @@
+@@
+identifier I0;
+expression E1;
+typedef uint32_t;
+@@
+- for(uint32_t I0 = E1.stepwise.min_height;I0 <= E1.stepwise.max_width;I0 += E1.stepwise.step_height)  
++ for(uint32_t I0 = E1.stepwise.min_height;I0 <= E1.stepwise.max_height;I0 += E1.stepwise.step_height)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_4372fe_055b36_modules#access#v4l2#video.c,revFiles/4372fe_055b36_modules#access#v4l2#video.c}: SetupFormat)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.83
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_6c82c8_a1c5cc_libavcodec#ac3dec.c: ac3_decode_frame
+*/
+
+// ---------------------------------------------

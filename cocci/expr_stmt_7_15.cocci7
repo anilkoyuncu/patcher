@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gtk_box_pack_start(GTK_BOX(E0), E1, TRUE, FALSE, 0); 
++ gtk_box_pack_start(GTK_BOX(E0), E1, TRUE, FALSE); 
+// Infered from: (gtk/{prevFiles/prev_2fed74_8644e5_tests#testlist3.c,revFiles/2fed74_8644e5_tests#testlist3.c}: create_row)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

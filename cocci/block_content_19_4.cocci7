@@ -1,0 +1,9 @@
+@@
+@@
+- g_log(LOG_DOMAIN_CAPTURE, G_LOG_LEVEL_MESSAGE,  "Capture Interface List failed!"); 
++ g_log(LOG_DOMAIN_CAPTURE, G_LOG_LEVEL_MESSAGE,  "Capture Linktype List failed!"); 
+// Infered from: (wireshark/{prevFiles/prev_7871c5_ae2b55_capture.c,revFiles/7871c5_ae2b55_capture.c}: capture_pcap_linktype_list)
+// False positives: (wireshark/revFiles/7871c5_ae2b55_capture.c: capture_interface_list)
+// Recall: 0.05, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

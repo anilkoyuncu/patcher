@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 |= sector2CHS(E1->bs, &E2->end_CHS, E1->sector_count); 
++ E0 |= sector2CHS(E1->bs, &E2->end_CHS, E1->bs->total_sectors - 1); 
+// Infered from: (qemu/{prevFiles/prev_f91cbe_61a8d6_block#vvfat.c,revFiles/f91cbe_61a8d6_block#vvfat.c}: init_mbr)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.56, Precision: 1.00
+// -- Node Change --
+// Recall: 0.46, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/9(55%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_be822e_077bf9_libavfilter#vf_remap.c: config_output
+ - vlc/prevFiles/prev_746576_39cbca_src#video_output#vout_subpictures.c: subpicture_region_New
+ - FFmpeg/prevFiles/prev_077bf9_8788dd67_libavfilter#vf_displace.c: config_output
+ - qemu/prevFiles/prev_bc5baf_2e6e69_hw#vfio#pci.c: vfio_msi_interrupt
+*/
+
+// ---------------------------------------------

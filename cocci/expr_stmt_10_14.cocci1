@@ -1,0 +1,14 @@
+@@
+expression E0;
+typedef GstMetaCopyFunction;
+typedef GstMetaFreeFunction;
+typedef GstMetaInitFunction;
+typedef GstMetaTest;
+typedef GstMetaTransformFunction;
+@@
+- E0 = gst_meta_register("GstMetaTest", "GstMetaTest", sizeof(GstMetaTest ),  (GstMetaInitFunction )test_init_func,  (GstMetaFreeFunction )test_free_func,  (GstMetaCopyFunction )test_copy_func,  (GstMetaTransformFunction )NULL, NULL, NULL); 
++ E0 = gst_meta_register("GstMetaTest", "GstMetaTest", sizeof(GstMetaTest ),  (GstMetaInitFunction )test_init_func,  (GstMetaFreeFunction )test_free_func,  (GstMetaCopyFunction )test_copy_func,  (GstMetaTransformFunction )NULL); 
+// Infered from: (gstreamer/{prevFiles/prev_54fd06_9339a5_tests#check#gst#gstmeta.c,revFiles/54fd06_9339a5_tests#check#gst#gstmeta.c}: gst_meta_test_get_info)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef gchar;
+@@
+- g_io_channel_write_chars(E0, E1, E2, &E3, &E4); 
++ g_io_channel_write_chars(E0, (const  gchar *)E1, E2, &E3, &E4); 
+// Infered from: (gtk/{prevFiles/prev_ef414c_c7a5dd_modules#printbackends#lpr#gtkprintbackendlpr.c,revFiles/ef414c_c7a5dd_modules#printbackends#lpr#gtkprintbackendlpr.c}: _cairo_write)
+// False positives: (gtk/revFiles/ef414c_c7a5dd_modules#printbackends#lpr#gtkprintbackendlpr.c: lpr_write)
+// Recall: 0.06, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

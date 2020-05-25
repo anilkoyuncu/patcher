@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef bool;
+@@
+- bool I0 = S_ISDIR(E1->d_inode->i_mode); 
++ bool I0 = d_is_dir(E1); 
+// Infered from: (linux/{prevFiles/prev_e36cb0_2c616d_fs#overlayfs#dir.c,revFiles/e36cb0_2c616d_fs#overlayfs#dir.c}: ovl_rename2)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

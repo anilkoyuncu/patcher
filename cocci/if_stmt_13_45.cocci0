@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->sx != E1 || E0->sy != E2)  
++ if (E0->type != LAYOUT_WINDOWPANE && (E0->sx != E1 || E0->sy != E2))  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_b2fd16_bbcb19_layout-custom.c,revFiles/b2fd16_bbcb19_layout-custom.c}: layout_parse), (tmux/{prevFiles/prev_2cb268_9fd62e_layout-custom.c,revFiles/2cb268_9fd62e_layout-custom.c}: layout_parse)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

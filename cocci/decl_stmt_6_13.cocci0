@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef guint8;
+@@
+- guint8 I0 = E1 & 0x08 >> 3; 
++ guint8 I0 = (E1 & 0x08) >> 3; 
+// Infered from: (wireshark/{prevFiles/prev_1ee7c1_b78de0_epan#dissectors#packet-wsmp.c,revFiles/1ee7c1_b78de0_epan#dissectors#packet-wsmp.c}: dissect_wsmp_v3)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- printf("%lf\n", E0); 
++ printf("%d\n", (int )E0); 
+// Infered from: (codeflaws/{prevFiles/prev_224-A-14803698-14803709.c,revFiles/224-A-14803698-14803709.c}: main)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.87, Precision: 1.00
+// -- Node Change --
+// Recall: 0.81, Precision: 1.00
+// -- General --
+// Functions fully changed: 12/15(80%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_e08511_777b17_epan#dissectors#packet-ieee80211.c: ieee80211_tag_power_capability
+*/
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_b74d77_0dbbbc_builtin-merge-recursive.c: cmd_merge_recursive
+ - cpython/prevFiles/prev_20dd93_a361bd_Python#getargs.c: vgetargs1
+*/
+
+// ---------------------------------------------

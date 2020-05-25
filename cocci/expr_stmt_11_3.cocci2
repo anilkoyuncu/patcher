@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = memrchr(E1, '/', E2 - E1); 
++ E0 = memrchr(E1, '/', (size_t )(E2 - E1)); 
+// Infered from: (curl/{prevFiles/prev_5b11e3_7d22ce_lib#cookie.c,revFiles/5b11e3_7d22ce_lib#cookie.c}: Curl_cookie_add)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

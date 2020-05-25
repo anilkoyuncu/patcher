@@ -1,0 +1,11 @@
+@@
+identifier I3;
+expression E4, E0, E1, E2;
+typedef gint;
+@@
+- prefs_register_enum_preference(E0, E1, E2,  "If RRC Security Info not seen, e.g. in Handover",  &(gint )I3, E4, FALSE); 
++ prefs_register_enum_preference(E0, E1, E2,  "If RRC Security Info not seen, e.g. in Handover",  (gint *)&I3, E4, FALSE); 
+// Infered from: (wireshark/{prevFiles/prev_560762_f8f323_epan#dissectors#packet-pdcp-lte.c,revFiles/560762_f8f323_epan#dissectors#packet-pdcp-lte.c}: proto_register_pdcp), (wireshark/{prevFiles/prev_560762_f8f323_epan#dissectors#packet-pdcp-lte.c,revFiles/560762_f8f323_epan#dissectors#packet-pdcp-lte.c}: proto_register_pdcp)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

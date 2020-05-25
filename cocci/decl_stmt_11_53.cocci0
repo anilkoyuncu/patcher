@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef bool;
+@@
+- const  bool I0 = AOUT_FMT_LINEAR(&E1->format); 
++ const  bool I0 = !AOUT_FMT_LINEAR(&E1->format); 
+// Infered from: (vlc/{prevFiles/prev_4b7f56_34bc07_src#audio_output#output.c,revFiles/4b7f56_34bc07_src#audio_output#output.c}: aout_PacketNext)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

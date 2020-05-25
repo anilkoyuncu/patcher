@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = memdup_user((const  void *)E1, E2); 
++ E0 = memdup_user(E1, E2); 
+// Infered from: (linux/{prevFiles/prev_028b24_505942_drivers#staging#media#lirc#lirc_sasem.c,revFiles/028b24_505942_drivers#staging#media#lirc#lirc_sasem.c}: vfd_write)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

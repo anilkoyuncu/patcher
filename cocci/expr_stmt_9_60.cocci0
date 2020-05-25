@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- av_assert0(E0 != (E1 == yuv2planeX_10BE_c || E1 == yuv2planeX_10LE_c || E1 == yuv2planeX_9BE_c || E1 == yuv2planeX_9LE_c || E1 == yuv2planeX_16BE_c || E1 == yuv2planeX_16LE_c || E1 == yuv2planeX_8_c)); 
++ av_assert0(E0 != (E1 == yuv2planeX_10BE_c || E1 == yuv2planeX_10LE_c || E1 == yuv2planeX_9BE_c || E1 == yuv2planeX_9LE_c || E1 == yuv2planeX_16BE_c || E1 == yuv2planeX_16LE_c || E1 == yuv2planeX_8_c) || !ARCH_X86); 
+// Infered from: (FFmpeg/{prevFiles/prev_90640c_8b4b2d_libswscale#swscale.c,revFiles/90640c_8b4b2d_libswscale#swscale.c}: swScale)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

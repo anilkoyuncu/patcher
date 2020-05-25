@@ -1,0 +1,30 @@
+@@
+identifier I0;
+typedef zval;
+@@
+- zval *I0; 
+- if (zend_parse_parameters() == FAILURE)  
++ zval **I0; 
++ if (zend_parse_parameters() == FAILURE)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_a26c94_19b2e9_ext#mbstring#mbstring.c,revFiles/a26c94_19b2e9_ext#mbstring#mbstring.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_dc7aa2a_c6f699_ext#mbstring#mbstring.c,revFiles/dc7aa2a_c6f699_ext#mbstring#mbstring.c}: PHP_FUNCTION)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.12
+
+// ---------------------------------------------
+// Final metrics (for the combined 1 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.12, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_a26c94_19b2e9_ext#mbstring#mbstring.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_dc7aa2a_c6f699_ext#mbstring#mbstring.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

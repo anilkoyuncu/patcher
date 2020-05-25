@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- av_log(E0->avctx, AV_LOG_DEBUG, "%s %s p:%d >>:%d ilv:%d bits:%d %s\n",  E0->lossless ? "lossless" :"sequencial DCT", E0->rgb ? "RGB" :"", E1,  E2, E3, E0->bits, E0->pegasus_rct ? "PRCT" :(E0->rct ? "RCT" :"")); 
++ av_log(E0->avctx, AV_LOG_DEBUG, "%s %s p:%d >>:%d ilv:%d bits:%d %s\n",  E0->lossless ? "lossless" :"sequential DCT", E0->rgb ? "RGB" :"", E1,  E2, E3, E0->bits, E0->pegasus_rct ? "PRCT" :(E0->rct ? "RCT" :"")); 
+// Infered from: (FFmpeg/{prevFiles/prev_e8a9d0_97d5fa_libavcodec#mjpegdec.c,revFiles/e8a9d0_97d5fa_libavcodec#mjpegdec.c}: ff_mjpeg_decode_sos)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_d63d72_02aebb_trigcap.c: main
+ - wireshark/prevFiles/prev_d63d72_02aebb_trigcap.c: usage
+*/
+
+// ---------------------------------------------

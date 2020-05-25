@@ -1,0 +1,11 @@
+@@
+assignment operator A1;
+expression E0, E2;
+@@
+- E0 A1 (1 << E2); 
++ E0 A1 BIT(E2); 
+// Infered from: (linux/{prevFiles/prev_557e361_9a3aeb_drivers#staging#comedi#drivers#ni_mio_common.c,revFiles/557e361_9a3aeb_drivers#staging#comedi#drivers#ni_mio_common.c}: cs5529_do_conversion), (linux/{prevFiles/prev_12eed2_4f8f316_drivers#staging#fbtft#fb_ili9163.c,revFiles/12eed2_4f8f316_drivers#staging#fbtft#fb_ili9163.c}: set_var)
+// False positives: (linux/revFiles/557e361_9a3aeb_drivers#staging#comedi#drivers#ni_mio_common.c: ni_ao_cmd_set_channels)
+// Recall: 0.18, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

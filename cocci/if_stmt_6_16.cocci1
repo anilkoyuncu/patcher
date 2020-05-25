@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = ffv1_common_init(E1)) < E0)  
++ if ((E0 = ffv1_common_init(E1)) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_9a2153_b8a233_libavcodec#ffv1enc.c,revFiles/9a2153_b8a233_libavcodec#ffv1enc.c}: encode_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

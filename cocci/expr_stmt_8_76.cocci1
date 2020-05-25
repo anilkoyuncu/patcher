@@ -1,0 +1,29 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- int I0; 
+  ...
+- I0 = hash_obj(E1->base, E2); 
+- E3[I0] = E1; 
++ insert_ref_hash(E1, E3, E2); 
+// Infered from: (git/{prevFiles/prev_5fdc84_86f660_object-refs.c,revFiles/5fdc84_86f660_object-refs.c}: grow_refs_hash)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.29, Precision: 1.00
+// -- Node Change --
+// Recall: 0.26, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/7(28%)
+
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_5fdc84_86f660_object-refs.c: insert_ref_hash
+ - wireshark/prevFiles/prev_2ebdf9_9417a7_epan#dissectors#packet-ltp.c: dissect_ltp
+ - wireshark/prevFiles/prev_2ebdf9_9417a7_epan#dissectors#packet-ltp.c: dissect_report_segment
+*/
+
+// ---------------------------------------------

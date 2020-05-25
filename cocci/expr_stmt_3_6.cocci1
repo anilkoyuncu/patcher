@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->rhsalias = (char **)&(E0->rhs[E1->nrhs]); 
++ E0->rhsalias = (const  char **)&(E0->rhs[E1->nrhs]); 
+// Infered from: (wireshark/{prevFiles/prev_0b8d70_0e67f0_tools#lemon#lemon.c,revFiles/0b8d70_0e67f0_tools#lemon#lemon.c}: parseonetoken)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

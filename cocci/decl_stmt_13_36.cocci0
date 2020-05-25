@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef clusterManagerNode;
+@@
+- clusterManagerNode **I0 = zmalloc(E1 * sizeof(**I0)); 
++ clusterManagerNode **I0 = zmalloc(E1 * sizeof(*I0)); 
+// Infered from: (redis/{prevFiles/prev_4e74d9_6ba507_src#redis-cli.c,revFiles/4e74d9_6ba507_src#redis-cli.c}: clusterManagerComputeReshardTable)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

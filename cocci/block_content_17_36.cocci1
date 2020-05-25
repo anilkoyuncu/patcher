@@ -1,0 +1,30 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef CLPI_CL;
+@@
+- const  CLPI_CL *I0 = bd_get_clpi(E1->bluray, E2); 
++ CLPI_CL *I0 = bd_get_clpi(E1->bluray, E2); 
+// Infered from: (vlc/{prevFiles/prev_ec0529_d9dabc_modules#access#bluray.c,revFiles/ec0529_d9dabc_modules#access#bluray.c}: blurayOnClipUpdate)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 0.67, Precision: 0.67
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_fd2014_c8a571_builtin#help.c: cmd_help
+ - vlc/prevFiles/prev_ec0529_d9dabc_modules#access#bluray.c: blurayOnClipUpdate
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_fd2014_c8a571_builtin#help.c: 
+*/
+
+// ---------------------------------------------

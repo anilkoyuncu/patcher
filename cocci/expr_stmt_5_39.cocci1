@@ -1,0 +1,45 @@
+@@
+expression E0, E1;
+typedef bool;
+@@
+- E0->i_selected_dev = E0->i_new_selected_dev; 
++ bool do_spdif; 
++ if (AOUT_FMT_SPDIF(E1))  
++ {
++ if (!(E0->i_new_selected_dev & AOUT_VAR_SPDIF_FLAG))  
++ {
++ vlc_mutex_unlock(&E0->selected_device_lock); 
++ return VLC_EGENERIC; 
++ }
++ do_spdif = true; 
++ }
++ else
++ {
++ do_spdif = false; 
++ }
++ E0->i_selected_dev = E0->i_new_selected_dev & ~AOUT_VAR_SPDIF_FLAG; 
+  ...
+- if (AOUT_FMT_SPDIF(E1))  
++ if (do_spdif)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_733612_796689_modules#audio_output#auhal.c,revFiles/733612_796689_modules#audio_output#auhal.c}: Start)
+// Recall: 0.71, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

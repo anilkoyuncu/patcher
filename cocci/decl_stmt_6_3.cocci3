@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef dbus_bool_t;
+@@
+- dbus_bool_t I0 = playlist_CurrentSize(E1); 
++ dbus_bool_t I0 = playlist_CurrentSize(E1) > 0; 
+// Infered from: (vlc/{prevFiles/prev_2e1a59_e2942a_modules#control#dbus#dbus_player.c,revFiles/2e1a59_e2942a_modules#control#dbus#dbus_player.c}: MarshalCanPlay)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

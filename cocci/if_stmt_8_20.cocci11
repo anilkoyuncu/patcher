@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->width != E1->width || E0->width != E1->width)  
++ if (E0->width != E1->width || E0->height != E1->height)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_b1aa608_53e5ab_drivers#media#video#s5p-fimc#fimc-capture.c,revFiles/b1aa608_53e5ab_drivers#media#video#s5p-fimc#fimc-capture.c}: fimc_pipeline_try_format), (linux/{prevFiles/prev_b1aa608_53e5ab_drivers#media#video#s5p-fimc#fimc-capture.c,revFiles/b1aa608_53e5ab_drivers#media#video#s5p-fimc#fimc-capture.c}: fimc_pipeline_try_format)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

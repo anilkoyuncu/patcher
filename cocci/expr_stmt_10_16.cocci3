@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (pthread_cond_timedwait(&E0.cond.cond, &E0.lock.mutex, &E1))  
++ if (pthread_cond_timedwait(&E0.cond, &E0.lock, &E1))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_8955d6_50ce52_modules#audio_output#auhal.c,revFiles/8955d6_50ce52_modules#audio_output#auhal.c}: AudioStreamChangeFormat)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

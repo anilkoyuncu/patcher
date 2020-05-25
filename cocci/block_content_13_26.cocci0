@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return (E0->i_samples * CLOCK_FREQ) / E1 + 1; 
++ return (E0->i_samples * CLOCK_FREQ) / E1 + VLC_TS_0; 
+// Infered from: (vlc/{prevFiles/prev_66779d_c30434f_modules#demux#caf.c,revFiles/66779d_c30434f_modules#demux#caf.c}: FrameSpanGetTime)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef uint8_t;
+@@
+- E0 = av_image_copy_to_buffer(E1 + HEADER_SIZE, E2->size - HEADER_SIZE,  E3->data, E3->linesize, E4->pix_fmt, E4->width,  E4->height, 1); 
++ E0 = av_image_copy_to_buffer(E1 + HEADER_SIZE, E2->size - HEADER_SIZE,  (const  uint8_t **)E3->data, E3->linesize,  E4->pix_fmt, E4->width, E4->height, 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_e06ef9_daabc5_libavcodec#dpxenc.c,revFiles/e06ef9_daabc5_libavcodec#dpxenc.c}: encode_frame)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

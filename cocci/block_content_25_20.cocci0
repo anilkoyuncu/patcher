@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dbg(10, "\n %s #%u\n", val_to_str(E0, camelSRTtype_naming, "Unk"),  E1->fd->num); 
++ dbg(10, "\n %s #%u\n", val_to_str_const(E0, camelSRTtype_naming, "Unk"),  E1->fd->num); 
+// Infered from: (wireshark/{prevFiles/prev_c5a71b_a3fca2_epan#camel-persistentdata.c,revFiles/c5a71b_a3fca2_epan#camel-persistentdata.c}: camelsrt_request_call_matching), (wireshark/{prevFiles/prev_c5a71b_a3fca2_epan#camel-persistentdata.c,revFiles/c5a71b_a3fca2_epan#camel-persistentdata.c}: camelsrt_report_call_matching)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

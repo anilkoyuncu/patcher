@@ -1,0 +1,20 @@
+@@
+type T2;
+expression E0, E1, E3, E4;
+@@
+- E0 = x25_asy_esc(E1, (T2 *)E3->xbuff, E4); 
++ E0 = x25_asy_esc(E1, E3->xbuff, E4); 
+// Infered from: (linux/{prevFiles/prev_c2fd03_2c20889_drivers#net#wan#x25_asy.c,revFiles/c2fd03_2c20889_drivers#net#wan#x25_asy.c}: x25_asy_encaps)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

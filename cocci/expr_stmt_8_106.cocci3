@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0[3] = (MAGIC >> 16) & 0xff; 
++ E0[2] = (MAGIC >> 16) & 0xff; 
+// Infered from: (cpython/{prevFiles/prev_90f0e0_42a512_Python#import.c,revFiles/90f0e0_42a512_Python#import.c}: imp_get_magic)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0 = lua_open(); 
++ E0 = luaL_newstate(); 
++ luaL_openlibs(E0); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_08c093_f15791_src#mod_cml_lua.c,revFiles/08c093_f15791_src#mod_cml_lua.c}: cache_parse_lua)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

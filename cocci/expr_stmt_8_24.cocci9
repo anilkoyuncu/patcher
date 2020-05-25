@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef intmax_t;
+@@
+- E0 = sdscatprintf(E0, "master_link_down_since_seconds:%jd\r\n",  (intmax_t )server.unixtime - server.repl_down_since); 
++ E0 = sdscatprintf(E0, "master_link_down_since_seconds:%jd\r\n",  (intmax_t )(server.unixtime - server.repl_down_since)); 
+// Infered from: (redis/{prevFiles/prev_d1a005_bd6044_src#server.c,revFiles/d1a005_bd6044_src#server.c}: genRedisInfoString)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

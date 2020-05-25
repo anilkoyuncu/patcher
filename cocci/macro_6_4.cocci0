@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 < VLC_TS_0 || E1->i_pcr <= E0)  
++ if (E0 <= VLC_TS_UNKNOWN || E1->i_pcr <= E0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_9e2b34_8ad7ae_modules#demux#ogg.c,revFiles/9e2b34_8ad7ae_modules#demux#ogg.c}: Demux)
+// Recall: 0.15, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- struct stmp3xxx_pinmux_bank *I0 = get_irq_data(E1); 
++ struct stmp3xxx_pinmux_bank *I0 = irq_get_handler_data(E1); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#plat-stmp3xxx#pinmux.c,revFiles/6845664a_25a566_arch#arm#plat-stmp3xxx#pinmux.c}: stmp3xxx_gpio_irq)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

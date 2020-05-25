@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- fail_unless(E0 == 2 * GST_SECOND); 
++ fail_unless(E0 >= 4 * GST_SECOND); 
+// Infered from: (gstreamer/{prevFiles/prev_a813aa_79570f_tests#check#elements#fakesink.c,revFiles/a813aa_79570f_tests#check#elements#fakesink.c}: GST_START_TEST)
+// False positives: (gstreamer/revFiles/a813aa_79570f_tests#check#elements#fakesink.c: GST_START_TEST)
+// Recall: 0.17, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

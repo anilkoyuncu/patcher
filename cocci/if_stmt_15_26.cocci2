@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->avctx->codec_id == CODEC_ID_TRUEHD && E0->avctx->channel_layout == AV_CH_LAYOUT_7POINT1)  
++ if (E0->avctx->codec_id == CODEC_ID_TRUEHD && (E0->avctx->channel_layout == AV_CH_LAYOUT_7POINT1 || E0->avctx->channel_layout == AV_CH_LAYOUT_7POINT1_WIDE))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b9d8af_9a972b_libavcodec#mlpdec.c,revFiles/b9d8af_9a972b_libavcodec#mlpdec.c}: read_restart_header)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

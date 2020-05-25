@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = devm_request_irq(&E1->dev, irq, lirc_irq_handler,  (share_irq ? IRQF_SHARED :0), LIRC_DRIVER_NAME,  (void *)&hardware); 
++ E0 = devm_request_irq(&E1->dev, irq, lirc_irq_handler,  (share_irq ? IRQF_SHARED :0), LIRC_DRIVER_NAME,  &hardware); 
+// Infered from: (linux/{prevFiles/prev_805184_028b24_drivers#staging#media#lirc#lirc_serial.c,revFiles/805184_028b24_drivers#staging#media#lirc#lirc_serial.c}: lirc_serial_probe)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+identifier I0, I1;
+expression E2, E3, E4;
+typedef address;
+typedef guint32;
+@@
+- const  address *I0; 
+- address I1; 
+- I0 = &E2->dst; 
+- copy_address(&I1, I0); 
+- if ((get_frame(I1, (guint32 )E3->teid, &E4) == 1))  
++ if ((get_frame(E2->dst, (guint32 )E3->teid, &E4) == 1))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_6c0f6f_6e9c34_epan#dissectors#packet-gtp.c,revFiles/6c0f6f_6e9c34_epan#dissectors#packet-gtp.c}: track_gtp_session)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

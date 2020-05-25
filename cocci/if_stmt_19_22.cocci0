@@ -1,0 +1,12 @@
+@@
+expression E1, E0;
+@@
+- ff_alloc_extradata(E0->codec, E1); 
++ if (ff_alloc_extradata(E0->codec, E1) < 0)  
++ {
++ return AVERROR(ENOMEM); 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_2c1e07_b294a4_libavformat#oggparseflac.c,revFiles/2c1e07_b294a4_libavformat#oggparseflac.c}: flac_header), (FFmpeg/{prevFiles/prev_eb5cc8_2c1e07_libavformat#oggparsespeex.c,revFiles/eb5cc8_2c1e07_libavformat#oggparsespeex.c}: speex_header)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

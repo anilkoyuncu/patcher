@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- qemu_coroutine_enter(E0->co, NULL); 
++ E0->bh = qemu_bh_new(iscsi_co_generic_bh_cb, E0); 
++ qemu_bh_schedule(E0->bh); 
+// Infered from: (qemu/{prevFiles/prev_8b9dfe_e157b8_block#iscsi.c,revFiles/8b9dfe_e157b8_block#iscsi.c}: iscsi_co_generic_cb)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

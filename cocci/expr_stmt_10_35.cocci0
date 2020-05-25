@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3;
+typedef gconstpointer;
+typedef gpointer;
+@@
+- g_hash_table_lookup_extended(E0->gop_index, (gconstpointer )E1,  (gpointer *)&E2, (gpointer *)&E3); 
++ g_hash_table_lookup_extended(E0->gop_index, (gconstpointer )E1,  (gpointer )&E2, (gpointer )&E3); 
+// Infered from: (wireshark/{prevFiles/prev_8405f2_82b2c8_plugins#mate#mate_runtime.c,revFiles/8405f2_82b2c8_plugins#mate#mate_runtime.c}: analize_pdu)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

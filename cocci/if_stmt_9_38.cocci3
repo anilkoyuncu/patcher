@@ -1,0 +1,35 @@
+@@
+@@
+- goto  failed; 
++ return VLC_ENOMEM; 
+// Infered from: (vlc/{prevFiles/prev_271ad1_b72164_modules#access_output#rist.c,revFiles/271ad1_b72164_modules#access_output#rist.c}: Open)
+// False positives: (vlc/revFiles/271ad1_b72164_modules#access_output#rist.c: Open)
+// Recall: 0.11, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.56, Precision: 0.83
+// -- Node Change --
+// Recall: 0.50, Precision: 0.43
+// -- General --
+// Functions fully changed: 0/10(0%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_df6876_3708a2_libavfilter#af_adeclick.c: filter_frame
+ - ompi/prevFiles/prev_fc077a_96b20a_ompi#mca#btl#openib#btl_openib.c: check_if_device_support_modify_srq
+ - openssl/prevFiles/prev_f96ff4_d288d7_crypto#rand#drbg_lib.c: rand_drbg_new
+ - linux/prevFiles/prev_4fb4e0_b8d9e5_drivers#net#wireless#ti#wlcore#main.c: wl12xx_get_hw_info
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_19cb19_e807da8_Objects#listobject.c: list_fill
+ - vlc/prevFiles/prev_271ad1_b72164_modules#access_output#rist.c: Open
+ - vlc/prevFiles/prev_e0c708_470ba2_src#audio_output#dec.c: DecNew
+ - vlc/prevFiles/prev_b528f5_19dc07_modules#stream_filter#httplive.c: get_HTTPLivePlaylist
+ - cpython/prevFiles/prev_19cb19_e807da8_Objects#listobject.c: listsort
+ - php-src/prevFiles/prev_b3a266_b4b9e0_ext#phar#phar.c: phar_zend_open
+*/
+
+// ---------------------------------------------

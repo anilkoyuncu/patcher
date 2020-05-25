@@ -1,0 +1,11 @@
+@@
+expression E0, E2, E1;
+typedef gint;
+@@
+- GST_DEBUG_OBJECT(E0, E1, E2); 
++ GST_DEBUG_OBJECT(E0, E1, (gint )E2); 
+// Infered from: (gstreamer/{prevFiles/prev_1a5018_245089_plugins#elements#gstqueue2.c,revFiles/1a5018_245089_plugins#elements#gstqueue2.c}: update_buffering), (gstreamer/{prevFiles/prev_1a5018_245089_plugins#elements#gstqueue2.c,revFiles/1a5018_245089_plugins#elements#gstqueue2.c}: update_buffering)
+// False positives: (gstreamer/revFiles/1a5018_245089_plugins#elements#gstqueue2.c: apply_buffer), (gstreamer/revFiles/1a5018_245089_plugins#elements#gstqueue2.c: apply_segment), (gstreamer/revFiles/1a5018_245089_plugins#elements#gstqueue2.c: gst_queue2_open_temp_location_file)
+// Recall: 0.22, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------

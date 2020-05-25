@@ -1,0 +1,8 @@
+@@
+@@
+- return -2; 
++ goto  error; 
+// Infered from: (cpython/{prevFiles/prev_bb3c5f_f48384_Objects#classobject.c,revFiles/bb3c5f_f48384_Objects#classobject.c}: instance_compare)
+// Recall: 0.15, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- DEBUG_ARG("so = %lx", (long )E0); 
++ DEBUG_ARG("so = %p", E0); 
+// Infered from: (qemu/{prevFiles/prev_ecc804c_31e49a_slirp#sbuf.c,revFiles/ecc804c_31e49a_slirp#sbuf.c}: sbappend), (qemu/{prevFiles/prev_ecc804c_31e49a_slirp#if.c,revFiles/ecc804c_31e49a_slirp#if.c}: if_output), (qemu/{prevFiles/prev_340261_039d5b_slirp#ip6_output.c,revFiles/340261_039d5b_slirp#ip6_output.c}: ip6_output), (qemu/{prevFiles/prev_ecc804c_31e49a_slirp#ip_output.c,revFiles/ecc804c_31e49a_slirp#ip_output.c}: ip_output)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

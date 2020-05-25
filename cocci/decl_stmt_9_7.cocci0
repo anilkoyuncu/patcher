@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  int I0 = FFMIN(E1, 2); 
++ const  int I0 = FFMIN(E1, 3); 
+// Infered from: (FFmpeg/{prevFiles/prev_0abe92_c2625c_libavcodec#mpegvideo.c,revFiles/0abe92_c2625c_libavcodec#mpegvideo.c}: mpeg_motion_lowres), (FFmpeg/{prevFiles/prev_0abe92_c2625c_libavcodec#mpegvideo.c,revFiles/0abe92_c2625c_libavcodec#mpegvideo.c}: chroma_4mv_motion_lowres)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

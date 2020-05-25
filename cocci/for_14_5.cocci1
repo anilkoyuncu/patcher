@@ -1,0 +1,23 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- for(E0 = 0;E0 < sizeof(I1) / sizeof(struct I2 );E0++)  
++ for(E0 = 0;E0 < ARRAY_SIZE(I1);E0++)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_993c0a_2fbf6d6_drivers#staging#rtl8723au#core#rtw_mlme_ext.c,revFiles/993c0a_2fbf6d6_drivers#staging#rtl8723au#core#rtw_mlme_ext.c}: OnAction23a), (linux/{prevFiles/prev_a888ad_bbdc16_arch#powerpc#platforms#pasemi#idle.c,revFiles/a888ad_bbdc16_arch#powerpc#platforms#pasemi#idle.c}: idle_param)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!(E0 = E1->streams[1]))  
++ if (!E1->streams || !(E0 = E1->streams[1]))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_1f1960_334a0d_libavformat#lxfdec.c,revFiles/1f1960_334a0d_libavformat#lxfdec.c}: get_packet_header)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

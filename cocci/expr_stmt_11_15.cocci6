@@ -1,0 +1,8 @@
+@@
+@@
+- sequence_table = g_hash_table_new(rlc_channel_hash, rlc_channel_equal); 
++ sequence_table = g_hash_table_new_full(rlc_channel_hash, rlc_channel_equal,  NULL, free_sequence_table_entry_data); 
+// Infered from: (wireshark/{prevFiles/prev_ae4294_94dda5_epan#dissectors#packet-rlc.c,revFiles/ae4294_94dda5_epan#dissectors#packet-rlc.c}: fragment_table_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

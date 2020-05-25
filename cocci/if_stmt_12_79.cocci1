@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!CreateProcess(NULL, E0->str, NULL, NULL, TRUE, CREATE_NEW_CONSOLE, NULL,  NULL, &E1, &E2))  
++ if (!CreateProcess(NULL, utf_8to16(E0->str), NULL, NULL, TRUE,  CREATE_NEW_CONSOLE, NULL, NULL, &E1, &E2))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_742493_41f547_capture_sync.c,revFiles/742493_41f547_capture_sync.c}: sync_pipe_start)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

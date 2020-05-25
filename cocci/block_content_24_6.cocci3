@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- memory_region_init_io(E0, OBJECT(cpu[E1]), &hppa_io_eir_ops, cpu[E1],  g_strdup_printf("cpu%ld-io-eir", E1), 4); 
++ memory_region_init_io(E0, OBJECT(cpu[E1]), &hppa_io_eir_ops, cpu[E1], name, 4); 
+// Infered from: (qemu/{prevFiles/prev_266a88_67c1ea9_hw#hppa#machine.c,revFiles/266a88_67c1ea9_hw#hppa#machine.c}: machine_hppa_init)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

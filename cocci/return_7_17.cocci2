@@ -1,0 +1,30 @@
+@@
+identifier I0, I1, I2;
+expression E3, E4;
+typedef PyObject;
+typedef PyTypeObject;
+@@
+  PyObject *complex_new(PyTypeObject *I0, PyObject *I1, PyObject *I2)  
+  {
+  ...
+- if (PyComplex_CheckExact(E3) && E4 == NULL)  
++ if (PyComplex_CheckExact(E3) && E4 == NULL && I0 == &PyComplex_Type)  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_4eadfa_41bcbe_Objects#complexobject.c,revFiles/4eadfa_41bcbe_Objects#complexobject.c}: complex_new)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

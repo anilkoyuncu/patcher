@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- memset(E0->guest_surfaces.cmds, 0,  sizeof(E0->guest_surfaces.cmds) * E0->ssd.num_surfaces); 
++ memset(E0->guest_surfaces.cmds, 0,  sizeof(E0->guest_surfaces.cmds[0]) * E0->ssd.num_surfaces); 
+// Infered from: (qemu/{prevFiles/prev_8bb9f51_5c74fb_hw#display#qxl.c,revFiles/8bb9f51_5c74fb_hw#display#qxl.c}: qxl_spice_destroy_surfaces_complete)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

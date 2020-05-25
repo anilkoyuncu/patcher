@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0)  
+- {
+- msg_Info(E1, "Using %s for hardware decoding.", E2->p_va->description); 
+- }
+// Infered from: (vlc/{prevFiles/prev_2f184d_cde322_modules#codec#avcodec#video.c,revFiles/2f184d_cde322_modules#codec#avcodec#video.c}: ffmpeg_OpenCodec)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

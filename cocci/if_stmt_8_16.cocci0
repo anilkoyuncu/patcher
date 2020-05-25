@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (dist[E0][E1] <= t[E2] && f[E0] + c[E0] < f[E1] && !hash[E1])  
++ if (dist[E0][E1] <= t[E0] && f[E0] + c[E0] < f[E1] && !hash[E1])  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_95-C-536958-537053.c,revFiles/95-C-536958-537053.c}: main)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,32 @@
+@@
+@@
+- return "Mono"; 
++ return "Stereo/Mono"; 
+// Infered from: (vlc/{prevFiles/prev_abdf24_f42c15_src#audio_output#common.c,revFiles/abdf24_f42c15_src#audio_output#common.c}: aout_FormatPrintChannels)
+// False positives: (vlc/revFiles/abdf24_f42c15_src#audio_output#common.c: aout_FormatPrintChannels)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.44, Precision: 1.00
+// -- Node Change --
+// Recall: 0.38, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/9(22%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_f978f2_5bd051_ssl#ssl_stat.c: SSL_state_string_long
+ - qemu/prevFiles/prev_dad394_47025a_nbd#common.c: nbd_cmd_lookup
+ - vlc/prevFiles/prev_dd284d_0fafd8_modules#video_output#win32#direct3d11.c: CompilePixelShader
+ - gstreamer/prevFiles/prev_c349a5_61a4a6_gst#gstelement.c: gst_element_state_get_name
+ - tcl/prevFiles/prev_165811_4bfe5a_generic#tclPosixStr.c: Tcl_ErrnoMsg
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_abdf24_f42c15_src#audio_output#common.c: aout_FormatPrintChannels
+ - gtk/prevFiles/prev_a97e8f_d345a7_gdk#win32#gdkwindow-win32.c: get_cursor_name_from_op
+*/
+
+// ---------------------------------------------

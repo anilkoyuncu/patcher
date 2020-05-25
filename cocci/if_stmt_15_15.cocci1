@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->resolved->port == 0)  
++ if (E0->resolved->port == 0 && E0->resolved->sockaddr->sa_family != AF_UNIX)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_5e7535_fac1f2_src#http#ngx_http_upstream.c,revFiles/5e7535_fac1f2_src#http#ngx_http_upstream.c}: ngx_http_upstream_init_request)
+// False positives: (nginx/revFiles/5e7535_fac1f2_src#http#ngx_http_upstream.c: ngx_http_upstream_init_request)
+// Recall: 0.20, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

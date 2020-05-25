@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0->cap_len < (E1 + E2))  
++ if (!BYTES_ARE_IN_FRAME(E1, E2))  
+  {
+- isis_dissect_unknown(E1, E2, E3, E0,  "not enough capture data for header (%d vs %d)", E2,  E1 - E0->cap_len); 
++ isis_dissect_unknown(E1, E2, E3, E0,  "not enough capture data for header (%d vs %d)", E2,  END_OF_FRAME); 
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_f2246e_9d4c96_packet-isis-lsp.c,revFiles/f2246e_9d4c96_packet-isis-lsp.c}: isis_dissect_isis_lsp), (wireshark/{prevFiles/prev_f2246e_9d4c96_packet-isis-hello.c,revFiles/f2246e_9d4c96_packet-isis-hello.c}: isis_dissect_isis_hello)
+// Recall: 0.57, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

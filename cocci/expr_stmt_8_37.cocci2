@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = pci_register_root_bus(E1, "pci.0", pci_spapr_set_irq, pci_spapr_map_irq,  E2, &E2->memspace, &E2->iospace, PCI_DEVFN(  0, 0), PCI_NUM_PINS, TYPE_SPAPR_PHB_ROOT_BUS); 
++ E0 = pci_register_root_bus(E1, NULL, pci_spapr_set_irq, pci_spapr_map_irq,  E2, &E2->memspace, &E2->iospace, PCI_DEVFN(  0, 0), PCI_NUM_PINS, TYPE_SPAPR_PHB_ROOT_BUS); 
+// Infered from: (qemu/{prevFiles/prev_456011_532cc6_hw#ppc#spapr_pci.c,revFiles/456011_532cc6_hw#ppc#spapr_pci.c}: spapr_phb_realize)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

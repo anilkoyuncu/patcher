@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- E0->eccmask = kmalloc(E1, GFP_KERNEL); 
++ E0->eccmask = kzalloc(E1, GFP_KERNEL); 
+  ...
+- memset(E0->eccmask, 0, E1); 
+// Infered from: (linux/{prevFiles/prev_17c929_b83408b_drivers#mtd#nand#raw#nand_bch.c,revFiles/17c929_b83408b_drivers#mtd#nand#raw#nand_bch.c}: nand_bch_init)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

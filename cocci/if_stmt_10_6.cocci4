@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- if (!strcmp(E0->argv[1]->ptr, server.requirepass))  
++ if (!server.requirepass || !strcmp(E0->argv[1]->ptr, server.requirepass))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_2e77c2_774e30_redis.c,revFiles/2e77c2_774e30_redis.c}: authCommand)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.83
+// -- Node Change --
+// Recall: 1.00, Precision: 0.83
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_9ed2c8_9adfc8_gtk#gtkwindow.c: gtk_window_realize
+*/
+
+// ---------------------------------------------

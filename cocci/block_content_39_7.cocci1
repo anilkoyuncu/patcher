@@ -1,0 +1,34 @@
+@@
+expression E0;
+@@
+- return gst_pad_get_allowed_caps(E0); 
++ if (E0)  
++ {
++ return gst_pad_get_caps(E0); 
++ }
++ return NULL; 
+// Infered from: (gstreamer/{prevFiles/prev_d0f97d_84c67b_gst#gstqueue.c,revFiles/d0f97d_84c67b_gst#gstqueue.c}: gst_queue_getcaps), (gstreamer/{prevFiles/prev_d0f97d_84c67b_plugins#elements#gstqueue.c,revFiles/d0f97d_84c67b_plugins#elements#gstqueue.c}: gst_queue_getcaps)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.25
+// -- Node Change --
+// Recall: 0.88, Precision: 0.47
+// -- General --
+// Functions fully changed: 0/8(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gstreamer/prevFiles/prev_d0f97d_84c67b_gst#gstqueue.c: gst_queue_get
+ - gstreamer/prevFiles/prev_d0f97d_84c67b_plugins#elements#gstqueue.c: gst_queue_link
+ - gstreamer/prevFiles/prev_d0f97d_84c67b_plugins#elements#gstqueue.c: gst_queue_get
+ - gstreamer/prevFiles/prev_d0f97d_84c67b_plugins#elements#gstqueue.c: gst_queue_getcaps
+ - gstreamer/prevFiles/prev_d0f97d_84c67b_gst#gstqueue.c: gst_queue_chain
+ - gstreamer/prevFiles/prev_d0f97d_84c67b_gst#gstqueue.c: gst_queue_getcaps
+ - gstreamer/prevFiles/prev_d0f97d_84c67b_plugins#elements#gstqueue.c: gst_queue_chain
+ - gstreamer/prevFiles/prev_d0f97d_84c67b_gst#gstqueue.c: gst_queue_link
+*/
+
+// ---------------------------------------------

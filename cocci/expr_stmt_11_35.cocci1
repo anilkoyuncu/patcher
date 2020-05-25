@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef gdouble;
+@@
+- E0->iteration = -E1 / (gdouble )E2; 
++ E0->iteration = -E1 / (gdouble )MAX(E2, 1); 
+// Infered from: (gtk/{prevFiles/prev_b47ff72_6eead8_gtk#gtkprogresstracker.c,revFiles/b47ff72_6eead8_gtk#gtkprogresstracker.c}: gtk_progress_tracker_start)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

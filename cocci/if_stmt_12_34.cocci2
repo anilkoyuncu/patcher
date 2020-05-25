@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (E0->codec->codec_tag && (E1->fc->video_codec_id ? codec_get_id(codec_movvideo_tags,  E2) != E1->fc->video_codec_id :E0->codec->codec_tag != MKTAG(  'j', 'p', 'e', 'g')))  
++ if (E0->codec->codec_tag && E0->codec->codec_tag != E2 && (E1->fc->video_codec_id ? codec_get_id(  codec_movvideo_tags,  E2) != E1->fc->video_codec_id :E0->codec->codec_tag != MKTAG(  'j', 'p', 'e', 'g')))  
+  {
+  ...
+  }
+- E3->pseudo_stream_id = E4; 
++ E3->pseudo_stream_id = E0->codec->codec_tag ? -1 :E4; 
+// Infered from: (FFmpeg/{prevFiles/prev_978677_3c16e0_libavformat#mov.c,revFiles/978677_3c16e0_libavformat#mov.c}: mov_read_stsd)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

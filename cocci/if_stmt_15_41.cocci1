@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (E0->p_packetizer->fmt_out.video.i_frame_rate_base)  
++ if (E0->p_packetizer->fmt_out.video.i_frame_rate_base && E0->p_packetizer->fmt_out.video.i_frame_rate)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_3cb2a4_e1a253_modules#demux#mpeg#h26x.c,revFiles/3cb2a4_e1a253_modules#demux#mpeg#h26x.c}: Demux)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,26 @@
+@@
+identifier I0;
+expression E1;
+typedef AVCodecDefault;
+@@
+- AVCodecDefault *I0 = E1->defaults; 
++ const  AVCodecDefault *I0 = E1->defaults; 
+// Infered from: (FFmpeg/{prevFiles/prev_fa9aeb8_86d373_libavcodec#options.c,revFiles/fa9aeb8_86d373_libavcodec#options.c}: avcodec_get_context_defaults3)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.82
+// -- Node Change --
+// Recall: 1.00, Precision: 0.87
+// -- General --
+// Functions fully changed: 9/11(81%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_5c79cb_5dd7b7_ui#cli#tap-icmpv6stat.c: compute_stats
+ - wireshark/prevFiles/prev_5c79cb_5dd7b7_ui#cli#tap-icmpstat.c: compute_stats
+*/
+
+// ---------------------------------------------

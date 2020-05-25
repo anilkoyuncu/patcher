@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- ff_mov_init_hinting(E0, E1, E2); 
++ if (ff_mov_init_hinting(E0, E1, E2) < 0)  
++ {
++ goto  error; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_621ab4_8a8d9a_libavformat#movenc.c,revFiles/621ab4_8a8d9a_libavformat#movenc.c}: mov_write_header)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef const_buffer;
+@@
+- const_buffer I0 = magnet_checkconstbuffer(E1, 2); 
++ const_buffer I0 = magnet_checkconstbuffer(E1, 3); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_c74bdf_26c44e_src#mod_magnet.c,revFiles/c74bdf_26c44e_src#mod_magnet.c}: magnet_cgi_set)
+// False positives: (lighttpd1.4/revFiles/c74bdf_26c44e_src#mod_magnet.c: magnet_cgi_set), (lighttpd1.4/revFiles/c74bdf_26c44e_src#mod_magnet.c: magnet_status_get), (lighttpd1.4/revFiles/c74bdf_26c44e_src#mod_magnet.c: magnet_status_set)
+// Recall: 0.07, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------

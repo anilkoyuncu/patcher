@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- if (!stat(E0->line, &E1) && S_ISREG(E1.st_mode))  
++ if (!stat(E0->line, &E1) && !S_ISDIR(E1.st_mode))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_26eaa8_fadf33_lib#formdata.c,revFiles/26eaa8_fadf33_lib#formdata.c}: AddFormData)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 27/27(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+identifier I0 = {OSAtomicDecrement32Barrier ,OSAtomicIncrement32Barrier };
+expression E1;
+@@
+- I0((int *)&E1->refs); 
+// Infered from: (vlc/{prevFiles/prev_6be1b5_df25be_src#libvlc.c,revFiles/6be1b5_df25be_src#libvlc.c}: vlc_hold), (vlc/{prevFiles/prev_6be1b5_df25be_src#libvlc.c,revFiles/6be1b5_df25be_src#libvlc.c}: vlc_release)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

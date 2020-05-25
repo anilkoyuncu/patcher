@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (PyDict_CheckExact(E0) && PyDict_GetItem(E0, E1) == E2)  
++ if (E0 && PyDict_CheckExact(E0) && PyDict_GetItem(E0, E1) == E2)  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_8905fc_bb86bf_Python#ceval.c,revFiles/8905fc_bb86bf_Python#ceval.c}: unicode_concatenate)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

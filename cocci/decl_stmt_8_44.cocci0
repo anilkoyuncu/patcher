@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef uint32_t;
+@@
+- uint32_t I0 = 1 << 19; 
++ uint32_t I0 = CMMA_BLOCK_SIZE; 
+// Infered from: (qemu/{prevFiles/prev_17f456_c447af_hw#s390x#s390-stattrib.c,revFiles/17f456_c447af_hw#s390x#s390-stattrib.c}: cmma_save)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

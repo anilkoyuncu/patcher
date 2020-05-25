@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(E0->info->device, "%s: write() failed and returned %dn", __func__, E1); 
++ dev_err(E0->info->device, "write() failed and returned %dn", E1); 
+// Infered from: (linux/{prevFiles/prev_aed1c7_14f63e_drivers#staging#fbtft#fb_ra8875.c,revFiles/aed1c7_14f63e_drivers#staging#fbtft#fb_ra8875.c}: write_reg8_bus8), (linux/{prevFiles/prev_aed1c7_14f63e_drivers#staging#fbtft#fb_ra8875.c,revFiles/aed1c7_14f63e_drivers#staging#fbtft#fb_ra8875.c}: write_reg8_bus8)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

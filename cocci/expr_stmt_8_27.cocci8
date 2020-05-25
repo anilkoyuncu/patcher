@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = proto_tree_add_item(E1, E2, E3, E4, 8, 0); 
++ E0 = proto_tree_add_item(E1, E2, E3, E4, 8, ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_6d96a1_152afe_epan#dissectors#packet-scsi-osd.c,revFiles/6d96a1_152afe_epan#dissectors#packet-scsi-osd.c}: dissect_osd_partition_id)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

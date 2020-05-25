@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0 == ARCHIVE_WARN)  
++ if (E0 == ARCHIVE_WARN && !canGzip())  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_e903c4_213a26_libarchive#test#test_read_set_format.c,revFiles/e903c4_213a26_libarchive#test#test_read_set_format.c}: DEFINE_TEST)
+// False positives: (libarchive/revFiles/e903c4_213a26_libarchive#test#test_read_set_format.c: DEFINE_TEST)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->current_picture.data[0])  
++ if (E0->current_picture.data[0] && !(E0->avctx->flags & CODEC_FLAG_EMU_EDGE))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_8fa973_d83026_libavcodec#snow.c,revFiles/8fa973_d83026_libavcodec#snow.c}: frame_start), (FFmpeg/{prevFiles/prev_441693_c881df_libavcodec#snow.c,revFiles/441693_c881df_libavcodec#snow.c}: frame_start)
+// False positives: (FFmpeg/revFiles/441693_c881df_libavcodec#snow.c: common_end), (FFmpeg/revFiles/8fa973_d83026_libavcodec#snow.c: common_end)
+// Recall: 0.67, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

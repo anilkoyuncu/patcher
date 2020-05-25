@@ -1,0 +1,15 @@
+@@
+typedef pgsql;
+@@
+- if (PQsetnonblocking(pgsql , 1))  
++ if (0)  
+  {
+  ...
+  }
+  ...
+- PQsetnonblocking(pgsql , 0); 
++ 0; 
+// Infered from: (php-src/{prevFiles/prev_6439ad_4343df_ext#pgsql#pgsql.c,revFiles/6439ad_4343df_ext#pgsql#pgsql.c}: php_pgsql_flush_query)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

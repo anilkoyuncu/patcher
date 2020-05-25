@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- dm_free(E0); 
++ kfree(E0); 
+// Infered from: (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#gpio#gpio_base.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#gpio#gpio_base.c}: dal_gpio_destroy), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce#dce_abm.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce#dce_abm.c}: dce_abm_destroy), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce#dce_audio.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce#dce_audio.c}: dce_aud_destroy)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

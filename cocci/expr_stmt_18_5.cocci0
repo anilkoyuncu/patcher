@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+typedef guint8;
+@@
+- E0 = dcom_interface_new(E1, E2, &E3, E4, E5, &E6); 
++ E0 = dcom_interface_new(E1, (guint8 *)E2, &E3, E4, E5, &E6); 
+// Infered from: (wireshark/{prevFiles/prev_597ee6_974a0d_epan#dissectors#packet-dcom.c,revFiles/597ee6_974a0d_epan#dissectors#packet-dcom.c}: dissect_dcom_OBJREF)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,26 @@
+@@
+@@
+- return 1; 
++ goto  php_failed_getlongpath; 
+// Infered from: (php-src/{prevFiles/prev_d411d72_f7c77f_TSRM#tsrm_virtual_cwd.c,revFiles/d411d72_f7c77f_TSRM#tsrm_virtual_cwd.c}: virtual_file_ex), (php-src/{prevFiles/prev_5e40ff_5790c9_TSRM#tsrm_virtual_cwd.c,revFiles/5e40ff_5790c9_TSRM#tsrm_virtual_cwd.c}: virtual_file_ex)
+// False positives: (php-src/revFiles/5e40ff_5790c9_TSRM#tsrm_virtual_cwd.c: virtual_chdir_file), (php-src/revFiles/5e40ff_5790c9_TSRM#tsrm_virtual_cwd.c: virtual_file_ex), (php-src/revFiles/d411d72_f7c77f_TSRM#tsrm_virtual_cwd.c: virtual_chdir_file), (php-src/revFiles/d411d72_f7c77f_TSRM#tsrm_virtual_cwd.c: virtual_file_ex)
+// Recall: 0.40, Precision: 0.33, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.50
+// -- Node Change --
+// Recall: 0.80, Precision: 0.50
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_d411d72_f7c77f_TSRM#tsrm_virtual_cwd.c: virtual_chdir_file
+ - php-src/prevFiles/prev_5e40ff_5790c9_TSRM#tsrm_virtual_cwd.c: virtual_chdir_file
+ - php-src/prevFiles/prev_d411d72_f7c77f_TSRM#tsrm_virtual_cwd.c: virtual_file_ex
+ - php-src/prevFiles/prev_5e40ff_5790c9_TSRM#tsrm_virtual_cwd.c: virtual_file_ex
+*/
+
+// ---------------------------------------------

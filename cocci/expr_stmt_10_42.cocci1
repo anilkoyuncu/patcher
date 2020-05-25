@@ -1,0 +1,29 @@
+@@
+@@
+- if (connssl->asked_for_h2)  
+- {
+  ...
+- }
+// Infered from: (curl/{prevFiles/prev_676ac4_31c8f8_lib#vtls#gtls.c,revFiles/676ac4_31c8f8_lib#vtls#gtls.c}: gtls_connect_step3)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_676ac4_31c8f8_lib#vtls#gtls.c: gtls_connect_step3
+*/
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_9019fc_5db0f7_lib#gtls.c: Curl_gtls_connect
+ - curl/prevFiles/prev_676ac4_31c8f8_lib#vtls#gtls.c: gtls_connect_step1
+*/
+
+// ---------------------------------------------

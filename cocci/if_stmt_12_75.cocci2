@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- PZVAL_UNLOCK(E0); 
+// Infered from: (php-src/{prevFiles/prev_1fb9d4_06da1b_ext#simplexml#simplexml.c,revFiles/1fb9d4_06da1b_ext#simplexml#simplexml.c}: sxe_property_read)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.29, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/5(20%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_a873f4_22cb8a_orte#mca#errmgr#base#errmgr_base_fns.c: orte_errmgr_base_abort
+ - php-src/prevFiles/prev_1fb9d4_06da1b_ext#simplexml#simplexml.c: sxe_property_read
+ - gtk/prevFiles/prev_3efd0b_cc6ffd_gtk#gtkactionbar.c: gtk_action_bar_set_center_widget
+*/
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_3efd0b_cc6ffd_gtk#gtkactionbar.c: construct_center_widget
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = HASH_OF(E1); 
++ E0 = Z_ARRVAL_P(E1); 
+// Infered from: (php-src/{prevFiles/prev_ad4fa8_abf6a0_ext#sockets#sockets.c,revFiles/ad4fa8_abf6a0_ext#sockets#sockets.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_ad4fa8_abf6a0_ext#sockets#sockets.c,revFiles/ad4fa8_abf6a0_ext#sockets#sockets.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_ad4fa8_abf6a0_ext#sockets#multicast.c,revFiles/ad4fa8_abf6a0_ext#sockets#multicast.c}: php_do_mcast_opt), (php-src/{prevFiles/prev_ad4fa8_abf6a0_ext#sockets#multicast.c,revFiles/ad4fa8_abf6a0_ext#sockets#multicast.c}: php_do_mcast_opt)
+// Recall: 0.36, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,20 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef oob_comm_request_t;
+@@
+  oob_comm_request_t *I0; 
+  ...
+- while (1)  
++ while (I0 != opal_list_get_end(&memheap_oob.req_list))  
+  {
+  ...
+- do_recv(E1.MPI_SOURCE, E2); 
+- OBJ_RELEASE(E2); 
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_54a072_e73215_oshmem#mca#memheap#base#memheap_base_mkey.c,revFiles/54a072_e73215_oshmem#mca#memheap#base#memheap_base_mkey.c}: oshmem_mkey_recv_cb)
+// False positives: (ompi/revFiles/54a072_e73215_oshmem#mca#memheap#base#memheap_base_mkey.c: oshmem_mkey_recv_cb)
+// Recall: 0.06, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

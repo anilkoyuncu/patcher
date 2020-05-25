@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->password = E1[E2].optval; 
++ E0->password = pestrdup(E1[E2].optval, E0->is_persistent); 
+// Infered from: (php-src/{prevFiles/prev_645b03_f5dfea_ext#pdo_firebird#firebird_driver.c,revFiles/645b03_f5dfea_ext#pdo_firebird#firebird_driver.c}: pdo_firebird_handle_factory), (php-src/{prevFiles/prev_645b03_f5dfea_ext#pdo_oci#oci_driver.c,revFiles/645b03_f5dfea_ext#pdo_oci#oci_driver.c}: pdo_oci_handle_factory)
+// False positives: (php-src/revFiles/645b03_f5dfea_ext#pdo_dblib#dblib_driver.c: pdo_dblib_handle_factory)
+// Recall: 0.31, Precision: 0.83, Matching recall: 0.42
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef u32;
+@@
+- intf_ErrMsg("Garbage at input (%x)\n", E0); 
++ intf_WarnMsg(1, "Garbage at input (%x)\n", E0); 
+  ...
+- *(u32 *)E1 = E0; 
++ *(u32 *)E1 = U32_AT(&E0); 
+// Infered from: (vlc/{prevFiles/prev_b185a7_67bc00_src#input#input_ps.c,revFiles/b185a7_67bc00_src#input#input_ps.c}: PSRead)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+typedef uint16_t;
+@@
+- vlc_blend_rgb16((uint16_t *)&E0[E1 * E2], (const  uint16_t *)&E3[E1 * E2],  rgbpal[E4[E1]][0], rgbpal[E4[E1]][1], rgbpal[E4[E1]][  3], E5, &E6->fmt_out.video); 
++ vlc_blend_rgb16((uint16_t *)&E0[E1 * E2], (const  uint16_t *)&E3[E1 * E2],  rgbpal[E4[E1]][0], rgbpal[E4[E1]][1], rgbpal[E4[E1]][  2], E5, &E6->fmt_out.video); 
+// Infered from: (vlc/{prevFiles/prev_4a1600_3cbe2b_modules#video_filter#blend.c,revFiles/4a1600_3cbe2b_modules#video_filter#blend.c}: BlendPalRV)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

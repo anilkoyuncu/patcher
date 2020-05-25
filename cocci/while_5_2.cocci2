@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (E0->score <= E1)  
++ while (E0 && E0->score <= E1)  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_dbbc72_50c55d_redis.c,revFiles/dbbc72_50c55d_redis.c}: zrangebyscoreCommand)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

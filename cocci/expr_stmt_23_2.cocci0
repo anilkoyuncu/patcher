@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2;
+@@
+- av_tree_insert(&E0->syncpoints, E1, (void *)ff_nut_sp_pos_cmp, &E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_fcbdd6_3b50db_libavformat#nut.c,revFiles/fcbdd6_3b50db_libavformat#nut.c}: ff_nut_add_sp)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

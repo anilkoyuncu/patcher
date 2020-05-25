@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- av_log(E0->s.avctx, AV_LOG_ERROR,  "Inconsistent MMCO state between slices [%d, %d, %d]\n", E1,  E0->mmco_index, E2); 
++ av_log(E0->s.avctx, AV_LOG_ERROR,  "Inconsistent MMCO state between slices [%d, %d]\n", E1,  E0->mmco_index); 
+// Infered from: (FFmpeg/{prevFiles/prev_3fba3e_dcbe15_libavcodec#h264_refs.c,revFiles/3fba3e_dcbe15_libavcodec#h264_refs.c}: ff_generate_sliding_window_mmcos), (FFmpeg/{prevFiles/prev_fc86f88_bc15fc_libavcodec#h264_refs.c,revFiles/fc86f88_bc15fc_libavcodec#h264_refs.c}: ff_h264_decode_ref_pic_marking)
+// False positives: (FFmpeg/revFiles/fc86f88_bc15fc_libavcodec#h264_refs.c: ff_generate_sliding_window_mmcos)
+// Recall: 0.04, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (b[E0] > max)  
++ if (a[E0] > max)  
+  {
+- max = b[E0]; 
++ max = a[E0]; 
+  }
+// Infered from: (codeflaws/{prevFiles/prev_606-E-14918656-14918663.c,revFiles/606-E-14918656-14918663.c}: main)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

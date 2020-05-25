@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- if (tvb_length_remaining(E0, E1) > 0)  
++ if ((E1 != -1) && (tvb_length_remaining(E0, E1) > 0))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_527071_658e0d_epan#dissectors#packet-h264.c,revFiles/527071_658e0d_epan#dissectors#packet-h264.c}: dissect_h264_nal_unit)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 0.67
+// -- Node Change --
+// Recall: 0.50, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_527071_658e0d_epan#dissectors#packet-h264.c: dissect_h264_seq_parameter_set_rbsp
+ - git/prevFiles/prev_e6e875_4dac06_date.c: is_date
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - tcl/prevFiles/prev_92efc1_bba328_generic#tclEnv.c: TclUnsetEnv
+*/
+
+// ---------------------------------------------

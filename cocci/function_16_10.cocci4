@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = E1->vbi_width; 
++ int I0; 
+// Infered from: (linux/{prevFiles/prev_6b81be_d7ef485d_drivers#media#video#em28xx#em28xx-video.c,revFiles/6b81be_d7ef485d_drivers#media#video#em28xx#em28xx-video.c}: em28xx_copy_vbi)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

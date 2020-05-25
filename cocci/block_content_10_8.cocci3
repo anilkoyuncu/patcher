@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0; 
+  ...
+- I0 = gtk_dialog_run(GTK_DIALOG(E1)); 
++ gtk_dialog_run(GTK_DIALOG(E1)); 
+// Infered from: (gtk/{prevFiles/prev_2b6317_6dc142_gtk#tests#builder.c,revFiles/2b6317_6dc142_gtk#tests#builder.c}: test_file)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+@@
+- RETURN_STRINGL(E0, E1, 0); 
++ RETURN_STRINGL(E0, E1, 1); 
++ free(E0); 
+// Infered from: (php-src/{prevFiles/prev_186823_e50a42_ext#pgsql#pgsql.c,revFiles/186823_e50a42_ext#pgsql#pgsql.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/186823_e50a42_ext#pgsql#pgsql.c: PHP_FUNCTION)
+// Recall: 0.38, Precision: 0.25, Matching recall: 0.60
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.40
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_186823_e50a42_ext#pgsql#pgsql.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

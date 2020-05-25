@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E1->last_mux_dts_plus_duration * av_q2d(E2->time_base); 
++ E0 = E1->last_mux_dts_plus_duration * av_q2d(E1->st->time_base); 
+// Infered from: (FFmpeg/{prevFiles/prev_833ec9_55fe15_ffmpeg.c,revFiles/833ec9_55fe15_ffmpeg.c}: do_video_stats)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

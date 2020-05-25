@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- char *I0; 
++ char I0[101]; 
+// Infered from: (codeflaws/{prevFiles/prev_411-A-11627971-11627980.c,revFiles/411-A-11627971-11627980.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

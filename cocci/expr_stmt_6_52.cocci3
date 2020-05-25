@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- (struct pvrdma_ring *)(*E0)++; 
++ (*E0)++; 
+// Infered from: (qemu/{prevFiles/prev_197053_9edc19_hw#rdma#vmw#pvrdma_main.c,revFiles/197053_9edc19_hw#rdma#vmw#pvrdma_main.c}: init_dev_ring)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

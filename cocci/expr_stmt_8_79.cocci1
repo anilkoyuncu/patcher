@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+@@
+- E0 = proto_tree_add_subtree_format(E1, E2, E3, E4 + 4 + (4 - (E4 % 4)),  ett_mpls_echo_tlv_fec, NULL,  "FEC Element %u: %s", E5,  val_to_str_ext(E6,  &mpls_echo_tlv_fec_names_ext,  "Unknown FEC type (0x%04X)")); 
++ E0 = proto_tree_add_subtree_format(E1, E2, E3, E4 + (4 - (E4 % 4)),  ett_mpls_echo_tlv_fec, NULL,  "FEC Element %u: %s", E5,  val_to_str_ext(E6,  &mpls_echo_tlv_fec_names_ext,  "Unknown FEC type (0x%04X)")); 
+// Infered from: (wireshark/{prevFiles/prev_178d81f_3f1770_epan#dissectors#packet-mpls-echo.c,revFiles/178d81f_3f1770_epan#dissectors#packet-mpls-echo.c}: dissect_mpls_echo_tlv_fec)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

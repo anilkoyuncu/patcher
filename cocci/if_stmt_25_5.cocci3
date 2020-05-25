@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef guint;
+@@
+- EBCDIC_to_ASCII(E0, E1); 
++ EBCDIC_to_ASCII(E0, (guint )E1); 
+// Infered from: (wireshark/{prevFiles/prev_1582e0_36e002_gtk#follow_stream.c,revFiles/1582e0_36e002_gtk#follow_stream.c}: follow_show)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

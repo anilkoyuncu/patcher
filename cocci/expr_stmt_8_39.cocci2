@@ -1,0 +1,11 @@
+@@
+identifier I4;
+expression E1, E3, E0, E2;
+@@
+- E0 = mmap(E1, E2, PROT_READ | PROT_WRITE, E3 | I4, 0, 0); 
++ E0 = mmap(E1, E2, PROT_READ | PROT_WRITE, E3 | I4, -1, 0); 
+// Infered from: (ompi/{prevFiles/prev_9314e9_f7df96_oshmem#mca#sshmem#mmap#sshmem_mmap_module.c,revFiles/9314e9_f7df96_oshmem#mca#sshmem#mmap#sshmem_mmap_module.c}: segment_create), (ompi/{prevFiles/prev_9314e9_f7df96_oshmem#mca#sshmem#mmap#sshmem_mmap_module.c,revFiles/9314e9_f7df96_oshmem#mca#sshmem#mmap#sshmem_mmap_module.c}: segment_attach), (FFmpeg/{prevFiles/prev_53bc0d_364cac_libswscale#utils.c,revFiles/53bc0d_364cac_libswscale#utils.c}: sws_getContext), (FFmpeg/{prevFiles/prev_53bc0d_364cac_libswscale#utils.c,revFiles/53bc0d_364cac_libswscale#utils.c}: sws_getContext)
+// False positives: (FFmpeg/revFiles/53bc0d_364cac_libswscale#utils.c: sws_getContext)
+// Recall: 0.23, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

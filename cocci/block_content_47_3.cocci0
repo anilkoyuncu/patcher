@@ -1,0 +1,22 @@
+@@
+identifier I4, I5;
+expression E2, E1, E0, E3;
+@@
+- E0 = E1; 
+- if (E0 == NULL)  
++ E0 = memdup_user(E2, E3); 
++ if (IS_ERR(E0))  
+  {
+- return -I4; 
++ return PTR_ERR(E0); 
+  }
+- if (copy_from_user(E0, E2, E3))  
+- {
+- kfree(E0); 
+- return -I5; 
+- }
+// Infered from: (linux/{prevFiles/prev_042604_c146fc_net#dccp#proto.c,revFiles/042604_c146fc_net#dccp#proto.c}: dccp_setsockopt_ccid), (linux/{prevFiles/prev_f1c2e3_35a56c_drivers#i2c#i2c-dev.c,revFiles/f1c2e3_35a56c_drivers#i2c#i2c-dev.c}: i2cdev_write), (linux/{prevFiles/prev_7d543d_2a800b_drivers#ide#ide-taskfile.c,revFiles/7d543d_2a800b_drivers#ide#ide-taskfile.c}: ide_taskfile_ioctl)
+// False positives: (linux/revFiles/f1c2e3_35a56c_drivers#i2c#i2c-dev.c: i2cdev_ioctl_rdrw)
+// Recall: 0.73, Precision: 0.75, Matching recall: 0.73
+
+// ---------------------------------------------

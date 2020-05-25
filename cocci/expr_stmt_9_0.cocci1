@@ -1,0 +1,10 @@
+@@
+expression E1, E2, E0;
+@@
+- filter_chain_Reset (E0, E1, E2); 
++ filter_chain_Reset (E0, E2, E2); 
+// Infered from: (vlc/{prevFiles/prev_291e63_d3b5af_modules#stream_out#transcode.c,revFiles/291e63_d3b5af_modules#stream_out#transcode.c}: transcode_video_process)
+// False positives: (vlc/revFiles/291e63_d3b5af_modules#stream_out#transcode.c: transcode_audio_new)
+// Recall: 0.05, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

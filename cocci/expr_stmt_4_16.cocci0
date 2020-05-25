@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->timeout.tv_sec = -1; 
++ E0->timeout.tv_sec = 60; 
+// Infered from: (php-src/{prevFiles/prev_1027dfc_ea6ed5_main#network.c,revFiles/1027dfc_ea6ed5_main#network.c}: _php_stream_sock_open_from_socket)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

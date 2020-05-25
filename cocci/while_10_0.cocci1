@@ -1,0 +1,31 @@
+@@
+expression E0, E1, E2;
+@@
+- while (E0 >= 0 && E1++ < E2)  
++ while (E0 >= 0 && E1 < E2)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_3bd373_4d0021_libarchive#archive_read_support_format_zip.c,revFiles/3bd373_4d0021_libarchive#archive_read_support_format_zip.c}: compression_name)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.36, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_5266ed_528f1c_bindings#python#vlc_mediadescriptor.c: vlcMediaDescriptor_get_meta
+ - libarchive/prevFiles/prev_3bd373_4d0021_libarchive#archive_read_support_format_zip.c: compression_name
+*/
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_c3c856_796424_src#rdb.c: rdbLoadObject
+*/
+
+// ---------------------------------------------

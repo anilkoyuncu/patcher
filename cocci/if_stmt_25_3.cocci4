@@ -1,0 +1,33 @@
+@@
+expression E0;
+@@
+- if ((E0->extradata_size >= 9 && !memcmp(E0->extradata + E0->extradata_size - 9,  "BottomUp", 9)) || E0->codec_tag == MKTAG(  3, 0, 0, 0))  
++ if ((E0->extradata_size >= 9 && !memcmp(E0->extradata + E0->extradata_size - 9,  "BottomUp", 9)) || E0->codec_tag == MKTAG(  3, 0, 0, 0) || E0->codec_tag == MKTAG('W', 'R', 'A', 'W'))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_040e1c_09525f_libavcodec#rawdec.c,revFiles/040e1c_09525f_libavcodec#rawdec.c}: raw_init_decoder), (FFmpeg/{prevFiles/prev_67e7dc_f082a0_libavcodec#rawdec.c,revFiles/67e7dc_f082a0_libavcodec#rawdec.c}: raw_init_decoder)
+// False positives: (FFmpeg/revFiles/36cbdc_48ff3f_libavcodec#rawdec.c: raw_init_decoder)
+// Recall: 0.21, Precision: 0.67, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 0.86
+// -- Node Change --
+// Recall: 0.63, Precision: 0.75
+// -- General --
+// Functions fully changed: 3/8(37%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_040e1c_09525f_libavcodec#rawdec.c: raw_init_decoder
+ - FFmpeg/prevFiles/prev_67e7dc_f082a0_libavcodec#rawdec.c: raw_init_decoder
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_83f028_0de215_libavcodec#rawdec.c: raw_decode
+ - FFmpeg/prevFiles/prev_36cbdc_48ff3f_libavcodec#rawdec.c: raw_init_decoder
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = E1 * (1 + (E2->i_samples * E3->fmt_out.audio.i_rate / E3->fmt_in.audio.i_rate)); 
++ E0 = E1 * (1 + (E2->i_samples * E3->fmt_out.audio.i_rate / E3->fmt_in.audio.i_rate)) + E3->p_sys->i_buf_size; 
+// Infered from: (vlc/{prevFiles/prev_2a9a44_6a6420_modules#audio_filter#resampler#bandlimited.c,revFiles/2a9a44_6a6420_modules#audio_filter#resampler#bandlimited.c}: Resample)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_396a6e_1a3a0a_libavcodec#ac3dec.c: ac3_parse_audio_block
+*/
+
+// ---------------------------------------------

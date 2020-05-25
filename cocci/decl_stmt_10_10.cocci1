@@ -1,0 +1,11 @@
+@@
+identifier I1;
+type T0;
+expression E2, E3, E4;
+@@
+- T0 *I1 = tvb_get_string(wmem_packet_scope(), E2, E3, E4); 
++ T0 *I1 = tvb_get_string_enc(wmem_packet_scope(), E2, E3, E4, ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-json.c,revFiles/971ffd_421d81_epan#dissectors#packet-json.c}: after_member), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-etsi_card_app_toolkit.c,revFiles/971ffd_421d81_epan#dissectors#packet-etsi_card_app_toolkit.c}: dissect_cat), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-isis-clv.c,revFiles/971ffd_421d81_epan#dissectors#packet-isis-clv.c}: isis_dissect_hostname_clv), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-mux27010.c,revFiles/971ffd_421d81_epan#dissectors#packet-mux27010.c}: getFrameInformation), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-telnet.c,revFiles/971ffd_421d81_epan#dissectors#packet-telnet.c}: dissect_comport_subopt)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

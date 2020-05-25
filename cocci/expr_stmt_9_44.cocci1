@@ -1,0 +1,22 @@
+@@
+@@
+- printf("%d", ans); 
++ printf("%d", ans * -1); 
+// Infered from: (codeflaws/{prevFiles/prev_34-B-17902339-17902341.c,revFiles/34-B-17902339-17902341.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.50
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_5ba8a2_97d27c_gdk#wayland#gdkkeys-wayland.c: gdk_wayland_keymap_add_virtual_modifiers
+*/
+
+// ---------------------------------------------

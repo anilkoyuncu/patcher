@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->meth)  
++ if (E0->meth == NULL)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_7c96db_07b3ce_crypto#dsa#dsa_lib.c,revFiles/7c96db_07b3ce_crypto#dsa#dsa_lib.c}: DSA_new_method), (openssl/{prevFiles/prev_7c96db_07b3ce_crypto#rsa#rsa_lib.c,revFiles/7c96db_07b3ce_crypto#rsa#rsa_lib.c}: RSA_new_method)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

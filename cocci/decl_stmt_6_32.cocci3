@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- char *I0 = (char *)malloc(100); 
++ char *I0; 
+// Infered from: (vlc/{prevFiles/prev_711b34_f22bfe_modules#codec#subsdec.c,revFiles/711b34_f22bfe_modules#codec#subsdec.c}: OpenDecoder)
+// False positives: (vlc/revFiles/bb0106_7e6fdd_modules#codec#subsdec.c: OpenDecoder)
+// Recall: 0.17, Precision: 0.50, Matching recall: 0.20
+
+// ---------------------------------------------

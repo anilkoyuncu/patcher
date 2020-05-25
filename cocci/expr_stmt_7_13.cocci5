@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0.mv_ptr = &E1->mc_vectors[E2]; 
++ E0.mv_ptr = &E1->mc_vectors[E2 << 1]; 
+// Infered from: (FFmpeg/{prevFiles/prev_4b7fa5_ff80c6_libavcodec#indeo3.c,revFiles/4b7fa5_ff80c6_libavcodec#indeo3.c}: parse_bintree)
+// False positives: (FFmpeg/revFiles/33a183_56ffa3_libavcodec#indeo3.c: parse_bintree)
+// Recall: 0.04, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

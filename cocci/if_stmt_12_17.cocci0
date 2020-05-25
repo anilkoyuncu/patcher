@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->avf)  
++ if (!E0->avf || !E0->avf->pb)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_2b2029_e371f0_libavformat#segment.c,revFiles/2b2029_e371f0_libavformat#segment.c}: seg_write_packet)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

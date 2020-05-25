@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+typedef gchar;
+typedef guint;
+@@
+- E0 = wmem_strdup_printf(NULL, "\"%s\",\"%s\",\"%s\",\"%s\",\"\"", E1[  0], E1[1], E1[2], E1[3]); 
++ gchar *path = uat_esc(E1[3], (guint )strlen(E1[3])); 
++ E0 = wmem_strdup_printf(NULL, "\"%s\",\"%s\",\"%s\",\"%s\",\"\"", E1[  0], E1[1], E1[2], path); 
++ g_free(path); 
+// Infered from: (wireshark/{prevFiles/prev_170def_09ae05_epan#dissectors#packet-dtls.c,revFiles/170def_09ae05_epan#dissectors#packet-dtls.c}: dtls_parse_old_keys)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.88, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_170def_09ae05_epan#dissectors#packet-ssl.c: ssl_parse_old_keys
+*/
+
+// ---------------------------------------------

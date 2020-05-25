@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef uint64_t;
+@@
+- uint64_t I0 = E1->p_sys->skeleton.i_index_intvl * 1000; 
++ uint64_t I0 = (uint64_t )E1->p_sys->skeleton.i_index_intvl * 1000; 
+// Infered from: (vlc/{prevFiles/prev_85f92c_aacb2a_modules#mux#ogg.c,revFiles/85f92c_aacb2a_modules#mux#ogg.c}: AllocateIndex)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

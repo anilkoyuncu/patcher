@@ -1,0 +1,24 @@
+@@
+identifier I0, I1, I2, I3, I6, I9, I11;
+expression E4, E5, E7, E8, E10, E12, E13, E14, E15, E16;
+typedef cairo_rectangle_int_t;
+@@
+- cairo_rectangle_int_t *I0 = NULL; 
+- cairo_rectangle_int_t *I1 = NULL; 
++ cairo_rectangle_int_t mask; 
+  ...
+- I2.I3 = E4 - E5; 
+- I2.I6 = E7 - E8; 
+- I2.I9 = E10; 
+- I2.I11 = E12; 
+- I1 = &I2; 
+- return _cairo_surface_composite_fixup_unbounded_internal(E13, I0, I1, E4, E7,  E14, E15, E16); 
++ mask.I3 = E4 - E5; 
++ mask.I6 = E7 - E8; 
++ mask.I9 = E10; 
++ mask.I11 = E12; 
++ return _cairo_surface_composite_fixup_unbounded_internal(E13, src, &mask, E4,  E7, E14, E15, E16); 
+// Infered from: (cairo/{prevFiles/prev_e00d06_378b1e7_src#cairo-surface.c,revFiles/e00d06_378b1e7_src#cairo-surface.c}: _cairo_surface_composite_fixup_unbounded_internal), (cairo/{prevFiles/prev_e00d06_378b1e7_src#cairo-surface.c,revFiles/e00d06_378b1e7_src#cairo-surface.c}: _cairo_surface_composite_shape_fixup_unbounded)
+// Recall: 0.64, Precision: 1.00, Matching recall: 0.78
+
+// ---------------------------------------------

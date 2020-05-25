@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- E0->rt_list = g_slist_insert_sorted(E0->rt_list, E1, compare_doubles); 
++ E0->rt_list = g_slist_prepend(E0->rt_list, E1); 
+// Infered from: (wireshark/{prevFiles/prev_d986c6_a9ce06_ui#cli#tap-icmpv6stat.c,revFiles/d986c6_a9ce06_ui#cli#tap-icmpv6stat.c}: icmpv6stat_packet), (wireshark/{prevFiles/prev_d986c6_a9ce06_ui#cli#tap-icmpstat.c,revFiles/d986c6_a9ce06_ui#cli#tap-icmpstat.c}: icmpstat_packet)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_d986c6_a9ce06_ui#cli#tap-icmpv6stat.c: compute_stats
+ - wireshark/prevFiles/prev_d986c6_a9ce06_ui#cli#tap-icmpstat.c: compute_stats
+*/
+
+// ---------------------------------------------

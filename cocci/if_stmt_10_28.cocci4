@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((*E0 == *E1) && (memcmp(E1, E0, (size_t )E2) == 0))  
++ if ((*E0 == *E1) && (memcmp(E1, E0, (size_t )E2 + 1) == 0))  
+  {
+  ...
+  }
+// Infered from: (tcl/{prevFiles/prev_974a49_718ed7_generic#tclIO.c,revFiles/974a49_718ed7_generic#tclIO.c}: Tcl_IsChannelExisting)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

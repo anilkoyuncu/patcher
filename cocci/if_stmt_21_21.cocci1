@@ -1,0 +1,19 @@
+@@
+expression E3, E0, E1, E2;
+@@
+- E0 = proto_tree_add_protocol_format(E1, proto_fw1, E2, 0, ETH_HEADER_SIZE, E3); 
++ E0 = proto_tree_add_protocol_format(E1, proto_fw1, E2, 0, ETH_HEADER_SIZE,  "%s", E3); 
+// Infered from: (wireshark/{prevFiles/prev_7976c4_1f4873_epan#dissectors#packet-fw1.c,revFiles/7976c4_1f4873_epan#dissectors#packet-fw1.c}: dissect_fw1), (wireshark/{prevFiles/prev_7976c4_1f4873_epan#dissectors#packet-fw1.c,revFiles/7976c4_1f4873_epan#dissectors#packet-fw1.c}: dissect_fw1)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef guint32;
+@@
+- wmem_map_insert(E0->channels, GUINT_TO_POINTER(E1), E2); 
++ wmem_map_insert(E0->channels, GUINT_TO_POINTER((guint32 )E1), E2); 
+// Infered from: (wireshark/{prevFiles/prev_c7d98e1_6d7b29_epan#dissectors#packet-amqp.c,revFiles/c7d98e1_6d7b29_epan#dissectors#packet-amqp.c}: get_conversation_channel)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

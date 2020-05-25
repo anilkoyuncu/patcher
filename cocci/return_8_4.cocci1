@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return qemu_get_ram_ptr(E0->ram_addr); 
++ return qemu_get_ram_ptr(E0->ram_addr & TARGET_PAGE_MASK); 
+// Infered from: (qemu/{prevFiles/prev_021d26_950c67_memory.c,revFiles/021d26_950c67_memory.c}: memory_region_get_ram_ptr)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

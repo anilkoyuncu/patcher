@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (!(E0 = E1))  
++ if (!E1)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_0c598a9_5388b8_plugins#mate#mate_runtime.c,revFiles/0c598a9_5388b8_plugins#mate#mate_runtime.c}: analyze_gop), (wireshark/{prevFiles/prev_60ff53_43851d_epan#dissectors#packet-agentx.c,revFiles/60ff53_43851d_epan#dissectors#packet-agentx.c}: dissect_object_id)
+// False positives: (FFmpeg/revFiles/aa4782_2ecf94_cmdutils.c: get_codecs_sorted), (FFmpeg/revFiles/aa4782_2ecf94_cmdutils.c: opt_default), (wireshark/revFiles/0c598a9_5388b8_plugins#mate#mate_runtime.c: analyze_pdu), (wireshark/revFiles/92a02a_ad1486_epan#gcp.c: gcp_ctx)
+// Recall: 0.06, Precision: 0.33, Matching recall: 0.50
+
+// ---------------------------------------------

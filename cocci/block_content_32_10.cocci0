@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E1;
+@@
+- size_t I0 = 14 + 4 * E1; 
++ size_t I0; 
+  ...
+- if (I0 > PY_SSIZE_T_MAX || I0 / 4 - 3 != E1)  
++ if (E1 > (PY_SSIZE_T_MAX - 14) / 4)  
+  {
+  ...
+  }
++ I0 = 14 + 4 * E1; 
+// Infered from: (cpython/{prevFiles/prev_2d7911_ac5685_Objects#bytearrayobject.c,revFiles/2d7911_ac5685_Objects#bytearrayobject.c}: bytearray_repr), (cpython/{prevFiles/prev_66f575_4e5112_Objects#bytearrayobject.c,revFiles/66f575_4e5112_Objects#bytearrayobject.c}: bytearray_repr), (cpython/{prevFiles/prev_5a41a4_db01a3_Objects#bytearrayobject.c,revFiles/5a41a4_db01a3_Objects#bytearrayobject.c}: bytearray_repr), (cpython/{prevFiles/prev_a92096_71e38f_Objects#bytearrayobject.c,revFiles/a92096_71e38f_Objects#bytearrayobject.c}: bytes_repr)
+// Recall: 0.56, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

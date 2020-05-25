@@ -1,0 +1,32 @@
+@@
+expression E0, E1;
+@@
+- add_place(E0, PLACES_OTHER_LOCATIONS, SECTION_OTHER_LOCATIONS,  _("Other Locations"), E1, NULL, NULL, NULL, NULL, 0,  _("Show other locations")); 
++ add_place(E0, PLACES_OTHER_LOCATIONS, SECTION_OTHER_LOCATIONS,  _("Other Locations"), E1, "other-locations:///", NULL, NULL, NULL,  0, _("Show other locations")); 
+// Infered from: (gtk/{prevFiles/prev_88edad_24174e_gtk#gtkplacessidebar.c,revFiles/88edad_24174e_gtk#gtkplacessidebar.c}: update_places)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.23, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/13(23%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_698c03b_77ecf14_drivers#input#joystick#xpad.c: 
+ - linux/prevFiles/prev_698c03b_77ecf14_drivers#input#touchscreen#usbtouchscreen.c: 
+ - linux/prevFiles/prev_698c03b_77ecf14_drivers#input#tablet#acecad.c: 
+ - php-src/prevFiles/prev_56a821_716139_ext#standard#string.c: 
+ - linux/prevFiles/prev_698c03b_77ecf14_drivers#input#misc#yealink.c: 
+ - linux/prevFiles/prev_698c03b_77ecf14_drivers#input#tablet#kbtab.c: 
+ - linux/prevFiles/prev_698c03b_77ecf14_drivers#input#tablet#hanwang.c: 
+ - vlc/prevFiles/prev_f84b1d_ae51373_modules#demux#mjpeg.c: 
+ - linux/prevFiles/prev_698c03b_77ecf14_drivers#input#misc#keyspan_remote.c: 
+ - linux/prevFiles/prev_698c03b_77ecf14_drivers#input#tablet#aiptek.c: 
+*/
+
+// ---------------------------------------------

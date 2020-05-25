@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->frame_rate = (float )E1->time_base.num / E1->time_base.den; 
++ E0->frame_rate = (float )E1->time_base.den / E1->time_base.num; 
+// Infered from: (FFmpeg/{prevFiles/prev_a918f1_7a6bd5_libavcodec#vaapi_encode_mpeg2.c,revFiles/a918f1_7a6bd5_libavcodec#vaapi_encode_mpeg2.c}: vaapi_encode_mpeg2_init_sequence_params)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

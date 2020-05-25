@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- curl_easy_setopt(E0, CURLOPT_ENCODING, "gzip, deflate"); 
++ curl_easy_setopt(E0, CURLOPT_ACCEPT_ENCODING, ""); 
+// Infered from: (curl/{prevFiles/prev_db239c_179927_docs#examples#crawler.c,revFiles/db239c_179927_docs#examples#crawler.c}: make_handle)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

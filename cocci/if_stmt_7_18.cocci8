@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- failf(E0, "Error reading private key %s - mbedTLS: (-0x%04X) %s",  E0->set.str[STRING_KEY], -E1, E2); 
++ failf(E0, "Error reading private key %s - mbedTLS: (-0x%04X) %s",  E0->set.str[STRING_KEY_ORIG], -E1, E2); 
+// Infered from: (curl/{prevFiles/prev_8cb872_cb4e2b_lib#vtls#mbedtls.c,revFiles/8cb872_cb4e2b_lib#vtls#mbedtls.c}: mbed_connect_step1)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.06
+
+// ---------------------------------------------

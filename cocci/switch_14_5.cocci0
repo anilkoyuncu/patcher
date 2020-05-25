@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- E0.i_width = E0.i_visible_width = E1->output.i_width; 
+- ...
+- E0.i_chroma = E1->output.i_chroma; 
+- ...
+- E0.i_sar_den = VOUT_ASPECT_FACTOR; 
++ E0 = E1->fmt_out; 
+// Infered from: (vlc/{prevFiles/prev_a5f23e_bc9929_modules#video_filter#deinterlace.c,revFiles/a5f23e_bc9929_modules#video_filter#deinterlace.c}: SpawnRealVout)
+// Recall: 0.47, Precision: 1.00, Matching recall: 0.57
+
+// ---------------------------------------------

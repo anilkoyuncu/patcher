@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- av_dlog(E0, "is_table_lsf %d %d: %x %x\n", E1, E2, is_table_lsf[E2][0][  E1], is_table_lsf[E2][1][E1]); 
++ av_dlog(E0, "is_table_lsf %d %d: %f %f\n", E1, E2,  (float )is_table_lsf[E2][0][E1], (float )is_table_lsf[E2][1][  E1]); 
+// Infered from: (FFmpeg/{prevFiles/prev_bde2c1_f3aa65_libavcodec#mpegaudiodec.c,revFiles/bde2c1_f3aa65_libavcodec#mpegaudiodec.c}: decode_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

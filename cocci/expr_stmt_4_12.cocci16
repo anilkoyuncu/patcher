@@ -1,0 +1,52 @@
+@@
+expression E0, E1;
+@@
+- OBJ_RETAIN(E0); 
+- E1 = E0; 
++ OBJ_RETAIN(*E0); 
++ *E1 = *E0; 
+// Infered from: (ompi/{prevFiles/prev_309e23_59b6d0_orte#mca#iof#base#iof_base_setup.c,revFiles/309e23_59b6d0_orte#mca#iof#base#iof_base_setup.c}: orte_iof_base_setup_output_files)
+// False positives: (ompi/revFiles/309e23_59b6d0_orte#mca#iof#base#iof_base_setup.c: orte_iof_base_setup_output_files)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 17 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.86
+// -- Node Change --
+// Recall: 0.69, Precision: 0.77
+// -- General --
+// Functions fully changed: 19/40(47%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_d3fce4_7372ea_builtin#rebase.c: finish_rebase
+ - ompi/prevFiles/prev_311efa_22c7f2_orte#mca#pls#bproc#pls_bproc.c: orte_pls_bproc_launch_daemons
+*/
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_669-A-17827358-17827365.c: main
+ - FFmpeg/prevFiles/prev_423f5d_cdce9e_libavformat#mov.c: mov_read_enda
+ - ompi/prevFiles/prev_311efa_22c7f2_orte#mca#pls#bproc#pls_bproc.c: orte_pls_bproc_waitpid_daemon_cb
+ - FFmpeg/prevFiles/prev_8aa6d8_16ef48_libavformat#cafdec.c: read_seek
+ - codeflaws/prevFiles/prev_342-C-4429282-4430562.c: main
+ - php-src/prevFiles/prev_53ca64_31632b_main#output.c: php_output_handler_started
+ - cpython/prevFiles/prev_7d7e77_1b1fe9_Modules#_io#textio.c: 
+ - gtk/prevFiles/prev_8316ec_389535_gtk#gtkcenterbox.c: gtk_center_box_distribute
+ - qemu/prevFiles/prev_ca7162_65d81e_hw#usb#hcd-xhci.c: xhci_init_epctx
+ - git/prevFiles/prev_d3fce4_7372ea_builtin#rebase.c: cmd_rebase
+ - qemu/prevFiles/prev_922044_0a97c4_hw#intc#arm_gicv3_common.c: arm_gicv3_common_realize
+ - codeflaws/prevFiles/prev_151-A-17894633-17894687.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_309e23_59b6d0_orte#mca#iof#base#iof_base_setup.c: orte_iof_base_setup_output_files
+ - curl/prevFiles/prev_668231_cb6a07_lib#inet_pton.c: inet_pton6
+ - FFmpeg/prevFiles/prev_8aa6d8_16ef48_libavformat#cafdec.c: read_desc_chunk
+ - FFmpeg/prevFiles/prev_423f5d_cdce9e_libavformat#mov.c: mov_build_index
+ - curl/prevFiles/prev_618dfd_1f1f13_lib#inet_pton.c: inet_pton6
+ - FFmpeg/prevFiles/prev_8aa6d8_16ef48_libavformat#cafdec.c: read_header
+ - FFmpeg/prevFiles/prev_423f5d_cdce9e_libavformat#mov.c: mov_read_header
+*/
+
+// ---------------------------------------------

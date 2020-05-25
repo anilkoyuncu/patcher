@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- col_append_fstr(E0->cinfo, COL_INFO, E1, I2); 
++ col_append_fstr(E0->cinfo, COL_INFO, E1, keyx_t); 
+// Infered from: (wireshark/{prevFiles/prev_f8e382_09868c_epan#dissectors#packet-dcerpc-rs_acct.c,revFiles/f8e382_09868c_epan#dissectors#packet-dcerpc-rs_acct.c}: rs_acct_dissect_lookup_rqst), (wireshark/{prevFiles/prev_f8e382_09868c_epan#dissectors#packet-dcerpc-rs_acct.c,revFiles/f8e382_09868c_epan#dissectors#packet-dcerpc-rs_acct.c}: rs_acct_dissect_get_projlist_rqst)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

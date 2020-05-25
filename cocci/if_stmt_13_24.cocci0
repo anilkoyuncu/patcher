@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (var_Type(E0, E1))  
++ if (var_Type(E0, E1) || config_GetType(E1) == 0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_fcfe30_d5ec27_src#misc#filter.c,revFiles/fcfe30_d5ec27_src#misc#filter.c}: filter_AddProxyCallbacks)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

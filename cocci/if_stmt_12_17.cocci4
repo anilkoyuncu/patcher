@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0->req.httpcode != 401) && (E0->req.httpcode != 407))  
++ if ((E0->req.httpcode != 401) && (E0->req.httpcode != 407) && !E0->set.connect_only)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_c2b3f2_e24e1c_lib#http.c,revFiles/c2b3f2_e24e1c_lib#http.c}: Curl_http_done)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

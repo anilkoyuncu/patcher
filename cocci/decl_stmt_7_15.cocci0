@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- char I0[256]; 
++ char I0[MAX_LONG_DOUBLE_CHARS]; 
+// Infered from: (redis/{prevFiles/prev_b0c8d6_b27032_src#util.c,revFiles/b0c8d6_b27032_src#util.c}: string2ld)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->state)  
++ if (E0->state && E0->state->status == 0)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_60d508_cd358e_src#http#modules#ngx_http_uwsgi_module.c,revFiles/60d508_cd358e_src#http#modules#ngx_http_uwsgi_module.c}: ngx_http_uwsgi_process_status_line), (nginx/{prevFiles/prev_60d508_cd358e_src#http#modules#ngx_http_uwsgi_module.c,revFiles/60d508_cd358e_src#http#modules#ngx_http_uwsgi_module.c}: ngx_http_uwsgi_process_header), (nginx/{prevFiles/prev_60d508_cd358e_src#http#modules#ngx_http_proxy_module.c,revFiles/60d508_cd358e_src#http#modules#ngx_http_proxy_module.c}: ngx_http_proxy_process_status_line), (nginx/{prevFiles/prev_60d508_cd358e_src#http#modules#ngx_http_scgi_module.c,revFiles/60d508_cd358e_src#http#modules#ngx_http_scgi_module.c}: ngx_http_scgi_process_status_line), (nginx/{prevFiles/prev_60d508_cd358e_src#http#modules#ngx_http_scgi_module.c,revFiles/60d508_cd358e_src#http#modules#ngx_http_scgi_module.c}: ngx_http_scgi_process_header), (nginx/{prevFiles/prev_60d508_cd358e_src#http#modules#ngx_http_fastcgi_module.c,revFiles/60d508_cd358e_src#http#modules#ngx_http_fastcgi_module.c}: ngx_http_fastcgi_process_header)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

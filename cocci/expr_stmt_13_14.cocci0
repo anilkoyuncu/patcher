@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1].decrtime = to_16bit_minutes(E2); 
++ E0[E1].decrtime = to_16bit_minutes(time(NULL)); 
+// Infered from: (redis/{prevFiles/prev_fc92c6_f50dc3_utils#lru#lfu-simulation.c,revFiles/fc92c6_f50dc3_utils#lru#lfu-simulation.c}: main)
+// False positives: (redis/revFiles/fc92c6_f50dc3_utils#lru#lfu-simulation.c: main)
+// Recall: 0.25, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

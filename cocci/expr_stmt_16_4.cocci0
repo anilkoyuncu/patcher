@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = of_property_read_u32(E1->flash_node, "brcm,nand-oob-sector-size", &E2); 
++ E0 = of_property_read_u32(nand_get_flash_node(E1),  "brcm,nand-oob-sector-size", &E2); 
+// Infered from: (linux/{prevFiles/prev_44ec23c_8361a9_drivers#mtd#nand#brcmnand#brcmnand.c,revFiles/44ec23c_8361a9_drivers#mtd#nand#brcmnand#brcmnand.c}: brcmnand_setup_dev)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

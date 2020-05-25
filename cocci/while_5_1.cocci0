@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (isspace(E0[0]))  
++ while (g_ascii_isspace(E0[0]))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_63ab36_23b233_ui#time_shift.c,revFiles/63ab36_23b233_ui#time_shift.c}: time_string_parse)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

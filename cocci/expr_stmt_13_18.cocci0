@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E1, E0;
+@@
+- tvb_memcpy(E0, E1, I2 + FDDI_PADDING, sizeof(E1)); 
++ tvb_memcpy(E0, E1, I2 + FDDI_PADDING, 6); 
+// Infered from: (wireshark/{prevFiles/prev_f2bede_aa9376_epan#dissectors#packet-fddi.c,revFiles/f2bede_aa9376_epan#dissectors#packet-fddi.c}: dissect_fddi), (wireshark/{prevFiles/prev_f2bede_aa9376_epan#dissectors#packet-fddi.c,revFiles/f2bede_aa9376_epan#dissectors#packet-fddi.c}: dissect_fddi)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

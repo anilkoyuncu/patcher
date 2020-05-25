@@ -1,0 +1,9 @@
+@@
+expression E2, E0, E1;
+@@
+- nstime_delta(&E0, &E1->fd->abs_ts, &E2->req_time); 
++ nstime_delta(&E0, &E1->abs_ts, &E2->req_time); 
+// Infered from: (wireshark/{prevFiles/prev_21ac67_9141bd_asn1#ldap#packet-ldap-template.c,revFiles/21ac67_9141bd_asn1#ldap#packet-ldap-template.c}: ldap_match_call_response), (wireshark/{prevFiles/prev_21ac67_9141bd_asn1#ros#packet-ros-template.c,revFiles/21ac67_9141bd_asn1#ros#packet-ros-template.c}: ros_match_call_response)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

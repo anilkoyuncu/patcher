@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return E0 ? 1 :0; 
++ return *E0 ? 1 :0; 
+// Infered from: (cpython/{prevFiles/prev_e2061d_cce226_Modules#_ctypes#_ctypes.c,revFiles/e2061d_cce226_Modules#_ctypes#_ctypes.c}: _get_name)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,18 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 == 0)  
++ if (E0 == 0)  
+  {
+- printf("The order of %d is: %d", E1, E2); 
++ printf("%d", E2); 
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_535-B-11452824-11452828.c,revFiles/535-B-11452824-11452828.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

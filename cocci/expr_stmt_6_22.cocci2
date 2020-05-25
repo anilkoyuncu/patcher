@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (E1 & ZIP_FL_NOCASE) ? strcasecmp :strcmp; 
++ E0 = (E1 & ZIP_FL_NOCASE) ? strcmpi :strcmp; 
+// Infered from: (php-src/{prevFiles/prev_e88389_b8cdc7_ext#zip#lib#zip_name_locate.c,revFiles/e88389_b8cdc7_ext#zip#lib#zip_name_locate.c}: _zip_name_locate)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

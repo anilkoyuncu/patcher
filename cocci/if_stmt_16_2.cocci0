@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!(E0->s_flags & MS_RDONLY))  
++ if (!sb_rdonly(E0))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_bc98a4_94e92e_fs#jffs2#wbuf.c,revFiles/bc98a4_94e92e_fs#jffs2#wbuf.c}: delayed_wbuf_sync)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

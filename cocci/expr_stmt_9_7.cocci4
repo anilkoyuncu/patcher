@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- memcpy(&E0[E1], E2[E3], E4); 
++ memcpy(&E0->data[E1], E2[E3], E4); 
+// Infered from: (vlc/{prevFiles/prev_422ce4_383e0c_src#misc#win32_specific.c,revFiles/422ce4_383e0c_src#misc#win32_specific.c}: system_Configure)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

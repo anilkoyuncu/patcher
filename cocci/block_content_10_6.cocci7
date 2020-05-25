@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+typedef gfloat;
+@@
+- double I0 = 0.0; 
++ gfloat I0 = 0.0; 
+  ...
+- I0 = nstime_to_sec(&E1); 
++ I0 = (gfloat )nstime_to_sec(&E1); 
+// Infered from: (wireshark/{prevFiles/prev_5bbb6f_99873f7_epan#dissectors#packet-rpc.c,revFiles/5bbb6f_99873f7_epan#dissectors#packet-rpc.c}: rpc_prog_stat_packet)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

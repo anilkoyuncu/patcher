@@ -1,0 +1,11 @@
+@@
+expression E1, E0;
+@@
+- if (E0)  
+- {
+- avcodec_close(E1->codec); 
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_37ecd6_8710a6_libavformat#utils.c,revFiles/37ecd6_8710a6_libavformat#utils.c}: ff_free_stream)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

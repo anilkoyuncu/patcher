@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- PyMem_DEL(E0.text); 
++ PyObject_FREE(E0.text); 
+// Infered from: (cpython/{prevFiles/prev_2c4e4f_65c05b_Parser#pgenmain.c,revFiles/2c4e4f_65c05b_Parser#pgenmain.c}: getgrammar)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_2c4e4f_65c05b_Parser#pgenmain.c: PyOS_Readline
+*/
+
+// ---------------------------------------------

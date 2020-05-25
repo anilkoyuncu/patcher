@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ID3Parse(E0, E1->i_stream_offset, ID3TAG_Parse_Handler); 
++ ID3Parse(E0, ID3TAG_Parse_Handler); 
+// Infered from: (vlc/{prevFiles/prev_c5687c_65c9ae_modules#demux#mpeg#es.c,revFiles/c5687c_65c9ae_modules#demux#mpeg#es.c}: MpgaInit)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

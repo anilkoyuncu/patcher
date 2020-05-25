@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- orte_pointer_array_init(&apps_pa, 1, E0 + 1, 2); 
++ orte_pointer_array_init(&apps_pa, 1, INT_MAX, 2); 
+// Infered from: (ompi/{prevFiles/prev_08db67c_f60920_orte#tools#orterun#orterun.c,revFiles/08db67c_f60920_orte#tools#orterun#orterun.c}: parse_locals)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_08db67c_f60920_orte#tools#orterun#orterun.c: parse_appfile
+*/
+
+// ---------------------------------------------

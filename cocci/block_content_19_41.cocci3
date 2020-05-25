@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2;
+typedef uint64_t;
+@@
+- av_frac_add(&E0->next_pts, E1->pts_den * E2 / (2 * E0->st->codec.channels)); 
++ av_frac_add(&E0->next_pts,  (uint64_t )E1->pts_den * E2 / (2 * E0->st->codec.channels)); 
+// Infered from: (FFmpeg/{prevFiles/prev_fd0f45_3f4185_ffmpeg.c,revFiles/fd0f45_3f4185_ffmpeg.c}: av_encode)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

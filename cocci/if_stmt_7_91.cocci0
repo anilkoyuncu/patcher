@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->op1_type == IS_UNUSED && E1->scope && (E0->op1.num & ZEND_FETCH_CLASS_SELF))  
++ if (E0->op1_type == IS_UNUSED && E1->scope && (E0->op1.num & ZEND_FETCH_CLASS_MASK) == ZEND_FETCH_CLASS_SELF)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_b867bd_556827_ext#opcache#Optimizer#optimize_func_calls.c,revFiles/b867bd_556827_ext#opcache#Optimizer#optimize_func_calls.c}: zend_optimize_func_calls)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

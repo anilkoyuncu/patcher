@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- struct curl_slist *I0 = E1 ? (struct curl_slist *)E2 :va_arg(E3,  struct curl_slist *); 
++ struct curl_slist *I0 = E1 ? (struct curl_slist *)(void *)E2 :va_arg(  E3, struct curl_slist *); 
+// Infered from: (curl/{prevFiles/prev_119037_710bb8_lib#formdata.c,revFiles/119037_710bb8_lib#formdata.c}: FormAdd)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,38 @@
+@@
+identifier I0;
+@@
+- if (I0 != NULL)  
++ if (error_string != NULL)  
+  {
+- ...
+- g_free(I0); 
++ g_free(error_string); 
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_7e9418_10ffd1_gtk#main.c,revFiles/7e9418_10ffd1_gtk#main.c}: main), (wireshark/{prevFiles/prev_4a1b06_7e9418_tshark.c,revFiles/4a1b06_7e9418_tshark.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.45, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_7e9418_10ffd1_gtk#main.c: main
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_4a1b06_7e9418_tshark.c: main
+*/
+
+// ---------------------------------------------

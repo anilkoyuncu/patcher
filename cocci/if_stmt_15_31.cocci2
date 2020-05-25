@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->crs_sys_disable = 0; 
++ E0->crs_sys_disable = false; 
+// Infered from: (linux/{prevFiles/prev_3db1cd5_a8e510_drivers#net#wireless#b43#phy_lp.c,revFiles/3db1cd5_a8e510_drivers#net#wireless#b43#phy_lp.c}: lpphy_clear_deaf)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

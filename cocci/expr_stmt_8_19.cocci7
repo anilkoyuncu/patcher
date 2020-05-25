@@ -1,0 +1,16 @@
+@@
+expression E0, E1;
+@@
+- E0->rem_rung_list = av_realloc(E0->rem_rung_list,  E0->rung_list_size + RUNG_SPACE); 
+- if (!E0->rem_rung_list)  
++ E1->err = av_reallocp(&E0->rem_rung_list, E0->rung_list_size + RUNG_SPACE); 
++ if (E1->err < 0)  
+  {
+- av_free(E0->rem_rung_list); 
+- E1->err = AVERROR(ENOMEM); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_0bd040_144ce3_libavcodec#elsdec.c,revFiles/0bd040_144ce3_libavcodec#elsdec.c}: ff_els_decode_unsigned)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,54 @@
+@@
+identifier I1, I2;
+expression E0, E3;
+@@
+- E0->I1 = E0->I2 = E3 * FF_QP2LAMBDA; 
++ E0->I1 = E0->I2 = E3; 
+// Infered from: (vlc/{prevFiles/prev_02a7f8_292351_modules#codec#avcodec#encoder.c,revFiles/02a7f8_292351_modules#codec#avcodec#encoder.c}: OpenEncoder), (vlc/{prevFiles/prev_02a7f8_292351_modules#codec#avcodec#encoder.c,revFiles/02a7f8_292351_modules#codec#avcodec#encoder.c}: OpenEncoder)
+// False positives: (vlc/revFiles/02a7f8_292351_modules#codec#avcodec#encoder.c: OpenEncoder)
+// Recall: 0.06, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.21, Precision: 1.00
+// -- Node Change --
+// Recall: 0.21, Precision: 0.64
+// -- General --
+// Functions fully changed: 4/29(13%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_b84541_f38a0b_tests#libqos#pci-spapr.c: qpci_init_spapr
+*/
+/*
+Functions where the patch did not apply:
+ - gstreamer/prevFiles/prev_b4b386_a1549d_gst#gstpad.c: gst_pad_can_link
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#gtkviewport.c: gtk_viewport_realize
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#gtkstack.c: gtk_stack_realize
+ - codeflaws/prevFiles/prev_190-A-12987931-12987965.c: main
+ - ompi/prevFiles/prev_9efbec_dbd282_ompi#mca#btl#portals#btl_portals.c: mca_btl_portals_alloc
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#gtkoverlay.c: gtk_overlay_create_child_window
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#gtkscrolledwindow.c: create_indicator_window
+ - FFmpeg/prevFiles/prev_63eb01_e83393_libavformat#oggparsevorbis.c: vorbis_packet
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#gtkrevealer.c: gtk_revealer_real_realize
+ - ompi/prevFiles/prev_8c9dc99_994127_ompi#mca#btl#ugni#btl_ugni_component.c: btl_ugni_component_register
+ - lighttpd1.4/prevFiles/prev_b2ee4b_0a0336_src#fdevent_linux_sysepoll.c: fdevent_linux_sysepoll_event_add
+ - wireshark/prevFiles/prev_093885_490be8_epan#dissectors#packet-dhcpv6.c: dissect_cablelabs_specific_opts
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#deprecated#gtkmisc.c: gtk_misc_realize
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#gtktextview.c: text_window_realize
+ - codeflaws/prevFiles/prev_46-A-14668797-14668859.c: main
+ - vlc/prevFiles/prev_2f7813_6883dc_modules#demux#avformat#demux.c: Demux
+ - gtk/prevFiles/prev_564789_38e40a_gtk#gtkscrolledwindow.c: scrolled_window_drag_update_cb
+ - wireshark/prevFiles/prev_33456f_6a16f1_epan#dissectors#packet-ieee80211-radio.c: dissect_wlan_radio_phdr
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#gtkpaned.c: gtk_paned_create_child_window
+ - qemu/prevFiles/prev_9da822_c640f2_hw#ide#core.c: ide_sector_start_dma
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#gtktextview.c: gtk_text_view_realize
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#gtkglarea.c: gtk_gl_area_realize
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_02a7f8_292351_modules#codec#avcodec#encoder.c: OpenEncoder
+*/
+
+// ---------------------------------------------

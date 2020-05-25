@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- lcg_seek(&E0->pink_state, (E1 - E2) << 1); 
++ lcg_seek(&E0->pink_state, (E1 - E2) * 2); 
+// Infered from: (FFmpeg/{prevFiles/prev_cdea02_c4a88f_libavcodec#ffwavesynth.c,revFiles/cdea02_c4a88f_libavcodec#ffwavesynth.c}: wavesynth_seek)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

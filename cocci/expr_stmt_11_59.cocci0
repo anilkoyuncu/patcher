@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 += E1->linesize[0] / 2 - E2->width; 
++ E0 += E1->linesize[0] / 2 - E2->width + (E2->width & 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_d391fe_0275b2_libavcodec#v210dec.c,revFiles/d391fe_0275b2_libavcodec#v210dec.c}: decode_frame)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

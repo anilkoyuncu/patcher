@@ -1,0 +1,35 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5;
+typedef proto_tree;
+@@
+  proto_tree *I0 = NULL; 
+  ...
+- E1 = proto_tree_add_bitmask(E2, E3, E4, hf_zbee_nwk_gp_fcf, ett_zbee_nwk_fcf,  E5, ENC_NA); 
++ E1 = proto_tree_add_bitmask(I0, E3, E4, hf_zbee_nwk_gp_fcf, ett_zbee_nwk_fcf,  E5, ENC_NA); 
+// Infered from: (wireshark/{prevFiles/prev_8e03c6_5829f5_epan#dissectors#packet-zbee-nwk-gp.c,revFiles/8e03c6_5829f5_epan#dissectors#packet-zbee-nwk-gp.c}: dissect_zbee_nwk_gp)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 0.83
+// -- Node Change --
+// Recall: 0.73, Precision: 0.89
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_8e03c6_5829f5_epan#dissectors#packet-zbee-nwk-gp.c: dissect_zbee_nwk_gp
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_c33491_209930_block.c: bdrv_commit
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_5480fa_efa014_src#audio_output#input.c: allocateUserChannelMixer
+*/
+
+// ---------------------------------------------

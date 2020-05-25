@@ -1,0 +1,12 @@
+@@
+identifier I0;
+@@
+- int I0; 
++ short I0; 
+  ...
+- I0 = INI_INT("sendmail_port"); 
++ I0 = (short )INI_INT("sendmail_port"); 
+// Infered from: (php-src/{prevFiles/prev_97cb10_f59cbb_win32#sendmail.c,revFiles/97cb10_f59cbb_win32#sendmail.c}: MailConnect)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

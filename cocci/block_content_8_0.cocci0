@@ -1,0 +1,14 @@
+@@
+identifier I1 = {AVI_ChunkRead ,memchr };
+expression E0, E2, E3, E4;
+@@
+- if (E0 = I1(E2, E3, E4))  
++ E0 = I1(E2, E3, E4); 
++ if (E0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_dbdf09_f0b348_modules#demux#avi#libavi.c,revFiles/dbdf09_f0b348_modules#demux#avi#libavi.c}: AVI_ChunkRead_list), (openssl/{prevFiles/prev_949ce1_8dee823_crypto#mem_clr.c,revFiles/949ce1_8dee823_crypto#mem_clr.c}: OPENSSL_cleanse)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

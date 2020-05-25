@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->p_sys->i_width = VOUT_WIDTH_DEFAULT; 
++ E0->p_sys->i_width = main_GetIntVariable(VOUT_WIDTH_VAR, VOUT_WIDTH_DEFAULT); 
+// Infered from: (vlc/{prevFiles/prev_420ec3_b8899c_plugins#sdl#vout_sdl.c,revFiles/420ec3_b8899c_plugins#sdl#vout_sdl.c}: vout_SDLCreate)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

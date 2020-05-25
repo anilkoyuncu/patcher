@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- recv(E0->fd, &E1, sizeof(E1), 0); 
++ recv(E0->fd, (char *)(&E1), sizeof(E1), 0); 
+// Infered from: (php-src/{prevFiles/prev_fdfc31_69ea7f_sapi#cgi#fastcgi.c,revFiles/fdfc31_69ea7f_sapi#cgi#fastcgi.c}: fcgi_close), (php-src/{prevFiles/prev_fdfc31_69ea7f_sapi#cgi#fastcgi.c,revFiles/fdfc31_69ea7f_sapi#cgi#fastcgi.c}: fcgi_close)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

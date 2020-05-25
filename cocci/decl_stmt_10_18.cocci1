@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef uint32_t;
+@@
+- uint32_t I0 = zend_start_live_range(CG(active_op_array), E1 + 1); 
++ uint32_t I0 = zend_start_live_range(CG(active_op_array), E1); 
+// Infered from: (php-src/{prevFiles/prev_2fab62_113516_Zend#zend_compile.c,revFiles/2fab62_113516_Zend#zend_compile.c}: zend_compile_encaps_list), (php-src/{prevFiles/prev_6445b3_113516_Zend#zend_compile.c,revFiles/6445b3_113516_Zend#zend_compile.c}: zend_compile_encaps_list)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef bool;
+@@
+- bool I0 = !(E1->loc[E2].sts & TPM_TIS_STS_VALID); 
++ bool need_irq = !(E1->loc[E2].sts & TPM_TIS_STS_VALID); 
+// Infered from: (qemu/{prevFiles/prev_29b558d_1897b2_hw#tpm#tpm_tis.c,revFiles/29b558d_1897b2_hw#tpm#tpm_tis.c}: tpm_tis_mmio_write_intern)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

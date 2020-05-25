@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- string_printf(E0, "> ]\n", E1, E2->name); 
++ string_printf(E0, "> ]\n"); 
+// Infered from: (php-src/{prevFiles/prev_5fdeb3_b0c0b7_ext#reflection#php_reflection.c,revFiles/5fdeb3_b0c0b7_ext#reflection#php_reflection.c}: _extension_ini_string), (php-src/{prevFiles/prev_5fdeb3_b0c0b7_Zend#zend_reflection_api.c,revFiles/5fdeb3_b0c0b7_Zend#zend_reflection_api.c}: _extension_ini_string)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

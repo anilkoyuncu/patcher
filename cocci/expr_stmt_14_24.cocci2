@@ -1,0 +1,20 @@
+@@
+expression E0, E1;
+typedef guint;
+@@
+- GST_INFO("Reading plugin failed after %d bytes", E0 - E1); 
++ GST_INFO("Reading plugin failed after %u bytes", (guint )(E0 - E1)); 
+// Infered from: (gstreamer/{prevFiles/prev_94bb0e_604279_gst#gstregistrychunks.c,revFiles/94bb0e_604279_gst#gstregistrychunks.c}: _priv_gst_registry_chunks_load_plugin)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

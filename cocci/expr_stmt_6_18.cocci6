@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0->field_select[0][0] = E0->picture_structure - 1; 
++ E0->field_select[0][0] = (E0->picture_structure - 1) & 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_9d1301_1c3260_libavcodec#mpeg12.c,revFiles/9d1301_1c3260_libavcodec#mpeg12.c}: mpeg_decode_slice)
+// False positives: (FFmpeg/revFiles/9d1301_1c3260_libavcodec#mpeg12.c: mpeg_decode_mb)
+// Recall: 0.06, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

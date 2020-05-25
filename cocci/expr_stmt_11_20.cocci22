@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "Guest image must be specified (using -kernel)\n"); 
++ error_report("Guest image must be specified (using -kernel)"); 
+// Infered from: (qemu/{prevFiles/prev_c0dbca_470bca_hw#arm#armv7m.c,revFiles/c0dbca_470bca_hw#arm#armv7m.c}: armv7m_load_kernel)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

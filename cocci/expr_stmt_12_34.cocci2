@@ -1,0 +1,11 @@
+@@
+type T1;
+expression E0;
+@@
+- memset(E0, 0, sizeof(T1 )); 
++ memset(E0, 0, sizeof(*E0)); 
+// Infered from: (php-src/{prevFiles/prev_7efbd7_94d6cb_ext#mysqlnd#mysqlnd_result.c,revFiles/7efbd7_94d6cb_ext#mysqlnd#mysqlnd_result.c}: mysqlnd_query_read_result_set_header), (linux/{prevFiles/prev_9e898f_aaa4e74_drivers#net#wireless#iwlwifi#mvm#rs.c,revFiles/9e898f_aaa4e74_drivers#net#wireless#iwlwifi#mvm#rs.c}: rs_rate_from_ucode_rate)
+// False positives: (linux/revFiles/9e898f_aaa4e74_drivers#net#wireless#iwlwifi#mvm#rs.c: rs_sta_dbgfs_scale_table_write), (linux/revFiles/bd9dc6_3ae707_drivers#staging#rtl8712#rtl871x_io.c: unregister_intf_hdl)
+// Recall: 0.29, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

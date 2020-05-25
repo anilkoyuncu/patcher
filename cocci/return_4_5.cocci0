@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return E0->audio_hw_buf_size - E0->audio_buf_index; 
++ return E0->audio_buf_size - E0->audio_buf_index; 
+// Infered from: (FFmpeg/{prevFiles/prev_b09b58_0cbff0_ffplay.c,revFiles/b09b58_0cbff0_ffplay.c}: audio_write_get_buf_size)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

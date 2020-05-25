@@ -1,0 +1,8 @@
+@@
+expression list E0;
+@@
+- return php_stream_filter_unregister_factory (E0); 
+// Infered from: (php-src/{prevFiles/prev_090e30_ccf515_ext#standard#string.c,revFiles/090e30_ccf515_ext#standard#string.c}: PHP_MSHUTDOWN_FUNCTION)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

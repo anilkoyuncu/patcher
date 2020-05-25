@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = zend_hash_str_find(HASH_OF(E1), "DISABLE_AUTHENTICATOR",  sizeof("DISABLE_AUTHENTICATOR") - 1)) != NULL)  
++ if ((E0 = zend_hash_str_find(Z_ARRVAL_P(E1), "DISABLE_AUTHENTICATOR",  sizeof("DISABLE_AUTHENTICATOR") - 1)) != NULL)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_ad4fa8_abf6a0_ext#imap#php_imap.c,revFiles/ad4fa8_abf6a0_ext#imap#php_imap.c}: php_imap_do_open)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

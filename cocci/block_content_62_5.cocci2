@@ -1,0 +1,21 @@
+@@
+identifier I1, I2;
+expression E3, E0, E4;
+@@
+- object_initialize(&E0->I1, sizeof(E0->I1), I2); 
+- object_property_add_child(E3, E4, OBJECT(&E0->I1), &error_abort); 
++ object_initialize_child(E3, E4, &E0->I1, sizeof(E0->I1), I2, &error_abort,  NULL); 
+// Infered from: (qemu/{prevFiles/prev_4eea9d_54f314_hw#riscv#sifive_u.c,revFiles/4eea9d_54f314_hw#riscv#sifive_u.c}: riscv_sifive_u_init)
+// Recall: 0.60, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

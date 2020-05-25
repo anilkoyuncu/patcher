@@ -1,0 +1,26 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+@@
+- float I0 = (E1 - E2) / (E3 - E4); 
++ float I0 = (float )(E1 - E2) / (E3 - E4); 
+// Infered from: (codeflaws/{prevFiles/prev_659-D-18135109-18135261.c,revFiles/659-D-18135109-18135261.c}: main)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.55, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/9(66%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_a07e9d_a30972_libswscale#rgb2rgb_template.c: yuvPlanartouyvy_c
+ - apr/prevFiles/prev_260ed0_eaa83a_test#testcond.c: pipe_producer_consumer
+ - FFmpeg/prevFiles/prev_a30972_cb65b3_libswscale#rgb2rgb_template.c: yuvPlanartoyuy2_c
+*/
+
+// ---------------------------------------------

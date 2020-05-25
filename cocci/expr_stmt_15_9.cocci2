@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0 = (char *)emalloc(E1->uncompressed_filesize + 1); 
++ E0 = (char *)safe_emalloc(1, E1->uncompressed_filesize, 1); 
+// Infered from: (php-src/{prevFiles/prev_158d8a_213119_ext#phar#tar.c,revFiles/158d8a_213119_ext#phar#tar.c}: phar_tar_process_metadata), (php-src/{prevFiles/prev_fa05f0_a331f4_ext#phar#tar.c,revFiles/fa05f0_a331f4_ext#phar#tar.c}: phar_tar_process_metadata)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- DISSECTOR_ASSERT(E0 < ITEM_LABEL_LENGTH); 
++ if (E0 >= ITEM_LABEL_LENGTH)  
++ {
++ THROW(ReportedBoundsError); 
++ }
+// Infered from: (wireshark/{prevFiles/prev_8b3154_6dd219_epan#dissectors#packet-mount.c,revFiles/8b3154_6dd219_epan#dissectors#packet-mount.c}: dissect_mount_dirpath_call)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

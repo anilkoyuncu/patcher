@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0; 
+- I0 = snprintf(E1, NS_BUF_SIZE, "HTTP_%s", E2); 
++ snprintf(E1, NS_BUF_SIZE, "HTTP_%s", E2); 
+// Infered from: (php-src/{prevFiles/prev_ee477d_f57306_sapi#aolserver#aolserver.c,revFiles/ee477d_f57306_sapi#aolserver#aolserver.c}: php_ns_sapi_register_variables)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

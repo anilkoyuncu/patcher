@@ -1,0 +1,28 @@
+@@
+expression E0, E2, E1;
+typedef int64_t;
+@@
+- E0->time = E1 * E0->avctx->framerate.num + E2; 
++ E0->time = E1 * (int64_t )E0->avctx->framerate.num + E2; 
+// Infered from: (FFmpeg/{prevFiles/prev_18bca2_c43605_libavcodec#mpeg4videodec.c,revFiles/18bca2_c43605_libavcodec#mpeg4videodec.c}: decode_vop_header), (FFmpeg/{prevFiles/prev_18bca2_c43605_libavcodec#mpeg4videodec.c,revFiles/18bca2_c43605_libavcodec#mpeg4videodec.c}: decode_vop_header)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.38, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/8(37%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_a9cada_e00341_libavcodec#dpxenc.c: encode_gbrp10
+ - FFmpeg/prevFiles/prev_a234b5_470ad2_libavcodec#mdec.c: mdec_decode_block_intra
+ - FFmpeg/prevFiles/prev_8695fbe_5ce3c9_libavcodec#adpcm.c: adpcm_decode_frame
+ - vlc/prevFiles/prev_2aef1c_f0f9ac_src#video_output#vout_pictures.c: picture_Export
+ - FFmpeg/prevFiles/prev_a76897_8c6931_libavcodec#smacker.c: smka_decode_frame
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef uint32_t;
+@@
+- return dvb_set_props(E0, 5, DTV_CLEAR, 0, DTV_DELIVERY_SYSTEM, SYS_ISDBS,  DTV_FREQUENCY, E1, DTV_STREAM_ID, (uint32_t )E2); 
++ return dvb_set_props(E0, 4, DTV_CLEAR, 0, DTV_DELIVERY_SYSTEM, SYS_ISDBS,  DTV_FREQUENCY, E1, DTV_STREAM_ID, (uint32_t )E2); 
+// Infered from: (vlc/{prevFiles/prev_b50c765_2f7b8e_modules#access#dtv#linux.c,revFiles/b50c765_2f7b8e_modules#access#dtv#linux.c}: dvb_set_isdbs)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

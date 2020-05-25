@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- convert_to_long_ex(E0); 
+- PS(cache_expire) = Z_LVAL_PP(E0); 
++ convert_to_string_ex(E0); 
++ zend_alter_ini_entry("session.cache_expire", sizeof("session.cache_expire"),  Z_STRVAL_PP(E0), Z_STRLEN_PP(E0), ZEND_INI_USER,  ZEND_INI_STAGE_RUNTIME); 
+// Infered from: (php-src/{prevFiles/prev_873b6d_9faa83_ext#session#session.c,revFiles/873b6d_9faa83_ext#session#session.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_52e6ed_c6ace9_ext#session#session.c,revFiles/52e6ed_c6ace9_ext#session#session.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/254c8d_9d1097_ext#session#session.c: PHP_FUNCTION)
+// Recall: 0.67, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_254c8d_9d1097_ext#session#session.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

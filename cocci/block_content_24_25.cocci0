@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = tvb_find_line_end(E1, E2, tvb_ensure_length_remaining(E1, E2), &E3,  FALSE); 
++ E0 = tvb_find_line_end(E1, E2, tvb_ensure_captured_length_remaining(E1, E2),  &E3, FALSE); 
+// Infered from: (wireshark/{prevFiles/prev_021e7a_246fe2_epan#dissectors#packet-l1-events.c,revFiles/021e7a_246fe2_epan#dissectors#packet-l1-events.c}: dissect_l1_events)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

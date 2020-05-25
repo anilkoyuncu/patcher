@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- if (!E0 || FCGX_FFlush(E0->out) == -1)  
++ if (!parent && (!E0 || FCGX_FFlush(E0->out) == -1))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_242296_0f9d01_sapi#cgi#cgi_main.c,revFiles/242296_0f9d01_sapi#cgi#cgi_main.c}: sapi_cgibin_flush)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_e58457_d52bc1_modules#control#netsync.c: Run
+*/
+
+// ---------------------------------------------

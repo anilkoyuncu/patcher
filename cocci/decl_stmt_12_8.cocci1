@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = E1->height; 
++ int I0 = FFALIGN(E1->height, 32); 
+// Infered from: (FFmpeg/{prevFiles/prev_1ad542_53fd4f_libavutil#frame.c,revFiles/1ad542_53fd4f_libavutil#frame.c}: get_video_buffer)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_b89049_ecd8d4_net#net.c: qemu_del_nic
+*/
+
+// ---------------------------------------------

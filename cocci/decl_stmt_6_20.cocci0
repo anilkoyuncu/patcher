@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (!(E0 = E1 = config_GetPszVariable("distort_mode")))  
++ if (!(E0 = E1 = config_GetPszVariable("distort-mode")))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_0aeed9_e95774_plugins#filter#distort.c,revFiles/0aeed9_e95774_plugins#filter#distort.c}: vout_Create)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef BlockErrorAction;
+typedef IoOperationType;
+@@
+- BlockErrorAction I0; 
+- I0 = E1 ? IO_OPERATION_TYPE_READ :IO_OPERATION_TYPE_WRITE; 
+- qapi_event_send_block_io_error(bdrv_get_device_name(E2), I0, E3,  bdrv_iostatus_is_enabled(E2), E4 == ENOSPC,  strerror(E4), &error_abort); 
++ IoOperationType optype; 
++ optype = E1 ? IO_OPERATION_TYPE_READ :IO_OPERATION_TYPE_WRITE; 
++ qapi_event_send_block_io_error(bdrv_get_device_name(E2), optype, E3,  bdrv_iostatus_is_enabled(E2), E4 == ENOSPC,  strerror(E4), &error_abort); 
+// Infered from: (qemu/{prevFiles/prev_573742_be2178_block.c,revFiles/573742_be2178_block.c}: send_qmp_error_event)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,33 @@
+@@
+expression E0, E1;
+@@
+- if (!E0 && (E1->type != AV_OPT_TYPE_STRING && E1->type != AV_OPT_TYPE_PIXEL_FMT && E1->type != AV_OPT_TYPE_IMAGE_SIZE))  
++ if (!E0 && (E1->type != AV_OPT_TYPE_STRING && E1->type != AV_OPT_TYPE_PIXEL_FMT && E1->type != AV_OPT_TYPE_SAMPLE_FMT && E1->type != AV_OPT_TYPE_IMAGE_SIZE))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b91fa5_1dad48_libavutil#opt.c,revFiles/b91fa5_1dad48_libavutil#opt.c}: av_opt_set)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.42, Precision: 1.00
+// -- Node Change --
+// Recall: 0.43, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/12(33%)
+
+/*
+Functions where the patch applied partially:
+ - libtiff/prevFiles/prev_677626_5bc9b3_libtiff#tif_dirread.c: TIFFReadDirectory
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_01d196_947fda_libavcodec#pictordec.c: picmemset
+ - lighttpd2/prevFiles/prev_13904f_90447c_src#modules#mod_accesslog.c: al_handle_vrclose
+ - php-src/prevFiles/prev_25f924_1b4103_TSRM#tsrm_win32.c: shmget
+ - FFmpeg/prevFiles/prev_01d196_947fda_libavcodec#pictordec.c: decode_frame
+*/
+
+// ---------------------------------------------

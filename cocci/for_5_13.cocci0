@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- for(E0 = 'x';E0 <= 'z';E0++)  
++ for(E0 = 'a';E0 <= 'z';E0++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_527-B-16656510-16656574.c,revFiles/527-B-16656510-16656574.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

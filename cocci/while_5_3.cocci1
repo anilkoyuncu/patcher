@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (*E0--)  
++ while ((*E0)--)  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_2929ca_bad7d0_src#sds.c,revFiles/2929ca_bad7d0_src#sds.c}: sdssplitargs)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

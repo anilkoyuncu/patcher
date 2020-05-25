@@ -1,0 +1,11 @@
+@@
+@@
+- if (adns_init(&ads, 0, 0) != 0)  
++ if (adns_init(&ads, adns_if_none, 0) != 0)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_835584_0314bd_epan#addr_resolv.c,revFiles/835584_0314bd_epan#addr_resolv.c}: host_name_lookup_init)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

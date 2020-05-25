@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!(E0->status & IRQ_DISABLED))  
++ if (!irqd_irq_disabled(&E0->irq_data))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_98488db_68f20f_arch#powerpc#platforms#52xx#media5200.c,revFiles/98488db_68f20f_arch#powerpc#platforms#52xx#media5200.c}: media5200_irq_cascade)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

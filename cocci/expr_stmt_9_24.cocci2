@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- printf("blob\nmark :%d\ndata %lu\n", last_idnum, E0); 
+// Infered from: (git/{prevFiles/prev_6e1c23_db5d66_builtin-fast-export.c,revFiles/6e1c23_db5d66_builtin-fast-export.c}: handle_object)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.43, Precision: 1.00
+// -- Node Change --
+// Recall: 0.22, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/7(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_fc65da_7f5f27_ext#date#lib#parse_tz.c: timelib_dump_tzinfo
+ - git/prevFiles/prev_6e1c23_db5d66_builtin-fast-export.c: handle_object
+ - vlc/prevFiles/prev_d794dd_f2dcb7_modules#misc#stats#decoder.c: DecodeBlock
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_a7200c_9bd549_target-mips#translate.c: cpu_dump_state
+ - git/prevFiles/prev_6e1c23_db5d66_builtin-fast-export.c: handle_commit
+ - php-src/prevFiles/prev_131023_d5a2dda_sapi#phpdbg#phpdbg_out.c: format_converter
+ - php-src/prevFiles/prev_131023_d5a2dda_sapi#phpdbg#phpdbg_out.c: phpdbg_process_print
+*/
+
+// ---------------------------------------------

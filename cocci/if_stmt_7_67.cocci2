@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- if (E0->y < E1->height - E0->font_height)  
++ if (E0->y <= E1->height - 2 * E0->font_height)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_602161_e91fd7_libavcodec#ansi.c,revFiles/602161_e91fd7_libavcodec#ansi.c}: hscroll)
+// False positives: (FFmpeg/revFiles/602161_e91fd7_libavcodec#ansi.c: execute_code)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.75
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_602161_e91fd7_libavcodec#ansi.c: execute_code
+*/
+
+// ---------------------------------------------

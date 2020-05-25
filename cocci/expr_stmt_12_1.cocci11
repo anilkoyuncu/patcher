@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- qdict_put_obj(qobject_to_qdict(E0), E1, E2); 
++ qdict_put_obj(qobject_to(QDict, E0), E1, E2); 
+// Infered from: (qemu/{prevFiles/prev_7dc847_1a56b1_qapi#qobject-output-visitor.c,revFiles/7dc847_1a56b1_qapi#qobject-output-visitor.c}: qobject_output_add_obj)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef apr_size_t;
+typedef apr_ssize_t;
+@@
+- apr_ssize_t I0 = (apr_ssize_t )E1; 
++ apr_size_t I0 = E1; 
+// Infered from: (apr/{prevFiles/prev_ca3e3e_bbddc9_file_io#unix#fullrw.c,revFiles/ca3e3e_bbddc9_file_io#unix#fullrw.c}: apr_full_read), (apr/{prevFiles/prev_ca3e3e_bbddc9_file_io#unix#fullrw.c,revFiles/ca3e3e_bbddc9_file_io#unix#fullrw.c}: apr_full_write)
+// Recall: 0.44, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

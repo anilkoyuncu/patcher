@@ -1,0 +1,13 @@
+@@
+identifier I0;
+assignment operator A2;
+expression E3, E1;
+@@
+  struct vfio_irq_info *I0; 
+  ...
+- E1 A2 E3; 
++ E1 = sizeof(*I0); 
+// Infered from: (qemu/{prevFiles/prev_28e22d_b5a74c_hw#vfio#ccw.c,revFiles/28e22d_b5a74c_hw#vfio#ccw.c}: vfio_ccw_register_io_notifier)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

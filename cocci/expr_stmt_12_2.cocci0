@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = recv(E1->tcp_socket, (void *)(E1->tcp_lenbuf + E1->tcp_buffer_pos),  2 - E1->tcp_buffer_pos, 0); 
++ E0 = recv(E1->tcp_socket, (void *)(E1->tcp_lenbuf + E1->tcp_lenbuf_pos),  2 - E1->tcp_lenbuf_pos, 0); 
+// Infered from: (curl/{prevFiles/prev_b97e7f_01cbf0_ares#ares_process.c,revFiles/b97e7f_01cbf0_ares#ares_process.c}: read_tcp_data)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

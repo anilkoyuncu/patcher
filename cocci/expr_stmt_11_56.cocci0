@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- OBD_ALLOC(E0, E1); 
++ E0 = kzalloc(E1, GFP_NOFS); 
+  ...
+- OBD_FREE(E0, E1); 
++ kfree(E0); 
+// Infered from: (linux/{prevFiles/prev_7b8177_8bcf30_drivers#staging#lustre#lustre#mdc#lproc_mdc.c,revFiles/7b8177_8bcf30_drivers#staging#lustre#lustre#mdc#lproc_mdc.c}: mdc_kuc_write), (linux/{prevFiles/prev_d72790_c9b429_drivers#staging#lustre#lustre#obdclass#class_obd.c,revFiles/d72790_c9b429_drivers#staging#lustre#lustre#obdclass#class_obd.c}: class_handle_ioctl)
+// False positives: (linux/revFiles/496a51_cdbcd33_drivers#staging#lustre#lustre#llite#namei.c: ll_atomic_open)
+// Recall: 0.38, Precision: 0.83, Matching recall: 1.00
+
+// ---------------------------------------------

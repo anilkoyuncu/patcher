@@ -1,0 +1,34 @@
+@@
+expression E0, E1;
+@@
+- E0 = cairo_get_font_face(E1); 
++ E0 = cairo_font_face_reference(cairo_get_font_face(E1)); 
+// Infered from: (cairo/{prevFiles/prev_93672d_5ad65d_test#user-font-rescale.c,revFiles/93672d_5ad65d_test#user-font-rescale.c}: draw)
+// False positives: (cairo/revFiles/93672d_5ad65d_test#user-font-rescale.c: draw)
+// Recall: 0.08, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 0.89
+// -- General --
+// Functions fully changed: 0/8(0%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_406bab_8aac69_builtin#commit.c: prepare_index
+ - wireshark/prevFiles/prev_0272b9_3db115_ui#gtk#hostlist_table.c: copy_as_csv_cb
+ - wireshark/prevFiles/prev_0272b9_3db115_ui#gtk#gui_utils.c: float_data_func
+ - wireshark/prevFiles/prev_0272b9_3db115_ui#gtk#rtp_stream_dlg.c: add_to_list_store
+ - wireshark/prevFiles/prev_0272b9_3db115_ui#cli#tap-rtp.c: rtp_streams_stat_draw
+ - wireshark/prevFiles/prev_0272b9_3db115_ui#gtk#iax2_analysis.c: iax2_float_data_func
+ - wireshark/prevFiles/prev_0272b9_3db115_ui#gtk#mcast_stream_dlg.c: add_to_list_store
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_93672d_5ad65d_test#user-font-rescale.c: draw
+*/
+
+// ---------------------------------------------

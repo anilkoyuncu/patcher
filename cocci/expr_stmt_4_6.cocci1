@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- *E0++ = E1 << 8; 
++ *E0++ = E1 * 256; 
+// Infered from: (FFmpeg/{prevFiles/prev_4f7f70_2ab956_libavcodec#mlpdsp.c,revFiles/4f7f70_2ab956_libavcodec#mlpdsp.c}: ff_mlp_pack_output)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->backend_state == XenbusStateClosing && !xen_device_state_is_active(  E1))  
++ if (E0->backend_state == XenbusStateClosing && !xen_device_state_is_active(  E0->frontend_state))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_df6180_2f93a3_hw#xen#xen-bus.c,revFiles/df6180_2f93a3_hw#xen#xen-bus.c}: xen_device_backend_changed)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

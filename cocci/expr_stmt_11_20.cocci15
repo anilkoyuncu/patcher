@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "xenstore connection not initialized\n"); 
++ error_report("xenstore connection not initialized"); 
+// Infered from: (qemu/{prevFiles/prev_47d17c_29bd72_hw#xen#xen-common.c,revFiles/47d17c_29bd72_hw#xen#xen-common.c}: xenstore_record_dm_state)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

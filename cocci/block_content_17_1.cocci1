@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- av_new_packet(E0, E1->codec->block_align); 
++ if (av_new_packet(E0, E1->codec->block_align) < 0)  
++ {
++ return AVERROR(ENOMEM); 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_c01a46_1bf507_libavformat#rmdec.c,revFiles/c01a46_1bf507_libavformat#rmdec.c}: ff_rm_retrieve_cache)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

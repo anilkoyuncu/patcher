@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = ERR_PTR(PTR_ERR(E1)); 
++ E0 = ERR_CAST(E1); 
+// Infered from: (linux/{prevFiles/prev_1dc854_c4f39553_drivers#staging#lustre#lustre#obdclass#local_storage.c,revFiles/1dc854_c4f39553_drivers#staging#lustre#lustre#obdclass#local_storage.c}: local_file_find_or_create_with_fid), (linux/{prevFiles/prev_1dc854_c4f39553_drivers#staging#lustre#lustre#obdclass#local_storage.c,revFiles/1dc854_c4f39553_drivers#staging#lustre#lustre#obdclass#local_storage.c}: local_index_find_or_create_with_fid), (linux/{prevFiles/prev_d0b678_2354d0_fs#btrfs#extent_map.c,revFiles/d0b678_2354d0_fs#btrfs#extent_map.c}: lookup_extent_mapping), (linux/{prevFiles/prev_d0b678_2354d0_fs#btrfs#extent_map.c,revFiles/d0b678_2354d0_fs#btrfs#extent_map.c}: search_extent_mapping), (linux/{prevFiles/prev_936bb2_df5d8c_fs#9p#vfs_inode_dotl.c,revFiles/936bb2_df5d8c_fs#9p#vfs_inode_dotl.c}: v9fs_vfs_follow_link_dotl)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

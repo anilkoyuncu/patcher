@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- I0 = proto_tree_add_item(E1, hf_rohc_compressed_list_et, E2, E3, 1,  ENC_BIG_ENDIAN); 
++ proto_tree_add_item(E1, hf_rohc_compressed_list_et, E2, E3, 1, ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_2428b7_914f06_epan#dissectors#packet-rohc.c,revFiles/2428b7_914f06_epan#dissectors#packet-rohc.c}: dissect_compressed_list)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

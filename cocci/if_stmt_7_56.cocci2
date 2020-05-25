@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- if (E0 == false)  
++ if (!E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_6dd0d0_25cb62_drivers#gpu#ipu-v3#ipu-csi.c,revFiles/6dd0d0_25cb62_drivers#gpu#ipu-v3#ipu-csi.c}: ipu_csi_set_test_generator)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/8(87%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_4bb0142_38272d2_drivers#staging#rtl8192e#rtl8192e#r8192E_phy.c: SetRFPowerState8190
+*/
+
+// ---------------------------------------------

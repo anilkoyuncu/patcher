@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+typedef cairo_surface_t;
+@@
+- _cairo_pattern_init_for_surface(&E0.surface,  _cairo_clip_path_get_surface(E1, E2)); 
++ cairo_surface_t *prev_surface; 
++ prev_surface = _cairo_clip_path_get_surface(E1, E2); 
++ _cairo_pattern_init_for_surface(&E0.surface, prev_surface); 
++ cairo_surface_destroy(prev_surface); 
+// Infered from: (cairo/{prevFiles/prev_d7d6f7_52e5ce_src#cairo-clip.c,revFiles/d7d6f7_52e5ce_src#cairo-clip.c}: _cairo_clip_path_get_surface)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

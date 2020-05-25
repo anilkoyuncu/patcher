@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- cdf_timestamp_to_timespec(&E0, E1); 
++ if (cdf_timestamp_to_timespec(&E0, E1) == -1)  
++ {
++ return -1; 
++ }
+// Infered from: (php-src/{prevFiles/prev_13bdff_54b4cf_ext#fileinfo#libmagic#readcdf.c,revFiles/13bdff_54b4cf_ext#fileinfo#libmagic#readcdf.c}: cdf_file_property_info)
+// Recall: 0.27, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 >= 8)  
++ if (E0 > 8)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_0b20ad_135976_crypto#whrlpool#wp_dgst.c,revFiles/0b20ad_135976_crypto#whrlpool#wp_dgst.c}: WHIRLPOOL_BitUpdate)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

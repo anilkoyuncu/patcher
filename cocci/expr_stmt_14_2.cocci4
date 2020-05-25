@@ -1,0 +1,14 @@
+@@
+expression E0;
+typedef XML_CharacterDataHandler;
+typedef XML_EndElementHandler;
+typedef XML_StartElementHandler;
+@@
+- XML_SetElementHandler(E0, _xmlrpc_startElement, _xmlrpc_endElement); 
+- XML_SetCharacterDataHandler(E0, _xmlrpc_charHandler); 
++ XML_SetElementHandler(E0, (XML_StartElementHandler )_xmlrpc_startElement,  (XML_EndElementHandler )_xmlrpc_endElement); 
++ XML_SetCharacterDataHandler(E0,  (XML_CharacterDataHandler )_xmlrpc_charHandler); 
+// Infered from: (php-src/{prevFiles/prev_c3d64c_34cfab_ext#xmlrpc#libxmlrpc#xml_element.c,revFiles/c3d64c_34cfab_ext#xmlrpc#libxmlrpc#xml_element.c}: xml_elem_parse_buf), (php-src/{prevFiles/prev_d05637_168f53b_ext#xmlrpc#libxmlrpc#xml_element.c,revFiles/d05637_168f53b_ext#xmlrpc#libxmlrpc#xml_element.c}: xml_elem_parse_buf)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

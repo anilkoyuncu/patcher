@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- strncpy(E0.dbf_name, E1->db_fname, DBF_NAMELEN); 
++ strlcpy(E0.dbf_name, E1->db_fname, DBF_NAMELEN + 1); 
+// Infered from: (php-src/{prevFiles/prev_26c027_b21fe2_ext#dbase#dbf_head.c,revFiles/26c027_b21fe2_ext#dbase#dbf_head.c}: put_dbf_field)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

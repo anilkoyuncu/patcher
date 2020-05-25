@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->dense_combined_merges)  
++ if (E0->dense_combined_merges && (E0->diffopt.output_format != DIFF_FORMAT_DIFFSTAT))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_96ab4f_e64961_revision.c,revFiles/96ab4f_e64961_revision.c}: setup_revisions)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->c.con = graphic_console_init(NULL, &xenfb_ops, E0); 
++ E0->c.con = graphic_console_init(NULL, 0, &xenfb_ops, E0); 
+// Infered from: (qemu/{prevFiles/prev_80aaa0_6fc030_hw#display#xenfb.c,revFiles/80aaa0_6fc030_hw#display#xenfb.c}: xen_init_display)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

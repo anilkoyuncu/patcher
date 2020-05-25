@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->channels; 
++ E0 = avfilter_link_get_channels(E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_1bd9fb_6c841e_ffplay.c,revFiles/1bd9fb_6c841e_ffplay.c}: stream_component_open)
+// False positives: (FFmpeg/revFiles/1bd9fb_6c841e_ffplay.c: stream_component_open)
+// Recall: 0.25, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

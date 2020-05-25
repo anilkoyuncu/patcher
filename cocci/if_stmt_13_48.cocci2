@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (E0->mb_x == 0 && E0->mb_y == 0)  
++ if ((E0->mb_x == 0 && E0->mb_y == 0) || E0->current_picture_ptr == NULL)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_bed170_4ff7c5_libavcodec#rv10.c,revFiles/bed170_4ff7c5_libavcodec#rv10.c}: rv10_decode_packet)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_bed170_4ff7c5_libavcodec#rv10.c: rv20_decode_picture_header
+ - FFmpeg/prevFiles/prev_cd9827_78a0fa_libavcodec#rv34.c: rv34_apply_differences
+*/
+
+// ---------------------------------------------

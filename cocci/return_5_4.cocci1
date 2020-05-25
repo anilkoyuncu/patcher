@@ -1,0 +1,9 @@
+@@
+@@
+- return ((size_t )-1); 
++ return (-1); 
+// Infered from: (libarchive/{prevFiles/prev_6d3edb_644408_libarchive#archive_string.c,revFiles/6d3edb_644408_libarchive#archive_string.c}: my_wctomb_utf8)
+// False positives: (libarchive/revFiles/6d3edb_644408_libarchive#archive_string.c: my_mbtowc_utf8), (php-src/revFiles/52ffe2_9b50cf_ext#fileinfo#libmagic#cdf.c: cdf_count_chain), (php-src/revFiles/52ffe2_9b50cf_ext#fileinfo#libmagic#cdf.c: cdf_read_long_sector_chain), (php-src/revFiles/52ffe2_9b50cf_ext#fileinfo#libmagic#cdf.c: cdf_read_short_sector_chain), (php-src/revFiles/ea27fd_5645de_ext#fileinfo#libmagic#cdf.c: cdf_count_chain), (php-src/revFiles/ea27fd_5645de_ext#fileinfo#libmagic#cdf.c: cdf_read_long_sector_chain), (php-src/revFiles/ea27fd_5645de_ext#fileinfo#libmagic#cdf.c: cdf_read_short_sector_chain)
+// Recall: 0.43, Precision: 0.35, Matching recall: 0.60
+
+// ---------------------------------------------

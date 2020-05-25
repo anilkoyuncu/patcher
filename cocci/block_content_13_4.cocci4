@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- RETURN_STRINGL(E0, E1, 1); 
++ RETVAL_STRINGL(E0, E1, 1); 
++ xmlFree(E0); 
+// Infered from: (php-src/{prevFiles/prev_def8bc_987ab91_ext#domxml#php_domxml.c,revFiles/def8bc_987ab91_ext#domxml#php_domxml.c}: PHP_FUNCTION)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- release_region(E0->start, E0->end - E0->start + 1); 
++ release_region(E0->start, resource_size(E0)); 
+// Infered from: (linux/{prevFiles/prev_86855b_6055fa_drivers#hwmon#pc87427.c,revFiles/86855b_6055fa_drivers#hwmon#pc87427.c}: pc87427_remove), (linux/{prevFiles/prev_86855b_6055fa_drivers#hwmon#vt1211.c,revFiles/86855b_6055fa_drivers#hwmon#vt1211.c}: vt1211_remove)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

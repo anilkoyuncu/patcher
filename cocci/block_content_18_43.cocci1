@@ -1,0 +1,23 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef expert_tapdata_t;
+@@
+  expert_tapdata_t *I0 = E1; 
+  ...
+- E2->protocol = E2->protocol; 
++ E2->protocol = g_string_chunk_insert_const(I0->text, E2->protocol); 
+// Infered from: (wireshark/{prevFiles/prev_7c1d96_1711f5_gtk#expert_dlg.c,revFiles/7c1d96_1711f5_gtk#expert_dlg.c}: expert_dlg_packet)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

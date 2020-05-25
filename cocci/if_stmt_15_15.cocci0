@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->mux.fmt.i_codec == VLC_CODEC_SUBT)  
++ if (E0->mux.fmt.i_codec == VLC_CODEC_SUBT || E0->mux.fmt.i_codec == VLC_CODEC_TX3G)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_511284_068c9e_modules#mux#mp4#mp4.c,revFiles/511284_068c9e_modules#mux#mp4#mp4.c}: MuxStream)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

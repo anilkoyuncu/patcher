@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- msg_Dbg(E0, "Chroma %4s invalid, using default", E1); 
++ msg_Dbg(E0, "Chroma not defined, using default"); 
+// Infered from: (vlc/{prevFiles/prev_f06226_f83434_modules#video_output#kms.c,revFiles/f06226_f83434_modules#video_output#kms.c}: Open)
+// False positives: (vlc/revFiles/f06226_f83434_modules#video_output#kms.c: Open)
+// Recall: 0.02, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

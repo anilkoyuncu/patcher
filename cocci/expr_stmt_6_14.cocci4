@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = (E0 > 360) ? E0 - 360 :E0; 
++ E0 = (E0 >= 360) ? E0 - 360 :E0; 
+// Infered from: (codeflaws/{prevFiles/prev_80-B-2151697-2151700.c,revFiles/80-B-2151697-2151700.c}: main)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

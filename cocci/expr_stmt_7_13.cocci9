@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = p[E0]; 
++ E0 = p[E0 - 1]; 
+// Infered from: (codeflaws/{prevFiles/prev_126-B-6462704-6462737.c,revFiles/126-B-6462704-6462737.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

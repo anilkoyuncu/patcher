@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- OBD_ALLOC_LARGE(E0, E1); 
++ E0 = libcfs_kvzalloc(E1, GFP_NOFS); 
+// Infered from: (linux/{prevFiles/prev_ee0ec19_6b0e43_drivers#staging#lustre#lustre#ptlrpc#client.c,revFiles/ee0ec19_6b0e43_drivers#staging#lustre#lustre#ptlrpc#client.c}: ptlrpc_add_rqs_to_pool)
+// False positives: (linux/revFiles/9ae105_779517_drivers#staging#lustre#lustre#ptlrpc#sec.c: sptlrpc_cli_unwrap_early_reply), (linux/revFiles/9ae105_779517_drivers#staging#lustre#lustre#ptlrpc#sec.c: sptlrpc_req_ctx_switch), (linux/revFiles/d72790_c9b429_drivers#staging#lustre#lustre#obdclass#lustre_handles.c: class_handle_init)
+// Recall: 0.14, Precision: 0.40, Matching recall: 0.67
+
+// ---------------------------------------------

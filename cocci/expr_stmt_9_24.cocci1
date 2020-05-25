@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- printf("%016lX (%20ld) = %d\n", E0->leap_times[E1].trans,  (long )E0->leap_times[E1].trans, E0->leap_times[E1].offset); 
+// Infered from: (php-src/{prevFiles/prev_fc65da_7f5f27_ext#date#lib#parse_tz.c,revFiles/fc65da_7f5f27_ext#date#lib#parse_tz.c}: timelib_dump_tzinfo)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- E0.video.i_aspect = E1; 
++ E0.i_aspect = E1; 
+// Infered from: (vlc/{prevFiles/prev_da305a_a78a66_modules#codec#fake.c,revFiles/da305a_a78a66_modules#codec#fake.c}: OpenDecoder)
+// False positives: (vlc/revFiles/163fe4_71ff7a_modules#video_filter#logo.c: Init), (vlc/revFiles/e1a578_a84ef6_modules#codec#fake.c: OpenDecoder)
+// Recall: 0.50, Precision: 0.50, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.67
+// -- Node Change --
+// Recall: 0.50, Precision: 0.50
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_163fe4_71ff7a_modules#video_filter#logo.c: Filter
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_e1a578_a84ef6_modules#codec#fake.c: OpenDecoder
+ - vlc/prevFiles/prev_163fe4_71ff7a_modules#video_filter#logo.c: Init
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- SwitchAudioDevice (E0, config_GetPsz(E0, E1)); 
++ char *psz_audio_device = config_GetPsz(E0, "auhal-audio-device"); 
++ SwitchAudioDevice(E0, psz_audio_device); 
++ free(psz_audio_device); 
+// Infered from: (vlc/{prevFiles/prev_a2a2b5_f12046_modules#audio_output#auhal.c,revFiles/a2a2b5_f12046_modules#audio_output#auhal.c}: Open)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

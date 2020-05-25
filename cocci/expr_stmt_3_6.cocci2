@@ -1,0 +1,11 @@
+@@
+identifier I2;
+expression E0, E1;
+typedef AVClass;
+@@
+- *(AVClass **)E0->priv_data = E1->I2; 
++ *(const  AVClass **)E0->priv_data = E1->I2; 
+// Infered from: (FFmpeg/{prevFiles/prev_805488_b38589_libavformat#avio.c,revFiles/805488_b38589_libavformat#avio.c}: url_alloc_for_protocol), (FFmpeg/{prevFiles/prev_fa9aeb8_86d373_libavcodec#options.c,revFiles/fa9aeb8_86d373_libavcodec#options.c}: avcodec_get_context_defaults3), (FFmpeg/{prevFiles/prev_57986c_113447_libavcodec#utils.c,revFiles/57986c_113447_libavcodec#utils.c}: avcodec_open2)
+// Recall: 0.23, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- es_format_Init(&E0->fmt, UNKNOWN_ES, 0); 
++ es_format_Clean(&E0->fmt); 
+// Infered from: (vlc/{prevFiles/prev_e10833_2669a9_modules#demux#mp4#mp4.c,revFiles/e10833_2669a9_modules#demux#mp4#mp4.c}: MP4_TrackDestroy)
+// False positives: (vlc/revFiles/e10833_2669a9_modules#demux#mp4#mp4.c: MP4_TrackCreate)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

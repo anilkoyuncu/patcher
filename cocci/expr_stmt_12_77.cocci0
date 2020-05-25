@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = ecalloc(1, sizeof(*E0) + E1); 
++ E0 = ecalloc(1, sizeof(struct php_user_filter_data ) + E1); 
+// Infered from: (php-src/{prevFiles/prev_3725d1_03463d_ext#standard#user_filters.c,revFiles/3725d1_03463d_ext#standard#user_filters.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

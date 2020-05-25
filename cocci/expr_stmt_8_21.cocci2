@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- DBSETOPT(E0->link, DBQUOTEDIDENT, NULL); 
++ DBSETOPT(E0->link, DBQUOTEDIDENT, 1); 
+// Infered from: (php-src/{prevFiles/prev_36b8c4_07985e_ext#pdo_dblib#dblib_driver.c,revFiles/36b8c4_07985e_ext#pdo_dblib#dblib_driver.c}: pdo_dblib_handle_factory)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

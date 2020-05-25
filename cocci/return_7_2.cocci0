@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return AV_RB32(E0) + AV_RB32(E0 + 32); 
++ return AV_RB32(E0) + AV_RB32(E0 + 16); 
+// Infered from: (FFmpeg/{prevFiles/prev_7fe554_adcbb3_libavutil#random_seed.c,revFiles/7fe554_adcbb3_libavutil#random_seed.c}: get_generic_seed)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

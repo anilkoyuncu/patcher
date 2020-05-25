@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E2, E1, E3;
+@@
+- char *I0 = curl_easy_unescape(E1, E1->state.path, 0, NULL); 
++ char *I0; 
+  ...
+- if (E2)  
+- {
+- return E3; 
+- }
+// Infered from: (curl/{prevFiles/prev_6fa656_93e57d_lib#file.c,revFiles/6fa656_93e57d_lib#file.c}: file_connect)
+// False positives: (curl/revFiles/6fa656_93e57d_lib#file.c: file_connect)
+// Recall: 0.14, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- set_irq_chained_handler(E0, I1); 
+- set_irq_type(E0, I2); 
++ irq_set_chained_handler(E0, I1); 
++ irq_set_irq_type(E0, I2); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#mainstone.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#mainstone.c}: mainstone_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#pcm990-baseboard.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#pcm990-baseboard.c}: pcm990_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#balloon3.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#balloon3.c}: balloon3_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#viper.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#viper.c}: viper_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#lpd270.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#lpd270.c}: lpd270_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#lubbock.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#lubbock.c}: lubbock_init_irq)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

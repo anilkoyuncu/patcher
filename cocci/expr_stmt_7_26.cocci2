@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = atoi((char *)E1); 
++ E0 = atoi((const  char *)E1); 
+// Infered from: (wireshark/{prevFiles/prev_f6c5cf_37c928_epan#dissectors#packet-sdp.c,revFiles/f6c5cf_37c928_epan#dissectors#packet-sdp.c}: dissect_sdp_media_attribute)
+// False positives: (wireshark/revFiles/f6c5cf_37c928_epan#dissectors#packet-sdp.c: dissect_sdp_media_attribute)
+// Recall: 0.10, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------

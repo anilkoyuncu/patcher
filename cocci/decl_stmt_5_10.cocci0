@@ -1,0 +1,11 @@
+@@
+type T0;
+identifier I1;
+typedef glong;
+@@
+- const  T0 I1 = 60; 
++ const  glong I1 = 60; 
+// Infered from: (wireshark/{prevFiles/prev_303030f_46cd4a_gtk#main_welcome.c,revFiles/303030f_46cd4a_gtk#main_welcome.c}: welcome_filename_link_new)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

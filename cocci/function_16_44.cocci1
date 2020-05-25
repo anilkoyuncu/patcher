@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef u8;
+@@
+- u8 I0 = _SUCCESS; 
+- return I0; 
++ return _SUCCESS; 
+// Infered from: (linux/{prevFiles/prev_8ffca9_8a5e7b_drivers#staging#rtl8712#rtl8712_cmd.c,revFiles/8ffca9_8a5e7b_drivers#staging#rtl8712#rtl8712_cmd.c}: check_cmd_fifo)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = cpu_ppc_handle_mmu_fault(env, E1, E2, msr_pr, 0); 
++ E0 = cpu_mips_handle_mmu_fault(env, E1, E2, 1, 0); 
+// Infered from: (qemu/{prevFiles/prev_cc9442_15338f_cpu-exec.c,revFiles/cc9442_15338f_cpu-exec.c}: handle_cpu_signal)
+// False positives: (qemu/revFiles/cc9442_15338f_cpu-exec.c: handle_cpu_signal)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

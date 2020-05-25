@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->cc && (E0->flags & (SRI_SLAVE | SRI_SENTINEL) || E0->pc))  
++ if (E0->cc && (E0->flags & SRI_SENTINEL || E0->pc))  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_86a540_6f4fd5_src#sentinel.c,revFiles/86a540_6f4fd5_src#sentinel.c}: sentinelReconnectInstance)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

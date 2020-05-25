@@ -1,0 +1,7 @@
+@@
+@@
+- die(_("--filter can only be used with the remote configured in core.partialClone")); 
+// Infered from: (git/{prevFiles/prev_e01378_268fbc_builtin#fetch.c,revFiles/e01378_268fbc_builtin#fetch.c}: fetch_one_setup_partial), (git/{prevFiles/prev_e01378_268fbc_builtin#fetch.c,revFiles/e01378_268fbc_builtin#fetch.c}: cmd_fetch)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

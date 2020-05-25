@@ -1,0 +1,8 @@
+@@
+@@
+- server.appendfd = open(server.appendfilename, O_WRONLY | O_APPEND | O_CREAT); 
++ server.appendfd = open(server.appendfilename, O_WRONLY | O_APPEND | O_CREAT,  0644); 
+// Infered from: (redis/{prevFiles/prev_71eba4_4e141d_redis.c,revFiles/71eba4_4e141d_redis.c}: initServer)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

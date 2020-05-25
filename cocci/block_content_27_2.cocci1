@@ -1,0 +1,37 @@
+@@
+identifier I3;
+expression E2, E0, E1;
+@@
+- if (E0 && E1)  
++ if (E0 && E1 && (ret = ff_add_format(&E2, I3)) < 0)  
+  {
+- ff_add_format(&E2, I3); 
++ return ret; 
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_6aaac2_8ededd_libavfilter#vf_boxblur.c,revFiles/6aaac2_8ededd_libavfilter#vf_boxblur.c}: query_formats), (FFmpeg/{prevFiles/prev_6aaac2_8ededd_libavfilter#vf_crop.c,revFiles/6aaac2_8ededd_libavfilter#vf_crop.c}: query_formats)
+// Recall: 0.19, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.57, Precision: 1.00
+// -- Node Change --
+// Recall: 0.38, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/7(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_6aaac2_8ededd_libavfilter#vf_hflip.c: query_formats
+ - FFmpeg/prevFiles/prev_6aaac2_8ededd_libavfilter#vf_transpose.c: query_formats
+ - FFmpeg/prevFiles/prev_6aaac2_8ededd_libavfilter#vf_crop.c: query_formats
+ - FFmpeg/prevFiles/prev_6aaac2_8ededd_libavfilter#vf_boxblur.c: query_formats
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_6aaac2_8ededd_libavfilter#vf_detelecine.c: query_formats
+ - FFmpeg/prevFiles/prev_6aaac2_8ededd_libavfilter#vf_stack.c: query_formats
+ - FFmpeg/prevFiles/prev_6aaac2_8ededd_libavfilter#vf_telecine.c: query_formats
+*/
+
+// ---------------------------------------------

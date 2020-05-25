@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 |= 0755; 
++ E0 |= 0777; 
+// Infered from: (git/{prevFiles/prev_473d40_114203_tar-tree.c,revFiles/473d40_114203_tar-tree.c}: write_header)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

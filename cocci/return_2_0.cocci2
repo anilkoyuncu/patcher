@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- packFloatx80(E0, floatx80_infinity.high, floatx80_infinity.low); 
++ return packFloatx80(E0, floatx80_infinity.high, floatx80_infinity.low); 
+// Infered from: (qemu/{prevFiles/prev_981348_355d4d_target#m68k#softfloat.c,revFiles/981348_355d4d_target#m68k#softfloat.c}: floatx80_lognp1)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

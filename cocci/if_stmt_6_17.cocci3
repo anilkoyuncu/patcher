@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->i_codec_id == CODEC_ID_MP2 || E0->i_codec_id == CODEC_ID_MP3)  
++ if (E0->i_codec_id == AV_CODEC_ID_MP2 || E0->i_codec_id == AV_CODEC_ID_MP3)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_7a4eb7_cde81e_modules#codec#avcodec#audio.c,revFiles/7a4eb7_cde81e_modules#codec#avcodec#audio.c}: DecodeAudio)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- return _gst_plugins; 
++ return g_list_copy(_gst_plugins); 
+// Infered from: (gstreamer/{prevFiles/prev_3eaff6_98f65d_gst#gstplugin.c,revFiles/3eaff6_98f65d_gst#gstplugin.c}: gst_plugin_get_list)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

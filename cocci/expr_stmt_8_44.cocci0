@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = sqrt((E1 - 1) * (E1 - 1) + E1 * E1) * 2 + sqrt(E2 * E2 + E1 * E1); 
++ E0 = sqrt((E1 - 1) * (E1 - 1) + E2 * E2) * 2 + sqrt(E2 * E2 + E1 * E1); 
+// Infered from: (codeflaws/{prevFiles/prev_452-B-7272994-7273012.c,revFiles/452-B-7272994-7273012.c}: main)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

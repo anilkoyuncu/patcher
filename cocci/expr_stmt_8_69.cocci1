@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0.tm_sec = strtol(E1, (char **)&E2, 10); 
++ E0.tm_sec = strtol(E1, (void *)&E2, 10); 
+// Infered from: (FFmpeg/{prevFiles/prev_fe87b2_8aed90_libavutil#parseutils.c,revFiles/fe87b2_8aed90_libavutil#parseutils.c}: av_parse_time)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

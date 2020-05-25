@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = 0;E0 < E1->fm_mapped_extents;E0++, E2++)  
++ for(E0 = 0;E0 < (int )E1->fm_mapped_extents;E0++, E2++)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_d2d75e_82d66e_libarchive#archive_read_disk_entry_from_file.c,revFiles/d2d75e_82d66e_libarchive#archive_read_disk_entry_from_file.c}: setup_sparse), (libarchive/{prevFiles/prev_01580b_c477ed_libarchive#archive_read_disk_entry_from_file.c,revFiles/01580b_c477ed_libarchive#archive_read_disk_entry_from_file.c}: setup_sparse)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

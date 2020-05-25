@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (StartUserPtr(VLC_OBJECT(E0), E1) == 0)  
++ if (0 && StartUserPtr(VLC_OBJECT(E0), E1) == 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_36302e_57a258_modules#access#v4l2#demux.c,revFiles/36302e_57a258_modules#access#v4l2#demux.c}: InitVideo)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

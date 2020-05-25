@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- float I0[TNS_MAX_ORDER]; 
++ float I0[TNS_MAX_ORDER + 1]; 
+// Infered from: (FFmpeg/{prevFiles/prev_6d5b00_140367_libavcodec#aacdec.c,revFiles/6d5b00_140367_libavcodec#aacdec.c}: apply_tns)
+// False positives: (FFmpeg/revFiles/6d5b00_140367_libavcodec#aacdec.c: apply_tns), (FFmpeg/revFiles/ac7ff0_623cfc_libavcodec#aacdec.c: apply_tns)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

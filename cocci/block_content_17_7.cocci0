@@ -1,0 +1,14 @@
+@@
+expression list E3;
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = 0; 
+  ...
+- E1 = E2(E3); 
+- return E1; 
++ return E2(E3); 
+// Infered from: (linux/{prevFiles/prev_ca5dd0_2ff6179_drivers#staging#dgnc#dgnc_cls.c,revFiles/ca5dd0_2ff6179_drivers#staging#dgnc#dgnc_cls.c}: cls_drain), (linux/{prevFiles/prev_55238d_b7aa39_drivers#staging#rtl8723bs#os_dep#ioctl_cfg80211.c,revFiles/55238d_b7aa39_drivers#staging#rtl8723bs#os_dep#ioctl_cfg80211.c}: cfg80211_rtw_change_beacon), (linux/{prevFiles/prev_d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c,revFiles/d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c}: gc2235_init), (linux/{prevFiles/prev_f59c054_64ffaf_drivers#staging#dgnc#dgnc_neo.c,revFiles/f59c054_64ffaf_drivers#staging#dgnc#dgnc_neo.c}: neo_drain)
+// Recall: 0.59, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

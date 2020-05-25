@@ -1,0 +1,26 @@
+@@
+identifier I0;
+expression E1, E2, E4, E5, E6, E7, E3;
+typedef int64_t;
+@@
+- int64_t I0 = E1 * (int64_t )((E2[E3][0] * E4 + E2[E3][1] * E5) + (1 << E6) * E7[  E3]); 
++ int64_t I0 = E1 * (int64_t )((E2[E3][0] * (int64_t )E4 + E2[E3][1] * (  int64_t )E5) + (1 << E6) * E7[E3]); 
+// Infered from: (FFmpeg/{prevFiles/prev_512904_ed647a_libavcodec#diracdec.c,revFiles/512904_ed647a_libavcodec#diracdec.c}: global_mv), (FFmpeg/{prevFiles/prev_512904_ed647a_libavcodec#diracdec.c,revFiles/512904_ed647a_libavcodec#diracdec.c}: global_mv)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_d62030_b04bbe_libswresample#rematrix_template.c: mix8to2_s32
+ - FFmpeg/prevFiles/prev_b04bbe_052838_libswresample#rematrix_template.c: mix6to2_s32
+*/
+
+// ---------------------------------------------

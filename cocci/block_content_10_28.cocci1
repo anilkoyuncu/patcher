@@ -1,0 +1,21 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef int64_t;
+@@
+- int I0 = ffio_read_varlen(E1); 
+- if (I0 < (1 << E2->msb_pts_shift))  
++ int64_t I0 = ffio_read_varlen(E1); 
++ if (I0 < (1LL << E2->msb_pts_shift))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_6bfc93_b4c8c0_libavformat#nutdec.c,revFiles/6bfc93_b4c8c0_libavformat#nutdec.c}: decode_frame_header)
+// Recall: 0.36, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

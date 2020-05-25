@@ -1,0 +1,39 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > 8 && !memcmp(E1, "UNICODE\0", 8) || !memcmp(E1, "JIS\0\0\0\0\0", 8))  
++ if (((E0 > 8) && !memcmp(E1, "UNICODE\0", 8)) || !memcmp(E1, "JIS\0\0\0\0\0",  8))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_15ba640_9981d0_ext#exif#exif.c,revFiles/15ba640_9981d0_ext#exif#exif.c}: ProcessExifComment)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.12, Precision: 1.00
+// -- Node Change --
+// Recall: 0.19, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/17(11%)
+
+/*
+Functions where the patch did not apply:
+ - gstreamer/prevFiles/prev_16ff39_b645d7_gst#gstelement.c: gst_element_change_state
+ - FFmpeg/prevFiles/prev_b4e29e_ef23ed_libavformat#mxfenc.c: mxf_parse_dnxhd_frame
+ - gmp/prevFiles/prev_30d651_6a2222_mpn#generic#mod_1.c: mpn_mod_1
+ - php-src/prevFiles/prev_15ba640_9981d0_ext#exif#exif.c: ProcessExifDir
+ - php-src/prevFiles/prev_075e66_0a4686_ext#standard#exec.c: php_exec
+ - FFmpeg/prevFiles/prev_b4e29e_ef23ed_libavformat#mxfenc.c: mxf_parse_dv_frame
+ - php-src/prevFiles/prev_fd5eea_d5b1a7_ext#xml#xml.c: _xml_startElementHandler
+ - FFmpeg/prevFiles/prev_a47ec3_bbe94a_libavformat#nutdec.c: get_packetheader
+ - vlc/prevFiles/prev_7b3cb7_0bed6f_modules#video_output#x11#xcommon.c: InitDisplay
+ - php-src/prevFiles/prev_4b6640_e34ea3_ext#iconv#iconv.c: PHP_FUNCTION
+ - FFmpeg/prevFiles/prev_44cc19_6a56f4_ffmpeg.c: do_audio_out
+ - gmp/prevFiles/prev_30d651_6a2222_mpn#generic#mod_1.c: mpn_mod_1_norm
+ - wireshark/prevFiles/prev_3ff81e_eac8585_epan#dissectors#packet-per.c: dissect_per_sequence
+ - qemu/prevFiles/prev_6b9b3c_93abfc_hw#display#ramfb.c: ramfb_fw_cfg_write
+*/
+
+// ---------------------------------------------

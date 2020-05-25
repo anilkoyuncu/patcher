@@ -1,0 +1,13 @@
+@@
+expression E0;
+typedef NULL;
+@@
+- if (!E0->eof && PHP_STREAM_OPTION_RETURN_ERR == php_stream_set_option(  E0, PHP_STREAM_OPTION_CHECK_LIVENESS, 0, NULL ))  
++ if (!E0->eof && PHP_STREAM_OPTION_RETURN_ERR == php_stream_set_option(  E0, PHP_STREAM_OPTION_CHECK_LIVENESS, -1, NULL ))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_edc3ff_cf06da_main#streams#streams.c,revFiles/edc3ff_cf06da_main#streams#streams.c}: _php_stream_eof)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

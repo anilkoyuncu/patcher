@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- E0->seek(E0->opaque, E1, SEEK_SET); 
++ if (E0->seek(E0->opaque, E1, SEEK_SET) == (offset_t) - EPIPE)  
++ {
++ return -EPIPE; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_53e2f9_ebb177_libavformat#aviobuf.c,revFiles/53e2f9_ebb177_libavformat#aviobuf.c}: url_fseek)
+// False positives: (FFmpeg/revFiles/53e2f9_ebb177_libavformat#aviobuf.c: url_fseek)
+// Recall: 0.17, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.94, Precision: 0.85
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_34e381_2968da_libavformat#matroskaenc.c: mkv_write_native_codecprivate
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_53e2f9_ebb177_libavformat#aviobuf.c: url_fseek
+*/
+
+// ---------------------------------------------

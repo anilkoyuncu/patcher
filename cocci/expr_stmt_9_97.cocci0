@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->protection = (E1->attrFile & FILE_READONLY) ? 0555 :0777; 
++ E0->protection = (E1->attrFile & FILE_READONLY) ? 0x555 :0x777; 
+// Infered from: (apr/{prevFiles/prev_a935b0_a44314_file_io#os2#filestat.c,revFiles/a935b0_a44314_file_io#os2#filestat.c}: FS3_to_finfo)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

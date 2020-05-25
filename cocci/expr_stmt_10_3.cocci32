@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- DPRINTF("Command complete tag=0x%x status=%d sense=%d/%d/%d\n", E0->req.tag,  status, E1.key, E1.asc, E1.ascq); 
++ DPRINTF("Command complete tag=0x%x sense=%d/%d/%d\n", E0->req.tag, E1.key,  E1.asc, E1.ascq); 
+// Infered from: (qemu/{prevFiles/prev_02fa69_871708_hw#scsi-disk.c,revFiles/02fa69_871708_hw#scsi-disk.c}: scsi_check_condition)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

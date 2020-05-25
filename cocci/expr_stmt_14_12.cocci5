@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- ssl_debug_printf("ssl_find_private_key server %s:%u\n",  address_to_str(wmem_packet_scope(), &E0.addr), E0.port); 
++ ssl_debug_printf("ssl_find_private_key server %s:%u\n",  ep_address_to_str(&E0.addr), E0.port); 
+// Infered from: (wireshark/{prevFiles/prev_b0bc4d_14824e_epan#dissectors#packet-ssl-utils.c,revFiles/b0bc4d_14824e_epan#dissectors#packet-ssl-utils.c}: ssl_find_private_key)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.89, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/9(77%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_b0bc4d_14824e_epan#dissectors#packet-ssl-utils.c: ssl_parse_key_list
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_b0bc4d_14824e_epan#dissectors#packet-iax2.c: iax_lookup_call
+*/
+
+// ---------------------------------------------

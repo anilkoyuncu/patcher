@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 != NULL && E0->pkey.ptr == NULL)  
++ if (E0 != NULL && E0->ameth == NULL)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_60a339_bc24e3_crypto#evp#pmeth_lib.c,revFiles/60a339_bc24e3_crypto#evp#pmeth_lib.c}: int_ctx_new)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

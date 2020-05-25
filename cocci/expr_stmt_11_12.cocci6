@@ -1,0 +1,12 @@
+@@
+identifier I4, I1 = {PyMem_Malloc ,malloc };
+type T2;
+expression E0, E3;
+@@
+- E0 = I1(sizeof(T2 *) * E3->I4); 
++ E0 = I1(sizeof(T2 ) * E3->I4); 
+// Infered from: (vlc/{prevFiles/prev_332149_c441e86_modules#demux#avformat#demux.c,revFiles/332149_c441e86_modules#demux#avformat#demux.c}: Control), (vlc/{prevFiles/prev_3a62db_ec9b71_src#input#control.c,revFiles/3a62db_ec9b71_src#input#control.c}: input_vaControl), (cpython/{prevFiles/prev_abfc4d_e91ad5_Modules#_ctypes#_ctypes.c,revFiles/abfc4d_e91ad5_Modules#_ctypes#_ctypes.c}: PyCArrayType_new), (vlc/{prevFiles/prev_cdacb3_d1992e_modules#access#vcd#vcd.c,revFiles/cdacb3_d1992e_modules#access#vcd#vcd.c}: Control)
+// False positives: (vlc/revFiles/3a62db_ec9b71_src#input#control.c: input_vaControl), (vlc/revFiles/b0293e_d8d34f_modules#access#bluray.c: blurayControl), (vlc/revFiles/f6d3a1_e66123_modules#demux#avformat#demux.c: Control)
+// Recall: 0.14, Precision: 0.64, Matching recall: 0.75
+
+// ---------------------------------------------

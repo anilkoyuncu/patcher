@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->diffopt.pickaxe)  
++ if (E0->diffopt.pickaxe || E0->diffopt.follow_renames)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_99516e_4c7513_revision.c,revFiles/99516e_4c7513_revision.c}: setup_revisions)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E1;
+typedef BDRVRawState;
+@@
+  BDRVRawState *I0 = E1->opaque; 
+  ...
+- if (E1->type == BDRV_TYPE_CDROM)  
++ if (I0->type != FTYPE_FILE)  
+  {
+  ...
+  }
+- label__raw_read__success: 
+// Infered from: (qemu/{prevFiles/prev_65d21b_d24667_block#raw-posix.c,revFiles/65d21b_d24667_block#raw-posix.c}: raw_pread_aligned)
+// Recall: 0.23, Precision: 1.00, Matching recall: 0.43
+
+// ---------------------------------------------

@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- var_SetInteger(E0, "rate", INPUT_RATE_DEFAULT); 
++ var_SetFloat(E0, "rate", 1.); 
+// Infered from: (vlc/{prevFiles/prev_68c786_51169d_modules#control#rc.c,revFiles/68c786_51169d_modules#control#rc.c}: Input)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.75
+// -- Node Change --
+// Recall: 1.00, Precision: 0.60
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_cc9442_15338f_cpu-exec.c: handle_cpu_signal
+ - vlc/prevFiles/prev_68c786_51169d_modules#control#rc.c: Run
+*/
+
+// ---------------------------------------------

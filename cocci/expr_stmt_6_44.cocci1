@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0->frame.buffer_hints = FF_BUFFER_HINTS_VALID; 
++ E0->frame.buffer_hints = FF_BUFFER_HINTS_VALID | FF_BUFFER_HINTS_READABLE | FF_BUFFER_HINTS_PRESERVE; 
+// Infered from: (FFmpeg/{prevFiles/prev_fd7916_4e38d4_libavcodec#eacmv.c,revFiles/fd7916_4e38d4_libavcodec#eacmv.c}: cmv_decode_frame)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_48aecf_8b389f_libavcodec#h264_mp4toannexb_bsf.c: alloc_and_copy
+*/
+
+// ---------------------------------------------

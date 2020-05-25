@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- gdk_window_move_resize(E0->border_window[GDK_WINDOW_EDGE_NORTH_EAST],  E1.left + E2 - E3, 0, E4.right + E3, E4.top + E3); 
++ gdk_window_move_resize(E0->border_window[GDK_WINDOW_EDGE_NORTH_EAST],  E1.left + E2 - E3, E1.top - E4.top, E4.right + E3,  E4.top + E3); 
+// Infered from: (gtk/{prevFiles/prev_6fbe28_5b341e_gtk#gtkwindow.c,revFiles/6fbe28_5b341e_gtk#gtkwindow.c}: update_border_windows)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

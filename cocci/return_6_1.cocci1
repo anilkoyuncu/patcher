@@ -1,0 +1,9 @@
+@@
+@@
+- return FALSE; 
++ return gst_caps_new_any(); 
+// Infered from: (gstreamer/{prevFiles/prev_ba6054_297407_plugins#elements#gstinputselector.c,revFiles/ba6054_297407_plugins#elements#gstinputselector.c}: gst_input_selector_getcaps)
+// False positives: (gstreamer/revFiles/ba6054_297407_plugins#elements#gstinputselector.c: gst_input_selector_event), (gstreamer/revFiles/ba6054_297407_plugins#elements#gstinputselector.c: gst_input_selector_query), (gstreamer/revFiles/ba6054_297407_plugins#elements#gstinputselector.c: gst_input_selector_set_active_pad)
+// Recall: 0.22, Precision: 0.25, Matching recall: 0.67
+
+// ---------------------------------------------

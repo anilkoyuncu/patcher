@@ -1,0 +1,13 @@
+@@
+expression list E2;
+identifier I1;
+type T0;
+typedef RockerSwitch;
+@@
+- T0 I1 = g_malloc0 (E2); 
++ RockerSwitch *I1; 
+// Infered from: (qemu/{prevFiles/prev_ec50dd_f6e303_hw#net#rocker#rocker.c,revFiles/ec50dd_f6e303_hw#net#rocker#rocker.c}: qmp_query_rocker)
+// False positives: (qemu/revFiles/ec50dd_f6e303_hw#net#rocker#rocker.c: qmp_query_rocker_ports)
+// Recall: 0.12, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------

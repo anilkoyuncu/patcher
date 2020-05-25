@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ZCG(mem) = (void *)((char *)E0 + HT_USED_SIZE(E1)); 
++ ZCG(mem) = (void *)((char *)E0 + ZEND_ALIGNED_SIZE(HT_USED_SIZE(E1))); 
+// Infered from: (php-src/{prevFiles/prev_daa2b7_750f3d_ext#opcache#zend_persist.c,revFiles/daa2b7_750f3d_ext#opcache#zend_persist.c}: zend_hash_persist), (php-src/{prevFiles/prev_daa2b7_750f3d_ext#opcache#zend_persist.c,revFiles/daa2b7_750f3d_ext#opcache#zend_persist.c}: zend_hash_persist_immutable)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

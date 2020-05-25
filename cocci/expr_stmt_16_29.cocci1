@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = sys_init_dir(&sys_top_dir, E1, E2, "cc_info", ssi_sys_top_level_attrs,  sizeof(ssi_sys_top_level_attrs) / sizeof(struct kobj_attribute )); 
++ E0 = sys_init_dir(&sys_top_dir, E1, E2, "cc_info", ssi_sys_top_level_attrs,  ARRAY_SIZE(ssi_sys_top_level_attrs)); 
+// Infered from: (linux/{prevFiles/prev_9cbd7d_401c31_drivers#staging#ccree#ssi_sysfs.c,revFiles/9cbd7d_401c31_drivers#staging#ccree#ssi_sysfs.c}: ssi_sysfs_init)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

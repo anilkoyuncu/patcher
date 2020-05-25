@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == KEYC_MOUSE && !options_get_number(E1->options, "mouse"))  
++ if (KEYC_IS_MOUSE(E0) && !options_get_number(E1->options, "mouse"))  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_3bb140_bf6a5c_server-client.c,revFiles/3bb140_bf6a5c_server-client.c}: server_client_handle_key)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

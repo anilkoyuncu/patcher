@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->media_provider || E0->media_stopped_action != VLC_PLAYER_MEDIA_STOPPED_CONTINUE || E0->next_media_requested)  
++ if (!E0->media_provider || E0->media_stopped_action == VLC_PLAYER_MEDIA_STOPPED_STOP || E0->next_media_requested)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_65683c_5e0988_src#player#player.c,revFiles/65683c_5e0988_src#player#player.c}: vlc_player_PrepareNextMedia)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

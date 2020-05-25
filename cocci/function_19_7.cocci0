@@ -1,0 +1,14 @@
+@@
+expression E0;
+@@
+- ogg_save(E0); 
++ ret = ogg_save(E0); 
++ if (ret < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_40adcf_586ba2_libavformat#oggdec.c,revFiles/40adcf_586ba2_libavformat#oggdec.c}: ogg_get_length), (FFmpeg/{prevFiles/prev_40adcf_586ba2_libavformat#oggdec.c,revFiles/40adcf_586ba2_libavformat#oggdec.c}: ogg_get_length)
+// False positives: (FFmpeg/revFiles/9b8152_568381_libavformat#oggdec.c: ogg_get_length)
+// Recall: 0.10, Precision: 0.50, Matching recall: 0.80
+
+// ---------------------------------------------

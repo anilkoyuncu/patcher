@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- gtk_css_gadget_get_preferred_size(E0->slider_gadget, E1, E2, E3, E4, NULL,  NULL); 
++ gtk_css_gadget_get_preferred_size(E0->slider_gadget, E1, -1, E3, E4, NULL,  NULL); 
+// Infered from: (gtk/{prevFiles/prev_5a42c2_cdc580_gtk#gtkrange.c,revFiles/5a42c2_cdc580_gtk#gtkrange.c}: gtk_range_measure_trough)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

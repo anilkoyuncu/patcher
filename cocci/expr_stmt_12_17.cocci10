@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- E0 = gtk_menu_button_get_popup(GTK_MENU_BUTTON(E1)); 
++ E0 = GTK_WIDGET(gtk_menu_button_get_popup(GTK_MENU_BUTTON(E1))); 
+// Infered from: (gtk/{prevFiles/prev_1bfe9d_18d439_gtk#a11y#gtkmenubuttonaccessible.c,revFiles/1bfe9d_18d439_gtk#a11y#gtkmenubuttonaccessible.c}: gtk_menu_button_accessible_get_n_children)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 0.92
+// -- Node Change --
+// Recall: 0.88, Precision: 0.93
+// -- General --
+// Functions fully changed: 12/15(80%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_5683de_4299fd_libavutil#error.c: av_strerror
+ - cpython/prevFiles/prev_a1e9ab_2a9f5e_Python#peephole.c: PyCode_Optimize
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_0387d9_fe33cc_target-sparc#translate.c: disas_sparc_insn
+*/
+
+// ---------------------------------------------

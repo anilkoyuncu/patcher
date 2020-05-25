@@ -1,0 +1,24 @@
+@@
+expression E0;
+typedef GtkWidget;
+@@
+- color_delete_single(color_dlg_num_of_filters - 1,  (GtkWidget *)g_object_get_data(G_OBJECT(E0),  COLOR_FILTERS_CL)); 
++ color_delete_single(0,  (GtkWidget *)g_object_get_data(G_OBJECT(E0),  COLOR_FILTERS_CL)); 
+// Infered from: (wireshark/{prevFiles/prev_000f8e_526f61_ui#gtk#color_edit_dlg.c,revFiles/000f8e_526f61_ui#gtk#color_edit_dlg.c}: edit_new_color_filter_cancel_cb)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_19c4b8_b559c9_modules#access#v4l2.c: 
+*/
+
+// ---------------------------------------------

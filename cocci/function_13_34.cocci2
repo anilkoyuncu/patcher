@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- CRYPTO_UP_REF(&E0->refcnt, &E1, E0->refcnt_lock); 
++ if (CRYPTO_UP_REF(&E0->refcnt, &E1, E0->refcnt_lock) <= 0)  
++ {
++ return 0; 
++ }
+// Infered from: (openssl/{prevFiles/prev_ad14e8_b1f692_crypto#provider_core.c,revFiles/ad14e8_b1f692_crypto#provider_core.c}: ossl_provider_upref)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

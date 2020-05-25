@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->codec->time_base.den >= 101LL * E0->codec->time_base.num && E1[  E2] < 20 && E0->codec->codec_type == CODEC_TYPE_VIDEO)  
++ if ((E0->codec->time_base.den >= 101LL * E0->codec->time_base.num || E0->codec->codec_id == CODEC_ID_MPEG2VIDEO) && E1[  E2] < 20 && E0->codec->codec_type == CODEC_TYPE_VIDEO)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_6cc65a_f9645d_libavformat#utils.c,revFiles/6cc65a_f9645d_libavformat#utils.c}: av_find_stream_info)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.71, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/7(71%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_beb19a_b2be1d_libavcodec#h264.c: decode_slice_header
+*/
+
+// ---------------------------------------------

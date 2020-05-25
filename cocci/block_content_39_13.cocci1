@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef PyObject;
+@@
+- PyObject *I0; 
+  ...
+- I0 = E1; 
+- E1 = E2; 
+- Py_XDECREF(I0); 
++ Py_SETREF(E1, E2); 
+// Infered from: (cpython/{prevFiles/prev_1ed017_726fc1_Objects#listobject.c,revFiles/1ed017_726fc1_Objects#listobject.c}: PyList_SetItem)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

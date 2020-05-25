@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E4, E3;
+@@
+- proto_tree_add_bits_ret_val(E0, hf_mac_lte_sch_length, E1, E2 * 8 + 1, E3,  &E4, FALSE); 
++ proto_tree_add_bits_ret_val(E0, hf_mac_lte_sch_length, E1, E2 * 8 + 1, E3,  &E4, ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_54b72021_6a5895_epan#dissectors#packet-mac-lte.c,revFiles/54b72021_6a5895_epan#dissectors#packet-mac-lte.c}: dissect_ulsch_or_dlsch), (wireshark/{prevFiles/prev_54b72021_6a5895_epan#dissectors#packet-mac-lte.c,revFiles/54b72021_6a5895_epan#dissectors#packet-mac-lte.c}: dissect_ulsch_or_dlsch)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

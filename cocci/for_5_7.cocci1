@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = E1 = 0;E0 != INT64_MAX;E1 = E0 + 1)  
++ for(E0 = E1 = 0;E0 != INT64_MAX;E1 = E0 + 1LU)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_108957_b422e2c_libavformat#avidec.c,revFiles/108957_b422e2c_libavformat#avidec.c}: guess_ni_flag)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

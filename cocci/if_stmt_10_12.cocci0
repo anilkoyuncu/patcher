@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (G_UNLIKELY(!g_ascii_isalnum(*E0)))  
++ if (G_UNLIKELY(!g_ascii_isalpha(*E0)))  
+  {
+  ...
+  }
+// Infered from: (gstreamer/{prevFiles/prev_04323a_589499_gst#gststructure.c,revFiles/04323a_589499_gst#gststructure.c}: gst_structure_validate_name)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

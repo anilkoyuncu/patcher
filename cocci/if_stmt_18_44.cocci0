@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0->header_sent || E1 == NGX_HTTP_REQUEST_TIME_OUT || E1 == NGX_HTTP_CLIENT_CLOSED_REQUEST)  
++ if (!E0->header_sent || E1 == NGX_HTTP_REQUEST_TIME_OUT || E1 == NGX_HTTP_CLIENT_CLOSED_REQUEST || (  E0->pipe && E0->pipe->downstream_error))  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_2aa6d7_cf4879_src#http#ngx_http_upstream.c,revFiles/2aa6d7_cf4879_src#http#ngx_http_upstream.c}: ngx_http_upstream_finalize_request)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

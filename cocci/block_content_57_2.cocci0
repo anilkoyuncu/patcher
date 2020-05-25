@@ -1,0 +1,8 @@
+@@
+identifier I0;
+@@
+- char I0[128]; 
+// Infered from: (php-src/{prevFiles/prev_65fc90_20a359_main#main.c,revFiles/65fc90_20a359_main#main.c}: php_log_err)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------

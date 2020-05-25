@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = ff_rtmp_packet_create(&E1, RTMP_SYSTEM_CHANNEL, RTMP_PT_INVOKE, 0,  4096)) < 0)  
++ if ((E0 = ff_rtmp_packet_create(&E1, RTMP_SYSTEM_CHANNEL, RTMP_PT_INVOKE, 0,  4096 + APP_MAX_LENGTH)) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_da8ef5_02ac33_libavformat#rtmpproto.c,revFiles/da8ef5_02ac33_libavformat#rtmpproto.c}: gen_connect)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

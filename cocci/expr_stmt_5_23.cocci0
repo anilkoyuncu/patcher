@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+typedef tcg_target_long;
+typedef uint32_t;
+@@
+- *(uint32_t *)E0 |= (*(uint32_t *)E0 & 0xff000000) | (((E1 - ((tcg_target_long )E0 + 8)) >> 2) & 0xffffff); 
++ *(uint32_t *)E0 = ((*(uint32_t *)E0) & 0xff000000) | (((E1 - ((tcg_target_long )E0 + 8)) >> 2) & 0xffffff); 
+// Infered from: (qemu/{prevFiles/prev_eae6ce_e1f380_tcg#arm#tcg-target.c,revFiles/eae6ce_e1f380_tcg#arm#tcg-target.c}: patch_reloc)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- I0 = ssh_pki_import_pubkey_file(E1->set.str[STRING_SSH_PUBLIC_KEY],  &E2->pubkey); 
++ int I0 = ssh_pki_import_pubkey_file(E1->set.str[STRING_SSH_PUBLIC_KEY],  &E2->pubkey); 
+// Infered from: (curl/{prevFiles/prev_10db3e_27af2e_lib#ssh-libssh.c,revFiles/10db3e_27af2e_lib#ssh-libssh.c}: myssh_connect)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

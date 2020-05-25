@@ -1,0 +1,26 @@
+@@
+expression E0, E1;
+@@
+- gtk_adjustment_animate_to_value(E0->hadjustment, E1.x); 
++ gtk_adjustment_animate_to_value(E0->hadjustment, E1.x + E0->left_padding); 
+// Infered from: (gtk/{prevFiles/prev_9ad6ac_90bcde_gtk#gtktextview.c,revFiles/9ad6ac_90bcde_gtk#gtktextview.c}: _gtk_text_view_scroll_to_iter), (gtk/{prevFiles/prev_016f65_2aaba3_gtk#gtktextview.c,revFiles/016f65_2aaba3_gtk#gtktextview.c}: _gtk_text_view_scroll_to_iter)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.09
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_016f65_2aaba3_gtk#gtktextview.c: gtk_text_view_value_changed
+ - gtk/prevFiles/prev_9ad6ac_90bcde_gtk#gtktextview.c: _gtk_text_view_scroll_to_iter
+ - gtk/prevFiles/prev_016f65_2aaba3_gtk#gtktextview.c: _gtk_text_view_scroll_to_iter
+ - gtk/prevFiles/prev_9ad6ac_90bcde_gtk#gtktextview.c: gtk_text_view_value_changed
+*/
+
+// ---------------------------------------------

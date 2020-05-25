@@ -1,0 +1,38 @@
+@@
+expression E0;
+@@
+- if (E0 % 5 == 0)  
++ if ((E0 % 5 == 0) && (E0 != 0))  
+  {
+- printf("%d", E0 / 5); 
++ printf("%d", E0 / 5); 
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_478-A-17991371-17991510.c,revFiles/478-A-17991371-17991510.c}: main), (codeflaws/{prevFiles/prev_478-A-18260254-18260269.c,revFiles/478-A-18260254-18260269.c}: main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.30, Precision: 1.00
+// -- Node Change --
+// Recall: 0.30, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/10(30%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_10378f_b48310_crypto#evp#bio_b64.c: b64_read
+ - vlc/prevFiles/prev_4a1b6b_14b5b5_modules#misc#freetype.c: RenderHtml
+ - wireshark/prevFiles/prev_f54cc3_94f51b_epan#tvbuff.c: tvb_new_octet_aligned
+ - wireshark/prevFiles/prev_2ab4f6_ba3fbc_epan#dissectors#packet-sigcomp.c: decomp_dispatch_get_bits
+ - wireshark/prevFiles/prev_48784e_5e49db_epan#dissectors#packet-cfm.c: dissect_cfm_ccm
+ - wireshark/prevFiles/prev_e2ef8b_a54d3e96_epan#dissectors#packet-smb.c: dissect_session_setup_andx_response
+ - FFmpeg/prevFiles/prev_5d9827_384855_ffmpeg.c: print_report
+*/
+
+// ---------------------------------------------

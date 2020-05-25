@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- playlist_Stop(E0); 
++ playlist_Control(E0, PLAYLIST_STOP, pl_Locked); 
+// Infered from: (vlc/{prevFiles/prev_c1f04f_c68b08_src#playlist#item.c,revFiles/c1f04f_c68b08_src#playlist#item.c}: input_item_add_subitem_tree)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

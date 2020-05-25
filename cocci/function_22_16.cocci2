@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- kfree(E0->reg_def_copy); 
+- E1 = NULL; 
+// Infered from: (linux/{prevFiles/prev_ab7af5c_da8b8e_sound#soc#soc-core.c,revFiles/ab7af5c_da8b8e_sound#soc#soc-core.c}: snd_soc_register_codec)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- return k - (i - k + 1); 
++ return k - (i - (k + 1)); 
+// Infered from: (codeflaws/{prevFiles/prev_271-C-3099138-3099559.c,revFiles/271-C-3099138-3099559.c}: f)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

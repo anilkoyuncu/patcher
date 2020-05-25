@@ -1,0 +1,15 @@
+@@
+identifier I0, I1;
+expression E2, E3;
+typedef zend_class_entry;
+typedef zstr;
+@@
+- zend_class_entry *I0 = emalloc(sizeof(zend_class_entry )); 
++ zend_class_entry *I0; 
+  ...
+- zstr I1 = zend_u_str_case_fold(Z_TYPE(E2->u.constant),  Z_UNIVAL(E2->u.constant),  Z_UNILEN(E2->u.constant), 0, &E3); 
++ zstr I1; 
+// Infered from: (php-src/{prevFiles/prev_68181b_113686_Zend#zend_compile.c,revFiles/68181b_113686_Zend#zend_compile.c}: zend_do_begin_class_declaration)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

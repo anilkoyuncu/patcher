@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- D_DEBUG_AT(Cairo_DirectFB, "%s buffer for surface.\n",  E0->buffer ? "Reallocating" :"Allocating"); 
++ D_DEBUG_AT(Cairo_DirectFB, "%s buffer for surface.\n",  E0->dfbbuffer ? "Reallocating" :"Allocating"); 
+// Infered from: (cairo/{prevFiles/prev_990781_307a17_src#cairo-directfb-surface.c,revFiles/990781_307a17_src#cairo-directfb-surface.c}: _directfb_acquire_surface)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_705404_d167ca_ui#cli#tap-macltestat.c: mac_lte_stat_draw
+ - wireshark/prevFiles/prev_705404_d167ca_ui#gtk#mac_lte_stat_dlg.c: mac_lte_stat_draw
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0->local = E1; 
++ E0->local = (int )E1; 
+// Infered from: (cpython/{prevFiles/prev_70792d_e82896_Modules#sha512module.c,revFiles/70792d_e82896_Modules#sha512module.c}: sha512_update), (cpython/{prevFiles/prev_70792d_e82896_Modules#sha256module.c,revFiles/70792d_e82896_Modules#sha256module.c}: sha_update)
+// False positives: (cpython/revFiles/70792d_e82896_Modules#sha256module.c: SHAcopy), (cpython/revFiles/70792d_e82896_Modules#sha256module.c: sha224_init), (cpython/revFiles/70792d_e82896_Modules#sha256module.c: sha_init), (cpython/revFiles/70792d_e82896_Modules#sha512module.c: SHAcopy), (cpython/revFiles/70792d_e82896_Modules#sha512module.c: sha384_init), (cpython/revFiles/70792d_e82896_Modules#sha512module.c: sha512_init)
+// Recall: 0.29, Precision: 0.25, Matching recall: 0.50
+
+// ---------------------------------------------

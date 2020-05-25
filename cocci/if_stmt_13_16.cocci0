@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (strchr(E0->op2.u.constant.value.str.val, ':'))  
++ if (E0->op2.op_type != IS_UNUSED && strchr(E0->op2.u.constant.value.str.val,  ':'))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_838b8b_a6cf14_Zend#zend_compile.c,revFiles/838b8b_a6cf14_Zend#zend_compile.c}: zend_do_early_binding)
+// False positives: (php-src/revFiles/838b8b_a6cf14_Zend#zend_compile.c: do_bind_function_or_class)
+// Recall: 0.11, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

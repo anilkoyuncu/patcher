@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- floatformat_to_double(&floatformat_ieee_single_little, E0, &E1); 
++ floatformat_to_double(E0, &E1); 
+// Infered from: (qemu/{prevFiles/prev_e3b283_9e0a5d_arm-dis.c,revFiles/e3b283_9e0a5d_arm-dis.c}: print_insn_neon)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

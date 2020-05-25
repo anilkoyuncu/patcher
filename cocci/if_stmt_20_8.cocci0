@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if ((E0->bEndpointAddress & USB_TYPE_MASK) == USB_DIR_OUT && (E0->bmAttributes & USB_ENDPOINT_XFERTYPE_MASK) == USB_ENDPOINT_XFER_BULK)  
++ if ((E0->bEndpointAddress & USB_TYPE_MASK) == USB_DIR_OUT && usb_endpoint_xfer_bulk(  E0))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_f201a8_68ce9c_drivers#net#wireless#zd1211rw#zd_usb.c,revFiles/f201a8_68ce9c_drivers#net#wireless#zd1211rw#zd_usb.c}: eject_installer)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

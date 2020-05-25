@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2, E3;
+typedef mca_base_component_t;
+typedef mca_base_module_t;
+@@
+- if (OPAL_SUCCESS != (E0 = mca_base_select("routed", orte_routed_base_output,  &orte_routed_base_components,  (mca_base_module_t **)&E1,  (mca_base_component_t **)&E2)))  
++ if (OPAL_SUCCESS != mca_base_select("routed", orte_routed_base_output,  &orte_routed_base_components,  (mca_base_module_t **)&E1,  (mca_base_component_t **)&E2))  
+  {
+  ...
+  }
+  ...
+- if (ORTE_SUCCESS != orte_routed.initialize())  
++ if (ORTE_SUCCESS != (E0 = orte_routed.initialize()))  
+  {
+- E3 = ORTE_ERROR; 
++ E3 = E0; 
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_1de50b_e8c8d0c_orte#mca#routed#base#routed_base_components.c,revFiles/1de50b_e8c8d0c_orte#mca#routed#base#routed_base_components.c}: orte_routed_base_select)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

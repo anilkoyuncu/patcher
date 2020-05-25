@@ -1,0 +1,39 @@
+@@
+identifier I0, I1, I7;
+expression E2, E3, E4, E5, E6;
+@@
+- int I0 = I1; 
+- E2 -= I1; 
++ int I0 = sz_local; 
++ E2 -= sz_local; 
+  ...
+- proto_tree_add_text(E3, E4, E5, I1 + I0, "%.*s: %.*s", I0 - 1,  tvb_get_ptr(E4, E5, I0), I1 - 1,  tvb_get_ptr(E4, E6 + 1, I1)); 
+- I7 += 2; 
++ proto_tree_add_text(E3, E4, E5, sz_local + I0, "%.*s: %.*s", I0 - 1,  tvb_get_ptr(E4, E5, I0), sz_local - 1,  tvb_get_ptr(E4, E6 + 1, sz_local)); 
++ n_local += 2; 
+// Infered from: (wireshark/{prevFiles/prev_33af75_d897f4_epan#dissectors#packet-icq.c,revFiles/33af75_d897f4_epan#dissectors#packet-icq.c}: icqv5_decode_msgType)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.71
+// -- Node Change --
+// Recall: 0.83, Precision: 0.92
+// -- General --
+// Functions fully changed: 1/7(14%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_c56146_f1d471_epan#dissectors#packet-mysql.c: dissect_mysql_pdu
+ - wireshark/prevFiles/prev_c56146_f1d471_epan#dissectors#packet-mysql.c: mysql_dissect_request
+ - wireshark/prevFiles/prev_33af75_d897f4_epan#dissectors#packet-icq.c: icqv5_decode_msgType
+ - wireshark/prevFiles/prev_33af75_d897f4_epan#dissectors#packet-icq.c: icqv5_cmd_keep_alive
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_9b568e_94b8c6_epan#dissectors#packet-nfs.c: dissect_fhandle_data_NETAPP_V4
+ - wireshark/prevFiles/prev_9b568e_94b8c6_epan#dissectors#packet-nfs.c: nfs_name_snoop_add_name
+*/
+
+// ---------------------------------------------

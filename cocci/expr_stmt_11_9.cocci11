@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- av_image_copy_plane(E0->data[E1], E0->linesize[E1], E2->data[E1],  E2->linesize[E1], E3->planewidth[E1], E3->planeheight[  E1]); 
++ av_image_copy_plane(E0->data[E1], E0->linesize[E1], E2->data[E1],  E2->linesize[E1], E3->planewidth[E1] * E3->bpc,  E3->planeheight[E1]); 
+// Infered from: (FFmpeg/{prevFiles/prev_2f1475_80798e_libavfilter#vf_vaguedenoiser.c,revFiles/2f1475_80798e_libavfilter#vf_vaguedenoiser.c}: filter)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

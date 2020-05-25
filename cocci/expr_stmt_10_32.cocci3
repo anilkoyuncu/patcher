@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- _gdk_monitor_init(E0->screen); 
++ _gdk_monitor_init(GDK_WIN32_SCREEN(E0->screen)); 
+// Infered from: (gtk/{prevFiles/prev_c643d8_bc3c85_gdk#win32#gdkdisplay-win32.c,revFiles/c643d8_bc3c85_gdk#win32#gdkdisplay-win32.c}: _gdk_win32_display_open)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

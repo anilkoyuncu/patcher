@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(E0->info->device, "%s: write() failed and returned %d\n", __func__,  E1); 
++ dev_err(E0->info->device, "write() failed and returned %d\n", E1); 
+// Infered from: (linux/{prevFiles/prev_aed1c7_14f63e_drivers#staging#fbtft#fbtft-bus.c,revFiles/aed1c7_14f63e_drivers#staging#fbtft#fbtft-bus.c}: fbtft_write_reg8_bus9), (linux/{prevFiles/prev_aed1c7_14f63e_drivers#staging#fbtft#fb_watterott.c,revFiles/aed1c7_14f63e_drivers#staging#fbtft#fb_watterott.c}: write_reg8_bus8), (linux/{prevFiles/prev_aed1c7_14f63e_drivers#staging#fbtft#fb_ssd1331.c,revFiles/aed1c7_14f63e_drivers#staging#fbtft#fb_ssd1331.c}: write_reg8_bus8), (linux/{prevFiles/prev_aed1c7_14f63e_drivers#staging#fbtft#fb_ssd1331.c,revFiles/aed1c7_14f63e_drivers#staging#fbtft#fb_ssd1331.c}: write_reg8_bus8)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

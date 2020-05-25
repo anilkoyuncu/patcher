@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gtk_css_provider_load_from_data(E0, css, -1, NULL); 
++ gtk_css_provider_load_from_data(E0, css, -1); 
+// Infered from: (gtk/{prevFiles/prev_2fed74_8644e5_tests#testlist3.c,revFiles/2fed74_8644e5_tests#testlist3.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

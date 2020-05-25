@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = E1->height >> E2; 
++ int I0 = FF_CEIL_RSHIFT(E1->height, E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_0083c1_9295ee_libavfilter#vf_transpose.c,revFiles/0083c1_9295ee_libavfilter#vf_transpose.c}: filter_slice)
+// False positives: (FFmpeg/revFiles/50e667_d751a2_libavfilter#vf_transpose.c: filter_frame)
+// Recall: 0.50, Precision: 0.75, Matching recall: 0.60
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.86
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_50e667_d751a2_libavfilter#vf_transpose.c: filter_frame
+*/
+
+// ---------------------------------------------

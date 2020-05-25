@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = (E1 = &E1->stream->readfilters ? 1 :0); 
++ int I0 = (E1 == &E1->stream->readfilters ? 1 :0); 
+// Infered from: (php-src/{prevFiles/prev_095c66_d6e15b_main#streams#filter.c,revFiles/095c66_d6e15b_main#streams#filter.c}: _php_stream_filter_output_prefer_unicode)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

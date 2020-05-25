@@ -1,0 +1,36 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > (E1 / 2 * E1 / 2 + (E1 / 2 + 1) * (E1 / 2 + 1)))  
++ if (E0 > (((E1 / 2) * (E1 / 2) + (E1 / 2 + 1) * (E1 / 2 + 1))))  
+  {
+- printf("NO"); 
++ printf("NO"); 
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_544-B-11393115-11393166.c,revFiles/544-B-11393115-11393166.c}: main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_b8a35f_97515c_src#mpi#c#graph_create.c: MPI_Graph_create
+*/
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_b84e12_cf3404_crypto#dsa#dsa_lib.c: DSA_set0_pqg
+*/
+
+// ---------------------------------------------

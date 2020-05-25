@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0[1].type = CSN_END; 
++ E0[0].type = CSN_END; 
+// Infered from: (wireshark/{prevFiles/prev_031593_56a783_epan#dissectors#packet-csn1.c,revFiles/031593_56a783_epan#dissectors#packet-csn1.c}: csnStreamDissector)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

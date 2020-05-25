@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- D_DEBUG_AT(Cairo_DirectFB, "%s buffer for surface.\n",  E0->dfbbuffer ? "Reallocating" :"Allocating"); 
++ D_DEBUG_AT(Cairo_DirectFB, "%s buffer for surface.\n",  E0->dfbsurface ? "Reallocating" :"Allocating"); 
+// Infered from: (cairo/{prevFiles/prev_e0bec6_8601c2_src#cairo-directfb-surface.c,revFiles/e0bec6_8601c2_src#cairo-directfb-surface.c}: _directfb_acquire_surface)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

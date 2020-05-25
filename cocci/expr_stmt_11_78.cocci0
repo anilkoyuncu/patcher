@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef uint8_t;
+@@
+- cpu_physical_memory_write(E0, (const  uint8_t *)&E1, 8); 
++ cpu_physical_memory_write(E0, &E1, 8); 
+// Infered from: (qemu/{prevFiles/prev_71d2b7_3bad98_exec.c,revFiles/71d2b7_3bad98_exec.c}: stq_phys)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E3, E4;
+binary operator B2 = {<< ,>> };
+@@
+- E0 = (E1 B2 E3) | (1 << E4); 
++ E0 = (E1 B2 E3) | BIT(E4); 
+// Infered from: (linux/{prevFiles/prev_6082ac_58ff7e_drivers#staging#iio#impedance-analyzer#ad5933.c,revFiles/6082ac_58ff7e_drivers#staging#iio#impedance-analyzer#ad5933.c}: ad5933_store), (linux/{prevFiles/prev_9f3839_9361076_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_ccmp.c,revFiles/9f3839_9361076_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_ccmp.c}: ieee80211_ccmp_encrypt), (linux/{prevFiles/prev_37b299_9f3839_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_tkip.c,revFiles/37b299_9f3839_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_tkip.c}: ieee80211_tkip_encrypt)
+// Recall: 0.27, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

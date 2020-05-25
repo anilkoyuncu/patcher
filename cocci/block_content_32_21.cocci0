@@ -1,0 +1,12 @@
+@@
+identifier I2, I3, I0;
+expression E1;
+@@
+- I0 = E1->I2; 
+- E1->I2 = I3; 
+- Py_XDECREF(I0); 
++ Py_SETREF(E1->I2, I3); 
+// Infered from: (cpython/{prevFiles/prev_1ed017_726fc1_Modules#itertoolsmodule.c,revFiles/1ed017_726fc1_Modules#itertoolsmodule.c}: groupby_next), (cpython/{prevFiles/prev_1ed017_726fc1_Modules#itertoolsmodule.c,revFiles/1ed017_726fc1_Modules#itertoolsmodule.c}: groupby_next)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.58
+
+// ---------------------------------------------

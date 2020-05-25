@@ -1,0 +1,11 @@
+@@
+identifier I1 = {aml_call2 ,aml_call4 };
+expression list E2;
+expression E0;
+@@
+- aml_append(E0, aml_return(I1(E2))); 
++ aml_append(E0, I1(E2)); 
+// Infered from: (qemu/{prevFiles/prev_e67413_ffab1b_hw#acpi#memory_hotplug.c,revFiles/e67413_ffab1b_hw#acpi#memory_hotplug.c}: build_memory_hotplug_aml), (qemu/{prevFiles/prev_e67413_ffab1b_hw#acpi#memory_hotplug.c,revFiles/e67413_ffab1b_hw#acpi#memory_hotplug.c}: build_memory_hotplug_aml)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

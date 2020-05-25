@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- error_selecting_folder_over_existing_file_dialog(E0, E1->file); 
++ error_selecting_folder_over_existing_file_dialog(E0); 
+// Infered from: (gtk/{prevFiles/prev_84513d_b94012_gtk#gtkfilechooserdefault.c,revFiles/84513d_b94012_gtk#gtkfilechooserdefault.c}: file_exists_get_info_cb)
+// False positives: (gtk/revFiles/84513d_b94012_gtk#gtkfilechooserdefault.c: _gtk_file_chooser_label_for_file)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

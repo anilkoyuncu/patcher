@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 && E1 && (!E2 || !E3 || (E0 < E2)))  
++ if (E0 && E1 && (!E2 || !E3 || (E0 <= E2 + 1)))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_00be62_2fb64c_gtk#gtkaboutdialog.c,revFiles/00be62_2fb64c_gtk#gtkaboutdialog.c}: text_buffer_new)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

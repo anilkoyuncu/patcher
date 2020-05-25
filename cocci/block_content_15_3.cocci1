@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = MIN(E1, qemu_chr_be_can_write(E2->chr)); 
++ int can_write = qemu_chr_be_can_write(E2->chr); 
++ E0 = MIN(E1, can_write); 
+// Infered from: (qemu/{prevFiles/prev_75c439_b010cec_spice-qemu-char.c,revFiles/75c439_b010cec_spice-qemu-char.c}: vmc_write)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

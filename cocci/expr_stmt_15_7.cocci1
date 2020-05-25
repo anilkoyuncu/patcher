@@ -1,0 +1,10 @@
+@@
+identifier I1, I2;
+expression E0, E3;
+@@
+- qdev_connect_gpio_out(E0->gpio, I1, qemu_allocate_irqs(I2, E3, 1)[0]); 
++ qdev_connect_gpio_out(E0->gpio, I1, qemu_allocate_irq(I2, E3, 0)); 
+// Infered from: (qemu/{prevFiles/prev_f3c7d0_127a4e_hw#arm#spitz.c,revFiles/f3c7d0_127a4e_hw#arm#spitz.c}: spitz_i2c_setup), (qemu/{prevFiles/prev_f3c7d0_127a4e_hw#arm#z2.c,revFiles/f3c7d0_127a4e_hw#arm#z2.c}: z2_init)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

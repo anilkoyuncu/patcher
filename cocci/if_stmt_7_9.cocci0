@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->numa_mem_supported)  
++ if (E0->cpu_index_to_instance_props && E0->get_default_cpu_node_id)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_fcd3f2_5275db_hw#core#machine.c,revFiles/fcd3f2_5275db_hw#core#machine.c}: machine_initfn)
+// False positives: (qemu/revFiles/fcd3f2_5275db_hw#core#machine.c: machine_run_board_init)
+// Recall: 0.27, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

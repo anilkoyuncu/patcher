@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- ffio_init_context(&E0, E1->codec_priv.data, E1->codec_priv.size,  AVIO_FLAG_READ, NULL, NULL, NULL, NULL); 
++ ffio_init_context(&E0, E1->codec_priv.data, E1->codec_priv.size, 0, NULL,  NULL, NULL, NULL); 
+// Infered from: (FFmpeg/{prevFiles/prev_d0b450_cb8d39_libavformat#matroskadec.c,revFiles/d0b450_cb8d39_libavformat#matroskadec.c}: matroska_read_header)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.86
+// -- Node Change --
+// Recall: 0.74, Precision: 0.78
+// -- General --
+// Functions fully changed: 5/10(50%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_301c7d_1f9db2_block#vmdk.c: vmdk_add_extent
+ - qemu/prevFiles/prev_301c7d_1f9db2_block#vmdk.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_62c2ff_058452_orte#mca#errmgr#default_orted#errmgr_default_orted.c: proc_errors
+ - ompi/prevFiles/prev_62c2ff_058452_orte#mca#errmgr#default_orted#errmgr_default_orted.c: job_errors
+*/
+
+// ---------------------------------------------

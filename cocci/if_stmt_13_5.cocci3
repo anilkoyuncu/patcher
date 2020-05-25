@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->width / E1->hscale * E0->height * E1->delta_size > E2->size * 8LL * 4)  
++ if ((E0->width + E1->hscale - 1) / E1->hscale * E0->height * E1->delta_size > E2->size * 8LL * 4)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_7f22a4_598261_libavcodec#truemotion2rt.c,revFiles/7f22a4_598261_libavcodec#truemotion2rt.c}: truemotion2rt_decode_frame)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

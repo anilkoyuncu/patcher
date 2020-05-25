@@ -1,0 +1,13 @@
+@@
+identifier I1;
+expression E3, E0, E2, E4, E5;
+typedef proto_item;
+@@
+- proto_tree_add_item_hidden(E0, I1, E2, E3, E4, E5); 
++ proto_item *hidden_item; 
++ hidden_item = proto_tree_add_item(E0, I1, E2, E3, E4, E5); 
++ PROTO_ITEM_SET_HIDDEN(hidden_item); 
+// Infered from: (wireshark/{prevFiles/prev_931cc9_78f4e0_epan#dissectors#packet-megaco.c,revFiles/931cc9_78f4e0_epan#dissectors#packet-megaco.c}: dissect_megaco_text), (wireshark/{prevFiles/prev_b3aa52_558c1b_epan#dissectors#packet-scsi.c,revFiles/b3aa52_558c1b_epan#dissectors#packet-scsi.c}: dissect_scsi_spc_modepage), (wireshark/{prevFiles/prev_b3aa52_558c1b_epan#dissectors#packet-scsi.c,revFiles/b3aa52_558c1b_epan#dissectors#packet-scsi.c}: dissect_scsi_fix_snsinfo), (wireshark/{prevFiles/prev_b42aec_b3aa52_epan#dissectors#packet-socks.c,revFiles/b42aec_b3aa52_epan#dissectors#packet-socks.c}: display_socks_v4), (wireshark/{prevFiles/prev_b42aec_b3aa52_epan#dissectors#packet-socks.c,revFiles/b42aec_b3aa52_epan#dissectors#packet-socks.c}: display_socks_v5)
+// Recall: 0.55, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

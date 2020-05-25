@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_item(E0, hf_tn5250_dpt_ec, E1, E2, E3, ENC_EBCDIC | ENC_NA); 
+- E2++; 
++ proto_tree_add_item(E0, hf_tn5250_dpt_ec, E1, E2, 4, ENC_EBCDIC | ENC_NA); 
++ E2 += 4; 
+// Infered from: (wireshark/{prevFiles/prev_8868cf_29ab96_epan#dissectors#packet-tn5250.c,revFiles/8868cf_29ab96_epan#dissectors#packet-tn5250.c}: dissect_write_structured_field)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

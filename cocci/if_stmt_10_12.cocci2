@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0 = CAST(struct magic_map *, calloc(1, sizeof(*E0)))) == NULL)  
++ if ((E0 = CAST(struct magic_map *, ecalloc(1, sizeof(*E0)))) == NULL)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_fb0be3_12e2fc_ext#fileinfo#libmagic#apprentice.c,revFiles/fb0be3_12e2fc_ext#fileinfo#libmagic#apprentice.c}: apprentice_buf)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,7 @@
+@@
+@@
+- FLS_FETCH(); 
+// Infered from: (php-src/{prevFiles/prev_c47452_485412_ext#standard#file.c,revFiles/c47452_485412_ext#standard#file.c}: PHP_FUNCTION)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

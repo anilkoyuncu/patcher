@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = g_object_ref(gtk_builder_get_object(E1, E2)); 
++ E0 = G_MENU_MODEL(g_object_ref(gtk_builder_get_object(E1, E2))); 
+// Infered from: (gtk/{prevFiles/prev_484e45_e7ed7c_tests#testgmenu.c,revFiles/484e45_e7ed7c_tests#testgmenu.c}: get_model), (gtk/{prevFiles/prev_484e45_e7ed7c_tests#testgmenu.c,revFiles/484e45_e7ed7c_tests#testgmenu.c}: get_model)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

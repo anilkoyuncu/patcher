@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef vlc_cond_t;
+@@
+  vlc_cond_t I0; 
+  ...
+- var_DelCallback(E1, "intf-event", InputEvent, E2); 
++ var_DelCallback(E1, "intf-event", InputEvent, &I0); 
+// Infered from: (vlc/{prevFiles/prev_dcd72e_9c4998_src#playlist#fetcher.c,revFiles/dcd72e_9c4998_src#playlist#fetcher.c}: WaitPreparsed)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

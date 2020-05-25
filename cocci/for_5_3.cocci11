@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 2;E0 < E1 - 1;++E0)  
++ for(E0 = 1;E0 < E1 - 1;++E0)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_446-A-17894979-17895024.c,revFiles/446-A-17894979-17895024.c}: main)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

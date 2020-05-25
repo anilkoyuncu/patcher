@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- pr_debug("%s->set_phase(%d) delay_nums=%u reg[0x%p]=0x%03x actual_degrees=%d\n",  __clk_get_name(E0->clk), E1, E2, E3->reg, E4 >> (E3->shift),  rockchip_mmc_get_phase(E0)); 
++ pr_debug("%s->set_phase(%d) delay_nums=%u reg[0x%p]=0x%03x actual_degrees=%d\n",  clk_hw_get_name(E0), E1, E2, E3->reg, E4 >> (E3->shift),  rockchip_mmc_get_phase(E0)); 
+// Infered from: (linux/{prevFiles/prev_836ee0_e7df6f6_drivers#clk#rockchip#clk-mmc-phase.c,revFiles/836ee0_e7df6f6_drivers#clk#rockchip#clk-mmc-phase.c}: rockchip_mmc_set_phase)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 8/8(100%)
+
+
+// ---------------------------------------------

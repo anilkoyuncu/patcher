@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- E0->idrent_pool = realloc(E0->idrent_pool, sizeof(struct idrent ) * E1); 
+- if (E0->idrent_pool == NULL)  
++ p = realloc(E0->idrent_pool, sizeof(struct idrent ) * E1); 
++ if (p == NULL)  
+  {
+  ...
+  }
++ E0->idrent_pool = (struct idrent *)p; 
+// Infered from: (libarchive/{prevFiles/prev_0ddb05_52ca91_libarchive#archive_write_set_format_iso9660.c,revFiles/0ddb05_52ca91_libarchive#archive_write_set_format_iso9660.c}: idr_ensure_poolsize)
+// Recall: 0.28, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - libarchive/prevFiles/prev_0ddb05_52ca91_libarchive#archive_read_disk_windows.c: update_current_filesystem
+ - libarchive/prevFiles/prev_0ddb05_52ca91_libarchive#archive_write_set_format_iso9660.c: idr_ensure_poolsize
+ - libarchive/prevFiles/prev_0ddb05_52ca91_libarchive#archive_read_disk_posix.c: update_current_filesystem
+*/
+
+// ---------------------------------------------

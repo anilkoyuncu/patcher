@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->b_force)  
++ if (E0->obj.force)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_6c4e9a_b74648_modules#video_output#win32#direct2d.c,revFiles/6c4e9a_b74648_modules#video_output#win32#direct2d.c}: Open)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

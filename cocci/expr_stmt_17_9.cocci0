@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- cpu_stl_data(E0, E1 + 4, E0->PSW); 
++ cpu_stl_data(E0, E1 + 4, psw_read(E0)); 
+// Infered from: (qemu/{prevFiles/prev_723733_d15914_target-tricore#op_helper.c,revFiles/723733_d15914_target-tricore#op_helper.c}: save_context_upper)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

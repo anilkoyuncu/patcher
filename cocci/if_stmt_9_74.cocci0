@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef orte_node_t;
+@@
+- if (NULL == (E0 = opal_pointer_array_get_item(orte_node_pool, E1)))  
++ if (NULL == (E0 = (orte_node_t *)opal_pointer_array_get_item(orte_node_pool,  E1)))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_49502a_0feb15_orte#util#dash_host#dash_host.c,revFiles/49502a_0feb15_orte#util#dash_host#dash_host.c}: parse_dash_host)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

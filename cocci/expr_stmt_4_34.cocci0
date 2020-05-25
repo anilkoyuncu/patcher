@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- *E0 = (int )((E1[2] << 16) + (E1[1] << 8) + E1[0]); 
++ *E0 = (int )((E1[0] << 16) + (E1[1] << 8) + E1[2]); 
+// Infered from: (wireshark/{prevFiles/prev_a4a94a_ddeac7_epan#addr_resolv.c,revFiles/a4a94a_ddeac7_epan#addr_resolv.c}: add_manuf_name)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

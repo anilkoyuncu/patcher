@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0 || bdrv_is_removable(E1) || bdrv_is_read_only(E1))  
++ if (!E0 || !bdrv_is_inserted(E1) || bdrv_is_read_only(E1))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_07b70b_c602a4_block.c,revFiles/07b70b_c602a4_block.c}: bdrv_can_snapshot)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

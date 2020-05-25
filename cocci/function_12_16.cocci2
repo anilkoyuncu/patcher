@@ -1,0 +1,7 @@
+@@
+@@
+- watchdog_unregister_device(&stmp3xxx_wdd); 
+// Infered from: (linux/{prevFiles/prev_55082c0_cfe9ee3_drivers#watchdog#stmp3xxx_rtc_wdt.c,revFiles/55082c0_cfe9ee3_drivers#watchdog#stmp3xxx_rtc_wdt.c}: stmp3xxx_wdt_remove)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

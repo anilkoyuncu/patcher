@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (!prefixcmp(E0, E1) || !strncmp(E0, E2, E3))  
++ if (!prefixcmp(E0, E1) || !prefixcmp(E0, E2))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_1968d7_599065_diff.c,revFiles/1968d7_599065_diff.c}: git_diff_ui_config), (git/{prevFiles/prev_1968d7_599065_wt-status.c,revFiles/1968d7_599065_wt-status.c}: git_status_config)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

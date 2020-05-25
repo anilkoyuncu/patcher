@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return luaL_error(E0,  "A FileHAndler cannot be de-registered during reading/writing callback functions"); 
++ return luaL_error(E0,  "A FileHandler cannot be deregistered during reading/writing callback functions"); 
+// Infered from: (wireshark/{prevFiles/prev_fcae13_031db5_epan#wslua#wslua_file_handler.c,revFiles/fcae13_031db5_epan#wslua#wslua_file_handler.c}: wslua_deregister_filehandler)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

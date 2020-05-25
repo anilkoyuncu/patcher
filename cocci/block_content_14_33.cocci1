@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+typedef guint;
+@@
+- E0 = g_ascii_strtoull(E1, NULL, 16); 
++ E0 = (guint )g_ascii_strtoull(E1, NULL, 16); 
+// Infered from: (wireshark/{prevFiles/prev_3b5745_602d7d_epan#dissectors#packet-adb_cs.c,revFiles/3b5745_602d7d_epan#dissectors#packet-adb_cs.c}: dissect_adb_cs)
+// False positives: (wireshark/revFiles/3b5745_602d7d_epan#dissectors#packet-adb_cs.c: dissect_ascii_data_length)
+// Recall: 0.25, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

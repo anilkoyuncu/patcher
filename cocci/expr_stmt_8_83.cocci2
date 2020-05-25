@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- CuAssert(E0, "apr_time and OS time do not agree", (E1 > -1) && (E1 < 1)); 
++ CuAssert(E0, "apr_time and OS time do not agree", (E1 > -2) && (E1 < 2)); 
+// Infered from: (apr/{prevFiles/prev_b24192_25bc50_test#testtime.c,revFiles/b24192_25bc50_test#testtime.c}: test_now)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

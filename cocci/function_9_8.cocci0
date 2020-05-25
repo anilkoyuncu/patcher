@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef gnutls_anon_server_credentials;
+typedef gnutls_anon_server_credentials_t;
+@@
+- gnutls_anon_server_credentials I0 = vnc_tls_initialize_anon_cred(); 
++ gnutls_anon_server_credentials_t I0 = vnc_tls_initialize_anon_cred(); 
+// Infered from: (qemu/{prevFiles/prev_7d2a92_10adb8_ui#vnc-tls.c,revFiles/7d2a92_10adb8_ui#vnc-tls.c}: vnc_tls_client_setup)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (unlikely(E0->i_buffer < 6 || E0->i_buffer > E1 || E0->i_nb_samples != A52_FRAME_NB))  
++ if (unlikely(E0->i_buffer < 6 || E0->i_buffer + SPDIF_HEADER_SIZE > E1 || E0->i_nb_samples != A52_FRAME_NB))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_4aa3c8_144b33_modules#audio_filter#converter#tospdif.c,revFiles/4aa3c8_144b33_modules#audio_filter#converter#tospdif.c}: write_buffer_ac3)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

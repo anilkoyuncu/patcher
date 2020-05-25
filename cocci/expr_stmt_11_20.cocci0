@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "qemu: could not load ram disk '%s'\n", blk_bs(E0)->filename); 
++ error_report("could not load ram disk '%s'", blk_bs(E0)->filename); 
+// Infered from: (qemu/{prevFiles/prev_29bd72_4e8251_hw#sparc64#niagara.c,revFiles/29bd72_4e8251_hw#sparc64#niagara.c}: niagara_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

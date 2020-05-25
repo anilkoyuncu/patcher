@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- FREENULL(**E0); 
++ free(*E0); 
+// Infered from: (vlc/{prevFiles/prev_eb463c_b5c956_src#stream_output#profiles.c,revFiles/eb463c_b5c956_src#stream_output#profiles.c}: streaming_ParameterApply)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.88, Precision: 1.00
+// -- Node Change --
+// Recall: 0.89, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/8(87%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_94566f_ae47c7_ext#pgsql#pgsql.c: 
+*/
+
+// ---------------------------------------------

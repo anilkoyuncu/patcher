@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- SEPARATE_ZVAL (E0); 
++ convert_to_string_ex(E0); 
+// Infered from: (php-src/{prevFiles/prev_231fe2_62c140_ext#standard#string.c,revFiles/231fe2_62c140_ext#standard#string.c}: _php3_implode)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- info("mtd%d: Removed", E0->mtd_info->index); 
+// Infered from: (linux/{prevFiles/prev_258006d_c4e773_drivers#mtd#maps#pcmciamtd.c,revFiles/258006d_c4e773_drivers#mtd#maps#pcmciamtd.c}: pcmciamtd_detach)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.70, Precision: 1.00
+// -- Node Change --
+// Recall: 0.62, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/10(20%)
+
+/*
+Functions where the patch applied partially:
+ - codeflaws/prevFiles/prev_489-C-17034948-17034962.c: main
+ - linux/prevFiles/prev_258006d_c4e773_drivers#mtd#maps#pcmciamtd.c: pcmciamtd_detach
+ - wireshark/prevFiles/prev_ce8ac3_650647_gtk#gsm_map_stat.c: register_tap_listener_gtkgsm_map_stat
+ - wireshark/prevFiles/prev_ce8ac3_650647_gtk#ansi_map_stat.c: register_tap_listener_gtkansi_map_stat
+ - wireshark/prevFiles/prev_ce8ac3_650647_gtk#mtp3_stat.c: register_tap_listener_gtkmtp3_stat
+*/
+
+// ---------------------------------------------

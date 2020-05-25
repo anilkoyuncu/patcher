@@ -1,0 +1,33 @@
+@@
+expression E0, E1;
+@@
+- vlc_stream_Seek(E0->p_source, E1); 
++ if (E1 != 0 && vlc_stream_Seek(E0->p_source, E1))  
++ {
++ return VLC_EGENERIC; 
++ }
+// Infered from: (vlc/{prevFiles/prev_025e62_6e87ce_modules#demux#playlist#m3u.c,revFiles/025e62_6e87ce_modules#demux#playlist#m3u.c}: Import_M3U)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.53, Precision: 1.00
+// -- Node Change --
+// Recall: 0.53, Precision: 1.00
+// -- General --
+// Functions fully changed: 9/17(52%)
+
+/*
+Functions where the patch did not apply:
+ - openssh-portable/prevFiles/prev_840821_009724_packet.c: ssh_packet_write_wait
+ - FFmpeg/prevFiles/prev_fdfbb7_dd11615_libavcodec#ffv1dec.c: decode_init
+ - FFmpeg/prevFiles/prev_b2bbe8_29d219_libavformat#dss.c: dss_read_metadata_date
+ - FFmpeg/prevFiles/prev_7e99d5_8a266a_libavcodec#ffv1enc.c: encode_frame
+ - FFmpeg/prevFiles/prev_5eb4af_93d672_libavcodec#snowdec.c: decode_frame
+ - FFmpeg/prevFiles/prev_6aaac2_8ededd_libavfilter#af_agate.c: query_formats
+ - cpython/prevFiles/prev_3e5907_7aba3d_Python#bltinmodule.c: builtin_apply
+ - FFmpeg/prevFiles/prev_5cb080_7effc2_libavcodec#snowenc.c: encode_init
+*/
+
+// ---------------------------------------------

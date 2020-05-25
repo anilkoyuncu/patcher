@@ -1,0 +1,37 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0; 
++ int res; 
+  ...
+- I0 = WSAStartup(E1, &E2); 
+- if (I0 != 0)  
++ res = WSAStartup(E1, &E2); 
++ if (res != 0)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_aed98c_2d77f7_lib#easy.c,revFiles/aed98c_2d77f7_lib#easy.c}: win32_init)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.71, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_37547c_fadae7_epan#dissectors#packet-qllc.c: dissect_qllc
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_0e519d_412d15_ext#mysqlnd#mysqlnd_debug.c: mysqlnd_build_trace_args
+ - php-src/prevFiles/prev_2d2d6f_a4252ab_ext#mysqlnd#mysqlnd_debug.c: mysqlnd_build_trace_args
+*/
+
+// ---------------------------------------------

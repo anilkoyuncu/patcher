@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- LOGERR("CONTROLVM_BUS_CREATE Failed: bus %lu kzalloc failed", E0); 
+// Infered from: (linux/{prevFiles/prev_edff16_9a174a_drivers#staging#unisys#visorchipset#visorchipset_main.c,revFiles/edff16_9a174a_drivers#staging#unisys#visorchipset#visorchipset_main.c}: bus_create)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

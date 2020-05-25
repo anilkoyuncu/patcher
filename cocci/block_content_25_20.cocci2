@@ -1,0 +1,20 @@
+@@
+identifier I2, I6;
+expression E0, E1, E3, E4, E5, E7;
+@@
+- E0 = proto_tree_add_uint_format(E1, I2, E3, 0, 0, E4->category[E5].I6, E7,  val_to_str(E5, camelSRTtype_naming, "Unk"),  E4->category[E5].I6); 
++ E0 = proto_tree_add_uint_format(E1, I2, E3, 0, 0, E4->category[E5].I6, E7,  val_to_str_const(E5, camelSRTtype_naming,  "Unk"),  E4->category[E5].I6); 
+// Infered from: (wireshark/{prevFiles/prev_c5a71b_a3fca2_epan#camel-persistentdata.c,revFiles/c5a71b_a3fca2_epan#camel-persistentdata.c}: camelsrt_request_call_matching), (wireshark/{prevFiles/prev_c5a71b_a3fca2_epan#camel-persistentdata.c,revFiles/c5a71b_a3fca2_epan#camel-persistentdata.c}: camelsrt_report_call_matching)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

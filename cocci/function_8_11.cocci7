@@ -1,0 +1,72 @@
+@@
+assignment operator A5;
+expression E0, E1, E2, E3, E4;
+@@
+- proto_tree_add_text(E0, E1, E2, E3, "Text: %s", E4); 
+- E2 A5 E3; 
++ proto_tree_add_text(E0, E1, E2, E3, "Text: %s", E4); 
+// Infered from: (wireshark/{prevFiles/prev_91e592_63d6b6_epan#dissectors#packet-aim-messaging.c,revFiles/91e592_63d6b6_epan#dissectors#packet-aim-messaging.c}: dissect_aim_rendezvous_extended_message)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.15, Precision: 0.88
+// -- Node Change --
+// Recall: 0.33, Precision: 0.88
+// -- General --
+// Functions fully changed: 4/47(8%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_91e592_63d6b6_epan#dissectors#packet-aim-messaging.c: dissect_aim_tlv_value_extended_data
+ - libarchive/prevFiles/prev_539985_15e709_tar#test#main.c: strdump
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_bd166c_5fa271_epan#dissectors#packet-ieee80211.c: dissect_hs20_anqp_icon_binary_file
+ - wireshark/prevFiles/prev_ffb549_c05da0_epan#dissectors#packet-blip.c: handle_ack_message
+ - FFmpeg/prevFiles/prev_be0a67_f27eb1_libavfilter#drawutils.c: blend_line
+ - libarchive/prevFiles/prev_539985_15e709_tar#test#main.c: failure_start
+ - wireshark/prevFiles/prev_86f6c8_4fdbf8_epan#dissectors#packet-ansi_637.c: trans_param_address
+ - curl/prevFiles/prev_9474a5_786992_lib#http2.c: http2_send
+ - qemu/prevFiles/prev_530889_be9c41_hw#sun4u.c: sun4uv_init
+ - wireshark/prevFiles/prev_86e7a0_d81fe4_epan#dissectors#packet-isakmp.c: dissect_tek_key_attribute
+ - wireshark/prevFiles/prev_ba4ff8_b4368e_epan#dissectors#packet-tds.c: dissect_tds_col_name_token
+ - wireshark/prevFiles/prev_aa4a11_817947_epan#dissectors#packet-gsm_a_common.c: de_mid
+ - vlc/prevFiles/prev_48aef0_1ece85a_modules#video_output#fb.c: OpenDisplay
+ - wireshark/prevFiles/prev_233c27_e2ebd8_epan#dissectors#packet-smpp.c: replace_sm
+ - gtk/prevFiles/prev_945e7a_65f0e1_testsuite#gtk#builder.c: test_file
+ - wireshark/prevFiles/prev_1c4053_b9296b7_epan#dissectors#packet-bmp.c: dissect_bmp_termination
+ - qemu/prevFiles/prev_372579_2f1696_cpu-exec.c: cpu_exec
+ - wireshark/prevFiles/prev_29e1b4_65763c_epan#dissectors#packet-isis-lsp.c: dissect_ipreach_subclv
+ - tmux/prevFiles/prev_ff67ef_cfc816_cmd-new-window.c: cmd_new_window_exec
+ - wireshark/prevFiles/prev_1f0cbf_26566d_epan#dissectors#packet-db-lsp.c: dissect_db_lsp_pdu
+ - wireshark/prevFiles/prev_ac8801_b31873_epan#dissectors#packet-telnet.c: dissect_tn3270_regime_subopt
+ - ompi/prevFiles/prev_8b411a_465b54_src#mca#rds#hostfile#rds_hostfile.c: orte_rds_hostfile_query
+ - wireshark/prevFiles/prev_3797ae_7783ca_epan#dissectors#packet-clnp.c: dissect_clnp
+ - curl/prevFiles/prev_e7661d_13c7b9_tests#libtest#lib599.c: 
+ - wireshark/prevFiles/prev_b85efc_34f582_epan#dissectors#packet-kink.c: dissect_payload_kink_tgt_req
+ - qemu/prevFiles/prev_9694b5_1f2e98_hw#9pfs#virtio-9p.c: v9fs_do_open2
+ - wireshark/prevFiles/prev_29e1b4_65763c_epan#dissectors#packet-isis-lsp.c: dissect_subclv_adj_sid
+ - vlc/prevFiles/prev_72ddab_c1ec23_modules#gui#ncurses.c: Eject
+ - vlc/prevFiles/prev_dcecc3_cbc592_src#misc#cpu.c: CPUCapabilities
+ - ompi/prevFiles/prev_8b411a_465b54_src#mca#rds#hostfile#rds_hostfile.c: 
+ - wireshark/prevFiles/prev_553567_732a73_epan#dissectors#packet-quake2.c: dissect_quake2_ConnectionlessPacket
+ - wireshark/prevFiles/prev_9762c3_6b5c71_epan#addr_resolv.c: add_ipv4_name
+ - linux/prevFiles/prev_2079a5_f57eda_drivers#video#fbdev#intelfb#intelfbhw.c: intelfbhw_mode_to_hw
+ - wireshark/prevFiles/prev_d8a21fe_4da892_epan#dissectors#packet-mim.c: fp_add_hmac
+ - qemu/prevFiles/prev_372579_2f1696_cpu-exec.c: cpu_handle_halt
+ - qemu/prevFiles/prev_22478e_f617a9_target-arm#op_helper.c: do_usat
+ - qemu/prevFiles/prev_22478e_f617a9_target-arm#op_helper.c: do_ssat
+ - wireshark/prevFiles/prev_8b22a2_bd9319_epan#dissectors#packet-xot.c: dissect_xot_pdu
+ - wireshark/prevFiles/prev_ac8801_b31873_epan#dissectors#packet-telnet.c: telnet_sub_option
+ - curl/prevFiles/prev_e7661d_13c7b9_tests#libtest#lib599.c: progress_callback
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_48aef0_1ece85a_modules#video_output#fb.c: Create
+ - libarchive/prevFiles/prev_539985_15e709_tar#test#main.c: wcsdump
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,42 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if ((size_t )(E0->p_buffer - E1) < (size_t )E2 || (size_t )(E3 - E0->p_buffer) < E0->i_buffer + E4)  
++ if ((size_t )(E0->p_buffer - E1) < (size_t )E2 || (size_t )(E3 - E0->p_buffer) < E4)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_a6f9b9_7df1a1_src#misc#block.c,revFiles/a6f9b9_7df1a1_src#misc#block.c}: block_Realloc)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.30, Precision: 1.00
+// -- Node Change --
+// Recall: 0.28, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/20(30%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_3a91a0_3051e7_ffmpeg.c: transcode_init
+ - curl/prevFiles/prev_4b643f_e73db5_lib#curl_schannel.c: Curl_schannel_shutdown
+ - wireshark/prevFiles/prev_38db87_618b88_epan#dissectors#packet-smb-pipe.c: dissect_pipe_lanman
+ - FFmpeg/prevFiles/prev_aad79e_6d4a68_libavcodec#mediacodecdec_common.c: ff_mediacodec_dec_decode
+ - FFmpeg/prevFiles/prev_dfc6e3_1e5cfa_ffmpeg.c: init_output_stream_encode
+ - wireshark/prevFiles/prev_9bd05a_d59335_epan#dissectors#packet-imap.c: dissect_imap
+ - vlc/prevFiles/prev_b309b3_254127_modules#visualization#goom.c: Thread
+ - FFmpeg/prevFiles/prev_bfd170_522256_libavcodec#mpeg12dec.c: mpeg_decode_slice
+ - ompi/prevFiles/prev_974061_119745_ompi#mca#osc#rdma#osc_rdma_dynamic.c: ompi_osc_rdma_detach
+ - nginx/prevFiles/prev_6af21b_3cf310_src#http#ngx_http_upstream.c: ngx_http_upstream_intercept_errors
+ - FFmpeg/prevFiles/prev_da2f15_3793ca_ffmpeg.c: transcode_init
+ - FFmpeg/prevFiles/prev_3d48dd_aaf78e_libavformat#avidec.c: avi_read_packet
+*/
+
+// ---------------------------------------------

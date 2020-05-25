@@ -1,0 +1,28 @@
+@@
+expression E0, E1, E2;
+typedef mca_rcache_vma_t;
+typedef uintptr_t;
+@@
+- while (E0 != (mca_rcache_vma_t *)opal_list_get_end(&E1->vma_list) && E0->start <= (  uintptr_t )E2->base)  
++ while (E0 != (mca_rcache_vma_t *)opal_list_get_end(&E1->vma_list) && E0->start <= (  uintptr_t )E2->bound)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_252a9c_528329_ompi#mca#rcache#vma#rcache_vma_tree.c,revFiles/252a9c_528329_ompi#mca#rcache#vma#rcache_vma_tree.c}: mca_rcache_vma_tree_delete)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_ff6b34_315f15_libavfilter#avfilter.c: ff_filter_frame_framed
+*/
+
+// ---------------------------------------------

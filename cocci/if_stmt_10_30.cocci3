@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->basefreq != BASEFREQ || E0->endfreq != ENDFREQ)  
++ if (E0->basefreq != (double )BASEFREQ || E0->endfreq != (double )ENDFREQ)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_54ed3e_162754_libavfilter#avf_showcqt.c,revFiles/54ed3e_162754_libavfilter#avf_showcqt.c}: init_axis_color)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

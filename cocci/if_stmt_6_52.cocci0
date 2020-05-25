@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 != 8 + (int )tvb_reported_length(E1))  
++ if (E0 != (int )tvb_reported_length(E1))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_8e74cd_9db969_epan#dissectors#packet-ip.c,revFiles/8e74cd_9db969_epan#dissectors#packet-ip.c}: dissect_ip_heur)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

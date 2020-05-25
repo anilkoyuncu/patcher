@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0(E1, E2) != VLC_SUCCESS)  
++ if (E0(E1, E2) != 1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_5020c5_c75341_modules#demux#mp4#libmp4.c,revFiles/5020c5_c75341_modules#demux#mp4#libmp4.c}: MP4_ReadBoxUsing)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

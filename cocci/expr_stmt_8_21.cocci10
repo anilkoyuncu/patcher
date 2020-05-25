@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->rgb_planes = av_malloc(E0->rgb_stride * E1->height * E2 + 16); 
++ E0->rgb_planes = av_malloc(E0->rgb_stride * E1->height * 4 + 16); 
+// Infered from: (FFmpeg/{prevFiles/prev_9eef41_87c113_libavcodec#lagarith.c,revFiles/9eef41_87c113_libavcodec#lagarith.c}: lag_decode_frame)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

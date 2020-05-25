@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- moduleFireServerEvent (E0, E1, E2); 
++ moduleFireServerEvent(REDISMODULE_EVENT_CLIENT_CHANGE,  REDISMODULE_SUBEVENT_CLIENT_CHANGE_CONNECTED, E2); 
+// Infered from: (redis/{prevFiles/prev_94c503_019ac3_src#networking.c,revFiles/94c503_019ac3_src#networking.c}: clientAcceptHandler)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

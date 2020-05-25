@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef gchar;
+@@
+- gchar *I0 = g_strdup_printf("%s.%s", (gchar *)E1, E2->name); 
++ gchar *I0 = wmem_strdup_printf(wmem_epan_scope(), "%s.%s", (gchar *)E1,  E2->name); 
+// Infered from: (wireshark/{prevFiles/prev_c7909c_afa96c_epan#dissectors#packet-xml.c,revFiles/c7909c_afa96c_epan#dissectors#packet-xml.c}: add_xmlpi_namespace)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

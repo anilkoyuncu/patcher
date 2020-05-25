@@ -1,0 +1,11 @@
+@@
+@@
+- if (listLength(server.io_newjobs) == 0)  
++ if (listLength(bio_jobs) == 0)  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_8ea2df_f67e33_src#bio.c,revFiles/8ea2df_f67e33_src#bio.c}: bioProcessBackgroundJobs)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

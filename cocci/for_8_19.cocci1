@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- for(E0 = 0;E0 < 256;E0++)  
++ for(E0 = 1;E0 < 255;E0++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_003ebe_eabb0a_libavcodec#rangecoder.c,revFiles/003ebe_eabb0a_libavcodec#rangecoder.c}: ff_build_rac_states)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.50
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_151802_da97f5_target-arm#machine.c: cpu_save
+ - qemu/prevFiles/prev_151802_da97f5_target-arm#machine.c: cpu_load
+*/
+
+// ---------------------------------------------

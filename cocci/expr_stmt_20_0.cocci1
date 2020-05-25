@@ -1,0 +1,10 @@
+@@
+expression list E1;
+expression E0;
+@@
+- E0 = GST_ELEMENT_CAST (g_object_new (E1)); 
++ E0 = g_object_new(E1); 
+// Infered from: (gstreamer/{prevFiles/prev_519d64_7699b8_gst#gstelementfactory.c,revFiles/519d64_7699b8_gst#gstelementfactory.c}: gst_element_factory_create)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

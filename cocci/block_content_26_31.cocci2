@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- printf("A32=0x%08x+READ-FAILED-%d\n", E0, errno); 
++ printf("A32=0x%08x+READ-FAILED-%d", E0, errno); 
+// Infered from: (FFmpeg/{prevFiles/prev_d9cb1e_88e0e2_tools#ffadler.c,revFiles/d9cb1e_88e0e2_tools#ffadler.c}: check)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_644e804_e21fd7_captype.c: main
+*/
+
+// ---------------------------------------------

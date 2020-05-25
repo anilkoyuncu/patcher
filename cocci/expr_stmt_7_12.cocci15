@@ -1,0 +1,10 @@
+@@
+identifier I0 = {av_vsrc_buffer_add_frame ,qcow2_check_refcounts };
+expression E1, E2;
+@@
+- I0(E1, &E2); 
++ I0(E1, &E2, 0); 
+// Infered from: (FFmpeg/{prevFiles/prev_f07553_4a519b_doc#examples#filtering.c,revFiles/f07553_4a519b_doc#examples#filtering.c}: main), (qemu/{prevFiles/prev_b35278_84988c_block#qcow2.c,revFiles/b35278_84988c_block#qcow2.c}: qcow2_open)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

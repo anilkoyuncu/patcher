@@ -1,0 +1,13 @@
+@@
+identifier I1;
+type T0;
+expression E2;
+typedef Py_ssize_t;
+@@
+- T0 I1 = PyLong_AsLong(E2); 
++ Py_ssize_t I1 = PyLong_AsSsize_t(E2); 
+// Infered from: (cpython/{prevFiles/prev_7660b8_9a644b_Objects#listobject.c,revFiles/7660b8_9a644b_Objects#listobject.c}: listiter_setstate), (cpython/{prevFiles/prev_7660b8_9a644b_Objects#tupleobject.c,revFiles/7660b8_9a644b_Objects#tupleobject.c}: tupleiter_setstate)
+// False positives: (cpython/revFiles/10c660_0e371f_Objects#abstract.c: PyObject_DelItem), (cpython/revFiles/10c660_0e371f_Objects#abstract.c: PyObject_GetItem), (cpython/revFiles/10c660_0e371f_Objects#abstract.c: PyObject_SetItem)
+// Recall: 0.05, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------

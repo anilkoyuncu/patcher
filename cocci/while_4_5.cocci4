@@ -1,0 +1,36 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef Tcl_WideUInt;
+typedef mp_int;
+@@
+  void TclBNInitBignumFromWideUInt(mp_int *I0, Tcl_WideUInt I1)  
+  {
+  ...
+- while (E2)  
++ while (I1)  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (tcl/{prevFiles/prev_c6806a_934ada_generic#tclTomMathInterface.c,revFiles/c6806a_934ada_generic#tclTomMathInterface.c}: TclBNInitBignumFromWideUInt)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 1.00
+// -- Node Change --
+// Recall: 0.56, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_d3fd4c_89be0a_src#video_output#video_output.c: ReduceHeight
+ - wireshark/prevFiles/prev_b02461_073a8b_packet-dhcpv6.c: 
+ - qemu/prevFiles/prev_e7658f_52e38e_hw#tpm#tpm_passthrough.c: tpm_passthrough_unix_write
+*/
+
+// ---------------------------------------------

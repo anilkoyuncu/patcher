@@ -1,0 +1,26 @@
+@@
+identifier I0;
+expression E1;
+typedef Curl_addrinfo;
+@@
+- Curl_addrinfo *I0 = E1->addr; 
++ Curl_addrinfo *I0 = E1 ? E1->addr :NULL; 
+// Infered from: (cmake/{prevFiles/prev_6db9a44_6e7f83_Source#CTest#Curl#url.c,revFiles/6db9a44_6e7f83_Source#CTest#Curl#url.c}: verboseconnect), (curl/{prevFiles/prev_ce011b_12cfb4_lib#url.c,revFiles/ce011b_12cfb4_lib#url.c}: verboseconnect)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.71
+// -- Node Change --
+// Recall: 1.00, Precision: 0.71
+// -- General --
+// Functions fully changed: 5/7(71%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_a247c3_4febfc_sapi#fpm#fpm#fpm_main.c: init_request_info
+ - qemu/prevFiles/prev_bc9b1f_eceba3_hw#ppc#spapr_pci.c: rtas_ibm_change_msi
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0 || !object_class_dynamic_cast(E0, TYPE_ARM_CPU))  
++ if (!E0 || !object_class_dynamic_cast(E0, TYPE_ARM_CPU) || object_class_is_abstract(  E0))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_245fb5_a120c2_target-arm#cpu.c,revFiles/245fb5_a120c2_target-arm#cpu.c}: arm_cpu_class_by_name)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = screen_size_x(E1) - E2->last_width; 
++ E0 = screen_size_x(E1) - width; 
+// Infered from: (tmux/{prevFiles/prev_d74e5b_54456d_tty.c,revFiles/d74e5b_54456d_tty.c}: tty_cmd_cell), (tmux/{prevFiles/prev_a9eb5e_164c2c_tty.c,revFiles/a9eb5e_164c2c_tty.c}: tty_cmd_cell)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.18
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.36, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - tmux/prevFiles/prev_a9eb5e_164c2c_tty.c: tty_cmd_cell
+ - tmux/prevFiles/prev_d74e5b_54456d_tty.c: tty_cmd_cell
+*/
+
+// ---------------------------------------------

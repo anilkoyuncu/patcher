@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = apr_file_mktemp(&E1->interproc, E1->fname, E1->pool); 
++ E0 = apr_file_mktemp(&E1->interproc, E1->fname, 0, E1->pool); 
+// Infered from: (apr/{prevFiles/prev_9d6de3_08bf82_locks#unix#proc_mutex.c,revFiles/9d6de3_08bf82_locks#unix#proc_mutex.c}: proc_mutex_fcntl_create), (apr/{prevFiles/prev_9d6de3_08bf82_locks#unix#proc_mutex.c,revFiles/9d6de3_08bf82_locks#unix#proc_mutex.c}: proc_mutex_flock_create)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

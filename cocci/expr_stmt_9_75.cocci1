@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- block_ChainAppend(&E0->frame.p_chain, E1); 
++ block_ChainLastAppend(&E0->frame.pp_chain_last, E1); 
+// Infered from: (vlc/{prevFiles/prev_225c7a_eef513_modules#packetizer#hevc.c,revFiles/225c7a_eef513_modules#packetizer#hevc.c}: ParseVCL)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_4c9975_379a40_plugins#mate#mate_util.c: match_avp
+*/
+
+// ---------------------------------------------

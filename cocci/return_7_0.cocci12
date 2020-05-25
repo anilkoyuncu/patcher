@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return error("malformatted format string %s", E0); 
++ return error("malformed format string %s", E0); 
+// Infered from: (git/{prevFiles/prev_8e0fbe_8a8bf4_builtin-for-each-ref.c,revFiles/8e0fbe_8a8bf4_builtin-for-each-ref.c}: verify_format)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

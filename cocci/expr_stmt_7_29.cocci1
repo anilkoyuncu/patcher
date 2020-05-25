@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = _PyObject_CallMethodId(E1->fut_loop, &PyId_get_debug, "()", NULL); 
++ E0 = _PyObject_CallMethodId(E1->fut_loop, &PyId_get_debug, NULL); 
+// Infered from: (cpython/{prevFiles/prev_f94d1e_684ef2_Modules#_asynciomodule.c,revFiles/f94d1e_684ef2_Modules#_asynciomodule.c}: future_init)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

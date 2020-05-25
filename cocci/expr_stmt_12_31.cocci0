@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef pixman_trapezoid_t;
+@@
+- E0 = malloc(E1 * sizeof(pixman_trapezoid_t )); 
++ E0 = _cairo_malloc_ab(E1, sizeof(pixman_trapezoid_t )); 
+// Infered from: (cairo/{prevFiles/prev_c0a7d3_b71959_src#cairo-image-surface.c,revFiles/c0a7d3_b71959_src#cairo-image-surface.c}: _cairo_image_surface_composite_trapezoids)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

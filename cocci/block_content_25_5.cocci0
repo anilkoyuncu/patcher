@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- E0->data = dma_pool_alloc(E1->lpfc_sg_dma_buf_pool, GFP_KERNEL,  &E0->dma_handle); 
++ E0->data = dma_pool_zalloc(E1->lpfc_sg_dma_buf_pool, GFP_KERNEL,  &E0->dma_handle); 
+  ...
+- memset(E0->data, 0, E1->cfg_sg_dma_buf_size); 
+// Infered from: (linux/{prevFiles/prev_df2f772_2930f8_drivers#scsi#lpfc#lpfc_nvme.c,revFiles/df2f772_2930f8_drivers#scsi#lpfc#lpfc_nvme.c}: lpfc_new_nvme_buf)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

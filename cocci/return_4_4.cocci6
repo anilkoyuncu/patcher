@@ -1,0 +1,50 @@
+@@
+identifier I0, I1;
+@@
+  struct fileblocks *I0 = fileblocks_new(); 
+  ...
+- size_t I1; 
+// Infered from: (libarchive/{prevFiles/prev_dd95a1_29362a_libarchive#test#test_write_format_zip_large.c,revFiles/dd95a1_29362a_libarchive#test#test_write_format_zip_large.c}: DEFINE_TEST)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.05
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.35, Precision: 0.82
+// -- Node Change --
+// Recall: 0.31, Precision: 0.75
+// -- General --
+// Functions fully changed: 7/28(25%)
+
+/*
+Functions where the patch applied partially:
+ - libarchive/prevFiles/prev_dd95a1_29362a_libarchive#test#test_write_format_zip_large.c: DEFINE_TEST
+ - FFmpeg/prevFiles/prev_22dbc1c_3617e6_libavformat#mov.c: mov_read_sidx
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_68f46a_5baae9_modules#video_output#opengl#converter_cvpx.c: opengl_tex_converter_cvpx_init
+ - codeflaws/prevFiles/prev_172-A-2045330-2045333.c: main
+ - vlc/prevFiles/prev_b35620_2c8341_modules#access#sftp.c: Read
+ - FFmpeg/prevFiles/prev_12c3e1_04c99c_libavcodec#ituh263dec.c: h263p_decode_umotion
+ - FFmpeg/prevFiles/prev_bcd4aa8_a2a38d_libavcodec#wavpack.c: wavpack_decode_block
+ - cpython/prevFiles/prev_8786eb_39fd23_Mac#Modules#cf#pycfbridge.c: PyCF_Python2CF_string
+ - FFmpeg/prevFiles/prev_966cbf_fa8fd0_tools#target_dec_fuzzer.c: LLVMFuzzerTestOneInput
+ - qemu/prevFiles/prev_2795ec_8dc0a5_block#qcow2-refcount.c: alloc_refcount_block
+ - FFmpeg/prevFiles/prev_d1afa7_a9452f_libavformat#matroskadec.c: matroska_read_packet
+ - FFmpeg/prevFiles/prev_f52427_134233_libavfilter#vf_scale_npp.c: init_processing_chain
+ - wireshark/prevFiles/prev_088e40_1be02f_epan#dissectors#packet-gsm_abis_om2000.c: dissect_tss_mo_state
+ - wireshark/prevFiles/prev_46ecce_c4e626_wiretap#pcapng.c: pcapng_dump_can_write_encap
+ - FFmpeg/prevFiles/prev_087c0a_4c4f14_libavcodec#dvbsubdec.c: dvbsub_parse_clut_segment
+ - vlc/prevFiles/prev_7f73e5_9a8e19_modules#video_output#opengl#fragment_shaders.c: opengl_fragment_shader_init_impl
+ - vlc/prevFiles/prev_0f16e4_97d669_src#text#memstream.c: vlc_memstream_write
+ - FFmpeg/prevFiles/prev_99aeae_0aec37_libavfilter#vf_scale_npp.c: init_processing_chain
+ - qemu/prevFiles/prev_359507_29f82b_target-s390x#kvm.c: handle_instruction
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_22dbc1c_3617e6_libavformat#mov.c: mov_read_tfdt
+ - FFmpeg/prevFiles/prev_22dbc1c_3617e6_libavformat#mov.c: mov_read_trun
+*/
+
+// ---------------------------------------------

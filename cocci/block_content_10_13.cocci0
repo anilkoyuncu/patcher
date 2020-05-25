@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- dissector_add_uint("udp.port", PORT_MASTER, E0); 
++ dissector_add_uint_with_preference("udp.port", PORT_MASTER, E0); 
++ apply_quakeworld_prefs(); 
+// Infered from: (wireshark/{prevFiles/prev_71268f8b_c66fbf_epan#dissectors#packet-quakeworld.c,revFiles/71268f8b_c66fbf_epan#dissectors#packet-quakeworld.c}: proto_reg_handoff_quakeworld)
+// False positives: (wireshark/revFiles/71268f8b_c66fbf_epan#dissectors#packet-quake2.c: proto_reg_handoff_quake2)
+// Recall: 0.42, Precision: 0.83, Matching recall: 0.83
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- autoMemoryFreed(E0->ctx, REDISMODULE_AM_REPLY, E0); 
++ autoMemoryFreed(ctx, REDISMODULE_AM_REPLY, E0); 
+// Infered from: (redis/{prevFiles/prev_8521cd_ce1f9c_src#module.c,revFiles/8521cd_ce1f9c_src#module.c}: RM_FreeCallReply)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

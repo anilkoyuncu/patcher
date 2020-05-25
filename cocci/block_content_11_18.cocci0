@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0.si_signo = SIGSEGV; 
++ E0.si_signo = TARGET_SIGSEGV; 
+// Infered from: (qemu/{prevFiles/prev_59f718_75f22e_linux-user#main.c,revFiles/59f718_75f22e_linux-user#main.c}: cpu_loop), (qemu/{prevFiles/prev_59f718_75f22e_linux-user#main.c,revFiles/59f718_75f22e_linux-user#main.c}: cpu_loop)
+// False positives: (qemu/revFiles/59f718_75f22e_linux-user#main.c: arm_kernel_cmpxchg64_helper), (qemu/revFiles/59f718_75f22e_linux-user#main.c: cpu_loop)
+// Recall: 0.33, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

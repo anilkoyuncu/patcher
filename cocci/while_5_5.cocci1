@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- while ((E0 = stream_Read(E1, &E2, 1 << 10)))  
++ while ((E0 = stream_Read(E1, &E2, 1 << 10)) > 0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_73ed9b_5a13c1_modules#misc#addons#fsstorage.c,revFiles/73ed9b_5a13c1_modules#misc#addons#fsstorage.c}: InstallFile)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+@@
+- if (!has_console && prefs.gui_console_open != console_open_never)  
++ if (!has_console)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_7d1f4d_826107_gtk#main.c,revFiles/7d1f4d_826107_gtk#main.c}: create_console)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

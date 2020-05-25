@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!strncmp(E0->pp_children[E1]->input.psz_name, E2,  strlen(E0->pp_children[E1]->input.psz_name)))  
++ if (!strcmp(E0->pp_children[E1]->input.psz_name, E2))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_9029e6_12b32f_src#playlist#view.c,revFiles/9029e6_12b32f_src#playlist#view.c}: playlist_ChildSearchName)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "No valid boot device for G3 Beige machine\n"); 
++ error_report("No valid boot device for G3 Beige machine"); 
+// Infered from: (qemu/{prevFiles/prev_6f76b8_0151ab_hw#ppc#mac_oldworld.c,revFiles/6f76b8_0151ab_hw#ppc#mac_oldworld.c}: ppc_heathrow_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

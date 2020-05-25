@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (zend_hash_find(Z_ARRVAL_P(E0), E1, E2 + 1, (void **)&E3) != SUCCESS)  
++ if (zend_hash_find(Z_ARRVAL_P(E0), E1, E2 + 1, (void **)&E3) != SUCCESS || Z_TYPE_PP(  E3) != IS_ARRAY)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_78f527_726eb9_ext#standard#filters.c,revFiles/78f527_726eb9_ext#standard#filters.c}: strfilter_convert_parse_parameters)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

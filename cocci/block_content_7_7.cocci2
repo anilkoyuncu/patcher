@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E4, E3, E1, E2;
+@@
+- char *I0 = split(*E1, E2); 
++ char *I0; 
+  ...
+- if (E3)  
+- {
+- return E4; 
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_9f6431_bdb319_libavfilter#af_channelmap.c,revFiles/9f6431_bdb319_libavfilter#af_channelmap.c}: get_channel_idx)
+// False positives: (FFmpeg/revFiles/9f6431_bdb319_libavfilter#af_channelmap.c: get_channel), (FFmpeg/revFiles/9f6431_bdb319_libavfilter#af_channelmap.c: get_channel_idx)
+// Recall: 0.14, Precision: 0.25, Matching recall: 0.67
+
+// ---------------------------------------------

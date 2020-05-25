@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- object_property_add_uint32_ptr(OBJECT(E0), ACPI_PCIHP_PROP_BSEL, E1, NULL); 
++ object_property_add_uint32_ptr(OBJECT(E0), ACPI_PCIHP_PROP_BSEL, E1,  &error_abort); 
+// Infered from: (qemu/{prevFiles/prev_f0c9d6_2607b6_hw#i386#acpi-build.c,revFiles/f0c9d6_2607b6_hw#i386#acpi-build.c}: acpi_set_bsel)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

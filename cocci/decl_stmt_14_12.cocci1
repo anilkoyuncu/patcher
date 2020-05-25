@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  char *I0 = __clk_get_name(E1->clk); 
++ const  char *I0 = clk_hw_get_name(E1); 
+// Infered from: (linux/{prevFiles/prev_836ee0_e7df6f6_drivers#clk#pistachio#clk-pll.c,revFiles/836ee0_e7df6f6_drivers#clk#pistachio#clk-pll.c}: pll_gf40lp_frac_set_rate), (linux/{prevFiles/prev_836ee0_e7df6f6_drivers#clk#pistachio#clk-pll.c,revFiles/836ee0_e7df6f6_drivers#clk#pistachio#clk-pll.c}: pll_gf40lp_laint_set_rate)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.75
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_9dd0b7_80e9e6_libavcodec#utils.c: avcodec_open2
+*/
+
+// ---------------------------------------------

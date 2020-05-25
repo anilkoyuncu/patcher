@@ -1,0 +1,18 @@
+@@
+expression E0;
+@@
+- msg_Err(E0, "out of memory"); 
+// Infered from: (vlc/{prevFiles/prev_b674da_7d1d56_modules#audio_filter#converter#a52tofloat32.c,revFiles/b674da_7d1d56_modules#audio_filter#converter#a52tofloat32.c}: Create)
+// Recall: 0.38, Precision: 1.00, Matching recall: 0.38
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

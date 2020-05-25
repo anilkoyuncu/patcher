@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- c_to_lua_push(E0, E1, CONST_STR_LEN("DOCUMENT_ROOT"),  CONST_BUF_LEN(E2->physical.doc_root)); 
++ c_to_lua_push(E0, E1, CONST_STR_LEN("DOCUMENT_ROOT"),  CONST_BUF_LEN(E2->physical.basedir)); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_a0a7b9_0f7c06_src#mod_cml_lua.c,revFiles/a0a7b9_0f7c06_src#mod_cml_lua.c}: cache_parse_lua)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

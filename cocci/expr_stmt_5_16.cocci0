@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef mp_size_t;
+@@
+- int I0; 
++ mp_size_t I0; 
+// Infered from: (gmp/{prevFiles/prev_ebde5d_0e6c3f_mpz#kronzu.c,revFiles/ebde5d_0e6c3f_mpz#kronzu.c}: mpz_kronecker_ui), (gmp/{prevFiles/prev_ebde5d_0e6c3f_mpz#kronzs.c,revFiles/ebde5d_0e6c3f_mpz#kronzs.c}: mpz_kronecker_si)
+// False positives: (gmp/revFiles/ebde5d_0e6c3f_mpz#kronuz.c: mpz_ui_kronecker), (gmp/revFiles/ebde5d_0e6c3f_mpz#kronzs.c: mpz_kronecker_si), (gmp/revFiles/ebde5d_0e6c3f_mpz#kronzu.c: mpz_kronecker_ui), (php-src/revFiles/4518564_34f536_ext#zlib#zlib.c: php_zlib_output_handler)
+// Recall: 0.40, Precision: 0.25, Matching recall: 0.67
+
+// ---------------------------------------------

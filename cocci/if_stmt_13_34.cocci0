@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->meth->finish)  
++ if (E0->meth != NULL && E0->meth->finish != NULL)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_0c5d72_216764_crypto#dh#dh_lib.c,revFiles/0c5d72_216764_crypto#dh#dh_lib.c}: DH_free), (openssl/{prevFiles/prev_0c5d72_216764_crypto#dsa#dsa_lib.c,revFiles/0c5d72_216764_crypto#dsa#dsa_lib.c}: DSA_free), (openssl/{prevFiles/prev_0c5d72_216764_crypto#rsa#rsa_lib.c,revFiles/0c5d72_216764_crypto#rsa#rsa_lib.c}: RSA_free)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

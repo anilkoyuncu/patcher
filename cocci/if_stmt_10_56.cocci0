@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > 2048 || E1 > 2048)  
++ if (!E0 || !E1 || E0 > 2048 || E1 > 2048)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_5316f7_11bcae_ext#standard#image.c,revFiles/5316f7_11bcae_ext#standard#image.c}: php_get_wbmp)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

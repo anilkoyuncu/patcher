@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- msg_Dbg(I0, E1); 
++ msg_Dbg(I0, "%s", E1); 
+// Infered from: (vlc/{prevFiles/prev_2f65bd_b11fb3_modules#access#cdda#access.c,revFiles/2f65bd_b11fb3_modules#access#cdda#access.c}: cdio_log_handler), (vlc/{prevFiles/prev_2f65bd_b11fb3_modules#access#vcdx#access.c,revFiles/2f65bd_b11fb3_modules#access#vcdx#access.c}: cdio_log_handler), (vlc/{prevFiles/prev_2f65bd_b11fb3_modules#access#vcdx#access.c,revFiles/2f65bd_b11fb3_modules#access#vcdx#access.c}: vcd_log_handler)
+// Recall: 0.27, Precision: 1.00, Matching recall: 0.27
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 & STATUS_TIMEOUT(E1))  
++ if (E0 & STATUS_TIME(E1))  
+  {
+  ...
+- E2->status &= ~STATUS_TIMEOUT(E1); 
++ E2->status &= ~STATUS_TIME(E1); 
+  }
+// Infered from: (qemu/{prevFiles/prev_09a021_acf15c_hw#tpci200.c,revFiles/09a021_acf15c_hw#tpci200.c}: tpci200_write_las0)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

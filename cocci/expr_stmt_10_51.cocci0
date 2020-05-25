@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- proto_tree_add_uint_format(E0, hf_ntp_ppoll, E1, 2, 1, E2,  (((E2 >= 4) && (E2 <= 16)) ? "Peer Polling Interval: %u (%u sec)" :"Peer Polling Interval: invalid (%u)"),  E2, 1 << E2); 
++ proto_tree_add_uint_format(E0, hf_ntp_ppoll, E1, 2, 1, E2,  (((E2 >= 4) && (E2 <= 17)) ? "Peer Polling Interval: %u (%u sec)" :"Peer Polling Interval: invalid (%u)"),  E2, 1 << E2); 
+// Infered from: (wireshark/{prevFiles/prev_c1e7e4_453cd5_epan#dissectors#packet-ntp.c,revFiles/c1e7e4_453cd5_epan#dissectors#packet-ntp.c}: dissect_ntp_std)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

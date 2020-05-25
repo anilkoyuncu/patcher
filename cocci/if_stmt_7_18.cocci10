@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2;
+@@
+- failf(E0, "Error reading client cert file %s - mbedTLS: (-0x%04X) %s",  E0->set.str[STRING_CERT], -E1, E2); 
++ failf(E0, "Error reading client cert file %s - mbedTLS: (-0x%04X) %s",  E0->set.str[STRING_CERT_ORIG], -E1, E2); 
+// Infered from: (curl/{prevFiles/prev_8cb872_cb4e2b_lib#vtls#mbedtls.c,revFiles/8cb872_cb4e2b_lib#vtls#mbedtls.c}: mbed_connect_step1)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.06
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.41, Precision: 1.00
+// -- General --
+// Functions fully changed: 8/15(53%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_8cb872_cb4e2b_lib#vtls#mbedtls.c: mbed_connect_step1
+*/
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_fc33c4_b04d6d_lib#ftp.c: ftp_state_loggedin
+ - curl/prevFiles/prev_f1c6cd_2a0c7e_lib#transfer.c: Curl_fillreadbuffer
+ - redis/prevFiles/prev_583933_2a8a63_src#server.c: call
+ - php-src/prevFiles/prev_28756e_8c4807_sapi#phpdbg#phpdbg_prompt.c: phpdbg_execute_ex
+ - redis/prevFiles/prev_aa5784_8c4f4d_src#sentinel.c: sentinelFailoverSendSlaveOfNoOne
+ - linux/prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#nouveau#dispnv04#dfp.c: nv04_dfp_mode_set
+*/
+
+// ---------------------------------------------

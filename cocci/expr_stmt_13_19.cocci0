@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- msg_Warn(E0,  "NVIDIA GPU with too many slices (%d) detected, use internal pool",  E1->totalTextureSlices); 
++ msg_Warn(E0, "use internal pool"); 
+// Infered from: (php-src/{prevFiles/prev_a5a590_a0bf6b_ext#hyperwave#hg_comm.c,revFiles/a5a590_a0bf6b_ext#hyperwave#hg_comm.c}: send_gettext), (vlc/{prevFiles/prev_7b2eec_c5bc37_modules#codec#avcodec#d3d11va.c,revFiles/7b2eec_c5bc37_modules#codec#avcodec#d3d11va.c}: DxSetupOutput)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

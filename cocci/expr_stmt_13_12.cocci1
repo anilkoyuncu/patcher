@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- cairo_surface_get_device_scale(E0->current_paint.surface, &E1, &E2); 
+- cairo_surface_get_device_offset(E3, &E4, &E5); 
++ cairo_surface_get_device_scale(E3, &E1, &E2); 
++ cairo_surface_get_device_offset(E3, &E4, &E5); 
+// Infered from: (gtk/{prevFiles/prev_c162b8_214eb5_gdk#gdkgl.c,revFiles/c162b8_214eb5_gdk#gdkgl.c}: gdk_gl_texture_from_surface), (gtk/{prevFiles/prev_c162b8_214eb5_gdk#x11#gdkglcontext-x11.c,revFiles/c162b8_214eb5_gdk#x11#gdkglcontext-x11.c}: gdk_x11_gl_context_texture_from_surface)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

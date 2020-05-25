@@ -1,0 +1,27 @@
+@@
+identifier I0;
+expression E1;
+typedef PyObject;
+typedef PyTupleObject;
+typedef Py_ssize_t;
+@@
+- Py_ssize_t I0 = E1 * sizeof(PyObject *); 
+- if (I0 / sizeof(PyObject *) != (size_t )E1 || (I0 > PY_SSIZE_T_MAX - sizeof(  PyTupleObject ) - sizeof(  PyObject *)))  
++ if (E1 > (PY_SSIZE_T_MAX - sizeof(PyTupleObject ) - sizeof(PyObject *)) / sizeof(  PyObject *))  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_c04ddf_a20287_Objects#tupleobject.c,revFiles/c04ddf_a20287_Objects#tupleobject.c}: PyTuple_New)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

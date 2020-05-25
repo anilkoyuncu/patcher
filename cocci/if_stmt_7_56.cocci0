@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 == false)  
++ if (!E0)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_a54024_7f752e_drivers#iio#adc#ti_am335x_adc.c,revFiles/a54024_7f752e_drivers#iio#adc#ti_am335x_adc.c}: tiadc_read_raw), (linux/{prevFiles/prev_6fae58f_cdf71c7_drivers#staging#iio#accel#lis3l02dq_ring.c,revFiles/6fae58f_cdf71c7_drivers#staging#iio#accel#lis3l02dq_ring.c}: lis3l02dq_data_rdy_trigger_set_state), (linux/{prevFiles/prev_7737fa6_6c724cb_drivers#iio#inkern.c,revFiles/7737fa6_6c724cb_drivers#iio#inkern.c}: iio_map_array_unregister)
+// Recall: 0.30, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

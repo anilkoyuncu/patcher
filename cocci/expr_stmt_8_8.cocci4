@@ -1,0 +1,8 @@
+@@
+@@
+- error_report("Warning: usb-ccid card already full, not adding"); 
++ warn_report("usb-ccid card already full, not adding"); 
+// Infered from: (qemu/{prevFiles/prev_3dc6f8_97f403_hw#usb#dev-smartcard-reader.c,revFiles/3dc6f8_97f403_hw#usb#dev-smartcard-reader.c}: ccid_card_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

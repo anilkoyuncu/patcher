@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- if (E0->description != NULL)  
++ if (E0->vendor_description != NULL)  
+  {
+- E1 = g_strdup_printf("%s: %s", E0->description, E0->name); 
++ E1 = g_strdup_printf("%s: %s", E0->vendor_description, E0->name); 
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_6a5d8a_bd976ae_ui#gtk#capture_dlg.c,revFiles/6a5d8a_bd976ae_ui#gtk#capture_dlg.c}: insert_new_rows)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

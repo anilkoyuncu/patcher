@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef smb_saved_info_t;
+@@
+- smb_saved_info_t *I0 = E1->sip; 
++ smb_saved_info_t *I0; 
+// Infered from: (wireshark/{prevFiles/prev_a75058_f6f690_epan#dissectors#packet-smb.c,revFiles/a75058_f6f690_epan#dissectors#packet-smb.c}: dissect_smb_fid)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

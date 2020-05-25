@@ -1,0 +1,44 @@
+@@
+identifier I0;
+expression E1;
+typedef cairo_status_t;
+@@
+  cairo_status_t _cairo_xlib_shm_surface_finish(void *I0)  
+  {
+  ...
+- return E1; 
++ return _cairo_image_surface_finish(I0); 
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_5d21c9_51435e_src#cairo-xlib-surface-shm.c,revFiles/5d21c9_51435e_src#cairo-xlib-surface-shm.c}: _cairo_xlib_shm_surface_finish)
+// False positives: (cairo/revFiles/5d21c9_51435e_src#cairo-xlib-surface-shm.c: _cairo_xlib_shm_surface_finish)
+// Recall: 0.08, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.17, Precision: 1.00
+// -- Node Change --
+// Recall: 0.17, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/12(8%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_acabda_168c1f_testsuite#gtk#treelistmodel.c: create_sub_model_cb
+ - qemu/prevFiles/prev_51af0ec_6c5e74_hw#misc#ivshmem.c: ivshmem_recv_msg
+ - gtk/prevFiles/prev_7aa236_a381ee_gtk#gtkcssimagerecolor.c: gtk_css_image_recolor_load
+ - cairo/prevFiles/prev_a02e29_150c1e_src#cairo-cogl-surface.c: cairo_cogl_device_create
+ - FFmpeg/prevFiles/prev_be28ce_8e6478_libavformat#matroskaenc.c: mkv_write_attachments
+ - gstreamer/prevFiles/prev_5feff2_4a5aa8_gst#gstplugin.c: gst_plugin_load
+ - cairo/prevFiles/prev_3a94f4_edc238_src#cairo-xcb-shm.c: _cairo_xcb_connection_allocate_shm_info
+ - FFmpeg/prevFiles/prev_f2d8e3_0f057e_libavcodec#ljpegenc.c: encode_picture_lossless
+ - gtk/prevFiles/prev_4bb835_62aa48_gtk#gtkcssimagescaled.c: gtk_css_image_scaled_compute
+ - FFmpeg/prevFiles/prev_610a8b_0c8aba_libavcodec#hevc.c: extract_rbsp
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_5d21c9_51435e_src#cairo-xlib-surface-shm.c: _cairo_xlib_shm_surface_finish
+*/
+
+// ---------------------------------------------

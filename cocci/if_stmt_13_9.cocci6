@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1;
+@@
+  struct backlight_device *I0; 
+  ...
+- if (E1)  
++ if (IS_ERR(I0))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_cf7b9a_9ca791b_drivers#video#atmel_lcdfb.c,revFiles/cf7b9a_9ca791b_drivers#video#atmel_lcdfb.c}: init_backlight)
+// False positives: (linux/revFiles/cf7b9a_9ca791b_drivers#video#atmel_lcdfb.c: init_backlight)
+// Recall: 0.04, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

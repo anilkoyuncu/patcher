@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 == Z_OK || E0 == Z_STREAM_END) && !E1->avail_in)  
++ if (E0 == Z_STREAM_END && !E1->avail_in)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_456cdf_3e993b_sha1_file.c,revFiles/456cdf_3e993b_sha1_file.c}: unpack_sha1_rest)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

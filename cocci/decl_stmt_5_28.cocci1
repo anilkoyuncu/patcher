@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef dissector_handle_t;
+@@
+- dissector_handle_t I0 = (dissector_handle_t *)E1; 
++ dissector_handle_t I0 = (dissector_handle_t )E1; 
+// Infered from: (wireshark/{prevFiles/prev_a78abc_4b4aaf_epan#packet.c,revFiles/a78abc_4b4aaf_epan#packet.c}: dissector_delete_all_check)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

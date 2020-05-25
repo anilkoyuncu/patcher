@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = tvb_get_string_enc(NULL, E1, E2, tvb_reported_length_remaining(E1, E2),  ENC_ASCII); 
++ E0 = tvb_get_string_enc(wmem_packet_scope(), E1, E2,  tvb_reported_length_remaining(E1, E2), ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_322e09_61ea02_epan#dissectors#packet-bthcrp.c,revFiles/322e09_61ea02_epan#dissectors#packet-bthcrp.c}: dissect_control)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- av_log(E0, AV_LOG_ERROR, "Unknown pixel type : %d\n", E1->pixel_type); 
++ av_log(E0, AV_LOG_ERROR, "Missing channel list\n"); 
+// Infered from: (FFmpeg/{prevFiles/prev_9f3c90_4751c6_libavcodec#exr.c,revFiles/9f3c90_4751c6_libavcodec#exr.c}: decode_frame)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E0, E2, E1, E3;
+@@
+- E0 = tvb_get_stringz(wmem_packet_scope(), E1, E2, &E3); 
++ E0 = tvb_get_stringz_enc(wmem_packet_scope(), E1, E2, &E3, ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-wow.c,revFiles/971ffd_421d81_epan#dissectors#packet-wow.c}: dissect_wow_pdu), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-wow.c,revFiles/971ffd_421d81_epan#dissectors#packet-wow.c}: dissect_wow_pdu)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

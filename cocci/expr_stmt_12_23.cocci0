@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = difftime(E1, time(NULL)); 
++ E0 = difftime(E1, php_time()); 
+// Infered from: (php-src/{prevFiles/prev_31a1c1_599b94_ext#standard#head.c,revFiles/31a1c1_599b94_ext#standard#head.c}: php_setcookie)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

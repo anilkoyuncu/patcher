@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- handle_bad_irq(E0, E1); 
++ handle_bad_irq(irq_desc_get_irq(E1), E1); 
+// Infered from: (linux/{prevFiles/prev_b838c9_523034_drivers#soc#dove#pmu.c,revFiles/b838c9_523034_drivers#soc#dove#pmu.c}: pmu_irq_handler)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

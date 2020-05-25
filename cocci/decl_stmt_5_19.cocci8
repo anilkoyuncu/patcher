@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef gchar;
+@@
+- const  gchar *I0 = (gchar *)E1; 
++ const  gchar *I0 = (const  gchar *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_62d05c_4120d7_epan#emem.c,revFiles/62d05c_4120d7_epan#emem.c}: emem_verify_pointer_list)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

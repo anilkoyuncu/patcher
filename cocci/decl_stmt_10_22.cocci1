@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = MAX(E1 / BDRV_SECTOR_SIZE - E2, INT_MAX); 
++ int I0 = MIN(E1 / BDRV_SECTOR_SIZE - E2, BDRV_REQUEST_MAX_SECTORS); 
+// Infered from: (qemu/{prevFiles/prev_24bae0_6c98c5_block#qcow2.c,revFiles/24bae0_6c98c5_block#qcow2.c}: qcow2_measure)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

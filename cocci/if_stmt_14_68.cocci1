@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->source != GDK_SOURCE_KEYBOARD)  
++ if (gdk_device_get_source(E0) != GDK_SOURCE_KEYBOARD)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_290ecb_c0aae6_gdk#win32#gdkdevice-win32.c,revFiles/290ecb_c0aae6_gdk#win32#gdkdevice-win32.c}: gdk_device_win32_grab), (gtk/{prevFiles/prev_290ecb_c0aae6_gdk#win32#gdkdevice-win32.c,revFiles/290ecb_c0aae6_gdk#win32#gdkdevice-win32.c}: gdk_device_win32_ungrab)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

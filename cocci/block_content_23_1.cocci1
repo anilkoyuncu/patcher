@@ -1,0 +1,26 @@
+@@
+identifier I2;
+expression E3, E0, E1;
+@@
+- E0 = kzalloc(E1, I2); 
++ E0 = kmemdup(E3, E1, I2); 
+  ...
+- memcpy(E0, E3, E1); 
+// Infered from: (linux/{prevFiles/prev_58973de_109a162_drivers#staging#lustre#lustre#obdclass#lprocfs_status.c,revFiles/58973de_109a162_drivers#staging#lustre#lustre#obdclass#lprocfs_status.c}: lprocfs_exp_setup), (linux/{prevFiles/prev_b42e09_d255b09_sound#soc#intel#atom#sst#sst_ipc.c,revFiles/b42e09_d255b09_sound#soc#intel#atom#sst#sst_ipc.c}: sst_process_reply_mrfld), (linux/{prevFiles/prev_2b3c543_1ece36_drivers#media#video#tlg2300#pd-main.c,revFiles/2b3c543_1ece36_drivers#media#video#tlg2300#pd-main.c}: firmware_download)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.90
+// -- Node Change --
+// Recall: 1.00, Precision: 0.90
+// -- General --
+// Functions fully changed: 9/10(90%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_7803c7a_63b870_arch#arm#plat-s3c24xx#dma.c: s3c24xx_dma_order_set
+*/
+
+// ---------------------------------------------

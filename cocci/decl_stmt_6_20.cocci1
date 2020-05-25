@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- E0->p_sys->i_clones = config_GetIntVariable("clone_count"); 
++ E0->p_sys->i_clones = config_GetIntVariable("clone-count"); 
+// Infered from: (vlc/{prevFiles/prev_0aeed9_e95774_plugins#filter#clone.c,revFiles/0aeed9_e95774_plugins#filter#clone.c}: vout_Create)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.17, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_0aeed9_e95774_plugins#filter#distort.c: vout_Create
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_0aeed9_e95774_plugins#filter#transform.c: vout_Create
+ - vlc/prevFiles/prev_0aeed9_e95774_plugins#filter#deinterlace.c: vout_Create
+*/
+
+// ---------------------------------------------

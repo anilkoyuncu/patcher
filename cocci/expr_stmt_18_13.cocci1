@@ -1,0 +1,20 @@
+@@
+expression E0;
+typedef int64_t;
+@@
+- lafe_warnc(errno, "getgrgid(%d) failed", E0); 
++ lafe_warnc(errno, "getgrgid(%s) failed", cpio_i64toa((int64_t )E0)); 
+// Infered from: (libarchive/{prevFiles/prev_160411_27d571_cpio#cpio.c,revFiles/160411_27d571_cpio#cpio.c}: lookup_gname_helper), (libarchive/{prevFiles/prev_304944_4e1d1e_cpio#cpio.c,revFiles/304944_4e1d1e_cpio#cpio.c}: lookup_gname_helper)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

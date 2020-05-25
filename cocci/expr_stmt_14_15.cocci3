@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = (E0 >> 1) | (1 << 9); 
++ E0 = (E0 >> 1) | BIT(9); 
+// Infered from: (linux/{prevFiles/prev_6082ac_58ff7e_drivers#staging#iio#impedance-analyzer#ad5933.c,revFiles/6082ac_58ff7e_drivers#staging#iio#impedance-analyzer#ad5933.c}: ad5933_store)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

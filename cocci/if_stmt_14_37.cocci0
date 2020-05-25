@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef WtvStream;
+@@
+- if (E0 >= 0 && !((WtvStream *)E1->streams[E0]->priv_data)->seen_data)  
++ if (E0 >= 0 && E1->streams[E0]->priv_data && !((WtvStream *)E1->streams[  E0]->priv_data)->seen_data)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_ec79b1_80aa89_libavformat#wtvdec.c,revFiles/ec79b1_80aa89_libavformat#wtvdec.c}: parse_chunks)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

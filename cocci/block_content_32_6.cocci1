@@ -1,0 +1,23 @@
+@@
+identifier I3;
+expression E0, E2, E4, E1;
+@@
+- object_property_add_child(OBJECT(E0), E1, OBJECT(&E2->I3[E4]), &error_abort); 
+// Infered from: (qemu/{prevFiles/prev_d03137_1b0ad56_hw#arm#xlnx-zynqmp.c,revFiles/d03137_1b0ad56_hw#arm#xlnx-zynqmp.c}: xlnx_zynqmp_create_rpu)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_d03137_1b0ad56_hw#arm#xlnx-zynqmp.c: xlnx_zynqmp_create_rpu
+*/
+
+// ---------------------------------------------

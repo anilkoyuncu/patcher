@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- Digest(E0, E1); 
++ DigestMD5(E0, E1); 
+// Infered from: (vlc/{prevFiles/prev_cab654_ac3353_src#misc#md5.c,revFiles/cab654_ac3353_src#misc#md5.c}: AddMD5), (vlc/{prevFiles/prev_cab654_ac3353_src#misc#md5.c,revFiles/cab654_ac3353_src#misc#md5.c}: AddMD5), (vlc/{prevFiles/prev_cab654_ac3353_src#misc#md5.c,revFiles/cab654_ac3353_src#misc#md5.c}: EndMD5), (vlc/{prevFiles/prev_cab654_ac3353_src#misc#md5.c,revFiles/cab654_ac3353_src#misc#md5.c}: EndMD5)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

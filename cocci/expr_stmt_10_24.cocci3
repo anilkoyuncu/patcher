@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0->size = E1; 
++ E0->size = cpu_to_le32(E1); 
+// Infered from: (qemu/{prevFiles/prev_4545d4_36bd42_block#vmdk.c,revFiles/4545d4_36bd42_block#vmdk.c}: vmdk_write_extent)
+// False positives: (FFmpeg/revFiles/b16307_48ac22_libavformat#utils.c: av_add_index_entry)
+// Recall: 0.12, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

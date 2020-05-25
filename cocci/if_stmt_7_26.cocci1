@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 == 0 || (E1 - E2) == 0)  
++ if (E0 == 0 || (E1 - E2) < E0)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_5dc639_4e0b3c_Zend#zend_operators.c,revFiles/5dc639_4e0b3c_Zend#zend_operators.c}: zend_memnstr_ex), (php-src/{prevFiles/prev_5dc639_4e0b3c_Zend#zend_operators.c,revFiles/5dc639_4e0b3c_Zend#zend_operators.c}: zend_memnrstr_ex)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

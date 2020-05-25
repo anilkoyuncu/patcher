@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 == AVERROR_EOF)  
++ if (E0 == 0 || E0 == AVERROR_EOF)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_d04b7d_68900b_libavformat#rtmphttp.c,revFiles/d04b7d_68900b_libavformat#rtmphttp.c}: rtmp_http_read)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

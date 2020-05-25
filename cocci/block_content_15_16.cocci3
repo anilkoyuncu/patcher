@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+typedef ngx_msec_t;
+@@
+- E0->state->response_time = E1->sec * 1000 + E1->msec; 
++ E0->state->response_time = (ngx_msec_t )E1->sec * 1000 + E1->msec; 
+// Infered from: (nginx/{prevFiles/prev_8b6844_67effa_src#http#ngx_http_upstream.c,revFiles/8b6844_67effa_src#http#ngx_http_upstream.c}: ngx_http_upstream_connect)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.40
+// -- Node Change --
+// Recall: 1.00, Precision: 0.54
+// -- General --
+// Functions fully changed: 4/10(40%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_70792d_e82896_Modules#sha256module.c: SHAcopy
+ - cpython/prevFiles/prev_70792d_e82896_Modules#sha256module.c: sha224_init
+ - cpython/prevFiles/prev_70792d_e82896_Modules#sha256module.c: sha_init
+ - cpython/prevFiles/prev_70792d_e82896_Modules#sha512module.c: SHAcopy
+ - cpython/prevFiles/prev_70792d_e82896_Modules#sha512module.c: sha384_init
+ - cpython/prevFiles/prev_70792d_e82896_Modules#sha512module.c: sha512_init
+*/
+
+// ---------------------------------------------

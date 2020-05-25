@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- return of_device_is_compatible(E0, "arm,cortex-a15"); 
++ is_compatible = of_device_is_compatible(E0, "arm,cortex-a15"); 
++ of_node_put(E0); 
++ return is_compatible; 
+// Infered from: (linux/{prevFiles/prev_995c77_9e98c67_arch#arm#mach-sunxi#mc_smp.c,revFiles/995c77_9e98c67_arch#arm#mach-sunxi#mc_smp.c}: sunxi_core_is_cortex_a15)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

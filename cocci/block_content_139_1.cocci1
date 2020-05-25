@@ -1,0 +1,26 @@
+@@
+expression E0;
+typedef uint32_t;
+@@
+- *(uint32_t *)(copy_dst + 4) = E0; 
++ AV_WN32A(copy_dst + 4, 127U * 0x01010101U); 
+// Infered from: (FFmpeg/{prevFiles/prev_6642a1_b351ba_libavcodec#vp8.c,revFiles/6642a1_b351ba_libavcodec#vp8.c}: intra_predict), (FFmpeg/{prevFiles/prev_9d4bdc_f81c7a_libavcodec#vp8.c,revFiles/9d4bdc_f81c7a_libavcodec#vp8.c}: intra_predict)
+// False positives: (FFmpeg/revFiles/6642a1_b351ba_libavcodec#vp8.c: intra_predict), (FFmpeg/revFiles/9d4bdc_f81c7a_libavcodec#vp8.c: intra_predict)
+// Recall: 0.25, Precision: 0.75, Matching recall: 0.25
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.58, Precision: 0.88
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_9d4bdc_f81c7a_libavcodec#vp8.c: intra_predict
+ - FFmpeg/prevFiles/prev_6642a1_b351ba_libavcodec#vp8.c: intra_predict
+*/
+
+// ---------------------------------------------

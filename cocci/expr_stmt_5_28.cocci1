@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- *E0 = E1; 
++ *E0 = -1; 
+// Infered from: (wireshark/{prevFiles/prev_ace4a3_300eb8_ui#gtk#main_filter_toolbar.c,revFiles/ace4a3_300eb8_ui#gtk#main_filter_toolbar.c}: dfilter_entry_match)
+// False positives: (wireshark/revFiles/ace4a3_300eb8_ui#gtk#main_filter_toolbar.c: dfilter_entry_match)
+// Recall: 0.15, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

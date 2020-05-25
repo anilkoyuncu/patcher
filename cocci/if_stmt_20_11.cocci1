@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- vlc_object_attach(E0, E1); 
++ vlc_object_yield(E1); 
++ vlc_object_attach(E1, E0->p_libvlc); 
+// Infered from: (vlc/{prevFiles/prev_6f3aca_1bc833_src#osd#osd.c,revFiles/6f3aca_1bc833_src#osd#osd.c}: osd_ParserLoad)
+// False positives: (vlc/revFiles/6f3aca_1bc833_src#osd#osd.c: __osd_MenuCreate)
+// Recall: 0.21, Precision: 0.67, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.22, Precision: 1.00
+// -- Node Change --
+// Recall: 0.26, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/9(22%)
+
+/*
+Functions where the patch did not apply:
+ - gstreamer/prevFiles/prev_c5a571_624168_plugins#elements#gsttypefindelement.c: gst_type_find_element_getrange
+ - vlc/prevFiles/prev_8eae402_ccd6d2_modules#control#hotkeys.c: Run
+ - vlc/prevFiles/prev_600e2c_9886e2_src#playlist#engine.c: playlist_LastLoop
+ - FFmpeg/prevFiles/prev_67d494_e73688_libavformat#id3v2.c: ff_id3v2_parse_priv_dict
+ - vlc/prevFiles/prev_600e2c_9886e2_src#playlist#engine.c: playlist_MainLoop
+ - gstreamer/prevFiles/prev_c5a571_624168_plugins#elements#gsttypefindelement.c: gst_type_find_element_chain
+ - cpython/prevFiles/prev_24f67d_97c964_Objects#classobject.c: instance_coerce
+*/
+
+// ---------------------------------------------

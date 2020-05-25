@@ -1,0 +1,8 @@
+@@
+@@
+- return EINVAL; 
++ return -EINVAL; 
+// Infered from: (qemu/{prevFiles/prev_4ed9d9_464177_target#arm#kvm64.c,revFiles/4ed9d9_464177_target#arm#kvm64.c}: kvm_arch_put_registers), (qemu/{prevFiles/prev_4ed9d9_464177_target#arm#kvm64.c,revFiles/4ed9d9_464177_target#arm#kvm64.c}: kvm_arch_get_registers)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

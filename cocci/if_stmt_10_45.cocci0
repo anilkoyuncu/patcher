@@ -1,0 +1,12 @@
+@@
+expression E2, E3, E4, E5, E1, E0;
+@@
+- if (E0 || !EVP_DigestUpdate(E1, E2, E3) || !EVP_DigestUpdate(E1, E4, E5))  
++ if (E0 || !EVP_DigestUpdate(E1, E2, E3) || (E5 > 0 && !EVP_DigestUpdate(  E1, E4, E5)))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_7876db_6c61b2_crypto#ec#curve448#eddsa.c,revFiles/7876db_6c61b2_crypto#ec#curve448#eddsa.c}: hash_init_with_dom), (openssl/{prevFiles/prev_7876db_6c61b2_crypto#ec#curve448#eddsa.c,revFiles/7876db_6c61b2_crypto#ec#curve448#eddsa.c}: c448_ed448_sign)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

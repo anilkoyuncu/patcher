@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef mca_base_component_t;
+@@
+- mca_base_component_t *I0 = &mca_pmix_pmix3x_component.super.base_version; 
++ mca_base_component_t *I0 = &mca_pmix_ext1x_component.super.base_version; 
+// Infered from: (ompi/{prevFiles/prev_37e7bc_664ba3_opal#mca#pmix#ext1x#pmix1x_component.c,revFiles/37e7bc_664ba3_opal#mca#pmix#ext1x#pmix1x_component.c}: external_register)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

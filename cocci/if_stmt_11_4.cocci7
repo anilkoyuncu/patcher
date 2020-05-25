@@ -1,0 +1,42 @@
+@@
+expression E0;
+@@
+- if (S_ISDIR(E0))  
++ if (S_ISDIR(E0) || S_ISDIRLNK(E0))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_02851e_220653_archive-tar.c,revFiles/02851e_220653_archive-tar.c}: write_entry), (git/{prevFiles/prev_02851e_220653_archive-tar.c,revFiles/02851e_220653_archive-tar.c}: write_tar_entry)
+// False positives: (cpython/revFiles/d89235_9bc9d6_Python#bltinmodule.c: builtin_execfile)
+// Recall: 0.11, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.59, Precision: 0.91
+// -- Node Change --
+// Recall: 0.56, Precision: 0.91
+// -- General --
+// Functions fully changed: 10/18(55%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_19ed1b92_33b8f0_gtk#gtkrange.c: should_invert_move
+ - vlc/prevFiles/prev_83fbb4_fa4b63_modules#audio_output#wasapi.c: Start
+ - php-src/prevFiles/prev_b9325a_d0d86a_ext#pgsql#pgsql.c: php_pgsql_do_connect
+ - FFmpeg/prevFiles/prev_3e1cf4_210700_libavformat#utils.c: compute_pkt_fields
+ - php-src/prevFiles/prev_dd0565_eb786d_main#php_virtual_cwd.c: virtual_chdir_file
+ - cpython/prevFiles/prev_d89235_9bc9d6_Python#bltinmodule.c: builtin_getattr
+ - FFmpeg/prevFiles/prev_775b84_c52c78_libavcodec#x86#vc1dsp_init.c: ff_vc1dsp_init_x86
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_d89235_9bc9d6_Python#bltinmodule.c: builtin_execfile
+*/
+
+// ---------------------------------------------

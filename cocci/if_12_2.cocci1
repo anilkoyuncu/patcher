@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- if (E0 < 2)  
++ if (E0 < 4)  
+  {
+- E1 += (2 - E0) * 60 * 60; 
+- E0 = 2; 
++ E1 += (4 - E0) * 60 * 60; 
++ E0 = 4; 
+  }
+// Infered from: (php-src/{prevFiles/prev_a40518_c52cc1c_ext#standard#datetime.c,revFiles/a40518_c52cc1c_ext#standard#datetime.c}: php_mktime)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.75
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_8f58b9_ad84ce_ext#standard#datetime.c: php_mktime
+*/
+
+// ---------------------------------------------

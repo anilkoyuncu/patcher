@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+typedef int16_t;
+@@
+- E0 = (E1 * E2) << 1; 
++ E0 = ((int16_t )E1 * (int16_t )E2) << 1; 
+// Infered from: (qemu/{prevFiles/prev_487786_200a06_target-mips#dsp_helper.c,revFiles/487786_200a06_target-mips#dsp_helper.c}: mipsdsp_rndq15_mul_q15_q15)
+// False positives: (qemu/revFiles/487786_200a06_target-mips#dsp_helper.c: ), (qemu/revFiles/487786_200a06_target-mips#dsp_helper.c: mipsdsp_mul_q15_q15), (qemu/revFiles/487786_200a06_target-mips#dsp_helper.c: mipsdsp_mul_q15_q15_overflowflag21), (qemu/revFiles/487786_200a06_target-mips#dsp_helper.c: mipsdsp_mul_q31_q31)
+// Recall: 0.14, Precision: 0.30, Matching recall: 0.75
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+identifier I2;
+expression E1, E0, E3;
+@@
+- if (Curl_inet_ntop(E0->sa_family, &E1->I2, E3, MAX_IPADR_LEN) != 0)  
++ if (Curl_inet_ntop(E0->sa_family, &E1->I2, E3, MAX_IPADR_LEN) == NULL)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_cbdd1c_b3d716_lib#connect.c,revFiles/cbdd1c_b3d716_lib#connect.c}: getaddressinfo), (curl/{prevFiles/prev_cbdd1c_b3d716_lib#connect.c,revFiles/cbdd1c_b3d716_lib#connect.c}: getaddressinfo)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

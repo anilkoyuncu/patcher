@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E1;
+typedef Error;
+@@
+  Error *I0 = NULL; 
+  ...
+- if (E1)  
++ if (I0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_0722eb_800742_qdev-monitor.c,revFiles/0722eb_800742_qdev-monitor.c}: qdev_device_help), (qemu/{prevFiles/prev_ab6381_3f4868_device-hotplug.c,revFiles/ab6381_3f4868_device-hotplug.c}: add_init_drive)
+// False positives: (qemu/revFiles/0722eb_800742_qdev-monitor.c: qdev_device_add), (qemu/revFiles/0722eb_800742_qdev-monitor.c: qdev_device_help), (qemu/revFiles/0722eb_800742_qdev-monitor.c: set_property), (qemu/revFiles/7faae9_041099_backends#hostmem-file.c: file_memory_backend_set_align), (qemu/revFiles/ab6381_3f4868_device-hotplug.c: add_init_drive)
+// Recall: 0.20, Precision: 0.33, Matching recall: 0.50
+
+// ---------------------------------------------

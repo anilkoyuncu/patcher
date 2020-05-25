@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- av_log(E0, AV_LOG_WARNING,  "Last packet must be truncated to %d (unimplemented).\n",  E1->pduration); 
++ av_log(E0, AV_LOG_DEBUG,  "Last packet was truncated to %d due to end trimming.\n",  E1->pduration); 
+// Infered from: (FFmpeg/{prevFiles/prev_bcac6b_b9e7bd_libavformat#oggparseopus.c,revFiles/bcac6b_b9e7bd_libavformat#oggparseopus.c}: opus_packet)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- set_irq_chip_and_handler(E0, NULL, NULL); 
++ irq_set_chip_and_handler(E0, NULL, NULL); 
+// Infered from: (linux/{prevFiles/prev_ec775d_7bfbc1f2_arch#powerpc#kernel#irq.c,revFiles/ec775d_7bfbc1f2_arch#powerpc#kernel#irq.c}: irq_dispose_mapping)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

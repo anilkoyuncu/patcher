@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2;
+@@
+- av_log(NULL, AV_LOG_DEBUG, "itime:0x%Lx, pct:%d, ict:%d\n", E0, E1, E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_ccd322_7c428e_libavformat#asf.c,revFiles/ccd322_7c428e_libavformat#asf.c}: asf_build_simple_index)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

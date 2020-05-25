@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = wep_encrypt(E1, E2->data, E3->data, E2->len,  (E1->hostwep & HOSTWEP_DEFAULTKEY_MASK), E3->iv, E3->icv); 
++ E0 = wep_encrypt(E1, E2->data, E3->data, E2->len,  E1->hostwep & HOSTWEP_DEFAULTKEY_MASK, E3->iv, E3->icv); 
+// Infered from: (linux/{prevFiles/prev_8954ef9_e65a60_drivers#staging#wlan-ng#p80211conv.c,revFiles/8954ef9_e65a60_drivers#staging#wlan-ng#p80211conv.c}: skb_ether_to_p80211)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

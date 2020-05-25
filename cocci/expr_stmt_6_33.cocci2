@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0->bit_rate = E0->block_align * E0->sample_rate * 8; 
++ E0->bit_rate = E0->block_align * 8LL * E0->sample_rate; 
+// Infered from: (FFmpeg/{prevFiles/prev_2de8bf_0c56f8_libavcodec#pcm.c,revFiles/2de8bf_0c56f8_libavcodec#pcm.c}: pcm_encode_init)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_9c67ef_ab5080_target-mips#helper.c: cpu_mips_handle_mmu_fault
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+typedef GSList;
+typedef key_record_t;
+@@
+- if (!*E0 || memcmp(((key_record_t *)((GSList *)(*E0))->data)->key, &E1,  ZBEE_APS_CMD_KEY_LENGTH))  
++ if (!*E0 || memcmp(((key_record_t *)((GSList *)(*E0))->data)->key, E1,  ZBEE_APS_CMD_KEY_LENGTH))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_b40ad7_8dbb21_epan#dissectors#packet-zbee-security.c,revFiles/b40ad7_8dbb21_epan#dissectors#packet-zbee-security.c}: zbee_sec_add_key_to_keyring)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

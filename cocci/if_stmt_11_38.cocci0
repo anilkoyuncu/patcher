@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef GCompareFunc;
+@@
+- if ((E0 = g_slist_find_custom(E1->sessions, NULL,  (GCompareFunc )find_twamp_session_by_first_accept_waiting)) == NULL)  
++ if ((E0 = g_slist_find_custom(E1->sessions, NULL,  find_twamp_session_by_first_accept_waiting)) == NULL)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_42d43a_966c59_epan#dissectors#packet-twamp.c,revFiles/42d43a_966c59_epan#dissectors#packet-twamp.c}: dissect_twamp_control)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

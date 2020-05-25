@@ -1,0 +1,21 @@
+@@
+identifier I0;
+expression E1;
+typedef QBool;
+@@
+- QBool *I0 = qobject_to_qbool(E1); 
++ QBool *I0 = qobject_to(QBool , E1); 
+// Infered from: (qemu/{prevFiles/prev_7dc847_1a56b1_block#qapi.c,revFiles/7dc847_1a56b1_block#qapi.c}: dump_qobject), (qemu/{prevFiles/prev_7dc847_1a56b1_qobject#qjson.c,revFiles/7dc847_1a56b1_qobject#qjson.c}: to_json)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

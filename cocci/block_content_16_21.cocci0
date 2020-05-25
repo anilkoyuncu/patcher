@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- clk_disable(E0->clk); 
+- clk_unprepare(E0->clk); 
++ clk_disable_unprepare(E0->clk); 
+// Infered from: (linux/{prevFiles/prev_1c4c439_e372dc6_drivers#tty#serial#amba-pl011.c,revFiles/1c4c439_e372dc6_drivers#tty#serial#amba-pl011.c}: pl011_shutdown), (linux/{prevFiles/prev_828296_90829c0_drivers#rtc#rtc-coh901331.c,revFiles/828296_90829c0_drivers#rtc#rtc-coh901331.c}: coh901331_shutdown), (linux/{prevFiles/prev_ac9409_cd1b00_drivers#mmc#host#mmci.c,revFiles/ac9409_cd1b00_drivers#mmc#host#mmci.c}: mmci_remove), (linux/{prevFiles/prev_1c4c439_e372dc6_drivers#tty#serial#amba-pl010.c,revFiles/1c4c439_e372dc6_drivers#tty#serial#amba-pl010.c}: pl010_shutdown), (linux/{prevFiles/prev_63fbbc_8157bec_drivers#watchdog#sp805_wdt.c,revFiles/63fbbc_8157bec_drivers#watchdog#sp805_wdt.c}: wdt_disable), (linux/{prevFiles/prev_f5ed9c3_91b417_drivers#staging#iio#adc#spear_adc.c,revFiles/f5ed9c3_91b417_drivers#staging#iio#adc#spear_adc.c}: spear_adc_probe), (linux/{prevFiles/prev_f5ed9c3_91b417_drivers#staging#iio#adc#spear_adc.c,revFiles/f5ed9c3_91b417_drivers#staging#iio#adc#spear_adc.c}: spear_adc_remove)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,21 @@
+@@
+identifier I0;
+expression E1;
+typedef wlan_hdr;
+@@
+- const  wlan_hdr *I0 = (wlan_hdr *)E1; 
++ const  wlan_hdr *I0 = (const  wlan_hdr *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#conversations_wlan.c,revFiles/3ae2e5_8aebe1_ui#gtk#conversations_wlan.c}: wlan_conversation_packet)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 12 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 18/18(100%)
+
+
+// ---------------------------------------------

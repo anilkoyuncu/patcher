@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- ff_lzw_encode_init(E0->lzw, E0->buf, E1 * E2, 12, FF_LZW_GIF, put_bits); 
++ ff_lzw_encode_init(E0->lzw, E0->buf, 2 * E1 * E2, 12, FF_LZW_GIF, put_bits); 
+// Infered from: (FFmpeg/{prevFiles/prev_796b20_b4e2e0_libavcodec#gif.c,revFiles/796b20_b4e2e0_libavcodec#gif.c}: gif_image_write_image)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

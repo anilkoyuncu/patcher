@@ -1,0 +1,9 @@
+@@
+expression E1, E0, E2;
+@@
+- E0 = devm_ioremap_nocache(&E1->dev, E2->start, E2->end - E2->start + 1); 
++ E0 = devm_ioremap_nocache(&E1->dev, E2->start, resource_size(E2)); 
+// Infered from: (linux/{prevFiles/prev_041b5e_f90f61_drivers#ata#pata_octeon_cf.c,revFiles/041b5e_f90f61_drivers#ata#pata_octeon_cf.c}: octeon_cf_probe), (linux/{prevFiles/prev_041b5e_f90f61_drivers#ata#pata_rb532_cf.c,revFiles/041b5e_f90f61_drivers#ata#pata_rb532_cf.c}: rb532_pata_driver_probe), (linux/{prevFiles/prev_b1cbe7_e0044c_drivers#ata#pata_octeon_cf.c,revFiles/b1cbe7_e0044c_drivers#ata#pata_octeon_cf.c}: octeon_cf_probe)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

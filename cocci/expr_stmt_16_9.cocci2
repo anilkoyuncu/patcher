@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- vring_avail_event(E0, vring_avail_idx(E0)); 
++ vring_avail_event(E0, E0->last_avail_idx); 
+// Infered from: (qemu/{prevFiles/prev_a3614c_db80c7_hw#virtio#virtio.c,revFiles/a3614c_db80c7_hw#virtio#virtio.c}: virtqueue_pop)
+// False positives: (qemu/revFiles/a3614c_db80c7_hw#virtio#virtio.c: virtio_queue_set_notification)
+// Recall: 0.17, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

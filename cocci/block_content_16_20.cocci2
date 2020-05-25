@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- E0 = g_regex_split_simple("^[\\dA-Z]{8,8}:\\s+([\\dA-Z]{2,8})\\s+([\\dA-Z]{2,8}){0,1}\\s+([\\dA-Z]{2,8}){0,1}\\s+([\\dA-Z]{2,8}){0,1}.*",  E1, G_REGEX_CASELESS, G_REGEX_MATCH_ANCHORED); 
++ E0 = g_regex_split_simple("^[\\dA-F]{8,8}:\\s+([\\dA-F]{2,8})\\s+([\\dA-F]{2,8}){0,1}\\s+([\\dA-F]{2,8}){0,1}\\s+([\\dA-F]{2,8}){0,1}.*",  E1, G_REGEX_CASELESS, G_REGEX_MATCH_ANCHORED); 
+// Infered from: (wireshark/{prevFiles/prev_26551b_595610_extcap#ciscodump.c,revFiles/26551b_595610_extcap#ciscodump.c}: parse_line)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.75
+// -- Node Change --
+// Recall: 0.67, Precision: 0.60
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_6c7dcf_7daf9b_gtk#main_menubar.c: set_menus_for_captured_packets
+ - wireshark/prevFiles/prev_26551b_595610_extcap#ciscodump.c: parse_line
+ - qemu/prevFiles/prev_c4b48b_0c204c_block#vvfat.c: enable_write_target
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_6c7dcf_7daf9b_gtk#main_menubar.c: set_menus_for_selected_tree_row
+*/
+
+// ---------------------------------------------

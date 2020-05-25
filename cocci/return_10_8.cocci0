@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef heur_dtbl_entry_t;
+@@
+- return strcmp(((heur_dtbl_entry_t *)E0)->short_name,  ((heur_dtbl_entry_t *)E1)->short_name); 
++ return strcmp(((const  heur_dtbl_entry_t *)E0)->short_name,  ((const  heur_dtbl_entry_t *)E1)->short_name); 
+// Infered from: (wireshark/{prevFiles/prev_281640_862625_epan#disabled_protos.c,revFiles/281640_862625_epan#disabled_protos.c}: heur_compare)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

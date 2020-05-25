@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->mb_x != 0 || (E0->mb_y % E0->slice_height) != 0 || get_bits_count(  &E0->gb) > E0->gb.size_in_bits)  
++ if (E0->slice_height == 0 || E0->mb_x != 0 || (E0->mb_y % E0->slice_height) != 0 || get_bits_count(  &E0->gb) > E0->gb.size_in_bits)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b34397_f78355_libavcodec#h263dec.c,revFiles/b34397_f78355_libavcodec#h263dec.c}: ff_h263_decode_frame)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

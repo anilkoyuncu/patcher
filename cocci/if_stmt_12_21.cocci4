@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 >= 8 && !strncmp(E1, "conectix", 8))  
++ if (E0 >= 8 && !strncmp((char *)E1, "conectix", 8))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_ffe8ab_60fe76f_block-vpc.c,revFiles/ffe8ab_60fe76f_block-vpc.c}: vpc_probe)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- g_object_notify_by_pspec(G_OBJECT(E0), widget_props[PROP_CAN_FOCUS]); 
++ g_object_notify_by_pspec(G_OBJECT(E0), widget_props[PROP_CAN_DEFAULT]); 
+// Infered from: (gtk/{prevFiles/prev_afa60d_5f0dce_gtk#gtkwidget.c,revFiles/afa60d_5f0dce_gtk#gtkwidget.c}: gtk_widget_set_can_default)
+// False positives: (gtk/revFiles/afa60d_5f0dce_gtk#gtkwidget.c: gtk_widget_set_can_focus)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

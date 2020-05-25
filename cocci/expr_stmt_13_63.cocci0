@@ -1,0 +1,8 @@
+@@
+@@
+- schedule_timeout(30); 
++ schedule_timeout(msecs_to_jiffies(300)); 
+// Infered from: (linux/{prevFiles/prev_fb79c0_7cf7fa_drivers#net#wan#cosa.c,revFiles/fb79c0_7cf7fa_drivers#net#wan#cosa.c}: cosa_probe)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

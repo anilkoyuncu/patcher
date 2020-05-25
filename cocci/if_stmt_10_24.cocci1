@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (imap_exec(E0, 0, E1) != RESP_OK)  
++ if (imap_exec(E0, NULL, E1) != RESP_OK)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_d27da3_2ad9d4_imap-send.c,revFiles/d27da3_2ad9d4_imap-send.c}: imap_open_store), (git/{prevFiles/prev_d27da3_2ad9d4_imap-send.c,revFiles/d27da3_2ad9d4_imap-send.c}: imap_open_store)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,38 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && *E1 == NULL)  
++ if (*E0 != 0 && *E1 == NULL)  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_611221_9c7d5a_src#cairo-scaled-font.c,revFiles/611221_9c7d5a_src#cairo-scaled-font.c}: cairo_scaled_font_text_to_glyphs), (cairo/{prevFiles/prev_611221_9c7d5a_src#cairo-scaled-font.c,revFiles/611221_9c7d5a_src#cairo-scaled-font.c}: cairo_scaled_font_text_to_glyphs)
+// False positives: (cairo/revFiles/611221_9c7d5a_src#cairo-scaled-font.c: cairo_scaled_font_text_to_glyphs)
+// Recall: 0.15, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.31, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/12(16%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_0b1974_5d3636_ext#xmlrpc#xmlrpc-epi-php.c: set_zval_xmlrpc_type
+ - php-src/prevFiles/prev_f14ec0_0be283_ext#xmlrpc#xmlrpc-epi-php.c: set_zval_xmlrpc_type
+ - vlc/prevFiles/prev_9513f3_e9dec8_modules#demux#mpeg#ps.c: Probe
+ - vlc/prevFiles/prev_932c51_8a8d77_modules#access#cdda#info.c: CDDAFixupPlaylist
+ - php-src/prevFiles/prev_ff4fd5_50038a_ext#xmlrpc#xmlrpc-epi-php.c: set_zval_xmlrpc_type
+ - cpython/prevFiles/prev_9c8222_ceb5d1_Modules#posixmodule.c: posix_sched_setscheduler
+ - redis/prevFiles/prev_4fec5e_f529a0_src#db.c: moveCommand
+ - qemu/prevFiles/prev_b7361d_56b517_hw#9pfs#9p-local.c: local_remove
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_611221_9c7d5a_src#cairo-scaled-font.c: cairo_scaled_font_text_to_glyphs
+*/
+
+// ---------------------------------------------

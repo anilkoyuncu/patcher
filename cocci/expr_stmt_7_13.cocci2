@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->spx_dst_end_freq = end_freq_inv_tab[E1]; 
++ E0->spx_dst_end_freq = end_freq_inv_tab[E1 - 5]; 
+// Infered from: (FFmpeg/{prevFiles/prev_b08344_15ce16_libavcodec#ac3dec.c,revFiles/b08344_15ce16_libavcodec#ac3dec.c}: decode_audio_block)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

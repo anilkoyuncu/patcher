@@ -1,0 +1,9 @@
+@@
+@@
+- udp_ports_asn1 = range_copy(global_udp_ports_asn1); 
++ sctp_ports_asn1 = range_copy(global_sctp_ports_asn1); 
+// Infered from: (wireshark/{prevFiles/prev_6f022a_6ced26_plugins#asn1#packet-asn1.c,revFiles/6f022a_6ced26_plugins#asn1#packet-asn1.c}: proto_reg_handoff_asn1)
+// False positives: (wireshark/revFiles/6f022a_6ced26_plugins#asn1#packet-asn1.c: proto_reg_handoff_asn1)
+// Recall: 0.12, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

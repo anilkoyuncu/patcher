@@ -1,0 +1,20 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef decoder_t;
+typedef mtime_t;
+@@
+  mtime_t decoder_GetDisplayDate(decoder_t *I0, mtime_t I1)  
+  {
+  ...
+- assert(E2->p_clock); 
++ if (!E2->p_clock)  
++ {
++ return I1; 
++ }
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_a3b364_5bce8e_src#input#decoder.c,revFiles/a3b364_5bce8e_src#input#decoder.c}: decoder_GetDisplayDate)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

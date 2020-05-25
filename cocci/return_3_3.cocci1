@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- return av_isdigit(E0) || (E0 >= 'a' && E0 <= 'z'); 
++ return av_isdigit(E0) || (E0 >= 'a' && E0 <= 'f'); 
+// Infered from: (FFmpeg/{prevFiles/prev_4be368_870add0_libavutil#avstring.c,revFiles/4be368_870add0_libavutil#avstring.c}: av_isxdigit)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/5(20%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_4a778f_b259ba_lib#strcase.c: Curl_raw_tolower
+ - vlc/prevFiles/prev_d483c4_46b263_modules#video_output#win32#direct3d11.c: CompilePixelShader
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_2a802a_ef18c2_qtest.c: hex2nib
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (MPI_WIN_FLAVOR_ALLOCATE != E0->flavor)  
++ if (MPI_WIN_FLAVOR_ALLOCATE != E0->flavor || NULL == E0->state_handle)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_63e744_f690fc_ompi#mca#osc#rdma#osc_rdma_component.c,revFiles/63e744_f690fc_ompi#mca#osc#rdma#osc_rdma_component.c}: ompi_osc_rdma_initialize_region)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

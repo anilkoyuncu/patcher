@@ -1,0 +1,12 @@
+@@
+identifier I2;
+expression E3, E4, E5, E0, E1;
+@@
+- E0 = kmalloc(E1, I2); 
++ E0 = kmemdup(E3, E1, I2); 
+  ...
+- memcpy(*E4, E3, *E5); 
+// Infered from: (linux/{prevFiles/prev_94002c_96fe9ee_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c,revFiles/94002c_96fe9ee_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c}: auth_parse), (linux/{prevFiles/prev_f7f7c1_d455b72_fs#cifs#cifssmb.c,revFiles/f7f7c1_d455b72_fs#cifs#cifssmb.c}: CIFSSMBGetCIFSACL)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

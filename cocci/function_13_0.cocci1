@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->cur_timestamp = av_rescale_q(E1->dts,  E2->ctx->streams[E2->pkt.stream_index]->time_base,  AV_TIME_BASE_Q); 
++ E0->cur_timestamp = av_rescale_q(E1->dts, ist->time_base, AV_TIME_BASE_Q); 
+// Infered from: (FFmpeg/{prevFiles/prev_3d2f63_9a51cd_libavformat#hls.c,revFiles/3d2f63_9a51cd_libavformat#hls.c}: hls_read_packet)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------

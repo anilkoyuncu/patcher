@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0 || !*E0)  
++ if (!E0 || !*E0 || *E0 == '/')  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_cda7dc_6afcd6_main#streams#xp_socket.c,revFiles/cda7dc_6afcd6_main#streams#xp_socket.c}: parse_ip_address_ex)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

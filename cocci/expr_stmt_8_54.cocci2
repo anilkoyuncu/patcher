@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- qemu_sglist_init(&E0->sg, E1->len / MACIO_PAGE_SIZE + 1, NULL); 
++ qemu_sglist_init(&E0->sg, E1->len / MACIO_PAGE_SIZE + 1, &dma_context_memory); 
+// Infered from: (qemu/{prevFiles/prev_d688e5_cab1e8_hw#ide#macio.c,revFiles/d688e5_cab1e8_hw#ide#macio.c}: pmac_ide_atapi_transfer_cb), (qemu/{prevFiles/prev_d688e5_cab1e8_hw#ide#macio.c,revFiles/d688e5_cab1e8_hw#ide#macio.c}: pmac_ide_transfer_cb)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,34 @@
+@@
+expression E0;
+@@
+- SPML_ERROR("ucp_ep_create failed: %s\n", ucs_status_string(E0)); 
++ SPML_ERROR("ucp_ep_create failed: %s", ucs_status_string(E0)); 
+// Infered from: (ompi/{prevFiles/prev_ea3ea4_9da9e6_oshmem#mca#spml#ucx#spml_ucx.c,revFiles/ea3ea4_9da9e6_oshmem#mca#spml#ucx#spml_ucx.c}: mca_spml_ucx_add_procs)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.80
+// -- Node Change --
+// Recall: 0.47, Precision: 0.80
+// -- General --
+// Functions fully changed: 1/7(14%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_ec50dd_f6e303_hw#net#rocker#rocker.c: qmp_query_rocker
+ - qemu/prevFiles/prev_092189_bd5ea5_hw#nseries.c: n8x0_init
+ - qemu/prevFiles/prev_d28d65_5f5d82_ui#sdl.c: sdl_switch
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_dcb616_fe5281_bin#winvlc.c: WinMain
+ - ompi/prevFiles/prev_ea3ea4_9da9e6_oshmem#mca#spml#ucx#spml_ucx.c: mca_spml_ucx_memuse_hook
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_ec50dd_f6e303_hw#net#rocker#rocker.c: qmp_query_rocker_ports
+*/
+
+// ---------------------------------------------

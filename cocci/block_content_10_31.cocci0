@@ -1,0 +1,9 @@
+@@
+@@
+- goto  out; 
++ goto  output; 
+// Infered from: (linux/{prevFiles/prev_76975f8_304b469_net#x25#x25_forward.c,revFiles/76975f8_304b469_net#x25#x25_forward.c}: x25_forward_data)
+// False positives: (linux/revFiles/20d436_8363658_drivers#net#ethernet#tundra#tsi108_eth.c: tsi108_check_phy), (linux/revFiles/20d436_8363658_drivers#net#ethernet#tundra#tsi108_eth.c: tsi108_set_rx_mode), (linux/revFiles/76975f8_304b469_net#x25#x25_forward.c: x25_forward_data)
+// Recall: 0.33, Precision: 0.25, Matching recall: 0.67
+
+// ---------------------------------------------

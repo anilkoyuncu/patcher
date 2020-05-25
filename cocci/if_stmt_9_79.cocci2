@@ -1,0 +1,37 @@
+@@
+expression E0;
+@@
+- if (E0->apic_state)  
++ if (E0->apic_state && !kvm_irqchip_in_kernel())  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_bb93e0_d25115_hw#i386#pc.c,revFiles/bb93e0_d25115_hw#i386#pc.c}: pic_irq_request)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.38, Precision: 0.80
+// -- General --
+// Functions fully changed: 3/8(37%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_74d9dc_f623d8_ui#sdl.c: sdl_refresh
+ - qemu/prevFiles/prev_456d97_bbc4c3_target-i386#monitor.c: hmp_info_io_apic
+ - qemu/prevFiles/prev_74d9dc_f623d8_ui#sdl.c: sdl_show_cursor
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - libarchive/prevFiles/prev_e903c4_213a26_libarchive#test#test_read_set_format.c: DEFINE_TEST
+*/
+
+// ---------------------------------------------

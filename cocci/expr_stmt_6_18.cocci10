@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E1, E0;
+@@
+- E0 = E1->I2 >> 8; 
++ E0 = (E1->I2 >> 8) & 0xf; 
+// Infered from: (qemu/{prevFiles/prev_259d55_664a65_hw#lsi53c895a.c,revFiles/259d55_664a65_hw#lsi53c895a.c}: lsi_do_dma), (qemu/{prevFiles/prev_259d55_664a65_hw#lsi53c895a.c,revFiles/259d55_664a65_hw#lsi53c895a.c}: lsi_do_command)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

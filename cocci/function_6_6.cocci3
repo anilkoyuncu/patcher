@@ -1,0 +1,29 @@
+@@
+@@
+- ompi_setenv("OMPI_MCA_gpr_replica_isolate", "1", true, &environ); 
++ setenv("OMPI_MCA_gpr_replica_isolate", "1", 1); 
+// Infered from: (ompi/{prevFiles/prev_1701010_4e23a2_test#mca#gpr#gpr_triggers.c,revFiles/1701010_4e23a2_test#mca#gpr#gpr_triggers.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.10, Precision: 1.00
+// -- Node Change --
+// Recall: 0.15, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/40(7%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_800c67_e4f905_Zend#zend_builtin_functions.c: ZEND_FUNCTION
+*/
+/*
+Functions where the patch did not apply:
+ - cairo/prevFiles/prev_8f2ad0_be6edd_test#pdiff#pdiff.c: pdiff_compare
+ - vlc/prevFiles/prev_8cbcb5_73c7d5_src#video_output#video_output.c: RunThread
+ - qemu/prevFiles/prev_49cdae_035640_tests#tcg#hello-i386.c: exit
+ - wireshark/prevFiles/prev_424514_e2cec4_epan#dissectors#packet-rpcap.c: dissect_rpcap_auth_request
+*/
+
+// ---------------------------------------------

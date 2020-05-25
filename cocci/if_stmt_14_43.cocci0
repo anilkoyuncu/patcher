@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (ORTE_SUCCESS != (E0 = orte_ess_base_build_nidmap(orte_process_info.sync_buf,  &nidmap, &E1->pmap)))  
++ if (ORTE_SUCCESS != (E0 = orte_ess_base_build_nidmap(orte_process_info.sync_buf,  &nidmap, E1)))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_077b3d_29cc6d_orte#mca#ess#env#ess_env_module.c,revFiles/077b3d_29cc6d_orte#mca#ess#env#ess_env_module.c}: rte_ft_event)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,32 @@
+@@
+expression E0;
+@@
+- if (E0->super.flags & (OPAL_DATATYPE_FLAG_USER_LB | OPAL_DATATYPE_FLAG_USER_UB))  
++ if (1 || E0->super.flags & (OPAL_DATATYPE_FLAG_USER_LB | OPAL_DATATYPE_FLAG_USER_UB))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_88072f_f588ad_ompi#datatype#ompi_datatype_create_subarray.c,revFiles/88072f_f588ad_ompi#datatype#ompi_datatype_create_subarray.c}: ompi_datatype_create_subarray)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/9(66%)
+
+/*
+Functions where the patch did not apply:
+ - tcl/prevFiles/prev_0c9e9b_c69e73_generic#tclIO.c: RecycleBuffer
+ - ompi/prevFiles/prev_1e24da_5944c2_ompi#mca#mtl#ofi#mtl_ofi_component.c: ompi_mtl_ofi_component_init
+*/
+
+// ---------------------------------------------

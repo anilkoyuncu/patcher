@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef struct_stat;
+@@
+- struct stat I0; 
++ struct_stat I0; 
+// Infered from: (gstreamer/{prevFiles/prev_436221_5c3ae3_plugins#elements#gstfilesrc.c,revFiles/436221_5c3ae3_plugins#elements#gstfilesrc.c}: gst_file_src_get_size), (gstreamer/{prevFiles/prev_436221_5c3ae3_plugins#elements#gstfilesrc.c,revFiles/436221_5c3ae3_plugins#elements#gstfilesrc.c}: gst_file_src_start), (gstreamer/{prevFiles/prev_436221_5c3ae3_plugins#elements#gstfdsink.c,revFiles/436221_5c3ae3_plugins#elements#gstfdsink.c}: gst_fd_sink_check_fd), (gstreamer/{prevFiles/prev_436221_5c3ae3_plugins#elements#gstfdsrc.c,revFiles/436221_5c3ae3_plugins#elements#gstfdsrc.c}: gst_fd_src_update_fd), (gstreamer/{prevFiles/prev_436221_5c3ae3_plugins#elements#gstfdsrc.c,revFiles/436221_5c3ae3_plugins#elements#gstfdsrc.c}: gst_fd_src_get_size), (curl/{prevFiles/prev_e3a530_d1235f_tests#libtest#lib505.c,revFiles/e3a530_d1235f_tests#libtest#lib505.c}: test)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

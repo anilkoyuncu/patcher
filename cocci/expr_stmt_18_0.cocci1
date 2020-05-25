@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = (E1 + HZ / 2) / HZ; 
++ I0 = DIV_ROUND_CLOSEST(E1, HZ); 
+// Infered from: (linux/{prevFiles/prev_1a0caf_eb054e_arch#m68k#amiga#config.c,revFiles/1a0caf_eb054e_arch#m68k#amiga#config.c}: amiga_sched_init), (linux/{prevFiles/prev_a692838_5b9eda_arch#arm#plat-iop#time.c,revFiles/a692838_5b9eda_arch#arm#plat-iop#time.c}: iop_init_time), (linux/{prevFiles/prev_64f181_a1b021_arch#mips#nxp#pnx8550#common#time.c,revFiles/64f181_a1b021_arch#mips#nxp#pnx8550#common#time.c}: plat_time_init)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

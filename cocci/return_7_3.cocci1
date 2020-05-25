@@ -1,0 +1,25 @@
+@@
+expression E0;
+typedef bool;
+@@
+- return (E0 >= 0x30 && E0 <= 0x39) || (E0 >= 0x41 && E0 <= 0x46) || (E0 >= 0x61 && E0 <= 0x66); 
++ return (bool )((E0 >= 0x30 && E0 <= 0x39) || (E0 >= 0x41 && E0 <= 0x46) || (  E0 >= 0x61 && E0 <= 0x66)); 
+// Infered from: (curl/{prevFiles/prev_6ea91a_b76744_lib#http_chunks.c,revFiles/6ea91a_b76744_lib#http_chunks.c}: Curl_isxdigit)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_2ef72f_eae27d_lib#http.c: use_http_1_1
+ - cpython/prevFiles/prev_e34a20_696d10_Modules#_decimal#libmpdec#mpdecimal.c: mpd_sizeinbase
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0[E1] != 'a' && E0[E1] != 'e' && E0[E1] != 'i' && E0[E1] != 'o' && E0[  E1] != 'u')  
++ if (E0[E1] != 'a' && E0[E1] != 'e' && E0[E1] != 'i' && E0[E1] != 'o' && E0[  E1] != 'u' && E0[E1] != 'y')  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_118-A-18134274-18134357.c,revFiles/118-A-18134274-18134357.c}: main)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

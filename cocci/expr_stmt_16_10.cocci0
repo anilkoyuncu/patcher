@@ -1,0 +1,10 @@
+@@
+identifier I0 = {pr_debug ,pr_warn };
+expression E2, E1;
+@@
+- I0(E1, __clk_get_name(E2->clk)); 
++ I0(E1, clk_hw_get_name(E2)); 
+// Infered from: (linux/{prevFiles/prev_836ee0_e7df6f6_drivers#clk#berlin#berlin2-pll.c,revFiles/836ee0_e7df6f6_drivers#clk#berlin#berlin2-pll.c}: berlin2_pll_recalc_rate), (linux/{prevFiles/prev_836ee0_e7df6f6_drivers#clk#st#clk-flexgen.c,revFiles/836ee0_e7df6f6_drivers#clk#st#clk-flexgen.c}: flexgen_enable), (linux/{prevFiles/prev_836ee0_e7df6f6_drivers#clk#st#clk-flexgen.c,revFiles/836ee0_e7df6f6_drivers#clk#st#clk-flexgen.c}: flexgen_disable)
+// Recall: 0.60, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

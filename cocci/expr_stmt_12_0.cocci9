@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef time_t;
+@@
+- E0 = ngx_sprintf(E0, "%d.%03d", E1 / 1000, E1 % 1000); 
++ E0 = ngx_sprintf(E0, "%T.%03M", (time_t )E1 / 1000, E1 % 1000); 
+// Infered from: (nginx/{prevFiles/prev_d33225_6e4030_src#http#ngx_http_upstream.c,revFiles/d33225_6e4030_src#http#ngx_http_upstream.c}: ngx_http_upstream_response_time_variable)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

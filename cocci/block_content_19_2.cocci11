@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- printf("%-10s %s (alias of %s)\n", E0->alias, E0->desc, E0->name); 
++ printf("%-20s %s (alias of %s)\n", E0->alias, E0->desc, E0->name); 
+// Infered from: (qemu/{prevFiles/prev_3b2648_a97e45_vl.c,revFiles/3b2648_a97e45_vl.c}: machine_parse)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

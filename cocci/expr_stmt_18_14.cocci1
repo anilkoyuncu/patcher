@@ -1,0 +1,9 @@
+@@
+expression E0, E2, E1;
+@@
+- OBD_ALLOC_LARGE(E0, E1 * sizeof(E2)); 
++ E0 = libcfs_kvzalloc(E1 * sizeof(E2), GFP_NOFS); 
+// Infered from: (linux/{prevFiles/prev_3d0ba7_8cc379_drivers#staging#lustre#lustre#lov#lov_object.c,revFiles/3d0ba7_8cc379_drivers#staging#lustre#lustre#lov#lov_object.c}: lov_init_raid0), (linux/{prevFiles/prev_ee0ec19_6b0e43_drivers#staging#lustre#lustre#ptlrpc#sec_bulk.c,revFiles/ee0ec19_6b0e43_drivers#staging#lustre#lustre#ptlrpc#sec_bulk.c}: enc_pools_alloc), (linux/{prevFiles/prev_3d0ba7_8cc379_drivers#staging#lustre#lustre#lov#lov_lock.c,revFiles/3d0ba7_8cc379_drivers#staging#lustre#lustre#lov#lov_lock.c}: lov_lock_sub_init)
+// Recall: 0.38, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+@@
+- spapr = g_malloc(sizeof(*spapr)); 
++ spapr = g_malloc0(sizeof(*spapr)); 
++ QLIST_INIT(&spapr->phbs); 
+// Infered from: (qemu/{prevFiles/prev_d43b45_0e3b80_hw#spapr.c,revFiles/d43b45_0e3b80_hw#spapr.c}: ppc_spapr_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

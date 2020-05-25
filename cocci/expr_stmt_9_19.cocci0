@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (*__gmp_allocate_func)(E1); 
++ E0 = __GMP_ALLOCATE_FUNC_TYPE(E1, char ); 
+// Infered from: (gmp/{prevFiles/prev_2059dc_b715f7_printf#doprnt.c,revFiles/2059dc_b715f7_printf#doprnt.c}: __gmp_doprnt), (gmp/{prevFiles/prev_45729d_d08a54_scanf#doscan.c,revFiles/45729d_d08a54_scanf#doscan.c}: gmpscan), (gmp/{prevFiles/prev_45729d_d08a54_scanf#doscan.c,revFiles/45729d_d08a54_scanf#doscan.c}: __gmp_doscan), (gmp/{prevFiles/prev_2059dc_b715f7_printf#snprntffuns.c,revFiles/2059dc_b715f7_printf#snprntffuns.c}: gmp_snprintf_format), (gmp/{prevFiles/prev_2059dc_b715f7_printf#repl-vsnprintf.c,revFiles/2059dc_b715f7_printf#repl-vsnprintf.c}: __gmp_replacement_vsnprintf), (gmp/{prevFiles/prev_1f766e_84f011_mpq#set_str.c,revFiles/1f766e_84f011_mpq#set_str.c}: mpq_set_str), (gmp/{prevFiles/prev_d08a54_1f766e_mpz#out_raw.c,revFiles/d08a54_1f766e_mpz#out_raw.c}: mpz_out_raw)
+// Recall: 0.64, Precision: 1.00, Matching recall: 0.70
+
+// ---------------------------------------------

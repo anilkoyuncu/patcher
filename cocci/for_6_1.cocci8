@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = 0;E0 < E1;E0 += E2)  
++ for(E0 = 0;E0 < E2 * E1;E0 += E2)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_b5f4cb_fde0db_epan#dissectors#packet-dvbci.c,revFiles/b5f4cb_fde0db_epan#dissectors#packet-dvbci.c}: dissect_opp_cap_loop)
+// False positives: (wireshark/revFiles/b5f4cb_fde0db_epan#dissectors#packet-dvbci.c: pref_key_string_to_bin)
+// Recall: 0.07, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

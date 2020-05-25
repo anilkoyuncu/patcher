@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- ass_set_fonts(E0, E1, E2, E3, NULL, E3); 
+// Infered from: (vlc/{prevFiles/prev_7d0d4a9_994431_modules#codec#libass.c,revFiles/7d0d4a9_994431_modules#codec#libass.c}: Create)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

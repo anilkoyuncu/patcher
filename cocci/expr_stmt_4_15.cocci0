@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->request.p_item = E0->status.p_item = NULL; 
++ E0->request.p_item = E0->status.p_item; 
+// Infered from: (vlc/{prevFiles/prev_8d64e0_ec6dfc_src#playlist#playlist.c,revFiles/8d64e0_ec6dfc_src#playlist#playlist.c}: playlist_vaControl)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

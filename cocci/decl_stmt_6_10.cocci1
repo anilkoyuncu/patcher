@@ -1,0 +1,30 @@
+@@
+identifier I0;
+expression E1;
+typedef vlc_va_sys_t;
+@@
+- vlc_va_sys_t *I0 = malloc(sizeof(*I0) + E1->refs * sizeof(I0->pool[0])); 
++ vlc_va_sys_t *I0 = malloc(sizeof(*I0) + (E1->refs + 6) * sizeof(I0->pool[0])); 
+// Infered from: (vlc/{prevFiles/prev_9037ee_fb9ba9_modules#hw#vdpau#avcodec.c,revFiles/9037ee_fb9ba9_modules#hw#vdpau#avcodec.c}: Open)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.22, Precision: 1.00
+// -- Node Change --
+// Recall: 0.21, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/9(22%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_405417_c05dbb_libavcodec#dct-test.c: 
+ - vlc/prevFiles/prev_74bc48_d2deac_src#misc#block.c: 
+ - vlc/prevFiles/prev_9037ee_fb9ba9_modules#hw#vdpau#avcodec.c: 
+ - curl/prevFiles/prev_a5b7e32_dfce37_lib#md5.c: 
+ - vlc/prevFiles/prev_74bc48_d2deac_modules#services_discovery#sap.c: 
+ - vlc/prevFiles/prev_b46faf_1f5744_src#misc#filter_chain.c: 
+*/
+
+// ---------------------------------------------

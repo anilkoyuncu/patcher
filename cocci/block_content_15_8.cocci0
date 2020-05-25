@@ -1,0 +1,13 @@
+@@
+identifier I0;
+typedef EVP_MD_CTX;
+@@
+- EVP_MD_CTX *I0 = EVP_MD_CTX_create(); 
++ EVP_MD_CTX *I0 = EVP_MD_CTX_new(); 
+  ...
+- EVP_MD_CTX_destroy(I0); 
++ EVP_MD_CTX_free(I0); 
+// Infered from: (openssl/{prevFiles/prev_bfb064_959ed5_ssl#statem#statem_srvr.c,revFiles/bfb064_959ed5_ssl#statem#statem_srvr.c}: tls_process_cert_verify)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

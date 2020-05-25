@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = timelib_parse_tzfile(guess_timezone()); 
++ E0 = timelib_parse_tzfile(guess_timezone(TSRMLS_C)); 
+// Infered from: (php-src/{prevFiles/prev_6833ac_f7fe18_ext#date#php_date.c,revFiles/6833ac_f7fe18_ext#date#php_date.c}: php_date), (php-src/{prevFiles/prev_63a30f_a91a56_ext#date#php_date.c,revFiles/63a30f_a91a56_ext#date#php_date.c}: PHP_FUNCTION)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

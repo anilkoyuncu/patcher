@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- while (E0 + 64 <= 1023 && bit_alloc(E1, E0 + E2) <= E3)  
++ while (E0 + E2 <= 1023 && bit_alloc(E1, E0 + E2) <= E3)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_512884_c05ffc_libavcodec#ac3enc.c,revFiles/512884_c05ffc_libavcodec#ac3enc.c}: cbr_bit_allocation)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

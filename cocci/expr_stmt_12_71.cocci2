@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = bdrv_discard (E1, E2, E3); 
++ E0 = bdrv_discard(bs, E2 >> BDRV_SECTOR_BITS, E3 >> BDRV_SECTOR_BITS); 
+// Infered from: (qemu/{prevFiles/prev_a9c49a_b44473_qemu-io.c,revFiles/a9c49a_b44473_qemu-io.c}: discard_f)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_01835e_8006ee_ext#gd#libgd#gd.c: gdImageCopyResampled
+*/
+
+// ---------------------------------------------

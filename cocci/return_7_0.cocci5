@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return Py_BuildValue("(lll)", E0, E1, E2); 
++ return Py_BuildValue("(iii)", E0, E1, E2); 
+// Infered from: (cpython/{prevFiles/prev_5c1ad84_4bf125_Objects#sliceobject.c,revFiles/5c1ad84_4bf125_Objects#sliceobject.c}: slice_indices)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

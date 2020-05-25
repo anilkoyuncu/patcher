@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0->frame_number && !(E1->flags & PKT_FLAG_KEY))  
++ if ((!E0->frame_number && !(E1->flags & PKT_FLAG_KEY)) && start_time)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_09a76d_2169b7_ffmpeg.c,revFiles/09a76d_2169b7_ffmpeg.c}: output_packet)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,43 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 - 1.0 < -1e-6 && E1 - 1.0 < -1e-6 && E2 - 1.0 < -1e-6)  
++ if (E0 - 1.0 < 1e-6 && E1 - 1.0 < 1e-6 && E2 - 1.0 < 1e-6)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_621-D-15893543-15893573.c,revFiles/621-D-15893543-15893573.c}: main)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.92, Precision: 0.73
+// -- Node Change --
+// Recall: 0.71, Precision: 0.67
+// -- General --
+// Functions fully changed: 9/16(56%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_599065_cc44c7_peek-remote.c: main
+*/
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_599065_cc44c7_builtin-show-branch.c: append_matching_ref
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_599065_cc44c7_builtin-show-branch.c: join_revs
+ - FFmpeg/prevFiles/prev_6674a1_fa12b5_libavcodec#h263.c: mpeg4_encode_picture_header
+ - FFmpeg/prevFiles/prev_6674a1_fa12b5_libavcodec#h263.c: h263_pred_acdc
+ - FFmpeg/prevFiles/prev_6674a1_fa12b5_libavcodec#h263.c: mpeg4_encode_vol_header
+ - git/prevFiles/prev_599065_cc44c7_daemon.c: kill_some_children
+*/
+
+// ---------------------------------------------

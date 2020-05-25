@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- release_region(E0->base, I2C_PNX_REGION_SIZE); 
++ release_mem_region(E0->base, I2C_PNX_REGION_SIZE); 
+// Infered from: (linux/{prevFiles/prev_449d2c7_a1867d3_drivers#i2c#busses#i2c-pnx.c,revFiles/449d2c7_a1867d3_drivers#i2c#busses#i2c-pnx.c}: i2c_pnx_remove)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

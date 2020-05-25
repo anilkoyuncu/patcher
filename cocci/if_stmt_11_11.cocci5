@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->netdev && !QTAILQ_EMPTY(&E0->netdev->filters))  
++ if (E0->netdev && !QTAILQ_EMPTY(&E0->netdev->filters) && E0->next.tqe_prev)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_5dd2d4_415ab3_net#filter.c,revFiles/5dd2d4_415ab3_net#filter.c}: netfilter_finalize)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- DPRINT_L2("read %ub: addr[0x%04x] -> %u\n", E0, E1, E2); 
++ DPRINT_L2("read %ub: addr[0x%04x] -> %u(0x%x)\n", E0, E1, E2, E2); 
+// Infered from: (qemu/{prevFiles/prev_677ff2_dcdb4c_hw#sd#sdhci.c,revFiles/677ff2_dcdb4c_hw#sd#sdhci.c}: sdhci_read)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

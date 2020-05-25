@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- ff_wma_init(E0, E1); 
++ if (ff_wma_init(E0, E1) < 0)  
++ {
++ return -1; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_47b777_61d49d_libavcodec#wmadec.c,revFiles/47b777_61d49d_libavcodec#wmadec.c}: wma_decode_init)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

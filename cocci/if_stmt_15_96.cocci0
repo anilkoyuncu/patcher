@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->fmt_in.video.i_frame_rate_base > 0)  
++ if (E0->fmt_in.video.i_frame_rate_base && E0->fmt_in.video.i_frame_rate)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_4b7678_7eea08_modules#packetizer#hevc.c,revFiles/4b7678_7eea08_modules#packetizer#hevc.c}: Open)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

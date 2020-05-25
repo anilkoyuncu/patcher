@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- if (E0->cad > 15)  
++ if (E0->cad >= 15)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_acc086_17786d_hw#intel-hda.c,revFiles/acc086_17786d_hw#intel-hda.c}: hda_codec_dev_init), (qemu/{prevFiles/prev_df0db2_e2553e_hw#intel-hda.c,revFiles/df0db2_e2553e_hw#intel-hda.c}: hda_codec_dev_init)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.22, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/8(25%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_df0db2_e2553e_hw#intel-hda.c: 
+ - qemu/prevFiles/prev_e2553e_acc086_hw#intel-hda.c: hda_codec_dev_init
+ - qemu/prevFiles/prev_acc086_17786d_hw#intel-hda.c: 
+ - FFmpeg/prevFiles/prev_a61cd4_6224dd_libavfilter#vsrc_testsrc.c: 
+ - qemu/prevFiles/prev_e2553e_acc086_hw#intel-hda.c: 
+ - qemu/prevFiles/prev_5cb6be_6f1ce9_tests#test-bitops.c: 
+*/
+
+// ---------------------------------------------

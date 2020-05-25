@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = AFMT_S16; 
++ E0 = AFMT_S16_NE; 
+// Infered from: (vlc/{prevFiles/prev_b87e0b_73d483_modules#audio_output#oss.c,revFiles/b87e0b_73d483_modules#audio_output#oss.c}: Start)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 += sdsAllocSize(E1->argv[1]->ptr); 
++ E0 += sdsAllocSize(E1->argv[2]->ptr); 
+// Infered from: (redis/{prevFiles/prev_256496_a1944c_src#object.c,revFiles/256496_a1944c_src#object.c}: memoryCommand)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

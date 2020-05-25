@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- p_add_proto_data(wmem_file_scope(), E0, proto_wlan, IS_DMG_KEY, &E1); 
++ p_add_proto_data(wmem_file_scope(), E0, proto_wlan, IS_DMG_KEY,  GINT_TO_POINTER(E1)); 
+// Infered from: (wireshark/{prevFiles/prev_bfd146_907d05_epan#dissectors#packet-ieee80211.c,revFiles/bfd146_907d05_epan#dissectors#packet-ieee80211.c}: dissect_ieee80211_common)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

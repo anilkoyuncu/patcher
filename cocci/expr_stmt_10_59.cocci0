@@ -1,0 +1,8 @@
+@@
+@@
+- prefs.gui_fileopen_dir = g_strdup(""); 
++ prefs.gui_fileopen_dir = g_strdup(get_persdatafile_dir()); 
+// Infered from: (wireshark/{prevFiles/prev_3e1344_7a9beb_epan#prefs.c,revFiles/3e1344_7a9beb_epan#prefs.c}: init_prefs)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

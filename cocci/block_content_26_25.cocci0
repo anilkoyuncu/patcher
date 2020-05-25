@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- av_freep(&E0->hwaccel_picture_private); 
++ av_buffer_unref(&E0->hwaccel_priv_buf); 
++ E0->hwaccel_picture_private = NULL; 
+// Infered from: (FFmpeg/{prevFiles/prev_4e70d6_1516bf_libavcodec#mpegvideo.c,revFiles/4e70d6_1516bf_libavcodec#mpegvideo.c}: alloc_frame_buffer)
+// Recall: 0.38, Precision: 1.00, Matching recall: 0.38
+
+// ---------------------------------------------

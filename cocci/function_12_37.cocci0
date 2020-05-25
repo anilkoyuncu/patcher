@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[E1] = 0; 
+- rmdir(E0); 
+// Infered from: (git/{prevFiles/prev_d34e70_0dbe65_builtin#prune-packed.c,revFiles/d34e70_0dbe65_builtin#prune-packed.c}: prune_dir)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

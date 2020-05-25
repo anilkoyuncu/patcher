@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0 += 8 * 8; 
+// Infered from: (wireshark/{prevFiles/prev_16dbe7b_609601_asn1#mpeg-pes#packet-mpeg-pes-template.c,revFiles/16dbe7b_609601_asn1#mpeg-pes#packet-mpeg-pes-template.c}: dissect_mpeg_pes), (wireshark/{prevFiles/prev_16dbe7b_609601_epan#dissectors#packet-mpeg-pes.c,revFiles/16dbe7b_609601_epan#dissectors#packet-mpeg-pes.c}: dissect_mpeg_pes)
+// Recall: 0.15, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.46, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_16dbe7b_609601_asn1#mpeg-pes#packet-mpeg-pes-template.c: dissect_mpeg_pes_header_data
+ - wireshark/prevFiles/prev_16dbe7b_609601_epan#dissectors#packet-mpeg-pes.c: dissect_mpeg_pes_header_data
+*/
+
+// ---------------------------------------------

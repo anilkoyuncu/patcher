@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = aprintf("%s/%s", E1, E2->easy_conn->host); 
++ E0 = aprintf("%s/%s", E1, E2->easy_conn->host.name); 
+// Infered from: (curl/{prevFiles/prev_aa6be2_9597b0_lib#curl_sasl_sspi.c,revFiles/aa6be2_9597b0_lib#curl_sasl_sspi.c}: Curl_sasl_create_digest_md5_message), (php-src/{prevFiles/prev_016a96_c4ab08a_ext#json#json.c,revFiles/016a96_c4ab08a_ext#json#json.c}: json_encode_serializable_object)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

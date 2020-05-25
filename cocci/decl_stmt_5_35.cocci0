@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef bool;
+@@
+- const  bool I0 = E1->slice.type != H264_SLICE_TYPE_I && E1->p_active_pps && E1->p_active_sps; 
++ const  bool I0 = E1->slice.type == H264_SLICE_TYPE_I && E1->p_active_pps && E1->p_active_sps; 
+// Infered from: (vlc/{prevFiles/prev_439729_0299cc_modules#packetizer#h264.c,revFiles/439729_0299cc_modules#packetizer#h264.c}: OutputPicture)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

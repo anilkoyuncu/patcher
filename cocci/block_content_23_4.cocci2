@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- return mca_common_sm_mmap_init(E0, E1, E2, E3, E4, E5); 
++ ret = mca_common_sm_mmap_init(E0, E1, E2, E3, E4, E5); 
++ free(E0); 
++ return ret; 
+// Infered from: (ompi/{prevFiles/prev_d56b8d_de59a2_ompi#mca#common#sm#common_sm_mmap.c,revFiles/d56b8d_de59a2_ompi#mca#common#sm#common_sm_mmap.c}: mca_common_sm_mmap_init_group)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

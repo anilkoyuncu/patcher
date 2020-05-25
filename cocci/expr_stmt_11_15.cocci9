@@ -1,0 +1,30 @@
+@@
+expression E0;
+@@
+- XBell(GDK_DISPLAY_XDISPLAY(E0), 0); 
++ XkbBell(GDK_DISPLAY_XDISPLAY(E0), None, 0, None); 
+// Infered from: (gtk/{prevFiles/prev_8f1654_618764_gdk#x11#gdkdisplay-x11.c,revFiles/8f1654_618764_gdk#x11#gdkdisplay-x11.c}: gdk_display_beep)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 0.90
+// -- Node Change --
+// Recall: 0.51, Precision: 0.83
+// -- General --
+// Functions fully changed: 8/16(50%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_69de48_98b2e3_tests#iothread.c: iothread_join
+ - git/prevFiles/prev_e46091_958ba6_diff-tree.c: compare_tree_entry
+ - FFmpeg/prevFiles/prev_238ddd_c78a72_libavformat#dump.c: pkt_dump_internal
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_ec65c6_e3012d_gdk#wayland#gdkdnd-wayland.c: gdk_wayland_drag_context_find_window
+ - wireshark/prevFiles/prev_490fcb_104e56_gtk#main.c: main
+*/
+
+// ---------------------------------------------

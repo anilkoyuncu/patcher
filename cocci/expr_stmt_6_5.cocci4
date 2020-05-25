@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0->floor[E1 * E2 + E3] = floor1_inverse_db_table[220]; 
++ E0->floor[E1 * E2 + E3] = floor1_inverse_db_table[113]; 
+// Infered from: (FFmpeg/{prevFiles/prev_227878_f4e5e6_libavcodec#vorbis_enc.c,revFiles/227878_f4e5e6_libavcodec#vorbis_enc.c}: vorbis_encode_frame)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

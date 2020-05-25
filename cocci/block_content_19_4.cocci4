@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = gtk_ui_manager_get_widget(ui_manager_main_menubar,  "/Menubar/FileMenu/ExportObjects"); 
++ E0 = gtk_ui_manager_get_widget(ui_manager_main_menubar,  "/Menubar/FileMenu/ExportObjectsMenu"); 
+// Infered from: (wireshark/{prevFiles/prev_32a31c_5a3d31_ui#gtk#main_menubar.c,revFiles/32a31c_5a3d31_ui#gtk#main_menubar.c}: menu_export_object_list)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

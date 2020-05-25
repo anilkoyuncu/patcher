@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E5, E4;
+@@
+- E0 = iconv(E1, E2, E3, E4, E5); 
++ E0 = iconv(E1, (char **)E2, E3, E4, E5); 
+// Infered from: (php-src/{prevFiles/prev_b703fe_d2d091_ext#xmlrpc#libxmlrpc#encodings.c,revFiles/b703fe_d2d091_ext#xmlrpc#libxmlrpc#encodings.c}: convert), (wireshark/{prevFiles/prev_f9836c_d105a4_epan#dissectors#packet-bacapp.c,revFiles/f9836c_d105a4_epan#dissectors#packet-bacapp.c}: fConvertXXXtoUTF8)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

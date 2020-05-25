@@ -1,0 +1,12 @@
+@@
+identifier I0, I3;
+expression E1, E2, E4;
+@@
+- int I0 = E1->width >> E2; 
+- int I3 = E1->height >> E4; 
++ int I0 = FF_CEIL_RSHIFT(E1->width, E2); 
++ int I3 = FF_CEIL_RSHIFT(E1->height, E4); 
+// Infered from: (FFmpeg/{prevFiles/prev_50e667_d751a2_libavfilter#vf_transpose.c,revFiles/50e667_d751a2_libavfilter#vf_transpose.c}: filter_frame), (FFmpeg/{prevFiles/prev_50e667_d751a2_libavfilter#vf_blend.c,revFiles/50e667_d751a2_libavfilter#vf_blend.c}: blend_frame)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

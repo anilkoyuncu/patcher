@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0.st_mtime != E1.sec || ST_CTIME_NSEC(E0) != E1.nsec)  
++ if (E0.st_mtime != E1.sec || ST_MTIME_NSEC(E0) != E1.nsec)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_5bcf10_d7371a_builtin-fetch-pack.c,revFiles/5bcf10_d7371a_builtin-fetch-pack.c}: fetch_pack)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

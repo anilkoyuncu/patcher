@@ -1,0 +1,8 @@
+@@
+@@
+- error_report("postcopy_ram_supported_by_host: UFFDIO_API failed: %s",  strerror(errno)); 
++ error_report("%s: UFFDIO_API failed: %s", __func__, strerror(errno)); 
+// Infered from: (qemu/{prevFiles/prev_555349_d7651f_migration#postcopy-ram.c,revFiles/555349_d7651f_migration#postcopy-ram.c}: ufd_version_check)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

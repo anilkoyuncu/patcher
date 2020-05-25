@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0 = dxva2_map_frame(E1, E2, E3 ? E4 :E5,  E3 ? AV_HWFRAME_MAP_READ :AV_HWFRAME_MAP_WRITE); 
++ E0 = dxva2_map_frame(E1, E2, E3 ? E4 :E5,  E3 ? AV_HWFRAME_MAP_READ :AV_HWFRAME_MAP_WRITE | AV_HWFRAME_MAP_OVERWRITE); 
+// Infered from: (FFmpeg/{prevFiles/prev_9d7026_0d3176_libavutil#hwcontext_dxva2.c,revFiles/9d7026_0d3176_libavutil#hwcontext_dxva2.c}: dxva2_transfer_data)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

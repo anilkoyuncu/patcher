@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = gtk_range_get_adjustment(GTK_RANGE(E1)); 
++ E0 = gtk_scrollbar_get_adjustment(GTK_SCROLLBAR(E1)); 
+// Infered from: (gtk/{prevFiles/prev_e1338e_7e64ee_demos#gtk-demo#main.c,revFiles/e1338e_7e64ee_demos#gtk-demo#main.c}: start_cb), (gtk/{prevFiles/prev_e1338e_7e64ee_demos#gtk-demo#main.c,revFiles/e1338e_7e64ee_demos#gtk-demo#main.c}: end_cb)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

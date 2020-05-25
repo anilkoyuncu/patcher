@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- printf("%d\n%d\n%d", E0, E1, E0 + E1); 
++ printf("\n%d", E0 + E1); 
+// Infered from: (codeflaws/{prevFiles/prev_631-A-16708886-16709076.c,revFiles/631-A-16708886-16709076.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

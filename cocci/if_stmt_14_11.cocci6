@@ -1,0 +1,36 @@
+@@
+expression E0;
+@@
+- if (E0->audio_chunk_offset)  
++ if (E0->audio_chunk_offset && E0->audio_channels && E0->audio_bits)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_8d960f_2b73cd_libavformat#ipmovie.c,revFiles/8d960f_2b73cd_libavformat#ipmovie.c}: load_ipmovie_packet)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.54, Precision: 1.00
+// -- Node Change --
+// Recall: 0.48, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/13(53%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_3fa29f_d0822a_modules#demux#ts.c: ParsePES
+ - FFmpeg/prevFiles/prev_e7b43e_a3f5ee_libavcodec#truemotion1.c: truemotion1_decode_header
+ - vlc/prevFiles/prev_5e9406_ebdc3e_modules#codec#cdg.c: Decode
+ - php-src/prevFiles/prev_44c5fb_13096a_ext#opcache#Optimizer#block_pass.c: assemble_code_blocks
+ - FFmpeg/prevFiles/prev_1e0597_c450cf_libavformat#movenc.c: mov_write_packet_internal
+ - FFmpeg/prevFiles/prev_497c9b_a53c4f_libavformat#rtsp.c: sdp_parse_line
+*/
+
+// ---------------------------------------------

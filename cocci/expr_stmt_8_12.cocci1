@@ -1,0 +1,9 @@
+@@
+expression E1, E3, E0, E2;
+@@
+- error_setg_errno(E0, E1, E2, E3); 
++ error_setg_file_open(E0, E1, E3); 
+// Infered from: (qemu/{prevFiles/prev_f6fc1e_afd760_block#file-posix.c,revFiles/f6fc1e_afd760_block#file-posix.c}: raw_normalize_devicepath), (qemu/{prevFiles/prev_f6fc1e_afd760_block#file-posix.c,revFiles/f6fc1e_afd760_block#file-posix.c}: raw_open_common)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

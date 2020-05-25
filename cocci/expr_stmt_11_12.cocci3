@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef input_title_t;
+@@
+- *E0 = malloc(E1->i_title * sizeof(input_title_t **)); 
++ *E0 = malloc(E1->i_title * sizeof(input_title_t *)); 
+// Infered from: (vlc/{prevFiles/prev_b0293e_d8d34f_modules#access#bluray.c,revFiles/b0293e_d8d34f_modules#access#bluray.c}: blurayControl)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

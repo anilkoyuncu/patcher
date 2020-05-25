@@ -1,0 +1,28 @@
+@@
+type T2, T7;
+expression E8, E9, E0, E1, E3, E4, E5, E6;
+@@
+- E0 = malloc(*E1 * sizeof(T2 )); 
+- if (E0 ==  E3)  
+- {
+- *E4 = E5; 
+  ...
+- }
+- E6 = malloc(*E1 * sizeof(T7 )); 
+- if (E6 ==  E3)  
+- {
+- *E4 = E5; 
+- free(E0); 
+- return; 
+- }
+  ...
+- if (E8 &&  E9)  
+- {
+  ...
+- }
+  ...
+- free(E6); 
+// Infered from: (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#testall_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#testall_f.c}: mpi_testall_f)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.56
+
+// ---------------------------------------------

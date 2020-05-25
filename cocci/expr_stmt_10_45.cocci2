@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+typedef vlc_object_t;
+@@
+- msg_Dbg((vlc_object_t *)E0,  "strf: audio:0x%4.4x channels:%d %dHz %dbits/sample %dkb/s",  E1->strf.auds.p_wf->wFormatTag, E1->strf.auds.p_wf->nChannels,  E1->strf.auds.p_wf->nSamplesPerSec,  E1->strf.auds.p_wf->wBitsPerSample,  E1->strf.auds.p_wf->nAvgBytesPerSec * 8 / 1024); 
++ msg_Dbg((vlc_object_t *)E0,  "strf: audio:0x%4.4x channels:%d %dHz %dbits/sample %dkbps",  E1->strf.auds.p_wf->wFormatTag, E1->strf.auds.p_wf->nChannels,  E1->strf.auds.p_wf->nSamplesPerSec,  E1->strf.auds.p_wf->wBitsPerSample,  E1->strf.auds.p_wf->nAvgBytesPerSec * 8 / 1000); 
+// Infered from: (vlc/{prevFiles/prev_a6330f_46471f_modules#demux#avi#libavi.c,revFiles/a6330f_46471f_modules#demux#avi#libavi.c}: AVI_ChunkRead_strf)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_744d1f_43c761_ext#standard#string.c: php_hebrev
+ - ompi/prevFiles/prev_25a894_5f64b8_ompi#mca#btl#base#btl_base_mca.c: mca_btl_base_param_register
+*/
+
+// ---------------------------------------------

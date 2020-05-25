@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = Curl_fillreadbuffer(E1->conn, (size_t )E1->blksize, &E1->sbytes); 
++ E0 = Curl_fillreadbuffer(E1->conn, E1->blksize, &E1->sbytes); 
+// Infered from: (curl/{prevFiles/prev_3b47d2_7977bc_lib#tftp.c,revFiles/3b47d2_7977bc_lib#tftp.c}: tftp_tx)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

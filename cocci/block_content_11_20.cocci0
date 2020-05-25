@@ -1,0 +1,11 @@
+@@
+identifier I1 = {avcodec_decode_subtitle2 ,avcodec_decode_video2 ,cmpp_uint1 }, I0;
+expression E5, E2, E3, E4;
+@@
+- I0 = I1(E2, E3, E4, E5); 
++ I1(E2, E3, E4, E5); 
+// Infered from: (wireshark/{prevFiles/prev_110e59_9c9585_epan#dissectors#packet-cmpp.c,revFiles/110e59_9c9585_epan#dissectors#packet-cmpp.c}: cmpp_submit), (FFmpeg/{prevFiles/prev_987041_828e20_ffplay.c,revFiles/987041_828e20_ffplay.c}: get_video_frame), (FFmpeg/{prevFiles/prev_987041_828e20_ffplay.c,revFiles/987041_828e20_ffplay.c}: subtitle_thread)
+// False positives: (wireshark/revFiles/110e59_9c9585_epan#dissectors#packet-cmpp.c: cmpp_deliver), (wireshark/revFiles/110e59_9c9585_epan#dissectors#packet-cmpp.c: cmpp_submit)
+// Recall: 0.38, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

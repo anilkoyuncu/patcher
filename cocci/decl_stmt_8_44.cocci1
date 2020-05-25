@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- char *I0 = E1 + 1024 * 30; 
++ char *I0 = E1 + STATS_OUT_SIZE; 
+// Infered from: (FFmpeg/{prevFiles/prev_599e62_a301bb_libavcodec#huffyuvenc.c,revFiles/599e62_a301bb_libavcodec#huffyuvenc.c}: encode_frame)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

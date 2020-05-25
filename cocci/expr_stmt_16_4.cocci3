@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- cpumask_copy(E0->affinity, E1); 
++ cpumask_copy(irq_data_get_affinity_mask(E0), E1); 
+// Infered from: (linux/{prevFiles/prev_72f86db_9f2135_drivers#irqchip#irq-mips-gic.c,revFiles/72f86db_9f2135_drivers#irqchip#irq-mips-gic.c}: gic_set_affinity)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

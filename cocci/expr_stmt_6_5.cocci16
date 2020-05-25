@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1[1] - 'a'; 
++ E0 = E1[0] - 'a'; 
+// Infered from: (codeflaws/{prevFiles/prev_192-C-1764943-1764944.c,revFiles/192-C-1764943-1764944.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

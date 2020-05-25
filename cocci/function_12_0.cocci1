@@ -1,0 +1,32 @@
+@@
+@@
+- iax_init_hash(); 
++ iax_circuit_hashtab = g_hash_table_new(iax_circuit_hash, iax_circuit_equal); 
++ circuitcount = 0; 
++ iax_fid_table = g_hash_table_new(g_direct_hash, g_direct_equal); 
++ reassembly_table_init(&iax_reassembly_table,  &addresses_reassembly_table_functions); 
+// Infered from: (wireshark/{prevFiles/prev_ea46cf_7ce77c_epan#dissectors#packet-iax2.c,revFiles/ea46cf_7ce77c_epan#dissectors#packet-iax2.c}: iax_init_protocol)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.04, Precision: 0.75
+// -- Node Change --
+// Recall: 0.07, Precision: 0.64
+// -- General --
+// Functions fully changed: 2/81(2%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_e6ea4c7_94c247_ffmpeg.c: do_audio_out
+ - wireshark/prevFiles/prev_ea46cf_7ce77c_epan#dissectors#packet-iax2.c: iax_init_hash
+ - gstreamer/prevFiles/prev_2b4d12_c2e980_tests#check#gst#gstbufferlist.c: GST_START_TEST
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_26a8ad_a3e65d_builtin-show-branch.c: join_revs
+ - git/prevFiles/prev_26a8ad_a3e65d_builtin-show-branch.c: cmd_show_branch
+*/
+
+// ---------------------------------------------

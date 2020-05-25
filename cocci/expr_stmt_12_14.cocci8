@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- qio_channel_detach_aio_context(QIO_CHANNEL(E0->sioc)); 
++ qio_channel_detach_aio_context(QIO_CHANNEL(E0->ioc)); 
+// Infered from: (qemu/{prevFiles/prev_96d068_abc67e_block#nbd-client.c,revFiles/96d068_abc67e_block#nbd-client.c}: nbd_client_detach_aio_context)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.65, Precision: 1.00
+// -- Node Change --
+// Recall: 0.65, Precision: 1.00
+// -- General --
+// Functions fully changed: 11/17(64%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_4c9005_bb3400_hw#pci.c: pcibus_get_dev_path
+ - lighttpd1.4/prevFiles/prev_956a3f_b94022_src#mod_webdav.c: SUBREQUEST_FUNC
+ - git/prevFiles/prev_d01a8e_c6dfb3_builtin-clone.c: cmd_clone
+ - wireshark/prevFiles/prev_7a7a72_50b6e1_ui#gtk#conversations_table.c: draw_ct_table_data
+ - FFmpeg/prevFiles/prev_561bfce_5972bc_libavformat#hlsenc.c: hls_window
+ - ompi/prevFiles/prev_627f1e_d85aaf_ompi#mca#bml#r2#bml_r2.c: mca_bml_r2_add_procs
+*/
+
+// ---------------------------------------------

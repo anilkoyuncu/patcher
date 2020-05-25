@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->ctx)  
++ if (E0->ctx && E0->ctx->nb_streams)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_1bf6cb_ad6250_libavformat#applehttp.c,revFiles/1bf6cb_ad6250_libavformat#applehttp.c}: read_data)
+// False positives: (FFmpeg/revFiles/1bf6cb_ad6250_libavformat#applehttp.c: free_variant_list)
+// Recall: 0.06, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

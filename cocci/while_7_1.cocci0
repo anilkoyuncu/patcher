@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (nanosleep(&E0, &E0) == EINTR)  
++ while (nanosleep(&E0, &E0) < 0 && errno == EINTR)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_478607_57d63d_libavdevice#fbdev.c,revFiles/478607_57d63d_libavdevice#fbdev.c}: fbdev_read_packet)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

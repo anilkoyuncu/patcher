@@ -1,0 +1,11 @@
+@@
+expression E2, E0, E1;
+typedef gulong;
+typedef itl_nexus_t;
+@@
+- E0 = (itl_nexus_t *)wmem_map_lookup(E1->itl, GUINT_TO_POINTER(E2)); 
++ E0 = (itl_nexus_t *)wmem_map_lookup(E1->itl, GUINT_TO_POINTER((gulong )E2)); 
+// Infered from: (wireshark/{prevFiles/prev_133d4d_dfb92d_epan#dissectors#packet-iscsi.c,revFiles/133d4d_dfb92d_epan#dissectors#packet-iscsi.c}: dissect_iscsi_pdu), (wireshark/{prevFiles/prev_133d4d_dfb92d_epan#dissectors#packet-iscsi.c,revFiles/133d4d_dfb92d_epan#dissectors#packet-iscsi.c}: dissect_iscsi_pdu)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

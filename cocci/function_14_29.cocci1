@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- deflateInit(&E0, 0); 
++ if (deflateInit(&E0, 0) != Z_OK)  
++ {
++ return -1; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_b3eb4f_6581b6_libavcodec#flashsv.c,revFiles/b3eb4f_6581b6_libavcodec#flashsv.c}: flashsv2_prime)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

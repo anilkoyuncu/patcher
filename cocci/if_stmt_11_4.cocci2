@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 == APR_SUCCESS)  
++ if (E0 == APR_SUCCESS || APR_STATUS_IS_EEXIST(E0))  
+  {
+  ...
+  }
+// Infered from: (apr/{prevFiles/prev_1d7f65_2f03ba_file_io#win32#dir.c,revFiles/1d7f65_2f03ba_file_io#win32#dir.c}: dir_make_parent)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

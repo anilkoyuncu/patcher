@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E2, E1;
+@@
+- int I0 = 0; 
+- E1 = E2; 
+- return E1; 
++ return E2; 
+// Infered from: (linux/{prevFiles/prev_d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c,revFiles/d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c}: gc2235_init)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,35 @@
+@@
+identifier I0, I9;
+expression E1, E2, E3, E4, E5, E6, E7, E8;
+@@
+- I0 = AESTest(&E1, E2, E3, E4, E5, E6, E7, E8, I9); 
++ AESTest(&E1, E2, E3, E4, E5, E6, E7, E8, I9); 
+// Infered from: (openssl/{prevFiles/prev_835d35_29fd67_fips#aes#fips_aesavs.c,revFiles/835d35_29fd67_fips#aes#fips_aesavs.c}: proc_file), (openssl/{prevFiles/prev_835d35_29fd67_fips#aes#fips_aesavs.c,revFiles/835d35_29fd67_fips#aes#fips_aesavs.c}: proc_file)
+// False positives: (openssl/revFiles/835d35_29fd67_fips#aes#fips_aesavs.c: do_mct)
+// Recall: 0.11, Precision: 0.33, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 0.67
+// -- Node Change --
+// Recall: 0.22, Precision: 0.50
+// -- General --
+// Functions fully changed: 0/5(0%)
+
+/*
+Functions where the patch applied partially:
+ - openssl/prevFiles/prev_835d35_29fd67_fips#aes#fips_aesavs.c: proc_file
+ - openssl/prevFiles/prev_835d35_29fd67_fips#des#fips_desmovs.c: tproc_file
+*/
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_835d35_29fd67_fips#des#fips_desmovs.c: fips_desmovs_main
+ - openssl/prevFiles/prev_835d35_29fd67_fips#aes#fips_aesavs.c: fips_aesavs_main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_835d35_29fd67_fips#aes#fips_aesavs.c: do_mct
+*/
+
+// ---------------------------------------------

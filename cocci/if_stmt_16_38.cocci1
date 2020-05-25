@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0 = floor(E0 / 24) * -E0 + 24; 
++ E0 = floor(E0 / 24) * 24 + 24; 
+// Infered from: (php-src/{prevFiles/prev_26255d_f22042_ext#date#php_date.c,revFiles/26255d_f22042_ext#date#php_date.c}: php_do_date_sunrise_sunset), (php-src/{prevFiles/prev_594fe5_d02356_ext#date#php_date.c,revFiles/594fe5_d02356_ext#date#php_date.c}: php_do_date_sunrise_sunset)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

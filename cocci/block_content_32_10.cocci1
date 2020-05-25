@@ -1,0 +1,37 @@
+@@
+expression E0, E1;
+@@
+- if (E0 < PyByteArray_GET_SIZE(E1))  
++ if (E0 < (size_t )PyByteArray_GET_SIZE(E1))  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_2d7911_ac5685_Objects#bytearrayobject.c,revFiles/2d7911_ac5685_Objects#bytearrayobject.c}: bytearray_ass_subscript), (cpython/{prevFiles/prev_66f575_4e5112_Objects#bytearrayobject.c,revFiles/66f575_4e5112_Objects#bytearrayobject.c}: bytearray_ass_subscript), (cpython/{prevFiles/prev_5a41a4_db01a3_Objects#bytearrayobject.c,revFiles/5a41a4_db01a3_Objects#bytearrayobject.c}: bytearray_ass_subscript), (cpython/{prevFiles/prev_a92096_71e38f_Objects#bytearrayobject.c,revFiles/a92096_71e38f_Objects#bytearrayobject.c}: bytes_ass_subscript)
+// False positives: (cpython/revFiles/2d7911_ac5685_Objects#bytearrayobject.c: bytearrayiter_next), (cpython/revFiles/5a41a4_db01a3_Objects#bytearrayobject.c: bytearrayiter_next), (cpython/revFiles/66f575_4e5112_Objects#bytearrayobject.c: bytearrayiter_next), (cpython/revFiles/a92096_71e38f_Objects#bytearrayobject.c: bytesiter_next)
+// Recall: 0.22, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 0.78, Precision: 0.78
+// -- General --
+// Functions fully changed: 4/12(33%)
+
+/*
+Functions where the patch applied partially:
+ - cpython/prevFiles/prev_5a41a4_db01a3_Objects#bytearrayobject.c: bytearray_ass_subscript
+ - cpython/prevFiles/prev_a92096_71e38f_Objects#bytearrayobject.c: bytes_ass_subscript
+ - cpython/prevFiles/prev_2d7911_ac5685_Objects#bytearrayobject.c: bytearray_ass_subscript
+ - cpython/prevFiles/prev_66f575_4e5112_Objects#bytearrayobject.c: bytearray_ass_subscript
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_5a41a4_db01a3_Objects#bytearrayobject.c: bytearrayiter_next
+ - cpython/prevFiles/prev_a92096_71e38f_Objects#bytearrayobject.c: bytesiter_next
+ - cpython/prevFiles/prev_2d7911_ac5685_Objects#bytearrayobject.c: bytearrayiter_next
+ - cpython/prevFiles/prev_66f575_4e5112_Objects#bytearrayobject.c: bytearrayiter_next
+*/
+
+// ---------------------------------------------

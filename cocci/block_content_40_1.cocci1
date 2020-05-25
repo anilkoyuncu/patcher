@@ -1,0 +1,23 @@
+@@
+identifier I1;
+type T3;
+expression E0, E2, E4;
+@@
+- init_timer(&E0->I1); 
+- E0->I1.function = E2; 
+- E0->I1.data = (T3 )E4; 
++ setup_timer(&E0->I1, E2, (T3 )E4); 
+// Infered from: (linux/{prevFiles/prev_c6c33e7_99a1b7_drivers#net#wireless#mwifiex#main.c,revFiles/c6c33e7_99a1b7_drivers#net#wireless#mwifiex#main.c}: mwifiex_register), (linux/{prevFiles/prev_b9eaf1_24ed96_drivers#s390#block#dasd.c,revFiles/b9eaf1_24ed96_drivers#s390#block#dasd.c}: dasd_alloc_device), (linux/{prevFiles/prev_b9eaf1_24ed96_drivers#s390#block#dasd.c,revFiles/b9eaf1_24ed96_drivers#s390#block#dasd.c}: dasd_alloc_block), (linux/{prevFiles/prev_b9eaf1_24ed96_arch#sh#drivers#push-switch.c,revFiles/b9eaf1_24ed96_arch#sh#drivers#push-switch.c}: switch_drv_probe), (linux/{prevFiles/prev_81906c3_6946ed_drivers#staging#comedi#drivers#das16.c,revFiles/81906c3_6946ed_drivers#staging#comedi#drivers#das16.c}: das16_alloc_dma), (linux/{prevFiles/prev_a1e0d04_6e5ffd_drivers#bluetooth#hci_h5.c,revFiles/a1e0d04_6e5ffd_drivers#bluetooth#hci_h5.c}: h5_open), (linux/{prevFiles/prev_b4ab5e_25821b4_drivers#usb#host#sl811-hcd.c,revFiles/b4ab5e_25821b4_drivers#usb#host#sl811-hcd.c}: sl811h_probe), (linux/{prevFiles/prev_b9eaf1_24ed96_drivers#scsi#esas2r#esas2r_main.c,revFiles/b9eaf1_24ed96_drivers#scsi#esas2r#esas2r_main.c}: esas2r_kickoff_timer), (linux/{prevFiles/prev_638353_e4a1c3_drivers#net#wireless#mwifiex#tdls.c,revFiles/638353_e4a1c3_drivers#net#wireless#mwifiex#tdls.c}: mwifiex_setup_auto_tdls_timer), (linux/{prevFiles/prev_137fe4_56d06fd_drivers#leds#led-class.c,revFiles/137fe4_56d06fd_drivers#leds#led-class.c}: led_classdev_register), (linux/{prevFiles/prev_9a9bdd_b4c2c3_drivers#staging#comedi#drivers#comedi_test.c,revFiles/9a9bdd_b4c2c3_drivers#staging#comedi#drivers#comedi_test.c}: waveform_attach), (linux/{prevFiles/prev_cc73e4_d0e520_drivers#net#ethernet#atheros#atl1e#atl1e_main.c,revFiles/cc73e4_d0e520_drivers#net#ethernet#atheros#atl1e#atl1e_main.c}: atl1e_probe), (linux/{prevFiles/prev_25821b4_886f31_drivers#usb#host#oxu210hp-hcd.c,revFiles/25821b4_886f31_drivers#usb#host#oxu210hp-hcd.c}: oxu_hcd_init), (linux/{prevFiles/prev_fea3cb0_cc73e4_drivers#net#ethernet#micrel#ksz884x.c,revFiles/fea3cb0_cc73e4_drivers#net#ethernet#micrel#ksz884x.c}: ksz_init_timer), (linux/{prevFiles/prev_b9eaf1_24ed96_drivers#usb#gadget#udc#omap_udc.c,revFiles/b9eaf1_24ed96_drivers#usb#gadget#udc#omap_udc.c}: omap_ep_setup), (linux/{prevFiles/prev_121413_fea3cb0_drivers#net#ethernet#samsung#sxgbe#sxgbe_main.c,revFiles/121413_fea3cb0_drivers#net#ethernet#samsung#sxgbe#sxgbe_main.c}: sxgbe_eee_init), (linux/{prevFiles/prev_b9eaf1_24ed96_drivers#scsi#bfa#bfad.c,revFiles/b9eaf1_24ed96_drivers#scsi#bfa#bfad.c}: bfad_init_timer)
+// Recall: 0.94, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 18/18(100%)
+
+
+// ---------------------------------------------

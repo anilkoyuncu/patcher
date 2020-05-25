@@ -1,0 +1,8 @@
+@@
+identifier I0;
+@@
+- char I0[100]; 
+// Infered from: (wireshark/{prevFiles/prev_ce8ac3_650647_gtk#ansi_map_stat.c,revFiles/ce8ac3_650647_gtk#ansi_map_stat.c}: ansi_map_stat_gtk_cb), (wireshark/{prevFiles/prev_ce8ac3_650647_gtk#gsm_map_stat.c,revFiles/ce8ac3_650647_gtk#gsm_map_stat.c}: gsm_map_stat_gtk_cb)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

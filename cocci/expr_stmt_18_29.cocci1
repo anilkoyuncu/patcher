@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- glViewport(0, 0, E0.width, E0.height); 
++ glViewport(E0.x, E0.y, E0.width, E0.height); 
+// Infered from: (vlc/{prevFiles/prev_0ea25a_3b8a55_modules#video_output#xcb#glx.c,revFiles/0ea25a_3b8a55_modules#video_output#xcb#glx.c}: Control)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

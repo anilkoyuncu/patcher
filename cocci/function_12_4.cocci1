@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (!_cairo_spline_init(&E0, _cairo_path_bounder_line_to, E1,  &E1->move_to_point, E2, E3, E4))  
++ if (!_cairo_spline_init(&E0, _cairo_path_bounder_line_to, E1,  &E1->current_point, E2, E3, E4))  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_078ebb_4320ea_src#cairo-path-bounds.c,revFiles/078ebb_4320ea_src#cairo-path-bounds.c}: _cairo_path_bounder_curve_to)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.09, Precision: 1.00
+// -- Node Change --
+// Recall: 0.23, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/22(9%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_3c3704_4d570f_libavcodec#sp5xdec.c: 
+ - git/prevFiles/prev_0e267b_38e79b_read-cache.c: refresh_cache_ent
+*/
+
+// ---------------------------------------------

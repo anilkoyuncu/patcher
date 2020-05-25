@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- return gen_bcond_internal(E0, E1, E2, E3); 
++ ret = gen_bcond_internal(E0, E1, E2, E3); 
++ tcg_temp_free(E2); 
++ return ret; 
+// Infered from: (qemu/{prevFiles/prev_6a9b11_f401c0_target#alpha#translate.c,revFiles/6a9b11_f401c0_target#alpha#translate.c}: gen_fbcond)
+// False positives: (qemu/revFiles/6a9b11_f401c0_target#alpha#translate.c: gen_bcond)
+// Recall: 0.05, Precision: 0.50, Matching recall: 0.80
+
+// ---------------------------------------------

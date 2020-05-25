@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 ^= (((E1 / E2) % 2) * xs[E2]) ^ xs[E1 % E2]; 
++ E0 ^= (((E1 / E2) % 2) * xs[E2 - 1]) ^ xs[E1 % E2]; 
+// Infered from: (codeflaws/{prevFiles/prev_424-C-6506468-6506505.c,revFiles/424-C-6506468-6506505.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

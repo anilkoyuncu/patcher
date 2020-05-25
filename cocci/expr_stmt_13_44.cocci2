@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0 = directx_va_Open(E1, &E2->dx_sys, E3, E4, E5->d3ddev == NULL); 
++ E0 = directx_va_Open(E1, &E2->dx_sys, E3, E4, true); 
+// Infered from: (vlc/{prevFiles/prev_6bcacc_4234b1_modules#codec#avcodec#dxva2.c,revFiles/6bcacc_4234b1_modules#codec#avcodec#dxva2.c}: Open)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

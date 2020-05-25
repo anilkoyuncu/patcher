@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef gpointer;
+@@
+- g_object_remove_weak_pointer(G_OBJECT(*E0), (gpointer *)&E1->old_hadj); 
++ g_object_remove_weak_pointer(G_OBJECT(*E0), (gpointer *)E0); 
+// Infered from: (gtk/{prevFiles/prev_8b9f04_aeba57_gtk#gtkiconview.c,revFiles/8b9f04_aeba57_gtk#gtkiconview.c}: gtk_icon_view_accessible_set_adjustment)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

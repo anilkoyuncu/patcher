@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ZVAL_COPY_VALUE(E0, E1); 
++ ZVAL_NEW_STR(E0, Z_STR_P(E1)); 
+// Infered from: (php-src/{prevFiles/prev_0cfb47_0ac514_ext#spl#spl_directory.c,revFiles/0cfb47_0ac514_ext#spl#spl_directory.c}: spl_filesystem_object_cast), (php-src/{prevFiles/prev_0cfb47_0ac514_ext#spl#spl_directory.c,revFiles/0cfb47_0ac514_ext#spl#spl_directory.c}: spl_filesystem_object_cast)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 >= 7 && (E1[1] & 0x10))  
++ if (E0 >= 7 && (E1[0] & 0x10))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_5b255b_9128c1_modules#demux#mpeg#ts_hotfixes.c,revFiles/5b255b_9128c1_modules#demux#mpeg#ts_hotfixes.c}: ProbePES)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

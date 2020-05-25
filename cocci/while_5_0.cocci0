@@ -1,0 +1,18 @@
+@@
+identifier I0, I1, I2, I3, I4;
+expression E5;
+@@
+  int stringmatchlen(const  char *I0, int I1, const  char *I2, int I3, int I4)  
+  {
+  ...
+- while (E5)  
++ while (E5 && I3)  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_c710d4_11d399_src#util.c,revFiles/c710d4_11d399_src#util.c}: stringmatchlen)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

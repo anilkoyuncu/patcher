@@ -1,0 +1,9 @@
+@@
+identifier I0;
+typedef Int128;
+@@
+- Int128 I0; 
+// Infered from: (qemu/{prevFiles/prev_360e60_0169c5_exec.c,revFiles/360e60_0169c5_exec.c}: address_space_translate_internal)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

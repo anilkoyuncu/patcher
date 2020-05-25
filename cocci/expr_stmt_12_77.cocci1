@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = calloc(1, sizeof(*E0)); 
++ E0 = calloc(1, sizeof(psm_epid_t)); 
+// Infered from: (ompi/{prevFiles/prev_e4b3c6_0f2823_opal#mca#common#libfabric#libfabric#prov#psm#src#psmx_util.c,revFiles/e4b3c6_0f2823_opal#mca#common#libfabric#libfabric#prov#psm#src#psmx_util.c}: psmx_resolve_name)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,15 @@
+@@
+expression list E1;
+expression E0;
+@@
+- E0 = mxcmci_poll_status (E1); 
+- if (E0)  
+- {
+- ...
+- }
+- return 0; 
++ return mxcmci_poll_status (E1); 
+// Infered from: (linux/{prevFiles/prev_6d9164_30a9b9_drivers#mmc#host#mxcmmc.c,revFiles/6d9164_30a9b9_drivers#mmc#host#mxcmmc.c}: mxcmci_push)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

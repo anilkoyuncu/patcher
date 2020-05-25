@@ -1,0 +1,27 @@
+@@
+type T0, T2;
+identifier I1;
+typedef uintptr_t;
+@@
+- T0 *I1 = (void *)(T2 )env->active_tc.gpr[4]; 
++ T0 *I1 = (void *)(uintptr_t )env->active_tc.gpr[4]; 
+// Infered from: (qemu/{prevFiles/prev_b69e48_58b963_target-mips#op_helper.c,revFiles/b69e48_58b963_target-mips#op_helper.c}: helper_pmon)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_7c5bd1_3cb67f_ext#fbsql#php_fbsql.c: phpfbColumnAsString
+ - qemu/prevFiles/prev_e0efb9_d81e54_migration-tcp.c: tcp_accept_incoming_migration
+ - qemu/prevFiles/prev_e0efb9_d81e54_migration-unix.c: unix_accept_incoming_migration
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->i_object_type == VLC_OBJECT_VOUT || E0->i_object_type == VLC_OBJECT_AOUT || E0 == VLC_OBJECT(  E1->p->p_sout))  
++ if (E0->i_object_type == VLC_OBJECT_VOUT || E0->i_object_type == VLC_OBJECT_AOUT || E0 == VLC_OBJECT(  E1->p->p_sout) || E0->i_object_type == VLC_OBJECT_DECODER || E0->i_object_type == VLC_OBJECT_PACKETIZER)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_2c1a1f_9a31d3_src#input#input.c,revFiles/2c1a1f_9a31d3_src#input#input.c}: ObjectKillChildrens)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

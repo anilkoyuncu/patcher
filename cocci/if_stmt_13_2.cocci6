@@ -1,0 +1,42 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = zend_hash_index_find(E1, 0)) != NULL)  
++ if ((E0 = zend_hash_index_find(E1, 0)) != NULL && Z_TYPE_P(E0) == IS_ARRAY)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_4cb47b_da7f42_ext#fileinfo#libmagic#softmagic.c,revFiles/4cb47b_da7f42_ext#fileinfo#libmagic#softmagic.c}: magiccheck)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 0.73
+// -- Node Change --
+// Recall: 0.62, Precision: 0.73
+// -- General --
+// Functions fully changed: 7/13(53%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_78f527_726eb9_ext#standard#filters.c: strfilter_convert_create
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_d0311a_670ef9_Zend#zend_API.c: zend_parse_method_parameters
+ - openssl/prevFiles/prev_82f526_141d73_crypto#ec#ec_ameth.c: do_EC_KEY_print
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_64e7c7_c84c0e_gdk#gdkwindow.c: gdk_window_shape_combine_region
+ - gtk/prevFiles/prev_64e7c7_c84c0e_gdk#gdkwindow.c: gdk_window_set_composited
+ - gtk/prevFiles/prev_64e7c7_c84c0e_gdk#gdkwindow.c: gdk_window_hide
+*/
+
+// ---------------------------------------------

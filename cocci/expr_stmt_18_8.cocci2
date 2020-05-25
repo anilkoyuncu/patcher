@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+@@
+- E0->sock_timeout = E1; 
++ E0->sock_timeout = _PyTime_FromSeconds(E1); 
+// Infered from: (cpython/{prevFiles/prev_9001d8_62aa7d_Modules#socketmodule.c,revFiles/9001d8_62aa7d_Modules#socketmodule.c}: sock_setblocking), (cpython/{prevFiles/prev_9001d8_62aa7d_Modules#socketmodule.c,revFiles/9001d8_62aa7d_Modules#socketmodule.c}: sock_new)
+// False positives: (cpython/revFiles/9001d8_62aa7d_Modules#socketmodule.c: init_sockobject), (cpython/revFiles/9001d8_62aa7d_Modules#socketmodule.c: sock_settimeout)
+// Recall: 0.50, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.57
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_9001d8_62aa7d_Modules#socketmodule.c: sock_settimeout
+ - cpython/prevFiles/prev_9001d8_62aa7d_Modules#socketmodule.c: init_sockobject
+*/
+
+// ---------------------------------------------

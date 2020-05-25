@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (!E0->cached_fstat || E1)  
++ if (!E0->cached_fstat || (E1 && !E0->no_forced_fstat))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_07a4d1_b30e4a_main#streams#plain_wrapper.c,revFiles/07a4d1_b30e4a_main#streams#plain_wrapper.c}: do_fstat), (php-src/{prevFiles/prev_122129_b1f17a_main#streams#plain_wrapper.c,revFiles/122129_b1f17a_main#streams#plain_wrapper.c}: do_fstat)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.56, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/9(55%)
+
+
+// ---------------------------------------------

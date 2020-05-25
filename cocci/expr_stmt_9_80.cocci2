@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- init_get_bits(&E0, E1->extradata, E1->extradata_size); 
++ init_get_bits8(&E0, E1->extradata, E1->extradata_size); 
+// Infered from: (FFmpeg/{prevFiles/prev_6d0503_b237e6_libavcodec#sonic.c,revFiles/6d0503_b237e6_libavcodec#sonic.c}: sonic_decode_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

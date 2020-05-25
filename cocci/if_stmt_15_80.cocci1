@@ -1,0 +1,9 @@
+@@
+expression E1, E0, E2, E3, E4;
+@@
+- E0 = E1(E2, E3, E4, E0); 
++ E1(E2, E3, E4, E0); 
+// Infered from: (wireshark/{prevFiles/prev_c29920_0a6321_epan#dissectors#packet-smb-logon.c,revFiles/c29920_0a6321_epan#dissectors#packet-smb-logon.c}: dissect_smb_logon), (wireshark/{prevFiles/prev_c29920_0a6321_epan#dissectors#packet-smb-logon.c,revFiles/c29920_0a6321_epan#dissectors#packet-smb-logon.c}: dissect_smb_logon)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

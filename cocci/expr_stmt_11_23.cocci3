@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_text(E0, E1, E2, 1, "Parity: %s",  val_to_str(E3 & 0x08, q931_l1_parity_vals,  "Unknown (0x%X)")); 
++ proto_tree_add_text(E0, E1, E2, 1, "Parity: %s",  val_to_str(E3 & 0x07, q931_l1_parity_vals,  "Unknown (0x%X)")); 
+// Infered from: (wireshark/{prevFiles/prev_48e75d_b58b71_packet-q931.c,revFiles/48e75d_b58b71_packet-q931.c}: dissect_q931_bearer_capability_ie)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

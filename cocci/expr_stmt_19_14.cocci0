@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- BIO_snprintf(E0, sizeof(E0), "TRACE[%s]:%s: ", E1,  OSSL_trace_get_category_name(E2)); 
++ BIO_snprintf(E0, sizeof(E0), "TRACE[%s]:%s: ", E1 == NULL ? "<null>" :E1,  OSSL_trace_get_category_name(E2)); 
+// Infered from: (openssl/{prevFiles/prev_17197a_c1ff59_apps#openssl.c,revFiles/17197a_c1ff59_apps#openssl.c}: internal_trace_cb)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+identifier I0;
+typedef VncDisplay;
+typedef VncState;
+@@
+- VncDisplay *I0; 
+- I0 = qemu_mallocz(sizeof(VncState )); 
++ VncDisplay *I0 = qemu_mallocz(sizeof(*I0)); 
+// Infered from: (qemu/{prevFiles/prev_afd321_91a073_vnc.c,revFiles/afd321_91a073_vnc.c}: vnc_display_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

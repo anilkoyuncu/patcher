@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2;
+@@
+- snprintf(E0, sizeof(E0), "%s@%d,%d,%d", qdev_fw_name(E1), E2->channel,  E2->id, E2->lun); 
++ snprintf(E0, sizeof(E0), "channel@%x/%s@%x,%x", E2->channel,  qdev_fw_name(E1), E2->id, E2->lun); 
+// Infered from: (qemu/{prevFiles/prev_795928_ce4e7e_hw#scsi-bus.c,revFiles/795928_ce4e7e_hw#scsi-bus.c}: scsibus_get_fw_dev_path)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.71, Precision: 1.00
+// -- Node Change --
+// Recall: 0.77, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/7(71%)
+
+/*
+Functions where the patch did not apply:
+ - tcl/prevFiles/prev_f54edc_04fbce_generic#tclIO.c: PreserveChannelBuffer
+ - tcl/prevFiles/prev_f54edc_04fbce_generic#tclIO.c: FlushChannel
+*/
+
+// ---------------------------------------------

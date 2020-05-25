@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- logmsg("fake_ntlm (user: %s) (proto: %s) (domain: %s) (cached creds: %s)",  E0, E1, E2, (E3 = TRUE) ? "yes" :"no"); 
++ logmsg("fake_ntlm (user: %s) (proto: %s) (domain: %s) (cached creds: %s)",  E0, E1, E2, (E3 == TRUE) ? "yes" :"no"); 
+// Infered from: (curl/{prevFiles/prev_5cdbfa_c01c00_tests#server#fake_ntlm.c,revFiles/5cdbfa_c01c00_tests#server#fake_ntlm.c}: main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

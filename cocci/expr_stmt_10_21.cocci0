@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef guint8;
+@@
+- E0->tlv_buffer = (guint8 *)g_malloc0(E1); 
++ E0->tlv_buffer = (guint8 *)wmem_alloc0(wmem_packet_scope(), E1); 
+// Infered from: (wireshark/{prevFiles/prev_88dd7e_68c956_epan#exported_pdu.c,revFiles/88dd7e_68c956_epan#exported_pdu.c}: export_pdu_create_tags)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

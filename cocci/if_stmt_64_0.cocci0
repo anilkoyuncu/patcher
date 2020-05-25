@@ -1,0 +1,9 @@
+@@
+typedef uint32_t;
+@@
+- *(uint32_t *)(copy_dst + 4) = 127U * 0x01010101U; 
++ AV_WN32A(copy_dst + 4, 127U * 0x01010101U); 
+// Infered from: (FFmpeg/{prevFiles/prev_6642a1_b351ba_libavcodec#vp8.c,revFiles/6642a1_b351ba_libavcodec#vp8.c}: intra_predict), (FFmpeg/{prevFiles/prev_9d4bdc_f81c7a_libavcodec#vp8.c,revFiles/9d4bdc_f81c7a_libavcodec#vp8.c}: intra_predict)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

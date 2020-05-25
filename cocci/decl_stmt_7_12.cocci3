@@ -1,0 +1,12 @@
+@@
+identifier I0, I2;
+expression E1;
+@@
+- const  int I0 = E1->srcFormat; 
+- const  int I2 = E1->dstFormat; 
++ const  enumPixelFormat I0 = E1->srcFormat; 
++ const  enumPixelFormat I2 = E1->dstFormat; 
+// Infered from: (FFmpeg/{prevFiles/prev_f5a2c9_51f415_libswscale#swscale.c,revFiles/f5a2c9_51f415_libswscale#swscale.c}: pal2rgbWrapper)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

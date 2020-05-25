@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = E1->flags; 
++ int I0 = E1->flags & (ERR_IN_PROGRESS | ERR_ALREADY_LOGGED | ERROR_CODE_SET); 
+// Infered from: (tcl/{prevFiles/prev_867b2b_a5b7e1_generic#tclTrace.c,revFiles/867b2b_a5b7e1_generic#tclTrace.c}: TclCallVarTraces), (tcl/{prevFiles/prev_d6413b_077b93_generic#tclVar.c,revFiles/d6413b_077b93_generic#tclVar.c}: CallVarTraces)
+// False positives: (tcl/revFiles/867b2b_a5b7e1_generic#tclTrace.c: TraceCommandProc)
+// Recall: 0.50, Precision: 0.67, Matching recall: 0.50
+
+// ---------------------------------------------

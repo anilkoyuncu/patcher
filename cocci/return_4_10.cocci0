@@ -1,0 +1,9 @@
+@@
+@@
+- return -ENOSYS; 
++ return false; 
+// Infered from: (qemu/{prevFiles/prev_4dd72e_897755_hw#net#vhost_net.c,revFiles/4dd72e_897755_hw#net#vhost_net.c}: vhost_net_virtqueue_pending)
+// False positives: (qemu/revFiles/4dd72e_897755_hw#net#vhost_net.c: vhost_net_start)
+// Recall: 0.25, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

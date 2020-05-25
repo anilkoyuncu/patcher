@@ -1,0 +1,8 @@
+@@
+@@
+- return (ARCHIVE_EOF); 
++ return (-1); 
+// Infered from: (libarchive/{prevFiles/prev_e6cafe_90542f_libarchive#archive_read_support_compression_compress.c,revFiles/e6cafe_90542f_libarchive#archive_read_support_compression_compress.c}: getbits)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

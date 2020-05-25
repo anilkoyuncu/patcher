@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_text(E0, E1, E2, E3, "Interface IPX_address = %s",  ipx_addr_to_str(tvb_get_ntohl(E1, E2),  tvb_get_string(wmem_packet_scope(  ), E1, E2 + 4, E3 - 4))); 
++ proto_tree_add_text(E0, E1, E2, E3, "Interface IPX_address = %s",  ipx_addr_to_str(tvb_get_ntohl(E1, E2),  tvb_get_string_enc(wmem_packet_scope(  ), E1, E2 + 4, E3 - 4,  ENC_ASCII))); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-ismp.c,revFiles/971ffd_421d81_epan#dissectors#packet-ismp.c}: dissect_ismp_edp)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

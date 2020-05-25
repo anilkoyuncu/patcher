@@ -1,0 +1,8 @@
+@@
+@@
+- sleep(1); 
++ usleep(20000); 
+// Infered from: (cairo/{prevFiles/prev_b64645_d9082d_perf#cairo-perf-posix.c,revFiles/b64645_d9082d_perf#cairo-perf-posix.c}: cairo_perf_ticks_per_second)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

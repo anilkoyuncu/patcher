@@ -1,0 +1,9 @@
+@@
+@@
+- goto  out_emit; 
++ goto  out_emit_bad; 
+// Infered from: (qemu/{prevFiles/prev_075311_4f2d31_qobject#json-streamer.c,revFiles/075311_4f2d31_qobject#json-streamer.c}: json_message_process_token)
+// False positives: (qemu/revFiles/075311_4f2d31_qobject#json-streamer.c: json_message_process_token)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E1, E0, E2, E3, E4, E5, E6;
+@@
+- E0 = CreateProcess(NULL, E1, &E2, &E2, TRUE, NORMAL_PRIORITY_CLASS, E3.envp,  E4, &E5, &E6); 
++ E0 = CreateProcess(NULL, E1, &E2, &E2, TRUE,  NORMAL_PRIORITY_CLASS | CREATE_NO_WINDOW, E3.envp, E4,  &E5, &E6); 
+// Infered from: (php-src/{prevFiles/prev_7ef062_7da784_ext#standard#proc_open.c,revFiles/7ef062_7da784_ext#standard#proc_open.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_7ef062_7da784_ext#standard#proc_open.c,revFiles/7ef062_7da784_ext#standard#proc_open.c}: PHP_FUNCTION)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

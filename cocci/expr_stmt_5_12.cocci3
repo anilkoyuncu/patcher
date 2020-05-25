@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->i_length = E1->p_pack->i_interpolated_dts - E0->i_dts; 
++ E0->i_length = E1->i_interpolated_dts - E0->i_dts; 
+// Infered from: (vlc/{prevFiles/prev_a36b1a_e42f7d_modules#packetizer#mpegvideo.c,revFiles/a36b1a_e42f7d_modules#packetizer#mpegvideo.c}: PacketizeThread)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

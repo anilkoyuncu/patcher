@@ -1,0 +1,11 @@
+@@
+identifier I2;
+expression E0, E1;
+typedef guint;
+@@
+- E0 = strlen(E1->hfinfo->I2); 
++ E0 = (guint )strlen(E1->hfinfo->I2); 
+// Infered from: (wireshark/{prevFiles/prev_1582e0_36e002_gtk#main.c,revFiles/1582e0_36e002_gtk#main.c}: tree_view_selection_changed_cb), (wireshark/{prevFiles/prev_1582e0_36e002_gtk#main.c,revFiles/1582e0_36e002_gtk#main.c}: tree_view_selection_changed_cb)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

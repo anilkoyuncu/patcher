@@ -1,0 +1,42 @@
+@@
+expression E0;
+@@
+- sprintf(E0, "???"); 
+- return -1; 
++ efree(E0); 
++ return FAILURE; 
+// Infered from: (php-src/{prevFiles/prev_3bd569_32e773_ext#iconv#iconv.c,revFiles/3bd569_32e773_ext#iconv#iconv.c}: php_iconv_string)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.14, Precision: 1.00
+// -- Node Change --
+// Recall: 0.15, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/21(14%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_0e8b77_25a501_libavcodec#sunrast.c: sunrast_decode_frame
+ - FFmpeg/prevFiles/prev_903f2b_1ff4bd_libavcodec#decode.c: update_frame_pool
+ - FFmpeg/prevFiles/prev_ccdaa3_dc35b7_libavcodec#h264_ps.c: ff_h264_decode_picture_parameter_set
+ - qemu/prevFiles/prev_9fac25_5db176_hw#scsi-bus.c: scsi_target_emulate_inquiry
+ - lighttpd1.4/prevFiles/prev_bde657_0cccf3_src#mod_accesslog.c: SETDEFAULTS_FUNC
+ - FFmpeg/prevFiles/prev_eacced_488aca_libavdevice#v4l2.c: fmt_v4l2ff
+ - FFmpeg/prevFiles/prev_800ffa1_37ecd6_libavcodec#h264_sei.c: ff_h264_decode_sei
+ - lighttpd1.4/prevFiles/prev_15a488_634ec3_src#mod_webdav.c: URIHANDLER_FUNC
+ - FFmpeg/prevFiles/prev_07607a_3209d7_libavcodec#4xm.c: decode_i2_frame
+ - qemu/prevFiles/prev_8af364_3ab4c7_block#qcow2-cluster.c: qcow2_decompress_cluster
+ - tcl/prevFiles/prev_e72e5e_4a6ae5_generic#tclIO.c: Tcl_Flush
+ - cpython/prevFiles/prev_e3c3b2_f6791f_Parser#parser.c: s_push
+ - FFmpeg/prevFiles/prev_4b4acc_d8b33a_libavformat#tta.c: tta_read_packet
+ - lighttpd1.4/prevFiles/prev_bde657_0cccf3_src#network.c: network_server_handle_fdevent
+ - FFmpeg/prevFiles/prev_877f6e_4925b6_libavformat#tta.c: tta_read_packet
+ - FFmpeg/prevFiles/prev_07607a_3209d7_libavcodec#4xm.c: decode_i_block
+ - FFmpeg/prevFiles/prev_53f8f0_e42a3d_libavformat#avidec.c: avi_read_packet
+ - qemu/prevFiles/prev_267fca_21cf9e_hw#9pfs#9p.c: v9fs_mark_fids_unreclaim
+*/
+
+// ---------------------------------------------

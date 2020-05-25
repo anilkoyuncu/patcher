@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- struct nal_sps I0; 
++ struct h264_nal_sps I0; 
+// Infered from: (vlc/{prevFiles/prev_3c23c3_3f5129_modules#codec#omxil#mediacodec.c,revFiles/3c23c3_3f5129_modules#codec#omxil#mediacodec.c}: H264SetCSD)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

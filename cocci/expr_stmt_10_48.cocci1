@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = dissect_rsl_ie_L3_inf(E1, E2, E3, E0, FALSE,  (E4 == 0x48) ? L3_INF_SACCH :L3_INF_OTHER); 
++ E0 = dissect_rsl_ie_L3_inf(E1, E2, E3, E0, FALSE,  (E4 == 0x48) ? L3_INF_SACCH :L3_INF_CCCH); 
+// Infered from: (wireshark/{prevFiles/prev_91e0de_57bf7e_epan#dissectors#packet-rsl.c,revFiles/91e0de_57bf7e_epan#dissectors#packet-rsl.c}: dissct_rsl_msg), (wireshark/{prevFiles/prev_91e0de_57bf7e_epan#dissectors#packet-rsl.c,revFiles/91e0de_57bf7e_epan#dissectors#packet-rsl.c}: dissct_rsl_msg)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

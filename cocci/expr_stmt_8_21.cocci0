@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gtk_widget_set_size_request(E0, FALSE, 180); 
++ gtk_widget_set_size_request(E0, 676, 180); 
+// Infered from: (wireshark/{prevFiles/prev_85ac1f_12c71b_ui#gtk#capture_dlg.c,revFiles/85ac1f_12c71b_ui#gtk#capture_dlg.c}: capture_prep_cb)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0 = realloc(E0, E1); 
++ E0 = erealloc(E0, E1); 
+// Infered from: (php-src/{prevFiles/prev_8a2f6c_8a75e4_ext#standard#string.c,revFiles/8a2f6c_8a75e4_ext#standard#string.c}: php_strtr_array), (php-src/{prevFiles/prev_8a2f6c_8a75e4_ext#standard#string.c,revFiles/8a2f6c_8a75e4_ext#standard#string.c}: php_strtr_array)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

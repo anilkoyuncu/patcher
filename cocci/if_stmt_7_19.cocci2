@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (2 <= E0 && !(-prefixcmp(E1[1], "--remote=")))  
++ if (2 <= E0 && !prefixcmp(E1[1], "--remote="))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_599065_cc44c7_builtin-tar-tree.c,revFiles/599065_cc44c7_builtin-tar-tree.c}: cmd_tar_tree)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

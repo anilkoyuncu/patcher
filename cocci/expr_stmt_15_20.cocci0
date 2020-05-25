@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+@@
+  struct xlx_timer *I0 = E1; 
+  ...
+- D(fprintf(stderr, "%s %d\n", __func__, timer)); 
++ D(fprintf(stderr, "%s %d\n", __func__, I0->nr)); 
+// Infered from: (qemu/{prevFiles/prev_8354cd7_c9b6e1_hw#xilinx_timer.c,revFiles/8354cd7_c9b6e1_hw#xilinx_timer.c}: timer_hit)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

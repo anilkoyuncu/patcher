@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- set_irq_wake(E0->irq_wake, 0); 
++ irq_set_irq_wake(E0->irq_wake, 0); 
+// Infered from: (linux/{prevFiles/prev_dced35_2a8f55_drivers#net#dm9000.c,revFiles/dced35_2a8f55_drivers#net#dm9000.c}: dm9000_set_wol), (linux/{prevFiles/prev_dced35_2a8f55_drivers#net#dm9000.c,revFiles/dced35_2a8f55_drivers#net#dm9000.c}: dm9000_probe)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

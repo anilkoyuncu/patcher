@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- kirkwood_nand_init(ARRAY_AND_SIZE(I0), 25); 
++ kirkwood_nand_init(I0, ARRAY_SIZE(I0), 25); 
+// Infered from: (linux/{prevFiles/prev_f4ada24_d04d97_arch#arm#mach-kirkwood#openrd-setup.c,revFiles/f4ada24_d04d97_arch#arm#mach-kirkwood#openrd-setup.c}: openrd_init), (linux/{prevFiles/prev_f4ada24_d04d97_arch#arm#mach-kirkwood#rd88f6281-setup.c,revFiles/f4ada24_d04d97_arch#arm#mach-kirkwood#rd88f6281-setup.c}: rd88f6281_init)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

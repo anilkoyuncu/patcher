@@ -1,0 +1,21 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef BlockDriverState;
+typedef SDState;
+@@
+  void sd_reset(SDState *I0, BlockDriverState *I1)  
+  {
+  ...
+- if (E2)  
++ if (I0->wp_groups)  
+  {
+- qemu_free(s->wp_groups); 
++ qemu_free(I0->wp_groups); 
+  }
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_257514_5747c0_hw#sd.c,revFiles/257514_5747c0_hw#sd.c}: sd_reset)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

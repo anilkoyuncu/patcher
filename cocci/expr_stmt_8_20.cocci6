@@ -1,0 +1,28 @@
+@@
+@@
+- printf("%d", 0); 
++ printf("%d", -1); 
+// Infered from: (codeflaws/{prevFiles/prev_478-A-17811132-17811140.c,revFiles/478-A-17811132-17811140.c}: main)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.88, Precision: 0.88
+// -- Node Change --
+// Recall: 0.84, Precision: 0.89
+// -- General --
+// Functions fully changed: 14/18(77%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_600d4a_883ed8_modules#codec#x264.c: 
+ - FFmpeg/prevFiles/prev_53bc0d_364cac_libswscale#utils.c: sws_getContext
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_f3ba31_222529_epan#wslua#wslua_dissector.c: heur_dissector_tables_list_func
+ - wireshark/prevFiles/prev_f3ba31_222529_epan#wslua#wslua_dissector.c: dissector_tables_list_func
+*/
+
+// ---------------------------------------------

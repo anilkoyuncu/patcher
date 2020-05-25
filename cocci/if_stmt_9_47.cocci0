@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (get_riff(E0, E1, E2) < 0)  
++ if (get_riff(E0, E2) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_037c08_02c0c8_libavformat#avidec.c,revFiles/037c08_02c0c8_libavformat#avidec.c}: avi_read_header)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

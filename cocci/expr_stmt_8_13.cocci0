@@ -1,0 +1,8 @@
+@@
+expression E5, E0, E1, E3, E4, E2;
+@@
+- php_error_docref (E0, E1, E2, E3, E4, E5); 
+// Infered from: (php-src/{prevFiles/prev_c9357f_598337_ext#standard#pack.c,revFiles/c9357f_598337_ext#standard#pack.c}: PHP_FUNCTION)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

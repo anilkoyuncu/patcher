@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return MPTSAS_CONFIG_PACK(0, MPI_CONFIG_PAGETYPE_IOC, 0x01,  "*l*lwwb*b*b*blww", E0->vendor_id, E0->device_id,  E0->revision, E0->subsystem_vendor_id,  E0->subsystem_id); 
++ return MPTSAS_CONFIG_PACK(0, MPI_CONFIG_PAGETYPE_IOC, 0x01,  "*l*lwwb*b*b*blww", E0->vendor_id, E0->device_id,  E0->revision, E0->class_id,  E0->subsystem_vendor_id, E0->subsystem_id); 
+// Infered from: (qemu/{prevFiles/prev_65a8e1_cf2bce_hw#scsi#mptconfig.c,revFiles/65a8e1_cf2bce_hw#scsi#mptconfig.c}: mptsas_config_ioc_0)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

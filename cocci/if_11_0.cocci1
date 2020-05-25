@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+typedef uint32_t;
+@@
+- if (E0 > (uint32_t )E1->ib_dev_attr.max_cq)  
++ if (E0 > (uint32_t )E1->ib_dev_attr.max_cqe)  
+  {
+- E0 = E1->ib_dev_attr.max_cq; 
++ E0 = E1->ib_dev_attr.max_cqe; 
+  }
+// Infered from: (ompi/{prevFiles/prev_54ad8d_be13b8_ompi#mca#btl#openib#btl_openib.c,revFiles/54ad8d_be13b8_ompi#mca#btl#openib#btl_openib.c}: adjust_cq)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

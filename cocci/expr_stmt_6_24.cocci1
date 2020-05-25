@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (E1 != NULL) ? 0622 :0600; 
++ E0 = (E1 != NULL) ? 0620 :0600; 
+// Infered from: (openssh-portable/{prevFiles/prev_6f9413_f4373e_sshpty.c,revFiles/6f9413_f4373e_sshpty.c}: pty_setowner)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

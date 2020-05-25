@@ -1,0 +1,11 @@
+@@
+identifier I1 = {bdrv_is_inserted ,bdrv_is_read_only };
+expression E0, E2;
+@@
+- qemu_set_irq(E0, I1(E2->bdrv)); 
++ qemu_set_irq(E0, E2->bdrv ? I1(E2->bdrv) :0); 
+// Infered from: (qemu/{prevFiles/prev_0d2e91_ce0536_hw#sd.c,revFiles/0d2e91_ce0536_hw#sd.c}: sd_set_cb), (qemu/{prevFiles/prev_0d2e91_ce0536_hw#sd.c,revFiles/0d2e91_ce0536_hw#sd.c}: sd_set_cb)
+// False positives: (qemu/revFiles/0d2e91_ce0536_hw#sd.c: sd_cardchange)
+// Recall: 0.67, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

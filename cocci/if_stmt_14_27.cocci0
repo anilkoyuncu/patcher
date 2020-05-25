@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- opal_output(0, "HOST %s ON EXCLUDE LIST - REMOVING", E0->name); 
+// Infered from: (ompi/{prevFiles/prev_2fbce9_99c748_orte#util#hostfile#hostfile.c,revFiles/2fbce9_99c748_orte#util#hostfile#hostfile.c}: orte_util_filter_hostfile_nodes)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

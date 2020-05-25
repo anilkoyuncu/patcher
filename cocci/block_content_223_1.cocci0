@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 += E1 * ((E2 + 1) >> 3); 
++ E0 += pal_size; 
+// Infered from: (FFmpeg/{prevFiles/prev_351423_ed040f_libavcodec#targa.c,revFiles/351423_ed040f_libavcodec#targa.c}: decode_frame), (FFmpeg/{prevFiles/prev_7782cb_56cbc5_libavcodec#targa.c,revFiles/7782cb_56cbc5_libavcodec#targa.c}: decode_frame)
+// False positives: (FFmpeg/revFiles/351423_ed040f_libavcodec#targa.c: decode_frame), (FFmpeg/revFiles/7782cb_56cbc5_libavcodec#targa.c: decode_frame)
+// Recall: 0.09, Precision: 0.75, Matching recall: 0.14
+
+// ---------------------------------------------

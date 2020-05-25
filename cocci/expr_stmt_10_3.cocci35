@@ -1,0 +1,33 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- zend_printf("%R:%R:private", E0, E1, E2, E3); 
++ zend_printf("%R:%v:private", E0, E1, E3); 
+// Infered from: (php-src/{prevFiles/prev_fceb60_feff56_Zend#zend.c,revFiles/fceb60_feff56_Zend#zend.c}: print_hash)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 36 rules):
+// -- Edit Location --
+// Recall: 0.91, Precision: 0.95
+// -- Node Change --
+// Recall: 0.89, Precision: 0.91
+// -- General --
+// Functions fully changed: 37/45(82%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_ecc7e43_854c70_capture_loop.c: capture_loop_open_input
+ - qemu/prevFiles/prev_54b949_4efeab_cputlb.c: tlb_set_page
+ - vlc/prevFiles/prev_d39a40_3d7b3d_src#network#io.c: net_ReadInner
+ - wireshark/prevFiles/prev_ecc7e43_854c70_capture_loop.c: capture_loop_start
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_084a88_567991_ui#cli#tap-stats_tree.c: draw_stats_tree
+ - FFmpeg/prevFiles/prev_fc86f88_bc15fc_libavcodec#h264_refs.c: ff_generate_sliding_window_mmcos
+ - codeflaws/prevFiles/prev_546-A-18287587-18287605.c: main
+ - vlc/prevFiles/prev_f06226_f83434_modules#video_output#kms.c: Open
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- ff_inlink_consume_frame(E0, &E1); 
++ int ret = ff_inlink_consume_frame(E0, &E1); 
++ if (ret < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_4db291_b1504e_libavfilter#f_cue.c,revFiles/4db291_b1504e_libavfilter#f_cue.c}: activate), (FFmpeg/{prevFiles/prev_4db291_b1504e_libavfilter#f_cue.c,revFiles/4db291_b1504e_libavfilter#f_cue.c}: activate)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

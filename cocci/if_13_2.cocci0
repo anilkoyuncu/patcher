@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+@@
+- if (avio_tell(E0) >= E1->packet_size * 3)  
++ if (avio_tell(E0) >= E1->packet_size * 3LL)  
+  {
+- avio_seek(E0, -E1->packet_size * 2, SEEK_CUR); 
++ avio_seek(E0, -E1->packet_size * 2LL, SEEK_CUR); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_a0e0e1_71bc8c_libavformat#ffmdec.c,revFiles/a0e0e1_71bc8c_libavformat#ffmdec.c}: ffm_read_data)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

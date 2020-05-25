@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (E0->clip != E1)  
++ if (E0->is_bounded)  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_d67f02_94a9e0_src#cairo-spans-compositor.c,revFiles/d67f02_94a9e0_src#cairo-spans-compositor.c}: _cairo_spans_compositor_stroke), (cairo/{prevFiles/prev_d67f02_94a9e0_src#cairo-spans-compositor.c,revFiles/d67f02_94a9e0_src#cairo-spans-compositor.c}: _cairo_spans_compositor_fill)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+
+// ---------------------------------------------

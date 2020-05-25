@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- if (E0 < 0 || E0 > E1)  
++ if (E0 < 0 || E0 >= E1)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_563c05_643ecd_apps#openssl.c,revFiles/563c05_643ecd_apps#openssl.c}: lock_dbg_cb), (FFmpeg/{prevFiles/prev_138108_269cb6_avconv.c,revFiles/138108_269cb6_avconv.c}: init_input_filter), (vlc/{prevFiles/prev_d893ab_ade35d_src#control#media_list.c,revFiles/d893ab_ade35d_src#control#media_list.c}: _libvlc_media_list_remove_index), (FFmpeg/{prevFiles/prev_f39bbc_83728d_libavformat#mxfdec.c,revFiles/f39bbc_83728d_libavformat#mxfdec.c}: mxf_edit_unit_absolute_offset), (wireshark/{prevFiles/prev_cebf5b_05376b_epan#column.c,revFiles/cebf5b_05376b_epan#column.c}: col_format_to_string), (FFmpeg/{prevFiles/prev_3b370a_3dc0b9_libavformat#mxfdec.c,revFiles/3b370a_3dc0b9_libavformat#mxfdec.c}: mxf_edit_unit_absolute_offset), (openssl/{prevFiles/prev_563c05_643ecd_ssl#ssltest.c,revFiles/563c05_643ecd_ssl#ssltest.c}: lock_dbg_cb), (qemu/{prevFiles/prev_fa365d_9f6b2f_hw#acpi#pcihp.c,revFiles/fa365d_9f6b2f_hw#acpi#pcihp.c}: pci_read)
+// False positives: (FFmpeg/revFiles/f39bbc_83728d_libavformat#mxfdec.c: mxf_read_index_entry_array), (codeflaws/revFiles/7-B-14690359-14690378.c: erase)
+// Recall: 0.63, Precision: 0.85, Matching recall: 0.94
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.54, Precision: 1.00
+// -- Node Change --
+// Recall: 0.52, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/13(53%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_25ddef_fb659c_src#cluster.c: getSlotOrReply
+ - FFmpeg/prevFiles/prev_3b370a_3dc0b9_libavformat#mxfdec.c: mxf_edit_unit_absolute_offset
+ - FFmpeg/prevFiles/prev_f39bbc_83728d_libavformat#mxfdec.c: mxf_edit_unit_absolute_offset
+ - FFmpeg/prevFiles/prev_138108_269cb6_avconv.c: init_input_filter
+ - lighttpd2/prevFiles/prev_4be805_4128f3_src#idlist.c: idlist_is_used
+*/
+
+// ---------------------------------------------

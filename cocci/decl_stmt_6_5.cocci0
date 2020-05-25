@@ -1,0 +1,14 @@
+@@
+identifier I1, I2;
+declaration D0;
+expression E3, E4;
+@@
+- D0 
+  ...
+- I1.b_bool = I2; 
+- var_Set(E3, E4, I1); 
++ var_SetBool(E3, E4, I2); 
+// Infered from: (vlc/{prevFiles/prev_7b3cb7_0bed6f_modules#video_output#x11#xcommon.c,revFiles/7b3cb7_0bed6f_modules#video_output#x11#xcommon.c}: ManageVideo)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

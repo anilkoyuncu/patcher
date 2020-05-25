@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- zend_debug_alloc_output("Block 0x%0.8lX status at %s:%d:\n", (long )E0, E1,  E2); 
++ zend_debug_alloc_output("%s(%d) : Block 0x%0.8lX status:\n", E1, E2,  (long )E0); 
+// Infered from: (php-src/{prevFiles/prev_3eac45_31c8ec_Zend#zend_alloc.c,revFiles/3eac45_31c8ec_Zend#zend_alloc.c}: _mem_block_check)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

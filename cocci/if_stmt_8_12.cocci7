@@ -1,0 +1,39 @@
+@@
+expression E0;
+@@
+- if (E0 % 2 == 0)  
++ if (E0 != 0 && E0 % 2 == 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_276-B-14833281-14833300.c,revFiles/276-B-14833281-14833300.c}: main)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.91, Precision: 0.91
+// -- Node Change --
+// Recall: 0.83, Precision: 0.83
+// -- General --
+// Functions fully changed: 9/12(75%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_331034_3c21c0_ext#mbstring#oniguruma#regerror.c: onig_snprintf_with_pattern
+*/
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_dce7ce_ed5cc7_src#networking.c: readQueryFromClient
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - redis/prevFiles/prev_dce7ce_ed5cc7_src#networking.c: checkClientOutputBufferLimits
+*/
+
+// ---------------------------------------------

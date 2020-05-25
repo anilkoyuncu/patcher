@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- assert(E0->lock_lock); 
+// Infered from: (cpython/{prevFiles/prev_8f3216_6aa278_Modules#_threadmodule.c,revFiles/8f3216_6aa278_Modules#_threadmodule.c}: lock_dealloc), (cpython/{prevFiles/prev_c951d5_9e220b_Modules#threadmodule.c,revFiles/c951d5_9e220b_Modules#threadmodule.c}: lock_dealloc), (cpython/{prevFiles/prev_577404_151205_Modules#_threadmodule.c,revFiles/577404_151205_Modules#_threadmodule.c}: lock_dealloc), (cpython/{prevFiles/prev_27bf15_0217c9_Modules#threadmodule.c,revFiles/27bf15_0217c9_Modules#threadmodule.c}: lock_dealloc)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/8(0%)
+
+/*
+Functions where the patch applied partially:
+ - cpython/prevFiles/prev_c951d5_9e220b_Modules#threadmodule.c: lock_dealloc
+ - cpython/prevFiles/prev_8f3216_6aa278_Modules#_threadmodule.c: newlockobject
+ - cpython/prevFiles/prev_27bf15_0217c9_Modules#threadmodule.c: newlockobject
+ - cpython/prevFiles/prev_27bf15_0217c9_Modules#threadmodule.c: lock_dealloc
+ - cpython/prevFiles/prev_8f3216_6aa278_Modules#_threadmodule.c: lock_dealloc
+ - cpython/prevFiles/prev_577404_151205_Modules#_threadmodule.c: newlockobject
+ - cpython/prevFiles/prev_577404_151205_Modules#_threadmodule.c: lock_dealloc
+ - cpython/prevFiles/prev_c951d5_9e220b_Modules#threadmodule.c: newlockobject
+*/
+
+// ---------------------------------------------

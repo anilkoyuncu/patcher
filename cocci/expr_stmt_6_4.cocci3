@@ -1,0 +1,88 @@
+@@
+expression E0;
+typedef RT_HIGH_THROUGHPUT;
+@@
+- E0->pHTInfo = (RT_HIGH_THROUGHPUT *)kzalloc(sizeof(RT_HIGH_THROUGHPUT ),  GFP_KERNEL); 
++ E0->pHTInfo = kzalloc(sizeof(RT_HIGH_THROUGHPUT), GFP_KERNEL); 
+// Infered from: (linux/{prevFiles/prev_324148_a05d08_drivers#staging#rtl8192u#ieee80211#ieee80211_module.c,revFiles/324148_a05d08_drivers#staging#rtl8192u#ieee80211#ieee80211_module.c}: alloc_ieee80211), (linux/{prevFiles/prev_324148_a05d08_drivers#staging#rtl8192su#ieee80211#ieee80211_module.c,revFiles/324148_a05d08_drivers#staging#rtl8192su#ieee80211#ieee80211_module.c}: alloc_ieee80211)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.13, Precision: 1.00
+// -- Node Change --
+// Recall: 0.13, Precision: 1.00
+// -- General --
+// Functions fully changed: 10/75(13%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_65f15e2_fa2d8b_drivers#staging#rts_pstor#sd.c: sd_execute_write_data
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rtl8192e#ieee80211#ieee80211_softmac.c: ieee80211_wpa_set_encryption
+ - linux/prevFiles/prev_ea1107_3c8def_net#irda#irlan#irlan_eth.c: irlan_eth_flow_indication
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#vme#bridges#vme_tsi148.c: tsi148_probe
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#et131x#et1310_tx.c: et131x_tx_dma_memory_alloc
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#vt6655#hostap.c: vt6655_hostap_ioctl
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#comedi#drivers#unioxx5.c: __unioxx5_subdev_init
+ - linux/prevFiles/prev_aca8c6_058897a_drivers#net#wireless#hostap#hostap_80211_rx.c: __hostap_add_bss
+ - linux/prevFiles/prev_e31926_29a6b6_net#9p#client.c: p9_client_read
+ - linux/prevFiles/prev_65f15e2_fa2d8b_drivers#staging#rts_pstor#sd.c: sd_execute_read_data
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rtl8192u#ieee80211#ieee80211_rx.c: ieee80211_rx
+ - linux/prevFiles/prev_ea1107_3c8def_net#irda#irda_device.c: irda_task_timer_expired
+ - linux/prevFiles/prev_ea1107_3c8def_net#sctp#bind_addr.c: sctp_find_unmatch_addr
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rtl8192e#r8192E_core.c: rtl8192_ioctl
+ - linux/prevFiles/prev_ea1107_3c8def_net#sctp#sm_sideeffect.c: sctp_cmd_interpreter
+ - apr/prevFiles/prev_bd94fd_c77b97_network_io#beos#sockopt.c: ap_get_remote_hostname
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rtl8192e#ieee80211#ieee80211_rx.c: ieee80211_rtl_rx
+ - linux/prevFiles/prev_c2fd03_2c20889_drivers#net#fddi#defxx.c: dfx_rcv_queue_process
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8723com#fw_common.c: rtl8723_download_fw
+ - linux/prevFiles/prev_ae57b20_95718c_drivers#s390#net#qeth_core_main.c: qeth_setup_channel
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rt2860#rt_linux.c: os_alloc_mem
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rtl8192su#ieee80211#ieee80211_rx.c: ieee80211_rtl_rx
+ - gtk/prevFiles/prev_23f9bd_1c20c9_gtk#gtkwidget.c: _gtk_widget_update_state_flags
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8188ee#fw.c: _rtl88e_write_fw
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#crystalhd#crystalhd_misc.c: crystalhd_create_dio_pool
+ - linux/prevFiles/prev_ae57b20_95718c_drivers#s390#net#lcs.c: lcs_set_mc_addresses
+ - linux/prevFiles/prev_3914ed_c1631d4_fs#ocfs2#dlm#dlmlock.c: dlm_new_lock
+ - linux/prevFiles/prev_8c82b1_65f15e2_drivers#staging#altera-stapl#altera.c: altera_get_act_info
+ - ompi/prevFiles/prev_6d097b_caee2e7_src#communicator#comm_publish.c: ompi_comm_namepublish
+ - linux/prevFiles/prev_60f401_41ced61_drivers#net#ethernet#atheros#alx#main.c: alx_alloc_descriptors
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#et131x#et1310_rx.c: et131x_init_recv
+ - linux/prevFiles/prev_ae57b20_95718c_drivers#s390#net#ctcm_mpc.c: ctcmpc_unpack_skb
+ - linux/prevFiles/prev_8383c6_30307c_drivers#hid#hid-lg4ff.c: lg4ff_init
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#vt6656#main_usb.c: Config_FileOperation
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rtl8192e#ieee80211#ieee80211_softmac.c: auth_parse
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#vt6655#device_main.c: Config_FileOperation
+ - linux/prevFiles/prev_ea1107_3c8def_net#irda#ircomm#ircomm_tty_attach.c: ircomm_tty_discovery_indication
+ - linux/prevFiles/prev_a5232bd_8c670f4_drivers#staging#rts_pstor#rtsx_scsi.c: get_ms_information
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rtl8192e#ieee80211#ieee80211_softmac.c: ieee80211_wpa_supplicant_ioctl
+ - linux/prevFiles/prev_24c971c_3861b7_drivers#staging#ncpfs#inode.c: ncp_alloc_inode
+ - curl/prevFiles/prev_f67aa4_ea1b86_src#tool_parsecfg.c: parseconfig
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#vt6656#hostap.c: vt6656_hostap_ioctl
+ - linux/prevFiles/prev_ea1107_3c8def_net#irda#af_irda.c: irda_getvalue_confirm
+ - linux/prevFiles/prev_e31926_29a6b6_net#decnet#dn_nsp_out.c: dn_mk_ack_header
+ - linux/prevFiles/prev_ae57b20_95718c_drivers#s390#net#ctcm_mpc.c: ctcmpc_send_sweep_resp
+ - linux/prevFiles/prev_111d639_cc4f9c2_fs#befs#linuxvfs.c: befs_alloc_inode
+ - linux/prevFiles/prev_c2fd03_2c20889_drivers#net#irda#au1k_ir.c: au1k_irda_net_init
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8723com#fw_common.c: rtl8723_write_fw
+ - linux/prevFiles/prev_61da3a_b62503_fs#ufs#super.c: ufs_alloc_inode
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#wlags49_h2#wl_priv.c: wvlan_uil_get_info
+ - linux/prevFiles/prev_c2fd03_2c20889_drivers#net#fddi#defxx.c: dfx_rcv_init
+ - linux/prevFiles/prev_19be606b_4e6f76_drivers#scsi#hpsa.c: hpsa_big_passthru_ioctl
+ - linux/prevFiles/prev_4b6089_8c82b1_drivers#staging#rts_pstor#spi.c: spi_read_flash_id
+ - linux/prevFiles/prev_285d02a_069baa_drivers#staging#wilc1000#host_interface.c: handle_set_ip_address
+ - linux/prevFiles/prev_ea1107_3c8def_net#irda#af_irda.c: irda_selective_discovery_indication
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8188ee#fw.c: rtl88e_download_fw
+ - linux/prevFiles/prev_ea1107_3c8def_net#irda#irqueue.c: hashbin_find_next
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#wlags49_h2#wl_priv.c: wvlan_uil_put_info
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#vme#bridges#vme_ca91cx42.c: ca91cx42_dma_list_add
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#vt6656#wpactl.c: wpa_ioctl
+ - linux/prevFiles/prev_0481dc_cf2eb6b_drivers#staging#rtl8821ae#rtl8821ae#hal_btc.c: rtl_8821ae_c2h_command_handle
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#vt6655#wpactl.c: wpa_ioctl
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rtl8192su#r8192U_core.c: rtl8192_ioctl
+ - linux/prevFiles/prev_ea1107_3c8def_net#irda#irqueue.c: hashbin_lock_find
+ - linux/prevFiles/prev_aca8c6_058897a_drivers#net#wireless#hostap#hostap_ioctl.c: prism2_ioctl_priv_download
+*/
+
+// ---------------------------------------------

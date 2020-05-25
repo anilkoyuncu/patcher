@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return Py_BuildValue("(D)", E0->cval); 
++ return Py_BuildValue("(D)", &E0->cval); 
+// Infered from: (cpython/{prevFiles/prev_4eadfa_41bcbe_Objects#complexobject.c,revFiles/4eadfa_41bcbe_Objects#complexobject.c}: complex_getnewargs)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

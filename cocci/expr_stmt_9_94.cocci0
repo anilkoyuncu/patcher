@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 += E1->top_margin + E1->bottom_margin; 
++ E0 += E1->height; 
+// Infered from: (gtk/{prevFiles/prev_1828c6_88d419_gtk#gtktextview.c,revFiles/1828c6_88d419_gtk#gtktextview.c}: gtk_text_view_measure)
+// False positives: (gtk/revFiles/1828c6_88d419_gtk#gtktextview.c: gtk_text_view_update_adjustments)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

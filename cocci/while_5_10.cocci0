@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (bytestream2_get_bytes_left(&E0->gb) > 0)  
++ while (bytestream2_get_bytes_left(&E0->gb) >= 8)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_3e2f20_8a49d2_libavcodec#roqvideodec.c,revFiles/3e2f20_8a49d2_libavcodec#roqvideodec.c}: roqvideo_decode_frame)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

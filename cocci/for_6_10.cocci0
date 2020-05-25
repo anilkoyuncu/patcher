@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = E1;E0 > 0;E0--)  
++ for(E0 = E1 - 1;E0 > 0;E0--)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_c84a88_60f356_hw#slavio_intctl.c,revFiles/c84a88_60f356_hw#slavio_intctl.c}: slavio_check_interrupts), (codeflaws/{prevFiles/prev_278-A-9422035-9422057.c,revFiles/278-A-9422035-9422057.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

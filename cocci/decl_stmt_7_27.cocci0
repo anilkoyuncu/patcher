@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef zend_stat_t;
+@@
+- struct stat I0; 
++ zend_stat_t I0; 
+// Infered from: (php-src/{prevFiles/prev_673003_bee4a2_sapi#phpdbg#phpdbg_prompt.c,revFiles/673003_bee4a2_sapi#phpdbg#phpdbg_prompt.c}: PHPDBG_COMMAND)
+// False positives: (php-src/revFiles/7eba90_3ebf5b_ext#exif#exif.c: exif_read_file)
+// Recall: 0.23, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

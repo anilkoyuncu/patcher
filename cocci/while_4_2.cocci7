@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (E0->mb_y < E0->mb_height && E0->gb.size * 8 - get_bits_count(&E0->gb) > 32)  
++ while (E0->mb_y < E0->mb_height && E0->gb.size * 8 - get_bits_count(&E0->gb) > 16)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_6a7009_a74991_libavcodec#h263dec.c,revFiles/6a7009_a74991_libavcodec#h263dec.c}: h263_decode_frame)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

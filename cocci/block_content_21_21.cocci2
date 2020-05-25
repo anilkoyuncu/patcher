@@ -1,0 +1,25 @@
+@@
+expression E0;
+@@
+- E0->get_accessible = gtk_check_menu_item_get_accessible; 
++ gtk_widget_class_set_accessible_type(E0,  GTK_TYPE_CHECK_SUBMENU_ITEM_ACCESSIBLE); 
+// Infered from: (gtk/{prevFiles/prev_552113_70b8f8_gtk#gtkcheckmenuitem.c,revFiles/552113_70b8f8_gtk#gtkcheckmenuitem.c}: gtk_check_menu_item_class_init)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.17, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_552113_70b8f8_gtk#gtkmenuitem.c: gtk_menu_item_get_accessible
+ - gtk/prevFiles/prev_552113_70b8f8_gtk#gtkradiomenuitem.c: gtk_radio_menu_item_get_accessible
+ - gtk/prevFiles/prev_552113_70b8f8_gtk#gtkcheckmenuitem.c: gtk_check_menu_item_get_accessible
+*/
+
+// ---------------------------------------------

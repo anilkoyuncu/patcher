@@ -1,0 +1,121 @@
+@@
+expression E0, E1, E2;
+@@
+- platform_set_drvdata(E0, E1); 
+- E2 = watchdog_register_device(&E1->wdt); 
++ E2 = devm_watchdog_register_device(&E0->dev, &E1->wdt); 
+  ...
+- err: 
+// Infered from: (linux/{prevFiles/prev_89f944c0_189c049_drivers#watchdog#da9055_wdt.c,revFiles/89f944c0_189c049_drivers#watchdog#da9055_wdt.c}: da9055_wdt_probe)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 13 rules):
+// -- Edit Location --
+// Recall: 0.20, Precision: 0.83
+// -- Node Change --
+// Recall: 0.20, Precision: 0.74
+// -- General --
+// Functions fully changed: 3/102(2%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_0c4ece_94ac20d_drivers#watchdog#menf21bmc_wdt.c: menf21bmc_wdt_probe
+ - linux/prevFiles/prev_cb5c14_30cba9a1_drivers#watchdog#mena21_wdt.c: a21_wdt_remove
+ - linux/prevFiles/prev_44affc_09fb6d_drivers#watchdog#ts4800_wdt.c: ts4800_wdt_probe
+ - linux/prevFiles/prev_fd56d6_1f22b8c_drivers#watchdog#loongson1_wdt.c: ls1x_wdt_probe
+ - linux/prevFiles/prev_a02b3d_89e5b7_drivers#watchdog#pic32-dmt.c: pic32_dmt_probe
+ - linux/prevFiles/prev_dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c: sama5d4_wdt_probe
+ - linux/prevFiles/prev_8862c1f2_81df6db_drivers#watchdog#pnx4008_wdt.c: pnx4008_wdt_probe
+ - linux/prevFiles/prev_edad752_0a48f2_drivers#watchdog#tegra_wdt.c: tegra_wdt_probe
+ - linux/prevFiles/prev_b6e6bf4_80cb6b_drivers#watchdog#max77620_wdt.c: max77620_wdt_probe
+ - linux/prevFiles/prev_89f944c0_189c049_drivers#watchdog#da9055_wdt.c: da9055_wdt_probe
+ - linux/prevFiles/prev_cecda0_865802_drivers#watchdog#davinci_wdt.c: davinci_wdt_probe
+*/
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_a02b3d_89e5b7_drivers#watchdog#pic32-dmt.c: 
+ - linux/prevFiles/prev_3564fbc_ca05c2e2_drivers#watchdog#gpio_wdt.c: gpio_wdt_probe
+ - linux/prevFiles/prev_30cba9a1_dd36f6c_drivers#watchdog#wm831x_wdt.c: wm831x_wdt_probe
+ - linux/prevFiles/prev_396164_c8841a6_drivers#watchdog#intel-mid_wdt.c: 
+ - FFmpeg/prevFiles/prev_ced225_083b80_libavformat#movenc.c: 
+ - linux/prevFiles/prev_cecda0_865802_drivers#watchdog#davinci_wdt.c: 
+ - qemu/prevFiles/prev_036f71_c64eaf_hw#qdev-properties.c: print_ptr
+ - linux/prevFiles/prev_553140a_cc7185_drivers#watchdog#rtd119x_wdt.c: rtd119x_wdt_probe
+ - linux/prevFiles/prev_30cba9a1_dd36f6c_drivers#watchdog#wm831x_wdt.c: wm831x_wdt_remove
+ - linux/prevFiles/prev_3564fbc_ca05c2e2_drivers#watchdog#gpio_wdt.c: 
+ - linux/prevFiles/prev_528eff_89f944c0_drivers#watchdog#da9062_wdt.c: 
+ - linux/prevFiles/prev_72c71f_e12274_drivers#staging#slicoss#slicoss.c: 
+ - linux/prevFiles/prev_0c4ece_94ac20d_drivers#watchdog#menf21bmc_wdt.c: 
+ - linux/prevFiles/prev_30cba9a1_dd36f6c_drivers#watchdog#wm831x_wdt.c: 
+ - linux/prevFiles/prev_553140a_cc7185_drivers#watchdog#rtd119x_wdt.c: 
+ - linux/prevFiles/prev_80cb6b_d2a10c_drivers#watchdog#max63xx_wdt.c: 
+ - FFmpeg/prevFiles/prev_6ec044_b36095_libavcodec#xfacedec.c: xface_decode_init
+ - FFmpeg/prevFiles/prev_aa2625_0181b2_libavfilter#vf_zoompan.c: 
+ - linux/prevFiles/prev_89e5b7_1f5330_drivers#watchdog#ux500_wdt.c: ux500_wdt_probe
+ - linux/prevFiles/prev_b6e6bf4_80cb6b_drivers#watchdog#max77620_wdt.c: 
+ - linux/prevFiles/prev_64b849e_528eff_drivers#watchdog#da9063_wdt.c: da9063_wdt_probe
+ - FFmpeg/prevFiles/prev_aa10f0_dec163_libavcodec#vdpau_hevc.c: 
+ - linux/prevFiles/prev_bd0db8_474331_drivers#media#dvb#frontends#mb86a16.c: 
+ - linux/prevFiles/prev_fd56d6_1f22b8c_drivers#watchdog#loongson1_wdt.c: 
+ - linux/prevFiles/prev_edad752_0a48f2_drivers#watchdog#tegra_wdt.c: 
+ - linux/prevFiles/prev_89f944c0_189c049_drivers#watchdog#da9055_wdt.c: da9055_wdt_remove
+ - linux/prevFiles/prev_7db163_9e14375_drivers#watchdog#aspeed_wdt.c: aspeed_wdt_remove
+ - linux/prevFiles/prev_6ba379_f7daaa8_drivers#watchdog#zx2967_wdt.c: zx2967_wdt_probe
+ - linux/prevFiles/prev_396164_c8841a6_drivers#watchdog#intel-mid_wdt.c: mid_wdt_remove
+ - qemu/prevFiles/prev_e3efee_86a3d5_block#nvme.c: 
+ - linux/prevFiles/prev_89e5b7_1f5330_drivers#watchdog#ux500_wdt.c: 
+ - linux/prevFiles/prev_b42488b_16c4614_drivers#watchdog#twl4030_wdt.c: 
+ - linux/prevFiles/prev_5ee212_051b982_drivers#net#sunvnet.c: 
+ - linux/prevFiles/prev_fd56d6_1f22b8c_drivers#watchdog#loongson1_wdt.c: ls1x_wdt_remove
+ - qemu/prevFiles/prev_e3efee_86a3d5_block#nvme.c: nvme_co_get_block_status
+ - FFmpeg/prevFiles/prev_8f68977_4972e5_libavcodec#kmvc.c: 
+ - linux/prevFiles/prev_dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c: sama5d4_wdt_remove
+ - linux/prevFiles/prev_44affc_09fb6d_drivers#watchdog#ts4800_wdt.c: ts4800_wdt_remove
+ - linux/prevFiles/prev_b6e6bf4_80cb6b_drivers#watchdog#max77620_wdt.c: max77620_wdt_remove
+ - FFmpeg/prevFiles/prev_6ec044_b36095_libavcodec#xfacedec.c: xface_decode_close
+ - linux/prevFiles/prev_615e40_099e303_drivers#watchdog#moxart_wdt.c: 
+ - linux/prevFiles/prev_edad752_0a48f2_drivers#watchdog#tegra_wdt.c: tegra_wdt_remove
+ - qemu/prevFiles/prev_036f71_c64eaf_hw#qdev-properties.c: 
+ - linux/prevFiles/prev_89f944c0_189c049_drivers#watchdog#da9055_wdt.c: 
+ - linux/prevFiles/prev_a02b3d_89e5b7_drivers#watchdog#pic32-dmt.c: pic32_dmt_remove
+ - linux/prevFiles/prev_6ba379_f7daaa8_drivers#watchdog#zx2967_wdt.c: 
+ - linux/prevFiles/prev_8862c1f2_81df6db_drivers#watchdog#pnx4008_wdt.c: 
+ - linux/prevFiles/prev_d3d77b5_396164_drivers#watchdog#iTCO_wdt.c: iTCO_wdt_shutdown
+ - linux/prevFiles/prev_80cb6b_d2a10c_drivers#watchdog#max63xx_wdt.c: max63xx_wdt_remove
+ - linux/prevFiles/prev_bdf6438_86d710_drivers#infiniband#hw#nes#nes_nic.c: 
+ - linux/prevFiles/prev_81df6db_02189bb_drivers#watchdog#mpc8xxx_wdt.c: mpc8xxx_wdt_remove
+ - linux/prevFiles/prev_81df6db_02189bb_drivers#watchdog#mpc8xxx_wdt.c: 
+ - FFmpeg/prevFiles/prev_8f68977_4972e5_libavcodec#kmvc.c: decode_end
+ - linux/prevFiles/prev_dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c: 
+ - linux/prevFiles/prev_c838a3_8ba41f6_drivers#watchdog#tangox_wdt.c: tangox_wdt_probe
+ - FFmpeg/prevFiles/prev_6ec044_b36095_libavcodec#xfacedec.c: 
+ - linux/prevFiles/prev_cecda0_865802_drivers#watchdog#davinci_wdt.c: davinci_wdt_remove
+ - linux/prevFiles/prev_77d9f7_3564fbc_drivers#watchdog#iTCO_wdt.c: 
+ - linux/prevFiles/prev_615e40_099e303_drivers#watchdog#moxart_wdt.c: moxart_wdt_remove
+ - linux/prevFiles/prev_44affc_09fb6d_drivers#watchdog#ts4800_wdt.c: 
+ - linux/prevFiles/prev_c838a3_8ba41f6_drivers#watchdog#tangox_wdt.c: 
+ - linux/prevFiles/prev_528eff_89f944c0_drivers#watchdog#da9062_wdt.c: da9062_wdt_probe
+ - linux/prevFiles/prev_7db163_9e14375_drivers#watchdog#aspeed_wdt.c: 
+ - linux/prevFiles/prev_5ee212_051b982_drivers#net#ehea#ehea_main.c: 
+ - linux/prevFiles/prev_cb5c14_30cba9a1_drivers#watchdog#mena21_wdt.c: 
+ - linux/prevFiles/prev_64b849e_528eff_drivers#watchdog#da9063_wdt.c: 
+ - linux/prevFiles/prev_77d9f7_3564fbc_drivers#watchdog#iTCO_wdt.c: iTCO_wdt_remove
+ - linux/prevFiles/prev_8862c1f2_81df6db_drivers#watchdog#pnx4008_wdt.c: pnx4008_wdt_remove
+ - linux/prevFiles/prev_d3d77b5_396164_drivers#watchdog#iTCO_wdt.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_396164_c8841a6_drivers#watchdog#intel-mid_wdt.c: mid_wdt_probe
+ - linux/prevFiles/prev_72c71f_e12274_drivers#staging#slicoss#slicoss.c: slic_card_init
+ - linux/prevFiles/prev_b42488b_16c4614_drivers#watchdog#twl4030_wdt.c: twl4030_wdt_probe
+ - linux/prevFiles/prev_72c71f_e12274_drivers#staging#slicoss#slicoss.c: slic_rspqueue_init
+ - linux/prevFiles/prev_72c71f_e12274_drivers#staging#slicoss#slicoss.c: slic_entry_probe
+ - linux/prevFiles/prev_81df6db_02189bb_drivers#watchdog#mpc8xxx_wdt.c: mpc8xxx_wdt_probe
+ - linux/prevFiles/prev_80cb6b_d2a10c_drivers#watchdog#max63xx_wdt.c: max63xx_wdt_probe
+ - linux/prevFiles/prev_5ee212_051b982_drivers#net#ehea#ehea_main.c: ehea_probe_adapter
+ - linux/prevFiles/prev_cb5c14_30cba9a1_drivers#watchdog#mena21_wdt.c: a21_wdt_probe
+ - linux/prevFiles/prev_7db163_9e14375_drivers#watchdog#aspeed_wdt.c: aspeed_wdt_probe
+*/
+
+// ---------------------------------------------

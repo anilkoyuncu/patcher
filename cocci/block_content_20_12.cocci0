@@ -1,0 +1,10 @@
+@@
+expression E1, E0;
+@@
+- E0 = gtk_widget_get_parent(E1); 
++ E0 = gtk_widget_get_ancestor(E1, GTK_TYPE_MENU_SHELL); 
+// Infered from: (gtk/{prevFiles/prev_fcdea0_0a33d7_gtk#a11y#gtkmenuitemaccessible.c,revFiles/fcdea0_0a33d7_gtk#a11y#gtkmenuitemaccessible.c}: gtk_menu_item_accessible_get_keybinding), (gtk/{prevFiles/prev_fcdea0_0a33d7_gtk#a11y#gtkmenuitemaccessible.c,revFiles/fcdea0_0a33d7_gtk#a11y#gtkmenuitemaccessible.c}: gtk_menu_item_accessible_get_keybinding)
+// False positives: (gtk/revFiles/fcdea0_0a33d7_gtk#a11y#gtkmenuitemaccessible.c: gtk_menu_item_accessible_do_action), (gtk/revFiles/fcdea0_0a33d7_gtk#a11y#gtkmenuitemaccessible.c: gtk_menu_item_accessible_initialize)
+// Recall: 0.67, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------

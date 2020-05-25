@@ -1,0 +1,14 @@
+@@
+identifier I0;
+@@
+- I0 = ompi_rte_recv_buffer_nb(OMPI_NAME_WILDCARD, OMPI_RML_TAG_XOFACM,  OMPI_RML_PERSISTENT, xoob_rml_recv_cb, NULL); 
+- if (OMPI_SUCCESS != I0)  
+- {
+- OFACM_VERBOSE(("OFACM: xoob CPC system error %d (%s)", I0, opal_strerror(I0))); 
+- return I0; 
+- }
++ ompi_rte_recv_buffer_nb(OMPI_NAME_WILDCARD, OMPI_RML_TAG_XOFACM,  OMPI_RML_PERSISTENT, xoob_rml_recv_cb, NULL); 
+// Infered from: (ompi/{prevFiles/prev_96457d_63ac60_ompi#mca#common#ofacm#common_ofacm_xoob.c,revFiles/96457d_63ac60_ompi#mca#common#ofacm#common_ofacm_xoob.c}: xoob_component_query)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------

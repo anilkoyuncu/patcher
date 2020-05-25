@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0 &= ~(1 << E1); 
++ E0 &= ~BIT(E1); 
+// Infered from: (linux/{prevFiles/prev_b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7854.c,revFiles/b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7854.c}: ade7854_set_irq), (linux/{prevFiles/prev_b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7754.c,revFiles/b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7754.c}: ade7754_set_irq), (linux/{prevFiles/prev_01b7215_483936_drivers#staging#iio#meter#ade7854.c,revFiles/01b7215_483936_drivers#staging#iio#meter#ade7854.c}: ade7854_set_irq), (linux/{prevFiles/prev_01b7215_483936_drivers#staging#iio#meter#ade7754.c,revFiles/01b7215_483936_drivers#staging#iio#meter#ade7754.c}: ade7754_set_irq), (linux/{prevFiles/prev_b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7758_core.c,revFiles/b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7758_core.c}: ade7758_set_irq), (linux/{prevFiles/prev_01b7215_483936_drivers#staging#iio#meter#ade7758_core.c,revFiles/01b7215_483936_drivers#staging#iio#meter#ade7758_core.c}: ade7758_set_irq)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 12/12(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = GST_ELEMENT_CLOCK(E1)))  
++ if (GST_STATE(E1) == GST_STATE_PLAYING && (E0 = GST_ELEMENT_CLOCK(E1)))  
+  {
+  ...
+  }
+// Infered from: (gstreamer/{prevFiles/prev_b9a4a2_37713c_libs#gst#base#gstbasesink.c,revFiles/b9a4a2_37713c_libs#gst#base#gstbasesink.c}: gst_base_sink_update_start_time)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

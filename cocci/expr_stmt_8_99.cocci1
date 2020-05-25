@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (E1 && ((E1[2] & 0x07) == 0x02 || (!E2 && (E1[2] & 0x07) == 0x07))); 
++ E0 = (E1[2] & 0x07) == 0x02 || (!E2 && (E1[2] & 0x07) == 0x07); 
+// Infered from: (FFmpeg/{prevFiles/prev_5307fa_d266ec_libavcodec#dvdec.c,revFiles/5307fa_d266ec_libavcodec#dvdec.c}: dvvideo_decode_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

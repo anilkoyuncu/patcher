@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (bytestream2_get_bytes_left_p(E0) <= 0)  
++ if (bytestream2_get_bytes_left_p(E0) <= 0 || bytestream2_get_eof(E0))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_9acdf1_8e5021_libavcodec#prosumer.c,revFiles/9acdf1_8e5021_libavcodec#prosumer.c}: decompress)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

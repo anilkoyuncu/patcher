@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- while (E0 && E0->configuration && E0->configuration_length >= 9)  
++ if (E0 && E0->configuration && E0->configuration_length >= 9)  
+  {
+  ...
+- break; 
+  }
+// Infered from: (wireshark/{prevFiles/prev_032c33_d8bbd2_epan#dissectors#packet-btavdtp.c,revFiles/032c33_d8bbd2_epan#dissectors#packet-btavdtp.c}: dissect_aptx)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

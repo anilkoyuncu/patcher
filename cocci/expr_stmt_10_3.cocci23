@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- printf("No%lld\n", E0); 
++ printf("No\n"); 
+// Infered from: (codeflaws/{prevFiles/prev_397-B-6018428-6018433.c,revFiles/397-B-6018428-6018433.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

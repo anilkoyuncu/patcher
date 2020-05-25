@@ -1,0 +1,8 @@
+@@
+@@
+- le_index_ptr = zend_register_list_destructors(NULL, NULL, 0); 
++ le_index_ptr = zend_register_list_destructors_ex(NULL, NULL, "index pointer",  0); 
+// Infered from: (php-src/{prevFiles/prev_7b4983_a0cfab_main#main.c,revFiles/7b4983_a0cfab_main#main.c}: php_module_startup)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

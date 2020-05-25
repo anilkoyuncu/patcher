@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0[E1] <<= 2; 
++ E0[E1] *= 4; 
+// Infered from: (FFmpeg/{prevFiles/prev_5a950f_5cae5a_libavcodec#cfhd.c,revFiles/5a950f_5cae5a_libavcodec#cfhd.c}: cfhd_decode), (FFmpeg/{prevFiles/prev_c709f0_bc6ab7_libavcodec#cfhd.c,revFiles/c709f0_bc6ab7_libavcodec#cfhd.c}: cfhd_decode)
+// False positives: (FFmpeg/revFiles/5a950f_5cae5a_libavcodec#cfhd.c: cfhd_decode)
+// Recall: 0.09, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

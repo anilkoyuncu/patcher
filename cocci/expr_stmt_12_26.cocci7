@@ -1,0 +1,23 @@
+@@
+identifier I0;
+@@
+- char I0[ADDRBUF_MAX_MESSAGE_SIZE + 1]; 
++ char I0[MAX_ADDR_SIZE + 1]; 
+// Infered from: (wireshark/{prevFiles/prev_d630c2_a40cf0_epan#dissectors#packet-gsm_sms.c,revFiles/d630c2_a40cf0_epan#dissectors#packet-gsm_sms.c}: dis_field_addr)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.88, Precision: 1.00
+// -- Node Change --
+// Recall: 0.92, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/8(87%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_ba4b3f_d9fe91_linux-user#syscall.c: open_self_cmdline
+*/
+
+// ---------------------------------------------

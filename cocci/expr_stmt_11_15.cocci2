@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->p_module = module_need(E0, "demux", E1, !strcmp(E1, E0->psz_demux)); 
++ E0->p_module = vlc_module_load(E0, "demux", E1, !strcmp(E1, E0->psz_demux),  demux_Probe, E0); 
+// Infered from: (vlc/{prevFiles/prev_11874b_da721e_src#input#demux.c,revFiles/11874b_da721e_src#input#demux.c}: demux_NewAdvanced)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

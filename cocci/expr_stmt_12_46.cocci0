@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->sd = kzalloc(sizeof(struct v4l2_subdev *) * E1, GFP_KERNEL); 
++ E0->sd = kcalloc(E1, sizeof(struct v4l2_subdev *), GFP_KERNEL); 
+// Infered from: (linux/{prevFiles/prev_9ac04a_5869066a_drivers#staging#media#davinci_vpfe#vpfe_mc_capture.c,revFiles/9ac04a_5869066a_drivers#staging#media#davinci_vpfe#vpfe_mc_capture.c}: register_i2c_devices)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

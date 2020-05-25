@@ -1,0 +1,27 @@
+@@
+@@
+- mca_base_param_init(); 
++ opal_init_util(); 
+// Infered from: (ompi/{prevFiles/prev_0a8af6_477828_orte#tools#orteboot#orteboot.c,revFiles/0a8af6_477828_orte#tools#orteboot#orteboot.c}: main)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.90
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_0a8af6_477828_orte#tools#orteboot#orteboot.c: main
+ - qemu/prevFiles/prev_30e521_f7f152_hw#watchdog#watchdog.c: watchdog_perform_action
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_71268f8b_c66fbf_epan#dissectors#packet-quake2.c: proto_reg_handoff_quake2
+*/
+
+// ---------------------------------------------

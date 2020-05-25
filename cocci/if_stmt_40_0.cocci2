@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- failf(E0, "LDAP local: Cannot connect to %s:%hu", E1->host.name, E1->port); 
++ failf(E0, "LDAP local: Cannot connect to %s:%ld", E1->host.name, E1->port); 
+// Infered from: (curl/{prevFiles/prev_4fad19_4d3466_lib#ldap.c,revFiles/4fad19_4d3466_lib#ldap.c}: Curl_ldap), (curl/{prevFiles/prev_4fad19_4d3466_lib#ldap.c,revFiles/4fad19_4d3466_lib#ldap.c}: Curl_ldap), (curl/{prevFiles/prev_4fad19_4d3466_lib#ldap.c,revFiles/4fad19_4d3466_lib#ldap.c}: Curl_ldap)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 0.83
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_7aef17_f47b84_lib#ldap.c: Curl_ldap
+*/
+
+// ---------------------------------------------

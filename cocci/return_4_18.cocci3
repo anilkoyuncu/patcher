@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0.u |= 0x3FFULL << 52; 
++ E0.u |= 0x7FFULL << 52; 
+// Infered from: (qemu/{prevFiles/prev_86c4a9_273af6_target-ppc#op_helper.c,revFiles/86c4a9_273af6_target-ppc#op_helper.c}: float_zero_divide_excp)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

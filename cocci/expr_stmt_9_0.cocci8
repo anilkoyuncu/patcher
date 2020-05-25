@@ -1,0 +1,10 @@
+@@
+expression E1, E0;
+@@
+- OPAL_OUTPUT_VERBOSE((5, orte_grpcomm_base.output, E0, ORTE_NAME_PRINT(  ORTE_PROC_MY_NAME), ORTE_NAME_PRINT(&E1->name))); 
++ OPAL_OUTPUT_VERBOSE((5, orte_grpcomm_base_framework.framework_output, E0, ORTE_NAME_PRINT(  ORTE_PROC_MY_NAME), ORTE_NAME_PRINT(&E1->name))); 
+// Infered from: (ompi/{prevFiles/prev_c5e1a7_c50b99_orte#mca#grpcomm#base#grpcomm_base_xcast.c,revFiles/c5e1a7_c50b99_orte#mca#grpcomm#base#grpcomm_base_xcast.c}: orte_grpcomm_base_xcast_recv), (ompi/{prevFiles/prev_c5e1a7_c50b99_orte#mca#grpcomm#base#grpcomm_base_xcast.c,revFiles/c5e1a7_c50b99_orte#mca#grpcomm#base#grpcomm_base_xcast.c}: orte_grpcomm_base_xcast_recv)
+// False positives: (ompi/revFiles/c5e1a7_c50b99_orte#mca#grpcomm#base#grpcomm_base_xcast.c: orte_grpcomm_base_xcast_recv)
+// Recall: 0.10, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

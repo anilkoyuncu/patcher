@@ -1,0 +1,11 @@
+@@
+expression E0;
+typedef AtkObject;
+@@
+- return g_object_ref(E0); 
++ return (AtkObject *)g_object_ref(E0); 
+// Infered from: (gtk/{prevFiles/prev_072f06_1c9e3a_gtk#a11y#gtktreeviewaccessible.c,revFiles/072f06_1c9e3a_gtk#a11y#gtktreeviewaccessible.c}: gtk_tree_view_accessible_ref_child), (gtk/{prevFiles/prev_072f06_1c9e3a_gtk#a11y#gtktreeviewaccessible.c,revFiles/072f06_1c9e3a_gtk#a11y#gtktreeviewaccessible.c}: gtk_tree_view_accessible_ref_accessible_at_point)
+// False positives: (gtk/revFiles/072f06_1c9e3a_gtk#a11y#gtklabelaccessible.c: gtk_label_accessible_link_impl_get_hyperlink)
+// Recall: 0.31, Precision: 0.83, Matching recall: 0.83
+
+// ---------------------------------------------

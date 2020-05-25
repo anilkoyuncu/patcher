@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0->next = se_packet_mem_used_list; 
++ E0->next = se_packet_mem.used_list; 
+// Infered from: (wireshark/{prevFiles/prev_12c3bd_d9b789_epan#emem.c,revFiles/12c3bd_d9b789_epan#emem.c}: se_alloc)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_c66802_6e66ca_gtk#gui_utils.c: window_get_geometry
+*/
+
+// ---------------------------------------------

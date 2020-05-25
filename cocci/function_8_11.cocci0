@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = CURSOR_FORMAT_3C; 
++ E0 |= CURSOR_FORMAT_3C; 
+// Infered from: (linux/{prevFiles/prev_2079a5_f57eda_drivers#video#fbdev#intelfb#intelfbhw.c,revFiles/2079a5_f57eda_drivers#video#fbdev#intelfb#intelfbhw.c}: intelfbhw_cursor_init)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

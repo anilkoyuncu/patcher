@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- copy_address(&E0->last_ip, E1); 
++ copy_address_wmem(wmem_packet_scope(), &E0->last_ip, E1); 
+// Infered from: (wireshark/{prevFiles/prev_6c0f6f_6e9c34_epan#dissectors#packet-gtp.c,revFiles/6c0f6f_6e9c34_epan#dissectors#packet-gtp.c}: decode_gtp_gsn_addr)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

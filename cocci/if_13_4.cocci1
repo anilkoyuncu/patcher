@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- if (!strncmp(E0, "hosts,ncp,", 11))  
++ if (!strncmp(E0, "hosts,ncp,", 10))  
+  {
+- E1 = E0 + 11; 
++ E1 = E0 + 10; 
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_56b098_89693f_gtk#hostlist_ncp.c,revFiles/56b098_89693f_gtk#hostlist_ncp.c}: gtk_ncp_hostlist_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

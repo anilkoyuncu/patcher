@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- failf(E0, "Unknown SSL protocol error in connection to %s:%d ",  E1->host.name, E1->port); 
++ failf(E0, "Unknown SSL protocol error in connection to %s:%ld ",  E1->host.name, E1->port); 
+// Infered from: (curl/{prevFiles/prev_d65cf7_ddab9b_lib#ssluse.c,revFiles/d65cf7_ddab9b_lib#ssluse.c}: ossl_connect_step2)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

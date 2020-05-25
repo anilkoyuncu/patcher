@@ -1,0 +1,36 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = devm_kzalloc(&E1->dev, sizeof(*E0), GFP_KERNEL); 
++ E0 = devm_kzalloc(dev, sizeof(*E0), GFP_KERNEL); 
+  ...
+- E2->parent = &E1->dev; 
++ E2->parent = dev; 
+  ...
+- watchdog_init_timeout(E2, timeout, &E1->dev); 
++ watchdog_init_timeout(E2, timeout, dev); 
+  ...
+- E3 = devm_watchdog_register_device(&E1->dev, E2); 
++ E3 = devm_watchdog_register_device(dev, E2); 
+  ...
+- dev_info(&E1->dev, "TS-72xx Watchdog driver\n"); 
++ dev_info(dev, "TS-72xx Watchdog driver\n"); 
+// Infered from: (linux/{prevFiles/prev_16c4614_44affc_drivers#watchdog#ts72xx_wdt.c,revFiles/16c4614_44affc_drivers#watchdog#ts72xx_wdt.c}: ts72xx_wdt_probe)
+// Recall: 0.45, Precision: 1.00, Matching recall: 0.91
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.91, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_d6ab05_cecda0_drivers#watchdog#ep93xx_wdt.c: ep93xx_wdt_probe
+ - linux/prevFiles/prev_16c4614_44affc_drivers#watchdog#ts72xx_wdt.c: ts72xx_wdt_probe
+*/
+
+// ---------------------------------------------

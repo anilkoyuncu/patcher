@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->thread_count > 1)  
++ if ((E0->active_thread_type & FF_THREAD_SLICE) && E0->thread_count > 1)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_508a24_8d44cd_libavcodec#mpeg12.c,revFiles/508a24_8d44cd_libavcodec#mpeg12.c}: decode_chunks), (FFmpeg/{prevFiles/prev_508a24_8d44cd_libavcodec#mpeg12.c,revFiles/508a24_8d44cd_libavcodec#mpeg12.c}: mpeg_mc_decode_init)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

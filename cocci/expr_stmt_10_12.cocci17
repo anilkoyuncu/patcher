@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- printf("%c", E0[4]); 
++ printf("%c", E0[3]); 
+// Infered from: (codeflaws/{prevFiles/prev_78-B-2104197-2104199.c,revFiles/78-B-2104197-2104199.c}: main)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 18 rules):
+// -- Edit Location --
+// Recall: 0.90, Precision: 0.86
+// -- Node Change --
+// Recall: 0.90, Precision: 0.83
+// -- General --
+// Functions fully changed: 18/24(75%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_cf8598_9bae11_sapi#phpdbg#phpdbg_opcode.c: phpdbg_decode_opline
+ - FFmpeg/prevFiles/prev_a32765c_3133e7_libavcodec#adpcmenc.c: adpcm_encode_frame
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_ee3138_b5afc1_target-i386#translate.c: disas_insn
+ - wireshark/prevFiles/prev_6bddb0_6034a6_epan#dissectors#packet-pim.c: dissect_pim
+ - wireshark/prevFiles/prev_6bddb0_6034a6_epan#dissectors#packet-pim.c: dissect_pimv1
+ - qemu/prevFiles/prev_ee3138_b5afc1_target-i386#translate.c: gen_push_T0
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- while (php_stream_gets(E0, E1, E2 - 1) && !(isdigit((int )E1[0]) && isdigit(  (int )E1[1]) && isdigit((  int )E1[  2]) && E1[  3] == ' '))  
++ while (php_stream_gets(E0, ZSTR(E1), E2 - 1) && !(isdigit((int )E1[0]) && isdigit(  (int )E1[1]) && isdigit(  (int )E1[2]) && E1[  3] == ' '))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_954199_1c307a_ext#standard#ftp_fopen_wrapper.c,revFiles/954199_1c307a_ext#standard#ftp_fopen_wrapper.c}: get_ftp_result)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

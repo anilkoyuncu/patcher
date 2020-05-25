@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->i_fourcc != VLC_FOURCC('v', 'o', 'r', 'b'))  
++ if (E0->i_fourcc != VLC_FOURCC('v', 'o', 'r', 'b') && E0->i_fourcc != VLC_FOURCC(  't', 'h', 'e', 'o'))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_a4d9dd_9fbf50_modules#mux#ogg.c,revFiles/a4d9dd_9fbf50_modules#mux#ogg.c}: Mux)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

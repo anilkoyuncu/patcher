@@ -1,0 +1,25 @@
+@@
+expression E0;
+@@
+- printf("Error while loading %s: %s\n", filename, strerror(E0)); 
++ printf("Error while loading %s: %s\n", exec_path, strerror(E0)); 
+// Infered from: (qemu/{prevFiles/prev_9d3019_89ea03_linux-user#main.c,revFiles/9d3019_89ea03_linux-user#main.c}: main), (qemu/{prevFiles/prev_9d3019_89ea03_linux-user#main.c,revFiles/9d3019_89ea03_linux-user#main.c}: main)
+// Recall: 0.36, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.73, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_9d3019_89ea03_linux-user#main.c: 
+ - tcl/prevFiles/prev_82773c_728d0a_generic#tclIORChan.c: TclChanCreateObjCmd
+ - qemu/prevFiles/prev_9d3019_89ea03_linux-user#main.c: parse_args
+*/
+
+// ---------------------------------------------

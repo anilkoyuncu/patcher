@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0; 
+- I0 = atoi(E1); 
++ int I0 = atoi(E1); 
+// Infered from: (openssl/{prevFiles/prev_c82baf_769513_crypto#rsa#rsa_pmeth.c,revFiles/c82baf_769513_crypto#rsa#rsa_pmeth.c}: pkey_rsa_ctrl_str)
+// False positives: (openssl/revFiles/c82baf_769513_crypto#rsa#rsa_pmeth.c: pkey_rsa_ctrl_str)
+// Recall: 0.17, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

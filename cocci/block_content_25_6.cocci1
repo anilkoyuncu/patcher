@@ -1,0 +1,27 @@
+@@
+identifier I1, I3;
+expression E2, E0, E4;
+@@
+- E0->I1 = kzalloc (E2, I3); 
++ E0->I1 = kmemdup(E4, E2, I3); 
+  ...
+- memcpy(E0->I1, E4, E2); 
+// Infered from: (linux/{prevFiles/prev_f0a4cf3_e5fd47_arch#sparc#kernel#ds.c,revFiles/f0a4cf3_e5fd47_arch#sparc#kernel#ds.c}: ds_probe), (linux/{prevFiles/prev_ff0207_027300_drivers#net#wireless#iwmc3200wifi#rx.c,revFiles/ff0207_027300_drivers#net#wireless#iwmc3200wifi#rx.c}: iwm_rx_ticket_node_alloc), (linux/{prevFiles/prev_f2c6a5_f6e0b08_drivers#power#charger-manager.c,revFiles/f2c6a5_f6e0b08_drivers#power#charger-manager.c}: charger_manager_probe)
+// False positives: (linux/revFiles/ff0207_027300_drivers#net#wireless#iwmc3200wifi#rx.c: iwm_mlme_update_bss_table)
+// Recall: 0.75, Precision: 0.75, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.80
+// -- Node Change --
+// Recall: 1.00, Precision: 0.80
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_ff0207_027300_drivers#net#wireless#iwmc3200wifi#rx.c: iwm_mlme_update_bss_table
+*/
+
+// ---------------------------------------------

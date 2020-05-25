@@ -1,0 +1,10 @@
+@@
+expression E4, E0, E1, E2, E3, E5, E6;
+typedef uint8_t;
+@@
+- av_image_copy(E0, E1, E2, E3, E4, E5, E6); 
++ av_image_copy(E0, E1, (const  uint8_t **)E2, E3, E4, E5, E6); 
+// Infered from: (FFmpeg/{prevFiles/prev_cb40d3_236ecc_libavcodec#ffv1.c,revFiles/cb40d3_236ecc_libavcodec#ffv1.c}: decode_frame), (FFmpeg/{prevFiles/prev_37498a_ea5a1d_libavcodec#nuv.c,revFiles/37498a_ea5a1d_libavcodec#nuv.c}: copy_frame), (FFmpeg/{prevFiles/prev_4ff5b2_a67dcd_libavfilter#vf_yadif.c,revFiles/4ff5b2_a67dcd_libavfilter#vf_yadif.c}: fixstride), (FFmpeg/{prevFiles/prev_e29215_c4608d_libavcodec#libkvazaar.c,revFiles/e29215_c4608d_libavcodec#libkvazaar.c}: libkvazaar_encode), (FFmpeg/{prevFiles/prev_09b3bb_f4cc38_libavcodec#libvpxdec.c,revFiles/09b3bb_f4cc38_libavcodec#libvpxdec.c}: vp8_decode), (FFmpeg/{prevFiles/prev_6d401e_be9767_libavfilter#lavfutils.c,revFiles/6d401e_be9767_libavfilter#lavfutils.c}: ff_load_image)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.86
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = gtk_gesture_multi_press_new(); 
++ E0 = GTK_EVENT_CONTROLLER(gtk_gesture_multi_press_new()); 
+// Infered from: (gtk/{prevFiles/prev_9d48a95d_cfbba2_demos#gtk-demo#sliding_puzzle.c,revFiles/9d48a95d_cfbba2_demos#gtk-demo#sliding_puzzle.c}: start_puzzle)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

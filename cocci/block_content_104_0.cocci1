@@ -1,0 +1,30 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 += (int )E1; 
++ if (I0 + E1 < E1)  
++ {
++ php_error_docref(NULL, E_ERROR, "String overflow"); 
++ }
++ I0 += E1; 
+// Infered from: (php-src/{prevFiles/prev_3b5262_61cdd1_ext#standard#math.c,revFiles/3b5262_61cdd1_ext#standard#math.c}: _php_math_number_format_ex), (php-src/{prevFiles/prev_6b2992f_f901dc_ext#standard#math.c,revFiles/6b2992f_f901dc_ext#standard#math.c}: _php_math_number_format_ex)
+// False positives: (php-src/revFiles/3b5262_61cdd1_ext#standard#math.c: _php_math_number_format_ex), (php-src/revFiles/6b2992f_f901dc_ext#standard#math.c: _php_math_number_format_ex)
+// Recall: 0.45, Precision: 0.71, Matching recall: 0.45
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.82, Precision: 0.82
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_3b5262_61cdd1_ext#standard#math.c: _php_math_number_format_ex
+ - php-src/prevFiles/prev_6b2992f_f901dc_ext#standard#math.c: _php_math_number_format_ex
+*/
+
+// ---------------------------------------------

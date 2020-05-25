@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E0, E1, E3, E4;
+@@
+- E0 = gsm_sms_char_7bit_unpack(0, E1, sizeof(I2), tvb_get_ptr(E3, E4, E1), I2); 
++ E0 = gsm_sms_char_7bit_unpack(0, E1, MAX_ADDR_SIZE, tvb_get_ptr(E3, E4, E1),  I2); 
+// Infered from: (wireshark/{prevFiles/prev_d630c2_a40cf0_epan#dissectors#packet-gsm_sms.c,revFiles/d630c2_a40cf0_epan#dissectors#packet-gsm_sms.c}: dis_field_addr)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

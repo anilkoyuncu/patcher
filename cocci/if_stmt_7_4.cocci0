@@ -1,0 +1,11 @@
+@@
+@@
+- if (!BIO_sock_init())  
++ if (BIO_sock_init() != 1)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_9e1d5e_e8e559_test#handshake_helper.c,revFiles/9e1d5e_e8e559_test#handshake_helper.c}: create_sctp_socks), (openssl/{prevFiles/prev_9e1d5e_e8e559_apps#s_socket.c,revFiles/9e1d5e_e8e559_apps#s_socket.c}: init_client), (openssl/{prevFiles/prev_9e1d5e_e8e559_apps#s_socket.c,revFiles/9e1d5e_e8e559_apps#s_socket.c}: do_server)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

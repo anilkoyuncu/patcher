@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- av_free(E0->p_ff_pic); 
++ avcodec_free_frame(&E0->p_ff_pic); 
+// Infered from: (vlc/{prevFiles/prev_26e73f_7459d0_modules#codec#avcodec#video.c,revFiles/26e73f_7459d0_modules#codec#avcodec#video.c}: InitVideoDec), (vlc/{prevFiles/prev_26e73f_7459d0_modules#codec#avcodec#video.c,revFiles/26e73f_7459d0_modules#codec#avcodec#video.c}: EndVideoDec)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

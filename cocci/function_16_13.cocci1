@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- *E0 = *E1; 
++ *E0 = 1; 
+// Infered from: (git/{prevFiles/prev_c15046_6a1640_apply.c,revFiles/c15046_6a1640_apply.c}: parse_range)
+// False positives: (redis/revFiles/d65965_505a85_src#hyperloglog.c: hllSparseToDense)
+// Recall: 0.08, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.18, Precision: 0.67
+// -- Node Change --
+// Recall: 0.28, Precision: 0.78
+// -- General --
+// Functions fully changed: 2/12(16%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - redis/prevFiles/prev_d65965_505a85_src#hyperloglog.c: hllSparseToDense
+*/
+
+// ---------------------------------------------

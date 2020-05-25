@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (!E0 && E1 - VLC_HARD_MIN_SLEEP > mdate())  
++ while (!E0 && E1 > mdate())  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_82687c_07ffb2_src#input#decoder.c,revFiles/82687c_07ffb2_src#input#decoder.c}: DecoderPlayAudio)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

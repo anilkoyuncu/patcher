@@ -1,0 +1,15 @@
+@@
+identifier I0, I2;
+type T1;
+expression E3;
+typedef CPUArchState;
+typedef CPUState;
+@@
+  CPUState *I0 = cpu_init(cpu_model); 
+  ...
+- T1 I2 = E3; 
++ CPUArchState *I2 = I0->env_ptr; 
+// Infered from: (qemu/{prevFiles/prev_61c748_17644b_linux-user#main.c,revFiles/61c748_17644b_linux-user#main.c}: cpu_copy)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

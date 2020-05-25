@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E3;
+binary operator B2 = {>> ,& };
+@@
+- E0 = E1[1] B2 E3; 
++ E0 = E1[0] B2 E3; 
+// Infered from: (qemu/{prevFiles/prev_819e71_28b9b5_hw#adb.c,revFiles/819e71_28b9b5_hw#adb.c}: adb_receive_packet), (qemu/{prevFiles/prev_819e71_28b9b5_hw#adb.c,revFiles/819e71_28b9b5_hw#adb.c}: adb_receive_packet)
+// False positives: (qemu/revFiles/424ad8_c36ed0_hw#alpha#typhoon.c: cchip_read), (qemu/revFiles/819e71_28b9b5_hw#adb.c: adb_kbd_receive_packet), (qemu/revFiles/819e71_28b9b5_hw#adb.c: adb_mouse_receive_packet), (qemu/revFiles/e309de_10d315_hw#fdc.c: fdctrl_format_sector), (qemu/revFiles/e309de_10d315_hw#fdc.c: fdctrl_start_transfer), (qemu/revFiles/e309de_10d315_hw#fdc.c: fdctrl_write_data)
+// Recall: 0.06, Precision: 0.25, Matching recall: 0.83
+
+// ---------------------------------------------

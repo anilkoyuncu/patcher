@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+@@
+- if (E0->w < 3 || E0->h < 3)  
++ if (E0->w < 3 || E0->h < 4)  
+  {
+- av_log(E1, AV_LOG_ERROR,  "Video of less than 3 columns or lines is not supported\n"); 
++ av_log(E1, AV_LOG_ERROR,  "Video of less than 3 columns or 4 lines is not supported\n"); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_8c3166_ce764a_libavfilter#vf_bwdif.c,revFiles/8c3166_ce764a_libavfilter#vf_bwdif.c}: config_props)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

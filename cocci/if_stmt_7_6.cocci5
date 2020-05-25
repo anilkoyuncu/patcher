@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (suffixcmp(E0->d_name, ".pack"))  
++ if (!ends_with(E0->d_name, ".pack"))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_595565_956623_builtin#repack.c,revFiles/595565_956623_builtin#repack.c}: get_non_kept_pack_filenames)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

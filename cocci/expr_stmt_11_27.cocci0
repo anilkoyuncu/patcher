@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E1, E0, E3;
+@@
+- SIGNAL_CONNECT(E0, E1, I2, E3); 
++ g_signal_connect(E0, E1, G_CALLBACK(I2), E3); 
+// Infered from: (wireshark/{prevFiles/prev_f9f879_9af9a0_gtk#dlg_utils.c,revFiles/f9f879_9af9a0_gtk#dlg_utils.c}: dlg_window_new), (wireshark/{prevFiles/prev_f9f879_9af9a0_gtk#dlg_utils.c,revFiles/f9f879_9af9a0_gtk#dlg_utils.c}: dlg_set_activate), (wireshark/{prevFiles/prev_f9f879_9af9a0_gtk#color_edit_dlg.c,revFiles/f9f879_9af9a0_gtk#color_edit_dlg.c}: edit_color_filter_dialog), (wireshark/{prevFiles/prev_f9f879_9af9a0_gtk#fc_stat.c,revFiles/f9f879_9af9a0_gtk#fc_stat.c}: gtk_fcstat_init), (wireshark/{prevFiles/prev_f9f879_9af9a0_gtk#fc_stat.c,revFiles/f9f879_9af9a0_gtk#fc_stat.c}: gtk_fcstat_init), (wireshark/{prevFiles/prev_f9f879_9af9a0_gtk#expert_comp_table.c,revFiles/f9f879_9af9a0_gtk#expert_comp_table.c}: error_create_popup_menu), (wireshark/{prevFiles/prev_f9f879_9af9a0_gtk#column_prefs.c,revFiles/f9f879_9af9a0_gtk#column_prefs.c}: column_prefs_show), (wireshark/{prevFiles/prev_f9f879_9af9a0_gtk#dcerpc_stat.c,revFiles/f9f879_9af9a0_gtk#dcerpc_stat.c}: gtk_dcerpcstat_cb)
+// Recall: 0.53, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

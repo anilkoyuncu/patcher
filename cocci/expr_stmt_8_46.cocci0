@@ -1,0 +1,8 @@
+@@
+expression E1, E0;
+@@
+- gtk_widget_override_cursor(E0, GTK_STATE_NORMAL, E1, E1); 
+// Infered from: (wireshark/{prevFiles/prev_2e95a6_9b1fbd_gtk#filter_dlg.c,revFiles/2e95a6_9b1fbd_gtk#filter_dlg.c}: color_filter_te), (wireshark/{prevFiles/prev_2e95a6_9b1fbd_gtk#filter_dlg.c,revFiles/2e95a6_9b1fbd_gtk#filter_dlg.c}: colorize_filter_te_as_empty)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

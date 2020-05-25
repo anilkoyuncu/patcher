@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- fread(E0, 3, 1 << E1, infile); 
++ fread(E0, 3, ((size_t )1) << E1, infile); 
+// Infered from: (libtiff/{prevFiles/prev_41feaa_bee6b8_tools#gif2tiff.c,revFiles/41feaa_bee6b8_tools#gif2tiff.c}: readscreen), (libtiff/{prevFiles/prev_41feaa_bee6b8_tools#gif2tiff.c,revFiles/41feaa_bee6b8_tools#gif2tiff.c}: readgifimage)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

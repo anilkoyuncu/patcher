@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef time_t;
+@@
+- I0 = time(NULL) - 31536001; 
++ time_t I0 = time(NULL) - 31536001; 
+// Infered from: (php-src/{prevFiles/prev_046635_529d81_ext#standard#head.c,revFiles/046635_529d81_ext#standard#head.c}: php_setcookie)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

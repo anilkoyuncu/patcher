@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- efree((char *)E0->prop.name); 
++ STR_RELEASE(E0->prop.name); 
+// Infered from: (php-src/{prevFiles/prev_18363f_35742a7_ext#reflection#php_reflection.c,revFiles/18363f_35742a7_ext#reflection#php_reflection.c}: reflection_free_objects_storage)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

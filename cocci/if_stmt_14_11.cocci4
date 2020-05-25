@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0.tm_mon > E1.tm_mon)  
++ if (E0.tm_mon > E1.tm_mon && E0.tm_year == E1.tm_year)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_b73ceb_0a1521_date.c,revFiles/b73ceb_0a1521_date.c}: approxidate)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

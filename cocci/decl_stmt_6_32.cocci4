@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0 = "ISO-8859-1"; 
+// Infered from: (vlc/{prevFiles/prev_bb0106_7e6fdd_modules#codec#subsdec.c,revFiles/bb0106_7e6fdd_modules#codec#subsdec.c}: OpenDecoder)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 0.62
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_bb0106_7e6fdd_modules#codec#subsdec.c: OpenDecoder
+ - vlc/prevFiles/prev_711b34_f22bfe_modules#codec#subsdec.c: OpenDecoder
+*/
+
+// ---------------------------------------------

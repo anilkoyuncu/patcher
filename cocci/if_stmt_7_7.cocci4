@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == (int )E1)  
++ if (E0 == E1)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_be81a9_129532_epan#dissectors#packet-rtcp.c,revFiles/be81a9_129532_epan#dissectors#packet-rtcp.c}: dissect_rtcp)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

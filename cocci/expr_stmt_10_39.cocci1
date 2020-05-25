@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- printf("%.9f", vz > 0 ? E0 :b - E0); 
++ printf("%.9f", vz >= 0 ? E0 :b - E0); 
+// Infered from: (codeflaws/{prevFiles/prev_203-D-18284996-18285038.c,revFiles/203-D-18284996-18285038.c}: main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

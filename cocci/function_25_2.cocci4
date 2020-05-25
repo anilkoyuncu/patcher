@@ -1,0 +1,8 @@
+@@
+@@
+- php_sysvsem_module.le_sem = register_list_destructors(release_sysvsem_sem,  NULL); 
++ php_sysvsem_module.le_sem = register_list_destructors(release_sysvsem_sem,  NULL, "sysvsem"); 
+// Infered from: (php-src/{prevFiles/prev_7b4983_a0cfab_ext#sysvsem#sysvsem.c,revFiles/7b4983_a0cfab_ext#sysvsem#sysvsem.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

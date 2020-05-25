@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- assert(!E0->hwaccel_picture_private); 
++ assert(!E0->f.hwaccel_picture_private); 
+// Infered from: (FFmpeg/{prevFiles/prev_95a06e_35a685_libavcodec#mpegvideo.c,revFiles/95a06e_35a685_libavcodec#mpegvideo.c}: alloc_frame_buffer)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

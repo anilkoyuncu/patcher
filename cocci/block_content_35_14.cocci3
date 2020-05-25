@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- error_report("qemu: could not load kernel '%s': %s",  loaderparams.kernel_filename, load_elf_strerror(E0)); 
++ error_report("could not load kernel '%s': %s", loaderparams.kernel_filename,  load_elf_strerror(E0)); 
+// Infered from: (qemu/{prevFiles/prev_bd6e1d_0a094a_hw#mips#mips_mipssim.c,revFiles/bd6e1d_0a094a_hw#mips#mips_mipssim.c}: load_kernel)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E1 = min(E2, 255); 
++ E1 = E0 = min(E2, 255); 
+// Infered from: (wireshark/{prevFiles/prev_d6a5a7_2f6fe5_epan#dissectors#packet-bacapp.c,revFiles/d6a5a7_2f6fe5_epan#dissectors#packet-bacapp.c}: fCharacterString)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = !E1; 
++ E0 = TRUE; 
+// Infered from: (gtk/{prevFiles/prev_a3cfb4_578dc9_gtk#gtkeventcontrollerkey.c,revFiles/a3cfb4_578dc9_gtk#gtkeventcontrollerkey.c}: update_focus)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

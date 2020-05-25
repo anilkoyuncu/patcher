@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- threads[E0] = g_thread_create(run_test, (void *)E0, TRUE, &E1); 
++ threads[E0] = g_thread_create(run_test, GINT_TO_POINTER(E0), TRUE, &E1); 
+// Infered from: (gstreamer/{prevFiles/prev_393033_2c4d0a_tests#memchunk#gmemchunktest.c,revFiles/393033_2c4d0a_tests#memchunk#gmemchunktest.c}: main), (gstreamer/{prevFiles/prev_393033_2c4d0a_tests#memchunk#gstmemchunktest.c,revFiles/393033_2c4d0a_tests#memchunk#gstmemchunktest.c}: main)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

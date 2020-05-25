@@ -1,0 +1,10 @@
+@@
+expression list E1;
+expression E0;
+@@
+- E0 = lrintf (fabs (E1)); 
++ E0 = lrintf (E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_f18d2d_64819b_libavcodec#evrcdec.c,revFiles/f18d2d_64819b_libavcodec#evrcdec.c}: bl_intrp)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

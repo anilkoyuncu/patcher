@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (BITANY(E0, AHCI_PX_CMD_CPD || AHCI_PX_CMD_MPSP))  
++ if (BITANY(E0, AHCI_PX_CMD_CPD | AHCI_PX_CMD_MPSP))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_223bb3_54bfce_modules#meta_engine#folder.c,revFiles/223bb3_54bfce_modules#meta_engine#folder.c}: FindMeta), (qemu/{prevFiles/prev_7e7d49_636a30_tests#ahci-test.c,revFiles/7e7d49_636a30_tests#ahci-test.c}: ahci_test_port_spec)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

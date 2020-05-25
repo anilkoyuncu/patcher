@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- av_image_fill_linesizes (E0, E1, E2); 
++ ret = av_image_fill_linesizes(E0, E1, E2); 
++ av_assert0(ret >= 0); 
+// Infered from: (FFmpeg/{prevFiles/prev_b70e9b_f0ea53_libavutil#imgutils.c,revFiles/b70e9b_f0ea53_libavutil#imgutils.c}: av_image_copy_to_buffer)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

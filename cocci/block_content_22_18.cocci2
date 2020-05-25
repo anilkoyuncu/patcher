@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- inflateInit(&E0); 
++ if (inflateInit(&E0) != Z_OK)  
++ {
++ fprintf(stderr, "inflateInit failed\n"); 
++ return 1; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_59eae8_adc61d_tools#cws2fws.c,revFiles/59eae8_adc61d_tools#cws2fws.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_8ab0b9_a5e004_tools#trasher.c: main
+*/
+
+// ---------------------------------------------

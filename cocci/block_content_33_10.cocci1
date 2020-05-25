@@ -1,0 +1,25 @@
+@@
+expression E0;
+@@
+- qdev_connect_gpio_out(E0->gpio, SPITZ_GPIO_ON_RESET, E0->reset); 
++ reset = qemu_allocate_irq(spitz_reset, E0, 0); 
++ qdev_connect_gpio_out(E0->gpio, SPITZ_GPIO_ON_RESET, reset); 
+// Infered from: (qemu/{prevFiles/prev_14da58_1141d1_hw#arm#spitz.c,revFiles/14da58_1141d1_hw#arm#spitz.c}: spitz_gpio_setup)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.43, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_d26a10_14da58_hw#arm#tosa.c: tosa_gpio_setup
+ - qemu/prevFiles/prev_14da58_1141d1_hw#arm#spitz.c: spitz_gpio_setup
+*/
+
+// ---------------------------------------------

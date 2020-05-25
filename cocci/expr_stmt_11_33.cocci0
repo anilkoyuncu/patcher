@@ -1,0 +1,18 @@
+@@
+identifier I0, I1, I2;
+expression E3, E4;
+typedef GError;
+typedef GtkCssProvider;
+typedef GtkCssScanner;
+@@
+  void gtk_css_provider_take_error(GtkCssProvider *I0, GtkCssScanner *I1,  GError *I2)  
+  {
+  ...
+- gtk_css_provider_emit_error(E3->provider, E3, E4); 
++ gtk_css_provider_emit_error(I0, E3, E4); 
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_d462f8_9b967a_gtk#gtkcssprovider.c,revFiles/d462f8_9b967a_gtk#gtkcssprovider.c}: gtk_css_provider_take_error)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

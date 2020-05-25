@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- if (E0->timefmt.len == sizeof("%s") - 1 && E0->timefmt.data[0] == '%' && E0->timefmt.data[  1] == 's')  
++ if (E0 == NULL || (E0->timefmt.len == sizeof("%s") - 1 && E0->timefmt.data[  0] == '%' && E0->timefmt.data[1] == 's'))  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_8de766_2d3f3f_src#http#modules#ngx_http_ssi_filter_module.c,revFiles/8de766_2d3f3f_src#http#modules#ngx_http_ssi_filter_module.c}: ngx_http_ssi_date_gmt_local_variable)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.43, Precision: 1.00
+// -- Node Change --
+// Recall: 0.35, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/7(42%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_ba17fa_742c5c_ext#standard#iptc.c: PHP_FUNCTION
+ - qemu/prevFiles/prev_f8c88b_50866b_target-arm#helper.c: cpsr_write
+ - qemu/prevFiles/prev_8a4c1c_330d04_translate-i386.c: gen_movl_seg_T0
+*/
+
+// ---------------------------------------------

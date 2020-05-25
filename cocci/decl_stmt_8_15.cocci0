@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef Py_ssize_t;
+@@
+- long I0 = PyLong_AsLong(E1); 
++ Py_ssize_t I0 = PyLong_AsSsize_t(E1); 
+// Infered from: (cpython/{prevFiles/prev_7660b8_9a644b_Objects#listobject.c,revFiles/7660b8_9a644b_Objects#listobject.c}: listiter_setstate)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

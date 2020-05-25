@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0 = NULL; 
++ E0 = 0; 
+// Infered from: (qemu/{prevFiles/prev_cc9442_15338f_cpu-exec.c,revFiles/cc9442_15338f_cpu-exec.c}: tb_find_fast)
+// False positives: (vlc/revFiles/68c786_51169d_modules#control#rc.c: Run)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

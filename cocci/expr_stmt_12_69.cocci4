@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+typedef ULONGLONG;
+typedef _PyTime_t;
+@@
+  ULONGLONG I0; 
+  ...
+- assert(sizeof(E1) <= sizeof(_PyTime_t )); 
++ assert(sizeof(I0) <= sizeof(_PyTime_t )); 
+// Infered from: (cpython/{prevFiles/prev_51b939_c60542_Python#pytime.c,revFiles/51b939_c60542_Python#pytime.c}: pymonotonic)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

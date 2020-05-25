@@ -1,0 +1,26 @@
+@@
+expression E0, E1;
+@@
+- if (strcmp(E0->psz_demux, "tydemux") && strcasecmp(E1, ".ty"))  
++ if (E1 && strcmp(E0->psz_demux, "tydemux") && strcasecmp(E1, ".ty"))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_111a2b_44d1b3_modules#demux#ty.c,revFiles/111a2b_44d1b3_modules#demux#ty.c}: TyOpen)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_5ad3d2_f2ec3f_ext#standard#head.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

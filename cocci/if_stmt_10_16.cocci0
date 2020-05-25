@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == E1->channels - 1)  
++ if (E0 == E1->channels - 1 || (E0 & 1))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_c88535_06a66e_libavcodec#alsdec.c,revFiles/c88535_06a66e_libavcodec#alsdec.c}: read_frame_data)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

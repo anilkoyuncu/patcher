@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- BIO_printf(E0, "Printing Up to Level %zd\n", E1 - E2->levels); 
++ BIO_printf(E0, "Printing Up to Level %ld\n", (long )(E1 - E2->levels)); 
+// Infered from: (openssl/{prevFiles/prev_e774ad_6f93f0_crypto#x509#pcy_tree.c,revFiles/e774ad_6f93f0_crypto#x509#pcy_tree.c}: tree_print)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

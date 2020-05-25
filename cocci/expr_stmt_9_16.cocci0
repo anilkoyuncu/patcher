@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_item(E0, E1, E2, E3, -1, FALSE); 
++ proto_tree_add_item(E0, E1, E2, E3, -1, ENC_ASCII | ENC_NA); 
+// Infered from: (wireshark/{prevFiles/prev_30cee9_4052a4_epan#dissectors#packet-kerberos4.c,revFiles/30cee9_4052a4_epan#dissectors#packet-kerberos4.c}: dissect_krb4_string)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

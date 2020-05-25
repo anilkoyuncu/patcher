@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- php_char_to_str(E0, Z_STRLEN_PP(E1), '\n', "<br>\n", 5, return_value); 
++ php_char_to_str(E0, Z_STRLEN_PP(E1), '\n', "<br />\n", 7, return_value); 
+// Infered from: (php-src/{prevFiles/prev_744d1f_43c761_ext#standard#string.c,revFiles/744d1f_43c761_ext#standard#string.c}: php_hebrev)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,7 @@
+@@
+@@
+- dprintf("usb-ohci: usb_bit_time=%lli usb_frame_time=%lli\n", usb_frame_time,  usb_bit_time); 
+// Infered from: (qemu/{prevFiles/prev_0bf9e3_c0a2a0_hw#usb-ohci.c,revFiles/0bf9e3_c0a2a0_hw#usb-ohci.c}: usb_ohci_init)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- insert_by_date(E0, E1); 
++ commit_list_insert(E0, E1); 
+// Infered from: (git/{prevFiles/prev_26a8ad_a3e65d_builtin-show-branch.c,revFiles/26a8ad_a3e65d_builtin-show-branch.c}: mark_seen)
+// False positives: (git/revFiles/26a8ad_a3e65d_builtin-show-branch.c: cmd_show_branch), (git/revFiles/26a8ad_a3e65d_builtin-show-branch.c: join_revs)
+// Recall: 0.02, Precision: 0.33, Matching recall: 0.67
+
+// ---------------------------------------------

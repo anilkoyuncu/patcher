@@ -1,0 +1,11 @@
+@@
+identifier I0 = {_cairo_pattern_init_solid ,es_out_Control ,g_warning ,gtk_tree_view_draw_grid_lines ,qemu_aio_set_event_notifier };
+expression E1, E2, E3;
+@@
+- I0(E1, E2, E3); 
++ I0(E1, E2); 
+// Infered from: (vlc/{prevFiles/prev_2471b2_3e90cf_modules#demux#asf#asf.c,revFiles/2471b2_3e90cf_modules#demux#asf#asf.c}: SeekPrepare), (qemu/{prevFiles/prev_b10577_8b2d42_block#win32-aio.c,revFiles/b10577_8b2d42_block#win32-aio.c}: win32_aio_init), (wireshark/{prevFiles/prev_93370c_088398_epan#plugins.c,revFiles/93370c_088398_epan#plugins.c}: plugins_scan_dir), (gtk/{prevFiles/prev_550123_d2c8b6_gtk#gtktreeview.c,revFiles/550123_d2c8b6_gtk#gtktreeview.c}: gtk_tree_view_bin_draw), (cairo/{prevFiles/prev_fb6a00_42956b_src#drm#cairo-drm-intel.c,revFiles/fb6a00_42956b_src#drm#cairo-drm-intel.c}: intel_gradient_render)
+// False positives: (vlc/revFiles/2471b2_3e90cf_modules#demux#asf#asf.c: Demux), (vlc/revFiles/2471b2_3e90cf_modules#demux#asf#asf.c: SeekIndex), (vlc/revFiles/2471b2_3e90cf_modules#demux#asf#asf.c: SendPacket), (wireshark/revFiles/93370c_088398_epan#plugins.c: plugins_scan_dir)
+// Recall: 0.07, Precision: 0.56, Matching recall: 1.00
+
+// ---------------------------------------------

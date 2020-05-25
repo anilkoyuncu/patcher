@@ -1,0 +1,8 @@
+@@
+@@
+- return php_stream_filter_register_factory("string.rot13",  &strfilter_rot13_factory); 
++ return php_stream_filter_register_factory(); 
+// Infered from: (php-src/{prevFiles/prev_090e30_ccf515_ext#standard#string.c,revFiles/090e30_ccf515_ext#standard#string.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

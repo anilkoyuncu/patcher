@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = E1->regs[WDT_RELOAD_VALUE] * 1000; 
++ I0 = E1->regs[WDT_RELOAD_VALUE] * 1000ULL; 
+// Infered from: (qemu/{prevFiles/prev_f95853_a0b261_hw#watchdog#wdt_aspeed.c,revFiles/f95853_a0b261_hw#watchdog#wdt_aspeed.c}: aspeed_wdt_reload)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - tcl/prevFiles/prev_2ea20a_753e10_generic#tclCmdMZ.c: Tcl_TimeRateObjCmd
+*/
+
+// ---------------------------------------------

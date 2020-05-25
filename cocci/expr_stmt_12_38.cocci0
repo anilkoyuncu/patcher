@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- memmove(E0->buf + E1, E0->buf, E0->len * sizeof(uint)); 
++ memmove(E0->buf + E1, E0->buf, E0->len); 
+// Infered from: (php-src/{prevFiles/prev_c44efb_80a851_sapi#phpdbg#phpdbg_prompt.c,revFiles/c44efb_80a851_sapi#phpdbg#phpdbg_prompt.c}: phpdbg_compile)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 += !check_extents(E1, E2, E3, PATH, EQUALS, 0, 0, 0, 0); 
++ E0 += !check_extents(E1, E2, E3, PATH, EQUALS, 200, 400, 0, 0); 
+// Infered from: (cairo/{prevFiles/prev_062e78_c7b160_test#get-path-extents.c,revFiles/062e78_c7b160_test#get-path-extents.c}: draw)
+// False positives: (cairo/revFiles/062e78_c7b160_test#get-path-extents.c: draw)
+// Recall: 0.09, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

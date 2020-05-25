@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- char I0[TCL_UTF_MAX]; 
++ char I0[TCL_UTF_MAX] = ""; 
+// Infered from: (tcl/{prevFiles/prev_795269_cba6d8_generic#tclCompile.c,revFiles/795269_cba6d8_generic#tclCompile.c}: TclWordKnownAtCompileTime), (tcl/{prevFiles/prev_795269_cba6d8_generic#tclCompile.c,revFiles/795269_cba6d8_generic#tclCompile.c}: TclCompileTokens), (tcl/{prevFiles/prev_795269_cba6d8_generic#tclParse.c,revFiles/795269_cba6d8_generic#tclParse.c}: TclSubstTokens)
+// False positives: (tcl/revFiles/795269_cba6d8_generic#tclParse.c: TclParseBackslash)
+// Recall: 0.30, Precision: 0.86, Matching recall: 1.00
+
+// ---------------------------------------------

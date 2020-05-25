@@ -1,0 +1,37 @@
+@@
+identifier I0;
+expression E2, E1, E3;
+typedef PyObject;
+@@
+- PyObject *I0 = PyObject_Str(E1); 
+- if (E2)  
+- {
+  ...
+- }
+- Py_XSETREF(E3->task_name, I0); 
+// Infered from: (cpython/{prevFiles/prev_a75482_22d131_Modules#_asynciomodule.c,revFiles/a75482_22d131_Modules#_asynciomodule.c}: _asyncio_Task_set_name)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.38, Precision: 1.00
+// -- Node Change --
+// Recall: 0.30, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/8(25%)
+
+/*
+Functions where the patch applied partially:
+ - cpython/prevFiles/prev_a75482_22d131_Modules#_asynciomodule.c: _asyncio_Task_set_name
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_921de7_543574_modules#demux#demuxdump.c: Open
+ - vlc/prevFiles/prev_921de7_543574_modules#demux#ts.c: Open
+ - cairo/prevFiles/prev_f99358_c0fe55_src#cairo-script-surface.c: _emit_path
+ - vlc/prevFiles/prev_e1fd82_4ec2f0_modules#video_filter#logo.c: LogoCallback
+ - cpython/prevFiles/prev_a75482_22d131_Modules#_asynciomodule.c: _asyncio_Task___init___impl
+*/
+
+// ---------------------------------------------

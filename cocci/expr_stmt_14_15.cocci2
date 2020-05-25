@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- outw(1 << 0, E0->daqio + PCI230_ADCEN); 
++ outw(BIT(0), E0->daqio + PCI230_ADCEN); 
+// Infered from: (linux/{prevFiles/prev_557e361_9a3aeb_drivers#staging#comedi#drivers#amplc_pci230.c,revFiles/557e361_9a3aeb_drivers#staging#comedi#drivers#amplc_pci230.c}: pci230_auto_attach)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

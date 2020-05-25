@@ -1,0 +1,45 @@
+@@
+expression E0, E1;
+@@
+- if (E0 || E1->d_inode == NULL || S_ISLNK(E1->d_inode->i_mode))  
++ if (E0 || E1->d_inode == NULL || d_is_symlink(E1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_e36cb0_2c616d_fs#ceph#file.c,revFiles/e36cb0_2c616d_fs#ceph#file.c}: ceph_atomic_open)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.45, Precision: 1.00
+// -- Node Change --
+// Recall: 0.43, Precision: 1.00
+// -- General --
+// Functions fully changed: 8/20(40%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_e36cb0_2c616d_fs#overlayfs#dir.c: ovl_rename2
+*/
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_e36cb0_2c616d_fs#reiserfs#xattr.c: delete_one_xattr
+ - linux/prevFiles/prev_e36cb0_2c616d_fs#hfsplus#dir.c: hfsplus_rename
+ - linux/prevFiles/prev_e36cb0_2c616d_security#inode.c: securityfs_remove
+ - linux/prevFiles/prev_e36cb0_2c616d_fs#fuse#dir.c: fuse_reverse_inval_entry
+ - linux/prevFiles/prev_e36cb0_2c616d_fs#overlayfs#dir.c: ovl_cleanup
+ - linux/prevFiles/prev_e36cb0_2c616d_fs#reiserfs#xattr.c: reiserfs_for_each_xattr
+ - linux/prevFiles/prev_e36cb0_2c616d_fs#gfs2#dir.c: gfs2_dir_del
+ - linux/prevFiles/prev_e36cb0_2c616d_fs#ecryptfs#file.c: ecryptfs_open
+ - linux/prevFiles/prev_e36cb0_2c616d_fs#exportfs#expfs.c: exportfs_decode_fh
+ - linux/prevFiles/prev_e36cb0_2c616d_fs#coda#dir.c: coda_rename
+ - linux/prevFiles/prev_e36cb0_2c616d_arch#s390#hypfs#inode.c: hypfs_remove
+*/
+
+// ---------------------------------------------

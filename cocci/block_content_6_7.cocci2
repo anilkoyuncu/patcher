@@ -1,0 +1,15 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef bool;
+typedef uint16_t;
+@@
+- bool I0; 
+- uint16_t I1; 
+- I0 = (pci_bridge_get_sec_bus(PCI_BRIDGE(E2))->devices[0] != NULL); 
++ bool I0 = pci_bridge_get_sec_bus(PCI_BRIDGE(E2))->devices[0]; 
++ uint16_t I1; 
+// Infered from: (qemu/{prevFiles/prev_20de98_554f802_hw#pci#pcie.c,revFiles/20de98_554f802_hw#pci#pcie.c}: pcie_cap_slot_reset)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

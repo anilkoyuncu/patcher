@@ -1,0 +1,30 @@
+@@
+expression E0, E1;
+@@
+- Curl_ssl_delsessionid(E0, E1); 
++ Curl_ssl_delsessionid(E0, (void *)E1); 
+// Infered from: (curl/{prevFiles/prev_90412c_78729e_lib#curl_schannel.c,revFiles/90412c_78729e_lib#curl_schannel.c}: schannel_connect_step3)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.78, Precision: 0.88
+// -- Node Change --
+// Recall: 0.78, Precision: 0.72
+// -- General --
+// Functions fully changed: 5/10(50%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_90412c_78729e_lib#curl_schannel.c: schannel_connect_step1
+ - wireshark/prevFiles/prev_71209c_3f0e50_epan#dissectors#packet-iuup.c: dissect_iuup_heur
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_76241d_89227a_ares#ares_init.c: config_sortlist
+ - curl/prevFiles/prev_76241d_89227a_ares#ares_init.c: try_option
+ - curl/prevFiles/prev_76241d_89227a_ares#ares_init.c: try_config
+*/
+
+// ---------------------------------------------

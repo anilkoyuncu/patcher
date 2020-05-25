@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- allocate_buffers(E0); 
++ if (allocate_buffers(E0))  
++ {
++ return -1; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_1e25a7_ba2433_libavcodec#shorten.c,revFiles/1e25a7_ba2433_libavcodec#shorten.c}: shorten_decode_frame)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.93, Precision: 0.93
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_fb7e37_27e3dd_linux-user#mmap.c: target_mmap
+*/
+
+// ---------------------------------------------

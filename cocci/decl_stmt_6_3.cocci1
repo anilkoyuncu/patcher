@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- void **I0 = EG(argument_stack).top_element; 
++ void **I0 = EG(argument_stack).top_element - 1; 
+// Infered from: (php-src/{prevFiles/prev_7264ff_f1823e_Zend#zend_builtin_functions.c,revFiles/7264ff_f1823e_Zend#zend_builtin_functions.c}: zend_fetch_debug_backtrace)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

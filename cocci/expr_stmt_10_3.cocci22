@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- printf("\n%lld", E0); 
++ printf("\n0"); 
+// Infered from: (codeflaws/{prevFiles/prev_546-A-18287587-18287605.c,revFiles/546-A-18287587-18287605.c}: main)
+// False positives: (codeflaws/revFiles/546-A-18287587-18287605.c: main)
+// Recall: 0.02, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef ConsoleThreadInfo;
+@@
+- ConsoleThreadInfo *I0 = &E1->reader; 
++ ConsoleThreadInfo *I0 = &E1->writer; 
+// Infered from: (tcl/{prevFiles/prev_7bcce3_efde63_win#tclWinConsole.c,revFiles/7bcce3_efde63_win#tclWinConsole.c}: ConsoleOutputProc), (tcl/{prevFiles/prev_e9a6c3_bb70b1_win#tclWinConsole.c,revFiles/e9a6c3_bb70b1_win#tclWinConsole.c}: ConsoleOutputProc)
+// False positives: (tcl/revFiles/7bcce3_efde63_win#tclWinConsole.c: ConsoleReaderThread), (tcl/revFiles/7bcce3_efde63_win#tclWinConsole.c: WaitForRead), (tcl/revFiles/e9a6c3_bb70b1_win#tclWinConsole.c: ConsoleReaderThread), (tcl/revFiles/e9a6c3_bb70b1_win#tclWinConsole.c: WaitForRead)
+// Recall: 0.05, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

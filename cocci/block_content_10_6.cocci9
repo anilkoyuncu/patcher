@@ -1,0 +1,15 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef u_char;
+typedef u_int;
+@@
+- u_int I0 = *E1 * 10 + (E2 - E3); 
++ size_t I0 = *E1 * 10 + (E2 - E3); 
+  ...
+- *E1 = I0; 
++ *E1 = (u_char )I0; 
+// Infered from: (wireshark/{prevFiles/prev_cf2b47_c86c616_inet_pton.c,revFiles/cf2b47_c86c616_inet_pton.c}: inet_pton4)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

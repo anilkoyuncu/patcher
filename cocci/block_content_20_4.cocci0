@@ -1,0 +1,12 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- set_irq_chip(E0, &I1); 
+- set_irq_handler(E0, I2); 
++ irq_set_chip(E0, &I1); 
++ irq_set_handler(E0, I2); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#mainstone.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#mainstone.c}: mainstone_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-at91#gpio.c,revFiles/6845664a_25a566_arch#arm#mach-at91#gpio.c}: at91_gpio_irq_setup), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#pcm990-baseboard.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#pcm990-baseboard.c}: pcm990_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-mxs#gpio.c,revFiles/6845664a_25a566_arch#arm#mach-mxs#gpio.c}: mxs_gpio_init), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-lpc32xx#irq.c,revFiles/6845664a_25a566_arch#arm#mach-lpc32xx#irq.c}: lpc32xx_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-gemini#gpio.c,revFiles/6845664a_25a566_arch#arm#mach-gemini#gpio.c}: gemini_gpio_init), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-mx3#mach-mx31ads.c,revFiles/6845664a_25a566_arch#arm#mach-mx3#mach-mx31ads.c}: mx31ads_init_expio), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#balloon3.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#balloon3.c}: balloon3_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#viper.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#viper.c}: viper_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#plat-stmp3xxx#pinmux.c,revFiles/6845664a_25a566_arch#arm#plat-stmp3xxx#pinmux.c}: stmp3xxx_pinmux_init), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#plat-mxc#3ds_debugboard.c,revFiles/6845664a_25a566_arch#arm#plat-mxc#3ds_debugboard.c}: mxc_expio_init), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#lpd270.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#lpd270.c}: lpd270_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-pxa#lubbock.c,revFiles/6845664a_25a566_arch#arm#mach-pxa#lubbock.c}: lubbock_init_irq)
+// Recall: 0.46, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

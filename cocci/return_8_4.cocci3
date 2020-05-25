@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- return php_stream_free(E0, PHP_STREAM_FREE_CLOSE | PHP_STREAM_FREE_KEEP_RSRC); 
++ return php_stream_free(E0,  PHP_STREAM_FREE_CLOSE | PHP_STREAM_FREE_KEEP_RSRC | PHP_STREAM_FREE_RSRC_DTOR); 
+// Infered from: (php-src/{prevFiles/prev_6bebe8_2079b0_main#streams#cast.c,revFiles/6bebe8_2079b0_main#streams#cast.c}: stream_cookie_closer), (php-src/{prevFiles/prev_6bebe8_2079b0_main#streams#cast.c,revFiles/6bebe8_2079b0_main#streams#cast.c}: stream_cookie_closer)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_31390c_eadd82_ompi#mca#coll#self#coll_self_allgatherv.c: mca_coll_self_allgatherv_intra
+*/
+
+// ---------------------------------------------

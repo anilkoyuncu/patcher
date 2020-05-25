@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = E1;E0 <= E2;E0++)  
++ for(E0 = 1;E0 <= E2;E0++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_284-A-14681239-14681253.c,revFiles/284-A-14681239-14681253.c}: main), (codeflaws/{prevFiles/prev_454-A-14788727-14788751.c,revFiles/454-A-14788727-14788751.c}: main), (codeflaws/{prevFiles/prev_637-A-16747066-16747205.c,revFiles/637-A-16747066-16747205.c}: main), (codeflaws/{prevFiles/prev_284-A-3415239-3415277.c,revFiles/284-A-3415239-3415277.c}: main)
+// False positives: (codeflaws/revFiles/140-F-1016008-1016010.c: main), (codeflaws/revFiles/284-A-3415239-3415277.c: main), (codeflaws/revFiles/454-A-14788727-14788751.c: main), (codeflaws/revFiles/543-A-11188983-11189003.c: main), (codeflaws/revFiles/637-A-16747066-16747205.c: main)
+// Recall: 0.11, Precision: 0.40, Matching recall: 0.67
+
+// ---------------------------------------------

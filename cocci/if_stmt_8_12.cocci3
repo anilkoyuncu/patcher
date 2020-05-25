@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 <= 108000000)  
++ if (E0 != 0 && E0 <= 108000000)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_05b5a5_ef0e4ce_modules#access#dtv#access.c,revFiles/05b5a5_ef0e4ce_modules#access#dtv#access.c}: var_InheritFrequency)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,16 @@
+@@
+identifier I0;
+@@
+- static int I0 = 0; 
+- if (I0 != 0)  
++ static int initialized = 0; 
++ if (initialized != 0)  
+  {
+  ...
+  }
+- I0 = 1; 
++ initialized = 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavcodec#qdm2.c,revFiles/5e5348_f1cc49_libavcodec#qdm2.c}: qdm2_init), (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavcodec#utils.c,revFiles/5e5348_f1cc49_libavcodec#utils.c}: avcodec_init)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

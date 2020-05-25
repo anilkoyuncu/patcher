@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- for(E0 = 0;E0 < 16;E0++)  
++ for(E0 = 16;E0 < 32;E0++)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_151802_da97f5_target-arm#machine.c,revFiles/151802_da97f5_target-arm#machine.c}: cpu_load)
+// False positives: (qemu/revFiles/151802_da97f5_target-arm#machine.c: cpu_load), (qemu/revFiles/151802_da97f5_target-arm#machine.c: cpu_save)
+// Recall: 0.50, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,30 @@
+@@
+expression E0;
+@@
+- free(E0); 
+- E0 = NULL; 
++ FREE_AND_NULL(E0); 
+// Infered from: (git/{prevFiles/prev_6a83d9_cf9f49_commit.c,revFiles/6a83d9_cf9f49_commit.c}: free_commit_buffer), (git/{prevFiles/prev_6a83d9_cf9f49_read-cache.c,revFiles/6a83d9_cf9f49_read-cache.c}: discard_index), (git/{prevFiles/prev_6a83d9_cf9f49_read-cache.c,revFiles/6a83d9_cf9f49_read-cache.c}: stat_validity_clear), (git/{prevFiles/prev_6a83d9_cf9f49_builtin#index-pack.c,revFiles/6a83d9_cf9f49_builtin#index-pack.c}: free_base_data), (git/{prevFiles/prev_6a83d9_cf9f49_builtin#index-pack.c,revFiles/6a83d9_cf9f49_builtin#index-pack.c}: unpack_data), (git/{prevFiles/prev_6a83d9_cf9f49_transport.c,revFiles/6a83d9_cf9f49_transport.c}: transport_unlock_pack), (git/{prevFiles/prev_6a83d9_cf9f49_ref-filter.c,revFiles/6a83d9_cf9f49_ref-filter.c}: ref_array_clear), (git/{prevFiles/prev_6a83d9_cf9f49_object.c,revFiles/6a83d9_cf9f49_object.c}: object_array_clear), (git/{prevFiles/prev_6a83d9_cf9f49_sequencer.c,revFiles/6a83d9_cf9f49_sequencer.c}: todo_list_release), (git/{prevFiles/prev_6a83d9_cf9f49_tree-diff.c,revFiles/6a83d9_cf9f49_tree-diff.c}: path_appendnew), (git/{prevFiles/prev_6a83d9_cf9f49_tree-diff.c,revFiles/6a83d9_cf9f49_tree-diff.c}: diff_tree_paths), (git/{prevFiles/prev_6a83d9_cf9f49_apply.c,revFiles/6a83d9_cf9f49_apply.c}: check_preimage), (git/{prevFiles/prev_6a83d9_cf9f49_grep.c,revFiles/6a83d9_cf9f49_grep.c}: grep_source_clear_data), (git/{prevFiles/prev_6a83d9_cf9f49_diff.c,revFiles/6a83d9_cf9f49_diff.c}: free_diff_words_data), (git/{prevFiles/prev_6a83d9_cf9f49_diff.c,revFiles/6a83d9_cf9f49_diff.c}: diff_free_filespec_data), (git/{prevFiles/prev_6a83d9_cf9f49_pathspec.c,revFiles/6a83d9_cf9f49_pathspec.c}: clear_pathspec), (git/{prevFiles/prev_e140f7_1b83d1_ll-merge.c,revFiles/e140f7_1b83d1_ll-merge.c}: ll_ext_merge), (git/{prevFiles/prev_6a83d9_cf9f49_builtin#am.c,revFiles/6a83d9_cf9f49_builtin#am.c}: run_applypatch_msg_hook), (git/{prevFiles/prev_6a83d9_cf9f49_branch.c,revFiles/6a83d9_cf9f49_branch.c}: find_tracked_branch), (git/{prevFiles/prev_6a83d9_cf9f49_transport-helper.c,revFiles/6a83d9_cf9f49_transport-helper.c}: disconnect_helper), (git/{prevFiles/prev_6a83d9_cf9f49_transport-helper.c,revFiles/6a83d9_cf9f49_transport-helper.c}: push_update_ref_status), (git/{prevFiles/prev_6a83d9_cf9f49_transport-helper.c,revFiles/6a83d9_cf9f49_transport-helper.c}: push_update_ref_status), (git/{prevFiles/prev_6a83d9_cf9f49_transport-helper.c,revFiles/6a83d9_cf9f49_transport-helper.c}: push_update_ref_status), (git/{prevFiles/prev_6a83d9_cf9f49_transport-helper.c,revFiles/6a83d9_cf9f49_transport-helper.c}: push_update_ref_status), (git/{prevFiles/prev_6a83d9_cf9f49_transport-helper.c,revFiles/6a83d9_cf9f49_transport-helper.c}: push_update_ref_status), (git/{prevFiles/prev_6a83d9_cf9f49_transport-helper.c,revFiles/6a83d9_cf9f49_transport-helper.c}: push_update_ref_status), (git/{prevFiles/prev_6a83d9_cf9f49_transport-helper.c,revFiles/6a83d9_cf9f49_transport-helper.c}: push_update_ref_status), (git/{prevFiles/prev_6a83d9_cf9f49_transport-helper.c,revFiles/6a83d9_cf9f49_transport-helper.c}: push_update_ref_status), (git/{prevFiles/prev_6a83d9_cf9f49_credential.c,revFiles/6a83d9_cf9f49_credential.c}: credential_apply_config), (git/{prevFiles/prev_6a83d9_cf9f49_tree.c,revFiles/6a83d9_cf9f49_tree.c}: free_tree_buffer), (git/{prevFiles/prev_6a83d9_cf9f49_sha1-array.c,revFiles/6a83d9_cf9f49_sha1-array.c}: oid_array_clear)
+// False positives: (curl/revFiles/14b77d_e125ee_lib#hash.c: Curl_hash_alloc), (curl/revFiles/14b77d_e125ee_lib#hash.c: Curl_hash_clean), (curl/revFiles/14b77d_e125ee_lib#hash.c: Curl_hash_init), (curl/revFiles/14b77d_e125ee_lib#hash.c: mk_hash_element), (git/revFiles/6a83d9_cf9f49_builtin#am.c: am_next), (git/revFiles/6a83d9_cf9f49_credential.c: credential_reject), (git/revFiles/6a83d9_cf9f49_grep.c: grep_source_clear)
+// Recall: 0.99, Precision: 0.67, Matching recall: 0.99
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.81
+// -- Node Change --
+// Recall: 1.00, Precision: 0.68
+// -- General --
+// Functions fully changed: 25/31(80%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_14b77d_e125ee_lib#hash.c: Curl_hash_init
+ - git/prevFiles/prev_6a83d9_cf9f49_builtin#am.c: am_next
+ - git/prevFiles/prev_6a83d9_cf9f49_credential.c: credential_reject
+ - git/prevFiles/prev_6a83d9_cf9f49_grep.c: grep_source_clear
+ - curl/prevFiles/prev_14b77d_e125ee_lib#hash.c: Curl_hash_alloc
+ - curl/prevFiles/prev_14b77d_e125ee_lib#hash.c: mk_hash_element
+*/
+
+// ---------------------------------------------

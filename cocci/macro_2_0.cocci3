@@ -1,0 +1,50 @@
+@@
+expression E0, E1, E2, E3;
+iterator name ZEND_HASH_FOREACH_KEY_VAL;
+iterator name ZEND_HASH_FOREACH_KEY_VAL_IND;
+@@
+- ZEND_HASH_FOREACH_KEY_VAL (E0, E1, E2, E3)  
++ ZEND_HASH_FOREACH_KEY_VAL_IND (E0, E1, E2, E3)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_0ade00_bdeedd_Zend#zend.c,revFiles/0ade00_bdeedd_Zend#zend.c}: print_flat_hash)
+// False positives: (php-src/revFiles/0ade00_bdeedd_Zend#zend.c: print_hash), (php-src/revFiles/97ff1c_fcfeb6_ext#soap#soap.c: serialize_response_call2)
+// Recall: 0.04, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.23, Precision: 0.75
+// -- Node Change --
+// Recall: 0.22, Precision: 0.75
+// -- General --
+// Functions fully changed: 6/28(21%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_ce95e5_e25077_Python#pystrtod.c: ensure_minumim_exponent_length
+ - php-src/prevFiles/prev_136dd5_0874ef_ext#reflection#php_reflection.c: 
+ - gtk/prevFiles/prev_8f273d_96f6f2_modules#printbackends#cloudprint#gtkprintbackendcloudprint.c: gtk_print_backend_cloudprint_get_type
+ - wireshark/prevFiles/prev_bb0ec1_7a23f4_codecs#speex#resample.c: 
+ - cpython/prevFiles/prev_26fd96_8694a6_Modules#operator.c: 
+ - qemu/prevFiles/prev_3a2636_7f7623_hw#spapr_pci.c: spapr_populate_pci_devices
+ - cpython/prevFiles/prev_9a0517_cc8cfd_Python#pystrtod.c: ensure_minumim_exponent_length
+ - php-src/prevFiles/prev_cbbfeb_75c7f8_ext#unicode#collator.c: collator_instanciate
+ - FFmpeg/prevFiles/prev_1d86e4_53d31e_tests#checkasm#opusdsp.c: test_deemphasis
+ - php-src/prevFiles/prev_99bc88_88ccaf_ext#mime_magic#mime_magic.c: 
+ - gtk/prevFiles/prev_8f273d_96f6f2_modules#printbackends#cloudprint#gtkprintbackendcloudprint.c: 
+ - php-src/prevFiles/prev_b38699_136dd5_ext#reflection#php_reflection.c: 
+ - php-src/prevFiles/prev_cbbfeb_75c7f8_ext#unicode#collator.c: PHP_FUNCTION
+ - FFmpeg/prevFiles/prev_3d3243_bcbe9e_tests#checkasm#sbrdsp.c: test_sum_square
+ - php-src/prevFiles/prev_092f78_276b31_sapi#cli#php_cli.c: sapi_cli_register_variables
+ - php-src/prevFiles/prev_38c101_e786d4_ext#sablot#sablot.c: 
+ - qemu/prevFiles/prev_fcd6a4_859443_block.c: bdrv_reopen_multiple
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_97ff1c_fcfeb6_ext#soap#soap.c: serialize_response_call2
+ - php-src/prevFiles/prev_0ade00_bdeedd_Zend#zend.c: print_hash
+*/
+
+// ---------------------------------------------

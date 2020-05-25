@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 < 0 || E0 > 32767)  
++ if (E0 < 1 || E0 > 32767)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_436ca5_a66691_ext#standard#datetime.c,revFiles/436ca5_a66691_ext#standard#datetime.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

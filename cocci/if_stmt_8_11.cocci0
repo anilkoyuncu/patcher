@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!(IB_STATUS[0] && IB_STATUS[0]) && E0->stmt)  
++ if (!(IB_STATUS[0] && IB_STATUS[1]) && E0->stmt)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_87148b_0e9d6c_ext#interbase#interbase.c,revFiles/87148b_0e9d6c_ext#interbase#interbase.c}: _php_ibase_free_query)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

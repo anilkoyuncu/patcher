@@ -1,0 +1,23 @@
+@@
+expression E3, E0, E1, E2, E6, E5;
+binary operator B4 = {* ,/ };
+@@
+- if ((E0 = ff_listen_connect(E1, E2->ai_addr, E2->ai_addrlen, E3 B4 E5, E6,  E2->ai_next)) < 0)  
++ if ((E0 = ff_listen_connect(E1, E2->ai_addr, E2->ai_addrlen, E3 B4 E5, E6,  !!E2->ai_next)) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_22fbc7_59360c_libavformat#tcp.c,revFiles/22fbc7_59360c_libavformat#tcp.c}: tcp_open), (FFmpeg/{prevFiles/prev_a6a459_26f027_libavformat#tcp.c,revFiles/a6a459_26f027_libavformat#tcp.c}: tcp_open)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

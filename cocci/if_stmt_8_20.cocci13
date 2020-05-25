@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->fmt_out.video.i_frame_rate > 0 && E0->fmt_out.video.i_frame_rate_base > 0)  
++ if (E0->fmt_in.video.i_frame_rate > 0 && E0->fmt_in.video.i_frame_rate_base > 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_14f520_75813f_modules#codec#avcodec#video.c,revFiles/14f520_75813f_modules#codec#avcodec#video.c}: ffmpeg_NewPictBuf)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

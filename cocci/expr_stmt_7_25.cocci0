@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- *E0 = ompi_request_empty.req_status; 
++ *E0 = ompi_status_empty; 
+// Infered from: (ompi/{prevFiles/prev_233100_eeb1d8_ompi#mpi#c#wait.c,revFiles/233100_eeb1d8_ompi#mpi#c#wait.c}: MPI_Wait)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

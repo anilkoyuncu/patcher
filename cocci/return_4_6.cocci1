@@ -1,0 +1,9 @@
+@@
+@@
+- return INT_MAX; 
++ return INT_MAX / 4; 
+// Infered from: (FFmpeg/{prevFiles/prev_096c3b_dffcdb_libavcodec#motion_est.c,revFiles/096c3b_dffcdb_libavcodec#motion_est.c}: check_input_motion)
+// False positives: (FFmpeg/revFiles/096c3b_dffcdb_libavcodec#motion_est.c: h263_mv4_search), (FFmpeg/revFiles/096c3b_dffcdb_libavcodec#motion_est.c: interlaced_search)
+// Recall: 0.12, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

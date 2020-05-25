@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E3, E2;
+typedef services_discovery_sys_t;
+@@
+  services_discovery_sys_t *I0 = E1->p_sys; 
+  ...
+- msg_Dbg (E1, E2, E3); 
++ msg_Dbg(E1, "LuaSD script loaded: %s", I0->psz_filename); 
+// Infered from: (vlc/{prevFiles/prev_db21ff_d9ab1c_modules#misc#lua#services_discovery.c,revFiles/db21ff_d9ab1c_modules#misc#lua#services_discovery.c}: Run)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

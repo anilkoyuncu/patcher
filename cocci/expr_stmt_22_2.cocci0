@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- g_object_class_install_property(E0, PROP_STRIKETHROUGH_RGBA,  g_param_spec_boxed("strikethrough-rgba",  P_("Strike-through RGBA"),  P_("Color of strike-through for this text"),  GDK_TYPE_RGBA,  GTK_PARAM_READWRITE)); 
++ g_object_class_install_property(E0, PROP_STRIKETHROUGH_RGBA,  g_param_spec_boxed("strikethrough-rgba",  P_("Strikethrough RGBA"),  P_("Color of strikethrough for this text"),  GDK_TYPE_RGBA,  GTK_PARAM_READWRITE)); 
+// Infered from: (gtk/{prevFiles/prev_c88ec3_68ff82_gtk#gtktexttag.c,revFiles/c88ec3_68ff82_gtk#gtktexttag.c}: gtk_text_tag_class_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->stapling)  
++ if (E0->ssl.ctx == NULL || !E0->stapling)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_0d7a7e_829894_src#http#modules#ngx_http_ssl_module.c,revFiles/0d7a7e_829894_src#http#modules#ngx_http_ssl_module.c}: ngx_http_ssl_init)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

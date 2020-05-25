@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- av_assert1(E0->profile == FF_PROFILE_MPEG4_SIMPLE_STUDIO); 
++ av_assert1(s->studio_profile); 
+// Infered from: (FFmpeg/{prevFiles/prev_bd27a9_3b10bb_libavcodec#h263dec.c,revFiles/bd27a9_3b10bb_libavcodec#h263dec.c}: h263_get_format)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

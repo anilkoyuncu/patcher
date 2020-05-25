@@ -1,0 +1,48 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef GtkWidget;
+@@
+- GtkWidget *I0; 
+  ...
+- rose = GDK_PAINTABLE(gdk_texture_new_from_resource("/sliding_puzzle/portland-rose.jpg")); 
++ puzzle = rose = GDK_PAINTABLE(gdk_texture_new_from_resource("/sliding_puzzle/portland-rose.jpg")); 
+  ...
+- puzzle = rose; 
+  ...
+- E1 = gtk_radio_button_new_with_label_from_widget(E1, "Danger"); 
++ E1 = gtk_radio_button_new_with_label_from_widget(GTK_RADIO_BUTTON(E1),  "Danger"); 
+  ...
+- gtk_label_set_xalign(E2, 0.0); 
++ gtk_label_set_xalign(GTK_LABEL(E2), 0.0); 
+  ...
+- E3 = gtk_button_new_from_icon_name("view-refresh-symbolic"); 
+- g_signal_connect(E3, "clicked", G_CALLBACK(reshuffle), NULL); 
+  ...
+- gtk_button_set_icon_name(E4, "emblem-system-symbolic"); 
++ gtk_button_set_icon_name(GTK_BUTTON(E4), "emblem-system-symbolic"); 
++ E3 = gtk_button_new_from_icon_name("view-refresh-symbolic"); 
++ g_signal_connect(E3, "clicked", G_CALLBACK(reshuffle), NULL); 
+// Infered from: (gtk/{prevFiles/prev_9d48a95d_cfbba2_demos#gtk-demo#sliding_puzzle.c,revFiles/9d48a95d_cfbba2_demos#gtk-demo#sliding_puzzle.c}: do_sliding_puzzle)
+// False positives: (gtk/revFiles/9d48a95d_cfbba2_demos#gtk-demo#sliding_puzzle.c: do_sliding_puzzle)
+// Recall: 0.45, Precision: 0.90, Matching recall: 0.90
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.85, Precision: 0.94
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_a0faf5_1b9fa9_gtk#inspector#visual.c: get_data_path
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_9d48a95d_cfbba2_demos#gtk-demo#sliding_puzzle.c: do_sliding_puzzle
+*/
+
+// ---------------------------------------------

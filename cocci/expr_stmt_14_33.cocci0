@@ -1,0 +1,9 @@
+@@
+type T1;
+expression E0, E2, E3;
+@@
+- msg_Dbg(E0, "reading %u bytes instead of %u", (T1 )E2, E3); 
+// Infered from: (vlc/{prevFiles/prev_3ccefd_266960_modules#access_filter#bandwidth.c,revFiles/3ccefd_266960_modules#access_filter#bandwidth.c}: Read)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

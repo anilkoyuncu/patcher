@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- error_report("Warning: usb-ccid supports one slot, can't add %d", E0->slot); 
++ warn_report("usb-ccid supports one slot, can't add %d", E0->slot); 
+// Infered from: (qemu/{prevFiles/prev_3dc6f8_97f403_hw#usb#dev-smartcard-reader.c,revFiles/3dc6f8_97f403_hw#usb#dev-smartcard-reader.c}: ccid_card_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

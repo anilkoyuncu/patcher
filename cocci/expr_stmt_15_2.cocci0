@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- msg_Err(E0, "cannot write: %m"); 
++ msg_Err(E0, "cannot write: %s", vlc_strerror_c(errno)); 
+// Infered from: (vlc/{prevFiles/prev_a059cf_9ff281_modules#access_output#file.c,revFiles/a059cf_9ff281_modules#access_output#file.c}: Write)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

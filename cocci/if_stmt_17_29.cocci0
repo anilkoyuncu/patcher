@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+typedef guint16;
+@@
+- E0 = E1 - (E2 - E3); 
++ E0 = (guint16 )(E1 - (E2 - E3)); 
+// Infered from: (wireshark/{prevFiles/prev_804409_e2038e_wiretap#logcat.c,revFiles/804409_e2038e_wiretap#logcat.c}: detect_version)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = to_radeon_framebuffer(E1->fb); 
++ E0 = to_radeon_framebuffer(E1->primary->fb); 
+// Infered from: (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#radeon#radeon_display.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#radeon#radeon_display.c}: radeon_crtc_page_flip)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

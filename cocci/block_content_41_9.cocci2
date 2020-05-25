@@ -1,0 +1,35 @@
+@@
+expression E0, E1;
+@@
+- E0 = 1; 
++ if (E1 != 0)  
++ {
++ E0 = E1 + 1; 
++ }
++ else
++ {
++ E0 = 0; 
++ }
+  ...
+- E0 += E1; 
+// Infered from: (tmux/{prevFiles/prev_05213e_3e2cc2_status.c,revFiles/05213e_3e2cc2_status.c}: status_redraw), (tmux/{prevFiles/prev_95dfa9_735cfa_status.c,revFiles/95dfa9_735cfa_status.c}: status_redraw)
+// Recall: 0.60, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.33
+// -- Node Change --
+// Recall: 1.00, Precision: 0.71
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - tmux/prevFiles/prev_05213e_3e2cc2_status.c: status_prompt_key
+ - tmux/prevFiles/prev_95dfa9_735cfa_status.c: status_prompt_key
+ - tmux/prevFiles/prev_05213e_3e2cc2_status.c: status_prompt_redraw
+ - tmux/prevFiles/prev_95dfa9_735cfa_status.c: status_prompt_redraw
+*/
+
+// ---------------------------------------------

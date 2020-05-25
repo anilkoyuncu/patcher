@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2;
+typedef GdkEvent;
+@@
+- gdk_window_begin_resize_drag_for_device(gtk_widget_get_window(E0), E1,  gdk_event_get_device(E2), E2->button,  E2->x_root, E2->y_root, E2->time); 
++ gdk_window_begin_resize_drag_for_device(gtk_widget_get_window(E0), E1,  gdk_event_get_device((GdkEvent *)E2),  E2->button, E2->x_root, E2->y_root,  E2->time); 
+// Infered from: (gtk/{prevFiles/prev_1c2205_1425ec_gtk#gtkwindow.c,revFiles/1c2205_1425ec_gtk#gtkwindow.c}: gtk_window_button_press_event)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

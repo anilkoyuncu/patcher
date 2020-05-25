@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 &= ~(1 << ISIF_DFCMEMCTL_DFCMARST_SHIFT); 
++ E0 &= ~BIT(ISIF_DFCMEMCTL_DFCMARST_SHIFT); 
+// Infered from: (linux/{prevFiles/prev_f422920_6995a65_drivers#staging#media#davinci_vpfe#dm365_isif.c,revFiles/f422920_6995a65_drivers#staging#media#davinci_vpfe#dm365_isif.c}: isif_config_dfc)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E1, E2, E3, E5, E6, E7, E8, E0, E4;
+@@
+- GST_DEBUG (E0, E1, E2, E3); 
+- GST_DEBUG (E4, E1, E5, E6, E7, E8); 
+// Infered from: (gstreamer/{prevFiles/prev_9092fb_74197d_gst#gstmemory.c,revFiles/9092fb_74197d_gst#gstmemory.c}: _default_mem_unmap)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

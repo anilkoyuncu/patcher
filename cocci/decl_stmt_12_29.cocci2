@@ -1,0 +1,20 @@
+@@
+expression E0;
+typedef gchar;
+@@
+- E0 = (gchar *)ep_alloc(LENGTH_T30_NUM + 1); 
++ E0 = (gchar *)wmem_alloc(wmem_packet_scope(), LENGTH_T30_NUM + 1); 
+// Infered from: (wireshark/{prevFiles/prev_fe5238_a10254_epan#dissectors#packet-t30.c,revFiles/fe5238_a10254_epan#dissectors#packet-t30.c}: t30_get_string_numbers)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

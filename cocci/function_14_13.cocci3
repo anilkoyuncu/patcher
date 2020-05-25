@@ -1,0 +1,58 @@
+@@
+identifier I0;
+@@
+- for(I0 = opal_list_get_first(myaddrs);I0 != opal_list_get_end(myaddrs);I0 = opal_list_get_next(  I0))  
++ for(I0 = opal_list_get_first(myaddrs);I0 != opal_list_get_end(myaddrs);I0 = next)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_b95a3d_cba370_ompi#mca#btl#openib#btl_openib_iwarp.c,revFiles/b95a3d_cba370_ompi#mca#btl#openib#btl_openib_iwarp.c}: mca_btl_openib_free_rdma_addr_list)
+// False positives: (ompi/revFiles/b95a3d_cba370_ompi#mca#btl#openib#btl_openib_iwarp.c: mca_btl_openib_get_iwarp_subnet_id), (ompi/revFiles/b95a3d_cba370_ompi#mca#btl#openib#btl_openib_iwarp.c: mca_btl_openib_rdma_get_ipv4addr)
+// Recall: 0.03, Precision: 0.33, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.18, Precision: 0.71
+// -- Node Change --
+// Recall: 0.18, Precision: 0.75
+// -- General --
+// Functions fully changed: 4/30(13%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_b95a3d_cba370_ompi#mca#btl#openib#btl_openib_iwarp.c: mca_btl_openib_free_rdma_addr_list
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_61ea02_b0aec6d_ui#gtk#packet_list.c: 
+ - FFmpeg/prevFiles/prev_6612d8_113685_libavformat#tta.c: tta_read_header
+ - qemu/prevFiles/prev_0a21ea_8eb029_hw#block#dataplane#virtio-blk.c: complete_request_vring
+ - FFmpeg/prevFiles/prev_72bbe7_e37f16_libavdevice#alldevices.c: avdevice_register_all
+ - FFmpeg/prevFiles/prev_6612d8_113685_libavformat#aacdec.c: adts_aac_read_header
+ - linux/prevFiles/prev_b1f471_b42488b_drivers#watchdog#uniphier_wdt.c: uniphier_wdt_probe
+ - gtk/prevFiles/prev_2c5f4c5_8ee44d_gtk#gtkmenutoolbutton.c: gtk_menu_tool_button_init
+ - gstreamer/prevFiles/prev_ba6b91_bf7c80_tests#check#gst#gstbuffer.c: gst_buffer_suite
+ - qemu/prevFiles/prev_2e8f85_c50be9_hw#isa#i82378.c: i82378_realize
+ - qemu/prevFiles/prev_154c69f_ef80b9_target#ppc#excp_helper.c: helper_pminsn
+ - ompi/prevFiles/prev_b95a3d_cba370_ompi#mca#btl#openib#btl_openib_iwarp.c: mca_btl_openib_build_rdma_addr_list
+ - wireshark/prevFiles/prev_61ea02_b0aec6d_ui#gtk#packet_list.c: packet_list_create
+ - redis/prevFiles/prev_155fb4_7f00cd_src#db.c: dbDelete
+ - qemu/prevFiles/prev_1fb675_8f4202_hw#i386#pc_q35.c: pc_q35_3_0_machine_options
+ - wireshark/prevFiles/prev_61ea02_b0aec6d_ui#gtk#packet_list.c: plugin_if_pktlist_preference
+ - wireshark/prevFiles/prev_11a0eb_2edee7_gtk#range_utils.c: range_entry_in_event
+ - gstreamer/prevFiles/prev_ba6b91_bf7c80_tests#check#gst#gstbuffer.c: GST_START_TEST
+ - gtk/prevFiles/prev_5fefc7_cb3fc9_gtk#gtkheaderbar.c: gtk_header_bar_allocate_contents
+ - qemu/prevFiles/prev_1fb675_8f4202_hw#i386#pc_piix.c: pc_i440fx_3_0_machine_options
+ - linux/prevFiles/prev_dcbb61_f332ce_drivers#watchdog#bcm2835_wdt.c: bcm2835_wdt_probe
+ - nginx/prevFiles/prev_4d856c_704e1c_src#core#ngx_resolver.c: ngx_resolve_name
+ - wireshark/prevFiles/prev_0b132c_778c9a_file.c: cf_finish_tail
+ - FFmpeg/prevFiles/prev_6612d8_113685_libavformat#mp3.c: mp3_read_header
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_b95a3d_cba370_ompi#mca#btl#openib#btl_openib_iwarp.c: mca_btl_openib_get_iwarp_subnet_id
+ - ompi/prevFiles/prev_b95a3d_cba370_ompi#mca#btl#openib#btl_openib_iwarp.c: mca_btl_openib_rdma_get_ipv4addr
+*/
+
+// ---------------------------------------------

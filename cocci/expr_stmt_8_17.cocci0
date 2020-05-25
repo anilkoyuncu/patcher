@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- convert_to_string_ex(&E0); 
++ convert_to_string(E0); 
+// Infered from: (php-src/{prevFiles/prev_79d863_da5e36_ext#mbstring#mbstring.c,revFiles/79d863_da5e36_ext#mbstring#mbstring.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_66ec2a_dcda8d_ext#mbstring#mbstring.c,revFiles/66ec2a_dcda8d_ext#mbstring#mbstring.c}: PHP_FUNCTION)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

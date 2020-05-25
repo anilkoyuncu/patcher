@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- g_warning("capinfos: init_progfile_dir(): %s", E0); 
++ g_warning("captype: init_progfile_dir(): %s", E0); 
+// Infered from: (wireshark/{prevFiles/prev_644e804_e21fd7_captype.c,revFiles/644e804_e21fd7_captype.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

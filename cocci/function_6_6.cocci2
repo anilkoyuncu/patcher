@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- l_g_string_assign_len(E0, "unknown sockaddr family"); 
++ l_g_string_assign_len(E0, CONST_STR_LEN("unknown sockaddr family")); 
+// Infered from: (lighttpd2/{prevFiles/prev_72b911_2f9e61_src#utils.c,revFiles/72b911_2f9e61_src#utils.c}: sockaddr_to_string)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- pr_err("%s: net_interrupt(): irq %d for unknown device.\n", E0->name, E1); 
++ pr_err("net_interrupt(): irq %d for unknown device.\n", E1); 
+// Infered from: (linux/{prevFiles/prev_17d9564_89dc0b_drivers#net#3c507.c,revFiles/17d9564_89dc0b_drivers#net#3c507.c}: el16_interrupt)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

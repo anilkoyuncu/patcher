@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- assertEqualInt(0, systemf(E0, testprog)); 
++ assertEqualInt(0,  systemf("%s --format pax -cf ../test2.tar *.txt a", testprog)); 
+// Infered from: (libarchive/{prevFiles/prev_5d8ad5_2d8a6c_tar#test#test_option_newer_than.c,revFiles/5d8ad5_2d8a6c_tar#test#test_option_newer_than.c}: DEFINE_TEST)
+// False positives: (libarchive/revFiles/5d8ad5_2d8a6c_tar#test#test_option_newer_than.c: DEFINE_TEST)
+// Recall: 0.25, Precision: 0.50, Matching recall: 0.75
+
+// ---------------------------------------------

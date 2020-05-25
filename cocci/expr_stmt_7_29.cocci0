@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = gst_event_new_toc("test", E1, TRUE); 
++ E0 = gst_event_new_toc(E1, TRUE); 
+// Infered from: (gstreamer/{prevFiles/prev_11edb5_b4ecac_tests#check#gst#gsttoc.c,revFiles/11edb5_b4ecac_tests#check#gst#gsttoc.c}: GST_START_TEST)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

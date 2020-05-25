@@ -1,0 +1,32 @@
+@@
+identifier I3;
+expression E0, E2, E1;
+@@
+- if ((E0 &&  E1) ||  E2->I3)  
++ if (E0 &&  E1)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_ce5000_cbc2c8_epan#dissectors#packet-dcm.c,revFiles/ce5000_cbc2c8_epan#dissectors#packet-dcm.c}: dissect_dcm_pdv_fragmented)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_9646f4_2d5312_target-i386#cpu.c: x86_cpu_reset
+*/
+
+// ---------------------------------------------

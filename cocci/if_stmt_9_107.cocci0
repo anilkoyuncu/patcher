@@ -1,0 +1,20 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+  int I0; 
+  ...
+- if (E1 ==  E2)  
++ if (E1 <= E2 && I0 == 1)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_140-A-10658248-10658284.c,revFiles/140-A-10658248-10658284.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

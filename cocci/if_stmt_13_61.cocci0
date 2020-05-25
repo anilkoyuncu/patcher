@@ -1,0 +1,13 @@
+@@
+type T2;
+expression E0, E1, E3, E4;
+@@
+- if (!asn1_oid_decode(E0, E1, (T2 **)&E3, &E4))  
++ if (!asn1_oid_decode(E0, E1, &E3, &E4))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_e31926_29a6b6_net#ipv4#netfilter#nf_nat_snmp_basic.c,revFiles/e31926_29a6b6_net#ipv4#netfilter#nf_nat_snmp_basic.c}: snmp_object_decode)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

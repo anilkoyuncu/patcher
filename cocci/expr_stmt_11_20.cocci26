@@ -1,0 +1,9 @@
+@@
+@@
+- fprintf(stderr, "qemu: Error registering flash memory.\n"); 
++ error_report("Error registering flash memory"); 
+// Infered from: (qemu/{prevFiles/prev_c0dbca_470bca_hw#arm#mainstone.c,revFiles/c0dbca_470bca_hw#arm#mainstone.c}: mainstone_common_init), (qemu/{prevFiles/prev_c0dbca_470bca_hw#arm#z2.c,revFiles/c0dbca_470bca_hw#arm#z2.c}: z2_init)
+// False positives: (qemu/revFiles/8297be_2ab4b1_hw#mips#mips_r4k.c: mips_r4k_init)
+// Recall: 0.05, Precision: 0.67, Matching recall: 0.40
+
+// ---------------------------------------------

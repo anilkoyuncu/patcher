@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = *(double *)E1; 
++ E0 = *(const  double *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_5c79cb_5dd7b7_ui#cli#tap-icmpstat.c,revFiles/5c79cb_5dd7b7_ui#cli#tap-icmpstat.c}: compare_doubles), (wireshark/{prevFiles/prev_5c79cb_5dd7b7_ui#cli#tap-icmpstat.c,revFiles/5c79cb_5dd7b7_ui#cli#tap-icmpstat.c}: compare_doubles), (wireshark/{prevFiles/prev_5c79cb_5dd7b7_ui#cli#tap-icmpv6stat.c,revFiles/5c79cb_5dd7b7_ui#cli#tap-icmpv6stat.c}: compare_doubles), (wireshark/{prevFiles/prev_5c79cb_5dd7b7_ui#cli#tap-icmpv6stat.c,revFiles/5c79cb_5dd7b7_ui#cli#tap-icmpv6stat.c}: compare_doubles)
+// False positives: (wireshark/revFiles/5c79cb_5dd7b7_ui#cli#tap-icmpstat.c: compute_stats), (wireshark/revFiles/5c79cb_5dd7b7_ui#cli#tap-icmpv6stat.c: compute_stats)
+// Recall: 0.31, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

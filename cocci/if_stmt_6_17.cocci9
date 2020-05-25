@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef uint16;
+@@
+- float *I0[3]; 
++ uint16 *I0[3]; 
+// Infered from: (libtiff/{prevFiles/prev_d4f213_3dd8f6_tools#tiff2pdf.c,revFiles/d4f213_3dd8f6_tools#tiff2pdf.c}: t2p_read_tiff_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

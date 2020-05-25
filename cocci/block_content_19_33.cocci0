@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef ssl_context;
+@@
+- ssl_context *I0 = (ssl_context *)&E1->ssl[E2].ssl; 
+- return I0->in_msglen != 0; 
++ return ssl_get_bytes_avail(&E1->ssl[E2].ssl) != 0; 
+// Infered from: (curl/{prevFiles/prev_a7e434_3cc222_lib#vtls#polarssl.c,revFiles/a7e434_3cc222_lib#vtls#polarssl.c}: Curl_polarssl_data_pending)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

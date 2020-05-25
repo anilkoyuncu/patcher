@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- failf(E0, "ssrem inet_ntop() failed with errno %d: %s", errno,  Curl_strerror(errno, E1, sizeof(E1))); 
++ failf(E0, "ssrem inet_ntop() failed with errno %d: %s", SOCKERRNO,  Curl_strerror(SOCKERRNO, E1, sizeof(E1))); 
+// Infered from: (curl/{prevFiles/prev_e0ee3d_0f234a_lib#vquic#quiche.c,revFiles/e0ee3d_0f234a_lib#vquic#quiche.c}: Curl_quic_connect)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_55bd0f_76d904_epan#dissectors#packet-ndmp.c: dissect_ndmp_message
+*/
+
+// ---------------------------------------------

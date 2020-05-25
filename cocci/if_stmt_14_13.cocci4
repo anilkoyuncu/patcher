@@ -1,0 +1,34 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+  int I0; 
+  ...
+- ff_set_dimensions(E1, E2, E3); 
++ if ((I0 = ff_set_dimensions(E1, E2, E3)) < 0)  
++ {
++ return I0; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_81ed7e_d9339a_libavcodec#indeo3.c,revFiles/81ed7e_d9339a_libavcodec#indeo3.c}: decode_frame_headers)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.84, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c: parse_Manifest
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_94c0df_ace837_libavcodec#h264.c: h264_decode_frame
+ - curl/prevFiles/prev_fa446f_7a7430_src#main.c: operate
+*/
+
+// ---------------------------------------------

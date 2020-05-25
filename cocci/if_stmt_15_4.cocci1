@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 < 0 || E0 > 100)  
++ if (E0 <= 0 || E0 > 100)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_7-B-14690359-14690378.c,revFiles/7-B-14690359-14690378.c}: erase)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

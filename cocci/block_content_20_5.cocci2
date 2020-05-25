@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef proto_item;
+@@
+- proto_item *I0; 
+  ...
+- proto_tree_add_item_hidden(E1, proto_bssap, E2, 0, -1, FALSE); 
++ hidden_item = proto_tree_add_item(E1, proto_bssap, E2, 0, -1, FALSE); 
++ PROTO_ITEM_SET_HIDDEN(hidden_item); 
+// Infered from: (wireshark/{prevFiles/prev_2e0c18_5f4f0d_epan#dissectors#packet-bssap.c,revFiles/2e0c18_5f4f0d_epan#dissectors#packet-bssap.c}: dissect_bssap)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

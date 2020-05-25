@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 >= E1 || E2 > E1)  
+- {
+  ...
+- }
+// Infered from: (php-src/{prevFiles/prev_798500_fa0efe_ext#iconv#iconv.c,revFiles/798500_fa0efe_ext#iconv#iconv.c}: _php_iconv_substr)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

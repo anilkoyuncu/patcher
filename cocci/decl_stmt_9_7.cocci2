@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  char *I0 = strchr(E1 + 5 + 9, ' '); 
++ const  char *I0 = strchr(E1 + 5 + 5, ' '); 
+// Infered from: (vlc/{prevFiles/prev_ca3eb1_824ffa_modules#codec#webvtt#webvtt.c,revFiles/ca3eb1_824ffa_modules#codec#webvtt#webvtt.c}: webvtt_text_parser_Feed)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

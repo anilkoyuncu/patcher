@@ -1,0 +1,25 @@
+@@
+identifier I3;
+expression E0, E1, E2, E4;
+@@
+- E0->output_buffer[E0->channels * E1 + E2] += (1 << 23) * I3[E0->nb_channels * E4 * E1 + E2]; 
++ E0->output_buffer[E0->channels * E1 + E2] += (1 << 23) * E0->samples[  E0->nb_channels * E4 * E1 + E2]; 
+// Infered from: (FFmpeg/{prevFiles/prev_44d1b4_0c6cf3_libavcodec#qdm2.c,revFiles/44d1b4_0c6cf3_libavcodec#qdm2.c}: qdm2_synthesis_filter), (FFmpeg/{prevFiles/prev_3a07f5_5a0a6a_libavcodec#qdm2.c,revFiles/3a07f5_5a0a6a_libavcodec#qdm2.c}: qdm2_synthesis_filter)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_3a07f5_5a0a6a_libavcodec#qdm2.c: qdm2_synthesis_filter
+ - FFmpeg/prevFiles/prev_44d1b4_0c6cf3_libavcodec#qdm2.c: qdm2_synthesis_filter
+*/
+
+// ---------------------------------------------

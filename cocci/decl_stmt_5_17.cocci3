@@ -1,0 +1,23 @@
+@@
+identifier I0;
+@@
+- static char I0[MAIL_BUFFER_SIZE]; 
++ char I0[MAIL_BUFFER_SIZE]; 
+// Infered from: (php-src/{prevFiles/prev_7d41af_577ffc_win32#sendmail.c,revFiles/7d41af_577ffc_win32#sendmail.c}: Ack)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.83
+// -- Node Change --
+// Recall: 1.00, Precision: 0.89
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_da2f58_418f97_main#main.c: php_verror
+*/
+
+// ---------------------------------------------

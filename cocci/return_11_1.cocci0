@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return group_register(NULL, E0->mca_type_name, E0->mca_component_name, E1); 
++ return group_register(E0->mca_project_name, E0->mca_type_name,  E0->mca_component_name, E1); 
+// Infered from: (ompi/{prevFiles/prev_55774d_9b43de_opal#mca#base#mca_base_var_group.c,revFiles/55774d_9b43de_opal#mca#base#mca_base_var_group.c}: mca_base_var_group_component_register)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

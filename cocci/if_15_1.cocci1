@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->first_packet || ((E1 >= RTCP_SR_SIZE) && (av_gettime() - E0->last_rtcp_ntp_time > 5000000)))  
++ if (E0->first_packet || ((E1 >= RTCP_SR_SIZE) && (ntp_time() - E0->last_rtcp_ntp_time > 5000000)))  
+  {
+- rtcp_send_sr(E2, av_gettime()); 
++ rtcp_send_sr(E2, ntp_time()); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_d597e1_91acf9_libavformat#rtpenc.c,revFiles/d597e1_91acf9_libavformat#rtpenc.c}: rtp_write_packet)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = qemu_utimens(E1.data, E2); 
++ E0 = utimensat(AT_FDCWD, E1.data, E2, AT_SYMLINK_NOFOLLOW); 
+// Infered from: (qemu/{prevFiles/prev_24df33_4be56c_fsdev#virtfs-proxy-helper.c,revFiles/24df33_4be56c_fsdev#virtfs-proxy-helper.c}: process_requests)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

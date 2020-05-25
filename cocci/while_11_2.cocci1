@@ -1,0 +1,23 @@
+@@
+binary operator B3 = {!= ,&& };
+expression E1, E2, E4, E0;
+@@
+- while (php_stream_gets(E0, E1, E2 - 1) B3 E4)  
++ while (php_stream_gets(E0, ZSTR(E1), E2 - 1) B3 E4)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_1c307a_611d8b_ext#zlib#zlib.c,revFiles/1c307a_611d8b_ext#zlib#zlib.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_954199_1c307a_ext#standard#ftp_fopen_wrapper.c,revFiles/954199_1c307a_ext#standard#ftp_fopen_wrapper.c}: get_ftp_result)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

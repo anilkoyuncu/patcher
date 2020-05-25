@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!(E0->oformat->flags & AVFMT_NOFILE) && E0->pb)  
++ if (E0 && E0->oformat && !(E0->oformat->flags & AVFMT_NOFILE) && E0->pb)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_274e13_8b7dff_avconv.c,revFiles/274e13_8b7dff_avconv.c}: exit_program)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

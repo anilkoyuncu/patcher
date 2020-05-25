@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (fsck_walk(E0, mark_used, 0))  
++ if (fsck_walk(E0, mark_used, NULL))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_2af202_a49eb1_builtin-fsck.c,revFiles/2af202_a49eb1_builtin-fsck.c}: fsck_sha1)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

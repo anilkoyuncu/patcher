@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0->coded_width = AV_RB32(E0->extradata + 20); 
++ E0->coded_width = FFMAX(AV_RB32(E0->extradata + 20), E0->width); 
+// Infered from: (FFmpeg/{prevFiles/prev_0f199f_5d18dc_libavcodec#mss12.c,revFiles/0f199f_5d18dc_libavcodec#mss12.c}: ff_mss12_decode_init)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

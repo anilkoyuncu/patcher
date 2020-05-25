@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->description = g_strdup(E1); 
++ E0->description = wmem_strdup(wmem_epan_scope(), E1); 
+// Infered from: (wireshark/{prevFiles/prev_6dd6ed_0a23ac_epan#dissectors#packet-xml.c,revFiles/6dd6ed_0a23ac_epan#dissectors#packet-xml.c}: register_dtd)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

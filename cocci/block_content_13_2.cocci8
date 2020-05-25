@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- set_irq_type(gpio_to_irq(E0), IRQ_TYPE_EDGE_FALLING); 
++ irq_set_irq_type(gpio_to_irq(E0), IRQ_TYPE_EDGE_FALLING); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-omap1#board-osk.c,revFiles/6845664a_25a566_arch#arm#mach-omap1#board-osk.c}: osk_init_cf), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-omap1#board-osk.c,revFiles/6845664a_25a566_arch#arm#mach-omap1#board-osk.c}: osk_mistral_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

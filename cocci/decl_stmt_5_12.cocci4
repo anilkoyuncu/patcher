@@ -1,0 +1,48 @@
+@@
+identifier I1;
+expression E0;
+@@
+- char I1[E0]; 
++ char I1[E0] = ""; 
+// Infered from: (tcl/{prevFiles/prev_795269_cba6d8_generic#tclCompCmdsSZ.c,revFiles/795269_cba6d8_generic#tclCompCmdsSZ.c}: TclSubstCompile), (tcl/{prevFiles/prev_795269_cba6d8_generic#tclUtil.c,revFiles/795269_cba6d8_generic#tclUtil.c}: Tcl_Backslash), (tcl/{prevFiles/prev_795269_cba6d8_generic#tclBinary.c,revFiles/795269_cba6d8_generic#tclBinary.c}: BinaryFormatCmd), (tcl/{prevFiles/prev_795269_cba6d8_generic#tclBinary.c,revFiles/795269_cba6d8_generic#tclBinary.c}: BinaryScanCmd), (tcl/{prevFiles/prev_795269_cba6d8_generic#tclScan.c,revFiles/795269_cba6d8_generic#tclScan.c}: ValidateFormat), (tcl/{prevFiles/prev_795269_cba6d8_generic#tclParse.c,revFiles/795269_cba6d8_generic#tclParse.c}: TclParseBackslash)
+// False positives: (cpython/revFiles/14affb_b9cc00_Modules#_posixsubprocess.c: child_exec), (curl/revFiles/aa0fbe_c48b99_lib#telnet.c: suboption), (curl/revFiles/b0e742_7296fc_lib#url.c: detect_proxy), (curl/revFiles/b0e742_7296fc_lib#url.c: parseurlandfillconn), (curl/revFiles/c48b99_89390f_lib#url.c: detect_proxy), (curl/revFiles/c48b99_89390f_lib#url.c: parseurlandfillconn), (curl/revFiles/da900c_b0e742_src#tool_formparse.c: formparse), (tcl/revFiles/795269_cba6d8_generic#tclCompCmdsSZ.c: IssueTryClausesFinallyInstructions), (tcl/revFiles/795269_cba6d8_generic#tclCompCmdsSZ.c: IssueTryClausesInstructions), (tcl/revFiles/795269_cba6d8_generic#tclCompCmdsSZ.c: TclCompileStringLenCmd), (tcl/revFiles/795269_cba6d8_generic#tclParse.c: TclParseBackslash), (tcl/revFiles/795269_cba6d8_generic#tclScan.c: Tcl_ScanObjCmd), (tmux/revFiles/1b5a8a_f4aefb_style.c: style_tostring), (wireshark/revFiles/1b0516_51e5e7_epan#dissectors#packet-afs.c: ), (wireshark/revFiles/1b0516_51e5e7_epan#dissectors#packet-afs.c: dissect_acl), (wireshark/revFiles/8af708_f3bbbc_wiretap#dbs-etherwatch.c: dbs_etherwatch_check_file_type), (wireshark/revFiles/8af708_f3bbbc_wiretap#dbs-etherwatch.c: parse_dbs_etherwatch_packet), (wireshark/revFiles/8af708_f3bbbc_wiretap#iseries.c: iseries_open), (wireshark/revFiles/8af708_f3bbbc_wiretap#iseries.c: iseries_parse_packet), (wireshark/revFiles/8af708_f3bbbc_wiretap#iseries.c: iseries_seek_next_packet)
+// Recall: 0.75, Precision: 0.39, Matching recall: 0.79
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.94, Precision: 0.59
+// -- Node Change --
+// Recall: 0.78, Precision: 0.40
+// -- General --
+// Functions fully changed: 9/30(30%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_8af708_f3bbbc_wiretap#iseries.c: iseries_check_file_type
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_8af708_f3bbbc_wiretap#dbs-etherwatch.c: parse_dbs_etherwatch_packet
+ - curl/prevFiles/prev_c48b99_89390f_lib#url.c: parseurlandfillconn
+ - tcl/prevFiles/prev_795269_cba6d8_generic#tclScan.c: Tcl_ScanObjCmd
+ - wireshark/prevFiles/prev_8af708_f3bbbc_wiretap#dbs-etherwatch.c: dbs_etherwatch_check_file_type
+ - wireshark/prevFiles/prev_1b0516_51e5e7_epan#dissectors#packet-afs.c: 
+ - tcl/prevFiles/prev_795269_cba6d8_generic#tclCompCmdsSZ.c: TclCompileStringLenCmd
+ - tcl/prevFiles/prev_795269_cba6d8_generic#tclCompCmdsSZ.c: IssueTryClausesInstructions
+ - wireshark/prevFiles/prev_8af708_f3bbbc_wiretap#iseries.c: iseries_parse_packet
+ - tcl/prevFiles/prev_795269_cba6d8_generic#tclParse.c: TclParseBackslash
+ - tcl/prevFiles/prev_795269_cba6d8_generic#tclCompCmdsSZ.c: IssueTryClausesFinallyInstructions
+ - cpython/prevFiles/prev_14affb_b9cc00_Modules#_posixsubprocess.c: child_exec
+ - curl/prevFiles/prev_aa0fbe_c48b99_lib#telnet.c: suboption
+ - curl/prevFiles/prev_b0e742_7296fc_lib#url.c: parseurlandfillconn
+ - curl/prevFiles/prev_da900c_b0e742_src#tool_formparse.c: formparse
+ - wireshark/prevFiles/prev_1b0516_51e5e7_epan#dissectors#packet-afs.c: dissect_acl
+ - curl/prevFiles/prev_b0e742_7296fc_lib#url.c: detect_proxy
+ - wireshark/prevFiles/prev_8af708_f3bbbc_wiretap#iseries.c: iseries_seek_next_packet
+ - wireshark/prevFiles/prev_8af708_f3bbbc_wiretap#iseries.c: iseries_open
+ - tmux/prevFiles/prev_1b5a8a_f4aefb_style.c: style_tostring
+ - curl/prevFiles/prev_c48b99_89390f_lib#url.c: detect_proxy
+*/
+
+// ---------------------------------------------

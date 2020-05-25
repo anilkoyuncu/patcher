@@ -1,0 +1,10 @@
+@@
+identifier I0, I1, I2;
+@@
+- char *I0; 
+- char *I1; 
+- int I2; 
+// Infered from: (php-src/{prevFiles/prev_95ea1e_b3f6cc_ext#wddx#wddx.c,revFiles/95ea1e_b3f6cc_ext#wddx#wddx.c}: php_wddx_serialize_var), (php-src/{prevFiles/prev_20941b_276bea_ext#wddx#wddx.c,revFiles/20941b_276bea_ext#wddx#wddx.c}: php_wddx_serialize_var)
+// Recall: 0.43, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------

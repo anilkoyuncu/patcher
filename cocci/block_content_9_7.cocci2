@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- return (E0 + SDN_OFFSET); 
++ return (E0 + JEWISH_SDN_OFFSET); 
+// Infered from: (php-src/{prevFiles/prev_4a2f03_86469a_ext#calendar#jewish.c,revFiles/4a2f03_86469a_ext#calendar#jewish.c}: JewishToSdn)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_f5e1f2_c53d8b_epan#dissectors#packet-sip.c: dissect_sip_common
+*/
+
+// ---------------------------------------------

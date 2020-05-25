@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->session)  
++ if (E0->session && E0->session->exclusive)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_07f84d_f4be62_ext#oci8#oci8.c,revFiles/07f84d_f4be62_ext#oci8#oci8.c}: _oci_conn_list_dtor)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

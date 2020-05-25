@@ -1,0 +1,18 @@
+@@
+expression E0, E1, E2, E3;
+typedef guchar;
+@@
+- if (gdk_pixbuf_loader_write(E0, E1, E2, E3) && gdk_pixbuf_loader_close(  E0, E3))  
++ if (gdk_pixbuf_loader_write(E0, (const  guchar *)E1, E2, E3) && gdk_pixbuf_loader_close(  E0, E3))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_73cfcf_c60547_demos#testpixbuf-save.c,revFiles/73cfcf_c60547_demos#testpixbuf-save.c}: buffer_to_pixbuf)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

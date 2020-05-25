@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0)  
++ if (E0)  
+  {
+- zend_spprintf(E0, 0, "class '%.*s' not found", E1, E2); 
++ zend_spprintf(E0, 0, "class '%.*s' not found", E1, E2->val); 
+  }
+// Infered from: (php-src/{prevFiles/prev_008a42_c86639_Zend#zend_API.c,revFiles/008a42_c86639_Zend#zend_API.c}: zend_is_callable_check_class)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.88, Precision: 1.00
+// -- Node Change --
+// Recall: 0.88, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/8(87%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_c359ca_b795ce_sapi#phpdbg#phpdbg_prompt.c: phpdbg_force_interruption
+*/
+
+// ---------------------------------------------

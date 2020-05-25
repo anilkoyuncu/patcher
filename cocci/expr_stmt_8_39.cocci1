@@ -1,0 +1,10 @@
+@@
+identifier I1 = {X509_CRL_get_ext_by_NID ,X509_get_ext_by_NID };
+expression E0, E3, E2;
+@@
+- E0 = I1(E2, E3, 0); 
++ E0 = I1(E2, E3, -1); 
+// Infered from: (openssl/{prevFiles/prev_300b9f_5f8e9a_crypto#x509v3#v3_purp.c,revFiles/300b9f_5f8e9a_crypto#x509v3#v3_purp.c}: check_purpose_timestamp_sign), (openssl/{prevFiles/prev_abd2ed_3bf15e_crypto#x509#x509_vfy.c,revFiles/abd2ed_3bf15e_crypto#x509#x509_vfy.c}: crl_extension_match), (openssl/{prevFiles/prev_abd2ed_3bf15e_crypto#x509#x509_vfy.c,revFiles/abd2ed_3bf15e_crypto#x509#x509_vfy.c}: crl_extension_match)
+// Recall: 0.23, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

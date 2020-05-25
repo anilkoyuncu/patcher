@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->request)  
++ if (E0->ptype == PDU_REQ)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_dcdbb1_bd9607_packet-smb-sidsnooping.c,revFiles/dcdbb1_bd9607_packet-smb-sidsnooping.c}: samr_query_dispinfo)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

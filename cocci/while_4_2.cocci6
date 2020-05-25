@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (bytestream2_get_bytes_left(&E0) > 0)  
++ while (bytestream2_get_bytes_left(&E0) > 8)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_076215_30ffbe_libavcodec#webp.c,revFiles/076215_30ffbe_libavcodec#webp.c}: webp_decode_frame)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

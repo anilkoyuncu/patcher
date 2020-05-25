@@ -1,0 +1,9 @@
+@@
+expression E2, E0, E1, E3;
+@@
+- gtk_css_provider_load_from_data (E0, E1, E2, E3); 
++ gtk_css_provider_load_from_data (E0, E1, E2); 
+// Infered from: (gtk/{prevFiles/prev_2fed74_8644e5_tests#testlist3.c,revFiles/2fed74_8644e5_tests#testlist3.c}: main)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

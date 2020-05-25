@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 != NULL && zend_hash_find(Z_ARRVAL_P(E0), "quoted-printable-encode",  sizeof("quoted-printable-encode"),  (void **)&E1) == SUCCESS)  
++ if (E0 != NULL && zend_hash_find(Z_ARRVAL_P(E0), "quoted-printable-encode",  sizeof("quoted-printable-encode"),  (void **)&E1) == SUCCESS && Z_TYPE_PP(  E1) == IS_ARRAY)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_78f527_726eb9_ext#standard#filters.c,revFiles/78f527_726eb9_ext#standard#filters.c}: strfilter_convert_create)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

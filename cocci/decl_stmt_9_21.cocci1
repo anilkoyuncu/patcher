@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef VANativeDisplay;
+typedef intptr_t;
+@@
+- struct vlc_vaapi_instance *I0 = vlc_vaapi_InitializeInstance(E1, E2,  (VANativeDisplay *)(  intptr_t )E3,  native_drm_destroy_cb); 
++ struct vlc_vaapi_instance *I0 = vlc_vaapi_InitializeInstance(E1, E2,  (VANativeDisplay )(  intptr_t )E3,  native_drm_destroy_cb); 
+// Infered from: (vlc/{prevFiles/prev_1dece2_3fb810_modules#hw#vaapi#vlc_vaapi.c,revFiles/1dece2_3fb810_modules#hw#vaapi#vlc_vaapi.c}: vlc_vaapi_InitializeInstanceDRM)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

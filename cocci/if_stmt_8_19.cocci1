@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = E1->cmds))  
++ if (E1->cmds)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_92a02a_ad1486_epan#gcp.c,revFiles/92a02a_ad1486_epan#gcp.c}: gcp_analyze_msg)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

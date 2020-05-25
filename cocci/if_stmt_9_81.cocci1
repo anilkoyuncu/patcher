@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- E0 = g_ptr_array_new_with_free_func(g_free); 
++ E0 = g_ptr_array_new(); 
+// Infered from: (wireshark/{prevFiles/prev_e28f49_8fee04_extcap.c,revFiles/e28f49_8fee04_extcap.c}: extcaps_init_initerfaces)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_e28f49_8fee04_extcap.c: extcaps_init_initerfaces
+*/
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_9bb91d_e29e42_deps#lua#src#lua_cmsgpack.c: table_is_an_array
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->packet->p_buffer[1] = E0->i_payload_type; 
++ E0->packet->p_buffer[1] = 0x80 | E0->i_payload_type; 
+// Infered from: (vlc/{prevFiles/prev_655e58_c6413a_modules#stream_out#rtp.c,revFiles/655e58_c6413a_modules#stream_out#rtp.c}: AccessOutGrabberWriteBuffer)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

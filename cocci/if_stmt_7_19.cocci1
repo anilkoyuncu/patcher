@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!(-prefixcmp(E0, "git-")) && !strncmp(E1->name, E0 + 4, E2) && E0[  E2 + 4] == ' ')  
++ if (!prefixcmp(E0, "git-") && !strncmp(E1->name, E0 + 4, E2) && E0[E2 + 4] == ' ')  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_599065_cc44c7_daemon.c,revFiles/599065_cc44c7_daemon.c}: execute)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

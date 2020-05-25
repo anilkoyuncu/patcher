@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (E0->last_picture[E1]->data[0])  
++ if (E0->last_picture[E1] && E0->last_picture[E1]->data[0])  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_9a1621_ba47d51_libavcodec#snow.c,revFiles/9a1621_ba47d51_libavcodec#snow.c}: ff_snow_common_end)
+// False positives: (FFmpeg/revFiles/9a1621_ba47d51_libavcodec#snow.c: ff_snow_release_buffer)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

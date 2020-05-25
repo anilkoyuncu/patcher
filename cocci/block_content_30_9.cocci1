@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- E0->completion = dma_pool_alloc(E0->ioat_dma->completion_pool, GFP_KERNEL,  &E0->completion_dma); 
++ E0->completion = dma_pool_zalloc(E0->ioat_dma->completion_pool, GFP_KERNEL,  &E0->completion_dma); 
+  ...
+- memset(E0->completion, 0, sizeof(*E0->completion)); 
+// Infered from: (linux/{prevFiles/prev_305697_1c85a8_drivers#dma#ioat#init.c,revFiles/305697_1c85a8_drivers#dma#ioat#init.c}: ioat_alloc_chan_resources)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef DWORD;
+@@
+- _Py_DumpDecimal(E0, E1, sizeof(DWORD )); 
++ _Py_DumpDecimal(E0, E1); 
+// Infered from: (cpython/{prevFiles/prev_82d44f_f963c1_Modules#faulthandler.c,revFiles/82d44f_f963c1_Modules#faulthandler.c}: faulthandler_exc_handler)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

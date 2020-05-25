@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && config_GetInt(E1, "osd"))  
++ if (config_GetInt(E1, "osd"))  
+  {
+  ...
+  }
++ vlc_object_release(E0); 
+// Infered from: (vlc/{prevFiles/prev_469b0d_c7a438_src#video_output#video_widgets.c,revFiles/469b0d_c7a438_src#video_output#video_widgets.c}: vout_OSDIcon)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

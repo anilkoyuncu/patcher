@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- const  char *I0; 
++ char *I0; 
+// Infered from: (vlc/{prevFiles/prev_cf0153_cc352b_modules#misc#lua#intf.c,revFiles/cf0153_cc352b_modules#misc#lua#intf.c}: Open_LuaIntf), (qemu/{prevFiles/prev_a2cb92_dc885f_block#sheepdog.c,revFiles/a2cb92_dc885f_block#sheepdog.c}: sd_co_create_opts), (qemu/{prevFiles/prev_890241_e5dc1a_tests#migration-test.c,revFiles/890241_e5dc1a_tests#migration-test.c}: migrate_check_parameter), (qemu/{prevFiles/prev_6e05a1_293811_hw#arm#vexpress.c,revFiles/6e05a1_293811_hw#arm#vexpress.c}: vexpress_common_init), (qemu/{prevFiles/prev_6e05a1_293811_hw#arm#virt.c,revFiles/6e05a1_293811_hw#arm#virt.c}: create_flash)
+// False positives: (qemu/revFiles/890241_e5dc1a_tests#migration-test.c: ), (qemu/revFiles/890241_e5dc1a_tests#migration-test.c: test_migrate_start), (qemu/revFiles/890241_e5dc1a_tests#migration-test.c: wait_command), (qemu/revFiles/890241_e5dc1a_tests#migration-test.c: wait_for_migration_complete), (vlc/revFiles/cf0153_cc352b_modules#misc#lua#intf.c: GetModuleName)
+// Recall: 0.38, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------

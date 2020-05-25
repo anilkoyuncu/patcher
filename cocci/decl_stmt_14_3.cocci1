@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- const  size_t I0 = E1 * E2; 
++ const  size_t I0 = st_mult(E1, E2); 
+// Infered from: (git/{prevFiles/prev_50a6c8_96ffc0_compat#qsort.c,revFiles/50a6c8_96ffc0_compat#qsort.c}: git_qsort)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

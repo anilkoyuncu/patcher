@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2;
+@@
+- wmem_strbuf_append_printf(E0, "Empty Label Stack RD=%u.%u:%u IPv4=%s",  tvb_get_ntohs(E1, E2 + 2),  tvb_get_ntohs(E1, E2 + 4),  tvb_get_ntohs(E1, E2 + 6), tvb_get_ipv4(E1, E2 + 8)); 
++ wmem_strbuf_append_printf(E0, "Empty Label Stack RD=%u.%u:%u IPv4=%s",  tvb_get_ntohs(E1, E2 + 2),  tvb_get_ntohs(E1, E2 + 4),  tvb_get_ntohs(E1, E2 + 6),  tvb_ip_to_str(E1, E2 + 8)); 
+// Infered from: (wireshark/{prevFiles/prev_ea6a57_3d3f97_epan#dissectors#packet-bgp.c,revFiles/ea6a57_3d3f97_epan#dissectors#packet-bgp.c}: mp_addr_to_str)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.69, Precision: 0.92
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_be91f7_6283c6_modules#demux#avi#avi.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_103f5b_aceca99_modules#access#mms#mmstu.c: MMSOpen
+*/
+
+// ---------------------------------------------

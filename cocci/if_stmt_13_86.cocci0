@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (trace_event_is_vcpu(E0))  
++ if (trace_event_is_vcpu(E0) && likely(first_cpu != NULL))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_f5956d_6b06e3_trace#control-target.c,revFiles/f5956d_6b06e3_trace#control-target.c}: trace_event_set_state_dynamic)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

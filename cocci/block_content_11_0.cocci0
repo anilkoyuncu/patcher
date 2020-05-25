@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef proto_item;
+@@
+- proto_item *I0; 
+- I0 = proto_tree_add_string(E1, hf_nt_error, E2, E3, E4 - E3,  "Not a null terminated string"); 
++ proto_tree_add_string(E1, hf_nt_error, E2, E3, E4 - E3,  "Not a null terminated string"); 
+// Infered from: (wireshark/{prevFiles/prev_e672fd_905990_epan#dissectors#packet-dcerpc-nt.c,revFiles/e672fd_905990_epan#dissectors#packet-dcerpc-nt.c}: dissect_null_term_string), (wireshark/{prevFiles/prev_e672fd_905990_epan#dissectors#packet-dcerpc-nt.c,revFiles/e672fd_905990_epan#dissectors#packet-dcerpc-nt.c}: dissect_null_term_wstring)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

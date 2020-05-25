@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2;
+@@
+- OPAL_OUTPUT_VERBOSE((50, ompi_osc_base_framework.framework_output, "osc rdma:  process_complete got complete message from %d", E0)); 
++ OPAL_OUTPUT_VERBOSE((50, ompi_osc_base_framework.framework_output, "osc rdma:  process_complete got complete message from %d. expected fragment count %d", E0, E1->frag_count)); 
+  ...
+- E2->active_incoming_frag_signal_count += E1->frag_count + 1; 
++ E2->active_incoming_frag_signal_count += E1->frag_count; 
+// Infered from: (ompi/{prevFiles/prev_ee7a14_28609d_ompi#mca#osc#rdma#osc_rdma_data_move.c,revFiles/ee7a14_28609d_ompi#mca#osc#rdma#osc_rdma_data_move.c}: process_complete)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

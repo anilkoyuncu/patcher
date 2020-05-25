@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef key_record_t;
+@@
+- *E0 = g_slist_prepend(*E0,  wmem_memdup(wmem_file_scope(), &E1,  sizeof(key_record_t ))); 
++ *E0 = g_slist_prepend(*E0, g_memdup(&E1, sizeof(key_record_t ))); 
+// Infered from: (wireshark/{prevFiles/prev_d108f2_c462f1_epan#dissectors#packet-zbee-aps.c,revFiles/d108f2_c462f1_epan#dissectors#packet-zbee-aps.c}: dissect_zbee_aps_transport_key)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

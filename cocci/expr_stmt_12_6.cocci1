@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- strcpy(E0, Z_STRVAL_PP(E1)); 
++ strlcpy(E0, Z_STRVAL_PP(E1), sizeof(E0)); 
+// Infered from: (php-src/{prevFiles/prev_6dca37_538d51_ext#snmp#snmp.c,revFiles/6dca37_538d51_ext#snmp#snmp.c}: php_snmp)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

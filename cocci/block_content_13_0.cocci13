@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = index(E1, ' '); 
++ E0 = strchr(E1, ' '); 
+// Infered from: (wireshark/{prevFiles/prev_296265_fe7540_packet-smtp.c,revFiles/296265_fe7540_packet-smtp.c}: dissect_smtp)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

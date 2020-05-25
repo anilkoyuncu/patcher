@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->d_inode && S_ISLNK(E0->d_inode->i_mode))  
++ if (E0->d_inode && d_is_symlink(E0))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_e36cb0_2c616d_fs#autofs4#root.c,revFiles/e36cb0_2c616d_fs#autofs4#root.c}: autofs4_d_automount)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

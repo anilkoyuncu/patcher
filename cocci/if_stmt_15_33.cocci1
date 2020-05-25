@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- GST_ERROR(E0, GST_PLUGIN_FEATURE_NAME(E1)); 
++ GST_WARNING(E0, GST_PLUGIN_FEATURE_NAME(E1)); 
+// Infered from: (gstreamer/{prevFiles/prev_2ed6c0_d66450_gst#gstplugin.c,revFiles/2ed6c0_d66450_gst#gstplugin.c}: gst_plugin_add_feature), (gstreamer/{prevFiles/prev_2ed6c0_d66450_gst#gstplugin.c,revFiles/2ed6c0_d66450_gst#gstplugin.c}: gst_plugin_add_feature)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

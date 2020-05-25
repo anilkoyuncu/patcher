@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef sPAPRMachineClass;
+@@
+- sPAPRMachineClass *I0 = SPAPR_MACHINE_GET_CLASS(E1); 
++ sPAPRMachineClass *I0 = E1 ? SPAPR_MACHINE_GET_CLASS(E1) :NULL; 
+// Infered from: (qemu/{prevFiles/prev_bc9b1f_eceba3_hw#ppc#spapr_pci.c,revFiles/bc9b1f_eceba3_hw#ppc#spapr_pci.c}: spapr_phb_realize)
+// False positives: (qemu/revFiles/bc9b1f_eceba3_hw#ppc#spapr_pci.c: rtas_ibm_change_msi)
+// Recall: 0.20, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

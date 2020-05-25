@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- vlc_stream_Control(E0->s, STREAM_CAN_FASTSEEK, &E1); 
++ if (vlc_stream_Control(E0->s, STREAM_CAN_FASTSEEK, &E1))  
++ {
++ return VLC_EGENERIC; 
++ }
+// Infered from: (vlc/{prevFiles/prev_8511f5_d583f4_modules#stream_filter#prefetch.c,revFiles/8511f5_d583f4_modules#stream_filter#prefetch.c}: Open)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

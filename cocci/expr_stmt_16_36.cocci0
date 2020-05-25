@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- avio_printf(E0->list_pb, "#EXT-X-TARGETDURATION:%d\n",  (int )(E0->list_max_segment_time + 0.5)); 
++ avio_printf(E0->list_pb, "#EXT-X-TARGETDURATION:%d\n",  (int )ceil(E0->list_max_segment_time)); 
+// Infered from: (FFmpeg/{prevFiles/prev_e35c0e_a21f65_libavformat#segment.c,revFiles/e35c0e_a21f65_libavformat#segment.c}: segment_list_close)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

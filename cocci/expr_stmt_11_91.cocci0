@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- printf("The following type is missing %s\n", E0); 
++ fprintf(stderr,  "WARNING: Open MPI is unable to find debugging information about the \"%s\" type.  This can happen if Open MPI was built without debugging information, or was stripped after building.\n",  E0); 
+// Infered from: (ompi/{prevFiles/prev_a71b5dd_04a4cb_ompi#debuggers#ompi_common_dll.c,revFiles/a71b5dd_04a4cb_ompi#debuggers#ompi_common_dll.c}: ompi_fill_in_type_info)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

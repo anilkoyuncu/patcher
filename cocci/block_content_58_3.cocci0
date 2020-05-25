@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = *gmtime(&Z_LVAL_P(E1)); 
++ I0 = php_gmtime_r(&Z_LVAL_P(E1), &tmbuf); 
+// Infered from: (php-src/{prevFiles/prev_204c32_3fb8be_ext#interbase#ibase_query.c,revFiles/204c32_3fb8be_ext#interbase#ibase_query.c}: _php_ibase_bind), (php-src/{prevFiles/prev_c69555_930ac9_ext#interbase#ibase_query.c,revFiles/c69555_930ac9_ext#interbase#ibase_query.c}: _php_ibase_bind)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

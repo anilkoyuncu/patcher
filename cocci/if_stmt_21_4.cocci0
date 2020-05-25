@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- if (E0 <  E1)  
+- {
+- THROW(ReportedBoundsError); 
+- }
+// Infered from: (wireshark/{prevFiles/prev_7fcf94_a06266_epan#dissectors#packet-smb2.c,revFiles/7fcf94_a06266_epan#dissectors#packet-smb2.c}: dissect_smb2)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

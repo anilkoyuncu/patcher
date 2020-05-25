@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (E0 != ARES_ENOTFOUND)  
++ if (E0 == ARES_SUCCESS)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_649f7b_c1b734_ares#ares_gethostbyname.c,revFiles/649f7b_c1b734_ares#ares_gethostbyname.c}: next_lookup), (curl/{prevFiles/prev_800a72_649f7b_ares#ares_gethostbyaddr.c,revFiles/800a72_649f7b_ares#ares_gethostbyaddr.c}: next_lookup)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 8/10(80%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_48770f_07eafba_gtk#gtktoolbutton.c: gtk_tool_button_construct_contents
+ - codeflaws/prevFiles/prev_239-A-12801028-12801295.c: main
+*/
+
+// ---------------------------------------------

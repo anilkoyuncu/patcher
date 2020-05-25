@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- proto_tree_add_text(E0, E1 - E2 + E3 + E4 + E5, 1, "SNPA length: ",  E1[E3 + E4 + E5]); 
++ proto_tree_add_text(E0, E1 - E2 + E3 + E4 + E5, 1, "SNPA length: %u",  E1[E3 + E4 + E5]); 
+// Infered from: (wireshark/{prevFiles/prev_8c2002_0e2751_packet-bgp.c,revFiles/8c2002_0e2751_packet-bgp.c}: dissect_bgp_update)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

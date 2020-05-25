@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "No valid boot device for Mac99 machine\n"); 
++ error_report("No valid boot device for Mac99 machine"); 
+// Infered from: (qemu/{prevFiles/prev_6f76b8_0151ab_hw#ppc#mac_newworld.c,revFiles/6f76b8_0151ab_hw#ppc#mac_newworld.c}: ppc_core99_init), (qemu/{prevFiles/prev_6f76b8_0151ab_hw#ppc#prep.c,revFiles/6f76b8_0151ab_hw#ppc#prep.c}: ppc_prep_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

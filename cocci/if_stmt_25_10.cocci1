@@ -1,0 +1,20 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- gtk_widget_insert_after(E0, E1->I2, NULL); 
++ gtk_widget_insert_after(E1->I2, E0, NULL); 
+// Infered from: (gtk/{prevFiles/prev_0401e0_95f65d_gtk#gtkcheckmenuitem.c,revFiles/0401e0_95f65d_gtk#gtkcheckmenuitem.c}: gtk_check_menu_item_direction_changed), (gtk/{prevFiles/prev_95f65d_f36c8c_gtk#gtkmenuitem.c,revFiles/95f65d_f36c8c_gtk#gtkmenuitem.c}: update_arrow_classes)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

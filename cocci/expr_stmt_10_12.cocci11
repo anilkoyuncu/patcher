@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- malta_fpga_init(E0, FPGA_ADDRESS, E1->irq[2], serial_hds[2]); 
++ malta_fpga_init(E0, FPGA_ADDRESS, E1->irq[4], serial_hds[2]); 
+// Infered from: (qemu/{prevFiles/prev_68d001_ce34cf_hw#mips_malta.c,revFiles/68d001_ce34cf_hw#mips_malta.c}: mips_malta_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

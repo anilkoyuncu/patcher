@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = gst_element_request_pad_by_name(E1, "src%d"); 
++ E0 = gst_element_get_request_pad(E1, "src%d"); 
+// Infered from: (gstreamer/{prevFiles/prev_748e28_0f779b_tests#old#testsuite#elements#tee.c,revFiles/748e28_0f779b_tests#old#testsuite#elements#tee.c}: main), (gstreamer/{prevFiles/prev_748e28_0f779b_tests#old#testsuite#elements#tee.c,revFiles/748e28_0f779b_tests#old#testsuite#elements#tee.c}: main), (gstreamer/{prevFiles/prev_748e28_0f779b_tests#old#testsuite#elements#tee.c,revFiles/748e28_0f779b_tests#old#testsuite#elements#tee.c}: main), (gstreamer/{prevFiles/prev_748e28_0f779b_testsuite#elements#tee.c,revFiles/748e28_0f779b_testsuite#elements#tee.c}: main), (gstreamer/{prevFiles/prev_748e28_0f779b_testsuite#elements#tee.c,revFiles/748e28_0f779b_testsuite#elements#tee.c}: main), (gstreamer/{prevFiles/prev_748e28_0f779b_testsuite#elements#tee.c,revFiles/748e28_0f779b_testsuite#elements#tee.c}: main)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

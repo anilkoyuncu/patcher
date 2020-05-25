@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (ssh_connect(E0, host_arg, host, E1, &hostaddr, options.port,  options.address_family, options.connection_attempts, &E2,  options.tcp_keep_alive) != 0)  
++ if (ssh_connect(E0, host, host_arg, E1, &hostaddr, options.port,  options.address_family, options.connection_attempts, &E2,  options.tcp_keep_alive) != 0)  
+  {
+  ...
+  }
+// Infered from: (openssh-portable/{prevFiles/prev_2ab335_69e44b_ssh.c,revFiles/2ab335_69e44b_ssh.c}: main)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

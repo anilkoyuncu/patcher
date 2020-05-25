@@ -1,0 +1,10 @@
+@@
+expression E1, E0;
+@@
+- E0->hd_iov.iov_base = E1; 
++ E0->hd_iov.iov_base = (void *)E1; 
+// Infered from: (qemu/{prevFiles/prev_a2a45a_d74142_block#vdi.c,revFiles/a2a45a_d74142_block#vdi.c}: vdi_aio_write_cb), (qemu/{prevFiles/prev_a2a45a_d74142_block#vdi.c,revFiles/a2a45a_d74142_block#vdi.c}: vdi_aio_write_cb)
+// False positives: (qemu/revFiles/a2a45a_d74142_block#vdi.c: vdi_aio_read_cb), (qemu/revFiles/a2a45a_d74142_block#vdi.c: vdi_aio_write_cb)
+// Recall: 0.43, Precision: 0.60, Matching recall: 1.00
+
+// ---------------------------------------------

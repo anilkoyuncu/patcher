@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 == E1->tif_nfields || E1->tif_fieldinfo[E0]->field_tag != E2->tdir_tag)  
++ if (E0 >= E1->tif_nfields || E1->tif_fieldinfo[E0]->field_tag != E2->tdir_tag)  
+  {
+  ...
+  }
+// Infered from: (libtiff/{prevFiles/prev_677626_5bc9b3_libtiff#tif_dirread.c,revFiles/677626_5bc9b3_libtiff#tif_dirread.c}: TIFFReadDirectory)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

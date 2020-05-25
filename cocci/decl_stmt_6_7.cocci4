@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef callback_entry_t;
+@@
+- callback_entry_t *I0 = E1->value_callbacks; 
++ callback_entry_t *I0 = E1->list_callbacks; 
+// Infered from: (vlc/{prevFiles/prev_a54d62_ecedb2_src#misc#variables.c,revFiles/a54d62_ecedb2_src#misc#variables.c}: TriggerListCallback)
+// False positives: (vlc/revFiles/a54d62_ecedb2_src#misc#variables.c: TriggerCallback)
+// Recall: 0.02, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

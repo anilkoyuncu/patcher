@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = ff_write_chained(E1->avf, E2->stream_index, E2, E3, 0); 
++ E0 = ff_write_chained(E1->avf, E2->stream_index, E2, E3,  E1->initial_offset || E1->reset_timestamps); 
+// Infered from: (FFmpeg/{prevFiles/prev_66ae99_351b22_libavformat#segment.c,revFiles/66ae99_351b22_libavformat#segment.c}: seg_write_packet)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

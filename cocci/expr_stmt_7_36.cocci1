@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- E0->pp_vfilter[E0->i_filter]->p_owner->p_sys = E1; 
++ E0->pp_vfilter[E0->i_vfilter]->p_owner->p_sys = E1; 
+// Infered from: (vlc/{prevFiles/prev_f0317c_a5edd1_modules#stream_out#transcode.c,revFiles/f0317c_a5edd1_modules#stream_out#transcode.c}: transcode_video_process)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.20, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_9eb2c1_2a7b5f_ext#ldap#ldap.c: php_ldap_do_modify
+ - vlc/prevFiles/prev_9901a6_06aa94_modules#access#dvdread.c: ESNew
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_6beeb9_b7cbfc_libavcodec#h263dec.c: decode_slice
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- strftime(I0, sizeof(I0), "%d-%b-%Y %H:%M:%S", php_localtime_r(&E1, &E2)); 
++ I0 = php_format_date(); 
+// Infered from: (php-src/{prevFiles/prev_65fc90_20a359_main#main.c,revFiles/65fc90_20a359_main#main.c}: php_log_err)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.20, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/1(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_65fc90_20a359_main#main.c: php_log_err
+*/
+
+// ---------------------------------------------

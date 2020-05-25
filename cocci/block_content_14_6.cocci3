@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5, E6;
+typedef GdkEvent;
+@@
+- const  GdkEvent *I0; 
++ const  GdkEvent *last_event; 
+  ...
+- I0 = gtk_gesture_get_last_event(E1->drag_gesture, E2); 
++ last_event = gtk_gesture_get_last_event(E1->drag_gesture, E2); 
+  ...
+- gtk_drag_begin_internal(E3, E1, E1->target_list, E1->actions, E4, I0, E5, E6); 
++ gtk_drag_begin_internal(E3, E1, E1->target_list, E1->actions, E4, last_event,  E5, E6); 
+// Infered from: (gtk/{prevFiles/prev_2a0d5c_29ab70_gtk#gtkdnd.c,revFiles/2a0d5c_29ab70_gtk#gtkdnd.c}: gtk_drag_source_event_cb)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

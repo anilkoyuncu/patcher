@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[E1] = (FFMIN(E0[E1], 30189 << 4) * 19077 - (39057361 << 4)) >> 14; 
++ E0[E1] = (FFMIN(E0[E1], 30189 << 4) * 4769 - (39057361 << 2)) >> 12; 
+// Infered from: (FFmpeg/{prevFiles/prev_81cc7d_c31bc5_libswscale#swscale.c,revFiles/81cc7d_c31bc5_libswscale#swscale.c}: lumRangeToJpeg16_c), (FFmpeg/{prevFiles/prev_afb9d4_ebb0d6_libswscale#swscale.c,revFiles/afb9d4_ebb0d6_libswscale#swscale.c}: lumRangeToJpeg16_c)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

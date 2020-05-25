@@ -1,0 +1,21 @@
+@@
+expression E0;
+@@
+- snd_soc_dapm_new_controls(E0, ARRAY_AND_SIZE(mioa701_dapm_widgets)); 
+- snd_soc_dapm_add_routes(E0, ARRAY_AND_SIZE(audio_map)); 
++ snd_soc_dapm_new_controls(E0, mioa701_dapm_widgets,  ARRAY_SIZE(mioa701_dapm_widgets)); 
++ snd_soc_dapm_add_routes(E0, audio_map, ARRAY_SIZE(audio_map)); 
+// Infered from: (linux/{prevFiles/prev_4edec9_0b4fa33_sound#soc#pxa#mioa701_wm9713.c,revFiles/4edec9_0b4fa33_sound#soc#pxa#mioa701_wm9713.c}: mioa701_wm9713_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

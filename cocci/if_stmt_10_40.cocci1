@@ -1,0 +1,30 @@
+@@
+expression E0, E1;
+@@
+- return E0 < E1 ? -1 :(E0 > E1 ? 1 :0); 
++ return (E0 < E1) ? -1 :1; 
+// Infered from: (cpython/{prevFiles/prev_bb3c5f_f48384_Objects#classobject.c,revFiles/bb3c5f_f48384_Objects#classobject.c}: instance_compare)
+// Recall: 0.15, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.20, Precision: 1.00
+// -- Node Change --
+// Recall: 0.15, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/5(0%)
+
+/*
+Functions where the patch applied partially:
+ - cpython/prevFiles/prev_bb3c5f_f48384_Objects#classobject.c: instance_compare
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_6f8ef5_714f5a_libavcodec#vc1dec.c: vc1_decode_frame
+ - qemu/prevFiles/prev_841b8d_43d145_hw#9pfs#9p-local.c: local_link
+ - qemu/prevFiles/prev_39b384_b54882_qemu-sockets.c: inet_dgram_opts
+ - FFmpeg/prevFiles/prev_cb3486_147ee4_libavcodec#h264_ps.c: ff_h264_decode_seq_parameter_set
+*/
+
+// ---------------------------------------------

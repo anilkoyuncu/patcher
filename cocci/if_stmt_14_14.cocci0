@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (is_valid(E0.link))  
++ if (is_valid(E0.link) && !(E0.ctrl & TD_CTRL_SPD))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_72a04d_35efba_hw#usb#hcd-uhci.c,revFiles/72a04d_35efba_hw#usb#hcd-uhci.c}: uhci_process_frame)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

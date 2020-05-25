@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->announce = E0->src != RPMSG_ADDR_ANY ? true :false; 
++ E0->announce = E0->src != RPMSG_ADDR_ANY; 
+// Infered from: (linux/{prevFiles/prev_c8ced11_29b481_drivers#rpmsg#virtio_rpmsg_bus.c,revFiles/c8ced11_29b481_drivers#rpmsg#virtio_rpmsg_bus.c}: rpmsg_create_channel)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2, E3;
+typedef uint8_t;
+@@
+- E0->mix_any_f(E1->ch, E2->ch, E0->native_matrix, E3); 
++ E0->mix_any_f(E1->ch, (const  uint8_t **)E2->ch, E0->native_matrix, E3); 
+// Infered from: (FFmpeg/{prevFiles/prev_7309451_338509c_libswresample#rematrix.c,revFiles/7309451_338509c_libswresample#rematrix.c}: swri_rematrix)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 13/13(100%)
+
+
+// ---------------------------------------------

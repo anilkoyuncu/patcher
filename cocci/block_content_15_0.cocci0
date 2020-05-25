@@ -1,0 +1,13 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- irq_set_chip(E0, E1); 
++ irq_set_chip_and_handler(E0, E1, I2); 
+  ...
+- irq_set_handler(E0, I2); 
+// Infered from: (linux/{prevFiles/prev_d6f7ce9f_d5bb122_drivers#mfd#htc-egpio.c,revFiles/d6f7ce9f_d5bb122_drivers#mfd#htc-egpio.c}: egpio_probe), (linux/{prevFiles/prev_d6f7ce9f_d5bb122_drivers#mfd#htc-i2cpld.c,revFiles/d6f7ce9f_d5bb122_drivers#mfd#htc-i2cpld.c}: htcpld_setup_chip_irq), (linux/{prevFiles/prev_d6f7ce9f_d5bb122_drivers#mfd#t7l66xb.c,revFiles/d6f7ce9f_d5bb122_drivers#mfd#t7l66xb.c}: t7l66xb_attach_irq), (linux/{prevFiles/prev_d6f7ce9f_d5bb122_drivers#mfd#tc6393xb.c,revFiles/d6f7ce9f_d5bb122_drivers#mfd#tc6393xb.c}: tc6393xb_attach_irq)
+// False positives: (linux/revFiles/d6f7ce9f_d5bb122_drivers#mfd#asic3.c: asic3_irq_probe)
+// Recall: 0.74, Precision: 0.98, Matching recall: 1.00
+
+// ---------------------------------------------

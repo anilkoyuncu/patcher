@@ -1,0 +1,15 @@
+@@
+identifier I0;
+expression E1;
+typedef int64_t;
+typedef uint64_t;
+@@
+- int64_t I0; 
++ uint64_t I0; 
+  ...
+- I0 = E1->first_dts - RELATIVE_TS_BASE; 
++ I0 = (uint64_t )E1->first_dts - RELATIVE_TS_BASE; 
+// Infered from: (FFmpeg/{prevFiles/prev_cafb19_ed08cb_libavformat#utils.c,revFiles/cafb19_ed08cb_libavformat#utils.c}: update_initial_timestamps)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

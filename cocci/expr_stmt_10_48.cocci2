@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- hexdump(E0, NULL, E1 > 512 ? 512 :E2, 0); 
++ hexdump(E0, NULL, E1 > 512 ? 512 :E1, 0); 
+// Infered from: (libarchive/{prevFiles/prev_d4ce0c_cd8709_tar#test#main.c,revFiles/d4ce0c_cd8709_tar#test#main.c}: assertion_file_contents)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

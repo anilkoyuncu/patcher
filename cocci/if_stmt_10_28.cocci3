@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = malloc(E1)) == NULL)  
++ if ((E0 = malloc(E1 + 1)) == NULL)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_351053_238f57_libarchive#archive_read_support_format_rar.c,revFiles/351053_238f57_libarchive#archive_read_support_format_rar.c}: read_header)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

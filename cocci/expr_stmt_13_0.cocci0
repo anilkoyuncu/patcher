@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = vmstate_load_state(E1, E2->vmsd, E3, E4); 
++ E0 = vmstate_load_state(E1, E2->vmsd, E3, E2->vmsd->version_id); 
+// Infered from: (qemu/{prevFiles/prev_fa3aad_da6418_savevm.c,revFiles/fa3aad_da6418_savevm.c}: vmstate_load_state)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

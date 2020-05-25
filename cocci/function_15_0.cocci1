@@ -1,0 +1,36 @@
+@@
+expression E0, E1;
+@@
+- ParseUrls(E0, E1); 
++ if (ParseUrls(E0, E1))  
++ {
++ free(E1); 
++ goto  error; 
++ }
+// Infered from: (vlc/{prevFiles/prev_352188c_bb7add_modules#video_filter#rss.c,revFiles/352188c_bb7add_modules#video_filter#rss.c}: CreateFilter)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.01, Precision: 1.00
+// -- Node Change --
+// Recall: 0.03, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/152(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_22ddd6_922bc3_libavcodec#mpegvideo.c: MPV_encode_init
+*/
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_77d9f7_3564fbc_drivers#watchdog#iTCO_wdt.c: iTCO_wdt_remove
+ - linux/prevFiles/prev_d3d77b5_396164_drivers#watchdog#iTCO_wdt.c: 
+ - FFmpeg/prevFiles/prev_01042d_2beac7_libavcodec#escape124.c: escape124_decode_frame
+ - FFmpeg/prevFiles/prev_efe34e_5182a2a_libavcodec#libxvid.c: xvid_encode_init
+ - linux/prevFiles/prev_d3d77b5_396164_drivers#watchdog#iTCO_wdt.c: iTCO_wdt_shutdown
+ - linux/prevFiles/prev_77d9f7_3564fbc_drivers#watchdog#iTCO_wdt.c: 
+*/
+
+// ---------------------------------------------

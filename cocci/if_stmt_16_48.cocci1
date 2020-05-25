@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (g_ascii_strcasecmp(E0, "localhost") == 0 || strcmp(E0, "127.0.0.1") == 0)  
++ if (g_ascii_strcasecmp(E0, "localhost") == 0 || strcmp(E0, "127.0.0.1") == 0 || strcmp(  E0, "") == 0)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_3340a9_47ba48_util.c,revFiles/3340a9_47ba48_util.c}: get_conn_cfilter)
+// False positives: (wireshark/revFiles/3340a9_47ba48_util.c: get_conn_cfilter)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_3340a9_47ba48_util.c: get_conn_cfilter
+*/
+
+// ---------------------------------------------

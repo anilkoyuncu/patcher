@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = strchr(E1 + 9, 'C'); 
++ E0 = strstr(E1 + 9, " C"); 
+// Infered from: (vlc/{prevFiles/prev_49dba5_ab620e_modules#demux#rawvid.c,revFiles/49dba5_ab620e_modules#demux#rawvid.c}: Open)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.11
+
+// ---------------------------------------------

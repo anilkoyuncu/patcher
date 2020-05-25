@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = get_fd(E1.umad.mad, &E2, &E1.hdr.sgid.global.interface_id); 
++ E0 = get_fd(E1.umad.mad, E1.umad_len, &E2, &E1.hdr.sgid.global.interface_id); 
+// Infered from: (qemu/{prevFiles/prev_ade007_8b088d_contrib#rdmacm-mux#main.c,revFiles/ade007_8b088d_contrib#rdmacm-mux#main.c}: umad_recv_thread_func)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

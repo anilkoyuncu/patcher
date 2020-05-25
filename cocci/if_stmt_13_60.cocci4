@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef curl_schannel_cred;
+@@
+- E0 = Curl_ssl_addsessionid(E1, E2->cred, sizeof(curl_schannel_cred )); 
++ E0 = Curl_ssl_addsessionid(E1, (void *)E2->cred, sizeof(curl_schannel_cred )); 
+// Infered from: (curl/{prevFiles/prev_90412c_78729e_lib#curl_schannel.c,revFiles/90412c_78729e_lib#curl_schannel.c}: schannel_connect_step3)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

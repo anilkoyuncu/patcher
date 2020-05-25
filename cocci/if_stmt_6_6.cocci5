@@ -1,0 +1,38 @@
+@@
+expression E0;
+@@
+- if ((pixman_image_get_format(E0->pixman_image) == PIXMAN_a8r8g8b8) && !pixman_image_get_component_alpha(  E0->pixman_image))  
++ if (pixman_image_get_format(E0->pixman_image) == PIXMAN_a8r8g8b8 && !pixman_image_get_component_alpha(  E0->pixman_image))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_7a1e37_5e3350_src#cairo-ft-font.c,revFiles/7a1e37_5e3350_src#cairo-ft-font.c}: _cairo_ft_scaled_glyph_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.81, Precision: 0.95
+// -- Node Change --
+// Recall: 0.81, Precision: 0.89
+// -- General --
+// Functions fully changed: 20/27(74%)
+
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_0d8faf_1b50e5_ompi#mpi#c#scatter.c: MPI_Scatter
+ - ompi/prevFiles/prev_0d8faf_1b50e5_ompi#mpi#c#gather.c: MPI_Gather
+ - FFmpeg/prevFiles/prev_57bdd6_119d70_libavcodec#dirac.c: parse_source_parameters
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_2e84d2_eeafb4_epan#dissectors#packet-gtp.c: track_gtp_session
+ - linux/prevFiles/prev_cfed0a2c_9a8a02c_drivers#net#ethernet#mellanox#mlx4#port.c: __mlx4_register_mac
+*/
+
+// ---------------------------------------------

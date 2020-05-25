@@ -1,0 +1,18 @@
+@@
+expression E0;
+typedef PyObject;
+@@
+- if (long_compare(E0, _PyLong_One))  
++ if (long_compare(E0, (PyObject *)_PyLong_One))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_e584cb_c6789d_Objects#longobject.c,revFiles/e584cb_c6789d_Objects#longobject.c}: long_invmod)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

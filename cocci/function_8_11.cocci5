@@ -1,0 +1,9 @@
+@@
+@@
+- logprintf("(null)"); 
++ logprintf("NULL"); 
+// Infered from: (libarchive/{prevFiles/prev_539985_15e709_tar#test#main.c,revFiles/539985_15e709_tar#test#main.c}: strdump)
+// False positives: (libarchive/revFiles/539985_15e709_tar#test#main.c: wcsdump)
+// Recall: 0.03, Precision: 0.50, Matching recall: 0.40
+
+// ---------------------------------------------

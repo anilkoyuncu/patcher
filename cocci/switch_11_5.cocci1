@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- while (E0->mb_y < E0->mb_height && E0->gb.size * 8 - get_bits_count(&E0->gb) > 32)  
++ while (E0->mb_y < E0->mb_height && E0->gb.size * 8 - get_bits_count(&E0->gb) > 16)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_6a7009_a74991_libavcodec#h263dec.c,revFiles/6a7009_a74991_libavcodec#h263dec.c}: h263_decode_frame)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 1.00
+// -- Node Change --
+// Recall: 0.21, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_ac37d2_d0c6ed_ffplay.c: toggle_audio_display
+ - FFmpeg/prevFiles/prev_ac37d2_d0c6ed_ffplay.c: event_loop
+ - vlc/prevFiles/prev_5a7803_4865e3_src#input#mpeg_system.c: input_DecodePMT
+ - FFmpeg/prevFiles/prev_6a7009_a74991_libavcodec#h263dec.c: h263_decode_init
+*/
+
+// ---------------------------------------------

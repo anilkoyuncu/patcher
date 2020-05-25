@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gst_element_yield (E0); 
++ gst_element_yield(GST_ELEMENT(E0)); 
+// Infered from: (gstreamer/{prevFiles/prev_8ae735_ffe760_gst#autoplug#gstautoplugcache.c,revFiles/8ae735_ffe760_gst#autoplug#gstautoplugcache.c}: gst_autoplugcache_loop)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

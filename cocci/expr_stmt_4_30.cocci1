@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- *E0 = E1; 
++ E0 = &E1; 
+// Infered from: (php-src/{prevFiles/prev_104b4f_e5f6dc_ext#standard#browscap.c,revFiles/104b4f_e5f6dc_ext#standard#browscap.c}: PHP_FUNCTION)
+// False positives: (FFmpeg/revFiles/c62821_079d1a_libavcodec#ra144.c: ff_int_to_int16), (php-src/revFiles/104b4f_e5f6dc_ext#standard#browscap.c: PHP_FUNCTION), (php-src/revFiles/104b4f_e5f6dc_ext#standard#browscap.c: browser_reg_compare)
+// Recall: 0.20, Precision: 0.25, Matching recall: 0.25
+
+// ---------------------------------------------

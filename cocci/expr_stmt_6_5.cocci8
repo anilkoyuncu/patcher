@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- Ans[E0 + 122] = Flag[E1]; 
++ Ans[E0 + 1] = Flag[E1]; 
+// Infered from: (codeflaws/{prevFiles/prev_599-B-15615019-15615020.c,revFiles/599-B-15615019-15615020.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

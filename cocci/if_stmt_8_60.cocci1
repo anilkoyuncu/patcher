@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (E0 <= E1->i_buffer - 4 && ((E1->p_buffer[E0] & 0x1f) != 9))  
++ if (E0 + 4 <= E1->i_buffer && ((E1->p_buffer[E0] & 0x1f) != 9))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_f90e35c_6fa5e6_modules#mux#mpeg#pes.c,revFiles/f90e35c_6fa5e6_modules#mux#mpeg#pes.c}: EStoPES)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

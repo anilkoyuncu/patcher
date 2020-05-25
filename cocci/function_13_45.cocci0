@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = imsg_read(&E1->ibuf)) == -1 || E0 == 0)  
+- {
+- E1->exittype = CCTX_DIED; 
+- return (-1); 
+- }
+// Infered from: (tmux/{prevFiles/prev_83f558_884ebb_client.c,revFiles/83f558_884ebb_client.c}: client_msg_dispatch), (tmux/{prevFiles/prev_751a2f_81a457_client.c,revFiles/751a2f_81a457_client.c}: client_msg_dispatch)
+// Recall: 0.27, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

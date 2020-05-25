@@ -1,0 +1,10 @@
+@@
+identifier I0 = {bdrv_read ,bdrv_write };
+expression E3, E1, E2;
+@@
+- I0(E1->bs, fd_sector(E1), E2->fifo, E3); 
++ I0(E1->bs, fd_sector(E1), E2->fifo, 1); 
+// Infered from: (qemu/{prevFiles/prev_d6c1a3_a06e5a_hw#fdc.c,revFiles/d6c1a3_a06e5a_hw#fdc.c}: fdctrl_read_data), (qemu/{prevFiles/prev_d6c1a3_a06e5a_hw#fdc.c,revFiles/d6c1a3_a06e5a_hw#fdc.c}: fdctrl_write_data)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

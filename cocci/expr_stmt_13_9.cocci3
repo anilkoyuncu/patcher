@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- snprintf(E0, sizeof(E0), "rtp://%s:%d?ttl=%d", inet_ntoa(E1->sdp_ip),  E1->sdp_port, E1->sdp_ttl); 
++ snprintf(E0, sizeof(E0), "rtp://%s:%d?localport=%d&ttl=%d",  inet_ntoa(E1->sdp_ip), E1->sdp_port, E1->sdp_port, E1->sdp_ttl); 
+// Infered from: (FFmpeg/{prevFiles/prev_d2bf42b_35b74c_libavformat#rtsp.c,revFiles/d2bf42b_35b74c_libavformat#rtsp.c}: sdp_read_header)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

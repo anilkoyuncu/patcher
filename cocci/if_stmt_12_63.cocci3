@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- while (E0->block.i_start + E0->block.i_size <= E1)  
++ while (E0->block.i_start + E0->block.i_size < E1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_c482de_9d349e_src#input#stream.c,revFiles/c482de_9d349e_src#input#stream.c}: AStreamSeekBlock)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_701509_c3cc61_lib#http.c: Curl_http_connect
+ - vlc/prevFiles/prev_c482de_9d349e_src#input#stream.c: AStreamReadBlock
+*/
+
+// ---------------------------------------------

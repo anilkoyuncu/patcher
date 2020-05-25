@@ -1,0 +1,31 @@
+@@
+expression E0, E1, E3, E2;
+@@
+- for(E0;E1 >=  E2;E3)  
+- {
+  ...
+- }
+// Infered from: (codeflaws/{prevFiles/prev_632-A-16772686-16772703.c,revFiles/632-A-16772686-16772703.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.25, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - codeflaws/prevFiles/prev_632-A-16772686-16772703.c: main
+ - codeflaws/prevFiles/prev_38-A-16279127-16279160.c: main
+*/
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_550-C-16701994-16702029.c: main
+ - codeflaws/prevFiles/prev_157-B-13596646-13596675.c: main
+*/
+
+// ---------------------------------------------

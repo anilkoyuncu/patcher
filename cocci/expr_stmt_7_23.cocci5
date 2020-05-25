@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = sizeof(struct i40e_q_vectors *) * E1->num_q_vectors; 
++ E0 = sizeof(struct i40e_q_vector *) * E1->num_q_vectors; 
+// Infered from: (linux/{prevFiles/prev_f57e4fb_952d96_drivers#net#ethernet#intel#i40e#i40e_main.c,revFiles/f57e4fb_952d96_drivers#net#ethernet#intel#i40e#i40e_main.c}: i40e_vsi_alloc_arrays)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- while (NULL != (E0 = g_queue_peek_head(E1)))  
++ while (NULL != (E0 = g_queue_pop_head(E1)))  
+  {
+  ...
+  }
+// Infered from: (lighttpd2/{prevFiles/prev_d498a9_0b5a67_src#common#memcached.c,revFiles/d498a9_0b5a67_src#common#memcached.c}: send_queue_reset)
+// False positives: (lighttpd2/revFiles/d498a9_0b5a67_src#common#memcached.c: cancel_all_requests), (lighttpd2/revFiles/d498a9_0b5a67_src#common#memcached.c: send_queue_clean)
+// Recall: 0.15, Precision: 0.33, Matching recall: 0.67
+
+// ---------------------------------------------

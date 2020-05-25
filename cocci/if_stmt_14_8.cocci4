@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->path != NULL)  
++ if (E0->path != NULL && strlen(E0->path))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_8406c2_a462cb_ext#standard#http_fopen_wrapper.c,revFiles/8406c2_a462cb_ext#standard#http_fopen_wrapper.c}: php_fopen_url_wrap_http)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = (1 << AD7816_TEMP_FLOAT_OFFSET) - E0; 
++ E0 = BIT(AD7816_TEMP_FLOAT_OFFSET) - E0; 
+// Infered from: (linux/{prevFiles/prev_e7c3d0_6082ac_drivers#staging#iio#adc#ad7816.c,revFiles/e7c3d0_6082ac_drivers#staging#iio#adc#ad7816.c}: ad7816_show_value)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

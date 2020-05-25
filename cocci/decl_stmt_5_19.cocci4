@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef ipxhdr_t;
+@@
+- const  ipxhdr_t *I0 = (ipxhdr_t *)E1; 
++ const  ipxhdr_t *I0 = (const  ipxhdr_t *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#conversations_ipx.c,revFiles/3ae2e5_8aebe1_ui#gtk#conversations_ipx.c}: ipx_conversation_packet), (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#hostlist_ipx.c,revFiles/3ae2e5_8aebe1_ui#gtk#hostlist_ipx.c}: ipx_hostlist_packet)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

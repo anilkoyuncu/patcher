@@ -1,0 +1,21 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef ngx_http_log_buf_t;
+typedef ngx_open_file_t;
+@@
+- ngx_open_file_t *I0; 
+- ngx_http_log_buf_t *I1; 
+  ...
+- if (E2->timedout)  
+- {
+  ...
+- return; 
+- }
+- I0 = E2->data; 
+- I1 = I0->data; 
+- I1->event = NULL; 
+// Infered from: (nginx/{prevFiles/prev_c1d831_fca26c_src#http#modules#ngx_http_log_module.c,revFiles/c1d831_fca26c_src#http#modules#ngx_http_log_module.c}: ngx_http_log_flush_handler)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

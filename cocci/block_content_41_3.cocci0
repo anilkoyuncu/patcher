@@ -1,0 +1,14 @@
+@@
+expression E0;
+@@
+- if (MPI_UNDEFINED == E0)  
++ if (MPI_UNDEFINED == E0)  
+  {
+- E0 = 0; 
++ r_key = 0; 
+  }
+// Infered from: (ompi/{prevFiles/prev_a5e9c3_5e302f_ompi#mpi#c#type_create_f90_complex.c,revFiles/a5e9c3_5e302f_ompi#mpi#c#type_create_f90_complex.c}: MPI_Type_create_f90_complex), (ompi/{prevFiles/prev_a5e9c3_5e302f_ompi#mpi#c#type_create_f90_real.c,revFiles/a5e9c3_5e302f_ompi#mpi#c#type_create_f90_real.c}: MPI_Type_create_f90_real)
+// False positives: (ompi/revFiles/a5e9c3_5e302f_ompi#mpi#c#type_create_f90_complex.c: MPI_Type_create_f90_complex), (ompi/revFiles/a5e9c3_5e302f_ompi#mpi#c#type_create_f90_real.c: MPI_Type_create_f90_real)
+// Recall: 0.33, Precision: 0.75, Matching recall: 0.33
+
+// ---------------------------------------------

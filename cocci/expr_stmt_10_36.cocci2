@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- memory_region_init_io(&E0->data_mem, OBJECT(E0), &pci_host_data_be_ops, E1,  "pci-conf-data", 1); 
++ memory_region_init_io(&E0->data_mem, OBJECT(E0), &pci_host_data_le_ops, E1,  "pci-conf-data", 4); 
+// Infered from: (qemu/{prevFiles/prev_240383_d16644_hw#pci-host#prep.c,revFiles/240383_d16644_hw#pci-host#prep.c}: raven_pcihost_realizefn)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

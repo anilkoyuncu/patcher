@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return Py_BuildValue("N(O)l", _PyObject_GetBuiltin("iter"), E0->it_seq,  E0->it_index); 
++ return Py_BuildValue("N(O)n", _PyObject_GetBuiltin("iter"), E0->it_seq,  E0->it_index); 
+// Infered from: (cpython/{prevFiles/prev_7660b8_9a644b_Objects#listobject.c,revFiles/7660b8_9a644b_Objects#listobject.c}: listiter_reduce_general), (cpython/{prevFiles/prev_7660b8_9a644b_Objects#tupleobject.c,revFiles/7660b8_9a644b_Objects#tupleobject.c}: tupleiter_reduce)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

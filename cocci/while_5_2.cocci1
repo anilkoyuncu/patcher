@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (E0 <= --E1)  
++ while (E1 && E0 <= --E1)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_e5e9b5_4baff5_combine-diff.c,revFiles/e5e9b5_4baff5_combine-diff.c}: make_hunks)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

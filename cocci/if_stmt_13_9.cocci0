@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!sentinelRedisInstanceNoDownFor(E0->master, E1) || (mstime() - sentinel.tilt_start_time) < E1)  
++ if (!sentinelRedisInstanceNoDownFor(E0, E1) || (mstime() - sentinel.tilt_start_time) < E1)  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_9e40c4_ae35b7_src#sentinel.c,revFiles/9e40c4_ae35b7_src#sentinel.c}: sentinelRefreshInstanceInfo)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

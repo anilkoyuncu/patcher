@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->current_action = E1; 
+- g_signal_emit_by_name(E2, "action-changed", E1); 
++ E0->current_action = E2->action; 
++ g_signal_emit_by_name(E2, "action-changed", E2->action); 
+// Infered from: (gtk/{prevFiles/prev_5c46c8_c6fa3c_gdk#x11#gdkdnd-x11.c,revFiles/5c46c8_c6fa3c_gdk#x11#gdkdnd-x11.c}: gdk_x11_drag_context_handle_status)
+// False positives: (gtk/revFiles/5c46c8_c6fa3c_gdk#x11#gdkdnd-x11.c: send_client_message_async_cb)
+// Recall: 0.07, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

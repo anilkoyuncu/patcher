@@ -1,0 +1,27 @@
+@@
+identifier I1;
+expression E0, E2, E3;
+@@
+- E0 = kzalloc(sizeof(struct I1 ), GFP_KERNEL); 
++ E0 = kmemdup(E2, sizeof(struct I1 ), GFP_KERNEL); 
+  ...
+- memcpy(E0, E2, E3); 
+// Infered from: (linux/{prevFiles/prev_929ebd3_3289a8_drivers#net#wireless#wl12xx#wl1271_main.c,revFiles/929ebd3_3289a8_drivers#net#wireless#wl12xx#wl1271_main.c}: wl1271_fetch_nvs), (linux/{prevFiles/prev_da3c8d_90403a_drivers#staging#rtl8188eu#core#rtw_mlme_ext.c,revFiles/da3c8d_90403a_drivers#staging#rtl8188eu#core#rtw_mlme_ext.c}: set_tx_beacon_cmd), (linux/{prevFiles/prev_6da64fd_fb9204_virt#kvm#kvm_main.c,revFiles/6da64fd_fb9204_virt#kvm#kvm_main.c}: __kvm_set_memory_region), (linux/{prevFiles/prev_6da64fd_fb9204_virt#kvm#kvm_main.c,revFiles/6da64fd_fb9204_virt#kvm#kvm_main.c}: __kvm_set_memory_region), (linux/{prevFiles/prev_6da64fd_fb9204_virt#kvm#kvm_main.c,revFiles/6da64fd_fb9204_virt#kvm#kvm_main.c}: kvm_io_bus_register_dev)
+// False positives: (linux/revFiles/6da64fd_fb9204_virt#kvm#kvm_main.c: kvm_io_bus_unregister_dev)
+// Recall: 0.33, Precision: 0.80, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.92
+// -- Node Change --
+// Recall: 1.00, Precision: 0.92
+// -- General --
+// Functions fully changed: 12/13(92%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_6da64fd_fb9204_virt#kvm#kvm_main.c: kvm_io_bus_unregister_dev
+*/
+
+// ---------------------------------------------

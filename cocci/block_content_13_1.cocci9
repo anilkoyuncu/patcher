@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+typedef gchar;
+@@
+- gchar *I0 = g_strdup_printf("ProtoField(%i): %s %s %s %s %p %.8x %s",  E1->hfid, E1->name, E1->abbr,  ftenum_to_string(E1->type),  base_to_string(E1->base), E1->vs, E1->mask,  E1->blob); 
++ gchar *I0 = ep_strdup_printf("ProtoField(%i): %s %s %s %s %p %.8x %s",  E1->hfid, E1->name, E1->abbr,  ftenum_to_string(E1->type),  base_to_string(E1->base), E1->vs, E1->mask,  E1->blob); 
+  ...
+- g_free(I0); 
+// Infered from: (wireshark/{prevFiles/prev_b72075_923b8a_epan#wslua#wslua_proto.c,revFiles/b72075_923b8a_epan#wslua#wslua_proto.c}: ProtoField_tostring)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = av_get_audio_frame_duration(E1, 0); 
++ E0 = av_get_audio_frame_duration(E1, E1->block_align); 
+// Infered from: (FFmpeg/{prevFiles/prev_584f88_34e2ce_libavformat#riffenc.c,revFiles/584f88_34e2ce_libavformat#riffenc.c}: ff_put_wav_header)
+// False positives: (FFmpeg/revFiles/584f88_34e2ce_libavformat#riffenc.c: ff_parse_specific_params)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

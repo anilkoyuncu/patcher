@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0 = E0 >> 5; 
++ E0 >>= 5; 
+// Infered from: (linux/{prevFiles/prev_278c09_ae52e52_drivers#staging#rtl8192u#r8192U_core.c,revFiles/278c09_ae52e52_drivers#staging#rtl8192u#r8192U_core.c}: rtl8192_query_rxphystatus), (linux/{prevFiles/prev_0dbffe_be31fe_drivers#staging#rtl8192e#rtl8192e#r8192E_dev.c,revFiles/0dbffe_be31fe_drivers#staging#rtl8192e#rtl8192e#r8192E_dev.c}: rtl8192_query_rxphystatus)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

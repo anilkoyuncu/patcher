@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- serial_init(serial_io[E0], NULL, serial_hds[E0]); 
++ serial_init(serial_io[E0], NULL, 115200, serial_hds[E0]); 
+// Infered from: (qemu/{prevFiles/prev_cbf5c7_64b7b7_hw#sun4u.c,revFiles/cbf5c7_64b7b7_hw#sun4u.c}: sun4u_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

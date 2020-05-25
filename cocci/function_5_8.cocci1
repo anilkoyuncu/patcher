@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0.psz_string = malloc(strlen(_("Track %i")) + 20); 
+- sprintf(E0.psz_string, _("Track %i"), E1.i_int); 
++ if (asprintf(&E0.psz_string, "%s %i", _("Track"), E1.i_int) == -1)  
++ {
++ E0.psz_string = NULL; 
++ }
+// Infered from: (vlc/{prevFiles/prev_b2fcbc_423997_src#input#es_out.c,revFiles/b2fcbc_423997_src#input#es_out.c}: EsOutESVarUpdateGeneric)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/1(100%)
+
+
+// ---------------------------------------------

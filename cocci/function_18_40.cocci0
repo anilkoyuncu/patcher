@@ -1,0 +1,8 @@
+@@
+expression E1, E0;
+@@
+- devm_kfree(&E0->dev, E1); 
+// Infered from: (linux/{prevFiles/prev_7cefdd1_caa0bf_drivers#net#phy#mdio-mux-gpio.c,revFiles/7cefdd1_caa0bf_drivers#net#phy#mdio-mux-gpio.c}: mdio_mux_gpio_probe), (linux/{prevFiles/prev_66be0e_56a2ab_drivers#video#backlight#da9052_bl.c,revFiles/66be0e_56a2ab_drivers#video#backlight#da9052_bl.c}: da9052_backlight_probe), (linux/{prevFiles/prev_66be0e_56a2ab_drivers#video#backlight#da9052_bl.c,revFiles/66be0e_56a2ab_drivers#video#backlight#da9052_bl.c}: da9052_backlight_remove)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

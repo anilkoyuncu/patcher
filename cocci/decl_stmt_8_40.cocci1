@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5;
+@@
+- int I0 = E1 != NULL && E2 != NULL && E3 != NULL && BN_is_odd(E2) && BN_is_prime_ex(  E2, SRP_NUMBER_ITERATIONS_FOR_PRIME, E3, NULL) && E4 != NULL && BN_rshift1(  E4, E2) && BN_is_prime_ex(E4, SRP_NUMBER_ITERATIONS_FOR_PRIME, E3, NULL) && E5 != NULL && BN_mod_exp(  E5, E1, E4, E2, E3) && BN_add_word(E5, 1) && BN_cmp(E5, E2) == 0; 
++ int I0 = E1 != NULL && E2 != NULL && E3 != NULL && BN_is_odd(E2) && BN_is_prime_ex(  E2, SRP_NUMBER_ITERATIONS_FOR_PRIME, E3, NULL) == 1 && E4 != NULL && BN_rshift1(  E4, E2) && BN_is_prime_ex(E4, SRP_NUMBER_ITERATIONS_FOR_PRIME, E3, NULL) == 1 && E5 != NULL && BN_mod_exp(  E5, E1, E4, E2, E3) && BN_add_word(E5, 1) && BN_cmp(E5, E2) == 0; 
+// Infered from: (openssl/{prevFiles/prev_748e85_f08c8c_apps#s_client.c,revFiles/748e85_f08c8c_apps#s_client.c}: srp_Verify_N_and_g)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_efdf6a_e683eb_hw#misc#tmp105.c: tmp105_set_temperature
+*/
+
+// ---------------------------------------------

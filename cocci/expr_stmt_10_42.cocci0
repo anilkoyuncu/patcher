@@ -1,0 +1,12 @@
+@@
+identifier I0, I1;
+expression E2, E3, E4;
+@@
+- I0->I1 = E2; 
+- qemu_add_vm_change_state_handler(E3->bus[E4].dma->ops->restart_cb,  &E3->bmdma[E4]->dma); 
++ E3->bmdma[E4].bus = &E3->bus[E4]; 
++ qemu_add_vm_change_state_handler(E3->bus[E4].dma->ops->restart_cb,  &E3->bmdma[E4].dma); 
+// Infered from: (qemu/{prevFiles/prev_f56b18_e59d68_hw#ide#cmd646.c,revFiles/f56b18_e59d68_hw#ide#cmd646.c}: pci_cmd646_ide_initfn)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

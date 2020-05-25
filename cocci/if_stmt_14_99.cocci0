@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (SSL_in_init(E0) || E0->in_handshake)  
++ if ((SSL_in_init(E0) || E0->in_handshake) && !E0->d1->listen)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_d41ce0_04485c_ssl#d1_pkt.c,revFiles/d41ce0_04485c_ssl#d1_pkt.c}: dtls1_get_record)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

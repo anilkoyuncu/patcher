@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 <= *E1)  
++ if (E0 >= 0 && E0 <= *E1)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_d2ef4b_d8d0a0_vmstate.c,revFiles/d2ef4b_d8d0a0_vmstate.c}: get_int32_le)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

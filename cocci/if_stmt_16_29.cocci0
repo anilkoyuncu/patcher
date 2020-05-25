@@ -1,0 +1,10 @@
+@@
+identifier I4;
+expression E1, E3, E0, E2, E5;
+@@
+- E0 = recv(E1[E2], &E3[E2][I4[E2]], E5, 0); 
++ E0 = sread(E1[E2], &E3[E2][I4[E2]], E5); 
+// Infered from: (curl/{prevFiles/prev_2705af_f34ddb_tests#server#sws.c,revFiles/2705af_f34ddb_tests#server#sws.c}: http_connect), (curl/{prevFiles/prev_2705af_f34ddb_tests#server#sws.c,revFiles/2705af_f34ddb_tests#server#sws.c}: http_connect)
+// Recall: 0.15, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

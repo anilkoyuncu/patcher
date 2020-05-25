@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = kvm_arch_mmu_notifier_invalidate_range(E1, E2->start, E2->end,  E2->blockable); 
++ E0 = kvm_arch_mmu_notifier_invalidate_range(E1, E2->start, E2->end,  mmu_notifier_range_blockable(  E2)); 
+// Infered from: (linux/{prevFiles/prev_dfcd66_4a83bf_virt#kvm#kvm_main.c,revFiles/dfcd66_4a83bf_virt#kvm#kvm_main.c}: kvm_mmu_notifier_invalidate_range_start)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

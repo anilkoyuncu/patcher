@@ -1,0 +1,33 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = snprintf(E1, sizeof(E1), "%s\n", Y4M_FRAME_MAGIC); 
++ snprintf(E1, sizeof(E1), "%s\n", Y4M_FRAME_MAGIC); 
+// Infered from: (FFmpeg/{prevFiles/prev_adba9c_fd38a1_libavformat#yuv4mpeg.c,revFiles/adba9c_fd38a1_libavformat#yuv4mpeg.c}: yuv4_write_packet)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.38, Precision: 0.75
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_adba9c_fd38a1_libavformat#yuv4mpeg.c: yuv4_write_packet
+ - php-src/prevFiles/prev_7a9424_960d10_ext#standard#link.c: PHP_FUNCTION
+*/
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_c8bbd9_57ae37_crypto#pem#pvkfmt.c: i2b_PVK
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_c8bbd9_57ae37_crypto#pem#pvkfmt.c: do_PVK_header
+*/
+
+// ---------------------------------------------

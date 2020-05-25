@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = LoadLibrary("kernel32.dll"); 
++ E0 = LoadLibrary(TEXT("kernel32.dll")); 
+// Infered from: (libarchive/{prevFiles/prev_6da3bf_2c1bfd_libarchive#archive_write_disk_windows.c,revFiles/6da3bf_2c1bfd_libarchive#archive_write_disk_windows.c}: la_GetFunctionKernel32)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

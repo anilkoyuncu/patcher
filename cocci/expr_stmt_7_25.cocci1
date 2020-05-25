@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->content; 
++ E0 = CAIRO_CONTENT_COLOR_ALPHA; 
+// Infered from: (cairo/{prevFiles/prev_fb6a00_42956b_src#drm#cairo-drm-i915-shader.c,revFiles/fb6a00_42956b_src#drm#cairo-drm-i915-shader.c}: i915_shader_acquire_solid)
+// False positives: (cairo/revFiles/fb6a00_42956b_src#drm#cairo-drm-i915-shader.c: i915_shader_acquire_surface), (cairo/revFiles/fb6a00_42956b_src#drm#cairo-drm-i915-shader.c: i915_shader_setup_dst)
+// Recall: 0.11, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

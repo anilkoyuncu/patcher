@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0->wFmSequence == E1->seq_ctrl) && (!compare_ether_addr(&(E0->abyAddr2[  0]),  &(E1->addr2[0]))) && (  LOBYTE(E0->wFrameCtl) == LOBYTE(E1->frame_control)))  
++ if ((E0->wFmSequence == E1->seq_ctrl) && ether_addr_equal(E0->abyAddr2,  E1->addr2) && (  LOBYTE(E0->wFrameCtl) == LOBYTE(E1->frame_control)))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_832941_eed8897_drivers#staging#vt6656#wctl.c,revFiles/832941_eed8897_drivers#staging#vt6656#wctl.c}: WCTLbIsDuplicate)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

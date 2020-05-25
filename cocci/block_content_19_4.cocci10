@@ -1,0 +1,8 @@
+@@
+@@
+- g_print("\nCaching capabilities:\n"); 
++ g_print("\nIndexing capabilities:\n"); 
+// Infered from: (gstreamer/{prevFiles/prev_840056_60210e_tools#gst-inspect.c,revFiles/840056_60210e_tools#gst-inspect.c}: print_element_info)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

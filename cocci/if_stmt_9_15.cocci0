@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->button_down || E1)  
++ if (E1)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_549515_ab6883_gtk#gtkbutton.c,revFiles/549515_ab6883_gtk#gtkbutton.c}: gtk_button_update_state)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (smp_call_function_single(E0, get_freq_data, &E1, 1) != 0)  
+- {
+- BUG(); 
+- }
++ BUG_ON(smp_call_function_single(E0, get_freq_data, &E1, 1)); 
+// Infered from: (linux/{prevFiles/prev_d6c8e0_5ae06c_drivers#cpufreq#speedstep-ich.c,revFiles/d6c8e0_5ae06c_drivers#cpufreq#speedstep-ich.c}: speedstep_get)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

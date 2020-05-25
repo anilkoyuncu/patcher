@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1;
+@@
+  char I0 = 0; 
+  ...
+- if (E1)  
++ if (I0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_fd51ff_7fa705_libavfilter#graphparser.c,revFiles/fd51ff_7fa705_libavfilter#graphparser.c}: avfilter_parse_graph)
+// False positives: (FFmpeg/revFiles/fd51ff_7fa705_libavfilter#graphparser.c: avfilter_parse_graph)
+// Recall: 0.05, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

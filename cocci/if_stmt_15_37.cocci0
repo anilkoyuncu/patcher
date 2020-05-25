@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 < _MAX_PATH && E0 > _MAX_PATH - 12)  
++ if (E0 < _MAX_PATH && E0 >= _MAX_PATH - 12)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_981026_902656_win32#ioutil.c,revFiles/981026_902656_win32#ioutil.c}: php_win32_ioutil_mkdir)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

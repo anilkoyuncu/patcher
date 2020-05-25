@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- proto_tree_add_text(E0, NullTVB, E1 + DNS_FLAGS, 2, "%s",  decode_boolean_bitfield(E2, F_AUTHENTIC, 2 * 8,  "Answer/authority portion was autenticated by the server",  "Answer/authority portion was not autenticated by the server")); 
++ proto_tree_add_text(E0, NullTVB, E1 + DNS_FLAGS, 2, "%s",  decode_boolean_bitfield(E2, F_AUTHENTIC, 2 * 8,  "Answer/authority portion was authenticated by the server",  "Answer/authority portion was not authenticated by the server")); 
+// Infered from: (wireshark/{prevFiles/prev_a3b0da_fb8438_packet-dns.c,revFiles/a3b0da_fb8438_packet-dns.c}: dissect_dns)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

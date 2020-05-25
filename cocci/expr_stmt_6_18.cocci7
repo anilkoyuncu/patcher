@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (E1 % 4) * 4 + 4 - E2 % 4; 
++ E0 = (E1 % 4) * 4 + (4 - E2 % 4) % 4; 
+// Infered from: (codeflaws/{prevFiles/prev_400-C-6251427-6251452.c,revFiles/400-C-6251427-6251452.c}: main)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

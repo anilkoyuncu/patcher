@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 * (E0 + E1)) / 2 == E1)  
++ if ((E0 * (E0 + 1)) / 2 == E1)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_47-A-15929255-15929294.c,revFiles/47-A-15929255-15929294.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

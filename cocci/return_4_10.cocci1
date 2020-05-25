@@ -1,0 +1,30 @@
+@@
+identifier I0;
+expression E2, E1;
+@@
+  int I0 = E1->size; 
+  ...
+- return E2; 
++ return I0; 
+// Infered from: (FFmpeg/{prevFiles/prev_04c13d_54e1ea_libavcodec#qcelpdec.c,revFiles/04c13d_54e1ea_libavcodec#qcelpdec.c}: qcelp_decode_frame), (FFmpeg/{prevFiles/prev_bde257_1b5a18_libavcodec#qcelpdec.c,revFiles/bde257_1b5a18_libavcodec#qcelpdec.c}: qcelp_decode_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 0.75
+// -- Node Change --
+// Recall: 0.75, Precision: 0.75
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_bbeea5_9c39be_block-raw-posix.c: raw_aio_ioctl
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_4dd72e_897755_hw#net#vhost_net.c: vhost_net_start
+*/
+
+// ---------------------------------------------

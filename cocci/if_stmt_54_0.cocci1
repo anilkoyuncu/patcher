@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->type = IS_NULL; 
++ ZVAL_NULL(E0); 
+// Infered from: (php-src/{prevFiles/prev_3110a5_65af93_ext#com#conversion.c,revFiles/3110a5_65af93_ext#com#conversion.c}: php_variant_to_pval), (php-src/{prevFiles/prev_3110a5_65af93_ext#rpc#com#conversion.c,revFiles/3110a5_65af93_ext#rpc#com#conversion.c}: php_variant_to_pval)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,72 @@
+@@
+identifier I6;
+assignment operator A1, A7;
+expression E2, E0, E3, E4, E5, E8;
+@@
+- E0 A1 E2; 
+- proto_tree_add_uint(E3, hf_bittorrent_port, E4, E5, 2, I6); 
+- E5 A7 E8; 
++ proto_tree_add_uint(E3, hf_bittorrent_port, E4, E5, 2, ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_92896f_168c54_epan#dissectors#packet-bittorrent.c,revFiles/92896f_168c54_epan#dissectors#packet-bittorrent.c}: dissect_bittorrent_message)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.18, Precision: 0.58
+// -- Node Change --
+// Recall: 0.17, Precision: 0.50
+// -- General --
+// Functions fully changed: 3/44(6%)
+
+/*
+Functions where the patch applied partially:
+ - cairo/prevFiles/prev_b18bc6_936ede_test#font-matrix-translation.c: draw
+ - wireshark/prevFiles/prev_92896f_168c54_epan#dissectors#packet-bittorrent.c: dissect_bittorrent_message
+ - wireshark/prevFiles/prev_16dbe7b_609601_asn1#mpeg-pes#packet-mpeg-pes-template.c: dissect_mpeg_pes
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_97ba22_bfd7c9_epan#dissectors#packet-fcp.c: dissect_fcp_rspinfo
+ - wireshark/prevFiles/prev_c6fc19_2e79d1_epan#dissectors#packet-sebek.c: dissect_sebek
+ - wireshark/prevFiles/prev_7437dc_3716b4_epan#dissectors#packet-enttec.c: dissect_enttec
+ - wireshark/prevFiles/prev_424514_e2cec4_epan#dissectors#packet-rpcap.c: dissect_rpcap_auth_request
+ - wireshark/prevFiles/prev_98305b_ebc01b_epan#dissectors#packet-ieee80211.c: dissect_spatial_reuse_parameter_set
+ - wireshark/prevFiles/prev_9d46a6_3d7ad3_epan#dissectors#packet-btamp.c: dissect_btamp
+ - wireshark/prevFiles/prev_97ba22_bfd7c9_epan#dissectors#packet-fcp.c: dissect_fcp_rsp
+ - gtk/prevFiles/prev_a082f4_8dc090_tests#video-timer.c: on_window_draw
+ - wireshark/prevFiles/prev_80e1c3_eb808f_gtk#capture_info_dlg.c: capture_info_delete_cb
+ - wireshark/prevFiles/prev_12f523_e5862b_epan#dissectors#packet-gsm_sim.c: dissect_apdu_tvb
+ - wireshark/prevFiles/prev_5634cf_ba19f7_epan#dissectors#packet-bssap.c: dissect_bssap_message
+ - wireshark/prevFiles/prev_bcefa6_52ba0a_epan#dissectors#packet-srvloc.c: dissect_srvloc
+ - wireshark/prevFiles/prev_0e876f_fbb00b_epan#dissectors#packet-x224.c: proto_register_x224
+ - gstreamer/prevFiles/prev_7921e6_29418d_tests#examples#stepping#framestep1.c: new_preroll
+ - wireshark/prevFiles/prev_16dbe7b_609601_asn1#mpeg-pes#packet-mpeg-pes-template.c: dissect_mpeg_pes_header_data
+ - gtk/prevFiles/prev_a082f4_8dc090_tests#animated-resizing.c: on_window_draw
+ - cairo/prevFiles/prev_b18bc6_936ede_test#font-matrix-translation.c: box_text
+ - wireshark/prevFiles/prev_4f179e_1420f4_epan#dissectors#packet-sccp.c: dissect_sccp_message
+ - wireshark/prevFiles/prev_47de3f_e919ec_epan#dissectors#packet-zebra.c: dissect_zebra_request
+ - wireshark/prevFiles/prev_771999_01f88e_epan#dissectors#packet-tds.c: dissect_tds_login_ack_token
+ - wireshark/prevFiles/prev_771999_01f88e_epan#dissectors#packet-tds.c: dissect_tds_env_chg
+ - wireshark/prevFiles/prev_0e876f_fbb00b_epan#dissectors#packet-x224.c: dissect_x224
+ - wireshark/prevFiles/prev_c2976a_572654_epan#dissectors#packet-bthci_cmd.c: dissect_le_cmd
+ - wireshark/prevFiles/prev_2e79d1_056fa6_epan#dissectors#packet-bjnp.c: proto_register_bjnp
+ - wireshark/prevFiles/prev_966c59_131eb5_epan#dissectors#packet-gtp.c: call_foreach_ip
+ - wireshark/prevFiles/prev_92896f_168c54_epan#dissectors#packet-bittorrent.c: dissect_bittorrent_welcome
+ - wireshark/prevFiles/prev_2e79d1_056fa6_epan#dissectors#packet-bjnp.c: dissect_bjnp
+ - wireshark/prevFiles/prev_12f523_e5862b_epan#dissectors#packet-gsm_sim.c: dissect_gsm_apdu
+ - wireshark/prevFiles/prev_9d46a6_3d7ad3_epan#dissectors#packet-btamp.c: proto_register_btamp
+ - wireshark/prevFiles/prev_98305b_ebc01b_epan#dissectors#packet-ieee80211.c: dissect_mu_edca_parameter_set
+ - wireshark/prevFiles/prev_360f15_00dd4b_epan#dissectors#packet-cip.c: dissect_cip_cco_all_attribute_common
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_771999_01f88e_epan#dissectors#packet-tds.c: proto_reg_handoff_tds
+ - wireshark/prevFiles/prev_97ba22_bfd7c9_epan#dissectors#packet-fcp.c: proto_reg_handoff_fcp
+ - wireshark/prevFiles/prev_bcefa6_52ba0a_epan#dissectors#packet-srvloc.c: proto_reg_handoff_srvloc
+ - wireshark/prevFiles/prev_47de3f_e919ec_epan#dissectors#packet-zebra.c: proto_reg_handoff_zebra
+ - wireshark/prevFiles/prev_5634cf_ba19f7_epan#dissectors#packet-bssap.c: proto_reg_handoff_bssap
+ - wireshark/prevFiles/prev_98305b_ebc01b_epan#dissectors#packet-ieee80211.c: proto_reg_handoff_ieee80211
+*/
+
+// ---------------------------------------------

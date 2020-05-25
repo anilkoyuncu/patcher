@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2;
+@@
+- while (E0->block_align == 0 && E1->dts != AV_NOPTS_VALUE && E1->dts > E2->packet_count && E0->codec_id != AV_CODEC_ID_XSUB)  
++ while (E0->block_align == 0 && E1->dts != AV_NOPTS_VALUE && E1->dts > E2->packet_count && E0->codec_id != AV_CODEC_ID_XSUB && E2->packet_count)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_cc0db8_c88e52_libavformat#avienc.c,revFiles/cc0db8_c88e52_libavformat#avienc.c}: avi_write_packet)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_904ba4_b1fa32_modules#visualization#visual#visual.c: DoWork
+*/
+
+// ---------------------------------------------

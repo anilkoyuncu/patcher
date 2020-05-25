@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- if ((E0->flags & MAGIC_NO_CHECK_COMPRESS) != 0 || (E1 = file_zmagic(E0, E2,  E3, E4,  E5)) == 0)  
+- {
+- if ((E0->flags & MAGIC_NO_CHECK_TAR) != 0 || (E1 = file_is_tar(E0, E4, E5)) == 0)  
+- {
+- if ((E0->flags & MAGIC_NO_CHECK_SOFT) != 0 || (E1 = file_softmagic(E0, E4,  E5,  BINTEST)) == 0)  
+- {
+- if ((E0->flags & MAGIC_NO_CHECK_ASCII) != 0 || (E1 = file_ascmagic(E0, E4, E5)) == 0)  
+- {
+  ...
+- }
+- }
+- }
+- }
+// Infered from: (php-src/{prevFiles/prev_ca77d8_174ffe_ext#fileinfo#libmagic#funcs.c,revFiles/ca77d8_174ffe_ext#fileinfo#libmagic#funcs.c}: file_buffer), (php-src/{prevFiles/prev_a94ac5_a37144_ext#fileinfo#libmagic#funcs.c,revFiles/a94ac5_a37144_ext#fileinfo#libmagic#funcs.c}: file_buffer)
+// Recall: 0.36, Precision: 1.00, Matching recall: 0.36
+
+// ---------------------------------------------

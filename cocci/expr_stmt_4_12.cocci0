@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E1->long_codes + E2 - 15; 
++ E0 = E1->long_codes + (E2 - 15); 
+// Infered from: (FFmpeg/{prevFiles/prev_3c06ba_ccca48_libavcodec#ralf.c,revFiles/3c06ba_ccca48_libavcodec#ralf.c}: decode_channel)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

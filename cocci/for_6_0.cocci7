@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- for(E0 = 0;E0 < E1->guest.ds->width;E0 += 16, E2 += E3, E4 += E3)  
++ for(E0 = 0;E0 + 15 < E1->guest.ds->width;E0 += 16, E2 += E3, E4 += E3)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_ce3e14_57c83d_ui#vnc.c,revFiles/ce3e14_57c83d_ui#vnc.c}: vnc_refresh_server_surface)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

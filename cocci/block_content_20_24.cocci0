@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->length > sizeof(long ))  
++ if (E0->length > (int )sizeof(long ))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_275459_2ce90b_crypto#asn1#a_int.c,revFiles/275459_2ce90b_crypto#asn1#a_int.c}: ASN1_INTEGER_get), (openssl/{prevFiles/prev_275459_2ce90b_crypto#asn1#a_enum.c,revFiles/275459_2ce90b_crypto#asn1#a_enum.c}: ASN1_ENUMERATED_get)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

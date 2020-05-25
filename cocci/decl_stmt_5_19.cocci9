@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef guint8;
+@@
+- const  guint8 *I0 = (guint8 *)E1; 
++ const  guint8 *I0 = (const  guint8 *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_5c79cb_5dd7b7_epan#dissectors#packet-isakmp.c,revFiles/5c79cb_5dd7b7_epan#dissectors#packet-isakmp.c}: isakmp_hash_func)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

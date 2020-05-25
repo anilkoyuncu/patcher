@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = tick_stat_node(E1, address_to_str(E2->pool, &E2->net_src), st_node_dsts,  TRUE); 
++ E0 = tick_stat_node(E1, address_to_str(E2->pool, &E2->net_dst), st_node_dsts,  TRUE); 
+// Infered from: (wireshark/{prevFiles/prev_3755bc_c643cb_plugins#stats_tree#pinfo_stats_tree.c,revFiles/3755bc_c643cb_plugins#stats_tree#pinfo_stats_tree.c}: dsts_stats_tree_packet)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

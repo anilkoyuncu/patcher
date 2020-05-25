@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0.u = do_alloca(E1 + 1); 
++ E0.u = do_alloca(UBYTES(E1 + 1)); 
+// Infered from: (php-src/{prevFiles/prev_bea251_106c80_Zend#zend_API.c,revFiles/bea251_106c80_Zend#zend_API.c}: zend_declare_property_ex), (php-src/{prevFiles/prev_bea251_106c80_Zend#zend_API.c,revFiles/bea251_106c80_Zend#zend_API.c}: zend_declare_property)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

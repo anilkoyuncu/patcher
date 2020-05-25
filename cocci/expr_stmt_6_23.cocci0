@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.value_type = GST_TYPE_ARRAY; 
++ E0.value_type = gst_value_array_get_type(); 
+// Infered from: (gstreamer/{prevFiles/prev_0ff74f_e57100_gst#gstparamspecs.c,revFiles/0ff74f_e57100_gst#gstparamspecs.c}: gst_param_spec_array_get_type)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

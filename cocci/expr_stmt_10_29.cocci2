@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->pools[E1] = av_buffer_pool_init(E2[E1] + 16,  CONFIG_MEMORY_POISONING ? NULL :av_buffer_allocz); 
++ E0->pools[E1] = av_buffer_pool_init(E2[E1] + 16 + STRIDE_ALIGN - 1,  CONFIG_MEMORY_POISONING ? NULL :av_buffer_allocz); 
+// Infered from: (FFmpeg/{prevFiles/prev_175e91_57655c_libavcodec#utils.c,revFiles/175e91_57655c_libavcodec#utils.c}: update_frame_pool)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

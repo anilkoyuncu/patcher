@@ -1,0 +1,22 @@
+@@
+@@
+- setvbuf(logfile, (char *)NULL, _IOLBF, 0); 
++ setbuf(logfile, (char *)NULL); 
+// Infered from: (curl/{prevFiles/prev_9a1593_27c86c_lib#memdebug.c,revFiles/9a1593_27c86c_lib#memdebug.c}: curl_memdebug)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.75
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_e10833_2669a9_modules#demux#mp4#mp4.c: MP4_TrackCreate
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,35 @@
+@@
+expression E0, E1;
+@@
+- if (E0 + E1.entries <= MAC_TABLE_ENTRIES)  
++ if (E1.entries <= MAC_TABLE_ENTRIES - E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_edc243_21e2db_hw#net#virtio-net.c,revFiles/edc243_21e2db_hw#net#virtio-net.c}: virtio_net_handle_mac)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.38, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/8(37%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_1f6eaf_3cfc537_drivers#staging#lustre#lustre#llite#llite_lib.c: ll_prep_md_op_data
+ - linux/prevFiles/prev_e70d41_c97dab4_drivers#net#wireless#intel#iwlwifi#dvm#calib.c: iwl_sens_energy_cck
+ - wireshark/prevFiles/prev_814477_48a668_plugins#profinet#packet-dcerpc-pn-io.c: dissect_ExpectedSubmoduleBlockReq_block
+ - FFmpeg/prevFiles/prev_32c4b5_84d8b4_libavformat#mpegvideodec.c: mpegvideo_probe
+ - linux/prevFiles/prev_e88a3f8_5d273c_drivers#media#v4l2-core#videobuf2-v4l2.c: __verify_planes_array
+*/
+
+// ---------------------------------------------

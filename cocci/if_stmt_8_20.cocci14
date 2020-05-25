@@ -1,0 +1,38 @@
+@@
+expression E0, E1;
+@@
+- if (E0->backend == E1->base.backend)  
++ if (E0->device == E1->base.device)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_a9d821_435329_src#cairo-gl-surface.c,revFiles/a9d821_435329_src#cairo-gl-surface.c}: _cairo_gl_surface_clone_similar)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 15 rules):
+// -- Edit Location --
+// Recall: 0.79, Precision: 1.00
+// -- Node Change --
+// Recall: 0.73, Precision: 0.94
+// -- General --
+// Functions fully changed: 14/19(73%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_34eab2_a6c8ae_modules#stream_out#transcode.c: transcode_video_process
+ - vlc/prevFiles/prev_304a48_97a8b0_src#network#httpd.c: httpd_HostThread
+ - codeflaws/prevFiles/prev_16-B-6128994-6129000.c: main
+ - vlc/prevFiles/prev_07498c_f2582c_src#video_output#vout_subpictures.c: SpuRenderSubpictures
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - nginx/prevFiles/prev_52a934_1849ba_src#core#ngx_output_chain.c: ngx_output_chain_copy_buf
+*/
+
+// ---------------------------------------------

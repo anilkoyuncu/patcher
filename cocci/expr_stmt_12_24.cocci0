@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->e0_mode = E0->led_mode = 0; 
++ E0->e0_mode = E0->led_mode = E0->caps_lock_mode = E0->num_lock_mode = 0; 
+// Infered from: (qemu/{prevFiles/prev_bbbb2f_e32664_hw#slavio_serial.c,revFiles/bbbb2f_e32664_hw#slavio_serial.c}: slavio_serial_reset_chn)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

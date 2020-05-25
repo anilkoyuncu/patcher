@@ -1,0 +1,26 @@
+@@
+expression E0, E1;
+typedef uint32_t;
+@@
+- E0->data.p_sample_soun->i_sampleratehi = (int )E1 % BLOCK16x16; 
+- E0->data.p_sample_soun->i_sampleratelo = E1 / BLOCK16x16; 
++ E0->data.p_sample_soun->i_sampleratehi = (uint32_t )E1; 
++ E0->data.p_sample_soun->i_sampleratelo = (E1 - E0->data.p_sample_soun->i_sampleratehi); 
+// Infered from: (vlc/{prevFiles/prev_ed5652_7aab8d_modules#demux#mp4#libmp4.c,revFiles/ed5652_7aab8d_modules#demux#mp4#libmp4.c}: MP4_ReadBox_sample_soun)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_cc6fc2_28ef67_epan#dissectors#packet-ssl.c: dissect_ssl2_record
+*/
+
+// ---------------------------------------------

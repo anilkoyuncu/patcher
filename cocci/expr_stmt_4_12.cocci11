@@ -1,0 +1,12 @@
+@@
+type T1;
+binary operator B3 = {- ,* ,& };
+expression E0, E2, E4;
+@@
+- E0 = (T1 )E2 B3 E4; 
++ E0 = (T1 )(E2 B3 E4); 
+// Infered from: (curl/{prevFiles/prev_668231_cb6a07_lib#inet_pton.c,revFiles/668231_cb6a07_lib#inet_pton.c}: inet_pton6), (curl/{prevFiles/prev_618dfd_1f1f13_lib#inet_pton.c,revFiles/618dfd_1f1f13_lib#inet_pton.c}: inet_pton6), (gstreamer/{prevFiles/prev_2f94ad_01039b_gst#gstdatetime.c,revFiles/2f94ad_01039b_gst#gstdatetime.c}: gst_date_time_new), (cpython/{prevFiles/prev_404557_22e415_Modules#binascii.c,revFiles/404557_22e415_Modules#binascii.c}: binascii_rlecode_hqx)
+// False positives: (curl/revFiles/618dfd_1f1f13_lib#inet_pton.c: inet_pton6), (curl/revFiles/668231_cb6a07_lib#inet_pton.c: inet_pton6)
+// Recall: 0.14, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

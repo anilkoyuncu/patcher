@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!sout_AccessOutSeek(E0->p_access, 0))  
++ if (sout_AccessOutSeek(E0->p_access, 0) == VLC_SUCCESS)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_25ad0cd_51bc0c_modules#mux#asf.c,revFiles/25ad0cd_51bc0c_modules#mux#asf.c}: Close)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

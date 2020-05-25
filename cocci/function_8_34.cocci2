@@ -1,0 +1,10 @@
+@@
+identifier I0, I1;
+@@
+- int I0; 
+  ...
+- int I1; 
+// Infered from: (cpython/{prevFiles/prev_d39d86_2841af_Python#pystrtod.c,revFiles/d39d86_2841af_Python#pystrtod.c}: PyOS_ascii_formatd)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

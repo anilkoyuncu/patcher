@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if ((CONFIG_VP3_DECODER || CONFIG_VP5_DECODER || CONFIG_VP6_DECODER) && E0 == FF_IDCT_VP3)  
++ if ((CONFIG_VP3_DECODER || CONFIG_VP5_DECODER || CONFIG_VP6_DECODER) && E0 == FF_IDCT_VP3 && HAVE_YASM)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_79ce0f_f0feb4_libavcodec#x86#dsputil_mmx.c,revFiles/79ce0f_f0feb4_libavcodec#x86#dsputil_mmx.c}: dsputil_init_mmx)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

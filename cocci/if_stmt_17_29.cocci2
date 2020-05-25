@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef uint32_t;
+@@
+- E0 = BE_32(&E1[E2 - 4]); 
++ E0 = (uint32_t )BE_32(&E1[E2 - 4]); 
+// Infered from: (FFmpeg/{prevFiles/prev_69ce34_c1075d_tools#qt-faststart.c,revFiles/69ce34_c1075d_tools#qt-faststart.c}: main), (FFmpeg/{prevFiles/prev_69ce34_c1075d_tools#qt-faststart.c,revFiles/69ce34_c1075d_tools#qt-faststart.c}: main)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

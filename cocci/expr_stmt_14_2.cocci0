@@ -1,0 +1,10 @@
+@@
+type T2;
+expression E3, E1, E0;
+@@
+- DB_PRINT(E0, E1, (T2 )E3); 
++ DB_PRINT(E0, (T2 )E1, (T2 )E3); 
+// Infered from: (qemu/{prevFiles/prev_8f6038_ec9ea4_hw#zynq_slcr.c,revFiles/8f6038_ec9ea4_hw#zynq_slcr.c}: zynq_slcr_write), (qemu/{prevFiles/prev_c69544_cfba8e_hw#cadence_ttc.c,revFiles/c69544_cfba8e_hw#cadence_ttc.c}: cadence_ttc_write)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

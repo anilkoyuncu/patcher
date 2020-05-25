@@ -1,0 +1,15 @@
+@@
+identifier I0, I1;
+expression E2, E3, E4, E5;
+typedef proto_item;
+typedef proto_tree;
+@@
+- proto_item *I0; 
+- proto_tree *I1; 
+- I0 = proto_tree_add_text(E2, E3, E4, E5, "Abort Request:"); 
+- I1 = proto_item_add_subtree(I0, ett_fcgi_abort_request); 
++ proto_tree_add_text(E2, E3, E4, E5, "Abort Request:"); 
+// Infered from: (wireshark/{prevFiles/prev_058fc1_d6fb7f_epan#dissectors#packet-fcgi.c,revFiles/058fc1_d6fb7f_epan#dissectors#packet-fcgi.c}: dissect_abort_request)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

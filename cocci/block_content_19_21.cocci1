@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- _cairo_surface_release_source_image(E0, E1, &E2); 
++ _cairo_surface_release_source_image(E0, E1, E2); 
+// Infered from: (cairo/{prevFiles/prev_552cf1_81e029_src#cairo-surface-fallback.c,revFiles/552cf1_81e029_src#cairo-surface-fallback.c}: _cairo_surface_fallback_snapshot), (cairo/{prevFiles/prev_552cf1_81e029_src#cairo-surface-fallback.c,revFiles/552cf1_81e029_src#cairo-surface-fallback.c}: _cairo_surface_fallback_snapshot)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

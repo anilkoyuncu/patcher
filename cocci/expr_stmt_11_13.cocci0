@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = pemalloc(sizeof(*E0), E1->is_persistent); 
++ E0 = emalloc(sizeof(*E0)); 
+// Infered from: (php-src/{prevFiles/prev_7eeb91_324080_ext#openssl#xp_ssl.c,revFiles/7eeb91_324080_ext#openssl#xp_ssl.c}: php_openssl_tcp_sockop_accept), (php-src/{prevFiles/prev_8a39d7_7f293b9_ext#openssl#xp_ssl.c,revFiles/8a39d7_7f293b9_ext#openssl#xp_ssl.c}: php_openssl_tcp_sockop_accept)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

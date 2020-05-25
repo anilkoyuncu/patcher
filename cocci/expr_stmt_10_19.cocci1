@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- GST_DEBUG(GST_CAT_PARAMS, "setting value from %lld to %lld", E0->value_int64,  g_value_get_int64(E1)); 
+// Infered from: (gstreamer/{prevFiles/prev_393033_2c4d0a_libs#gst#control#dparam.c,revFiles/393033_2c4d0a_libs#gst#control#dparam.c}: gst_dparam_set_property)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

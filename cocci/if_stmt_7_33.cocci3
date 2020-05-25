@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (OPAL_SUCCESS == E0)  
++ if (0 <= E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_c63c4d_499b90_opal#mca#base#mca_base_param.c,revFiles/c63c4d_499b90_opal#mca#base#mca_base_param.c}: mca_base_param_environ_variable)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

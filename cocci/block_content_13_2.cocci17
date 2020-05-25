@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- seq_printf(E0, " %14s", get_irq_desc_chip(E1)->name); 
++ seq_printf(E0, " %14s", irq_desc_get_chip(E1)->name); 
+// Infered from: (linux/{prevFiles/prev_1919d6_6a03513_arch#tile#kernel#irq.c,revFiles/1919d6_6a03513_arch#tile#kernel#irq.c}: show_interrupts)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

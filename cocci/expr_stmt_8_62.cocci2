@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- phton32(E0, -1); 
++ phton32(E0, 0xffffffff); 
+// Infered from: (wireshark/{prevFiles/prev_83351a_6e58ae_ui#gtk#iax2_analysis.c,revFiles/83351a_6e58ae_ui#gtk#iax2_analysis.c}: copy_file), (wireshark/{prevFiles/prev_0d471c_4e60e8_ui#gtk#rtp_analysis.c,revFiles/0d471c_4e60e8_ui#gtk#rtp_analysis.c}: copy_file)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_9aa2f5_d7aff3_modules#video_filter#time.c: 
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0->timecond = 0; 
++ E0->timecond = FALSE; 
+// Infered from: (curl/{prevFiles/prev_0d9e65_c983aa_lib#getinfo.c,revFiles/0d9e65_c983aa_lib#getinfo.c}: Curl_initinfo)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_89153d_8dd1fd_ext#standard#file.c: php_set_sock_blocking
+*/
+
+// ---------------------------------------------

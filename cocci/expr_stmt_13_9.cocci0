@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->header_length + E1->data_length; 
++ E0 = E1->header_length + E1->data_length + E1->trailer_length; 
+// Infered from: (cairo/{prevFiles/prev_d962d6_ac59c7_src#cairo-pdf-surface.c,revFiles/d962d6_ac59c7_src#cairo-pdf-surface.c}: _cairo_pdf_surface_emit_type1_font)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,33 @@
+@@
+expression E0;
+@@
+- cairo_xcb_surface_setup_test_surface(E0); 
++ _cairo_boilerplate_xcb_setup_test_surface(E0); 
+// Infered from: (cairo/{prevFiles/prev_9bdfae_63bdae_boilerplate#cairo-boilerplate-xcb.c,revFiles/9bdfae_63bdae_boilerplate#cairo-boilerplate-xcb.c}: _cairo_boilerplate_xcb_create_surface)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 18 rules):
+// -- Edit Location --
+// Recall: 0.92, Precision: 0.88
+// -- Node Change --
+// Recall: 0.93, Precision: 0.78
+// -- General --
+// Functions fully changed: 19/27(70%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_660-A-17245008-17245018.c: main
+ - qemu/prevFiles/prev_89fca2_54affb_target#ppc#mmu_helper.c: cpu_ppc_handle_mmu_fault
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_792b45_396759_block#vvfat.c: handle_deletes
+ - codeflaws/prevFiles/prev_368-A-10056259-10056302.c: quick_sort
+ - vlc/prevFiles/prev_d7e7d6_086939_src#playlist#item.c: playlist_TreeMove
+ - wireshark/prevFiles/prev_5cfa29_6dc329_epan#dissectors#packet-ip.c: dissect_ip_tcp_options
+ - qemu/prevFiles/prev_40bad8_0cea71_hw#virtio-net.c: virtio_net_handle_ctrl
+ - qemu/prevFiles/prev_5b2575_3ea874_exec.c: cpu_physical_memory_rw
+*/
+
+// ---------------------------------------------

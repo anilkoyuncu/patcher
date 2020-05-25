@@ -1,0 +1,16 @@
+@@
+type T0;
+identifier I1, I4, I5, I6;
+expression E7, E2, E3;
+typedef time_t;
+@@
+- T0 I1 = E2 % TSHZ; 
+- E3->I4 = E2 / I5; 
+- E3->I6 = E7 / I5; 
++ T0 I1 = (T0 )(E2 % TSHZ); 
++ E3->secs = (time_t )(E2 / TSHZ); 
++ E3->nsecs = (int )(G_GINT64_CONSTANT(1000000000) * I1 / TSHZ); 
+// Infered from: (wireshark/{prevFiles/prev_ae8b29_4533ff_epan#dissectors#packet-mpeg-pes.c,revFiles/ae8b29_4533ff_epan#dissectors#packet-mpeg-pes.c}: decode_time_stamp), (wireshark/{prevFiles/prev_ae8b29_4533ff_asn1#mpeg#packet-mpeg-pes-template.c,revFiles/ae8b29_4533ff_asn1#mpeg#packet-mpeg-pes-template.c}: decode_time_stamp)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

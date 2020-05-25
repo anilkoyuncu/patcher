@@ -1,0 +1,11 @@
+@@
+@@
+- if (!capture_opts.has_autostop_filesize)  
++ if (!capture_opts.has_autostop_filesize && !capture_opts.has_file_duration)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_793e70_6265ac_tshark.c,revFiles/793e70_6265ac_tshark.c}: main)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

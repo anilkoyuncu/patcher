@@ -1,0 +1,29 @@
+@@
+expression E0, E1, E2;
+@@
+- ECDH_EVP_derive_key(E0, E1, E2); 
++ if (!ECDH_EVP_derive_key(E0, E1, E2))  
++ {
++ break; 
++ }
+// Infered from: (openssl/{prevFiles/prev_dfdd45_c29c7a_apps#speed.c,revFiles/dfdd45_c29c7a_apps#speed.c}: ECDH_EVP_derive_key_loop)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.21, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/8(50%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_f85334_608708_libavcodec#eatqi.c: tqi_decode_mb
+ - openssl/prevFiles/prev_dfdd45_c29c7a_apps#speed.c: ECDH_EVP_derive_key
+ - FFmpeg/prevFiles/prev_698438_22667e_libavformat#ape.c: ape_tag_read_field
+ - FFmpeg/prevFiles/prev_90290a_3f9d6e_libavcodec#eatqi.c: tqi_decode_mb
+*/
+
+// ---------------------------------------------

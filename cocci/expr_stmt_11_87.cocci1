@@ -1,0 +1,29 @@
+@@
+expression E0, E1, E2;
+@@
+- gtk_size_request_get_width(E0, E1, E2); 
++ GTK_SIZE_REQUEST_GET_IFACE(E0)->get_width(E0, E1, E2); 
+// Infered from: (gtk/{prevFiles/prev_c29f0a_8960d6_gtk#gtkframe.c,revFiles/c29f0a_8960d6_gtk#gtkframe.c}: gtk_frame_get_width_for_height), (gtk/{prevFiles/prev_c29f0a_8960d6_gtk#gtkexpander.c,revFiles/c29f0a_8960d6_gtk#gtkexpander.c}: gtk_expander_get_width_for_height)
+// False positives: (gtk/revFiles/c29f0a_8960d6_gtk#gtkexpander.c: gtk_expander_get_width), (gtk/revFiles/c29f0a_8960d6_gtk#gtkexpander.c: gtk_expander_size_allocate), (gtk/revFiles/c29f0a_8960d6_gtk#gtkframe.c: gtk_frame_get_size), (gtk/revFiles/c29f0a_8960d6_gtk#gtkframe.c: gtk_frame_real_compute_child_allocation), (gtk/revFiles/c29f0a_8960d6_gtk#gtkframe.c: gtk_frame_size_allocate), (gtk/revFiles/c29f0a_8960d6_gtk#gtkmenu.c: gtk_menu_get_width)
+// Recall: 0.75, Precision: 0.27, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.33
+// -- Node Change --
+// Recall: 1.00, Precision: 0.33
+// -- General --
+// Functions fully changed: 3/9(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_c29f0a_8960d6_gtk#gtkframe.c: gtk_frame_real_compute_child_allocation
+ - gtk/prevFiles/prev_c29f0a_8960d6_gtk#gtkexpander.c: gtk_expander_size_allocate
+ - gtk/prevFiles/prev_c29f0a_8960d6_gtk#gtkframe.c: gtk_frame_size_allocate
+ - gtk/prevFiles/prev_c29f0a_8960d6_gtk#gtkframe.c: gtk_frame_get_size
+ - gtk/prevFiles/prev_c29f0a_8960d6_gtk#gtkexpander.c: gtk_expander_get_width
+ - gtk/prevFiles/prev_c29f0a_8960d6_gtk#gtkmenu.c: gtk_menu_get_width
+*/
+
+// ---------------------------------------------

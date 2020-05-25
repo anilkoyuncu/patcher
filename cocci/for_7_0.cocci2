@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+  int I0 = 0; 
+  ...
+- for(E1 = 0;E1 < E2;E1++)  
++ for(E1 = 0;!I0 && E1 < E2;E1++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_43abef_282bb0_libavformat#rpl.c,revFiles/43abef_282bb0_libavformat#rpl.c}: rpl_read_header)
+// False positives: (FFmpeg/revFiles/43abef_282bb0_libavformat#rpl.c: rpl_read_header), (openssl/revFiles/f920c5_05fc70_crypto#rc4#rc4test.c: main), (php-src/revFiles/a84133_fb37c4_ext#exif#exif.c: exif_get_sectionlist)
+// Recall: 0.04, Precision: 0.25, Matching recall: 0.50
+
+// ---------------------------------------------

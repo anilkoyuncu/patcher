@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return E0 > 0 ? PyString_FromString("(...)") :NULL; 
++ return E0 > 0 ? PyUnicode_FromString("(...)") :NULL; 
+// Infered from: (cpython/{prevFiles/prev_3fe821_73eada_Objects#tupleobject.c,revFiles/3fe821_73eada_Objects#tupleobject.c}: tuplerepr)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

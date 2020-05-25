@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- ssl_debug_printf("ssl_init addr '%u.%u.%u.%u' port '%d' filename '%s' password(only for p12 file) '%s'\n",  E0[0], E0[1], E0[2], E0[3], E1->port, E2, E3); 
++ ssl_debug_printf("ssl_init addr '%u.%u.%u.%u' port '%d' filename '%s' password(only for p12 file) '%s'\n",  E0[0], E0[1], E0[2], E0[3], E1->port, E2, E3 ? E3 :"(null)"); 
+// Infered from: (wireshark/{prevFiles/prev_1a322b6_23c498_epan#dissectors#packet-ssl-utils.c,revFiles/1a322b6_23c498_epan#dissectors#packet-ssl-utils.c}: ssl_parse_key_list)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

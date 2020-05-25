@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- DPRINTF("SIMPLE queue tag=0x%x\n", E0->current_tag & 0xff); 
++ DPRINTF("SIMPLE queue tag=0x%x\n", E0->select_tag & 0xff); 
+// Infered from: (qemu/{prevFiles/prev_aa2b1e_333d50_hw#lsi53c895a.c,revFiles/aa2b1e_333d50_hw#lsi53c895a.c}: lsi_do_msgout)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

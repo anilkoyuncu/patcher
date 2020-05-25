@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!E0->non_interleaved && E1->seek_pos > E2->pos)  
++ if (!E0->non_interleaved && E2->pos >= 0 && E1->seek_pos > E2->pos)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_1a9f9f_fa1195_libavformat#avidec.c,revFiles/1a9f9f_fa1195_libavformat#avidec.c}: avi_read_packet)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

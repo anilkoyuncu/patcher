@@ -1,0 +1,14 @@
+@@
+binary operator B2 = {< ,> };
+expression E0, E1, E3, E4;
+@@
+- if (E0[E1] B2 E3)  
++ if (E0[E1] B2 E3)  
+  {
+- E3 = E0[E4]; 
++ E3 = E0[E1]; 
+  }
+// Infered from: (codeflaws/{prevFiles/prev_496-A-13062587-13062718.c,revFiles/496-A-13062587-13062718.c}: main), (redis/{prevFiles/prev_0cf379_ea3a20_src#server.c,revFiles/0cf379_ea3a20_src#server.c}: getExpansiveClientsInfo)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

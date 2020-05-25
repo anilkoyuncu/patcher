@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 < AV_NOSYNC_THRESHOLD)  
++ if (fabs(E0) < AV_NOSYNC_THRESHOLD)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_eaa91e_da5695_ffplay.c,revFiles/eaa91e_da5695_ffplay.c}: synchronize_audio)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

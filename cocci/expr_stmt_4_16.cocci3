@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = ~1; 
++ E0 = 2147483647; 
+// Infered from: (codeflaws/{prevFiles/prev_489-A-9785153-9785163.c,revFiles/489-A-9785153-9785163.c}: main)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

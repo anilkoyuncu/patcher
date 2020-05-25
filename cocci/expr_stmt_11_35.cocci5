@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0.locale = E1; 
++ E0.locale = pestrdup(E1, 1); 
+// Infered from: (php-src/{prevFiles/prev_6863d7_c574bd_ext#pcre#php_pcre.c,revFiles/6863d7_c574bd_ext#pcre#php_pcre.c}: pcre_get_compiled_regex)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- dev_err(&E0->dev, "cannot register watchdog device\n"); 
++ dev_err(dev, "cannot register watchdog device\n"); 
+// Infered from: (linux/{prevFiles/prev_55082c0_cfe9ee3_drivers#watchdog#stmp3xxx_rtc_wdt.c,revFiles/55082c0_cfe9ee3_drivers#watchdog#stmp3xxx_rtc_wdt.c}: stmp3xxx_wdt_probe)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.15
+
+// ---------------------------------------------

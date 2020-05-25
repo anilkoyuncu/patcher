@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->avail_in = E1; 
+- __archive_read_filter_consume(E2->upstream, E1); 
++ E0->consume_unnotified = E0->avail_in = E1; 
+// Infered from: (libarchive/{prevFiles/prev_87772e_7365d2_libarchive#archive_read_support_compression_compress.c,revFiles/87772e_7365d2_libarchive#archive_read_support_compression_compress.c}: getbits)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

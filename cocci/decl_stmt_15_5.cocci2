@@ -1,0 +1,16 @@
+@@
+expression E0, E1;
+@@
+- watchdog_init_timeout(&sirfsoc_wdd, timeout, &E0->dev); 
++ watchdog_init_timeout(&sirfsoc_wdd, timeout, dev); 
+  ...
+- sirfsoc_wdd.parent = &E0->dev; 
+- E1 = watchdog_register_device(&sirfsoc_wdd); 
++ sirfsoc_wdd.parent = dev; 
++ watchdog_stop_on_reboot(&sirfsoc_wdd); 
++ watchdog_stop_on_unregister(&sirfsoc_wdd); 
++ E1 = devm_watchdog_register_device(dev, &sirfsoc_wdd); 
+// Infered from: (linux/{prevFiles/prev_72dbc2_dcc3ce0_drivers#watchdog#sirfsoc_wdt.c,revFiles/72dbc2_dcc3ce0_drivers#watchdog#sirfsoc_wdt.c}: sirfsoc_wdt_probe)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.89
+
+// ---------------------------------------------

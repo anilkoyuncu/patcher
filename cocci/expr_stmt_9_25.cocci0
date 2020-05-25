@@ -1,0 +1,10 @@
+@@
+expression E2, E3, E0, E1, E4;
+@@
+- E0 = tvb_new_subset (E1, E2, E3, E4); 
++ E0 = tvb_new_subset(E1, E2, E4, E4); 
+// Infered from: (wireshark/{prevFiles/prev_1915f6_e02354_packet-wtp.c,revFiles/1915f6_e02354_packet-wtp.c}: dissect_wtp_common)
+// False positives: (wireshark/revFiles/65efca_2cb16b_epan#dissectors#packet-lapsat.c: dissect_lapsat)
+// Recall: 0.30, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+@@
+- return CURLE_REMOTE_ACCESS_DENIED; 
++ goto  done; 
+// Infered from: (curl/{prevFiles/prev_60b196_de74e8_lib#curl_ntlm_wb.c,revFiles/60b196_de74e8_lib#curl_ntlm_wb.c}: ntlm_wb_response)
+// False positives: (curl/revFiles/60b196_de74e8_lib#curl_ntlm_wb.c: ntlm_wb_init), (curl/revFiles/60b196_de74e8_lib#curl_ntlm_wb.c: ntlm_wb_response)
+// Recall: 0.03, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef uint32_t;
+@@
+- E0 = E1 + E2->buf_size - sizeof(uint32_t ); 
++ E0 = E2->buf + E2->buf_size - sizeof(uint32_t ); 
+// Infered from: (FFmpeg/{prevFiles/prev_38cef5_7eb68e_libavformat#mp3.c,revFiles/38cef5_7eb68e_libavformat#mp3.c}: mp3_read_probe)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

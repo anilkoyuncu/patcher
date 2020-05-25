@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (decode_i2_frame(E0, E1 - 4, E2) < 0)  
++ if (decode_i2_frame(E0, E1 - 4, E2 + 4) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_0a19b4_1008f6_libavcodec#4xm.c,revFiles/0a19b4_1008f6_libavcodec#4xm.c}: decode_frame)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

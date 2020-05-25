@@ -1,0 +1,28 @@
+@@
+@@
+- return (ARCHIVE_EOF); 
++ return (-1); 
+// Infered from: (libarchive/{prevFiles/prev_e6cafe_90542f_libarchive#archive_read_support_compression_compress.c,revFiles/e6cafe_90542f_libarchive#archive_read_support_compression_compress.c}: getbits)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 0.67
+// -- Node Change --
+// Recall: 0.86, Precision: 0.60
+// -- General --
+// Functions fully changed: 6/10(60%)
+
+/*
+Functions where the patch did not apply:
+ - nginx/prevFiles/prev_c09aa1_510986_src#http#ngx_http_upstream.c: ngx_http_upstream_send_request
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - nginx/prevFiles/prev_c09aa1_510986_src#http#ngx_http_upstream.c: ngx_http_upstream_init_request
+ - nginx/prevFiles/prev_c09aa1_510986_src#http#ngx_http_upstream.c: ngx_http_upstream_send_request_body
+ - nginx/prevFiles/prev_c09aa1_510986_src#http#ngx_http_upstream.c: ngx_http_upstream_store
+*/
+
+// ---------------------------------------------

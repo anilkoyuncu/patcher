@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ppm_save(E0, E1->state); 
++ ppm_save(E0, E1->state->surface); 
+// Infered from: (qemu/{prevFiles/prev_540328_846c54_hw#blizzard.c,revFiles/540328_846c54_hw#blizzard.c}: blizzard_screen_dump)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

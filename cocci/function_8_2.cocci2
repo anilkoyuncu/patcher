@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->last_byte = E1 + E2 - 1; 
++ E0->last_byte = E1 + E2; 
+// Infered from: (FFmpeg/{prevFiles/prev_8a521d5_7e496e_libavcodec#indeo3.c,revFiles/8a521d5_7e496e_libavcodec#indeo3.c}: decode_plane)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

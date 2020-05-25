@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return E0->predictor << 4; 
++ return E0->predictor * 16; 
+// Infered from: (FFmpeg/{prevFiles/prev_7786f6_1c63ed_libavcodec#adpcm.c,revFiles/7786f6_1c63ed_libavcodec#adpcm.c}: adpcm_ima_oki_expand_nibble)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

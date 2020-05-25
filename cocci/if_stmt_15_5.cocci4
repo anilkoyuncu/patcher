@@ -1,0 +1,10 @@
+@@
+expression E1, E2, E0;
+@@
+- Curl_addrinfo_callback(E0, E1, E2); 
++ Curl_addrinfo4_callback(E0, E1, E2); 
+// Infered from: (curl/{prevFiles/prev_1daa25_560c25_lib#hostthre.c,revFiles/1daa25_560c25_lib#hostthre.c}: gethostbyname_thread), (curl/{prevFiles/prev_1daa25_560c25_lib#hostthre.c,revFiles/1daa25_560c25_lib#hostthre.c}: gethostbyname_thread)
+// False positives: (curl/revFiles/1daa25_560c25_lib#hostthre.c: getaddrinfo_thread)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

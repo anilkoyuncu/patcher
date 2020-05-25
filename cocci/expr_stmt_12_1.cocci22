@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- const  char *I0 = tvb_get_string(wmem_packet_scope(), E1, E2, E3); 
++ const  char *I0 = tvb_get_string_enc(wmem_packet_scope(), E1, E2, E3,  ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-isis-clv.c,revFiles/971ffd_421d81_epan#dissectors#packet-isis-clv.c}: isis_dissect_hostname_clv)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 23 rules):
+// -- Edit Location --
+// Recall: 0.97, Precision: 1.00
+// -- Node Change --
+// Recall: 0.99, Precision: 1.00
+// -- General --
+// Functions fully changed: 38/39(97%)
+
+/*
+Functions where the patch did not apply:
+ - gstreamer/prevFiles/prev_55aa16_d2499c_gst#autoplug#gstspider.c: 
+*/
+
+// ---------------------------------------------

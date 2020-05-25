@@ -1,0 +1,9 @@
+@@
+expression E1, E2, E3, E0;
+@@
+- debugprintf(E0, (int )strlen(E1->private_data), E2, E3); 
++ debugprintf(E0, (int )strlen((char *)E1->private_data), E2, E3); 
+// Infered from: (wireshark/{prevFiles/prev_33ea029_f04475_epan#dissectors#packet-dcerpc-netlogon.c,revFiles/33ea029_f04475_epan#dissectors#packet-dcerpc-netlogon.c}: netlogon_dissect_netrserverreqchallenge_rqst), (wireshark/{prevFiles/prev_33ea029_f04475_epan#dissectors#packet-dcerpc-netlogon.c,revFiles/33ea029_f04475_epan#dissectors#packet-dcerpc-netlogon.c}: netlogon_dissect_netrserverreqchallenge_rqst)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

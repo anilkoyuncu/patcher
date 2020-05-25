@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- *E0 = (E1 + 1023) / 1024; 
++ *E0 = DIV_ROUND_UP(E1, 1024); 
+// Infered from: (qemu/{prevFiles/prev_13f149_21cf3e_block#vpc.c,revFiles/13f149_21cf3e_block#vpc.c}: calculate_geometry)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

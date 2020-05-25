@@ -1,0 +1,19 @@
+dist: bionic
+language: c
+os: linux
+addons:
+  apt:
+    packages:
+      - coccinelle
+before_script:
+    - ccache --version
+    - ccache --zero-stats
+    - export USE_CCACHE=1
+    # - git submodule update --init
+#     - bash build_dependencies.sh
+script:
+    - echo $TRAVIS_COMMIT_RANGE
+    - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
+    - echo $CHANGED_FILES
+    - spatch --version
+#     - make build

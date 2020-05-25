@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- FF_ALLOC_OR_GOTO(E0, E0->formatConvBuffer,  FFALIGN(E1, 16) * 2 * FFALIGN(E0->srcBpc, 8) >> 3, fail); 
++ FF_ALLOC_OR_GOTO(E0, E0->formatConvBuffer,  (FFALIGN(E1, 16) * 2 * FFALIGN(E0->srcBpc, 8) >> 3) + 16,  fail); 
+// Infered from: (FFmpeg/{prevFiles/prev_124e56_b8a1b8_libswscale#utils.c,revFiles/124e56_b8a1b8_libswscale#utils.c}: sws_init_context)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/7(85%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_0bfe00_64b85a_hw#multiboot.c: load_multiboot
+*/
+
+// ---------------------------------------------

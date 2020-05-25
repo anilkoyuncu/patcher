@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->spr[SPR_XER] = E0->xer; 
++ E0->spr[SPR_XER] = cpu_read_xer(E0); 
+// Infered from: (qemu/{prevFiles/prev_aa3785_537d3e_target-ppc#machine.c,revFiles/aa3785_537d3e_target-ppc#machine.c}: cpu_pre_save)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

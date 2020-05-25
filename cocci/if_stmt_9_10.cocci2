@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef mtime_t;
+@@
+  mtime_t I0; 
+  ...
+- if (E1 != INT64_MAX && *E2 > VLC_TS_INVALID && *E2 >= mdate() + E3->i_pts_delay + E1)  
++ if (E1 != INT64_MAX && *E2 > VLC_TS_INVALID && *E2 >= mdate() + I0 + E1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_fffc29_042c19_src#input#clock.c,revFiles/fffc29_042c19_src#input#clock.c}: input_clock_ConvertTS)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

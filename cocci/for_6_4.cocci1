@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+@@
+- for(int I0 = 0;I0 < E1;++I0)  
++ for(size_t I0 = 0;I0 < E1;++I0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_fe5ef9_df7ddb_src#interface#dialog.c,revFiles/fe5ef9_df7ddb_src#interface#dialog.c}: dialog_get_idx_locked), (vlc/{prevFiles/prev_fe5ef9_df7ddb_src#interface#dialog.c,revFiles/fe5ef9_df7ddb_src#interface#dialog.c}: dialog_clear_all_locked), (ompi/{prevFiles/prev_8349e1_afde83_ompi#mca#btl#vader#btl_vader_module.c,revFiles/8349e1_afde83_ompi#mca#btl#vader#btl_vader_module.c}: vader_del_procs)
+// False positives: (ompi/revFiles/8349e1_afde83_ompi#mca#btl#vader#btl_vader_module.c: vader_finalize)
+// Recall: 0.18, Precision: 0.75, Matching recall: 1.00
+
+// ---------------------------------------------

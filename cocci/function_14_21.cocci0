@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- msg_Err(E0, E1); 
++ msg_Err(E0, "unable to create module list"); 
+// Infered from: (vlc/{prevFiles/prev_470b47_4dfd83_src#interface#interaction.c,revFiles/470b47_4dfd83_src#interface#interaction.c}: intf_InteractionSearchInterface)
+// False positives: (vlc/revFiles/3356df_90b0c4_modules#video_output#xcb#events.c: ManageEvent), (vlc/revFiles/3356df_90b0c4_modules#video_output#xcb#window.c: Open), (vlc/revFiles/3356df_90b0c4_modules#video_output#xcb#window.c: Thread), (vlc/revFiles/470b47_4dfd83_src#interface#interaction.c: intf_InteractionInit), (vlc/revFiles/4a3342_dbbbe5_src#playlist#tree.c: GetNextItem), (vlc/revFiles/4a3342_dbbbe5_src#playlist#tree.c: GetPrevItem)
+// Recall: 0.36, Precision: 0.27, Matching recall: 0.80
+
+// ---------------------------------------------

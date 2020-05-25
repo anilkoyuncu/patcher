@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- fprintf(stderr, "Line %d: Expected NULL, but saw <%p>\n", E0, E1); 
++ fprintf(stderr, "Line %d: Expected non-NULL, but got NULL\n", E0); 
+// Infered from: (apr/{prevFiles/prev_7a6178_6514ee_test#abts.c,revFiles/7a6178_6514ee_test#abts.c}: abts_ptr_notnull)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = fminf(E0,  ath(E1->avctx->sample_rate * (E2 + E3) / 1024.0 / 2.0, ATH_ADD)); 
++ E0 = FFMIN(E0,  ath(E1->avctx->sample_rate * (E2 + E3) / 1024.0 / 2.0, ATH_ADD)); 
+// Infered from: (FFmpeg/{prevFiles/prev_988c17_181b33_libavcodec#aacpsy.c,revFiles/988c17_181b33_libavcodec#aacpsy.c}: psy_3gpp_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

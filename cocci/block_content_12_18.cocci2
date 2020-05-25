@@ -1,0 +1,29 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = strlen(E1->pStringArray[E2]); 
++ size_t I0 = strlen(E1->pStringArray[E2]); 
+// Infered from: (php-src/{prevFiles/prev_ddaae1_e70dce_ext#standard#dns_win32.c,revFiles/ddaae1_e70dce_ext#standard#dns_win32.c}: php_parserr)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.38, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_7276e9_b0bc0e_libavformat#pmpdec.c: pmp_header
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_847a64_251634_disas#xtensa.c: print_insn_xtensa
+ - qemu/prevFiles/prev_847a64_251634_target#xtensa#translate.c: disas_xtensa_insn
+*/
+
+// ---------------------------------------------

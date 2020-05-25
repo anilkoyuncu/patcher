@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->rc_eq = "tex^qComp"; 
++ E0->rc_eq = av_strdup("tex^qComp"); 
+// Infered from: (FFmpeg/{prevFiles/prev_9606a8_bd6754_libavcodec#utils.c,revFiles/9606a8_bd6754_libavcodec#utils.c}: avcodec_get_context_defaults2)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+@@
+- for(int I0 = 0;I0 < 4 && E1->data[I0];I0++)  
++ int I0; 
++ for(I0 = 0;I0 < 4 && E1->data[I0];I0++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_f66b39_a0aa73_libavfilter#vf_pad.c,revFiles/f66b39_a0aa73_libavfilter#vf_pad.c}: get_video_buffer), (FFmpeg/{prevFiles/prev_f66b39_a0aa73_libavfilter#vf_pad.c,revFiles/f66b39_a0aa73_libavfilter#vf_pad.c}: start_frame)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

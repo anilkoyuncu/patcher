@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = 6 + 3 + E1->ps.sps->data_size + 4 + E1->ps.sps->data_size; 
++ int I0 = 6 + 3 + E1->ps.sps->data_size + 4 + E1->ps.pps->data_size; 
+// Infered from: (FFmpeg/{prevFiles/prev_aafdad_4df944_libavcodec#videotoolbox.c,revFiles/aafdad_4df944_libavcodec#videotoolbox.c}: ff_videotoolbox_avcc_extradata_create)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

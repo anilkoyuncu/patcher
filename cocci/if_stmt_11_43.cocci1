@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->i_es > 0 && E0->psz_sdp && *E0->psz_sdp)  
++ if ((E0->i_es > 0 || E0->p_mux) && E0->psz_sdp && *E0->psz_sdp)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_92ac7b_c978f7_modules#stream_out#rtp.c,revFiles/92ac7b_c978f7_modules#stream_out#rtp.c}: SapSetup)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

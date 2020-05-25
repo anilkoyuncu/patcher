@@ -1,0 +1,32 @@
+@@
+expression E0;
+@@
+- g_object_notify(E0, "track-status"); 
++ g_object_notify(G_OBJECT(E0), "track-status"); 
+// Infered from: (gtk/{prevFiles/prev_f09e64_b69212_gtk#gtkprintjob.c,revFiles/f09e64_b69212_gtk#gtkprintjob.c}: gtk_print_job_set_track_print_status)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.35, Precision: 1.00
+// -- Node Change --
+// Recall: 0.30, Precision: 1.00
+// -- General --
+// Functions fully changed: 8/23(34%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_83e3e9_e22cc82_modules#demux#subtitle_asa.c: Open
+ - FFmpeg/prevFiles/prev_f44005_48f1e5_libavcodec#aacenc.c: aac_encode_frame
+ - FFmpeg/prevFiles/prev_61d8fa_f9ab4f_libavcodec#h264_sei.c: decode_registered_user_data_closed_caption
+ - FFmpeg/prevFiles/prev_f44005_48f1e5_libavcodec#aacenc.c: deinterleave_input_samples
+ - wireshark/prevFiles/prev_f44576_7cb6f6_epan#dissectors#packet-dcom-cba-acco.c: cba_connection_disconnect
+ - FFmpeg/prevFiles/prev_5c9dcd_012620_libavformat#fifo.c: fifo_mux_init
+ - wireshark/prevFiles/prev_4dc16c_dd4f06_packet-ncp.c: ncp2222_subfunc
+ - FFmpeg/prevFiles/prev_35a685_be4e89_libavformat#mpegts.c: handle_packets
+ - wireshark/prevFiles/prev_f44576_7cb6f6_epan#dissectors#packet-dcom-cba-acco.c: cba_connection_disconnectme
+ - qemu/prevFiles/prev_ade007_8b088d_contrib#rdmacm-mux#main.c: get_fd
+*/
+
+// ---------------------------------------------

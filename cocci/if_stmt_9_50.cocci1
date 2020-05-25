@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (compare_ether_addr(E0, E1) != 0)  
++ if (!ether_addr_equal(E0, E1))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_6942df7_55d0ac5_drivers#scsi#bnx2fc#bnx2fc_fcoe.c,revFiles/6942df7_55d0ac5_drivers#scsi#bnx2fc#bnx2fc_fcoe.c}: bnx2fc_recv_frame), (linux/{prevFiles/prev_9a7b6ef9_171fe5ef_net#bridge#br_stp_bpdu.c,revFiles/9a7b6ef9_171fe5ef_net#bridge#br_stp_bpdu.c}: br_stp_rcv)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- return E0->capture_beacon && ieee80211_is_beacon(E1->frame_control) && !compare_ether_addr(  E1->addr3, E0->capture_bssid); 
++ return E0->capture_beacon && ieee80211_is_beacon(E1->frame_control) && ether_addr_equal(  E1->addr3, E0->capture_bssid); 
+// Infered from: (linux/{prevFiles/prev_2e42e4_39f1d94_drivers#net#wireless#mwl8k.c,revFiles/2e42e4_39f1d94_drivers#net#wireless#mwl8k.c}: mwl8k_capture_bssid)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_2e42e4_39f1d94_drivers#net#wireless#iwlegacy#3945.c: il3945_is_network_packet
+*/
+
+// ---------------------------------------------

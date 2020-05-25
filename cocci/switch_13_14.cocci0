@@ -1,0 +1,7 @@
+@@
+@@
+- array_init(current_section); 
+// Infered from: (php-src/{prevFiles/prev_ab1124_1948b4_ext#standard#browscap.c,revFiles/ab1124_1948b4_ext#standard#browscap.c}: php_browscap_parser_cb)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- return mca_vprotocol_base_open(E0); 
++ rc = mca_vprotocol_base_open(E0); 
++ free(E0); 
++ return rc; 
+// Infered from: (ompi/{prevFiles/prev_f3ce12_d6e9a1_ompi#mca#pml#v#pml_v_component.c,revFiles/f3ce12_d6e9a1_ompi#mca#pml#v#pml_v_component.c}: mca_pml_v_component_open)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

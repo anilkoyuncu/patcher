@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+@@
+- g_strlcat(I0, E1, sizeof(coap_uri_str)); 
++ g_strlcat(coap_uri_query, E1, sizeof(coap_uri_query)); 
+// Infered from: (wireshark/{prevFiles/prev_009beb_248a50_epan#dissectors#packet-coap.c,revFiles/009beb_248a50_epan#dissectors#packet-coap.c}: dissect_coap_opt_uri_query), (wireshark/{prevFiles/prev_009beb_248a50_epan#dissectors#packet-coap.c,revFiles/009beb_248a50_epan#dissectors#packet-coap.c}: dissect_coap_opt_uri_query), (wireshark/{prevFiles/prev_009beb_248a50_epan#dissectors#packet-coap.c,revFiles/009beb_248a50_epan#dissectors#packet-coap.c}: dissect_coap_opt_uri_query)
+// False positives: (wireshark/revFiles/009beb_248a50_epan#dissectors#packet-coap.c: dissect_coap_opt_uri_host), (wireshark/revFiles/009beb_248a50_epan#dissectors#packet-coap.c: dissect_coap_opt_uri_path), (wireshark/revFiles/009beb_248a50_epan#dissectors#packet-coap.c: dissect_coap_opt_uri_port)
+// Recall: 0.35, Precision: 0.27, Matching recall: 1.00
+
+// ---------------------------------------------

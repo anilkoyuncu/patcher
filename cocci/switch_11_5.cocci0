@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.i_aspect /= 2; 
++ E0.i_sar_den *= 2; 
+// Infered from: (vlc/{prevFiles/prev_71b135_afd4e7_modules#video_filter#deinterlace.c,revFiles/71b135_afd4e7_modules#video_filter#deinterlace.c}: SpawnRealVout)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

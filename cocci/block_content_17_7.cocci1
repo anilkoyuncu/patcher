@@ -1,0 +1,14 @@
+@@
+expression list E3;
+identifier I0;
+expression E1, E2;
+@@
+- ssize_t I0 = 0; 
+  ...
+- E1 = E2(E3); 
+- return E1; 
++ return E2(E3); 
+// Infered from: (linux/{prevFiles/prev_f7d635_6019ee_drivers#staging#speakup#kobjects.c,revFiles/f7d635_6019ee_drivers#staging#speakup#kobjects.c}: message_store)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

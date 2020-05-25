@@ -1,0 +1,7 @@
+@@
+@@
+- label__raw_write__success: 
+// Infered from: (qemu/{prevFiles/prev_65d21b_d24667_block#raw-posix.c,revFiles/65d21b_d24667_block#raw-posix.c}: raw_pwrite_aligned)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- close(E0); 
++ sclose(E0); 
+// Infered from: (curl/{prevFiles/prev_2705af_f34ddb_tests#server#sws.c,revFiles/2705af_f34ddb_tests#server#sws.c}: http_connect)
+// Recall: 0.23, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

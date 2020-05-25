@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- E0->coninfo->callbacks->handle_check_io(E0); 
++ if (!E0->coninfo->callbacks->handle_check_io(E0))  
++ {
++ continue; 
++ }
+// Infered from: (lighttpd2/{prevFiles/prev_bf0ece_9c6f89_src#main#throttle.c,revFiles/bf0ece_9c6f89_src#main#throttle.c}: li_throttle_cb)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

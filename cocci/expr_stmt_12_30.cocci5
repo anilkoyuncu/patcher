@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+typedef uint16_t;
+@@
+- store_slice16_c(E0 + (E1 - 8) * E2, E3->temp + 8 + E1 * E4, E2 / 2, E4, E5,  FFMIN(8, E6 + 8 - E1), MAX_LEVEL - E3->log2_count, ldither); 
++ store_slice16_c((uint16_t *)(E0 + (E1 - 8) * E2), E3->temp + 8 + E1 * E4,  E2 / 2, E4, E5, FFMIN(8, E6 + 8 - E1),  MAX_LEVEL - E3->log2_count, ldither); 
+// Infered from: (FFmpeg/{prevFiles/prev_3ff8ef_e59c28_libavfilter#vf_spp.c,revFiles/3ff8ef_e59c28_libavfilter#vf_spp.c}: filter)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_db22c8_a4b39c_ares#ares_gethostbyname.c: fake_hostent
+ - curl/prevFiles/prev_db22c8_a4b39c_ares#ares_free_hostent.c: ares_free_hostent
+*/
+
+// ---------------------------------------------

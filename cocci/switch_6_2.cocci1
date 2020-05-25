@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.data->type = IS_UNSET; 
++ ZVAL_NULL(E0.data); 
+// Infered from: (php-src/{prevFiles/prev_16a35c_44e9e9_ext#wddx#wddx.c,revFiles/16a35c_44e9e9_ext#wddx#wddx.c}: php_wddx_push_element)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

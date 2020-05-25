@@ -1,0 +1,33 @@
+@@
+identifier I0, I1;
+@@
+- I0 = &I1; 
++ src = &I1; 
+// Infered from: (cairo/{prevFiles/prev_e00d06_378b1e7_src#cairo-surface.c,revFiles/e00d06_378b1e7_src#cairo-surface.c}: _cairo_surface_composite_shape_fixup_unbounded)
+// False positives: (cairo/revFiles/e00d06_378b1e7_src#cairo-surface.c: _cairo_surface_composite_fixup_unbounded), (cairo/revFiles/e00d06_378b1e7_src#cairo-surface.c: _cairo_surface_composite_shape_fixup_unbounded)
+// Recall: 0.14, Precision: 0.38, Matching recall: 0.17
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 0.50
+// -- Node Change --
+// Recall: 0.73, Precision: 0.80
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - cairo/prevFiles/prev_e00d06_378b1e7_src#cairo-surface.c: _cairo_surface_composite_shape_fixup_unbounded
+*/
+/*
+Functions where the patch did not apply:
+ - cairo/prevFiles/prev_e00d06_378b1e7_src#cairo-surface.c: _cairo_surface_composite_fixup_unbounded_internal
+ - tcl/prevFiles/prev_55563e_553348_generic#tclStubLib.c: Tcl_InitStubs
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_e00d06_378b1e7_src#cairo-surface.c: _cairo_surface_composite_fixup_unbounded
+*/
+
+// ---------------------------------------------

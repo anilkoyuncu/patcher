@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- wait_for_completion_timeout(&E0->t_transport_stop_comp, 3000); 
++ wait_for_completion_timeout(&E0->t_transport_stop_comp, 3 * HZ); 
+// Infered from: (linux/{prevFiles/prev_fd4e139_5dacbf_drivers#scsi#qla2xxx#tcm_qla2xxx.c,revFiles/fd4e139_5dacbf_drivers#scsi#qla2xxx#tcm_qla2xxx.c}: tcm_qla2xxx_write_pending_status)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

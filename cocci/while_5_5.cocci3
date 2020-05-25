@@ -1,0 +1,33 @@
+@@
+expression E0, E1;
+@@
+- while (E0 != NULL && E0->end_date < E1)  
++ while (E0 != NULL && E0->end_date < E1 - 1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_f4d5ed_3adaad_src#audio_output#mixer.c,revFiles/f4d5ed_3adaad_src#audio_output#mixer.c}: MixBuffer)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.55, Precision: 0.92
+// -- General --
+// Functions fully changed: 5/10(50%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_439-D-7421327-7421338.c: main
+ - codeflaws/prevFiles/prev_677-A-18331987-18332002.c: main
+ - qemu/prevFiles/prev_53715e_a49d93_target-mips#helper.c: r4k_invalidate_tlb
+ - codeflaws/prevFiles/prev_49-A-15166209-15166224.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_113f18_cba23b_modules#demux#aiff.c: GetF80BE
+*/
+
+// ---------------------------------------------

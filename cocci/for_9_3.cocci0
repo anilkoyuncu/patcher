@@ -1,0 +1,19 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef H264Context;
+@@
+  void ff_h264_fill_mbaff_ref_list(H264Context *I0)  
+  {
+  ...
+- for(E1 = 0;E1 < E2;E1++)  
++ for(E1 = 0;E1 < I0->list_count;E1++)  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_237d31_dc9ce4_libavcodec#h264_refs.c,revFiles/237d31_dc9ce4_libavcodec#h264_refs.c}: ff_h264_fill_mbaff_ref_list)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

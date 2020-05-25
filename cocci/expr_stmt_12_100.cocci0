@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef int32_t;
+@@
+- OPAL_THREAD_ADD32(&E0->ib_qp_next, 1); 
++ OPAL_THREAD_ADD32(((int32_t *)&E0->ib_qp_next), 1); 
+// Infered from: (ompi/{prevFiles/prev_b212cf_f3ac4a_ompi#mca#btl#ofud#btl_ofud_endpoint.c,revFiles/b212cf_f3ac4a_ompi#mca#btl#ofud#btl_ofud_endpoint.c}: mca_btl_ud_endpoint_post_send)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

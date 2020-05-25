@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef mp_size_t;
+@@
+- mp_size_t I0 = (E1 + 1) / 2; 
++ mp_size_t I0 = (E1 + 1) >> 1; 
+// Infered from: (gmp/{prevFiles/prev_611fcd_38b907_mpn#generic#mullow_n.c,revFiles/611fcd_38b907_mpn#generic#mullow_n.c}: mpn_mullow_n)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

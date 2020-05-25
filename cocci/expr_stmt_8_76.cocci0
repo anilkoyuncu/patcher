@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- insert_ref_hash(E0); 
++ insert_ref_hash(E0, refs_hash, refs_hash_size); 
+// Infered from: (git/{prevFiles/prev_5fdc84_86f660_object-refs.c,revFiles/5fdc84_86f660_object-refs.c}: add_object_refs)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

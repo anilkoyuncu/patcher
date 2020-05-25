@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->picture.b_repeat_first_field = 1; 
++ E0->picture.b_repeat_first_field = 0; 
+// Infered from: (vlc/{prevFiles/prev_422bd7_5f6c59_src#video_parser#vpar_headers.c,revFiles/422bd7_5f6c59_src#video_parser#vpar_headers.c}: PictureHeader)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

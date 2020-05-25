@@ -1,0 +1,58 @@
+@@
+@@
+- goto  Done; 
++ goto  Error; 
+// Infered from: (cpython/{prevFiles/prev_cd97da_47e52e_Objects#longobject.c,revFiles/cd97da_47e52e_Objects#longobject.c}: long_pow), (cpython/{prevFiles/prev_cd97da_47e52e_Objects#longobject.c,revFiles/cd97da_47e52e_Objects#longobject.c}: long_pow)
+// False positives: (cpython/revFiles/cd97da_47e52e_Objects#longobject.c: long_pow)
+// Recall: 0.03, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.06, Precision: 0.67
+// -- Node Change --
+// Recall: 0.06, Precision: 0.44
+// -- General --
+// Functions fully changed: 0/33(0%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_a421bb_27c833_libavcodec#h264_ps.c: ff_h264_decode_seq_parameter_set
+ - cpython/prevFiles/prev_e98147_689735_Python#exceptions.c: UnicodeError__init__
+ - FFmpeg/prevFiles/prev_aaf7fd_87d568_libavcodec#extract_extradata_bsf.c: extract_extradata_h2645
+ - FFmpeg/prevFiles/prev_c1815c_c2a3dc_libavcodec#imgresample.c: img_resample_full_init
+ - FFmpeg/prevFiles/prev_5a412a_53855e_libavcodec#extract_extradata_bsf.c: extract_extradata_h2645
+ - cpython/prevFiles/prev_d2bee3_e1e9f2_Modules#itertoolsmodule.c: permutations_new
+ - vlc/prevFiles/prev_effd02_854423_src#video_output#opengl.c: vlc_gl_surface_Create
+ - FFmpeg/prevFiles/prev_f374e9_0f4682_libavfilter#vf_fade.c: init
+ - cpython/prevFiles/prev_447e7c_646049_Objects#floatobject.c: PyFloat_FromString
+ - cairo/prevFiles/prev_7e0e50_4bff3d_src#cairo-xlib-surface.c: _cairo_xlib_surface_show_glyphs
+ - FFmpeg/prevFiles/prev_f907ee_f0e7ac_libavfilter#vf_tonemap_vaapi.c: tonemap_vaapi_filter_frame
+ - qemu/prevFiles/prev_80fa33_30cdc4_block#qcow2-cluster.c: qcow2_grow_l1_table
+ - FFmpeg/prevFiles/prev_7d5bb3_ee64b6_libavfilter#af_sofalizer.c: load_data
+ - FFmpeg/prevFiles/prev_75625c5_29fdaa_libavfilter#af_headphone.c: convert_coeffs
+ - FFmpeg/prevFiles/prev_0c889d_73c4f6_libavformat#hlsenc.c: hls_write_header
+ - linux/prevFiles/prev_14ea96_e0feca89_arch#arm#mach-omap2#smartreflex.c: omap_sr_probe
+ - vlc/prevFiles/prev_dbf261_c8f1ef4_modules#services_discovery#sap.c: ParseSDP
+ - linux/prevFiles/prev_841f1d_016c21_net#rfkill#rfkill-gpio.c: rfkill_gpio_probe
+ - FFmpeg/prevFiles/prev_86d703_5db111_libavformat#movenc.c: mov_write_packet
+ - FFmpeg/prevFiles/prev_5480e8_ca72cd_libavcodec#pngdec.c: decode_frame_png
+ - linux/prevFiles/prev_b820d52_c70524_sound#soc#fsl#eukrea-tlv320.c: eukrea_tlv320_probe
+ - ompi/prevFiles/prev_0fb6f1_03a334_ompi#communicator#comm_cid.c: ompi_comm_activate
+ - vlc/prevFiles/prev_cbcbd3_36f3f9_modules#stream_out#rtpfmt.c: rtp_packetize_jpeg
+ - vlc/prevFiles/prev_e245cf_fe5ef9_src#input#input.c: InputDemuxNew
+ - qemu/prevFiles/prev_0b6858_824808_block#crypto.c: block_crypto_co_create_opts_luks
+ - FFmpeg/prevFiles/prev_08ccc4_61c068_libavformat#rtmpproto.c: rtmp_open
+ - vlc/prevFiles/prev_5d2777_3e21d7_modules#codec#omxil#mediacodec.c: OpenDecoder
+ - linux/prevFiles/prev_059c43_bdc71b_drivers#net#wireless#wl1251#cmd.c: wl1251_cmd_data_path
+ - FFmpeg/prevFiles/prev_424ed1_956bd7_libavcodec#faxcompr.c: ff_ccitt_unpack
+ - vlc/prevFiles/prev_bd5d93_2dd422_modules#codec#avcodec#dxva2.c: DxCreateVideoDecoder
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_60b196_de74e8_lib#curl_ntlm_wb.c: ntlm_wb_response
+ - cpython/prevFiles/prev_cd97da_47e52e_Objects#longobject.c: long_pow
+ - curl/prevFiles/prev_60b196_de74e8_lib#curl_ntlm_wb.c: ntlm_wb_init
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0->released_once = ATOMIC_FLAG_INIT; 
++ atomic_flag_clear(&E0->released_once); 
+// Infered from: (vlc/{prevFiles/prev_678a61_53779b_modules#access#bluray.c,revFiles/678a61_53779b_modules#access#bluray.c}: blurayInitOverlay)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_1ce960_d7a5dc_gdk#x11#gdkselectioninputstream-x11.c: gdk_x11_selection_input_stream_xevent
+*/
+
+// ---------------------------------------------

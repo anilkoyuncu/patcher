@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- do_add_entry(E0, E1, E2, CE_STAGEMASK); 
++ if (do_add_entry(E0, E1, E2, CE_STAGEMASK) < 0)  
++ {
++ return -1; 
++ }
+// Infered from: (git/{prevFiles/prev_cc756e_35edce_unpack-trees.c,revFiles/cc756e_35edce_unpack-trees.c}: merged_entry)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

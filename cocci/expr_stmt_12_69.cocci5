@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- memcpy(E0->dev_addr, E1->dev_addr, sizeof(E0->dev_addr)); 
++ memcpy(E0->dev_addr, E1->dev_addr, sizeof(E1->dev_addr)); 
+// Infered from: (linux/{prevFiles/prev_2447f2_94de80_drivers#net#cpmac.c,revFiles/2447f2_94de80_drivers#net#cpmac.c}: cpmac_probe)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_ad7f82_b0c3ab_file.c: read_packet
+*/
+
+// ---------------------------------------------

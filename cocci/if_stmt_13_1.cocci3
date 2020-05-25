@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!libvlc_media_list_count(E0, NULL))  
++ if (!libvlc_media_list_count(E0->p_mlist, NULL))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_272046_aafa45_src#control#media_list_player.c,revFiles/272046_aafa45_src#control#media_list_player.c}: get_next_path)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

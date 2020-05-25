@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef eth_hdr;
+@@
+- const  eth_hdr *I0 = (eth_hdr *)E1; 
++ const  eth_hdr *I0 = (const  eth_hdr *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#conversations_eth.c,revFiles/3ae2e5_8aebe1_ui#gtk#conversations_eth.c}: eth_conversation_packet)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

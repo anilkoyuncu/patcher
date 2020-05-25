@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (!GDK_WINDOW_DESTROYED(E0) && gdk_display_supports_shapes(GDK_WINDOW_DISPLAY(  E0)))  
++ if (!GDK_WINDOW_DESTROYED(E0) && gdk_display_supports_input_shapes(GDK_WINDOW_DISPLAY(  E0)))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_266866_c62a1f_gdk#x11#gdkwindow-x11.c,revFiles/266866_c62a1f_gdk#x11#gdkwindow-x11.c}: gdk_x11_window_get_input_shape)
+// False positives: (gtk/revFiles/266866_c62a1f_gdk#x11#gdkwindow-x11.c: gdk_x11_window_get_shape)
+// Recall: 0.08, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->data; 
++ E0 = STAT_NODE_STATS(E1); 
+// Infered from: (wireshark/{prevFiles/prev_8d6b72_e88397_proto_hier_stats.c,revFiles/8d6b72_e88397_proto_hier_stats.c}: process_node)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

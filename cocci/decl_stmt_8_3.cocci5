@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = malloc(sizeof(IGNORE_WRONG_MODULE_NAME) + strlen(E1) + 1); 
++ I0 = (char *)malloc(sizeof(IGNORE_WRONG_MODULE_NAME) + strlen(E1) + 1); 
+// Infered from: (libarchive/{prevFiles/prev_bbfb00_ff86dd_tar#read.c,revFiles/bbfb00_ff86dd_tar#read.c}: read_archive)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

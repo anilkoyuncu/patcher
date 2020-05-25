@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- process_input(E0[E1].fd, E2); 
++ processed[E1] = process_input(E0[E1].fd, E2); 
+// Infered from: (git/{prevFiles/prev_1b19fa_959e2e_builtin-upload-archive.c,revFiles/1b19fa_959e2e_builtin-upload-archive.c}: cmd_upload_archive), (git/{prevFiles/prev_1b19fa_959e2e_builtin-upload-archive.c,revFiles/1b19fa_959e2e_builtin-upload-archive.c}: cmd_upload_archive)
+// Recall: 0.16, Precision: 1.00, Matching recall: 0.57
+
+// ---------------------------------------------

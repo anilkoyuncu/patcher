@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (tvb_strneql(E0, 0, "8=FIX.", 6) != 0)  
++ if (tvb_strneql(E0, 0, "8=FIX", 5) != 0)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_74178f_5d9ca6_epan#dissectors#packet-fix.c,revFiles/74178f_5d9ca6_epan#dissectors#packet-fix.c}: dissect_fix)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

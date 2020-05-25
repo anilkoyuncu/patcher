@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- SSL_clear(E0); 
++ if (!SSL_clear(E0))  
++ {
++ return -1; 
++ }
+// Infered from: (openssl/{prevFiles/prev_c7f5b5_77d514_ssl#d1_lib.c,revFiles/c7f5b5_77d514_ssl#d1_lib.c}: dtls1_listen)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

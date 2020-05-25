@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0 && (E1->numeric || gtk_entry_get_text(GTK_ENTRY(E1)) == NULL))  
++ if (!E0 && (E1->priv->numeric || gtk_entry_get_text(GTK_ENTRY(E1)) == NULL))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_1ddfc3_5bbbc4_gtk#gtkspinbutton.c,revFiles/1ddfc3_5bbbc4_gtk#gtkspinbutton.c}: gtk_spin_button_realize)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

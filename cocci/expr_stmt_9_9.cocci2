@@ -1,0 +1,11 @@
+@@
+identifier I0 = {U16_FWD_1 ,wmem_tree_foreach };
+type T2;
+expression E1, E3, E4;
+@@
+- I0(E1, (T2 )E3, E4); 
++ I0(E1, E3, E4); 
+// Infered from: (wireshark/{prevFiles/prev_966c59_131eb5_epan#dissectors#packet-gtp.c,revFiles/966c59_131eb5_epan#dissectors#packet-gtp.c}: remove_frame_info), (php-src/{prevFiles/prev_a447d3_bed030_ext#unicode#unicode_iterators.c,revFiles/a447d3_bed030_ext#unicode#unicode_iterators.c}: text_iter_cp_next)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

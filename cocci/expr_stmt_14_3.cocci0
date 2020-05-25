@@ -1,0 +1,8 @@
+@@
+@@
+- Z_USTRVAL_P(return_value) = php_u_strtr(Z_USTRVAL_P(return_value),  Z_USTRLEN_P(return_value),  u_rot13_from, 52, u_rot13_to, 52, 52,  &Z_USTRLEN_P(return_value)); 
++ Z_USTRVAL_P(return_value) = php_u_strtr(); 
+// Infered from: (php-src/{prevFiles/prev_704dc9_8d953e_ext#standard#string.c,revFiles/704dc9_8d953e_ext#standard#string.c}: PHP_FUNCTION)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

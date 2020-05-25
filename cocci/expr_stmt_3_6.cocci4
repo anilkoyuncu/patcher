@@ -1,0 +1,11 @@
+@@
+identifier I3;
+expression E0, E2, E1;
+typedef guint8;
+@@
+- E0[E1].ptr = (guint8 *)E2->I3.data; 
++ E0[E1].ptr = (const  guint8 *)E2->I3.data; 
+// Infered from: (wireshark/{prevFiles/prev_62d05c_4120d7_epan#dissectors#packet-vrrp.c,revFiles/62d05c_4120d7_epan#dissectors#packet-vrrp.c}: dissect_vrrp), (wireshark/{prevFiles/prev_62d05c_4120d7_epan#dissectors#packet-vrrp.c,revFiles/62d05c_4120d7_epan#dissectors#packet-vrrp.c}: dissect_vrrp)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

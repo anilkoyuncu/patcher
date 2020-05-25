@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (E0 < (E1 - 1))  
++ while (E0 < (E1))  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_208-A-17922157-17922172.c,revFiles/208-A-17922157-17922172.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

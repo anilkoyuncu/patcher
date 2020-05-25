@@ -1,0 +1,28 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef SCSIRequest;
+typedef int32_t;
+typedef uint8_t;
+@@
+  int32_t scsi_send_command(SCSIRequest *I0, uint8_t *I1)  
+  {
+  ...
+- DPRINTF("Command: lun=%d tag=0x%x data=0x%02x", lun, tag, E2[0]); 
++ DPRINTF("Command: lun=%d tag=0x%x data=0x%02x", I0->lun, I0->tag, E2[0]); 
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_653c1c_c5bf71_hw#scsi-disk.c,revFiles/653c1c_c5bf71_hw#scsi-disk.c}: scsi_send_command)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

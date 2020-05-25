@@ -1,0 +1,15 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- visit_type_bool(E0, E1, &E2, E3); 
+- if (*E3)  
++ visit_type_bool(E0, E1, &E2, &err); 
++ if (err)  
+  {
++ error_propagate(E3, err); 
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_0325e5_3d5083_target#s390x#cpu_models.c,revFiles/0325e5_3d5083_target#s390x#cpu_models.c}: set_feature), (qemu/{prevFiles/prev_0325e5_3d5083_target#s390x#cpu_models.c,revFiles/0325e5_3d5083_target#s390x#cpu_models.c}: set_feature_group)
+// Recall: 0.24, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------

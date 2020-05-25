@@ -1,0 +1,18 @@
+@@
+identifier I0, I1, I2;
+expression E3;
+typedef XHCIEPContext;
+typedef XHCIState;
+typedef XHCITransfer;
+@@
+  int xhci_submit(XHCIState *I0, XHCITransfer *I1, XHCIEPContext *I2)  
+  {
+  ...
+- DPRINTF("xhci_submit(slotid=%d,epid=%d)\n", E3->slotid, E3->epid); 
++ DPRINTF("xhci_submit(slotid=%d,epid=%d)\n", I2->slotid, I2->epid); 
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_ee5626_bd4a68_hw#usb#hcd-xhci.c,revFiles/ee5626_bd4a68_hw#usb#hcd-xhci.c}: xhci_submit)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

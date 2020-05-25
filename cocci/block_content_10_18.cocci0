@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (U32_AT(E1 + 8) & 0x8FFFFE) >> 11; 
++ E0 = (U32_AT(E1 + 8) & 0x7FFFFE) >> 1; 
+// Infered from: (vlc/{prevFiles/prev_f223ef_da6730_src#input#mpeg_system.c,revFiles/f223ef_da6730_src#input#mpeg_system.c}: input_DemuxPS)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

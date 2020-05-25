@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- opal_timer_linux_freq = E0.tv_nsec; 
++ opal_timer_linux_freq = 1.e9; 
+// Infered from: (ompi/{prevFiles/prev_04a4cb_c88f18_opal#mca#timer#linux#timer_linux_component.c,revFiles/04a4cb_c88f18_opal#mca#timer#linux#timer_linux_component.c}: opal_timer_linux_open)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

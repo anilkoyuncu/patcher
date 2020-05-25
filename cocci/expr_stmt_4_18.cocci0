@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0.top_field_first = E1->b_top_field_first; 
++ E0.top_field_first = !!E1->b_top_field_first; 
+// Infered from: (vlc/{prevFiles/prev_ab36db_95b4fb_modules#codec#ffmpeg#encoder.c,revFiles/ab36db_95b4fb_modules#codec#ffmpeg#encoder.c}: EncodeVideo)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

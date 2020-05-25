@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = snd_pcm_wait(E1->p_alsa_pcm, 500); 
++ int I0 = snd_pcm_wait(E1->p_alsa_pcm, 10); 
+// Infered from: (vlc/{prevFiles/prev_3d9fc4_0151e4_modules#access#alsa.c,revFiles/3d9fc4_0151e4_modules#access#alsa.c}: Demux)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

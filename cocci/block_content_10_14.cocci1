@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (!(E0 = OPENSSL_malloc(STACKSIZE)))  
++ E0 = OPENSSL_malloc(STACKSIZE); 
++ if (E0 == NULL)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_e38565_625146_crypto#async#arch#async_posix.c,revFiles/e38565_625146_crypto#async#arch#async_posix.c}: async_fibre_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - libarchive/prevFiles/prev_a875bd_592332_libarchive#test#test_read_disk.c: DEFINE_TEST
+*/
+
+// ---------------------------------------------

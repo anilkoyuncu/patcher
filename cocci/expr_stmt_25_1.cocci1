@@ -1,0 +1,20 @@
+@@
+identifier I1;
+expression E0, E2;
+@@
+- OBD_ALLOC_LARGE(E0->I1, E2 * sizeof(E0->I1[0])); 
++ E0->I1 = libcfs_kvzalloc(E2 * sizeof(E0->I1[0]), GFP_NOFS); 
+// Infered from: (linux/{prevFiles/prev_3d0ba7_8cc379_drivers#staging#lustre#lustre#lov#lov_object.c,revFiles/3d0ba7_8cc379_drivers#staging#lustre#lustre#lov#lov_object.c}: lov_init_raid0), (linux/{prevFiles/prev_3d0ba7_8cc379_drivers#staging#lustre#lustre#lov#lov_lock.c,revFiles/3d0ba7_8cc379_drivers#staging#lustre#lustre#lov#lov_lock.c}: lov_lock_sub_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

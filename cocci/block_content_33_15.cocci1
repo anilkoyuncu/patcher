@@ -1,0 +1,30 @@
+@@
+expression E0;
+typedef uint8_t;
+@@
+- E0->p_buf = realloc(E0->p_buf, E0->i_frame_size); 
+- if (!E0->p_buf)  
++ uint8_t *p_buf = realloc(E0->p_buf, E0->i_frame_size); 
++ if (!p_buf)  
+  {
+  ...
+  }
++ E0->p_buf = p_buf; 
+// Infered from: (vlc/{prevFiles/prev_f3901f_f5470b_modules#packetizer#flac.c,revFiles/f3901f_f5470b_modules#packetizer#flac.c}: Packetize)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_6c615e_367483_qemu-ga.c: ga_unset_frozen
+*/
+
+// ---------------------------------------------

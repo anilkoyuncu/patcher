@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->password = E1[7].optval; 
++ E0->password = pestrdrup(E1[7].optval, E0->is_persistent); 
+// Infered from: (php-src/{prevFiles/prev_645b03_f5dfea_ext#pdo_dblib#dblib_driver.c,revFiles/645b03_f5dfea_ext#pdo_dblib#dblib_driver.c}: pdo_dblib_handle_factory)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+@@
+- ASSERT_NOT_REACHED; 
+// Infered from: (cairo/{prevFiles/prev_29df5c9_9f46ba_src#cairo-gl-shaders.c,revFiles/29df5c9_9f46ba_src#cairo-gl-shaders.c}: get_impl)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.37, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/5(20%)
+
+/*
+Functions where the patch applied partially:
+ - cairo/prevFiles/prev_29df5c9_9f46ba_src#cairo-gl-shaders.c: create_shader_program
+*/
+/*
+Functions where the patch did not apply:
+ - cairo/prevFiles/prev_29df5c9_9f46ba_src#cairo-gl-shaders.c: 
+ - cpython/prevFiles/prev_6a759d_adf642_Modules#_tkinter.c: Tkapp_DoOneEvent
+ - cpython/prevFiles/prev_6a759d_adf642_Modules#_tkinter.c: Tkapp_MainLoop
+*/
+
+// ---------------------------------------------

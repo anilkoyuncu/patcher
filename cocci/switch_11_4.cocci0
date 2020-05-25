@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- E0->input_views[E1]->pts = E0->double_pts++; 
++ if (pts != AV_NOPTS_VALUE)  
++ {
++ E0->input_views[E1]->pts = E1 == 0 ? pts * 2 :E0->input_views[1]->pts + pts; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_ef466a_d52342_libavfilter#vf_framepack.c,revFiles/ef466a_d52342_libavfilter#vf_framepack.c}: try_push_frame)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

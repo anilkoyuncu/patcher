@@ -1,0 +1,32 @@
+@@
+identifier I0, I7;
+expression E6, E1, E2, E3, E5, E8, E4;
+@@
+- register int I0 = E1[E2]; 
+- if (E3 >=  E4)  
+- {
+- if (E5 ==  E6)  
+- {
+- register const  char *I7 = E8[I0].name; 
+  ...
+- }
+- }
+// Infered from: (wireshark/{prevFiles/prev_520190_9079e3_epan#dissectors#packet-sip-hdrs.c,revFiles/520190_9079e3_epan#dissectors#packet-sip-hdrs.c}: _sip_header_find), (wireshark/{prevFiles/prev_9079e3_c9a5fb_epan#dissectors#packet-sip-hdrs.c,revFiles/9079e3_c9a5fb_epan#dissectors#packet-sip-hdrs.c}: _sip_header_find)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_520190_9079e3_epan#dissectors#packet-sip-hdrs.c: _sip_header_find
+ - wireshark/prevFiles/prev_9079e3_c9a5fb_epan#dissectors#packet-sip-hdrs.c: _sip_header_find
+*/
+
+// ---------------------------------------------

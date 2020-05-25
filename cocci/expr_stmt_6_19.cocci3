@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->upmix_needed = E0->out_channels > E0->in_channels || (!E0->downmix_needed && (  E0->am->matrix || E0->in_channel_layout != E0->out_channel_layout)); 
++ E0->upmix_needed = E0->out_channels > E0->in_channels || (!E0->downmix_needed && (  E0->mix_matrix || E0->in_channel_layout != E0->out_channel_layout)); 
+// Infered from: (FFmpeg/{prevFiles/prev_42b568_6f40e9_libavresample#utils.c,revFiles/42b568_6f40e9_libavresample#utils.c}: avresample_open)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

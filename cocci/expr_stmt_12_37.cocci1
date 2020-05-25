@@ -1,0 +1,31 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+  int tegra_wdt_probe(struct platform_device *I0)  
+  {
+  ...
+- E1 = watchdog_register_device(E2); 
++ E1 = devm_watchdog_register_device(&I0->dev, E2); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_4b448c9_64b849e_drivers#watchdog#tegra_wdt.c,revFiles/4b448c9_64b849e_drivers#watchdog#tegra_wdt.c}: tegra_wdt_probe)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.23, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_454b0e_de71daf_drivers#staging#fsl-mc#bus#mc-bus.c: get_dprc_icid
+ - linux/prevFiles/prev_f3e59ec_38081c7_drivers#staging#android#ion#ion_test.c: ion_test_probe
+ - linux/prevFiles/prev_9d521c_2500276_drivers#staging#most#hdm-dim2#dim2_hdm.c: dim2_probe
+*/
+
+// ---------------------------------------------

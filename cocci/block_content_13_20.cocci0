@@ -1,0 +1,9 @@
+@@
+expression E0, E2, E3, E1;
+@@
+- E0 = tvb_get_ephemeral_string(E1, E2, E3); 
++ E0 = (char *)tvb_get_ephemeral_string(E1, E2, E3); 
+// Infered from: (wireshark/{prevFiles/prev_ab8f58_ddddf2_epan#dissectors#packet-fix.c,revFiles/ab8f58_ddddf2_epan#dissectors#packet-fix.c}: dissect_fix), (wireshark/{prevFiles/prev_ab8f58_ddddf2_epan#dissectors#packet-fix.c,revFiles/ab8f58_ddddf2_epan#dissectors#packet-fix.c}: dissect_fix), (wireshark/{prevFiles/prev_ab8f58_ddddf2_epan#dissectors#packet-fix.c,revFiles/ab8f58_ddddf2_epan#dissectors#packet-fix.c}: dissect_fix)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

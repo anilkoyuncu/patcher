@@ -1,0 +1,15 @@
+@@
+identifier I0;
+expression E1;
+@@
+  struct drm_framebuffer *I0; 
+  ...
+- if (E1->rotation != DRM_ROTATE_0 && (E1->fb->pixel_format == DRM_FORMAT_RGB888 || E1->fb->pixel_format == DRM_FORMAT_BGR888))  
++ if (E1->rotation != DRM_ROTATE_0 && (I0->pixel_format == DRM_FORMAT_RGB888 || I0->pixel_format == DRM_FORMAT_BGR888))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_59477f_81852b6_drivers#gpu#drm#arm#malidp_planes.c,revFiles/59477f_81852b6_drivers#gpu#drm#arm#malidp_planes.c}: malidp_de_plane_check)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

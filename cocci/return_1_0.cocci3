@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- return E0->get_unscaled_size(E1, E2, E3); 
++ E0->get_unscaled_size(E1, E2, E3); 
++ return; 
+// Infered from: (gtk/{prevFiles/prev_41b699_d8657a_gdk#gdkwindow.c,revFiles/41b699_d8657a_gdk#gdkwindow.c}: gdk_window_get_unscaled_size)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- irq_to_desc(E0)->status |= IRQ_LEVEL; 
++ irq_set_status_flags(E0, IRQ_LEVEL); 
+// Infered from: (linux/{prevFiles/prev_98488db_68f20f_arch#powerpc#platforms#embedded6xx#hlwd-pic.c,revFiles/98488db_68f20f_arch#powerpc#platforms#embedded6xx#hlwd-pic.c}: hlwd_pic_map)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

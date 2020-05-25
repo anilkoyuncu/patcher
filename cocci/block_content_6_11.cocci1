@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- return seq_printf(E0, "%u\n", E1->ll_xattr_cache_enabled); 
++ seq_printf(E0, "%u\n", E1->ll_xattr_cache_enabled); 
++ return 0; 
+// Infered from: (linux/{prevFiles/prev_91b3a68_f9be108_drivers#staging#lustre#lustre#llite#lproc_llite.c,revFiles/91b3a68_f9be108_drivers#staging#lustre#lustre#llite#lproc_llite.c}: ll_xattr_cache_seq_show)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_8faeebd_4643b70_drivers#staging#lustre#lustre#libcfs#hash.c: cfs_hash_debug_header
+*/
+
+// ---------------------------------------------

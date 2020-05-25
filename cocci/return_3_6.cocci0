@@ -1,0 +1,9 @@
+@@
+@@
+- return "e-resize"; 
++ return "se-resize"; 
+// Infered from: (gtk/{prevFiles/prev_a97e8f_d345a7_gdk#win32#gdkwindow-win32.c,revFiles/a97e8f_d345a7_gdk#win32#gdkwindow-win32.c}: get_cursor_name_from_op)
+// False positives: (gtk/revFiles/a97e8f_d345a7_gdk#win32#gdkwindow-win32.c: get_cursor_name_from_op)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "xhci_oper_write: reg 0x%x unimplemented\n", (int )E0); 
++ fprintf(stderr, "%s: reg 0x%x unimplemented\n", __func__, (int )E0); 
+// Infered from: (qemu/{prevFiles/prev_79a8af_6fe309_hw#usb#hcd-xhci.c,revFiles/79a8af_6fe309_hw#usb#hcd-xhci.c}: xhci_runtime_write)
+// False positives: (qemu/revFiles/79a8af_6fe309_hw#usb#hcd-xhci.c: xhci_oper_write), (qemu/revFiles/79a8af_6fe309_hw#usb#hcd-xhci.c: xhci_runtime_write)
+// Recall: 0.03, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

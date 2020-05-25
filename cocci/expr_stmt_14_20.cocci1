@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gtk_list_box_select_row(GTK_CONTAINER(E0), gtk_widget_get_parent(E1)); 
++ gtk_list_box_select_row(GTK_LIST_BOX(E0),  GTK_LIST_BOX_ROW(gtk_widget_get_parent(E1))); 
+// Infered from: (gtk/{prevFiles/prev_6449b4_8137b2_docs#tools#widgets.c,revFiles/6449b4_8137b2_docs#tools#widgets.c}: create_list_box)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

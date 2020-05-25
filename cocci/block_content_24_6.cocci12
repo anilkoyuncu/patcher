@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+typedef robj;
+@@
+- vmSwapObjectThreaded(createStringObject(E0, sdslen(E0)), E1, E2); 
++ robj *keyobj = createStringObject(E0, sdslen(E0)); 
++ vmSwapObjectThreaded(keyobj, E1, E2); 
++ decrRefCount(keyobj); 
+// Infered from: (redis/{prevFiles/prev_4c8f23_44262c_redis.c,revFiles/4c8f23_44262c_redis.c}: vmSwapOneObject)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

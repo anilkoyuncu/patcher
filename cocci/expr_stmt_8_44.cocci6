@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- fluid_synth_pitch_bend(E0->synth, E1, (E2 << 7) | E3); 
++ fluid_synth_pitch_bend(E0->synth, E1, (E3 << 7) | E2); 
+// Infered from: (vlc/{prevFiles/prev_e82cac_129cd5_modules#codec#fluidsynth.c,revFiles/e82cac_129cd5_modules#codec#fluidsynth.c}: DecodeBlock)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.58, Precision: 1.00
+// -- Node Change --
+// Recall: 0.62, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/12(58%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_3b3a67_52c0fc_libavcodec#acelp_filters.c: ff_acelp_interpolate
+ - redis/prevFiles/prev_82c31f_3b2000_src#hyperloglog.c: hllSparseAdd
+ - codeflaws/prevFiles/prev_14-B-1948546-1948557.c: main
+ - gstreamer/prevFiles/prev_6ff2b5_157bef_plugins#elements#gstdownloadbuffer.c: gst_download_buffer_handle_src_query
+ - vlc/prevFiles/prev_d633a3_ee38d7_modules#demux#avi#libavi.c: AVI_ChunkReadCommon
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (E0[E1] == 'a' || E0[E1] == 'e' || E0[E1] == 'i' || E0[E1] == 'o' || E0[  E1] == 'u')  
++ if (E0[E1] == 'a' || E0[E1] == 'e' || E0[E1] == 'i' || E0[E1] == 'o' || E0[  E1] == 'u' || E0[E1] == 'y')  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_118-A-18174643-18174835.c,revFiles/118-A-18174643-18174835.c}: main), (codeflaws/{prevFiles/prev_118-A-18174751-18174835.c,revFiles/118-A-18174751-18174835.c}: main), (codeflaws/{prevFiles/prev_118-A-18174652-18174835.c,revFiles/118-A-18174652-18174835.c}: main), (codeflaws/{prevFiles/prev_118-A-18103516-18103560.c,revFiles/118-A-18103516-18103560.c}: main), (codeflaws/{prevFiles/prev_118-A-18174609-18174835.c,revFiles/118-A-18174609-18174835.c}: main)
+// Recall: 0.71, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

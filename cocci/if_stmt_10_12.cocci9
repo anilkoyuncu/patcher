@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- ZVAL_DUP(&E0, RT_CONSTANT_EX(&E1->op_array, E2->op1)); 
++ ZVAL_DUP(&E0, RT_CONSTANT(&E1->op_array, E2->op1)); 
+// Infered from: (php-src/{prevFiles/prev_6f8273_d89834_ext#opcache#Optimizer#optimize_func_calls.c,revFiles/6f8273_d89834_ext#opcache#Optimizer#optimize_func_calls.c}: zend_try_inline_call)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

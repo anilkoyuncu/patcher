@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (TYPE(E0) != testlist)  
++ if (TYPE(E0) != testlist && TYPE(E0) != listmaker)  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_b59290f_dfca4d_Python#compile.c,revFiles/b59290f_dfca4d_Python#compile.c}: com_assign_sequence)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

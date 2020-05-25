@@ -1,0 +1,8 @@
+@@
+@@
+- error_report("Warning: Unknown L1 icache size for cpu"); 
++ warn_report("Unknown L1 icache size for cpu"); 
+// Infered from: (qemu/{prevFiles/prev_3dc6f8_97f403_hw#ppc#spapr.c,revFiles/3dc6f8_97f403_hw#ppc#spapr.c}: spapr_populate_cpu_dt)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

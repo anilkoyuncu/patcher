@@ -1,0 +1,16 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (E0[E1] != 2 && E0[E1] != 1)  
++ if (E0[E1] != 2 && E0[E1] != 1)  
+  {
+- printf(E2); 
+- printf(E3, E1); 
+- return E4; 
++ printf(E2); 
++ return E4; 
+  }
+// Infered from: (codeflaws/{prevFiles/prev_292-B-3723836-3723850.c,revFiles/292-B-3723836-3723850.c}: main)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

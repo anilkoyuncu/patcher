@@ -1,0 +1,13 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- SAFE_STRDUP(E0, E1, I2); 
++ if (!(E0 = strdup(E1)))  
++ {
++ return I2; 
++ }
+// Infered from: (vlc/{prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c,revFiles/d4dc8a_2131a8_modules#stream_filter#hds#hds.c}: live_thread), (vlc/{prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c,revFiles/d4dc8a_2131a8_modules#stream_filter#hds#hds.c}: parse_Manifest), (vlc/{prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c,revFiles/d4dc8a_2131a8_modules#stream_filter#hds#hds.c}: parse_Manifest), (vlc/{prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c,revFiles/d4dc8a_2131a8_modules#stream_filter#hds#hds.c}: parse_Manifest), (vlc/{prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c,revFiles/d4dc8a_2131a8_modules#stream_filter#hds#hds.c}: parse_Manifest), (vlc/{prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c,revFiles/d4dc8a_2131a8_modules#stream_filter#hds#hds.c}: parse_Manifest), (vlc/{prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c,revFiles/d4dc8a_2131a8_modules#stream_filter#hds#hds.c}: parse_Manifest), (vlc/{prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c,revFiles/d4dc8a_2131a8_modules#stream_filter#hds#hds.c}: parse_Manifest), (vlc/{prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c,revFiles/d4dc8a_2131a8_modules#stream_filter#hds#hds.c}: parse_Manifest), (vlc/{prevFiles/prev_d4dc8a_2131a8_modules#stream_filter#hds#hds.c,revFiles/d4dc8a_2131a8_modules#stream_filter#hds#hds.c}: parse_Manifest)
+// Recall: 0.59, Precision: 1.00, Matching recall: 0.96
+
+// ---------------------------------------------

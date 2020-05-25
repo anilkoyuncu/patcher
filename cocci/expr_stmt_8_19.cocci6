@@ -1,0 +1,25 @@
+@@
+identifier I0, I1, I2;
+expression E3;
+typedef mca_bml_base_btl_t;
+typedef mca_pml_ob1_send_request_t;
+@@
+  int mca_pml_ob1_send_request_start_rdma(mca_pml_ob1_send_request_t *I0,  mca_bml_base_btl_t *I1, size_t I2)  
+  {
+  ...
+- if (E3->btl_flags & MCA_BTL_FLAGS_GET)  
++ if (I0->req_rdma_cnt == 1 && E3->btl_flags & MCA_BTL_FLAGS_GET)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_26003b_e7d5ec_ompi#mca#pml#ob1#pml_ob1_sendreq.c,revFiles/26003b_e7d5ec_ompi#mca#pml#ob1#pml_ob1_sendreq.c}: mca_pml_ob1_send_request_start_rdma)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

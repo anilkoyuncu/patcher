@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- g_value_set_string(E0, E1); 
++ g_value_set_static_string(E0, E1); 
+// Infered from: (gtk/{prevFiles/prev_8da56ce_64ab82c_gdk#win32#gdkproperty-win32.c,revFiles/8da56ce_64ab82c_gdk#win32#gdkproperty-win32.c}: _gdk_win32_get_setting), (gtk/{prevFiles/prev_8da56ce_64ab82c_gdk#win32#gdkproperty-win32.c,revFiles/8da56ce_64ab82c_gdk#win32#gdkproperty-win32.c}: _gdk_win32_get_setting)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

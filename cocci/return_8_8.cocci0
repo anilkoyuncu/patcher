@@ -1,0 +1,8 @@
+@@
+@@
+- return AVERROR(errno); 
++ return ff_neterrno(); 
+// Infered from: (FFmpeg/{prevFiles/prev_54b6be_014d47_libavformat#network.c,revFiles/54b6be_014d47_libavformat#network.c}: ff_poll_interrupt)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

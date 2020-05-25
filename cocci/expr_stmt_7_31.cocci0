@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+typedef uint32_t;
+@@
+- E0[E1 * E2 + E3] = E4[E5[E3]][E1] << E6; 
++ E0[E1 * E2 + E3] = ((uint32_t )E4[E5[E3]][E1]) << E6; 
+// Infered from: (vlc/{prevFiles/prev_91e57b_68f162_modules#codec#flac.c,revFiles/91e57b_68f162_modules#codec#flac.c}: Interleave)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

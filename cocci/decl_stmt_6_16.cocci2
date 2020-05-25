@@ -1,0 +1,35 @@
+@@
+identifier I0;
+expression E1;
+@@
+- if (selectfrm[max_selected].I0 < *E1)  
++ if (selectfrm[max_selected].I0 > *E1)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_18a900_63027f_editcap.c,revFiles/18a900_63027f_editcap.c}: add_selection)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.38, Precision: 0.75
+// -- Node Change --
+// Recall: 0.44, Precision: 0.80
+// -- General --
+// Functions fully changed: 3/9(33%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_a93695_ce935a_lib#ldap.c: DynaGetFunction
+ - php-src/prevFiles/prev_8d87f6_a93fe3_ext#standard#dl.c: php_load_extension
+ - ompi/prevFiles/prev_90fb65_75f38c_src#runtime#ompi_progress.c: 
+ - vlc/prevFiles/prev_71de36_485b1c_modules#video_output#android#utils.c: NativeSurface_getHandle
+ - wireshark/prevFiles/prev_18a900_63027f_editcap.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_1ceaba_07a3d4_grep.c: compile_regexp
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E0 + E1[E2]; 
++ E0 = E0 + E1[E2 + 1]; 
+// Infered from: (codeflaws/{prevFiles/prev_368-A-13052898-13052963.c,revFiles/368-A-13052898-13052963.c}: main)
+// False positives: (codeflaws/revFiles/368-A-13052898-13052963.c: main)
+// Recall: 0.04, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- OBD_ALLOC_PTR(E0); 
++ E0 = kzalloc(sizeof(*E0), GFP_NOFS); 
+// Infered from: (linux/{prevFiles/prev_779517_c5b895_drivers#staging#lustre#lustre#osc#osc_dev.c,revFiles/779517_c5b895_drivers#staging#lustre#lustre#osc#osc_dev.c}: osc_device_alloc), (linux/{prevFiles/prev_840c94d_97903a2_drivers#staging#lustre#lustre#lov#lovsub_dev.c,revFiles/840c94d_97903a2_drivers#staging#lustre#lustre#lov#lovsub_dev.c}: lovsub_device_alloc)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

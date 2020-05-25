@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (struct net_device *)E1; 
++ E0 = E1; 
+// Infered from: (linux/{prevFiles/prev_ea1107_3c8def_net#atm#mpc.c,revFiles/ea1107_3c8def_net#atm#mpc.c}: mpoa_event_listener)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

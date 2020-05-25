@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->s = find_unique_abbrev(E1->sha1, DEFAULT_ABBREV); 
++ E0->s = xstrdup(find_unique_abbrev(E1->sha1, DEFAULT_ABBREV)); 
+// Infered from: (git/{prevFiles/prev_ea16a0_2244ea_builtin#for-each-ref.c,revFiles/ea16a0_2244ea_builtin#for-each-ref.c}: grab_common_values)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

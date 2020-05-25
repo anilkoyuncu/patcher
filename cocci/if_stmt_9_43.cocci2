@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (E0 < 1237 || E0 > 1253)  
++ if (E0 < 1235 || E0 > 1253)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_6254ff_e8b503_libavformat#dnxhddec.c,revFiles/6254ff_e8b503_libavformat#dnxhddec.c}: dnxhd_probe)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = 2 + E1->has_b_frames; 
++ E0 = 2 + E1->has_b_frames + (E1->codec_id == CODEC_ID_VORBIS); 
+// Infered from: (FFmpeg/{prevFiles/prev_a1d4d7_b0c7f5_libavformat#nut.c,revFiles/a1d4d7_b0c7f5_libavformat#nut.c}: build_frame_code)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

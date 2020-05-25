@@ -1,0 +1,21 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef FIELD;
+typedef bool;
+@@
+  bool Check_IPV4_Field(FIELD *I0, const  void *I1)  
+  {
+  ...
+- if (isdigit(*E2))  
++ I1 = 0; 
++ if (isdigit((int )(*E2)))  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (cmake/{prevFiles/prev_05e162_589cf3_Source#CursesDialog#form#fty_ipv4.c,revFiles/05e162_589cf3_Source#CursesDialog#form#fty_ipv4.c}: Check_IPV4_Field)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+identifier I2;
+expression E0, E1, E3;
+typedef frame_info;
+typedef gint;
+@@
+- E0 = (frame_info *)g_hash_table_lookup(E1->I2, GINT_TO_POINTER(E3->id)); 
++ E0 = (frame_info *)g_hash_table_lookup(E1->I2, GINT_TO_POINTER((gint )E3->id)); 
+// Infered from: (wireshark/{prevFiles/prev_4ca528_4f7d3e_ui#gtk#compare_stat.c,revFiles/4ca528_4f7d3e_ui#gtk#compare_stat.c}: call_foreach_count_ip_id), (wireshark/{prevFiles/prev_4ca528_4f7d3e_ui#gtk#compare_stat.c,revFiles/4ca528_4f7d3e_ui#gtk#compare_stat.c}: call_foreach_new_order), (wireshark/{prevFiles/prev_4ca528_4f7d3e_ui#cli#tap-comparestat.c,revFiles/4ca528_4f7d3e_ui#cli#tap-comparestat.c}: call_foreach_count_ip_id), (wireshark/{prevFiles/prev_4ca528_4f7d3e_ui#cli#tap-comparestat.c,revFiles/4ca528_4f7d3e_ui#cli#tap-comparestat.c}: call_foreach_new_order)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

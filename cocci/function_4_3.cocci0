@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->tmp_dtor = Curl_ftp_wc_data_dtor; 
++ E0->tmp_dtor = wc_data_dtor; 
+// Infered from: (curl/{prevFiles/prev_40f8aa_374f48_lib#ftp.c,revFiles/40f8aa_374f48_lib#ftp.c}: init_wc_data)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

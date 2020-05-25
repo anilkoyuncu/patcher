@@ -1,0 +1,9 @@
+@@
+@@
+- goto  free_return; 
++ goto  nomem_return; 
+// Infered from: (linux/{prevFiles/prev_b8f37a4a_653108_drivers#s390#net#ctcm_main.c,revFiles/b8f37a4a_653108_drivers#s390#net#ctcm_main.c}: add_channel)
+// False positives: (linux/revFiles/b8f37a4a_653108_drivers#s390#net#ctcm_main.c: add_channel)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

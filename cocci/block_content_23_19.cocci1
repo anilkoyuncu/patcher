@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- g_clear_pointer(&E0->selection_bubble, gtk_widget_destroy); 
++ g_clear_pointer(&E0->selection_bubble, gtk_widget_unparent); 
+// Infered from: (gtk/{prevFiles/prev_f03c7c_67c82e_gtk#gtktext.c,revFiles/f03c7c_67c82e_gtk#gtktext.c}: gtk_text_finalize)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

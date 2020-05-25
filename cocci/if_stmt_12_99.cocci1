@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (!E0->current_picture.f->data[0])  
++ if (!E0->current_picture.f || !E0->current_picture.f->data[0])  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_30f680_07bc24_libavcodec#vc1dec.c,revFiles/30f680_07bc24_libavcodec#vc1dec.c}: vc1_decode_sprites)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

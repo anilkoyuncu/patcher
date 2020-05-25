@@ -1,0 +1,8 @@
+@@
+@@
+- hw_error("Could not find LPAR rtas '%s'\n", bios_name); 
++ error_report("Could not find LPAR firmware '%s'", bios_name); 
+// Infered from: (qemu/{prevFiles/prev_68fea5_a1a456_hw#ppc#spapr.c,revFiles/68fea5_a1a456_hw#ppc#spapr.c}: ppc_spapr_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

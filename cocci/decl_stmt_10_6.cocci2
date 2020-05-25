@@ -1,0 +1,8 @@
+@@
+@@
+- usage("commit-tree <sha1> [-p <sha1>]* < changelog"); 
++ usage(commit_tree_usage); 
+// Infered from: (git/{prevFiles/prev_c5bac1_80913d_commit-tree.c,revFiles/c5bac1_80913d_commit-tree.c}: main), (git/{prevFiles/prev_c5bac1_80913d_commit-tree.c,revFiles/c5bac1_80913d_commit-tree.c}: main)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = strdup(E1); 
++ psz_original = E0 = strdup(E1); 
+// Infered from: (vlc/{prevFiles/prev_cd579f_a95457_modules#video_filter#logo.c,revFiles/cd579f_a95457_modules#video_filter#logo.c}: LogoListLoad)
+// False positives: (git/revFiles/7e18e5_d249b4_builtin-tar-tree.c: remote_tar), (vlc/revFiles/cd579f_a95457_modules#video_filter#logo.c: LogoListLoad)
+// Recall: 0.25, Precision: 0.33, Matching recall: 0.50
+
+// ---------------------------------------------

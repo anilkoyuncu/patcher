@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return (E0 > E1 + E2 || E2 > E0 + E1); 
++ return (E0 > E1 + E2 || E1 > E0 + E2); 
+// Infered from: (codeflaws/{prevFiles/prev_614-C-15375712-15375743.c,revFiles/614-C-15375712-15375743.c}: has_obtuse)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

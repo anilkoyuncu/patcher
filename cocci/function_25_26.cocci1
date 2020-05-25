@@ -1,0 +1,40 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef GdkRGBA;
+typedef GtkStyle;
+typedef GtkStyleContext;
+@@
+- GtkStyle *I0; 
+- I0 = gtk_widget_get_style(E1); 
+- gdk_cairo_set_source_color(E2, &I0->base[GTK_STATE_NORMAL]); 
++ GtkStyleContext *I0; 
++ GdkRGBA color; 
++ I0 = gtk_widget_get_style_context(E1); 
++ gtk_style_context_get_background_color(I0, 0, &color); 
++ gdk_cairo_set_source_rgba(E2, &color); 
++ cairo_paint(E2); 
++ gtk_style_context_get_color(I0, 0, &color); 
++ gdk_cairo_set_source_rgba(E2, &color); 
+  ...
+- gdk_cairo_set_source_color(E2, &I0->text[GTK_STATE_NORMAL]); 
+// Infered from: (gtk/{prevFiles/prev_211ccb_d3ed72_modules#input#gtkimcontextxim.c,revFiles/211ccb_d3ed72_modules#input#gtkimcontextxim.c}: on_status_window_draw)
+// Recall: 0.52, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.62, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_211ccb_d3ed72_modules#input#gtkimcontextxim.c: on_status_window_style_set
+ - gtk/prevFiles/prev_211ccb_d3ed72_modules#input#gtkimcontextxim.c: status_window_make_window
+ - wireshark/prevFiles/prev_cc1da6_22ae89_gtk#main_welcome.c: welcome_button
+*/
+
+// ---------------------------------------------

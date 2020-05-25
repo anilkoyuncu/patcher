@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- prefs_register_string_preference(E0, "devices_buffersize",  "Interface buffer size",  "Interface buffer size (Ex: en0(1),en1(143),...)",  &((const  char *)prefs.capture_devices_buffersize)); 
++ prefs_register_string_preference(E0, "devices_buffersize",  "Interface buffer size",  "Interface buffer size (Ex: en0(1),en1(143),...)",  ((const  char **)&prefs.capture_devices_buffersize)); 
+// Infered from: (wireshark/{prevFiles/prev_86147047f_9d3cda_epan#prefs.c,revFiles/86147047f_9d3cda_epan#prefs.c}: prefs_register_modules)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

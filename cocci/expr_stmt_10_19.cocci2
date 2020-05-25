@@ -1,0 +1,33 @@
+@@
+expression E0, E1;
+@@
+- g_warning("abnormal clock request diff: ABS(%lld) > %lld", E0, E1->max_diff); 
+// Infered from: (gstreamer/{prevFiles/prev_393033_2c4d0a_gst#gstsystemclock.c,revFiles/393033_2c4d0a_gst#gstsystemclock.c}: gst_system_clock_wait)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.26, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/10(0%)
+
+/*
+Functions where the patch applied partially:
+ - cairo/prevFiles/prev_673102_f3574b_test#svg-surface-source.c: create_source_surface
+ - gstreamer/prevFiles/prev_393033_2c4d0a_gst#gstsystemclock.c: gst_system_clock_wait
+ - gstreamer/prevFiles/prev_393033_2c4d0a_libs#gst#control#dparam.c: gst_dparam_set_property
+ - cairo/prevFiles/prev_673102_f3574b_test#pdf-surface-source.c: create_source_surface
+ - cairo/prevFiles/prev_673102_f3574b_test#ps-surface-source.c: create_source_surface
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_a0b369_c88f84_modules#access_output#rtmp.c: Write
+ - vlc/prevFiles/prev_f22f4e_f9e122_modules#demux#ogg.c: Ogg_DecodePacket
+ - git/prevFiles/prev_6e1c23_db5d66_receive-pack.c: unpack
+ - git/prevFiles/prev_6e1c23_db5d66_builtin-fetch-pack.c: get_pack
+*/
+
+// ---------------------------------------------

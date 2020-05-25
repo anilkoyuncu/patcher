@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- int I0 = HLL_HDR_SIZE + ((HLL_REGISTERS + (HLL_SPARSE_XZERO_MAX_LEN - 1)) / HLL_SPARSE_XZERO_MAX_LEN); 
++ int I0 = HLL_HDR_SIZE + (((HLL_REGISTERS + (HLL_SPARSE_XZERO_MAX_LEN - 1)) / HLL_SPARSE_XZERO_MAX_LEN) * 2); 
+// Infered from: (redis/{prevFiles/prev_1ccb66_a79386_src#hyperloglog.c,revFiles/1ccb66_a79386_src#hyperloglog.c}: createHLLObject)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

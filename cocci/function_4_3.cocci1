@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- g_ptr_array_sort(E0->priv->groups, _gtk_tool_palette_compare_groups); 
++ g_ptr_array_sort(E0->priv->groups, gtk_tool_palette_compare_groups); 
+// Infered from: (gtk/{prevFiles/prev_12683d_48c6b3_gtk#gtktoolpalette.c,revFiles/12683d_48c6b3_gtk#gtktoolpalette.c}: gtk_tool_palette_set_group_position)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

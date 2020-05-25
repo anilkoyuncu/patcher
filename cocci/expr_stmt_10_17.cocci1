@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gen_helper_addkc(E0, cpu_R[E1->ra], *(dec_alu_op_b(E1)), tcg_const_tl(E0)); 
++ gen_helper_addkc(E0, cpu_R[E1->ra], *(dec_alu_op_b(E1)), E0); 
+// Infered from: (qemu/{prevFiles/prev_7e9e43_40cbf5_target-microblaze#translate.c,revFiles/7e9e43_40cbf5_target-microblaze#translate.c}: dec_add)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

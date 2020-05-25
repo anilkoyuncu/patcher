@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- g_log(E0, E1, "Interface Descr    : %s", E2->iface_descr); 
++ g_log(E0, E1, "Interface Descr    : %s",  E2->iface_descr ? E2->iface_descr :"<null>"); 
+// Infered from: (wireshark/{prevFiles/prev_66e9ce_41d6f8_capture_opts.c,revFiles/66e9ce_41d6f8_capture_opts.c}: capture_opts_log)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_c1e36a_2e3d42_src#modules#configuration_chain.c: __config_ChainParse
+*/
+
+// ---------------------------------------------

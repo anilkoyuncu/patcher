@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+typedef eword_t;
+@@
+- memcpy(E0->buffer, E1, E0->buffer_size * sizeof(uint64_t)); 
+- E1 += E0->buffer_size * sizeof(uint64_t); 
++ memcpy(E0->buffer, E1, E0->buffer_size * sizeof(eword_t )); 
++ E1 += E0->buffer_size * sizeof(eword_t ); 
+// Infered from: (git/{prevFiles/prev_3255e5_0f9e62_ewah#ewah_io.c,revFiles/3255e5_0f9e62_ewah#ewah_io.c}: ewah_read_mmap)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.90
+// -- Node Change --
+// Recall: 1.00, Precision: 0.85
+// -- General --
+// Functions fully changed: 8/10(80%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_28481c_a461e2_plugins#ethercat#packet-ams.c: dissect_ams_pdu
+ - ompi/prevFiles/prev_39bcbe_c72688_ompi#mca#osc#pt2pt#osc_pt2pt_comm.c: ompi_osc_pt2pt_put_w_req
+*/
+
+// ---------------------------------------------

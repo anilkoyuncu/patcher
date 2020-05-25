@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- strcat(E0, E1); 
++ pstrcat(E0, sizeof(E0), E1); 
+// Infered from: (qemu/{prevFiles/prev_2dc766_bb0574_gdbstub.c,revFiles/2dc766_bb0574_gdbstub.c}: get_feature_xml), (qemu/{prevFiles/prev_2dc766_bb0574_gdbstub.c,revFiles/2dc766_bb0574_gdbstub.c}: get_feature_xml), (qemu/{prevFiles/prev_2dc766_bb0574_gdbstub.c,revFiles/2dc766_bb0574_gdbstub.c}: get_feature_xml), (qemu/{prevFiles/prev_2dc766_bb0574_gdbstub.c,revFiles/2dc766_bb0574_gdbstub.c}: get_feature_xml), (qemu/{prevFiles/prev_2dc766_bb0574_gdbstub.c,revFiles/2dc766_bb0574_gdbstub.c}: gdb_handle_packet)
+// False positives: (git/revFiles/5096d4_db85a8_daemon.c: handle), (git/revFiles/5096d4_db85a8_http-push.c: xml_start_tag)
+// Recall: 0.14, Precision: 0.62, Matching recall: 1.00
+
+// ---------------------------------------------

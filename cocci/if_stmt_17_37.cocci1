@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2;
+@@
+- error_prepend(E0, "Failed to initialize USB device '%s': ", E1); 
+- object_unparent (OBJECT (E2)); 
++ error_prepend(E0, "Failed to initialize USB device '%s': ", E1); 
+// Infered from: (qemu/{prevFiles/prev_f3b2be_ab1615_hw#usb#bus.c,revFiles/f3b2be_ab1615_hw#usb#bus.c}: usb_try_create_simple)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

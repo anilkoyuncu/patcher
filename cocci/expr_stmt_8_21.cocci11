@@ -1,0 +1,11 @@
+@@
+identifier I0 = {cairo_xcb_device_debug_set_precision ,remove_mapping }, I2;
+expression E1;
+@@
+- I0(E1, I2); 
++ I0(E1, 0); 
+// Infered from: (qemu/{prevFiles/prev_792b45_396759_block#vvfat.c,revFiles/792b45_396759_block#vvfat.c}: checkpoint), (cairo/{prevFiles/prev_9bdfae_63bdae_boilerplate#cairo-boilerplate-xcb.c,revFiles/9bdfae_63bdae_boilerplate#cairo-boilerplate-xcb.c}: _cairo_boilerplate_xcb_setup_test_surface)
+// False positives: (qemu/revFiles/792b45_396759_block#vvfat.c: handle_deletes)
+// Recall: 0.07, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

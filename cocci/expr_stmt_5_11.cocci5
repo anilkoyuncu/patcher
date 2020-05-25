@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->serv_addr.sin_family = E1->h_addrtype; 
++ E0->serv_addr.sin_family = E1->addr->h_addrtype; 
+// Infered from: (curl/{prevFiles/prev_0ff1ca_2cff25_lib#url.c,revFiles/0ff1ca_2cff25_lib#url.c}: ConnectPlease)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

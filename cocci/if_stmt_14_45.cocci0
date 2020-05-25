@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((int )(long )E0 == -1)  
++ if (E0 == MAP_FAILED)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_e35f98_1df092_sha1_file.c,revFiles/e35f98_1df092_sha1_file.c}: index_fd)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

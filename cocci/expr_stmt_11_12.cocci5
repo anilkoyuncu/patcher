@@ -1,0 +1,12 @@
+@@
+identifier I1 = {ap_pcalloc ,calloc };
+type T3;
+expression E2, E0;
+@@
+- E0 = I1(E2, sizeof(T3 *)); 
++ E0 = I1(E2, sizeof(T3 )); 
+// Infered from: (vlc/{prevFiles/prev_307c778_99f48b_modules#access#bd#bd.c,revFiles/307c778_99f48b_modules#access#bd#bd.c}: Control), (apr/{prevFiles/prev_bf4566_ab8371_file_io#win32#open.c,revFiles/bf4566_ab8371_file_io#win32#open.c}: ap_open_stderr)
+// False positives: (vlc/revFiles/99f48b_780325_modules#demux#mp4#mp4.c: MP4_frg_GetChunk)
+// Recall: 0.06, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

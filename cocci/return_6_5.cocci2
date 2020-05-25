@@ -1,0 +1,25 @@
+@@
+@@
+- if (cfile.edt->pi.ethertype)  
++ if (cfile.edt->pi.ethertype != G_MAXINT)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_0618e5_55dc4b_gtk#decode_as_dlg.c,revFiles/0618e5_55dc4b_gtk#decode_as_dlg.c}: decode_add_notebook)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_af5199_e9d818_target-arm#helper.c: cpsr_read
+*/
+
+// ---------------------------------------------

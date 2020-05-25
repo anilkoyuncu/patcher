@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->static_caps.caps.refcount = 0; 
++ E0->static_caps.caps.mini_object.refcount = 0; 
+// Infered from: (gstreamer/{prevFiles/prev_cdde34_b82a0f_gst#gstregistrychunks.c,revFiles/cdde34_b82a0f_gst#gstregistrychunks.c}: gst_registry_chunks_load_pad_template)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

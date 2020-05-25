@@ -1,0 +1,18 @@
+@@
+identifier I0, I1, I2, I3;
+expression E4, E5, E6, E7;
+typedef AVCodecContext;
+typedef AVFrame;
+typedef AVPacket;
+@@
+  int amr_nb_encode_frame(AVCodecContext *I0, AVPacket *I1, const  AVFrame *I2,  int *I3)  
+  {
+  ...
+- av_dlog(E4,  "amr_nb_encode_frame encoded %u bytes, bitrate %u, first byte was %#02x\n",  E5, E6->enc_mode, E7[0]); 
++ av_dlog(E4,  "amr_nb_encode_frame encoded %u bytes, bitrate %u, first byte was %#02x\n",  E5, E6->enc_mode, I1->data[0]); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_4a2896_bc17a6_libavcodec#libopencore-amr.c,revFiles/4a2896_bc17a6_libavcodec#libopencore-amr.c}: amr_nb_encode_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

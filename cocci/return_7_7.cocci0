@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return (E0->used == E1 + 1 && 0 == strncasecmp(E0->ptr, E2)); 
++ return (E0->used == E1 + 1 && 0 == strncasecmp(E0->ptr, E2, E1)); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_4674d2_877ac2_src#buffer.c,revFiles/4674d2_877ac2_src#buffer.c}: buffer_is_equal_caseless_string)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

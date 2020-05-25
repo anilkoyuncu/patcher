@@ -1,0 +1,13 @@
+@@
+expression E0;
+typedef PyObject;
+@@
+- if (E0 == PyDateTime_TimeZone_UTC || (GET_TD_DAYS(E0->offset) == 0 && GET_TD_SECONDS(  E0->offset) == 0 && GET_TD_MICROSECONDS(  E0->offset) == 0))  
++ if ((PyObject *)E0 == PyDateTime_TimeZone_UTC || (GET_TD_DAYS(E0->offset) == 0 && GET_TD_SECONDS(  E0->offset) == 0 && GET_TD_MICROSECONDS(  E0->offset) == 0))  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_90fd89_6574a3_Modules#_datetimemodule.c,revFiles/90fd89_6574a3_Modules#_datetimemodule.c}: timezone_str)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

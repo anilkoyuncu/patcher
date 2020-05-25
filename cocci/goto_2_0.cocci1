@@ -1,0 +1,9 @@
+@@
+@@
+- goto  fail_kmalloc; 
++ goto  fail_rdc_data; 
+// Infered from: (linux/{prevFiles/prev_1783e60_b57838e_drivers#s390#char#tape_3590.c,revFiles/1783e60_b57838e_drivers#s390#char#tape_3590.c}: tape_3590_setup_device)
+// False positives: (linux/revFiles/1783e60_b57838e_drivers#s390#char#tape_3590.c: tape_3590_setup_device)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

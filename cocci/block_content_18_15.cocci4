@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+typedef guint8;
+@@
+- guint8 I0; 
++ guint8 addr; 
+  ...
+- I0 = tvb_get_guint8(E1, 0); 
++ addr = tvb_get_guint8(E1, 0); 
+// Infered from: (wireshark/{prevFiles/prev_37547c_fadae7_epan#dissectors#packet-sdlc.c,revFiles/37547c_fadae7_epan#dissectors#packet-sdlc.c}: dissect_sdlc)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

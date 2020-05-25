@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef uint8_t;
+@@
+- av_aes_init(&E0, "PI=3.141592654..", 128, E1); 
++ av_aes_init(&E0, (const  uint8_t *)"PI=3.141592654..", 128, E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_fdbad2_d8a227_libavutil#aes.c,revFiles/fdbad2_d8a227_libavutil#aes.c}: main), (FFmpeg/{prevFiles/prev_fdbad2_d8a227_libavutil#aes.c,revFiles/fdbad2_d8a227_libavutil#aes.c}: main)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

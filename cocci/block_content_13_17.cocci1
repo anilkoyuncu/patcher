@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = tvb_get_ntohs(E1, E2); 
++ E0 = tvb_get_letohs(E1, E2); 
+// Infered from: (wireshark/{prevFiles/prev_adbe1c_f872bd_epan#dissectors#packet-quic.c,revFiles/adbe1c_f872bd_epan#dissectors#packet-quic.c}: is_quic_handshake), (wireshark/{prevFiles/prev_adbe1c_f872bd_epan#dissectors#packet-quic.c,revFiles/adbe1c_f872bd_epan#dissectors#packet-quic.c}: is_quic_handshake), (wireshark/{prevFiles/prev_adbe1c_f872bd_epan#dissectors#packet-quic.c,revFiles/adbe1c_f872bd_epan#dissectors#packet-quic.c}: dissect_quic_frame_type), (wireshark/{prevFiles/prev_adbe1c_f872bd_epan#dissectors#packet-quic.c,revFiles/adbe1c_f872bd_epan#dissectors#packet-quic.c}: dissect_quic_frame_type)
+// Recall: 0.36, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

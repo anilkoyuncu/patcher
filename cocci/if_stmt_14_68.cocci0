@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->is_rectilinear)  
++ if (_cairo_path_fixed_stroke_is_rectilinear(E0))  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_330b34_5b2ed2_src#drm#cairo-drm-i915-surface.c,revFiles/330b34_5b2ed2_src#drm#cairo-drm-i915-surface.c}: i915_surface_stroke)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

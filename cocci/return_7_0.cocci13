@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return write_file(am_path(E0, E1), "%d\n", E2); 
++ return write_file(am_path(E0, E1), "%d", E2); 
+// Infered from: (git/{prevFiles/prev_e7ffa3_12d6ce_builtin#am.c,revFiles/e7ffa3_12d6ce_builtin#am.c}: write_state_count)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

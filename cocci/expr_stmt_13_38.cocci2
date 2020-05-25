@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- printf("\n%d %d %d", E0 > E1 ? E1 :E0, E0, E1); 
++ printf("\n%d", E0 > E1 ? E1 :E0); 
+// Infered from: (codeflaws/{prevFiles/prev_390-A-6062795-6062797.c,revFiles/390-A-6062795-6062797.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,58 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef gint64;
+@@
+- gint64 I0; 
+- I0 = g_get_monotonic_time() + E1->timer_base; 
+- if (I0 < E1->frame_time)  
++ E2 = g_get_monotonic_time(); 
++ if (E2 <= E1->frame_time)  
+  {
+  ...
+- E1->timer_base += (E1->frame_time - I0) + 1; 
+  }
+- else
+- {
+- E2 = I0; 
+- }
+// Infered from: (gtk/{prevFiles/prev_0bf4c2_f813bc_gdk#gdkframeclockidle.c,revFiles/0bf4c2_f813bc_gdk#gdkframeclockidle.c}: compute_frame_time)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 0.96
+// -- General --
+// Functions fully changed: 1/20(5%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_81b485_828af6_modules#video_output#kva.c: OpenDisplay
+ - vlc/prevFiles/prev_19676e_870b6d_modules#packetizer#a52.c: PacketizeBlock
+ - git/prevFiles/prev_c3a700_a08595_builtin#reflog.c: find_cfg_ent
+*/
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_695dd3_4ac5e4_engines#e_dasync.c: 
+ - gtk/prevFiles/prev_0bf4c2_f813bc_gdk#gdkframeclockidle.c: 
+ - linux/prevFiles/prev_7c1d69_1735be_drivers#rtc#rtc-ds1511.c: 
+ - gstreamer/prevFiles/prev_c6b0d4_6082b0_plugins#elements#gstmultiqueue.c: gst_single_queue_flush
+ - libarchive/prevFiles/prev_cabbbe_7b6187_libarchive#archive_write_open_fd.c: 
+ - openssl/prevFiles/prev_695dd3_4ac5e4_engines#e_dasync.c: dasync_cipher_ctrl_helper
+ - vlc/prevFiles/prev_19676e_870b6d_modules#packetizer#a52.c: 
+ - vlc/prevFiles/prev_81b485_828af6_modules#video_output#kva.c: 
+ - gstreamer/prevFiles/prev_c6b0d4_6082b0_plugins#elements#gstmultiqueue.c: 
+ - vlc/prevFiles/prev_a80030_d44f9d_modules#codec#libmpeg2.c: InitDecoder
+ - libarchive/prevFiles/prev_55aec9_571f1f_libarchive#archive_write_open_fd.c: 
+ - vlc/prevFiles/prev_a80030_d44f9d_modules#codec#libmpeg2.c: 
+ - git/prevFiles/prev_c3a700_a08595_builtin#reflog.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_7c1d69_1735be_drivers#rtc#rtc-ds1511.c: ds1511_rtc_probe
+*/
+
+// ---------------------------------------------

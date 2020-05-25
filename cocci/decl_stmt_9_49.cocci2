@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef guint;
+typedef guint16;
+@@
+- guint16 I0 = (guint16 )get_ipdc_pdu_len(E1, 0); 
++ guint I0 = get_ipdc_pdu_len(E1, 0); 
+  ...
+- E2 = TRANS_ID_SIZE_IPDC; 
++ E2 = TRANS_ID_SIZE_IPDC; 
+// Infered from: (wireshark/{prevFiles/prev_7e0170_3530d9_epan#dissectors#packet-ipdc.c,revFiles/7e0170_3530d9_epan#dissectors#packet-ipdc.c}: dissect_ipdc_common)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

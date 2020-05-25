@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- memory_region_init_io(&E0->conf_mem, OBJECT(E0), &pci_host_conf_be_ops, E1,  "pci-conf-idx", 1); 
++ memory_region_init_io(&E0->conf_mem, OBJECT(E0), &pci_host_conf_le_ops, E1,  "pci-conf-idx", 4); 
+// Infered from: (qemu/{prevFiles/prev_240383_d16644_hw#pci-host#prep.c,revFiles/240383_d16644_hw#pci-host#prep.c}: raven_pcihost_realizefn)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.73
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_b135e5_17eff2_packet-stun.c: dissect_stun
+ - wireshark/prevFiles/prev_b737d7_3ef2fd_epan#dissectors#packet-gsm_a_gm.c: de_gmm_ms_radio_acc_cap
+*/
+
+// ---------------------------------------------

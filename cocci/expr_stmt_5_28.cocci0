@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->ids.hf = EI_INIT_HF; 
++ E0->ids.hf = -2; 
+// Infered from: (wireshark/{prevFiles/prev_541afe_e8265f_epan#wslua#wslua_proto_expert.c,revFiles/541afe_e8265f_epan#wslua#wslua_proto_expert.c}: ProtoExpert_new)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

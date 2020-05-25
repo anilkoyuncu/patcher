@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1;
+typedef Py_ssize_t;
+@@
+  Py_ssize_t I0 = E1->maxlen; 
+  ...
+- if (E1->maxlen == 0)  
++ if (I0 == 0)  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_965362_d96db0_Modules#_collectionsmodule.c,revFiles/965362_d96db0_Modules#_collectionsmodule.c}: deque_extend), (cpython/{prevFiles/prev_965362_d96db0_Modules#_collectionsmodule.c,revFiles/965362_d96db0_Modules#_collectionsmodule.c}: deque_extendleft)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

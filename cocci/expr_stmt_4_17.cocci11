@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+typedef int16_t;
+typedef uint32_t;
+@@
+- E0 = ((uint32_t )E1 * (uint32_t )E2) << 1; 
++ E0 = ((int16_t )E1 * (int16_t )E2) << 1; 
+// Infered from: (qemu/{prevFiles/prev_b1ca31_e3d142_target-mips#dsp_helper.c,revFiles/b1ca31_e3d142_target-mips#dsp_helper.c}: mipsdsp_mul_q15_q15)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->display.width != caca_get_display_width(E1->dp) || E0->display.height != caca_get_display_height(  E1->dp))  
++ if ((int )E0->display.width != caca_get_display_width(E1->dp) || (int )E0->display.height != caca_get_display_height(  E1->dp))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_ad6c67_84b939_modules#video_output#caca.c,revFiles/ad6c67_84b939_modules#video_output#caca.c}: Control)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

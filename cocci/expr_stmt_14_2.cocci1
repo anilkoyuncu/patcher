@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef uint8_t;
+@@
+- printf("bmdma: writeb 0x%02x : 0x%02x\n", E0, E1); 
++ printf("bmdma: writeb 0x%02x : 0x%02x\n", (uint8_t )E0, (uint8_t )E1); 
+// Infered from: (qemu/{prevFiles/prev_cb67be8_e965fc_hw#ide#piix.c,revFiles/cb67be8_e965fc_hw#ide#piix.c}: bmdma_write)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

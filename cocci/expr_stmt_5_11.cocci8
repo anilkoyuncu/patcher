@@ -1,0 +1,39 @@
+@@
+identifier I0;
+expression E2, E1;
+typedef services_discovery_t;
+@@
+  void Run(services_discovery_t *I0)  
+  {
+  ...
+- E1 = E2; 
++ I0->p_sys->p_input->b_prefers_tree = VLC_TRUE; 
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_06a16a_65fff5_modules#services_discovery#shout.c,revFiles/06a16a_65fff5_modules#services_discovery#shout.c}: Run)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.82, Precision: 0.90
+// -- Node Change --
+// Recall: 0.83, Precision: 0.86
+// -- General --
+// Functions fully changed: 7/12(58%)
+
+/*
+Functions where the patch applied partially:
+ - gstreamer/prevFiles/prev_cdde34_b82a0f_gst#gstelementfactory.c: gst_element_register
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_c6afd0_445c58_libavcodec#hevc_ps.c: decode_profile_tier_level
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_463c8d_d9d492_libavformat#mpegts.c: mpegts_set_stream_info
+ - FFmpeg/prevFiles/prev_463c8d_d9d492_libavformat#mpegts.c: pmt_cb
+*/
+
+// ---------------------------------------------

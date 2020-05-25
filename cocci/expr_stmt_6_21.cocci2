@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef AVFilterBufferRef;
+@@
+- *E0 = (AVFilterBufferRef *)av_fifo_peek2(E1->fifo, 0); 
++ *E0 = *((AVFilterBufferRef **)av_fifo_peek2(E1->fifo, 0)); 
+// Infered from: (FFmpeg/{prevFiles/prev_a9c693_6da590_libavfilter#vsink_buffer.c,revFiles/a9c693_6da590_libavfilter#vsink_buffer.c}: av_vsink_buffer_get_video_buffer_ref)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

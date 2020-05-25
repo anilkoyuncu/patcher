@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef mtime_t;
+@@
+- E0.i_time = E1 * 1000; 
++ E0.i_time = ((mtime_t )E1) * 1000; 
+// Infered from: (vlc/{prevFiles/prev_b01b54_043921_modules#control#dbus.c,revFiles/b01b54_043921_modules#control#dbus.c}: DBUS_METHOD)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

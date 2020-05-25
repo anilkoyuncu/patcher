@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = ALIGN(((E1->memory_size) >> TARGET_PAGE_BITS), HOST_LONG_BITS) / 8; 
++ E0 = ALIGN(((E1->memory_size) >> TARGET_PAGE_BITS), 64) / 8; 
+// Infered from: (qemu/{prevFiles/prev_51b0c6_aa7f74_kvm-all.c,revFiles/51b0c6_aa7f74_kvm-all.c}: kvm_physical_sync_dirty_bitmap)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- atomic_set(&(E0->tx.busy), E1); 
++ atomic_set(&E0->tx.busy, E1); 
+// Infered from: (linux/{prevFiles/prev_bb3a4d_975da3_drivers#staging#media#lirc#lirc_imon.c,revFiles/bb3a4d_975da3_drivers#staging#media#lirc#lirc_imon.c}: send_packet), (linux/{prevFiles/prev_bb3a4d_975da3_drivers#staging#media#lirc#lirc_imon.c,revFiles/bb3a4d_975da3_drivers#staging#media#lirc#lirc_imon.c}: send_packet), (linux/{prevFiles/prev_028b24_505942_drivers#staging#media#lirc#lirc_sasem.c,revFiles/028b24_505942_drivers#staging#media#lirc#lirc_sasem.c}: send_packet), (linux/{prevFiles/prev_028b24_505942_drivers#staging#media#lirc#lirc_sasem.c,revFiles/028b24_505942_drivers#staging#media#lirc#lirc_sasem.c}: send_packet)
+// Recall: 0.80, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

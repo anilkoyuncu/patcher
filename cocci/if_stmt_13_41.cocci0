@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (zend_get_constant(E0->u.constant.value.str.val,  E0->u.constant.value.str.len, &E1->u.constant))  
++ if (zend_get_constant())  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_974f40_668fc2_Zend#zend_compile.c,revFiles/974f40_668fc2_Zend#zend_compile.c}: zend_do_fold_constant)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

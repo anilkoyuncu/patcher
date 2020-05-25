@@ -1,0 +1,28 @@
+@@
+expression E2, E0, E1;
+@@
+- memcpy(&E0, &E1, E2); 
++ E0 = E1; 
+// Infered from: (linux/{prevFiles/prev_2b9b32_ee45dd_drivers#media#radio#radio-wl1273.c,revFiles/2b9b32_ee45dd_drivers#media#radio#radio-wl1273.c}: wl1273_fm_radio_probe), (linux/{prevFiles/prev_8fe392b_3724dde_drivers#media#usb#usbvision#usbvision-i2c.c,revFiles/8fe392b_3724dde_drivers#media#usb#usbvision#usbvision-i2c.c}: usbvision_i2c_register), (linux/{prevFiles/prev_d3a950_37320d_drivers#media#usb#dvb-usb#friio-fe.c,revFiles/d3a950_37320d_drivers#media#usb#dvb-usb#friio-fe.c}: jdvbt90502_attach), (linux/{prevFiles/prev_d3a950_37320d_drivers#media#usb#dvb-usb#friio-fe.c,revFiles/d3a950_37320d_drivers#media#usb#dvb-usb#friio-fe.c}: jdvbt90502_attach), (linux/{prevFiles/prev_3618aca_b523774_drivers#media#pci#cx23885#cx23885-video.c,revFiles/3618aca_b523774_drivers#media#pci#cx23885#cx23885-video.c}: cx23885_video_register), (linux/{prevFiles/prev_3724dde_5344fe_drivers#media#usb#cx231xx#cx231xx-video.c,revFiles/3724dde_5344fe_drivers#media#usb#cx231xx#cx231xx-video.c}: cx231xx_register_analog_devices), (linux/{prevFiles/prev_5c2ede_5869bb_drivers#media#usb#pwc#pwc-if.c,revFiles/5c2ede_5869bb_drivers#media#usb#pwc#pwc-if.c}: usb_pwc_probe), (linux/{prevFiles/prev_5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c,revFiles/5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c}: sn9c102_vidioc_querybuf), (linux/{prevFiles/prev_5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c,revFiles/5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c}: sn9c102_vidioc_dqbuf), (linux/{prevFiles/prev_8ba622_d486b94_drivers#media#i2c#cx25840#cx25840-ir.c,revFiles/8ba622_d486b94_drivers#media#i2c#cx25840#cx25840-ir.c}: cx25840_ir_probe), (linux/{prevFiles/prev_8ba622_d486b94_drivers#media#i2c#cx25840#cx25840-ir.c,revFiles/8ba622_d486b94_drivers#media#i2c#cx25840#cx25840-ir.c}: cx25840_ir_probe), (linux/{prevFiles/prev_ee45dd_b9b1b3_drivers#media#dvb-frontends#drxd_hard.c,revFiles/ee45dd_b9b1b3_drivers#media#dvb-frontends#drxd_hard.c}: drxd_attach), (linux/{prevFiles/prev_ee45dd_b9b1b3_drivers#media#dvb-frontends#drxd_hard.c,revFiles/ee45dd_b9b1b3_drivers#media#dvb-frontends#drxd_hard.c}: drxd_attach), (linux/{prevFiles/prev_d486b94_5338c1_drivers#media#usb#hdpvr#hdpvr-i2c.c,revFiles/d486b94_5338c1_drivers#media#usb#hdpvr#hdpvr-i2c.c}: hdpvr_register_i2c_adapter), (linux/{prevFiles/prev_c36bd4a7_11b57f_drivers#net#ethernet#intel#i40e#i40e_hmc.c,revFiles/c36bd4a7_11b57f_drivers#net#ethernet#intel#i40e#i40e_hmc.c}: i40e_add_sd_table_entry), (linux/{prevFiles/prev_c36bd4a7_11b57f_drivers#net#ethernet#intel#i40e#i40e_hmc.c,revFiles/c36bd4a7_11b57f_drivers#net#ethernet#intel#i40e#i40e_hmc.c}: i40e_add_sd_table_entry), (linux/{prevFiles/prev_c36bd4a7_11b57f_drivers#net#ethernet#intel#i40e#i40e_hmc.c,revFiles/c36bd4a7_11b57f_drivers#net#ethernet#intel#i40e#i40e_hmc.c}: i40e_add_pd_table_entry), (linux/{prevFiles/prev_5338c1_5c2ede_drivers#media#usb#pvrusb2#pvrusb2-encoder.c,revFiles/5338c1_5c2ede_drivers#media#usb#pvrusb2#pvrusb2-encoder.c}: pvr2_encoder_adjust), (linux/{prevFiles/prev_3618aca_b523774_drivers#media#pci#cx23885#cx23888-ir.c,revFiles/3618aca_b523774_drivers#media#pci#cx23885#cx23888-ir.c}: cx23888_ir_probe), (linux/{prevFiles/prev_3618aca_b523774_drivers#media#pci#cx23885#cx23888-ir.c,revFiles/3618aca_b523774_drivers#media#pci#cx23885#cx23888-ir.c}: cx23888_ir_probe), (linux/{prevFiles/prev_7f05b2_03c4200_drivers#media#tuners#tda18271-maps.c,revFiles/7f05b2_03c4200_drivers#media#tuners#tda18271-maps.c}: tda18271_assign_map_layout), (linux/{prevFiles/prev_7f05b2_03c4200_drivers#media#tuners#tda18271-maps.c,revFiles/7f05b2_03c4200_drivers#media#tuners#tda18271-maps.c}: tda18271_assign_map_layout), (linux/{prevFiles/prev_37320d_8ba622_drivers#media#pci#zoran#zoran_card.c,revFiles/37320d_8ba622_drivers#media#pci#zoran#zoran_card.c}: zoran_register_i2c), (linux/{prevFiles/prev_b4b1d0_2e814af_drivers#media#pci#bt8xx#bttv-i2c.c,revFiles/b4b1d0_2e814af_drivers#media#pci#bt8xx#bttv-i2c.c}: init_bttv_i2c), (linux/{prevFiles/prev_5338c1_5c2ede_drivers#media#usb#pvrusb2#pvrusb2-v4l2.c,revFiles/5338c1_5c2ede_drivers#media#usb#pvrusb2#pvrusb2-v4l2.c}: pvr2_v4l2_dev_init)
+// False positives: (linux/revFiles/2b9b32_ee45dd_drivers#media#radio#radio-wl1273.c: wl1273_fm_rds), (linux/revFiles/5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c: sn9c102_init), (linux/revFiles/5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c: sn9c102_vidioc_g_crop), (linux/revFiles/5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c: sn9c102_vidioc_query_ctrl), (linux/revFiles/5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c: sn9c102_vidioc_try_s_fmt)
+// Recall: 1.00, Precision: 0.81, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 1 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.79
+// -- Node Change --
+// Recall: 1.00, Precision: 0.81
+// -- General --
+// Functions fully changed: 19/24(79%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c: sn9c102_vidioc_try_s_fmt
+ - linux/prevFiles/prev_5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c: sn9c102_init
+ - linux/prevFiles/prev_2b9b32_ee45dd_drivers#media#radio#radio-wl1273.c: wl1273_fm_rds
+ - linux/prevFiles/prev_5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c: sn9c102_vidioc_query_ctrl
+ - linux/prevFiles/prev_5869bb_8fe392b_drivers#media#usb#sn9c102#sn9c102_core.c: sn9c102_vidioc_g_crop
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+typedef gint32;
+@@
+- while (E0 < (E1 + *E2 + 8) && E0 < UDVM_MEMORY_SIZE)  
++ while ((gint32 )E0 < (E1 + *E2 + 8) && E0 < UDVM_MEMORY_SIZE)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_3e3259_af10d3_epan#sigcomp_state_hdlr.c,revFiles/3e3259_af10d3_epan#sigcomp_state_hdlr.c}: udvm_state_access)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

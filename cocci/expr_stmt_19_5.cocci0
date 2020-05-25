@@ -1,0 +1,10 @@
+@@
+identifier I0 = {fiji_update_mc_light_sleep ,fiji_update_mc_medium_grain_clock_gating ,gfx_v8_0_update_gfx_clock_gating ,sdma_v3_0_update_sdma_medium_grain_clock_gating ,sdma_v3_0_update_sdma_medium_grain_light_sleep };
+expression E1, E2;
+@@
+- I0(E1, E2 == AMD_CG_STATE_GATE ? true :false); 
++ I0(E1, E2 == AMD_CG_STATE_GATE); 
+// Infered from: (linux/{prevFiles/prev_7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#gfx_v8_0.c,revFiles/7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#gfx_v8_0.c}: gfx_v8_0_set_clockgating_state), (linux/{prevFiles/prev_7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#gmc_v8_0.c,revFiles/7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#gmc_v8_0.c}: gmc_v8_0_set_clockgating_state), (linux/{prevFiles/prev_7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#gmc_v8_0.c,revFiles/7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#gmc_v8_0.c}: gmc_v8_0_set_clockgating_state), (linux/{prevFiles/prev_7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#sdma_v3_0.c,revFiles/7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#sdma_v3_0.c}: sdma_v3_0_set_clockgating_state), (linux/{prevFiles/prev_7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#sdma_v3_0.c,revFiles/7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#sdma_v3_0.c}: sdma_v3_0_set_clockgating_state)
+// Recall: 0.83, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = run_git_commit(E1->edit ? NULL :git_path_merge_msg(), E1, E2, E1->edit,  0); 
++ E0 = run_git_commit(E1->edit ? NULL :git_path_merge_msg(), E1, E2, E1->edit,  0, 0); 
+// Infered from: (git/{prevFiles/prev_000942_9240be_sequencer.c,revFiles/000942_9240be_sequencer.c}: do_pick_commit)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

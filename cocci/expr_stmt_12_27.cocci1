@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = var_GetNonEmptyString(E1->p_libvlc, "http-host"); 
++ E0 = var_CreateGetNonEmptyString(E1, "http-host"); 
+// Infered from: (vlc/{prevFiles/prev_a3378e_c6245f_modules#control#http#http.c,revFiles/a3378e_c6245f_modules#control#http#http.c}: Open)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

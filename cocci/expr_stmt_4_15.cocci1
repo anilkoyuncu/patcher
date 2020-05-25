@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dp[E0][E1] = (dp[E0][E1 - 1] + dp[E0 - 1][E1 - 1], mod) % mod; 
++ dp[E0][E1] = (dp[E0][E1 - 1] + dp[E0 - 1][E1 - 1]) % mod; 
+// Infered from: (codeflaws/{prevFiles/prev_340-E-4395065-4395067.c,revFiles/340-E-4395065-4395067.c}: main)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

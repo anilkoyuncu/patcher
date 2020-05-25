@@ -1,0 +1,14 @@
+@@
+identifier I2 = {ogg_packet ,url_feof };
+expression list E3;
+expression E1, E0;
+@@
+- while (E0 < E1 && !I2(E3))  
++ while (E0 <= E1 && !I2(E3))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b27ac3_61b1d8_libavformat#mov.c,revFiles/b27ac3_61b1d8_libavformat#mov.c}: mov_read_default), (FFmpeg/{prevFiles/prev_ef32fb_a6bb09_libavformat#oggdec.c,revFiles/ef32fb_a6bb09_libavformat#oggdec.c}: ogg_read_timestamp)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef ompi_communicator_t;
+@@
+- OMPI_ERRHANDLER_RETURN(I0, (ompi_communicator_t *)NULL, I0, FUNC_NAME); 
++ OMPI_ERRHANDLER_RETURN(I0, MPI_COMM_WORLD, I0, FUNC_NAME); 
+// Infered from: (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#type_create_hvector.c,revFiles/db2b35d_27874a_src#mpi#c#type_create_hvector.c}: MPI_Type_create_hvector), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#type_create_hvector.c,revFiles/db2b35d_27874a_src#mpi#c#type_create_hvector.c}: MPI_Type_create_hvector), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#type_create_hvector.c,revFiles/db2b35d_27874a_src#mpi#c#type_create_hvector.c}: MPI_Type_create_hvector), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#type_vector.c,revFiles/db2b35d_27874a_src#mpi#c#type_vector.c}: MPI_Type_vector), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#type_vector.c,revFiles/db2b35d_27874a_src#mpi#c#type_vector.c}: MPI_Type_vector), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#type_vector.c,revFiles/db2b35d_27874a_src#mpi#c#type_vector.c}: MPI_Type_vector)
+// Recall: 0.75, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

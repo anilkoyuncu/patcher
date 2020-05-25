@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- mtd_device_parse_register(I0, NULL, 0,  ppchameleon_mtd->size == NAND_SMALL_SIZE ? partition_info_me :partition_info_hi,  NUM_PARTITIONS); 
++ mtd_device_parse_register(I0, NULL, NULL,  ppchameleon_mtd->size == NAND_SMALL_SIZE ? partition_info_me :partition_info_hi,  NUM_PARTITIONS); 
+// Infered from: (linux/{prevFiles/prev_42d7fbe_ee478af_drivers#mtd#nand#ppchameleonevb.c,revFiles/42d7fbe_ee478af_drivers#mtd#nand#ppchameleonevb.c}: ppchameleonevb_init), (linux/{prevFiles/prev_42d7fbe_ee478af_drivers#mtd#nand#ppchameleonevb.c,revFiles/42d7fbe_ee478af_drivers#mtd#nand#ppchameleonevb.c}: ppchameleonevb_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

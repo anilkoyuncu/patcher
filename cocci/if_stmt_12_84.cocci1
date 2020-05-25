@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- if (E0 <= 360)  
++ if (E0 <= 360 || (E0 - 360) <= 0.0000001)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_140-A-13617983-13618000.c,revFiles/140-A-13617983-13618000.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_4d9279_640e49_ares#bitncmp.c: ares_bitncmp
+*/
+
+// ---------------------------------------------

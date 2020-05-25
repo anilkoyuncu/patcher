@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0.st_uid != E1 || (E0.st_mode & (S_IRWXG | S_IRWXO)) != 0)  
++ if (E0.st_uid != E1 || (!S_ISDIR(E0.st_mode) && E0.st_mode & (S_IRWXG | S_IRWXO)) != 0)  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_e4dc15_1bd085_tmux.c,revFiles/e4dc15_1bd085_tmux.c}: makesocketpath), (tmux/{prevFiles/prev_bda970_75ec17_tmux.c,revFiles/bda970_75ec17_tmux.c}: makesocketpath)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef AVStream;
+@@
+- AVStream *I0 = E1->streams[E2]; 
+- avpriv_set_pts_info(I0, E3->pts_wrap_bits, E3->time_base.num,  E3->time_base.den); 
++ AVStream *outer_st = E1->streams[E2]; 
++ avpriv_set_pts_info(outer_st, E3->pts_wrap_bits, E3->time_base.num,  E3->time_base.den); 
+// Infered from: (FFmpeg/{prevFiles/prev_3f5095_755f792_libavformat#hlsenc.c,revFiles/3f5095_755f792_libavformat#hlsenc.c}: hls_write_header)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

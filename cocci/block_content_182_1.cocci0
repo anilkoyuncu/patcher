@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- MBSTRG(current_filter_illegal_substchar) = Z_LVAL_P(I0); 
+- zval_ptr_dtor(&I0); 
++ MBSTRG(current_filter_illegal_substchar) = Z_LVAL_PP(I0); 
+// Infered from: (php-src/{prevFiles/prev_a26c94_19b2e9_ext#mbstring#mbstring.c,revFiles/a26c94_19b2e9_ext#mbstring#mbstring.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_dc7aa2a_c6f699_ext#mbstring#mbstring.c,revFiles/dc7aa2a_c6f699_ext#mbstring#mbstring.c}: PHP_FUNCTION)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.18
+
+// ---------------------------------------------

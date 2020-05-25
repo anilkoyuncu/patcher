@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- return (0 == E0->wb->bytes_in || !chunkqueue_is_empty(E0->wb)) ? scgi_send_request(  srv, E0) :HANDLER_WAIT_FOR_EVENT; 
++ return ((0 == E0->wb->bytes_in || !chunkqueue_is_empty(E0->wb)) && E0->state != FCGI_STATE_CONNECT) ? scgi_send_request(  srv, E0) :HANDLER_WAIT_FOR_EVENT; 
+// Infered from: (lighttpd1.4/{prevFiles/prev_666b9f_4bc06b_src#mod_scgi.c,revFiles/666b9f_4bc06b_src#mod_scgi.c}: SUBREQUEST_FUNC)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

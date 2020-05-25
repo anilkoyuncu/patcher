@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->read_data_remaining == 0)  
++ if (E0->read_data_offset == E0->read_data_output_offset && E0->read_data_remaining == 0)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_aa48bf_a16355_libarchive#archive_read.c,revFiles/aa48bf_a16355_libarchive#archive_read.c}: archive_read_data)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

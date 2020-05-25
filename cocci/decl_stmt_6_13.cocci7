@@ -1,0 +1,22 @@
+@@
+identifier I3;
+declaration D0;
+expression E1, E2;
+@@
+- D0 
+- E1 = Curl_pp_sendf(&E2->pp, "STARTTLS", I3); 
++ E1 = Curl_pp_sendf(&E2->pp, "STARTTLS", NULL); 
+// Infered from: (curl/{prevFiles/prev_b0f548_364d76_lib#pop3.c,revFiles/b0f548_364d76_lib#pop3.c}: pop3_statemach_act)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/7(100%)
+
+
+// ---------------------------------------------

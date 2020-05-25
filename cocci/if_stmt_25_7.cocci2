@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2;
+@@
+- if (-1 == getsockname(E0->fd, &(E1.plain), &E2))  
++ if (-1 == getsockname(E0->fd, (struct sockaddr *)&E1, &E2) || E2 > sizeof(E1))  
+  {
+  ...
+  }
+// Infered from: (lighttpd1.4/{prevFiles/prev_d7638b_49c74f_src#http-header-glue.c,revFiles/d7638b_49c74f_src#http-header-glue.c}: http_response_redirect_to_directory)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.90, Precision: 0.90
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - lighttpd1.4/prevFiles/prev_d7638b_49c74f_src#mod_scgi.c: scgi_spawn_connection
+ - lighttpd1.4/prevFiles/prev_d7638b_49c74f_src#mod_fastcgi.c: fcgi_spawn_connection
+*/
+
+// ---------------------------------------------

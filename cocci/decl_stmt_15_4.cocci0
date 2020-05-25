@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->cad >= 15)  
++ if (E0->cad > 15)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_e2553e_acc086_hw#intel-hda.c,revFiles/e2553e_acc086_hw#intel-hda.c}: hda_codec_dev_init)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

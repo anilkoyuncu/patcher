@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (R[E0] - L[E0] == best && ans[ansCnt - 1] != L[E0])  
++ if (R[E0] - L[E0] == best && (!ansCnt || ans[ansCnt - 1] != L[E0]))  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_359-D-6396326-6396333.c,revFiles/359-D-6396326-6396333.c}: main)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

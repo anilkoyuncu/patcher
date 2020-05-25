@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->hybrid_maxclip = 1 << ((((E0->frame_flags & 0x03) + 1) << 3) - 1); 
++ E0->hybrid_maxclip = (1LL << ((((E0->frame_flags & 0x03) + 1) << 3) - 1)) - 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_bb9747_365e1e_libavcodec#wavpack.c,revFiles/bb9747_365e1e_libavcodec#wavpack.c}: wavpack_decode_block)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

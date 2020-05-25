@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- buf_set(&E0, &E1->in_buffer, E1->in_buffer_index); 
++ buf_set(&E0, &E1->in_buffer, E1->in_buffer_index + E1->in_buffer_count); 
+// Infered from: (FFmpeg/{prevFiles/prev_72872d_c5c355_libswresample#swresample.c,revFiles/72872d_c5c355_libswresample#swresample.c}: swr_convert)
+// False positives: (FFmpeg/revFiles/72872d_c5c355_libswresample#swresample.c: resample), (FFmpeg/revFiles/72872d_c5c355_libswresample#swresample.c: swr_convert)
+// Recall: 0.03, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------

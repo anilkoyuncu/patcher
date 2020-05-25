@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (cairo_test_is_target_enabled(&E0, "svg"))  
++ if (cairo_test_is_target_enabled(&E0, "svg11") || cairo_test_is_target_enabled(  &E0, "svg12"))  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_cca1fc_39e4a0_test#fallback-resolution.c,revFiles/cca1fc_39e4a0_test#fallback-resolution.c}: main), (cairo/{prevFiles/prev_cca1fc_39e4a0_test#create-for-stream.c,revFiles/cca1fc_39e4a0_test#create-for-stream.c}: main)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,34 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- msg_Dbg(E0, "Detected EBU STL : CCT=%d TTI=%d start=%8.8s %lld", E1, E2,  &E3[256], E4); 
+  ...
+- E5.i_extra = NULL; 
++ E5.i_extra = 0; 
+// Infered from: (ompi/{prevFiles/prev_ca1462_450ccd_ompi#mca#common#ompio#common_ompio_file_open.c,revFiles/ca1462_450ccd_ompi#mca#common#ompio#common_ompio_file_open.c}: mca_common_ompio_file_open), (vlc/{prevFiles/prev_4a3838_00d43b_modules#demux#stl.c,revFiles/4a3838_00d43b_modules#demux#stl.c}: Open)
+// Recall: 0.30, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 0.50
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_4a3838_00d43b_modules#demux#stl.c: Open
+*/
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_ca1462_450ccd_ompi#mca#common#ompio#common_ompio_file_open.c: mca_common_ompio_set_file_defaults
+ - vlc/prevFiles/prev_de30e6_cd2967_modules#codec#spudec#parse.c: Render
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - codeflaws/prevFiles/prev_9-A-17766560-17766602.c: main
+*/
+
+// ---------------------------------------------

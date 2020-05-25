@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > get_bits_left(&E1->gb))  
++ if (8LL * E0 > get_bits_left(&E1->gb))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_262469_8b43ee_libavcodec#svq3.c,revFiles/262469_8b43ee_libavcodec#svq3.c}: svq3_decode_slice_header)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

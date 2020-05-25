@@ -1,0 +1,8 @@
+@@
+@@
+- return cfile.edt->pi.ethertype || cfile.edt->pi.ipproto || cfile.edt->pi.ptype == PT_TCP || cfile.edt->pi.ptype == PT_UDP || cfile.edt->pi.mpls_label || cfile.cd_t == WTAP_FILE_BER; 
++ return (cfile.edt->pi.ethertype != G_MAXINT) || cfile.edt->pi.ipproto || cfile.edt->pi.ptype == PT_TCP || cfile.edt->pi.ptype == PT_UDP || cfile.edt->pi.mpls_label || cfile.cd_t == WTAP_FILE_BER; 
+// Infered from: (wireshark/{prevFiles/prev_0618e5_55dc4b_gtk#decode_as_dlg.c,revFiles/0618e5_55dc4b_gtk#decode_as_dlg.c}: decode_as_ok)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1[strlen(E1) - 1] == '\n'; 
++ E0 = strlen(E1) && E1[strlen(E1) - 1] == '\n'; 
+// Infered from: (FFmpeg/{prevFiles/prev_847aae_c38d97_libavutil#log.c,revFiles/847aae_c38d97_libavutil#log.c}: av_log_default_callback)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

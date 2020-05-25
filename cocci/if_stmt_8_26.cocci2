@@ -1,0 +1,42 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 <  E1 ||  E0 >=  E2)  
++ if (E0 >=  E2)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_e9c571_c60968_Modules#unicodedata.c,revFiles/e9c571_c60968_Modules#unicodedata.c}: _getrecord_ex), (cpython/{prevFiles/prev_e9c571_c60968_Modules#unicodedata.c,revFiles/e9c571_c60968_Modules#unicodedata.c}: get_decomp_record)
+// False positives: (cpython/revFiles/e9c571_c60968_Modules#unicodedata.c: unicodedata_decomposition)
+// Recall: 0.16, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.42, Precision: 0.83
+// -- Node Change --
+// Recall: 0.40, Precision: 0.83
+// -- General --
+// Functions fully changed: 5/13(38%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_d59335_83516d_epan#dissectors#packet-logcat.c: detect_version
+ - ompi/prevFiles/prev_f1bff6_074991_opal#runtime#opal_cr.c: trigger_user_inc_callback
+ - codeflaws/prevFiles/prev_303-A-3733804-3733820.c: main
+ - FFmpeg/prevFiles/prev_27d323_964506_libavformat#utils.c: ffio_limit
+ - ompi/prevFiles/prev_f1bff6_074991_opal#runtime#opal_cr.c: opal_cr_user_inc_register_callback
+ - nginx/prevFiles/prev_de236d_48d17b_src#http#ngx_http_core_module.c: ngx_http_gzip_quantity
+ - linux/prevFiles/prev_0c1715_e25f1f_drivers#gpu#drm#msm#mdp#mdp5#mdp5_kms.c: mdp5_get_vblank_counter
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_e9c571_c60968_Modules#unicodedata.c: unicodedata_decomposition
+*/
+
+// ---------------------------------------------

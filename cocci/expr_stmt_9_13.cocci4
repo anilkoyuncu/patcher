@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef uint32_t;
+@@
+- lcg_seek(&E0->pink_state, (E1 - E2) * 2); 
++ lcg_seek(&E0->pink_state, (uint32_t )(E1 - E2) * 2); 
+// Infered from: (FFmpeg/{prevFiles/prev_c7ccbf_27a2f6_libavcodec#ffwavesynth.c,revFiles/c7ccbf_27a2f6_libavcodec#ffwavesynth.c}: wavesynth_seek)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

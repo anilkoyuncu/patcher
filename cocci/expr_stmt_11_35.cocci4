@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->name = E1->name; 
++ E0->name = zend_string_dup(E1->name, 1); 
+// Infered from: (php-src/{prevFiles/prev_4c5566_cfe977_Zend#zend.c,revFiles/4c5566_cfe977_Zend#zend.c}: auto_global_copy_ctor)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

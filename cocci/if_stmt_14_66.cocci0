@@ -1,0 +1,17 @@
+@@
+expression E1, E2, E0;
+@@
+- if (E0 && get_cached_commit_buffer (E1, E2))  
++ if (E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_7fa31b_ffa952_builtin#rev-list.c,revFiles/7fa31b_ffa952_builtin#rev-list.c}: show_commit)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

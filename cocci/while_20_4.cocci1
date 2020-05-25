@@ -1,0 +1,28 @@
+@@
+expression E0, E1, E2;
+@@
+- while (E0[E1 + 1].cont_level != 0 && ++E1 < E2)  
++ while (E1 < E2 - 1 && E0[E1 + 1].cont_level != 0)  
+  {
++ E1++; 
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_a94ac5_a37144_ext#fileinfo#libmagic#softmagic.c,revFiles/a94ac5_a37144_ext#fileinfo#libmagic#softmagic.c}: match), (php-src/{prevFiles/prev_ca77d8_174ffe_ext#fileinfo#libmagic#softmagic.c,revFiles/ca77d8_174ffe_ext#fileinfo#libmagic#softmagic.c}: match)
+// Recall: 0.38, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.88, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_ca77d8_174ffe_ext#fileinfo#libmagic#softmagic.c: mcopy
+ - php-src/prevFiles/prev_a94ac5_a37144_ext#fileinfo#libmagic#softmagic.c: mcopy
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0 = {gnutls_record_uncork ,usb_wakeup };
+expression E1;
+@@
+- I0(E1); 
++ I0(E1, 0); 
+// Infered from: (lighttpd2/{prevFiles/prev_8f42bb_b9fadd_src#modules#gnutls_filter.c,revFiles/8f42bb_b9fadd_src#modules#gnutls_filter.c}: do_gnutls_write), (qemu/{prevFiles/prev_82fb0c_3f58ea_hw#usb#redirect.c,revFiles/82fb0c_3f58ea_hw#usb#redirect.c}: usbredir_interrupt_packet)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

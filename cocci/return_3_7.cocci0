@@ -1,0 +1,8 @@
+@@
+@@
+- return ENODEV; 
++ return -ENODEV; 
+// Infered from: (linux/{prevFiles/prev_3ec6080_01ebd7_drivers#staging#westbridge#astoria#device#cyasdevice.c,revFiles/3ec6080_01ebd7_drivers#staging#westbridge#astoria#device#cyasdevice.c}: cyasdevice_init)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

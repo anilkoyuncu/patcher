@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (!serial_in(E0, UART_LSR) & UART_LSR_THRE)  
++ while (!(serial_in(E0, UART_LSR) & UART_LSR_THRE))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_022d91_ae91d6_drivers#serial#m32r_sio.c,revFiles/022d91_ae91d6_drivers#serial#m32r_sio.c}: transmit_chars)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

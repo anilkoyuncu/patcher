@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- __irq_set_handler_locked(E0->irq, E1); 
++ irq_set_handler_locked(E0, E1); 
+// Infered from: (linux/{prevFiles/prev_6b83bd_e902e14_arch#powerpc#platforms#52xx#mpc52xx_pic.c,revFiles/6b83bd_e902e14_arch#powerpc#platforms#52xx#mpc52xx_pic.c}: mpc52xx_extirq_set_type), (linux/{prevFiles/prev_9ca86b2_9758a7b_arch#powerpc#sysdev#mpc8xx_pic.c,revFiles/9ca86b2_9758a7b_arch#powerpc#sysdev#mpc8xx_pic.c}: mpc8xx_set_irq_type), (linux/{prevFiles/prev_a4e3f78_f3a085_drivers#pinctrl#intel#pinctrl-cherryview.c,revFiles/a4e3f78_f3a085_drivers#pinctrl#intel#pinctrl-cherryview.c}: chv_gpio_irq_startup), (linux/{prevFiles/prev_a4e3f78_f3a085_drivers#pinctrl#intel#pinctrl-cherryview.c,revFiles/a4e3f78_f3a085_drivers#pinctrl#intel#pinctrl-cherryview.c}: chv_gpio_irq_type), (linux/{prevFiles/prev_a4e3f78_f3a085_drivers#pinctrl#intel#pinctrl-cherryview.c,revFiles/a4e3f78_f3a085_drivers#pinctrl#intel#pinctrl-cherryview.c}: chv_gpio_irq_type), (linux/{prevFiles/prev_72b2a9_47c084_drivers#gpio#gpio-ep93xx.c,revFiles/72b2a9_47c084_drivers#gpio#gpio-ep93xx.c}: ep93xx_gpio_irq_type)
+// Recall: 0.86, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

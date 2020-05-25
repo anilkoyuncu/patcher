@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ompi_request_wait_all(2 * E0, E1, MPI_STATUSES_IGNORE); 
++ ret = ompi_request_wait_all(2 * E0, E1, MPI_STATUSES_IGNORE); 
+// Infered from: (ompi/{prevFiles/prev_889bf6_089c63_ompi#mca#dpm#base#dpm_base_common_fns.c,revFiles/889bf6_089c63_ompi#mca#dpm#base#dpm_base_common_fns.c}: ompi_dpm_base_disconnect_waitall)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

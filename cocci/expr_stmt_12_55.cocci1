@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = FT_Set_Char_Size(E1->face, E2.x_scale * 64.0, E2.y_scale * 64.0, 0, 0); 
++ E0 = FT_Set_Char_Size(E1->face, E2.x_scale * 64.0 + .5,  E2.y_scale * 64.0 + .5, 0, 0); 
+// Infered from: (cairo/{prevFiles/prev_70bb2a_dcab50_src#cairo-ft-font.c,revFiles/70bb2a_dcab50_src#cairo-ft-font.c}: _cairo_ft_unscaled_font_set_scale)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

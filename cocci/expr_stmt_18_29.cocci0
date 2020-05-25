@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- SetWindowPos(GDK_WINDOW_HWND(E0), E1, 0, 0, E2.right - E2.left,  E2.bottom - E2.top, E3); 
++ SetWindowPos(GDK_WINDOW_HWND(E0), E1, E2.left, E2.top, E2.right - E2.left,  E2.bottom - E2.top, E3); 
+// Infered from: (gtk/{prevFiles/prev_adff59_be6784_gdk#win32#gdkwindow-win32.c,revFiles/adff59_be6784_gdk#win32#gdkwindow-win32.c}: _gdk_win32_window_update_style_bits)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

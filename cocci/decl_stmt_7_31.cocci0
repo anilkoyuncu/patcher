@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- char I0[32]; 
++ char I0[REDIS_IP_STR_LEN]; 
+// Infered from: (redis/{prevFiles/prev_c38884_ef57f9_src#sentinel.c,revFiles/c38884_ef57f9_src#sentinel.c}: createSentinelAddr), (redis/{prevFiles/prev_c38884_ef57f9_src#sentinel.c,revFiles/c38884_ef57f9_src#sentinel.c}: sentinelCommand)
+// False positives: (redis/revFiles/c38884_ef57f9_src#sentinel.c: sentinelAskMasterStateToOtherSentinels), (redis/revFiles/c38884_ef57f9_src#sentinel.c: sentinelSendSlaveOf)
+// Recall: 0.22, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

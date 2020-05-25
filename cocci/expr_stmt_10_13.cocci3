@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- anetSetError(E0, "unable to bind socket"); 
++ anetSetError(E0, "unable to bind socket, errno: %d", errno); 
+// Infered from: (redis/{prevFiles/prev_920382_d35deb_src#anet.c,revFiles/920382_d35deb_src#anet.c}: _anetTcpServer)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

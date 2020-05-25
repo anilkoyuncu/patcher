@@ -1,0 +1,27 @@
+@@
+identifier I0;
+expression E1;
+typedef GstBuffer;
+typedef GstMiniObject;
+@@
+- GstBuffer *I0; 
++ GstMiniObject *mo; 
+  ...
+- I0 = gst_value_dup_mini_object(&E1); 
+- g_assert(I0 == NULL); 
++ mo = gst_value_dup_mini_object(&E1); 
++ g_assert(mo == NULL); 
+// Infered from: (gstreamer/{prevFiles/prev_d72f55_a750aa_tests#check#gst#gstminiobject.c,revFiles/d72f55_a750aa_tests#check#gst#gstminiobject.c}: GST_START_TEST)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

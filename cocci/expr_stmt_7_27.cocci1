@@ -1,0 +1,20 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- E0->p_sys->I1 = E0->b_fullscreen ? E0->render.I1 :E0->I2; 
++ E0->p_sys->I1 = E0->b_fullscreen ? E0->output.I1 :E0->I2; 
+// Infered from: (vlc/{prevFiles/prev_f1baee_8d1e59_plugins#sdl#vout_sdl.c,revFiles/f1baee_8d1e59_plugins#sdl#vout_sdl.c}: OpenDisplay), (vlc/{prevFiles/prev_f1baee_8d1e59_plugins#sdl#vout_sdl.c,revFiles/f1baee_8d1e59_plugins#sdl#vout_sdl.c}: OpenDisplay)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

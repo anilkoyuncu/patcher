@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (0 != hwloc_topology_set_xmlbuffer(E0, E1, strlen(E1)))  
++ if (0 != hwloc_topology_set_xmlbuffer(E0, E1, strlen(E1) + 1))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_73d104_f22b7d_opal#mca#hwloc#base#hwloc_base_util.c,revFiles/73d104_f22b7d_opal#mca#hwloc#base#hwloc_base_util.c}: opal_hwloc_base_get_topology), (ompi/{prevFiles/prev_73d104_f22b7d_opal#mca#hwloc#base#hwloc_base_dt.c,revFiles/73d104_f22b7d_opal#mca#hwloc#base#hwloc_base_dt.c}: opal_hwloc_unpack)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

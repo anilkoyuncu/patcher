@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0[E1][E2] == 'w')  
++ if (E0[E1][E2] == 'W')  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_7-A-5271056-5284201.c,revFiles/7-A-5271056-5284201.c}: chess)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

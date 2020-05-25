@@ -1,0 +1,33 @@
+@@
+expression E0, E1;
+@@
+- if (E0)  
+- {
+- orte_never_launched = true; 
+- ORTE_FORCED_TERMINATE(0); 
+- OBJ_RELEASE(E1); 
+- return; 
+- }
+// Infered from: (ompi/{prevFiles/prev_230d15_e62fca_orte#mca#plm#base#plm_base_launch_support.c,revFiles/230d15_e62fca_orte#mca#plm#base#plm_base_launch_support.c}: orte_plm_base_complete_setup)
+// Recall: 0.16, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.29, Precision: 1.00
+// -- Node Change --
+// Recall: 0.19, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/7(14%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_5d44cd_f2e609_object-refs.c: lookup_object_refs
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_0fa758_6be8f5_hw#i2c#core.c: i2c_end_transfer
+ - git/prevFiles/prev_5d44cd_f2e609_object-refs.c: mark_reachable
+*/
+
+// ---------------------------------------------

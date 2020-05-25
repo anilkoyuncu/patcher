@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0->i_visible_lines = E1->i_visible_height * E2->num / E2->den; 
++ E0->i_visible_lines = (E1->i_visible_height + (E2->den - 1)) * E2->num / E2->den; 
+  ...
+- E0->i_visible_pitch = E1->i_visible_width * E3->num / E3->den * E4->pixel_size; 
++ E0->i_visible_pitch = (E1->i_visible_width + (E3->den - 1)) * E3->num / E3->den * E4->pixel_size; 
+// Infered from: (vlc/{prevFiles/prev_81aed6_2e1e45_src#misc#picture.c,revFiles/81aed6_2e1e45_src#misc#picture.c}: picture_Setup)
+// False positives: (vlc/revFiles/82f649_dd284d_src#misc#picture.c: picture_Setup)
+// Recall: 0.75, Precision: 0.75, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.80
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_82f649_dd284d_src#misc#picture.c: picture_Setup
+*/
+
+// ---------------------------------------------

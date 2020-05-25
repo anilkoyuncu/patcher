@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef tcg_target_long;
+@@
+- tcg_out_label(E0, E1, (tcg_target_long )E0->code_ptr); 
++ tcg_out_label(E0, E1, E0->code_ptr); 
+// Infered from: (qemu/{prevFiles/prev_9d6fca_f7cf5d_tcg#i386#tcg-target.c,revFiles/9d6fca_f7cf5d_tcg#i386#tcg-target.c}: tcg_out_brcond2), (qemu/{prevFiles/prev_9d6fca_f7cf5d_tcg#i386#tcg-target.c,revFiles/9d6fca_f7cf5d_tcg#i386#tcg-target.c}: tcg_out_setcond2), (qemu/{prevFiles/prev_9d6fca_f7cf5d_tcg#i386#tcg-target.c,revFiles/9d6fca_f7cf5d_tcg#i386#tcg-target.c}: tcg_out_setcond2), (qemu/{prevFiles/prev_9d6fca_f7cf5d_tcg#i386#tcg-target.c,revFiles/9d6fca_f7cf5d_tcg#i386#tcg-target.c}: tcg_out_setcond2)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

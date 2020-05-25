@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((E0 = glob(E1, GLOB_ERR | GLOB_MARK | GLOB_NOSORT, NULL, &E2)) != 0)  
++ if ((E0 = glob(E1, GLOB_ERR | GLOB_MARK, NULL, &E2)) != 0)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_29d2c13_73cb5c_sapi#fpm#fpm#fpm_conf.c,revFiles/29d2c13_73cb5c_sapi#fpm#fpm#fpm_conf.c}: fpm_conf_ini_parser_include)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

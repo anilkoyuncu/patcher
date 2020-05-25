@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 += E1->priv->latency; 
++ E0 += E1->priv->latency - E1->priv->render_delay; 
+// Infered from: (gstreamer/{prevFiles/prev_54a587_883456_libs#gst#base#gstbasesink.c,revFiles/54a587_883456_libs#gst#base#gstbasesink.c}: gst_base_sink_adjust_time)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

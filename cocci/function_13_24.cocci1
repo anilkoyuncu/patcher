@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == NULL)  
+- {
+- g_warning("C'est quoi ce borderl key=%d\n", *E1); 
+- }
++ g_assert(E0 != NULL); 
+// Infered from: (wireshark/{prevFiles/prev_b51d8f_7fc017_gtk#sip_stat.c,revFiles/b51d8f_7fc017_gtk#sip_stat.c}: sip_draw_hash_responses)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

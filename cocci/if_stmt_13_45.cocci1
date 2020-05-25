@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((global_capture_opts.num_selected == 0) && ((prefs.capture_device != NULL) && (  *E0.prefs_p->capture_device != '\0')))  
++ if ((global_capture_opts.num_selected == 0) && ((prefs.capture_device != NULL) && (  E0.prefs_p != NULL) && (  *E0.prefs_p->capture_device != '\0')))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_fb9a7d_30919f_ui#gtk#main.c,revFiles/fb9a7d_30919f_ui#gtk#main.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

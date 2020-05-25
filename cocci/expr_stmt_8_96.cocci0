@@ -1,0 +1,12 @@
+@@
+identifier I0, I1;
+typedef xmlDocPtr;
+@@
+  xmlDocPtr I0; 
+  ...
+- save_registry (I1); 
++ save_registry(GLOBAL_REGISTRY_FILE_TMP, &I0); 
+// Infered from: (gstreamer/{prevFiles/prev_39c609_9b1970_tools#gstreamer-register.c,revFiles/39c609_9b1970_tools#gstreamer-register.c}: main)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

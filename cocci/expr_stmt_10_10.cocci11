@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef UINT32;
+@@
+- put_le32(E0, (UINT32 )E1); 
++ put_le32(E0, (UINT32)(E1 - 8)); 
+// Infered from: (FFmpeg/{prevFiles/prev_67e9bb_27e084_libav#wav.c,revFiles/67e9bb_27e084_libav#wav.c}: wav_write_trailer)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

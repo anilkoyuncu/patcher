@@ -1,0 +1,18 @@
+@@
+identifier I0, I1, I2;
+expression E4, E3;
+@@
+  int apply_line(char *I0, const  char *I1, int I2)  
+  {
+  ...
+- if (E3 ||  E4)  
++ if ((new_whitespace != strip_whitespace) || !whitespace_error || *I1 != '+')  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_63e50d_ee24ee_builtin-apply.c,revFiles/63e50d_ee24ee_builtin-apply.c}: apply_line)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- CGContextSetShadowWithColor(E0, CGSizeMake(0, 0), 5,  CGColorCreate(kCGColorSpaceGenericRGB, E1)); 
++ CGContextSetShadowWithColor(E0, CGSizeMake(0, 0), 5,  CGColorCreate(CGColorSpaceCreateWithName(  kCGColorSpaceGenericRGB), E1)); 
+// Infered from: (vlc/{prevFiles/prev_05128d_e09683_modules#misc#quartztext.c,revFiles/05128d_e09683_modules#misc#quartztext.c}: Compose)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,34 @@
+@@
+identifier I2, I3;
+expression E0, E4, E5, E1;
+typedef mca_base_component_t;
+typedef mca_base_module_t;
+@@
+- if (OPAL_SUCCESS != (E0 = mca_base_select(E1, I2, &I3,  (mca_base_module_t **)&E4,  (mca_base_component_t **)&E5)))  
++ if (OPAL_SUCCESS != mca_base_select(E1, I2, &I3, (mca_base_module_t **)&E4,  (mca_base_component_t **)&E5))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_1de50b_e8c8d0c_opal#mca#paffinity#base#paffinity_base_select.c,revFiles/1de50b_e8c8d0c_opal#mca#paffinity#base#paffinity_base_select.c}: opal_paffinity_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_opal#mca#crs#base#crs_base_select.c,revFiles/1de50b_e8c8d0c_opal#mca#crs#base#crs_base_select.c}: opal_crs_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_opal#mca#memchecker#base#memchecker_base_select.c,revFiles/1de50b_e8c8d0c_opal#mca#memchecker#base#memchecker_base_select.c}: opal_memchecker_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_opal#mca#maffinity#base#maffinity_base_select.c,revFiles/1de50b_e8c8d0c_opal#mca#maffinity#base#maffinity_base_select.c}: opal_maffinity_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_ompi#mca#crcp#base#crcp_base_select.c,revFiles/1de50b_e8c8d0c_ompi#mca#crcp#base#crcp_base_select.c}: ompi_crcp_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_opal#mca#carto#base#carto_base_select.c,revFiles/1de50b_e8c8d0c_opal#mca#carto#base#carto_base_select.c}: opal_carto_base_select)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.43, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/7(14%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_opal#mca#maffinity#base#maffinity_base_select.c: opal_maffinity_base_select
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_opal#mca#crs#base#crs_base_select.c: opal_crs_base_select
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_ompi#mca#crcp#base#crcp_base_select.c: ompi_crcp_base_select
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_opal#mca#memchecker#base#memchecker_base_select.c: opal_memchecker_base_select
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_opal#mca#carto#base#carto_base_select.c: opal_carto_base_select
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_opal#mca#paffinity#base#paffinity_base_select.c: opal_paffinity_base_select
+*/
+
+// ---------------------------------------------

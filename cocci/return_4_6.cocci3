@@ -1,0 +1,34 @@
+@@
+expression E0;
+@@
+- if (E0 >= LONG_MAX)  
++ if (E0 >= LONG_MAX)  
+  {
+- return LONG_MAX; 
++ return LONG_MAX + 1LU; 
+  }
+// Infered from: (redis/{prevFiles/prev_413d82_d036ab_src#dict.c,revFiles/413d82_d036ab_src#dict.c}: _dictNextPower)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 0.71
+// -- Node Change --
+// Recall: 0.62, Precision: 0.71
+// -- General --
+// Functions fully changed: 5/10(50%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_86ea02_ff4680_libavformat#flic.c: flic_probe
+ - FFmpeg/prevFiles/prev_8772d2_7f92db_libavcodec#g723_1.c: normalize_bits
+ - FFmpeg/prevFiles/prev_c58bce_12d42c_libavcodec#pcm-mpeg.c: pcm_bluray_decode_frame
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_096c3b_dffcdb_libavcodec#motion_est.c: h263_mv4_search
+ - FFmpeg/prevFiles/prev_096c3b_dffcdb_libavcodec#motion_est.c: interlaced_search
+*/
+
+// ---------------------------------------------

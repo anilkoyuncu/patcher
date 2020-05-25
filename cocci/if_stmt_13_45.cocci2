@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (E0->padding_bug_score > -2 && !E0->data_partitioning)  
++ if (E0->codec_id == AV_CODEC_ID_H263 || (E0->padding_bug_score > -2 && !E0->data_partitioning))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_9a03c2_d208d1_libavcodec#h263dec.c,revFiles/9a03c2_d208d1_libavcodec#h263dec.c}: decode_slice)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

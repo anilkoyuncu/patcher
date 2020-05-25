@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && !strcasecmp(getword(E1->pool, &E0, ' '), "Basic"))  
++ if (E0 && !auth_type(E1) && !strcasecmp(getword(E1->pool, &E0, ' '), "Basic"))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_f9e492_6189da_sapi#apache#mod_php4.c,revFiles/f9e492_6189da_sapi#apache#mod_php4.c}: init_request_info)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

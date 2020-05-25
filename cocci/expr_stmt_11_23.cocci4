@@ -1,0 +1,8 @@
+@@
+@@
+- CHECK(reg_int("enable", NULL, "[1|0|] Enable/Disable HCOL", 1,  &mca_coll_hcoll_component.hcoll_enable, 0)); 
++ CHECK(reg_int("enable", NULL, "[1|0|] Enable/Disable HCOL", 0,  &mca_coll_hcoll_component.hcoll_enable, 0)); 
+// Infered from: (ompi/{prevFiles/prev_ce6d5b_247da2_ompi#mca#coll#hcoll#coll_hcoll_component.c,revFiles/ce6d5b_247da2_ompi#mca#coll#hcoll#coll_hcoll_component.c}: hcoll_register)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

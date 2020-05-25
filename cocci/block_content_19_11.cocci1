@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- zend_get_parameters_array_ex(E0, E1 + (E2 ? 2 :1)); 
++ if (zend_get_parameters_array_ex(E0, E1 + (E2 ? 2 :1)) != SUCCESS)  
++ {
++ efree(E1); 
++ WRONG_PARAM_COUNT; 
++ }
+// Infered from: (php-src/{prevFiles/prev_4b3ae8_f41848_ext#spl#spl_directory.c,revFiles/4b3ae8_f41848_ext#spl#spl_directory.c}: spl_filesystem_file_call)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

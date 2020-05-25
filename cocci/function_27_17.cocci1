@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- zend_hash_init(E0->guards, 8, NULL, NULL, 0); 
++ zend_hash_init(E0->guards, 8, NULL, zend_property_guard_dtor, 0); 
+// Infered from: (php-src/{prevFiles/prev_1a6017_8aab1c_Zend#zend_object_handlers.c,revFiles/1a6017_8aab1c_Zend#zend_object_handlers.c}: zend_get_property_guard)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

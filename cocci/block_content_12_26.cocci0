@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- PyObject_Del(E0); 
+- E0 = NULL; 
++ Py_DECREF(E0); 
+// Infered from: (cpython/{prevFiles/prev_8f3216_6aa278_Modules#_threadmodule.c,revFiles/8f3216_6aa278_Modules#_threadmodule.c}: newlockobject), (cpython/{prevFiles/prev_c951d5_9e220b_Modules#threadmodule.c,revFiles/c951d5_9e220b_Modules#threadmodule.c}: newlockobject), (cpython/{prevFiles/prev_577404_151205_Modules#_threadmodule.c,revFiles/577404_151205_Modules#_threadmodule.c}: newlockobject), (cpython/{prevFiles/prev_27bf15_0217c9_Modules#threadmodule.c,revFiles/27bf15_0217c9_Modules#threadmodule.c}: newlockobject)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

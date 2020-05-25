@@ -1,0 +1,15 @@
+@@
+identifier I0, I1;
+expression E2;
+@@
+- I0 = I1 - (int )E2->sy; 
++ this = I1; 
++ if (status != 0)  
++ {
++ this += layout_need_status(E2, status == 1); 
++ }
++ I0 = this - (int )E2->sy; 
+// Infered from: (tmux/{prevFiles/prev_1fd3b9_da31ed_layout.c,revFiles/1fd3b9_da31ed_layout.c}: layout_spread_cell), (tmux/{prevFiles/prev_1c1ec8_f3fcf9_layout.c,revFiles/1c1ec8_f3fcf9_layout.c}: layout_spread_cell)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.36
+
+// ---------------------------------------------

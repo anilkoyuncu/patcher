@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- g_string_append_printf(E0, "%u", E1); 
++ g_string_append_printf(E0, "\"%u\"", E1); 
+// Infered from: (wireshark/{prevFiles/prev_1e2ae5_9aeb1d_gtk#wlan_stat_dlg.c,revFiles/1e2ae5_9aeb1d_gtk#wlan_stat_dlg.c}: csv_handle)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

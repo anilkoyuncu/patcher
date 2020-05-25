@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- rom_add_file_fixed_as(E0, E1, -1, E2); 
++ if (rom_add_file_fixed_as(E0, E1, -1, E2) < 0)  
++ {
++ return -1; 
++ }
+// Infered from: (qemu/{prevFiles/prev_32fb35_c8e115_hw#core#loader.c,revFiles/32fb35_c8e115_hw#core#loader.c}: load_image_targphys_as)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

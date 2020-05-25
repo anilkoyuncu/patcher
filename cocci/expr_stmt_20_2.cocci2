@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->p_sys = OpenIntf(E0); 
++ E0->p_sys = OpenIntf(VLC_OBJECT(E0)); 
+// Infered from: (vlc/{prevFiles/prev_064cd5_eb1d3f_modules#codec#cmml#cmml.c,revFiles/064cd5_eb1d3f_modules#codec#cmml#cmml.c}: OpenDecoder)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

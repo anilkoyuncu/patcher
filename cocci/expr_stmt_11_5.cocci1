@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- msg_Dbg(E0,  "Using RAR stream filter for '%s' %lld(expected %lld) bytes in %d chunks",  E1->psz_name, E1->i_real_size, E1->i_size, E1->i_chunk); 
+// Infered from: (vlc/{prevFiles/prev_4d4dc1_7d9158_modules#stream_filter#rar.c,revFiles/4d4dc1_7d9158_modules#stream_filter#rar.c}: Open)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

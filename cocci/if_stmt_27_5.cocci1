@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2;
+typedef guint8;
+@@
+- tvb_memcpy(E0, E1, 0, E2); 
++ tvb_memcpy(E0, (guint8 *)E1, 0, E2); 
+// Infered from: (wireshark/{prevFiles/prev_d5d515_a2f4ee_epan#dissectors#packet-ber.c,revFiles/d5d515_a2f4ee_epan#dissectors#packet-ber.c}: dissect_ber_GeneralString), (wireshark/{prevFiles/prev_d5d515_a2f4ee_epan#dissectors#packet-ber.c,revFiles/d5d515_a2f4ee_epan#dissectors#packet-ber.c}: dissect_ber_GeneralString)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

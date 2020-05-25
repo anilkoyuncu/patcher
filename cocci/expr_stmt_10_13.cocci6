@@ -1,0 +1,8 @@
+@@
+@@
+- error_report("mach-virt: cannot model more than 30GB RAM"); 
++ error_report("mach-virt: cannot model more than %dGB RAM", RAMLIMIT_GB); 
+// Infered from: (qemu/{prevFiles/prev_71c276_8c4f0e_hw#arm#virt.c,revFiles/71c276_8c4f0e_hw#arm#virt.c}: machvirt_init)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

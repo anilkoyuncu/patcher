@@ -1,0 +1,35 @@
+@@
+identifier I0;
+typedef WSOCK2_EVENT;
+typedef WSOCK2_FUNC;
+@@
+- WSOCK2_FUNC I0; 
++ WSOCK2_EVENT I0; 
+// Infered from: (curl/{prevFiles/prev_ab4cf9_967979_lib#telnet.c,revFiles/ab4cf9_967979_lib#telnet.c}: telnet_do)
+// False positives: (curl/revFiles/ab4cf9_967979_lib#telnet.c: telnet_do)
+// Recall: 0.04, Precision: 0.25, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 13 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 1.00
+// -- Node Change --
+// Recall: 0.85, Precision: 0.87
+// -- General --
+// Functions fully changed: 9/14(64%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_0ead8d_abfc95_ui#gtk#tcp_graph.c: callback_graph_type
+ - qemu/prevFiles/prev_a08aaf_8cdcf3_hw#virtio#virtio-crypto.c: virtio_crypto_sym_op_helper
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_0ead8d_abfc95_ui#gtk#tcp_graph.c: tcp_graph_cb
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_ab4cf9_967979_lib#telnet.c: telnet_do
+*/
+
+// ---------------------------------------------

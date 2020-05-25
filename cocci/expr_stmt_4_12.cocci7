@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[0] = (char )((E1 >> 4) & 0xff) + 'a' - 1; 
++ E0[0] = (char )(((E1 >> 4) & 0xff) + 'a' - 1); 
+// Infered from: (curl/{prevFiles/prev_d157c2_4d2e81_lib#ssluse.c,revFiles/d157c2_4d2e81_lib#ssluse.c}: Curl_ossl_version)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

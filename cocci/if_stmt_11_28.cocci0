@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!E0 || E1 / E0 > E2->max_fps)  
++ if (!E0 || (E2->max_fps && E1 / E0 > E2->max_fps))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_874eb0_d8962f_libavformat#apngdec.c,revFiles/874eb0_d8962f_libavformat#apngdec.c}: decode_fctl_chunk)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

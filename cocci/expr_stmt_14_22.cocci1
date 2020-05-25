@@ -1,0 +1,9 @@
+@@
+typedef session_name;
+@@
+- php_url_scanner_remove_var(PS(session_name ), strlen(PS(session_name ))); 
++ php_url_scanner_remove_var(); 
+// Infered from: (php-src/{prevFiles/prev_8193ca7_9712a4_ext#session#session.c,revFiles/8193ca7_9712a4_ext#session#session.c}: php_rinit_session_globals)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

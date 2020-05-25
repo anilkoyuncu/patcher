@@ -1,0 +1,11 @@
+@@
+identifier I0, I1;
+@@
+- int I0; 
+- int I1 = 0; 
++ size_t I0; 
++ size_t I1 = 0; 
+// Infered from: (php-src/{prevFiles/prev_3b5262_61cdd1_ext#standard#math.c,revFiles/3b5262_61cdd1_ext#standard#math.c}: _php_math_number_format_ex), (php-src/{prevFiles/prev_6b2992f_f901dc_ext#standard#math.c,revFiles/6b2992f_f901dc_ext#standard#math.c}: _php_math_number_format_ex)
+// Recall: 0.36, Precision: 1.00, Matching recall: 0.36
+
+// ---------------------------------------------

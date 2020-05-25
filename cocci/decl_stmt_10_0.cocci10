@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+@@
+- struct device_node *I0 = E1->of_node; 
+  ...
+- E2 = of_clk_get(I0, 0); 
++ E2 = devm_clk_get(E1, NULL); 
+  ...
+- E3 = watchdog_register_device(&E4->dev); 
++ watchdog_stop_on_unregister(&E4->dev); 
++ E3 = devm_watchdog_register_device(E1, &E4->dev); 
+// Infered from: (linux/{prevFiles/prev_615e40_099e303_drivers#watchdog#moxart_wdt.c,revFiles/615e40_099e303_drivers#watchdog#moxart_wdt.c}: moxart_wdt_probe)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->i_buffer < E1->i_frame_size)  
++ if (E0->i_buffer < E1->i_frame_size || E1->i_sipr_subpacket_count >= E1->i_subpacket_h)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_1bce40_3799b6_modules#demux#real.c,revFiles/1bce40_3799b6_modules#demux#real.c}: DemuxAudioSipr)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

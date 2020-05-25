@@ -1,0 +1,8 @@
+@@
+identifier I0;
+@@
+- float I0[MPA_MAX_CHANNELS * MPA_FRAME_SIZE]; 
+// Infered from: (FFmpeg/{prevFiles/prev_44d1b4_0c6cf3_libavcodec#qdm2.c,revFiles/44d1b4_0c6cf3_libavcodec#qdm2.c}: qdm2_synthesis_filter), (FFmpeg/{prevFiles/prev_3a07f5_5a0a6a_libavcodec#qdm2.c,revFiles/3a07f5_5a0a6a_libavcodec#qdm2.c}: qdm2_synthesis_filter)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------

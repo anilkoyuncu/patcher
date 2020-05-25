@@ -1,0 +1,24 @@
+@@
+expression E1, E2, E0;
+@@
+- irq_set_handler_data(E0, E1); 
+- irq_set_chained_handler(E0, E2); 
++ irq_set_chained_handler_and_data(E0, E2, E1); 
+// Infered from: (linux/{prevFiles/prev_de7c9e0_b79f043_drivers#mfd#t7l66xb.c,revFiles/de7c9e0_b79f043_drivers#mfd#t7l66xb.c}: t7l66xb_attach_irq), (linux/{prevFiles/prev_073f7f9_c89fc9a_drivers#mfd#htc-egpio.c,revFiles/073f7f9_c89fc9a_drivers#mfd#htc-egpio.c}: egpio_probe), (linux/{prevFiles/prev_03051b_8f1338c_drivers#pinctrl#pinctrl-rockchip.c,revFiles/03051b_8f1338c_drivers#pinctrl#pinctrl-rockchip.c}: rockchip_interrupts_register), (linux/{prevFiles/prev_079140_de7c9e0_drivers#mfd#tc6393xb.c,revFiles/079140_de7c9e0_drivers#mfd#tc6393xb.c}: tc6393xb_attach_irq), (linux/{prevFiles/prev_f058dc8_20a7f7_arch#mips#jz4740#gpio.c,revFiles/f058dc8_20a7f7_arch#mips#jz4740#gpio.c}: jz4740_gpio_chip_init), (linux/{prevFiles/prev_4d3f77d_777fd18_arch#mips#pci#pci-ar724x.c,revFiles/4d3f77d_777fd18_arch#mips#pci#pci-ar724x.c}: ar724x_pci_irq_init), (linux/{prevFiles/prev_f286c1_99e32a_drivers#irqchip#irq-brcmstb-l2.c,revFiles/f286c1_99e32a_drivers#irqchip#irq-brcmstb-l2.c}: brcmstb_l2_intc_of_init), (linux/{prevFiles/prev_77c77e_8a5221_drivers#gpio#gpio-tz1090.c,revFiles/77c77e_8a5221_drivers#gpio#gpio-tz1090.c}: tz1090_gpio_bank_probe), (linux/{prevFiles/prev_053798_01e2d0_drivers#gpio#gpio-mpc8xxx.c,revFiles/053798_01e2d0_drivers#gpio#gpio-mpc8xxx.c}: mpc8xxx_probe), (linux/{prevFiles/prev_053798_01e2d0_drivers#gpio#gpio-mpc8xxx.c,revFiles/053798_01e2d0_drivers#gpio#gpio-mpc8xxx.c}: mpc8xxx_remove), (linux/{prevFiles/prev_777fd18_f058dc8_arch#mips#pci#pci-ar71xx.c,revFiles/777fd18_f058dc8_arch#mips#pci#pci-ar71xx.c}: ar71xx_pci_irq_init), (linux/{prevFiles/prev_c89fc9a_9bd09f3_drivers#mfd#ezx-pcap.c,revFiles/c89fc9a_9bd09f3_drivers#mfd#ezx-pcap.c}: ezx_pcap_probe), (linux/{prevFiles/prev_20d5d1_03051b_drivers#pinctrl#pinctrl-single.c,revFiles/20d5d1_03051b_drivers#pinctrl#pinctrl-single.c}: pcs_irq_init_chained_handler), (linux/{prevFiles/prev_59fa909_073f7f9_drivers#mfd#jz4740-adc.c,revFiles/59fa909_073f7f9_drivers#mfd#jz4740-adc.c}: jz4740_adc_probe), (linux/{prevFiles/prev_59fa909_073f7f9_drivers#mfd#jz4740-adc.c,revFiles/59fa909_073f7f9_drivers#mfd#jz4740-adc.c}: jz4740_adc_remove)
+// Recall: 0.53, Precision: 1.00, Matching recall: 0.94
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.97, Precision: 1.00
+// -- Node Change --
+// Recall: 0.97, Precision: 1.00
+// -- General --
+// Functions fully changed: 28/29(96%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#kernel#ecard.c: ecard_probe
+*/
+
+// ---------------------------------------------

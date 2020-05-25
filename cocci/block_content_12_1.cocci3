@@ -1,0 +1,8 @@
+@@
+@@
+- set_irq_handler(IRQ_CPU_TIMER0, handle_edge_irq); 
++ irq_set_handler(IRQ_CPU_TIMER0, handle_edge_irq); 
+// Infered from: (linux/{prevFiles/prev_de2e95a_808339_arch#frv#kernel#irq.c,revFiles/de2e95a_808339_arch#frv#kernel#irq.c}: init_IRQ), (linux/{prevFiles/prev_60af3ab_a9554c_arch#frv#kernel#irq.c,revFiles/60af3ab_a9554c_arch#frv#kernel#irq.c}: init_IRQ)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

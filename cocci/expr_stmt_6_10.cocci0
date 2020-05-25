@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = E0 & VIRTIO_NET_F_MAC; 
++ E0 = E0 & (1u << VIRTIO_NET_F_MAC); 
+// Infered from: (qemu/{prevFiles/prev_0d85e7_6cf6fe_tests#vhost-user-test.c,revFiles/0d85e7_6cf6fe_tests#vhost-user-test.c}: init_virtio_dev)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

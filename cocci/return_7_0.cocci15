@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return snprintf(E0, E1, "mbedTLS/%d.%d.%d", E2 >> 24, (E2 >> 16) & 0xff,  (E2 >> 8) & 0xff); 
++ return snprintf(E0, E1, "mbedTLS/%u.%u.%u", E2 >> 24, (E2 >> 16) & 0xff,  (E2 >> 8) & 0xff); 
+// Infered from: (curl/{prevFiles/prev_eb4968_4062bc_lib#vtls#mbedtls.c,revFiles/eb4968_4062bc_lib#vtls#mbedtls.c}: Curl_mbedtls_version)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

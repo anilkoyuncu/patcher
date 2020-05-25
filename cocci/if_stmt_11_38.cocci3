@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->info.filetime = (long )E1.st_mtime; 
++ E0->info.filetime = E1.st_mtime; 
+// Infered from: (curl/{prevFiles/prev_ddd31d_9409d0_lib#file.c,revFiles/ddd31d_9409d0_lib#file.c}: file_do)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

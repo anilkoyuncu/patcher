@@ -1,0 +1,20 @@
+@@
+expression E0;
+@@
+- E0->read->active = E0->write->active = 0; 
++ E0->read->active = 0; 
++ E0->write->active = 0; 
+// Infered from: (nginx/{prevFiles/prev_731e6a_2d2529_src#event#modules#ngx_aio_module.c,revFiles/731e6a_2d2529_src#event#modules#ngx_aio_module.c}: ngx_aio_del_connection), (nginx/{prevFiles/prev_731e6a_2d2529_src#event#modules#ngx_aio_module.c,revFiles/731e6a_2d2529_src#event#modules#ngx_aio_module.c}: ngx_aio_del_connection)
+// Recall: 0.60, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

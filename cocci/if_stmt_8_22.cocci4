@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (GetVersionEx(&E0) && E0.dwMajorVersion < 6 && !E1->b_force)  
++ if (GetVersionEx(&E0) && E0.dwMajorVersion < 6 && !E1->obj.force)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_6c4e9a_b74648_modules#video_output#win32#direct3d9.c,revFiles/6c4e9a_b74648_modules#video_output#win32#direct3d9.c}: Open)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

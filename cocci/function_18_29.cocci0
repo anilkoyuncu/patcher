@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- if (E0)  
+- {
+- EVP_PKEY_free(E0); 
+- }
+// Infered from: (openssl/{prevFiles/prev_67b6f1_a4ff39_engines#e_4758cca.c,revFiles/67b6f1_a4ff39_engines#e_4758cca.c}: ibm_4758_load_privkey), (openssl/{prevFiles/prev_67b6f1_a4ff39_engines#e_4758cca.c,revFiles/67b6f1_a4ff39_engines#e_4758cca.c}: ibm_4758_load_pubkey)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

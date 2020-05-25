@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!compare_ether_addr(E0->h_source, E1->mac_addr))  
++ if (ether_addr_equal(E0->h_source, E1->mac_addr))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_2e42e4_39f1d94_drivers#net#ethernet#qlogic#qlcnic#qlcnic_main.c,revFiles/2e42e4_39f1d94_drivers#net#ethernet#qlogic#qlcnic#qlcnic_main.c}: qlcnic_send_filter)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

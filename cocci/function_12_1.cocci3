@@ -1,0 +1,35 @@
+@@
+expression E0, E1;
+@@
+- if (E0->type == TYPE_DISK && E1->req.cmd.buf[0] == INQUIRY && E1->req.cmd.buf[  2] == 0xb0)  
+- {
+  ...
+- }
+// Infered from: (qemu/{prevFiles/prev_29e560_2343be_hw#scsi#scsi-generic.c,revFiles/29e560_2343be_hw#scsi#scsi-generic.c}: scsi_read_complete)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.14
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.14, Precision: 0.83
+// -- Node Change --
+// Recall: 0.19, Precision: 0.87
+// -- General --
+// Functions fully changed: 4/38(10%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_29e560_2343be_hw#scsi#scsi-generic.c: scsi_read_complete
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_a99c27_e095c4_libavcodec#dnxhddec.c: dnxhd_init_vlc
+ - openssh-portable/prevFiles/prev_f14564_45c0fd_sshconnect2.c: load_identity_file
+ - vlc/prevFiles/prev_60dd4b_28db660_modules#video_output#fb.c: OpenDisplay
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_170734_6f4506_orte#mca#oob#usock#oob_usock_connection.c: mca_oob_usock_peer_recv_connect_ack
+*/
+
+// ---------------------------------------------

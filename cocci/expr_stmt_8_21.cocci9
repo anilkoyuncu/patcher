@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = conversation_new_by_id(E1, ENDPOINT_IAX2, E2, E1); 
++ E0 = conversation_new_by_id(E1, ENDPOINT_IAX2, E2, 0); 
+// Infered from: (wireshark/{prevFiles/prev_9d1cea_f7b916_epan#dissectors#packet-iax2.c,revFiles/9d1cea_f7b916_epan#dissectors#packet-iax2.c}: iax2_new_circuit_for_call)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

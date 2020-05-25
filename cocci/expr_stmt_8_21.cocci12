@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+typedef uint32_t;
+@@
+- qemu_get_timedate(&E0, RTC_OFFSET); 
+- E1->tick_offset = mktimegm(&E0); 
++ qemu_get_timedate(&E0, 0); 
++ E1->tick_offset = (uint32_t )mktimegm(&E0) + RTC_OFFSET; 
+// Infered from: (qemu/{prevFiles/prev_9c554c_f50dc0_hw#cuda.c,revFiles/9c554c_f50dc0_hw#cuda.c}: cuda_init)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

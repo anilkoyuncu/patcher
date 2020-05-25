@@ -1,0 +1,14 @@
+@@
+expression E0;
+@@
+- if (NULL != E0 && 0 == strncmp(E0, "none", strlen("none")))  
++ if (0 >= opal_list_get_size(&orte_filem_base_components_available) || (  NULL != E0 && 0 == strncmp(E0, "none", strlen("none"))))  
+  {
+- opal_output_verbose(10, orte_filem_base_output,  "filem:select: Using %s component", E0); 
++ opal_output_verbose(1, orte_filem_base_output,  "filem:select: Warning: Using none component. Some functionality (e.g., --preload-binary) will not work in this mode."); 
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_50c909_906616_orte#mca#filem#base#filem_base_select.c,revFiles/50c909_906616_orte#mca#filem#base#filem_base_select.c}: orte_filem_base_select), (openssl/{prevFiles/prev_c0aa6b_a30b05_ssl#statem#statem_clnt.c,revFiles/c0aa6b_a30b05_ssl#statem#statem_clnt.c}: tls_process_server_hello)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

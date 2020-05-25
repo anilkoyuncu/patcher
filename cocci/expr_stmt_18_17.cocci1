@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- col_append_fstr(E0->cinfo, COL_INFO, "; DSAP %s %s, SSAP %s %s",  val_to_str(E1 & SAP_MASK, sap_vals, "%02x"),  E1 & DSAP_GI_BIT ? "Group" :"Individual",  val_to_str(E2 & SAP_MASK, sap_vals, "%02x"),  E2 & SSAP_CR_BIT ? "Response" :"Command"); 
++ col_append_fstr(E0->cinfo, COL_INFO, "; DSAP %s %s, SSAP %s %s",  val_to_str(E1 & SAP_MASK, sap_vals, "0x%02x"),  E1 & DSAP_GI_BIT ? "Group" :"Individual",  val_to_str(E2 & SAP_MASK, sap_vals, "0x%02x"),  E2 & SSAP_CR_BIT ? "Response" :"Command"); 
+// Infered from: (wireshark/{prevFiles/prev_05f0ad_0de3a3_epan#dissectors#packet-llc.c,revFiles/05f0ad_0de3a3_epan#dissectors#packet-llc.c}: dissect_llc)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->hash = safe_emalloc(HASH_TAB_SIZE, sizeof(*E0->hash->entries),  sizeof(*E0->shift)); 
++ E0->hash = safe_emalloc(HASH_TAB_SIZE, sizeof(*E0->hash->entries),  sizeof(*E0->hash)); 
+// Infered from: (php-src/{prevFiles/prev_930ef9d_d7bac4_ext#standard#string.c,revFiles/930ef9d_d7bac4_ext#standard#string.c}: php_strtr_array_prepare)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

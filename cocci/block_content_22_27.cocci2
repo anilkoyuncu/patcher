@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5;
+typedef BYTE;
+@@
+- BYTE *I0; 
++ BYTE *buf; 
+  ...
+- E1 = IAudioCaptureClient_GetBuffer(E2, &I0, &E3, &E4, NULL, &E5); 
++ E1 = IAudioCaptureClient_GetBuffer(E2, &buf, &E3, &E4, NULL, &E5); 
+// Infered from: (vlc/{prevFiles/prev_69504ee_1ece99_modules#access#wasapi.c,revFiles/69504ee_1ece99_modules#access#wasapi.c}: Thread)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

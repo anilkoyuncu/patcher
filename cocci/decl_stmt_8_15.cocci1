@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef Py_UCS1;
+@@
+- char *I0 = PyUnicode_DATA(E1); 
++ Py_UCS1 *I0 = PyUnicode_1BYTE_DATA(E1); 
+// Infered from: (cpython/{prevFiles/prev_706768_12174a_Modules#_io#textio.c,revFiles/706768_12174a_Modules#_io#textio.c}: _PyIO_find_line_ending)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

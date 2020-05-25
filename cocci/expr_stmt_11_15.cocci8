@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- gtk_paned_add2(GTK_PANED(E0), E1); 
++ gtk_paned_pack2(GTK_PANED(E0), E1, FALSE, FALSE); 
+// Infered from: (wireshark/{prevFiles/prev_490fcb_104e56_gtk#main.c,revFiles/490fcb_104e56_gtk#main.c}: main)
+// False positives: (wireshark/revFiles/490fcb_104e56_gtk#main.c: main)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

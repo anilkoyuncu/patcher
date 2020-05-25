@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->codec_id = E0->bits_per_coded_sample == 8 ? CODEC_ID_PCM_S8 :CODEC_ID_PCM_S16BE; 
++ E0->codec_id = E0->bits_per_coded_sample == 8 ? CODEC_ID_PCM_U8 :CODEC_ID_PCM_S16BE; 
+// Infered from: (FFmpeg/{prevFiles/prev_8e9efe_22b16e_libavformat#flvdec.c,revFiles/8e9efe_22b16e_libavformat#flvdec.c}: flv_set_audio_codec)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

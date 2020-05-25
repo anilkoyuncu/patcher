@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E4, E5, E2, E3;
+@@
+- E0 = intel_mid_dma_prep_memcpy(E1, E2, E3, E4->length, E5); 
++ E0 = intel_mid_dma_prep_memcpy(E1, E2, E3, sg_dma_len(E4), E5); 
+// Infered from: (linux/{prevFiles/prev_fdaf9c_cbb796c_drivers#dma#intel_mid_dma.c,revFiles/fdaf9c_cbb796c_drivers#dma#intel_mid_dma.c}: intel_mid_dma_prep_slave_sg), (linux/{prevFiles/prev_fdaf9c_cbb796c_drivers#dma#intel_mid_dma.c,revFiles/fdaf9c_cbb796c_drivers#dma#intel_mid_dma.c}: intel_mid_dma_prep_slave_sg)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

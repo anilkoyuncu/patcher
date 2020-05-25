@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+typedef guint;
+@@
+- return tvb_get_ntohs(E0, E1 + 2) + 4; 
++ guint raw_len = (tvb_get_ntohs(E0, E1 + 2) & 0x03FF); 
++ return raw_len + 4; 
+// Infered from: (wireshark/{prevFiles/prev_7e0170_3530d9_epan#dissectors#packet-ipdc.c,revFiles/7e0170_3530d9_epan#dissectors#packet-ipdc.c}: get_ipdc_pdu_len)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

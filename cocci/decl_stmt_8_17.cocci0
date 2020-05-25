@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef apr_xml_ns_scope;
+@@
+- apr_xml_ns_scope *I0 = E1->ns_scope; 
++ apr_xml_ns_scope *I0; 
+// Infered from: (apr/{prevFiles/prev_b54f57_c1db12_xml#apr_xml.c,revFiles/b54f57_c1db12_xml#apr_xml.c}: find_prefix)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = 1 + (E1 - E2); 
++ E0 += (E1 - E2); 
+// Infered from: (tmux/{prevFiles/prev_05213e_3e2cc2_status.c,revFiles/05213e_3e2cc2_status.c}: status_redraw), (tmux/{prevFiles/prev_95dfa9_735cfa_status.c,revFiles/95dfa9_735cfa_status.c}: status_redraw)
+// False positives: (tmux/revFiles/05213e_3e2cc2_status.c: status_prompt_key), (tmux/revFiles/05213e_3e2cc2_status.c: status_prompt_redraw), (tmux/revFiles/95dfa9_735cfa_status.c: status_prompt_key), (tmux/revFiles/95dfa9_735cfa_status.c: status_prompt_redraw)
+// Recall: 0.20, Precision: 0.33, Matching recall: 0.20
+
+// ---------------------------------------------

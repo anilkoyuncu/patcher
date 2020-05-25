@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (dissect_dcerpc_cn(E0, 0, E1, E2, FALSE, NULL) == -1)  
++ if (!dissect_dcerpc_cn(E0, 0, E1, E2, FALSE, NULL))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_81d8b5_ab536b_packet-dcerpc.c,revFiles/81d8b5_ab536b_packet-dcerpc.c}: dissect_dcerpc_cn_pk)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

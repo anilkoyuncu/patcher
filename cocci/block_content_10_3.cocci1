@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- if (E0)  
++ Curl_unicodefree(E1); 
++ if (E0)  
+  {
+- Curl_safefree(E1); 
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_724152_825b0c_lib#ldap.c,revFiles/724152_825b0c_lib#ldap.c}: _ldap_url_parse2)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_41c9f8_a70b19_Python#bltinmodule.c: builtin_sum
+*/
+
+// ---------------------------------------------

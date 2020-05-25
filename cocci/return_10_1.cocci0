@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return E0->execute(E0, (void *)decode_slice, E1->slice_data, NULL, E2,  sizeof(E1->slice_data[0])); 
++ return E0->execute(E0, decode_slice, E1->slice_data, NULL, E2,  sizeof(E1->slice_data[0])); 
+// Infered from: (FFmpeg/{prevFiles/prev_179ae5_599b4c_libavcodec#proresdec.c,revFiles/179ae5_599b4c_libavcodec#proresdec.c}: decode_picture)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

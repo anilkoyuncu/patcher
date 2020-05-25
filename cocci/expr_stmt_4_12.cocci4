@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = orte_wait_cb(E1[E2], orte_pls_bproc_waitpid_daemon_cb, (int *)E3[E2]); 
++ E0 = orte_wait_cb(E1[E2], orte_pls_bproc_waitpid_daemon_cb, &E3[E2]); 
+// Infered from: (ompi/{prevFiles/prev_311efa_22c7f2_orte#mca#pls#bproc#pls_bproc.c,revFiles/311efa_22c7f2_orte#mca#pls#bproc#pls_bproc.c}: orte_pls_bproc_launch_daemons)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

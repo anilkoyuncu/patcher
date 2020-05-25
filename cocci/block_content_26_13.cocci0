@@ -1,0 +1,14 @@
+@@
+expression list E1;
+expression E0;
+@@
+- E0 = i2c_smbus_write_word_data (E1); 
+- if (E0 <  0)  
+- {
+- return E0; 
+- }
+- return 0; 
+// Infered from: (linux/{prevFiles/prev_4a737e_bd60ac_drivers#staging#iio#cdc#ad7150.c,revFiles/4a737e_bd60ac_drivers#staging#iio#cdc#ad7150.c}: ad7150_write_event_params)
+// Recall: 0.27, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

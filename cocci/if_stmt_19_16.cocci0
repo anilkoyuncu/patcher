@@ -1,0 +1,18 @@
+@@
+expression E0, E1;
+@@
+- if (ORTE_SUCCESS != E0 && OPAL_EQUAL != orte_util_compare_name_fields(  ORTE_NS_CMP_ALL, E1, ORTE_NAME_INVALID))  
++ if (ORTE_SUCCESS == E0)  
+  {
+  ...
+  }
+  ...
+- if (ORTE_SUCCESS == E0 && OPAL_EQUAL != orte_util_compare_name_fields(  ORTE_NS_CMP_ALL, E1, ORTE_NAME_INVALID))  
++ if (ORTE_SUCCESS == E0)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_d56f19_6d94e7_orte#mca#routed#unity#routed_unity_component.c,revFiles/d56f19_6d94e7_orte#mca#routed#unity#routed_unity_component.c}: orte_routed_unity_get_route)
+// Recall: 0.60, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

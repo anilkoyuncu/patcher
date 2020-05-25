@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- write_crash_report(E0, E1); 
++ write_crash_report(E0, x_params); 
+// Infered from: (git/{prevFiles/prev_7e5dce_904b19_fast-import.c,revFiles/7e5dce_904b19_fast-import.c}: die_nicely)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_493ae1_497ad6_exec.c: cpu_abort
+ - git/prevFiles/prev_7e5dce_904b19_fast-import.c: die_nicely
+*/
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_7e5dce_904b19_fast-import.c: skip_optional_lf
+*/
+
+// ---------------------------------------------

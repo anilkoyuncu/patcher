@@ -1,0 +1,23 @@
+@@
+expression E1, E2, E0;
+@@
+- E0 = (E1 > (long )sizeof(E2)) ? sizeof(E2) :(int )E1; 
++ E0 = (E1 > (long )sizeof(E2)) ? (int )sizeof(E2) :(int )E1; 
+// Infered from: (openssl/{prevFiles/prev_275459_2ce90b_ssl#ssltest.c,revFiles/275459_2ce90b_ssl#ssltest.c}: doit), (openssl/{prevFiles/prev_275459_2ce90b_ssl#ssltest.c,revFiles/275459_2ce90b_ssl#ssltest.c}: doit)
+// Recall: 0.27, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.93, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_7e312b_9c2cbc_lib#formdata.c: FormAdd
+*/
+
+// ---------------------------------------------

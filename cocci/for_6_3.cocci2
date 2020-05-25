@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;E0 < E1->i_title;E0++)  
++ for(E0 = 0;E0 < E1->i_titles;E0++)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_876090_f2ffad_modules#access#dvdread.c,revFiles/876090_f2ffad_modules#access#dvdread.c}: Control)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

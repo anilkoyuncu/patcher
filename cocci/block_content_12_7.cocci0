@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- HMAC_CTX_init(E0); 
++ HMAC_CTX_reset(E0); 
+// Infered from: (openssl/{prevFiles/prev_a87a0a_dc0099_crypto#evp#p5_crpt2.c,revFiles/a87a0a_dc0099_crypto#evp#p5_crpt2.c}: PKCS5_PBKDF2_HMAC), (openssl/{prevFiles/prev_a87a0a_dc0099_crypto#evp#p5_crpt2.c,revFiles/a87a0a_dc0099_crypto#evp#p5_crpt2.c}: PKCS5_PBKDF2_HMAC)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

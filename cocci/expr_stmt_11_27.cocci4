@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- gtk_extended_layout_get_desired_size(E0, NULL, &E1); 
++ gtk_widget_get_desired_size(GTK_WIDGET(E0), NULL, &E1); 
+// Infered from: (gtk/{prevFiles/prev_a33053_8413f2_gtk#gtkalignment.c,revFiles/a33053_8413f2_gtk#gtkalignment.c}: gtk_alignment_size_allocate)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.97, Precision: 0.97
+// -- General --
+// Functions fully changed: 12/13(92%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_68c38e_ef3219_gtk#gtkplug.c: gtk_plug_size_allocate
+*/
+
+// ---------------------------------------------

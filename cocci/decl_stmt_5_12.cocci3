@@ -1,0 +1,12 @@
+@@
+identifier I0, I1;
+@@
+- char I0[128]; 
+- char I1[128]; 
++ char I0[128] = ""; 
++ char I1[128] = ""; 
+// Infered from: (curl/{prevFiles/prev_da900c_b0e742_src#tool_formparse.c,revFiles/da900c_b0e742_src#tool_formparse.c}: formparse)
+// False positives: (curl/revFiles/aa0fbe_c48b99_lib#telnet.c: suboption)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

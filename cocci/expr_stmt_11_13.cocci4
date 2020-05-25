@@ -1,0 +1,11 @@
+@@
+identifier I1;
+expression E0, E2;
+@@
+- dev_err(E0->I1, E2); 
++ pr_err(E2); 
+// Infered from: (linux/{prevFiles/prev_cfca31c_386f40_drivers#watchdog#wm8350_wdt.c,revFiles/cfca31c_386f40_drivers#watchdog#wm8350_wdt.c}: wm8350_wdt_probe), (linux/{prevFiles/prev_420206_5c331fc_drivers#media#dvb#firewire#firedtv-1394.c,revFiles/420206_5c331fc_drivers#media#dvb#firewire#firedtv-1394.c}: rawiso_activity_cb)
+// False positives: (linux/revFiles/420206_5c331fc_drivers#media#dvb#firewire#firedtv-1394.c: rawiso_activity_cb), (linux/revFiles/420206_5c331fc_drivers#media#dvb#firewire#firedtv-1394.c: start_iso)
+// Recall: 0.14, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------

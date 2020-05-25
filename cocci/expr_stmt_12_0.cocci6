@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- log_debug("Unicode %04x, wcwidth() %d", E0, E1); 
++ log_debug("Unicode %04lx, wcwidth() %d", (long )E0, E1); 
+// Infered from: (tmux/{prevFiles/prev_67d233_481e48_utf8.c,revFiles/67d233_481e48_utf8.c}: utf8_width)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

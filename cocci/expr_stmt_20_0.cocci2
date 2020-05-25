@@ -1,0 +1,20 @@
+@@
+identifier I1 = {GST_DEVICE_PROVIDER_CAST ,GST_DEVICE_PROVIDER_FACTORY_CAST ,GST_DYNAMIC_TYPE_FACTORY_CAST ,GST_ELEMENT_FACTORY_CAST };
+expression E0, E2;
+@@
+- E0 = I1(g_object_newv(E2, 0, NULL)); 
++ E0 = g_object_new(E2, NULL); 
+// Infered from: (gstreamer/{prevFiles/prev_519d64_7699b8_gst#gstdynamictypefactory.c,revFiles/519d64_7699b8_gst#gstdynamictypefactory.c}: gst_dynamic_type_factory_create), (gstreamer/{prevFiles/prev_519d64_7699b8_gst#gstdeviceproviderfactory.c,revFiles/519d64_7699b8_gst#gstdeviceproviderfactory.c}: gst_device_provider_register), (gstreamer/{prevFiles/prev_519d64_7699b8_gst#gstdeviceproviderfactory.c,revFiles/519d64_7699b8_gst#gstdeviceproviderfactory.c}: gst_device_provider_factory_get), (gstreamer/{prevFiles/prev_519d64_7699b8_gst#gstelementfactory.c,revFiles/519d64_7699b8_gst#gstelementfactory.c}: gst_element_register)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

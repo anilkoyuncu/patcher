@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- *E0 = MPI_Is_thread_main((int )E1); 
++ *E0 = MPI_Is_thread_main(E1); 
+// Infered from: (ompi/{prevFiles/prev_dc997f4_e1fae8_src#mpi#f77#is_thread_main_f.c,revFiles/dc997f4_e1fae8_src#mpi#f77#is_thread_main_f.c}: mpi_is_thread_main_f)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 0.92
+// -- Node Change --
+// Recall: 0.74, Precision: 0.93
+// -- General --
+// Functions fully changed: 12/16(75%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_875e34_42d43a_epan#dissectors#packet-quic.c: quic_connection_destroy
+ - qemu/prevFiles/prev_9d6fca_f7cf5d_tcg#tcg.c: tcg_out_label
+ - wireshark/prevFiles/prev_966c59_131eb5_epan#dissectors#packet-gtp.c: call_foreach_ip
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_50510a_7a9b9f_sharkd_session.c: sharkd_session_process_info_nstat_cb
+*/
+
+// ---------------------------------------------

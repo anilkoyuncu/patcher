@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_text(E0, E1, E2, E3, "IP Authentication: %.*s", E3,  tvb_get_string(wmem_packet_scope(), E1, E2, E3)); 
++ proto_tree_add_text(E0, E1, E2, E3, "IP Authentication: %.*s", E3,  tvb_get_string_enc(wmem_packet_scope(), E1, E2, E3,  ENC_ASCII)); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-isis-clv.c,revFiles/971ffd_421d81_epan#dissectors#packet-isis-clv.c}: isis_dissect_ip_authentication_clv)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.82, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 18/22(81%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_ed6bb4_ccef5b_hw#pci-host#piix.c: i440fx_pcihost_get_pci_hole64_end
+ - wireshark/prevFiles/prev_bf8290_304e03_epan#dissectors#packet-pdcp-nr.c: dissect_pdcp_nr
+ - vlc/prevFiles/prev_719d63_d86608_modules#packetizer#hxxx_nal.c: hxxx_AnnexB_to_xVC
+ - qemu/prevFiles/prev_ed6bb4_ccef5b_hw#pci-host#q35.c: q35_host_get_pci_hole64_end
+*/
+
+// ---------------------------------------------

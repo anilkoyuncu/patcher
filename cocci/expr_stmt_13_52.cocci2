@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- net_Close(E0->fd); 
++ rtp_del_sink(E0->id->sout_id, E0->fd); 
+// Infered from: (vlc/{prevFiles/prev_0a60c8_f43ecf_modules#stream_out#rtsp.c,revFiles/0a60c8_f43ecf_modules#stream_out#rtsp.c}: RtspDelId)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_277292_a35edc_merge-recursive.c: was_dirty
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_6fddd6_f79f89_ext#pdo_mysql#mysql_statement.c: pdo_mysql_stmt_dtor
+ - php-src/prevFiles/prev_22efcf_6357ac_ext#pdo_mysql#mysql_statement.c: pdo_mysql_stmt_dtor
+*/
+
+// ---------------------------------------------

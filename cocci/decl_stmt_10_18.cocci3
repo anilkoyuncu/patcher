@@ -1,0 +1,21 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef GtkAssistantPage;
+@@
+- GtkAssistantPage *I0 = g_list_nth_data(E1->pages, E2 / 2); 
++ GtkAssistantPage *I0 = g_list_nth_data(E1->pages, E2); 
+// Infered from: (gtk/{prevFiles/prev_8166a0_d1f921_gtk#gtkassistant.c,revFiles/8166a0_d1f921_gtk#gtkassistant.c}: gtk_assistant_accessible_ref_child)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/7(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,20 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5;
+@@
+  int I0 = E1 && (E2->quiet || !E2->progress); 
+  ...
+- if (!E3 && (E4 || E5 || E2->quiet))  
++ if (!E3 && (E4 || E5 || I0))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_ca8e12_ff5eff_builtin#send-pack.c,revFiles/ca8e12_ff5eff_builtin#send-pack.c}: send_pack)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

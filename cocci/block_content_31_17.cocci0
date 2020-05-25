@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.line_len = sizeof("HTTP/1.0 403 Access Denied"); 
++ E0.line_len = sizeof("HTTP/1.0 403 Access Denied") - 1; 
+// Infered from: (php-src/{prevFiles/prev_daa190_1551f2_ext#phar#phar_object.c,revFiles/daa190_1551f2_ext#phar#phar_object.c}: phar_do_403), (php-src/{prevFiles/prev_032bbc_0a9143_ext#phar#phar_object.c,revFiles/032bbc_0a9143_ext#phar#phar_object.c}: phar_do_403)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,21 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- float I0; 
+  ...
+- var_Create(E1, VAR_FPS, VLC_VAR_FLOAT | VLC_VAR_DOINHERIT); 
+- var_Get(E1, VAR_FPS, &E2); 
+- I0 = E2.f_float; 
+- E3->i_frame_length = 1000000.0 / I0; 
++ var_Create(E1, "mjpeg-fps", VLC_VAR_FLOAT | VLC_VAR_DOINHERIT); 
++ var_Get(E1, "mjpeg-fps", &E2); 
++ E3->i_frame_length = 0; 
++ if (E2.f_float)  
++ {
++ E3->i_frame_length = 1000000.0 / E2.f_float; 
++ }
+// Infered from: (vlc/{prevFiles/prev_f84b1d_ae51373_modules#demux#mjpeg.c,revFiles/f84b1d_ae51373_modules#demux#mjpeg.c}: Open)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,36 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((E0 = block_New(E1, 2048)) == NULL)  
++ int i_read; 
++ if ((E0 = block_New(E1, 2048)) == NULL)  
+  {
+- break; 
++ break; 
+  }
+- E0->i_buffer = E2->pf_read(E2, E0->p_buffer, 2048); 
+- if (E0->i_buffer <= 0)  
++ i_read = E2->pf_read(E2, E0->p_buffer, 2048); 
++ if (i_read <= 0)  
+  {
+  ...
+  }
++ E0->i_buffer = i_read; 
+// Infered from: (vlc/{prevFiles/prev_f5f434_538ec8_modules#access_filter#timeshift.c,revFiles/f5f434_538ec8_modules#access_filter#timeshift.c}: Thread)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.92, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_a1c22a_8334c0e_drivers#clk#st#clk-flexgen.c: st_of_flexgen_setup
+*/
+
+// ---------------------------------------------

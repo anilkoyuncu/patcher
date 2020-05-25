@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (*E0 == ',')  
++ if (*E0 == ':')  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_b328f8_ca954f_gdbstub.c,revFiles/b328f8_ca954f_gdbstub.c}: gdb_handle_packet)
+// False positives: (qemu/revFiles/b328f8_ca954f_gdbstub.c: gdb_handle_packet)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

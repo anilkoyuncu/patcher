@@ -1,0 +1,36 @@
+@@
+type T0;
+identifier I1, I2;
+expression E3, E4;
+typedef Py_buffer;
+@@
+- T0 *I1; 
+- int I2; 
+- if (!PyArg_ParseTuple(E3, "s#:update", &I1, &I2))  
++ Py_buffer buf; 
++ if (!PyArg_ParseTuple(E3, "s*:update", &buf))  
+  {
+  ...
+  }
+- md5_process(&E4->hash_state, I1, I2); 
++ md5_process(&E4->hash_state, buf.buf, buf.len); 
++ PyBuffer_Release(&buf); 
+// Infered from: (cpython/{prevFiles/prev_7b9cb2_42b2f2_Modules#md5module.c,revFiles/7b9cb2_42b2f2_Modules#md5module.c}: MD5_update)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.43, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_7b9cb2_42b2f2_Modules#md5module.c: MD5_new
+ - cpython/prevFiles/prev_7b9cb2_42b2f2_Modules#sha1module.c: SHA1_new
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+identifier I0 = {ASN1_TIME_diff ,OPENSSL_gmtime_diff ,SetFileTime };
+expression E1, E2, E3, E4;
+@@
+- if (!I0(E1, E2, E3, E4))  
++ if (!I0(E1, E2, E4, E3))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_e44d37_54cf3b_crypto#asn1#a_time.c,revFiles/e44d37_54cf3b_crypto#asn1#a_time.c}: ASN1_TIME_compare), (php-src/{prevFiles/prev_4e1e57_7523bb_TSRM#tsrm_virtual_cwd.c,revFiles/4e1e57_7523bb_TSRM#tsrm_virtual_cwd.c}: win32_utime), (php-src/{prevFiles/prev_6f6298_694451_TSRM#tsrm_virtual_cwd.c,revFiles/6f6298_694451_TSRM#tsrm_virtual_cwd.c}: win32_utime), (openssl/{prevFiles/prev_da2700_556efe_crypto#asn1#a_utctm.c,revFiles/da2700_556efe_crypto#asn1#a_utctm.c}: ASN1_UTCTIME_cmp_time_t)
+// False positives: (openssl/revFiles/e44d37_54cf3b_crypto#asn1#a_time.c: ASN1_TIME_cmp_time_t)
+// Recall: 0.29, Precision: 0.80, Matching recall: 1.00
+
+// ---------------------------------------------

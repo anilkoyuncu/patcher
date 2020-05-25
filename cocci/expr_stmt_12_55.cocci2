@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- memset(E0->bitmap + E1, 0, BITMAP_SIZE - E1); 
++ memset(E0->bitmap + E1 + 1, 0, BITMAP_SIZE - E1 - 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_392b0a_5ce703_libavcodec#exr.c,revFiles/392b0a_5ce703_libavcodec#exr.c}: piz_uncompress)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- return GUINT_TO_POINTER(*E0); 
++ return GUINT_TO_POINTER((gulong) * E0); 
+// Infered from: (wireshark/{prevFiles/prev_c8ca0a_7171ee_epan#dissectors#packet-btatt.c,revFiles/c8ca0a_7171ee_epan#dissectors#packet-btatt.c}: btatt_handle_value), (wireshark/{prevFiles/prev_c8ca0a_7171ee_epan#dissectors#packet-btatt.c,revFiles/c8ca0a_7171ee_epan#dissectors#packet-btatt.c}: btatt_uuid16_value), (wireshark/{prevFiles/prev_0a1d1b_147ab1_epan#dissectors#packet-btrfcomm.c,revFiles/0a1d1b_147ab1_epan#dissectors#packet-btrfcomm.c}: btrfcomm_directed_channel_value), (wireshark/{prevFiles/prev_0a1d1b_147ab1_epan#dissectors#packet-btobex.c,revFiles/0a1d1b_147ab1_epan#dissectors#packet-btobex.c}: btobex_profile_value), (wireshark/{prevFiles/prev_0a1d1b_147ab1_epan#dissectors#packet-btl2cap.c,revFiles/0a1d1b_147ab1_epan#dissectors#packet-btl2cap.c}: btl2cap_cid_value), (wireshark/{prevFiles/prev_0a1d1b_147ab1_epan#dissectors#packet-btl2cap.c,revFiles/0a1d1b_147ab1_epan#dissectors#packet-btl2cap.c}: btl2cap_psm_value)
+// False positives: (wireshark/revFiles/717ca5_71f867_epan#dissectors#packet-ipv6.c: ipv6_value)
+// Recall: 0.41, Precision: 0.93, Matching recall: 0.93
+
+// ---------------------------------------------

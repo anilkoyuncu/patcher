@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- qemu_opt_set(E0, "driver", "virtio-serial"); 
++ if (arch_type == QEMU_ARCH_S390X)  
++ {
++ qemu_opt_set(E0, "driver", "virtio-serial-s390"); 
++ }
++ else
++ {
++ qemu_opt_set(E0, "driver", "virtio-serial-pci"); 
++ }
+// Infered from: (qemu/{prevFiles/prev_e87f7f_4cafe6_vl.c,revFiles/e87f7f_4cafe6_vl.c}: virtcon_parse)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

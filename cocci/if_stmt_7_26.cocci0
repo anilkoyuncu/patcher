@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 >= 32 || E1 > INT32_MAX >> E0)  
++ if (E0 > MIN_CACHE_BITS || E1 > INT32_MAX >> E0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_7c1566_08117a_libavcodec#tta.c,revFiles/7c1566_08117a_libavcodec#tta.c}: tta_decode_frame)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

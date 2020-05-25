@@ -1,0 +1,31 @@
+@@
+identifier I0, I3;
+expression E1, E2;
+@@
+- I0 = archive_read_data(E1, E2, I3); 
+- if (I0 != I3)  
++ bytes_read = archive_read_data(E1, E2, I3); 
++ if (bytes_read != I3)  
+  {
+- assertEqualInt(I0, I3); 
++ assertEqualInt(bytes_read, I3); 
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_9e2d77_c114bb_libarchive#test#test_read_format_rar5.c,revFiles/9e2d77_c114bb_libarchive#test#test_read_format_rar5.c}: extract_one)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.92, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch applied partially:
+ - libarchive/prevFiles/prev_9e2d77_c114bb_libarchive#test#test_read_format_rar5.c: extract_one
+*/
+
+// ---------------------------------------------

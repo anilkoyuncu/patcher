@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "qemu: could not load Milkymist One bios '%s'\n", bios_name); 
++ error_report("could not load Milkymist One bios '%s'", bios_name); 
+// Infered from: (qemu/{prevFiles/prev_0a094a_7f69a4_hw#lm32#milkymist.c,revFiles/0a094a_7f69a4_hw#lm32#milkymist.c}: milkymist_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

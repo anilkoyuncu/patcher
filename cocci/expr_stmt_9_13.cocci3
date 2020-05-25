@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1] = 0.62 - 0.48 * FFABS(E1 / (E2 - 1) - .5) - 0.38 * cos(2 * M_PI * E1 / (  E2 - 1)); 
++ E0[E1] = 0.62 - 0.48 * FFABS(E1 / (double )(E2 - 1) - .5) - 0.38 * cos(  2 * M_PI * E1 / (E2 - 1)); 
+// Infered from: (FFmpeg/{prevFiles/prev_629fcd_9f6ca2_libavfilter#avf_showfreqs.c,revFiles/629fcd_9f6ca2_libavfilter#avf_showfreqs.c}: generate_window_func)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

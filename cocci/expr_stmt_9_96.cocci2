@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef uint64_t;
+@@
+- uint64_t I0; 
+  ...
+- memcpy(&I0, &E1->cmbuf[E2], E3); 
+- return I0; 
++ return ldn_le_p(&E1->cmbuf[E2], E3); 
+// Infered from: (qemu/{prevFiles/prev_71a86d_2067d3_hw#block#nvme.c,revFiles/71a86d_2067d3_hw#block#nvme.c}: nvme_cmb_read)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

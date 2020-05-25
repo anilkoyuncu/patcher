@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0->type == TYPEMESSAGE) && (!strncasecmp(E0->subtype, "rfc822", 6)))  
++ if ((E0->type == TYPEMESSAGE) && (!strcasecmp(E0->subtype, "rfc822")))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_869c19_c1218de_ext#imap#imap.c,revFiles/869c19_c1218de_ext#imap#imap.c}: imap_add_body)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

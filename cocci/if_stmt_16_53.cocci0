@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!(E0->buffer->flags & BUFFER_FLAG_REALLOCATABLE) || !av_buffer_is_writable(  E0))  
++ if (!(E0->buffer->flags & BUFFER_FLAG_REALLOCATABLE) || !av_buffer_is_writable(  E0) || E0->data != E0->buffer->data)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_24a362_e99ecd_libavutil#buffer.c,revFiles/24a362_e99ecd_libavutil#buffer.c}: av_buffer_realloc)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

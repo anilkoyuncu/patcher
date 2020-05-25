@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = Tcl_FindHashEntry(&E1->litInfo, (char *)E2); 
++ E0 = Tcl_FindHashEntry(&E1->litInfo, INT2PTR(E2)); 
+// Infered from: (tcl/{prevFiles/prev_abcede_87c5f5_generic#tclBasic.c,revFiles/abcede_87c5f5_generic#tclBasic.c}: TclArgumentBCEnter), (tcl/{prevFiles/prev_abcede_87c5f5_generic#tclBasic.c,revFiles/abcede_87c5f5_generic#tclBasic.c}: TclArgumentBCRelease), (tcl/{prevFiles/prev_0a901b_67e100_generic#tclBasic.c,revFiles/0a901b_67e100_generic#tclBasic.c}: TclArgumentBCEnter)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

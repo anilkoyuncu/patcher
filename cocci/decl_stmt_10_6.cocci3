@@ -1,0 +1,18 @@
+@@
+@@
+- usage("diff-tree [-r] [-z] <tree sha1> <tree sha1>"); 
++ usage(diff_tree_usage); 
+// Infered from: (git/{prevFiles/prev_c5bac1_80913d_diff-tree.c,revFiles/c5bac1_80913d_diff-tree.c}: main)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.30, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/10(30%)
+
+
+// ---------------------------------------------

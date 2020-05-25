@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->type == BDRV_TYPE_HD)  
++ if (!bdrv_is_read_only(E0))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_d24667_528f76_block-migration.c,revFiles/d24667_528f76_block-migration.c}: init_blk_migration_it)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

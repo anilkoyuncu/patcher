@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- printf("%.10f", E0 * E1); 
++ printf("%.10f", abs(E0) * E1); 
+// Infered from: (codeflaws/{prevFiles/prev_157-B-13125743-13125788.c,revFiles/157-B-13125743-13125788.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

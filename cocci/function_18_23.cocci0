@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef guint;
+@@
+- guint I0; 
+- I0 = tvb_reported_length (E1); 
+// Infered from: (wireshark/{prevFiles/prev_f161dc_f298ef_plugins#wimax#msg_dreg.c,revFiles/f161dc_f298ef_plugins#wimax#msg_dreg.c}: dissect_dreg_tlv)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

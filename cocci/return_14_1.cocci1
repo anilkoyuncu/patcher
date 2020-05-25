@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return (0 == E0->wb->bytes_in || !chunkqueue_is_empty(E0->wb)) ? fcgi_send_request(  srv, E0) :HANDLER_WAIT_FOR_EVENT; 
++ return ((0 == E0->wb->bytes_in || !chunkqueue_is_empty(E0->wb)) && E0->state != FCGI_STATE_CONNECT_DELAYED) ? fcgi_send_request(  srv, E0) :HANDLER_WAIT_FOR_EVENT; 
+// Infered from: (lighttpd1.4/{prevFiles/prev_666b9f_4bc06b_src#mod_fastcgi.c,revFiles/666b9f_4bc06b_src#mod_fastcgi.c}: SUBREQUEST_FUNC)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

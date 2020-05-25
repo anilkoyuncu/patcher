@@ -1,0 +1,12 @@
+@@
+identifier I2;
+expression E1, E0, E3;
+@@
+- E0 = kmalloc(E1, I2); 
++ E0 = kmemdup(E3, E1, I2); 
+  ...
+- memcpy(E0, E3, E1); 
+// Infered from: (linux/{prevFiles/prev_2451a84_5bcdf0c_drivers#parport#parport_gsc.c,revFiles/2451a84_5bcdf0c_drivers#parport#parport_gsc.c}: parport_gsc_probe_port), (linux/{prevFiles/prev_929ebd3_3289a8_drivers#net#wireless#wl12xx#wl1271_main.c,revFiles/929ebd3_3289a8_drivers#net#wireless#wl12xx#wl1271_main.c}: wl1271_alloc_hw), (linux/{prevFiles/prev_2451a84_5bcdf0c_drivers#parport#parport_sunbpp.c,revFiles/2451a84_5bcdf0c_drivers#parport#parport_sunbpp.c}: bpp_probe), (linux/{prevFiles/prev_027300_80caf6_drivers#net#wireless#libertas_tf#if_usb.c,revFiles/027300_80caf6_drivers#net#wireless#libertas_tf#if_usb.c}: if_usb_receive_fwload), (linux/{prevFiles/prev_731a9b_0423606_drivers#net#wireless#libertas#if_usb.c,revFiles/731a9b_0423606_drivers#net#wireless#libertas#if_usb.c}: if_usb_receive_fwload), (linux/{prevFiles/prev_bbc8a004_9ffecb_fs#ubifs#lpt.c,revFiles/bbc8a004_9ffecb_fs#ubifs#lpt.c}: dirty_cow_nnode), (linux/{prevFiles/prev_bbc8a004_9ffecb_fs#ubifs#lpt.c,revFiles/bbc8a004_9ffecb_fs#ubifs#lpt.c}: dirty_cow_pnode), (linux/{prevFiles/prev_7a12f4b_cd3172_drivers#media#video#zoran#videocodec.c,revFiles/7a12f4b_cd3172_drivers#media#video#zoran#videocodec.c}: videocodec_attach)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

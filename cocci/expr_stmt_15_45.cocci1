@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->buf; 
++ E0 = E1->buf + FFMIN(4096, E1->buf_size); 
+// Infered from: (FFmpeg/{prevFiles/prev_2b501b_e6fabd_libavformat#dtsdec.c,revFiles/2b501b_e6fabd_libavformat#dtsdec.c}: dts_probe)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_a3bb56_d1ca18_libavformat#avidec.c: avi_read_seek
+*/
+
+// ---------------------------------------------

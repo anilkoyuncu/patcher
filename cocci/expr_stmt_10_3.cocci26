@@ -1,0 +1,8 @@
+@@
+@@
+- warning("no threads support, ignoring %s", arg); 
++ warning("no threads support, ignoring --threads"); 
+// Infered from: (git/{prevFiles/prev_2b34e4_808090_builtin#pack-objects.c,revFiles/2b34e4_808090_builtin#pack-objects.c}: cmd_pack_objects)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

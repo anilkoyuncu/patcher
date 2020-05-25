@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+typedef guint;
+@@
+- guint I0 = tvb_length(E1); 
++ guint I0 = tvb_reported_length(E1); 
+  ...
+- return tvb_length(E1); 
++ return tvb_reported_length(E1); 
+// Infered from: (wireshark/{prevFiles/prev_822dd3_ce2b1c_epan#dissectors#packet-usb-audio.c,revFiles/822dd3_ce2b1c_epan#dissectors#packet-usb-audio.c}: dissect_usb_audio_bulk)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

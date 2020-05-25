@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = prefix_path(E1, strlen(E1), E0); 
++ E0 = strdup(prefix_filename(E1, strlen(E1), E0)); 
+// Infered from: (git/{prevFiles/prev_7a5375_d0b8c9_config.c,revFiles/7a5375_d0b8c9_config.c}: git_etc_gitconfig)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef vlc_va_sys_t;
+@@
+- vlc_va_sys_t *I0 = malloc(sizeof(*I0) + E1->refs * sizeof(I0->pool[0])); 
++ vlc_va_sys_t *I0 = malloc(sizeof(*I0) + (E1->refs + 6) * sizeof(I0->pool[0])); 
+// Infered from: (vlc/{prevFiles/prev_9037ee_fb9ba9_modules#hw#vdpau#avcodec.c,revFiles/9037ee_fb9ba9_modules#hw#vdpau#avcodec.c}: Open)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

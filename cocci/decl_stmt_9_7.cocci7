@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef uint8_t;
+@@
+- uint8_t *I0 = realloc(E1->p_buffer, E1->i_buffer_size + 1024); 
++ uint8_t *I0 = realloc(E1->p_buffer, E1->i_buffer_size + 1025); 
+// Infered from: (vlc/{prevFiles/prev_d087a5_7655b6_src#network#httpd.c,revFiles/d087a5_7655b6_src#network#httpd.c}: httpd_ClientRecv)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

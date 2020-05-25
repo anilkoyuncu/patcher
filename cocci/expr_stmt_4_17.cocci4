@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->pb_flags &= ~(MSG_GEN_FLAG_MASK & E1); 
++ E0->pb_flags &= ~(E1 & MSG_GEN_FLAG_MASK); 
+// Infered from: (linux/{prevFiles/prev_2b241d_40daf5_drivers#staging#lustre#lustre#ptlrpc#pack_generic.c,revFiles/2b241d_40daf5_drivers#staging#lustre#lustre#ptlrpc#pack_generic.c}: lustre_msg_clear_flags)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

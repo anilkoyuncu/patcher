@@ -1,0 +1,16 @@
+@@
+identifier I0, I2;
+expression E1;
+@@
+- I0 = tvb_get_guint8(E1, 0); 
++ addr = tvb_get_guint8(E1, 0); 
+  ...
+- if (I2 != QRR && I0 == 0xff)  
++ if (I2 != QRR && addr == 0xff)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_37547c_fadae7_epan#dissectors#packet-qllc.c,revFiles/37547c_fadae7_epan#dissectors#packet-qllc.c}: dissect_qllc)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

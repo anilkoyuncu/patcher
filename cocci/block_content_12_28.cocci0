@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef uint32_t;
+typedef uint64_t;
+@@
+- uint32_t I0; 
++ uint64_t I0; 
+// Infered from: (qemu/{prevFiles/prev_f95853_a0b261_hw#watchdog#wdt_aspeed.c,revFiles/f95853_a0b261_hw#watchdog#wdt_aspeed.c}: aspeed_wdt_reload)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

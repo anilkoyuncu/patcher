@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if ((E0->flags & AVFMT_NOFILE) || (E0 == &rtp_demux && !strcmp(E1, "null")))  
++ if ((E0 && (E0->flags & AVFMT_NOFILE)) || (E0 == &rtp_demux && !strcmp(  E1, "null")))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_afdd82_8d6625b_libavformat#utils.c,revFiles/afdd82_8d6625b_libavformat#utils.c}: av_open_input_file)
+// False positives: (FFmpeg/revFiles/afdd82_8d6625b_libavformat#utils.c: av_close_input_file)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

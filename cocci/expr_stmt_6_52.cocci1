@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->rdma_dev_res.ports[E1].state = PVRDMA_PORT_DOWN; 
++ E0->rdma_dev_res.ports[E1].state = IBV_PORT_DOWN; 
+// Infered from: (qemu/{prevFiles/prev_197053_9edc19_hw#rdma#vmw#pvrdma_main.c,revFiles/197053_9edc19_hw#rdma#vmw#pvrdma_main.c}: init_ports)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

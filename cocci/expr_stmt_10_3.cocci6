@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(E0->iss->dev, "%s: could not register video device (%d)\n", __func__,  E1); 
++ dev_err(E0->iss->dev, "could not register video device (%d)\n", E1); 
+// Infered from: (linux/{prevFiles/prev_8c6ccb_aed1c7_drivers#staging#media#omap4iss#iss_video.c,revFiles/8c6ccb_aed1c7_drivers#staging#media#omap4iss#iss_video.c}: omap4iss_video_register)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

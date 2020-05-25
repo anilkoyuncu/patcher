@@ -1,0 +1,20 @@
+@@
+type T2;
+expression E0, E1;
+@@
+- E0 = xcalloc(E1 + 1, sizeof(T2 )); 
++ E0 = xcalloc(st_add(E1, 1), sizeof(T2 )); 
+// Infered from: (git/{prevFiles/prev_50a6c8_96ffc0_builtin#fetch.c,revFiles/50a6c8_96ffc0_builtin#fetch.c}: fetch_one), (git/{prevFiles/prev_50a6c8_96ffc0_builtin#clean.c,revFiles/50a6c8_96ffc0_builtin#clean.c}: list_and_choose), (git/{prevFiles/prev_50a6c8_96ffc0_builtin#merge.c,revFiles/50a6c8_96ffc0_builtin#merge.c}: setup_with_upstream)
+// Recall: 0.60, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

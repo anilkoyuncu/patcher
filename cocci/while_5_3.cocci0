@@ -1,0 +1,12 @@
+@@
+expression E1, E0;
+@@
+- while (E0 = E1)  
++ while ((E0 = E1))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_aec625_2f06a4_ext#mysql#php_mysql.c,revFiles/aec625_2f06a4_ext#mysql#php_mysql.c}: php_mysql_do_query_general), (php-src/{prevFiles/prev_4877d1_279588_ext#standard#file.c,revFiles/4877d1_279588_ext#standard#file.c}: php_fread_all), (php-src/{prevFiles/prev_d101e1_7fe60a_Zend#zend_strtod.c,revFiles/d101e1_7fe60a_Zend#zend_strtod.c}: zend_hex_strtod), (apr/{prevFiles/prev_03a56e_3c319d_test#testskiplist.c,revFiles/03a56e_3c319d_test#testskiplist.c}: skiplist_test), (php-src/{prevFiles/prev_f7bf835_896c45_main#SAPI.c,revFiles/f7bf835_896c45_main#SAPI.c}: sapi_header_op), (FFmpeg/{prevFiles/prev_61af68_818ff9_vhook#imlib2.c,revFiles/61af68_818ff9_vhook#imlib2.c}: Configure)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

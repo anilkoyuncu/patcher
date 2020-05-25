@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- watchdog_set_drvdata(&stmp3xxx_wdd, &E0->dev); 
++ watchdog_set_drvdata(&stmp3xxx_wdd, dev); 
+  ...
+- stmp3xxx_wdd.parent = &E0->dev; 
+- E1 = watchdog_register_device(&stmp3xxx_wdd); 
++ stmp3xxx_wdd.parent = dev; 
++ E1 = devm_watchdog_register_device(dev, &stmp3xxx_wdd); 
+  ...
+- dev_info(&E0->dev, "initialized watchdog with heartbeat %ds\n",  stmp3xxx_wdd.timeout); 
++ dev_info(dev, "initialized watchdog with heartbeat %ds\n",  stmp3xxx_wdd.timeout); 
+// Infered from: (linux/{prevFiles/prev_55082c0_cfe9ee3_drivers#watchdog#stmp3xxx_rtc_wdt.c,revFiles/55082c0_cfe9ee3_drivers#watchdog#stmp3xxx_rtc_wdt.c}: stmp3xxx_wdt_probe)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.62
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0->data = ngx_pnalloc(E1->pool, E2->pos - E3 + 1); 
++ E0->data = ngx_pnalloc(E1->pool, E2->pos - 1 - E3 + 1); 
+// Infered from: (nginx/{prevFiles/prev_66f6ba_b65cfb_src#core#ngx_conf_file.c,revFiles/66f6ba_b65cfb_src#core#ngx_conf_file.c}: ngx_conf_read_token)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,32 @@
+@@
+expression E0;
+@@
+- if (E0.vectable < 4)  
++ if (E0.vectable > 0 && E0.vectable < 4)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_8e37a1_43c346_libavcodec#truemotion1.c,revFiles/8e37a1_43c346_libavcodec#truemotion1.c}: truemotion1_decode_header)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 10/12(83%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_780211_4af583_apps#s_cb.c: 
+ - ompi/prevFiles/prev_be13b8_f488b9_ompi#mca#btl#sctp#btl_sctp_proc.c: mca_btl_sctp_proc_insert
+*/
+
+// ---------------------------------------------

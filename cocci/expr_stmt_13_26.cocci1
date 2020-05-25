@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- video_format_ApplyRotation(&E0->fmt, &E0->fmt); 
++ video_format_TransformTo(&E0->fmt, ORIENT_NORMAL); 
+// Infered from: (vlc/{prevFiles/prev_b51781_6ef171_modules#video_output#android#display.c,revFiles/b51781_6ef171_modules#video_output#android#display.c}: AndroidWindow_SetupANWP), (vlc/{prevFiles/prev_b51781_6ef171_modules#video_output#android#display.c,revFiles/b51781_6ef171_modules#video_output#android#display.c}: OpenCommon)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

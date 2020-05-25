@@ -1,0 +1,8 @@
+@@
+@@
+- logfile = fopen(logfilename, log_append ? "wa" :"w"); 
++ logfile = fopen(logfilename, log_append ? "a" :"w"); 
+// Infered from: (qemu/{prevFiles/prev_11fcfa_7e1543_exec.c,revFiles/11fcfa_7e1543_exec.c}: cpu_set_log)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

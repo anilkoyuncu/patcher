@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef VirtIOSerialPort;
+@@
+- VirtIOSerialPort *I0 = DO_UPCAST(VirtIOSerialPort , dev, E1); 
++ VirtIOSerialPort *I0 = VIRTIO_SERIAL_PORT(E1); 
+// Infered from: (qemu/{prevFiles/prev_d9eb0b_649a1b_hw#char#virtio-serial-bus.c,revFiles/d9eb0b_649a1b_hw#char#virtio-serial-bus.c}: virtser_bus_dev_print)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

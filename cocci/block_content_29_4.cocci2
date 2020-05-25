@@ -1,0 +1,26 @@
+@@
+identifier I1;
+expression E2, E0, E3, E4, E5;
+@@
+- object_initialize(&E0->I1, E2, E3); 
+- object_property_add_child(E4, E5, OBJECT(&E0->I1), &error_abort); 
++ object_initialize_child(E4, "cpus", &E0->cpus, sizeof(E0->cpus),  TYPE_RISCV_HART_ARRAY, &error_abort, NULL); 
+// Infered from: (qemu/{prevFiles/prev_54f314_e1ea55_hw#riscv#sifive_e.c,revFiles/54f314_e1ea55_hw#riscv#sifive_e.c}: riscv_sifive_e_soc_init)
+// False positives: (qemu/revFiles/1b0ad56_661488_hw#arm#aspeed.c: aspeed_board_init), (qemu/revFiles/4eea9d_54f314_hw#riscv#sifive_u.c: riscv_sifive_u_init), (qemu/revFiles/54f314_e1ea55_hw#riscv#sifive_e.c: riscv_sifive_e_init), (qemu/revFiles/8ff62f_5657c3_hw#riscv#spike.c: spike_v1_09_1_board_init), (qemu/revFiles/8ff62f_5657c3_hw#riscv#spike.c: spike_v1_10_0_board_init), (qemu/revFiles/a993cb_4eea9d_hw#riscv#virt.c: riscv_virt_board_init), (qemu/revFiles/d03137_1b0ad56_hw#arm#imx25_pdk.c: imx25_pdk_init), (qemu/revFiles/d03137_1b0ad56_hw#arm#kzm.c: kzm_init), (qemu/revFiles/d03137_1b0ad56_hw#arm#raspi.c: raspi_init), (qemu/revFiles/d03137_1b0ad56_hw#arm#sabrelite.c: sabrelite_init), (qemu/revFiles/d03137_1b0ad56_hw#arm#xlnx-zcu102.c: xlnx_zcu102_init)
+// Recall: 0.67, Precision: 0.72, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.98, Precision: 1.00
+// -- General --
+// Functions fully changed: 12/13(92%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_4eea9d_54f314_hw#riscv#sifive_u.c: riscv_sifive_u_soc_init
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- tcg_out_mov(E0, E1[0], E1[2]); 
++ tcg_out_mov(E0, E1[0], E1[1]); 
+// Infered from: (qemu/{prevFiles/prev_98b8d9_63e6f3_tcg#ppc#tcg-target.c,revFiles/98b8d9_63e6f3_tcg#ppc#tcg-target.c}: tcg_out_op)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

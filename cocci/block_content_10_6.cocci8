@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- const  int I0 = E1 - E2; 
++ const  size_t I0 = E1 - E2; 
+// Infered from: (wireshark/{prevFiles/prev_cf2b47_c86c616_inet_pton.c,revFiles/cf2b47_c86c616_inet_pton.c}: inet_pton6)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

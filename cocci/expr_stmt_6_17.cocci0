@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- E0 = E0; 
+// Infered from: (wireshark/{prevFiles/prev_c66802_6e66ca_gtk#gui_utils.c,revFiles/c66802_6e66ca_gtk#gui_utils.c}: window_get_geometry)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E0, E1, E3, E4;
+@@
+- memcpy(E0, E1->I2[E3].iov_base + E4, E1->I2[E3].iov_len); 
++ memcpy(E0 + E4, E1->I2[E3].iov_base, E1->I2[E3].iov_len); 
+// Infered from: (apr/{prevFiles/prev_774c0e_143bd1_network_io#unix#sendrecv.c,revFiles/774c0e_143bd1_network_io#unix#sendrecv.c}: ap_sendfile), (apr/{prevFiles/prev_774c0e_143bd1_network_io#unix#sendrecv.c,revFiles/774c0e_143bd1_network_io#unix#sendrecv.c}: ap_sendfile)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

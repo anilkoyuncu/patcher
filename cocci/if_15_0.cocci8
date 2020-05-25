@@ -1,0 +1,13 @@
+@@
+@@
+- if (prefs.gui_colorized_fg)  
++ if (prefs.gui_colorized_bg)  
+  {
+- g_free(prefs.gui_colorized_fg); 
++ g_free(prefs.gui_colorized_bg); 
+  }
+// Infered from: (wireshark/{prevFiles/prev_c09379_e2bcee_epan#prefs.c,revFiles/c09379_e2bcee_epan#prefs.c}: pre_init_prefs)
+// False positives: (wireshark/revFiles/c09379_e2bcee_epan#prefs.c: pre_init_prefs)
+// Recall: 0.08, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

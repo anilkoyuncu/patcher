@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- if (IS_ERR((E0 = nvkm_umem_search(E1, E2))))  
++ E0 = nvkm_umem_search(E1, E2); 
++ if (IS_ERR(E0))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_94ee54d_fe9748b_drivers#gpu#drm#nouveau#nvkm#subdev#mmu#uvmm.c,revFiles/94ee54d_fe9748b_drivers#gpu#drm#nouveau#nvkm#subdev#mmu#uvmm.c}: nvkm_uvmm_mthd_map)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

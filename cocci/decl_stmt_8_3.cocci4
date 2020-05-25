@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef DCTELEM;
+@@
+- DCTELEM *I0 = E1->src + 32; 
++ DCTELEM *I0 = (DCTELEM *)(E1->src + 32); 
+// Infered from: (FFmpeg/{prevFiles/prev_337953_2a30df0_libavfilter#libmpcodecs#vf_pp7.c,revFiles/337953_2a30df0_libavfilter#libmpcodecs#vf_pp7.c}: filter)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

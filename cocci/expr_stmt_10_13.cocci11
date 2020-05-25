@@ -1,0 +1,47 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- printf("fps:%d, br:%d, qpbit:%d, abt_flag:%d, j_type_bit:%d, tl_mv_flag:%d, mbrl_bit:%d, code:%d, flag3:%d\n",  E0, E1->bit_rate, E2->mspel_bit, E2->abt_flag, E2->j_type_bit,  E2->top_left_mv_flag, E2->per_mb_rl_bit, E3, E2->flag3); 
++ printf("fps:%d, br:%d, qpbit:%d, abt_flag:%d, j_type_bit:%d, tl_mv_flag:%d, mbrl_bit:%d, code:%d, flag3:%d, slices:%d\n",  E0, E1->bit_rate, E2->mspel_bit, E2->abt_flag, E2->j_type_bit,  E2->top_left_mv_flag, E2->per_mb_rl_bit, E3, E2->flag3, E3); 
+// Infered from: (FFmpeg/{prevFiles/prev_2826984_e5ab4f_libavcodec#wmv2.c,revFiles/2826984_e5ab4f_libavcodec#wmv2.c}: decode_ext_header)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 12 rules):
+// -- Edit Location --
+// Recall: 0.39, Precision: 0.93
+// -- Node Change --
+// Recall: 0.38, Precision: 0.88
+// -- General --
+// Functions fully changed: 12/34(35%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_8d5516_c6fcb0_hw#intc#ioapic.c: ioapic_realize
+ - qemu/prevFiles/prev_71c276_8c4f0e_hw#arm#virt.c: 
+ - FFmpeg/prevFiles/prev_b316aa_346db9_libavformat#rtsp.c: rtsp_read_header
+ - git/prevFiles/prev_33f4d0_a48e1d_apply.c: parse_git_header
+ - vlc/prevFiles/prev_b68f50_edd219_modules#access#http.c: Request
+ - codeflaws/prevFiles/prev_416-C-10746807-10746820.c: main
+ - codeflaws/prevFiles/prev_416-C-10746811-10746820.c: main
+ - vlc/prevFiles/prev_d8ea339_168720_modules#demux#mpeg#system.c: DemuxTS
+ - qemu/prevFiles/prev_8d5516_c6fcb0_hw#intc#ioapic.c: 
+ - qemu/prevFiles/prev_44acd4_834edd_block#sheepdog.c: sd_parse_uri
+ - ompi/prevFiles/prev_8b1157_469e40_orte#mca#plm#rsh#plm_rsh_module.c: setup_launch
+ - qemu/prevFiles/prev_44acd4_834edd_block#gluster.c: qemu_gluster_parse
+ - FFmpeg/prevFiles/prev_f6d511_f4e2c4_libavcodec#rv10.c: rv20_decode_picture_header
+ - codeflaws/prevFiles/prev_313-A-16458926-16458962.c: main
+ - git/prevFiles/prev_608d48_66d587_connect.c: git_tcp_connect_sock
+ - wireshark/prevFiles/prev_ecc548_66cf1f_capture_wpcap_packet.c: wpcap_packet_request
+ - nginx/prevFiles/prev_5d3a85_8b4c77_src#mail#ngx_mail_ssl_module.c: ngx_mail_ssl_merge_conf
+ - wireshark/prevFiles/prev_2f5825_c53979_packet-snmp.c: dissect_snmp_pdu
+ - qemu/prevFiles/prev_cda94b_7c3370_vl.c: drive_init
+ - lighttpd1.4/prevFiles/prev_162e75_8cf6e9_src#mod_authn_gssapi.c: mod_authn_gssapi_create_krb5_ccache
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_79a8af_6fe309_hw#usb#hcd-xhci.c: xhci_runtime_write
+ - qemu/prevFiles/prev_79a8af_6fe309_hw#usb#hcd-xhci.c: xhci_oper_write
+*/
+
+// ---------------------------------------------

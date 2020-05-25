@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- col_add_fstr(E0->cinfo, COL_INFO, "%s",  (char *)g_datalist_get_data(&msg_types, E1)); 
++ msg_type = (char *)g_datalist_get_data(&msg_types, E1); 
++ if (msg_type)  
++ {
++ col_add_fstr(E0->cinfo, COL_INFO, "%s", msg_type); 
++ }
+// Infered from: (wireshark/{prevFiles/prev_48c4f8_bed777_epan#dissectors#packet-fix.c,revFiles/48c4f8_bed777_epan#dissectors#packet-fix.c}: dissect_fix)
+// Recall: 0.27, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_217d3f_f23585_gtk#gtkwidget.c: gtk_widget_get_style_context
+ - gtk/prevFiles/prev_217d3f_f23585_gtk#gtkwidget.c: gtk_widget_set_parent
+ - wireshark/prevFiles/prev_48c4f8_bed777_epan#dissectors#packet-fix.c: dissect_fix
+*/
+
+// ---------------------------------------------

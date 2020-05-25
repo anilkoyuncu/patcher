@@ -1,0 +1,9 @@
+@@
+expression E1, E0, E2;
+@@
+- E0 = X509_CRL_get_ext_by_NID(E1, E2, 0); 
++ E0 = X509_CRL_get_ext_by_NID(E1, E2, -1); 
+// Infered from: (openssl/{prevFiles/prev_abd2ed_3bf15e_crypto#x509#x509_vfy.c,revFiles/abd2ed_3bf15e_crypto#x509#x509_vfy.c}: crl_extension_match), (openssl/{prevFiles/prev_abd2ed_3bf15e_crypto#x509#x509_vfy.c,revFiles/abd2ed_3bf15e_crypto#x509#x509_vfy.c}: crl_extension_match)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

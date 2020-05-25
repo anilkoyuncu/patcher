@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = estrdup(E1); 
++ E0 = E1; 
+// Infered from: (php-src/{prevFiles/prev_17bc1d_6f9c13_ext#filter#filter.c,revFiles/17bc1d_6f9c13_ext#filter#filter.c}: php_sapi_filter)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

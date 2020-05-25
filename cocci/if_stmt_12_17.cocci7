@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (!E0->errorres)  
++ if (!E0->errorres && !E0->segmentation.ignore_refmap)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e12188_d32d05_libavcodec#vp9.c,revFiles/e12188_d32d05_libavcodec#vp9.c}: decode_mode)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

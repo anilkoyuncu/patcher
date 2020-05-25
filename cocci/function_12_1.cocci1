@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->i_current_pts > 0)  
++ if (E0->i_time_track >= 0 && E0->i_current_pts > 0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_1e5e69_195e4b_modules#demux#ps.c,revFiles/1e5e69_195e4b_modules#demux#ps.c}: Control)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

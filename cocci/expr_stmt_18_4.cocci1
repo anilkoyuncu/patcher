@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0->hwxmits = kzalloc(sizeof(struct hw_xmit ) * E0->hwxmit_entry, GFP_KERNEL); 
++ E0->hwxmits = kcalloc(E0->hwxmit_entry, sizeof(struct hw_xmit ), GFP_KERNEL); 
+// Infered from: (linux/{prevFiles/prev_0507a1_7f3990_drivers#staging#rtl8188eu#core#rtw_xmit.c,revFiles/0507a1_7f3990_drivers#staging#rtl8188eu#core#rtw_xmit.c}: rtw_alloc_hwxmits)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

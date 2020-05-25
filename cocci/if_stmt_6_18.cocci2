@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->revision <= QXL_REVISION_STABLE_V10 && E1 >= QXL_IO_FLUSH_SURFACES_ASYNC)  
++ if (E0->revision <= QXL_REVISION_STABLE_V10 && E1 > QXL_IO_FLUSH_RELEASE)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_ffe01e_36a03e_hw#qxl.c,revFiles/ffe01e_36a03e_hw#qxl.c}: ioport_write)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

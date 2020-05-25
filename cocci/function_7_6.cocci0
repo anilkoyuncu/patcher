@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- stream_seek(cur_stream, E0, E1); 
++ stream_seek(cur_stream, E0, E1, 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_2ef460_c55806_ffplay.c,revFiles/2ef460_c55806_ffplay.c}: event_loop)
+// False positives: (FFmpeg/revFiles/2ef460_c55806_ffplay.c: event_loop)
+// Recall: 0.08, Precision: 0.67, Matching recall: 0.40
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- EVP_CIPHER_CTX_ctrl(E0, EVP_CTRL_SET_RC2_KEY_BITS, E1, NULL); 
+- if (EVP_CIPHER_CTX_set_key_length(E0, E1 / 8) <= 0)  
++ if (EVP_CIPHER_CTX_ctrl(E0, EVP_CTRL_SET_RC2_KEY_BITS, E1, NULL) <= 0 || EVP_CIPHER_CTX_set_key_length(  E0, E1 / 8) <= 0)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_434893_c20a76_crypto#evp#e_rc2.c,revFiles/434893_c20a76_crypto#evp#e_rc2.c}: rc2_get_asn1_type_and_iv)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

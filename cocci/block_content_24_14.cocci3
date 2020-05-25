@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- set_irq_handler(E0, handle_edge_irq); 
++ irq_set_handler(E0, handle_edge_irq); 
+// Infered from: (linux/{prevFiles/prev_0b98b16_a3b975_arch#m68k#platform#coldfire#intc-2.c,revFiles/0b98b16_a3b975_arch#m68k#platform#coldfire#intc-2.c}: intc_irq_set_type), (linux/{prevFiles/prev_0b98b16_a3b975_arch#m68k#platform#coldfire#intc-simr.c,revFiles/0b98b16_a3b975_arch#m68k#platform#coldfire#intc-simr.c}: intc_irq_set_type)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

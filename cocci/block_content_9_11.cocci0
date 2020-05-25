@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = read_ledword(&E1); 
++ read_ledword(&E1); 
+// Infered from: (openssl/{prevFiles/prev_c8bbd9_57ae37_crypto#pem#pvkfmt.c,revFiles/c8bbd9_57ae37_crypto#pem#pvkfmt.c}: do_PVK_header)
+// False positives: (openssl/revFiles/c8bbd9_57ae37_crypto#pem#pvkfmt.c: do_PVK_header)
+// Recall: 0.12, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

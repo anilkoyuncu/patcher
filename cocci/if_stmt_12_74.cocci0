@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 == SERVER_ANNOUNCE_MESSAGE_TYPE)  
++ if ((E0 == SERVER_ANNOUNCE_MESSAGE_TYPE) || (E0 == ENDPOINT_KEEP_ALIVE_MESSAGE_TYPE))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_d1db77_055e25_epan#dissectors#packet-asap.c,revFiles/d1db77_055e25_epan#dissectors#packet-asap.c}: dissect_asap_message)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+identifier I0, I1;
+@@
+- I0 = strstr(I1, "\r\n"); 
+- assert(I0 - (I1 + 6) == 12); 
+  ...
+- I1 = I0 + 2; 
++ I1 += 6; 
+// Infered from: (redis/{prevFiles/prev_f6da15_b94742_src#redis-benchmark.c,revFiles/f6da15_b94742_src#redis-benchmark.c}: createClient)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

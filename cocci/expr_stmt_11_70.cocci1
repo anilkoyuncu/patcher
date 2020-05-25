@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0 = (E1->channel_layout && E1->channels == av_get_channel_layout_nb_channels(  E1->channels)) ? E1->channel_layout :av_get_default_channel_layout(  E1->channels); 
++ E0 = (E1->channel_layout && E1->channels == av_get_channel_layout_nb_channels(  E1->channel_layout)) ? E1->channel_layout :av_get_default_channel_layout(  E1->channels); 
+// Infered from: (FFmpeg/{prevFiles/prev_8ee77f_5d94f2_ffplay.c,revFiles/8ee77f_5d94f2_ffplay.c}: stream_component_open)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

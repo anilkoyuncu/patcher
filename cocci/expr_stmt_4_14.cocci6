@@ -1,0 +1,39 @@
+@@
+expression E0;
+@@
+- E0.bucket_size = ngx_cacheline_size; 
++ E0.bucket_size = 64; 
+// Infered from: (nginx/{prevFiles/prev_627b8a_c537f0_src#http#modules#ngx_http_fastcgi_module.c,revFiles/627b8a_c537f0_src#http#modules#ngx_http_fastcgi_module.c}: ngx_http_fastcgi_merge_loc_conf), (nginx/{prevFiles/prev_627b8a_c537f0_src#http#ngx_http.c,revFiles/627b8a_c537f0_src#http#ngx_http.c}: ngx_http_block), (nginx/{prevFiles/prev_627b8a_c537f0_src#http#ngx_http_upstream.c,revFiles/627b8a_c537f0_src#http#ngx_http_upstream.c}: ngx_http_upstream_init_main_conf), (nginx/{prevFiles/prev_627b8a_c537f0_src#http#modules#ngx_http_proxy_module.c,revFiles/627b8a_c537f0_src#http#modules#ngx_http_proxy_module.c}: ngx_http_proxy_merge_loc_conf)
+// False positives: (nginx/revFiles/627b8a_c537f0_src#http#modules#ngx_http_proxy_module.c: ngx_http_proxy_merge_loc_conf)
+// Recall: 0.15, Precision: 0.80, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.58, Precision: 1.00
+// -- Node Change --
+// Recall: 0.58, Precision: 0.86
+// -- General --
+// Functions fully changed: 11/24(45%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_cc9442_15338f_cpu-exec.c: tb_find_fast
+ - ompi/prevFiles/prev_1f9218_855845_opal#mca#btl#openib#btl_openib_mca.c: btl_openib_register_mca_params
+ - qemu/prevFiles/prev_98f62e_a86324_hw#scsi#lsi53c895a.c: lsi_soft_reset
+ - codeflaws/prevFiles/prev_407-A-7015073-7015076.c: main
+ - libarchive/prevFiles/prev_cf3c51_a27c72_libarchive#archive_read_support_compression_xz.c: xz_filter_read
+ - libarchive/prevFiles/prev_cf3c51_a27c72_libarchive#archive_read_support_compression_xz.c: xz_lzma_bidder_init
+ - apr/prevFiles/prev_1df453_ce67ea_file_io#unix#seek.c: setptr
+ - codeflaws/prevFiles/prev_538-C-11035060-11035103.c: main
+ - vlc/prevFiles/prev_6b9013_7f7c0d_modules#demux#vobsub.c: TextLoad
+ - qemu/prevFiles/prev_acbd48_48cefd_contrib#libvhost-user#libvhost-user.c: vu_log_write
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_cc9442_15338f_cpu-exec.c: handle_cpu_signal
+ - nginx/prevFiles/prev_627b8a_c537f0_src#http#modules#ngx_http_proxy_module.c: ngx_http_proxy_merge_loc_conf
+ - vlc/prevFiles/prev_101baf_debf91_modules#codec#dvbsub.c: render
+*/
+
+// ---------------------------------------------

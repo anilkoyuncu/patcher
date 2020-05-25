@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!VCWD_STAT(E0, &E1))  
++ if (!zend_stat(E0, &E1))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_fbf46d_9ffc90_sapi#cli#php_cli_server.c,revFiles/fbf46d_9ffc90_sapi#cli#php_cli_server.c}: php_cli_server_request_translate_vpath)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

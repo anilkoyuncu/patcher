@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->codec->capabilities & CODEC_CAP_DR1)  
++ if ((E0->codec->capabilities & CODEC_CAP_DR1) && E0->codec_id != CODEC_ID_SVQ1)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_454fab_8bce71_ffplay.c,revFiles/454fab_8bce71_ffplay.c}: input_init)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

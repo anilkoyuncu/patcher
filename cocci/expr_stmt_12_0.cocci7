@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef uint64_t;
+@@
+- ngx_log_debug2(NGX_LOG_DEBUG_HTTP, E0->log, 0,  "get ip hash peer, hash: %ui %04XA", E1, E2); 
++ ngx_log_debug2(NGX_LOG_DEBUG_HTTP, E0->log, 0,  "get ip hash peer, hash: %ui %04XL", E1, (uint64_t )E2); 
+// Infered from: (nginx/{prevFiles/prev_00ef9f_53fec2_src#http#modules#ngx_http_upstream_ip_hash_module.c,revFiles/00ef9f_53fec2_src#http#modules#ngx_http_upstream_ip_hash_module.c}: ngx_http_upstream_get_ip_hash_peer)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

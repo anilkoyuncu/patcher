@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+  int I0; 
+  ...
+- if (rdbSaveType(E1, E2->type) == -1)  
++ if (rdbSaveType(E1, I0) == -1)  
+  {
+- return -1; 
++ return -1; 
+  }
+// Infered from: (redis/{prevFiles/prev_1187b0_d4fb9f_src#rdb.c,revFiles/1187b0_d4fb9f_src#rdb.c}: rdbSaveKeyValuePair)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

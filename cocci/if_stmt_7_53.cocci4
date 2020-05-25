@@ -1,0 +1,16 @@
+@@
+identifier I1, I2;
+expression E0, E3, E4;
+@@
+- E0[4] = I1; 
+- E0[6] = ((I2) >> 4) & 0xff; 
+- E0[7] = (I2 << 4) & 0xff; 
+- E3->p_vlc->pf_memcpy(&E0[8], E4, I2 * 2); 
++ E0[4] = i_bsmod; 
++ E0[6] = ((i_frame_size) >> 4) & 0xff; 
++ E0[7] = (i_frame_size << 4) & 0xff; 
++ E3->p_vlc->pf_memcpy(&E0[8], E4, i_frame_size * 2); 
+// Infered from: (vlc/{prevFiles/prev_414f55_33d2c6_modules#audio_filter#converter#a52tospdif.c,revFiles/414f55_33d2c6_modules#audio_filter#converter#a52tospdif.c}: DoWork)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.22
+
+// ---------------------------------------------

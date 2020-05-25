@@ -1,0 +1,37 @@
+@@
+identifier I0;
+@@
+- static int I0 = 0; 
++ static int vlcs_initialized = 0; 
+  ...
+- if (I0)  
++ if (vlcs_initialized)  
+  {
+  ...
+  }
+  ...
+- I0 = 1; 
++ vlcs_initialized = 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavcodec#dca.c,revFiles/5e5348_f1cc49_libavcodec#dca.c}: dca_init_vlcs)
+// False positives: (FFmpeg/revFiles/5e5348_f1cc49_libavcodec#dca.c: pre_calc_cosmod), (FFmpeg/revFiles/5e5348_f1cc49_libavcodec#mpc7.c: mpc7_decode_init), (FFmpeg/revFiles/5e5348_f1cc49_libavcodec#mpc8.c: mpc8_decode_init), (FFmpeg/revFiles/5e5348_f1cc49_libavcodec#qdm2.c: qdm2_init), (FFmpeg/revFiles/5e5348_f1cc49_libavcodec#utils.c: avcodec_init)
+// Recall: 0.39, Precision: 0.58, Matching recall: 0.58
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.72, Precision: 0.72
+// -- General --
+// Functions fully changed: 4/9(44%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_5e5348_f1cc49_libavcodec#utils.c: avcodec_init
+ - FFmpeg/prevFiles/prev_5e5348_f1cc49_libavcodec#dca.c: pre_calc_cosmod
+ - FFmpeg/prevFiles/prev_5e5348_f1cc49_libavcodec#mpc7.c: mpc7_decode_init
+ - FFmpeg/prevFiles/prev_5e5348_f1cc49_libavcodec#mpc8.c: mpc8_decode_init
+ - FFmpeg/prevFiles/prev_5e5348_f1cc49_libavcodec#qdm2.c: qdm2_init
+*/
+
+// ---------------------------------------------

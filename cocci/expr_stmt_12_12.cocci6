@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ZVAL_STR(&E0, STR_COPY(E1)); 
++ ZVAL_STR(&E0, E1); 
+// Infered from: (php-src/{prevFiles/prev_9d1294_339d82_Zend#zend_API.c,revFiles/9d1294_339d82_Zend#zend_API.c}: zend_update_property_str)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

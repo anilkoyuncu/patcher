@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "qemu: could not load kernel '%s'\n", E0->kernel_filename); 
++ error_report("could not load kernel '%s'", E0->kernel_filename); 
+// Infered from: (qemu/{prevFiles/prev_2ecdc2_bd6e1d_hw#moxie#moxiesim.c,revFiles/2ecdc2_bd6e1d_hw#moxie#moxiesim.c}: load_kernel)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->subsampling_convert_ycbcrbuf = _TIFFmalloc(E0->subsampling_convert_ycbcrbuflen); 
++ E0->subsampling_convert_ycbcrbuf = _TIFFcalloc(1,  E0->subsampling_convert_ycbcrbuflen); 
+// Infered from: (libtiff/{prevFiles/prev_7475a2_4b2a34_libtiff#tif_ojpeg.c,revFiles/7475a2_4b2a34_libtiff#tif_ojpeg.c}: OJPEGWriteHeaderInfo)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

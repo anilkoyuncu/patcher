@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2;
+@@
+- fprintf(E0, ":%u %s\n", E1, sha1_to_hex(E2->base->sha1)); 
+// Infered from: (git/{prevFiles/prev_d47fb8_0843ac_builtin-fast-export.c,revFiles/d47fb8_0843ac_builtin-fast-export.c}: export_marks)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

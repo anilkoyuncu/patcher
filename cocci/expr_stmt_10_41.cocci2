@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E1 / 1000000000; 
+- snprintf(E2, sizeof(E2), "[%02d:%02d:%02d.%03d] ", E0 / 3600, (E0 / 60) % 60,  E0 % 60, (int )((E1 / 1000000) % 1000)); 
++ E0 = E1 / 1000; 
++ snprintf(E2, sizeof(E2), "[%02d:%02d:%02d.%03d] ", E0 / 3600, (E0 / 60) % 60,  E0 % 60, (int )(E1 % 1000)); 
+// Infered from: (qemu/{prevFiles/prev_a4bb1d_7aea44_qemu-char.c,revFiles/a4bb1d_7aea44_qemu-char.c}: mux_chr_write)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

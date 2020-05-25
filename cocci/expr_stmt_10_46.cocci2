@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- proto_tree_add_text(E0, NullTVB, E1, 1, "AndXCommand: %s",  (E2 == 0xFF ? "No futher commands" :decode_smb_name(E2))); 
++ proto_tree_add_text(E0, NullTVB, E1, 1, "AndXCommand: %s",  (E2 == 0xFF ? "No further commands" :decode_smb_name(E2))); 
+// Infered from: (wireshark/{prevFiles/prev_4d9934_a4aec4_packet-smb.c,revFiles/4d9934_a4aec4_packet-smb.c}: dissect_ssetup_andx_smb)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

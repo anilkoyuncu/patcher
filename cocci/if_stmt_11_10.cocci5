@@ -1,0 +1,42 @@
+@@
+identifier I0, I1, I2;
+expression E3;
+typedef mca_bml_base_btl_t;
+typedef mca_pml_ob1_send_request_t;
+@@
+  int mca_pml_ob1_send_request_start_rdma(mca_pml_ob1_send_request_t *I0,  mca_bml_base_btl_t *I1, size_t I2)  
+  {
+  ...
+- if (E3->btl_flags & MCA_BTL_FLAGS_GET)  
++ if (I0->req_rdma_cnt == 1 && E3->btl_flags & MCA_BTL_FLAGS_GET)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_26003b_e7d5ec_ompi#mca#pml#ob1#pml_ob1_sendreq.c,revFiles/26003b_e7d5ec_ompi#mca#pml#ob1#pml_ob1_sendreq.c}: mca_pml_ob1_send_request_start_rdma)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.55, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/12(50%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_acbb37_7cd7d1_libavcodec#mpeg12.c: ff_mpeg1_find_frame_end
+ - ompi/prevFiles/prev_26003b_e7d5ec_ompi#mca#pml#ob1#pml_ob1_sendreq.c: mca_pml_ob1_send_request_start_copy
+ - FFmpeg/prevFiles/prev_dc2552_d0121e_libavcodec#cinepak.c: cinepak_decode
+ - FFmpeg/prevFiles/prev_d239d4_c0cbe3_libavcodec#cinepak.c: cinepak_decode
+*/
+
+// ---------------------------------------------

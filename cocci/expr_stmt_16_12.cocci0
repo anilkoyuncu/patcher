@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- Tcl_SetHashValue(E0, (char *)E1); 
++ Tcl_SetHashValue(E0, INT2PTR(E1)); 
+// Infered from: (tcl/{prevFiles/prev_abcede_87c5f5_generic#tclCompile.c,revFiles/abcede_87c5f5_generic#tclCompile.c}: TclCompileScript), (tcl/{prevFiles/prev_0a901b_67e100_generic#tclCompile.c,revFiles/0a901b_67e100_generic#tclCompile.c}: TclCompileScript)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

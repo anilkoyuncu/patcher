@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- a[E0] = a[E0 + 1] = E0; 
++ a[E0] = a[E0 + 1] = (E0 + 1) / 2; 
+// Infered from: (codeflaws/{prevFiles/prev_271-C-13011289-13011297.c,revFiles/271-C-13011289-13011297.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

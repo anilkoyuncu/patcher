@@ -1,0 +1,29 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (tvb_reported_length(E0) < 6)  
++ if (tvb_captured_length(E0) < 6)  
+  {
+  ...
+  }
+  ...
+- dissect_ns_rpc_heur(E0, E1, E2, E3); 
++ dissect_ns_rpc(E0, E1, E2, E3); 
+// Infered from: (wireshark/{prevFiles/prev_80a1dd_228244_epan#dissectors#packet-ns-rpc.c,revFiles/80a1dd_228244_epan#dissectors#packet-ns-rpc.c}: dissect_ns_rpc_heur)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_449d2c7_a1867d3_drivers#i2c#busses#i2c-pnx.c: i2c_pnx_probe
+*/
+
+// ---------------------------------------------

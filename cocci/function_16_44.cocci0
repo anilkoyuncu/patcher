@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef u32;
+@@
+- u32 I0 = VHOST_VSOCK_DEFAULT_HOST_CID; 
+- return I0; 
++ return VHOST_VSOCK_DEFAULT_HOST_CID; 
+// Infered from: (linux/{prevFiles/prev_0d76d6e8_6c73008_drivers#vhost#vsock.c,revFiles/0d76d6e8_6c73008_drivers#vhost#vsock.c}: vhost_transport_get_local_cid)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

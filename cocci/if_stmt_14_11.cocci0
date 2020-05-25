@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->channels != E1->channels || E0->sample_fmt != E1->sample_fmt)  
++ if (E0->channels != E1->channels || E0->sample_fmt != E1->sample_fmt || E0->sample_rate != E1->sample_rate)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_03b605_ec20fc1_ffmpeg.c,revFiles/03b605_ec20fc1_ffmpeg.c}: do_audio_out)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

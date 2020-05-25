@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef PyObject;
+@@
+- PyObject *I0 = PyList_New(0); 
++ PyObject *I0; 
+  ...
+- if (E1)  
+- {
+- return E2; 
+- }
+// Infered from: (cpython/{prevFiles/prev_21fe72_d9cb1b_Modules#_json.c,revFiles/21fe72_d9cb1b_Modules#_json.c}: _parse_array_unicode)
+// False positives: (cpython/revFiles/21fe72_d9cb1b_Modules#_json.c: _parse_array_unicode)
+// Recall: 0.14, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------

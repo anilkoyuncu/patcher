@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- GST_DEBUG("intercepting event %d on pad %s:%s", GST_EVENT_TYPE(E0),  GST_DEBUG_PAD_NAME(E1)); 
++ GST_DEBUG("intercepting event type %d on pad %s:%s", GST_EVENT_TYPE(E0),  GST_DEBUG_PAD_NAME(E1)); 
+// Infered from: (gstreamer/{prevFiles/prev_56e7e5_ccd846_gst#schedulers#gstoptimalscheduler.c,revFiles/56e7e5_ccd846_gst#schedulers#gstoptimalscheduler.c}: gst_opt_scheduler_event_wrapper)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

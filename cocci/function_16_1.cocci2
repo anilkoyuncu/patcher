@@ -1,0 +1,32 @@
+@@
+identifier I0;
+expression E1;
+typedef Fax3CodecState;
+@@
+- Fax3CodecState *I0 = DecoderState(E1); 
++ Fax3CodecState *I0 = (Fax3CodecState *)Fax3State(E1); 
+// Infered from: (libtiff/{prevFiles/prev_5d03fd_ba5a00_libtiff#tif_fax3.c,revFiles/5d03fd_ba5a00_libtiff#tif_fax3.c}: Fax3SetupState)
+// False positives: (libtiff/revFiles/5d03fd_ba5a00_libtiff#tif_fax3.c: Fax3Cleanup), (libtiff/revFiles/5d03fd_ba5a00_libtiff#tif_fax3.c: Fax3PreDecode)
+// Recall: 0.04, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.15, Precision: 0.67
+// -- Node Change --
+// Recall: 0.15, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/29(6%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_12a730_580c51_win32#readdir.c: opendir
+ - php-src/prevFiles/prev_d23c38_e163ed_win32#readdir.c: opendir
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - libtiff/prevFiles/prev_5d03fd_ba5a00_libtiff#tif_fax3.c: Fax3Cleanup
+ - libtiff/prevFiles/prev_5d03fd_ba5a00_libtiff#tif_fax3.c: Fax3PreDecode
+*/
+
+// ---------------------------------------------

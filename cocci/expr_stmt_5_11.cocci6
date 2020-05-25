@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E1->mode_info.crtcs[E2]->base.fb->bits_per_pixel / 8; 
++ E0 = E1->mode_info.crtcs[E2]->base.primary->fb->bits_per_pixel / 8; 
+// Infered from: (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#radeon#r100.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#radeon#r100.c}: r100_bandwidth_update), (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#radeon#r100.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#radeon#r100.c}: r100_bandwidth_update)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

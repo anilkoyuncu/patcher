@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (GST_BUFFER_TIMESTAMP_IS_VALID(E0) && GST_BUFFER_DURATION_IS_VALID(  E0) && GST_CLOCK_TIME_IS_VALID(E1->segment.start) && GST_BUFFER_TIMESTAMP(  E0) + GST_BUFFER_DURATION_IS_VALID(E0) < E1->segment.start)  
++ if (GST_BUFFER_TIMESTAMP_IS_VALID(E0) && GST_BUFFER_DURATION_IS_VALID(  E0) && GST_CLOCK_TIME_IS_VALID(E1->segment.start) && GST_BUFFER_TIMESTAMP(  E0) + GST_BUFFER_DURATION(E0) < E1->segment.start)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (gstreamer/{prevFiles/prev_922c64_da8fb9_gst#aacparse#gstbaseparse.c,revFiles/922c64_da8fb9_gst#aacparse#gstbaseparse.c}: gst_base_parse_handle_and_push_buffer)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = curl_easy_perform(E1); 
++ curl_easy_perform(E1); 
+// Infered from: (curl/{prevFiles/prev_b06981_528b28_docs#examples#smooth-gtk-thread.c,revFiles/b06981_528b28_docs#examples#smooth-gtk-thread.c}: pull_one_url)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

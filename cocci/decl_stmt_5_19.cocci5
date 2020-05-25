@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef e_udphdr;
+@@
+- const  e_udphdr *I0 = (e_udphdr *)E1; 
++ const  e_udphdr *I0 = (const  e_udphdr *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#hostlist_udpip.c,revFiles/3ae2e5_8aebe1_ui#gtk#hostlist_udpip.c}: udpip_hostlist_packet), (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#conversations_udpip.c,revFiles/3ae2e5_8aebe1_ui#gtk#conversations_udpip.c}: udpip_conversation_packet)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

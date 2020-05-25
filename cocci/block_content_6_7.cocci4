@@ -1,0 +1,29 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+@@
+- int I0; 
+- I0 = EVP_CIPHER_meth_get_ctrl(EVP_aes_128_gcm())(E1, E2, E3, E4); 
++ int I0 = EVP_CIPHER_meth_get_ctrl(EVP_aes_128_gcm())(E1, E2, E3, E4); 
+// Infered from: (openssl/{prevFiles/prev_6606d6_d3ab93_engines#e_ossltest.c,revFiles/6606d6_d3ab93_engines#e_ossltest.c}: ossltest_aes128_gcm_ctrl)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 0.71
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_54e68f_9dec55_libavcodec#h264.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_c82baf_769513_crypto#rsa#rsa_pmeth.c: pkey_rsa_ctrl_str
+*/
+
+// ---------------------------------------------

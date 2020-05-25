@@ -1,0 +1,35 @@
+@@
+expression E0, E1;
+@@
+- if (compatible_for_assignment(E0, E1, "__class__"))  
++ if (compatible_for_assignment(E1, E0, "__class__"))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_de4d18_abfc4d_Objects#typeobject.c,revFiles/de4d18_abfc4d_Objects#typeobject.c}: object_set_class)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.92, Precision: 0.92
+// -- Node Change --
+// Recall: 0.86, Precision: 0.92
+// -- General --
+// Functions fully changed: 12/14(85%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_e5402f_fb8578_Objects#unicodeobject.c: charmap_encoding_error
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_e44d37_54cf3b_crypto#asn1#a_time.c: ASN1_TIME_cmp_time_t
+*/
+
+// ---------------------------------------------

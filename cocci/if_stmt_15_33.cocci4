@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef uint16_t;
+@@
+- bswap16s((uint16_t *)&E0); 
++ tswap16s((uint16_t *)&E0); 
+// Infered from: (qemu/{prevFiles/prev_49be80_8df1cd_target-sparc#op_helper.c,revFiles/49be80_8df1cd_target-sparc#op_helper.c}: helper_ld_asi), (qemu/{prevFiles/prev_49be80_8df1cd_target-sparc#op_helper.c,revFiles/49be80_8df1cd_target-sparc#op_helper.c}: helper_st_asi)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

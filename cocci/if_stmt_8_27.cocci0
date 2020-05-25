@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!strcasecmp(E0->pp_attributes[E1]->psz_field, "plgroup") || !strcasecmp(  E0->pp_attributes[E1]->psz_field, "x-plgroup"))  
++ if ((!strcasecmp(E0->pp_attributes[E1]->psz_field, "plgroup")) || (!strcasecmp(  E0->pp_attributes[  E1]->psz_field,  "x-plgroup")))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_46c00c_909aed_modules#misc#sap.c,revFiles/46c00c_909aed_modules#misc#sap.c}: sess_toitem)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

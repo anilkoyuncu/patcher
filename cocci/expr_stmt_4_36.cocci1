@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0[0] = DEFAULT_SLASH; 
++ E0[0] = '/'; 
+// Infered from: (php-src/{prevFiles/prev_500df3_6ac365_ext#standard#string.c,revFiles/500df3_6ac365_ext#standard#string.c}: php_dirname), (php-src/{prevFiles/prev_500df3_6ac365_ext#standard#string.c,revFiles/500df3_6ac365_ext#standard#string.c}: php_dirname)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

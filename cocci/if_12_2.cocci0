@@ -1,0 +1,15 @@
+@@
+expression E0, E1;
+@@
+- if (E0 < 1)  
++ if (E0 < 2)  
+  {
+- E1 += (1 - E0) * 60 * 60; 
+- E0 = 1; 
++ E1 += (2 - E0) * 60 * 60; 
++ E0 = 2; 
+  }
+// Infered from: (php-src/{prevFiles/prev_8f58b9_ad84ce_ext#standard#datetime.c,revFiles/8f58b9_ad84ce_ext#standard#datetime.c}: php_mktime)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

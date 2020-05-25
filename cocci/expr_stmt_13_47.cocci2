@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2;
+@@
+- fprintf(stderr, " bn_mul_part_recursive (%d+%d) * (%d+%d)\n", E0, E1, E2, E1); 
++ fprintf(stderr, " bn_mul_part_recursive (%d%+d) * (%d%+d)\n", E1, E0, E1, E2); 
+// Infered from: (openssl/{prevFiles/prev_70ba4e_31f528_crypto#bn#bn_mul.c,revFiles/70ba4e_31f528_crypto#bn#bn_mul.c}: bn_mul_part_recursive)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - openssl/prevFiles/prev_70ba4e_31f528_crypto#bn#bn_mul.c: bn_mul_part_recursive
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_cef4af_f5ecb4_epan#dissectors#packet-gsm_abis_om2000.c: dissect_om2k_mo
+*/
+
+// ---------------------------------------------

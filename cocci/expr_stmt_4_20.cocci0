@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.c_oflag |= OPOST; 
++ E0.c_oflag &= ~OPOST; 
+// Infered from: (qemu/{prevFiles/prev_12fb0a_ff46d9_chardev#char-serial.c,revFiles/12fb0a_ff46d9_chardev#char-serial.c}: tty_serial_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

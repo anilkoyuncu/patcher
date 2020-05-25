@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return retry_transfer_wrapper(E0, E1, E2, E2, E0->prot->url_write); 
++ return retry_transfer_wrapper(E0, E1, E2, E2, (void *)E0->prot->url_write); 
+// Infered from: (FFmpeg/{prevFiles/prev_e3323a_47ec65_libavformat#avio.c,revFiles/e3323a_47ec65_libavformat#avio.c}: ffurl_write)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 != true)  
++ if (!E0)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_4bb0142_38272d2_drivers#staging#rtl8192e#rtl8192e#r8192E_phy.c,revFiles/4bb0142_38272d2_drivers#staging#rtl8192e#rtl8192e#r8192E_phy.c}: rtl8192_BB_Config_ParaFile), (linux/{prevFiles/prev_4bb0142_38272d2_drivers#staging#rtl8192e#rtl8192e#r8192E_phy.c,revFiles/4bb0142_38272d2_drivers#staging#rtl8192e#rtl8192e#r8192E_phy.c}: SetRFPowerState8190), (linux/{prevFiles/prev_9e7e78d_027d3e_drivers#staging#rtl8188eu#hal#rf_cfg.c,revFiles/9e7e78d_027d3e_drivers#staging#rtl8188eu#hal#rf_cfg.c}: rf6052_conf_para), (linux/{prevFiles/prev_4bb0142_38272d2_drivers#staging#rtl8192e#rtl8192e#r8192E_firmware.c,revFiles/4bb0142_38272d2_drivers#staging#rtl8192e#rtl8192e#r8192E_firmware.c}: init_firmware)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

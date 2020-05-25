@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 &= 0xFFFF; 
++ E0 -= 0x10000; 
+// Infered from: (php-src/{prevFiles/prev_784b59_b301ee_ext#json#utf8_to_utf16.c,revFiles/784b59_b301ee_ext#json#utf8_to_utf16.c}: utf8_to_utf16)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

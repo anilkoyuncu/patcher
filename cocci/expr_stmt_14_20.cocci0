@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gtk_invisible_set_screen(GTK_INVISIBLE(E0), gtk_widget_get_screen(E1)); 
++ gtk_invisible_set_screen(GTK_INVISIBLE(E0),  gtk_widget_get_screen(GTK_WIDGET(E1))); 
+// Infered from: (gtk/{prevFiles/prev_1a385c_272c30_gtk#gtkhandlebox.c,revFiles/1a385c_272c30_gtk#gtkhandlebox.c}: gtk_handle_box_button_press)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

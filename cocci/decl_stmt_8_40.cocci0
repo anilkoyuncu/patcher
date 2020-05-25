@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef int64_t;
+@@
+- int64_t I0 = E1->temperature; 
++ int64_t I0 = E1->temperature * 1000 / 256; 
+// Infered from: (qemu/{prevFiles/prev_efdf6a_e683eb_hw#misc#tmp105.c,revFiles/efdf6a_e683eb_hw#misc#tmp105.c}: tmp105_get_temperature)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

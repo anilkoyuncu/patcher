@@ -1,0 +1,8 @@
+@@
+@@
+- error_report("warning: TUNGETFEATURES failed: %s", strerror(errno)); 
++ warn_report("TUNGETFEATURES failed: %s", strerror(errno)); 
+// Infered from: (qemu/{prevFiles/prev_3dc6f8_97f403_net#tap-linux.c,revFiles/3dc6f8_97f403_net#tap-linux.c}: tap_open)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

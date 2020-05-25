@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (NULL == (*E0 = malloc(E1 + 1)))  
++ if (NULL == (*E0 = (char *)malloc(E1 + 1)))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_4d2c11_a5ed96_ompi#mpi#f77#base#strings.c,revFiles/4d2c11_a5ed96_ompi#mpi#f77#base#strings.c}: ompi_fortran_string_f2c)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- av_assert2(E0->block_last_index[E1] >= 0); 
++ av_assert2(E0->block_last_index[E1] >= 0 || E0->h263_aic); 
+// Infered from: (FFmpeg/{prevFiles/prev_104dfa_707b21_libavcodec#mpegvideo.c,revFiles/104dfa_707b21_libavcodec#mpegvideo.c}: dct_unquantize_h263_intra_c)
+// False positives: (FFmpeg/revFiles/104dfa_707b21_libavcodec#mpegvideo.c: dct_unquantize_h263_inter_c)
+// Recall: 0.03, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

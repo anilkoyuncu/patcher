@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->action & WL_DATA_DEVICE_MANAGER_DND_ACTION_ASK)  
++ if (E0->action == 0 || E0->action & WL_DATA_DEVICE_MANAGER_DND_ACTION_ASK)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_8c7749_709ebc_gdk#wayland#gdkdrop-wayland.c,revFiles/8c7749_709ebc_gdk#wayland#gdkdrop-wayland.c}: gdk_wayland_drop_update_actions)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

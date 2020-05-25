@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1;
+typedef PCIDevice;
+@@
+- PCIDevice *I0 = PCI_DEVICE(E1); 
+  ...
+- PCIE_DEV_PRINTF(I0, "hotplug state: %d\n", state); 
++ PCIE_DEV_PRINTF(PCI_DEVICE(E1), "hotplug state: %d\n", state); 
+  ...
+- assert(PCI_FUNC(I0->devfn) == 0); 
+// Infered from: (qemu/{prevFiles/prev_6e1f0a_8e46bb_hw#pci#pcie.c,revFiles/6e1f0a_8e46bb_hw#pci#pcie.c}: pcie_cap_slot_hotplug_common)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+
+// ---------------------------------------------

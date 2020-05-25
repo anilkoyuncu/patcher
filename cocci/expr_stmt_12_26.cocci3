@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[E1].socklen = sizeof(struct sockaddr_in ); 
++ E0[E1].socklen = NGX_SOCKADDRLEN; 
+// Infered from: (nginx/{prevFiles/prev_23f904_11f4ad_src#core#ngx_connection.c,revFiles/23f904_11f4ad_src#core#ngx_connection.c}: ngx_set_inherited_sockets)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

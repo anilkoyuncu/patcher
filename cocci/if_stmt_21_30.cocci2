@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (E0->s_flags & MS_RDONLY)  
++ if (sb_rdonly(E0))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_bc98a4_94e92e_drivers#staging#lustre#lustre#llite#llite_lib.c,revFiles/bc98a4_94e92e_drivers#staging#lustre#lustre#llite#llite_lib.c}: client_common_fill_super), (linux/{prevFiles/prev_bc98a4_94e92e_fs#hfs#super.c,revFiles/bc98a4_94e92e_fs#hfs#super.c}: hfs_mark_mdb_dirty)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->avctx->sub_id == 0x20201002 && get_bits(&E0->gb, 1))  
++ if (E0->avctx->sub_id == 0x20201002 && 0 && get_bits(&E0->gb, 1))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_9b4348_13859a_libavcodec#rv10.c,revFiles/9b4348_13859a_libavcodec#rv10.c}: rv20_decode_picture_header)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+identifier I0 = {IDirect3DDevice9_AddRef ,fclose };
+expression E1;
+@@
+- I0(E1); 
+// Infered from: (php-src/{prevFiles/prev_7bbe67_06489b_sapi#apache#sapi_apache.c,revFiles/7bbe67_06489b_sapi#apache#sapi_apache.c}: apache_php_module_main), (vlc/{prevFiles/prev_04c370_c63c6b_modules#codec#avcodec#dxva2.c,revFiles/04c370_c63c6b_modules#codec#avcodec#dxva2.c}: D3dCreateDevice)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

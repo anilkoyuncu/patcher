@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->ex_flags & EXFLAG_CA || X509_get_ext_by_NID(E0, NID_subject_alt_name,  0) >= 0 || X509_get_ext_by_NID(  E0, NID_issuer_alt_name, 0) >= 0)  
++ if (E0->ex_flags & EXFLAG_CA || X509_get_ext_by_NID(E0, NID_subject_alt_name,  -1) >= 0 || X509_get_ext_by_NID(  E0, NID_issuer_alt_name, -1) >= 0)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_300b9f_5f8e9a_crypto#x509v3#v3_purp.c,revFiles/300b9f_5f8e9a_crypto#x509v3#v3_purp.c}: x509v3_cache_extensions)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

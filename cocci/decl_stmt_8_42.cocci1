@@ -1,0 +1,20 @@
+@@
+identifier I0;
+typedef uint8_t;
+@@
+- uint8_t *I0 = &a_buf[16]; 
++ uint8_t *I0 = &a_buf[32]; 
+// Infered from: (FFmpeg/{prevFiles/prev_1fd1f5_84ae72_libavcodec#vp9.c,revFiles/1fd1f5_84ae72_libavcodec#vp9.c}: intra_recon)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

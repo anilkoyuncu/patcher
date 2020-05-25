@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- avfilter_free(E0); 
+// Infered from: (FFmpeg/{prevFiles/prev_2d54bb_c5f9a6_libavfilter#vsrc_buffer.c,revFiles/2d54bb_c5f9a6_libavfilter#vsrc_buffer.c}: av_vsrc_buffer_add_video_buffer_ref), (FFmpeg/{prevFiles/prev_2d54bb_c5f9a6_libavfilter#vsrc_buffer.c,revFiles/2d54bb_c5f9a6_libavfilter#vsrc_buffer.c}: av_vsrc_buffer_add_video_buffer_ref)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

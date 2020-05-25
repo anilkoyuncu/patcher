@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- if (E0->open_source)  
+- {
+- g_source_destroy(E0->open_source); 
+- g_source_unref(E0->open_source); 
+- E0->open_source = NULL; 
+- }
++ pty_chr_open_src_cancel(E0); 
+// Infered from: (qemu/{prevFiles/prev_4e4b57_c6caae_chardev#char-pty.c,revFiles/4e4b57_c6caae_chardev#char-pty.c}: pty_chr_state)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.45, Precision: 1.00
+// -- Node Change --
+// Recall: 0.52, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/11(45%)
+
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_60609c_ac5471_orte#test#system#binom.c: destruct
+ - php-src/prevFiles/prev_2d3ef1_646db4f_main#main.c: core_globals_ctor
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 > 65535)  
++ if (E0 > LDAP_SASL_MAX_BUF)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_d4a70f_e4e3a4_asn1#ldap#packet-ldap-template.c,revFiles/d4a70f_e4e3a4_asn1#ldap#packet-ldap-template.c}: dissect_ldap_tcp), (wireshark/{prevFiles/prev_d4a70f_e4e3a4_epan#dissectors#packet-ldap.c,revFiles/d4a70f_e4e3a4_epan#dissectors#packet-ldap.c}: dissect_ldap_tcp)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

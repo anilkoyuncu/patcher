@@ -1,0 +1,24 @@
+@@
+typedef sdp_packet_info;
+@@
+- sdp_pi = g_malloc(sizeof(sdp_packet_info )); 
++ sdp_packet_info *sdp_pi; 
++ sdp_pi = ep_alloc(sizeof(sdp_packet_info )); 
+// Infered from: (wireshark/{prevFiles/prev_68bfa7_db4cbf_epan#dissectors#packet-sdp.c,revFiles/68bfa7_db4cbf_epan#dissectors#packet-sdp.c}: dissect_sdp)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_68bfa7_db4cbf_epan#dissectors#packet-sdp.c: 
+*/
+
+// ---------------------------------------------

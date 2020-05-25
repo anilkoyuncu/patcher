@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->b_force)  
++ if (!E0->obj.force)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_a44217_760a29_modules#keystore#secret.c,revFiles/a44217_760a29_modules#keystore#secret.c}: Open)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,28 @@
+@@
+identifier I1;
+expression E0;
+@@
+- E0 = kmalloc(sizeof(*E0), I1); 
++ E0 = kzalloc(sizeof(*E0), I1); 
+  ...
+- memset(E0, 0, sizeof(*E0)); 
+// Infered from: (linux/{prevFiles/prev_cffe7b_167c9e3_fs#ceph#mon_client.c,revFiles/cffe7b_167c9e3_fs#ceph#mon_client.c}: ceph_monc_do_statfs), (linux/{prevFiles/prev_929fa2_61fcc01_drivers#staging#rtl8192e#rtllib_crypt_ccmp.c,revFiles/929fa2_61fcc01_drivers#staging#rtl8192e#rtllib_crypt_ccmp.c}: rtllib_ccmp_init), (linux/{prevFiles/prev_c79698_26bff9_drivers#net#usb#cdc_ncm.c,revFiles/c79698_26bff9_drivers#net#usb#cdc_ncm.c}: cdc_ncm_bind), (linux/{prevFiles/prev_49afa55_beae22_net#caif#cfctrl.c,revFiles/49afa55_beae22_net#caif#cfctrl.c}: cfctrl_linkup_request), (linux/{prevFiles/prev_6ebc22e_96525a_drivers#gpu#drm#drm_auth.c,revFiles/6ebc22e_96525a_drivers#gpu#drm#drm_auth.c}: drm_add_magic), (linux/{prevFiles/prev_561ed23_cb849e_drivers#net#ethernet#qlogic#qed#qed_dcbx.c,revFiles/561ed23_cb849e_drivers#net#ethernet#qlogic#qed#qed_dcbx.c}: qed_dcbx_get_config_params), (linux/{prevFiles/prev_561ed23_cb849e_drivers#net#ethernet#qlogic#qed#qed_dcbx.c,revFiles/561ed23_cb849e_drivers#net#ethernet#qlogic#qed#qed_dcbx.c}: qed_dcbnl_get_dcbx), (linux/{prevFiles/prev_39ecfa_7e730c7f_net#bluetooth#hci_core.c,revFiles/39ecfa_7e730c7f_net#bluetooth#hci_core.c}: hci_add_adv_instance), (linux/{prevFiles/prev_6ebc22e_96525a_drivers#gpu#drm#drm_fops.c,revFiles/6ebc22e_96525a_drivers#gpu#drm#drm_fops.c}: drm_open_helper), (linux/{prevFiles/prev_6ac478c_08578b_drivers#net#wireless#orinoco#orinoco_usb.c,revFiles/6ac478c_08578b_drivers#net#wireless#orinoco#orinoco_usb.c}: ezusb_alloc_ctx), (linux/{prevFiles/prev_929fa2_61fcc01_drivers#staging#rtl8192e#rtllib_crypt.c,revFiles/929fa2_61fcc01_drivers#staging#rtl8192e#rtllib_crypt.c}: rtllib_register_crypto_ops), (linux/{prevFiles/prev_929fa2_61fcc01_drivers#staging#rtl8192e#rtllib_crypt.c,revFiles/929fa2_61fcc01_drivers#staging#rtl8192e#rtllib_crypt.c}: rtllib_crypto_init), (linux/{prevFiles/prev_929fa2_61fcc01_drivers#staging#rtl8192e#rtllib_crypt_tkip.c,revFiles/929fa2_61fcc01_drivers#staging#rtl8192e#rtllib_crypt_tkip.c}: rtllib_tkip_init), (linux/{prevFiles/prev_114fc1d_cff549_drivers#scsi#aic7xxx#aic79xx_core.c,revFiles/114fc1d_cff549_drivers#scsi#aic7xxx#aic79xx_core.c}: ahd_handle_en_lun), (linux/{prevFiles/prev_929fa2_61fcc01_drivers#staging#rtl8192e#rtllib_crypt_wep.c,revFiles/929fa2_61fcc01_drivers#staging#rtl8192e#rtllib_crypt_wep.c}: prism2_wep_init), (linux/{prevFiles/prev_beae22_2e3219b_drivers#net#mv643xx_eth.c,revFiles/beae22_2e3219b_drivers#net#mv643xx_eth.c}: mv643xx_eth_shared_probe)
+// False positives: (linux/revFiles/114fc1d_cff549_drivers#scsi#aic7xxx#aic79xx_core.c: ahd_alloc)
+// Recall: 0.59, Precision: 0.94, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.93
+// -- Node Change --
+// Recall: 1.00, Precision: 0.93
+// -- General --
+// Functions fully changed: 27/29(93%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_055831_d103adb_drivers#scsi#qla2xxx#qla_attr.c: qla2x00_sysfs_write_optrom_ctl
+ - linux/prevFiles/prev_114fc1d_cff549_drivers#scsi#aic7xxx#aic79xx_core.c: ahd_alloc
+*/
+
+// ---------------------------------------------

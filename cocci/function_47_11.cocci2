@@ -1,0 +1,29 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef GtkAllocation;
+@@
+- GtkAllocation I0; 
+  ...
+- gtk_widget_get_allocation(E1, &E2); 
+  ...
+- E3.x -= I0.x; 
+- E3.y -= I0.y; 
+// Infered from: (gtk/{prevFiles/prev_2c2867_6f7387_gtk#gtkentry.c,revFiles/2c2867_6f7387_gtk#gtkentry.c}: gtk_entry_draw_undershoot), (gtk/{prevFiles/prev_e3bd1e_fa97b2_gtk#gtkscrolledwindow.c,revFiles/e3bd1e_fa97b2_gtk#gtkscrolledwindow.c}: event_close_to_indicator)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_e3bd1e_fa97b2_gtk#gtkscrolledwindow.c: event_close_to_indicator
+*/
+
+// ---------------------------------------------

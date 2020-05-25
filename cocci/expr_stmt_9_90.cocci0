@@ -1,0 +1,8 @@
+@@
+@@
+- orte_snapc_base_close(); 
++ mca_base_framework_close(&orte_snapc_base_framework); 
+// Infered from: (ompi/{prevFiles/prev_b42aad_b95a9d_orte#mca#ess#base#ess_base_std_tool.c,revFiles/b42aad_b95a9d_orte#mca#ess#base#ess_base_std_tool.c}: orte_ess_base_tool_finalize)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

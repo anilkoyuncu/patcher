@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- cmdq_print(E0, "Job %u: %s [fd=%d, pid=%d, status=%d]", E1, E2->cmd, E2->fd,  E2->pid, E2->status); 
++ cmdq_print(E0, "Job %u: %s [fd=%d, pid=%ld, status=%d]", E1, E2->cmd, E2->fd,  (long )E2->pid, E2->status); 
+// Infered from: (tmux/{prevFiles/prev_67d233_481e48_cmd-show-messages.c,revFiles/67d233_481e48_cmd-show-messages.c}: cmd_show_messages_jobs)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

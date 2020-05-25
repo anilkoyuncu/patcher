@@ -1,0 +1,36 @@
+@@
+expression E0, E1, E3, E4, E2;
+@@
+- for(E0 = 0;environ[E0];E0++)  
++ char * const *e = environ; 
++ for(E0 = 0;e[E0];++E0)  
+  {
+  ...
+- if (E1 !=  E2)  
++ if (NULL != (E3 = strchr(e[E0], '=')))  
+  {
+- env_add(&E4, environ[E0], E3 - environ[E0], E3 + 1, strlen(E3 + 1)); 
++ env_add(&E4, e[E0], E3 - e[E0], E3 + 1, strlen(E3 + 1)); 
+  }
+  ...
+  }
+// Infered from: (lighttpd1.4/{prevFiles/prev_d7638b_49c74f_src#mod_scgi.c,revFiles/d7638b_49c74f_src#mod_scgi.c}: scgi_spawn_connection), (lighttpd1.4/{prevFiles/prev_d7638b_49c74f_src#mod_fastcgi.c,revFiles/d7638b_49c74f_src#mod_fastcgi.c}: fcgi_spawn_connection)
+// False positives: (lighttpd1.4/revFiles/d7638b_49c74f_src#mod_fastcgi.c: fcgi_spawn_connection), (lighttpd1.4/revFiles/d7638b_49c74f_src#mod_scgi.c: scgi_spawn_connection)
+// Recall: 0.67, Precision: 0.86, Matching recall: 0.86
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.89, Precision: 0.89
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - lighttpd1.4/prevFiles/prev_d7638b_49c74f_src#mod_scgi.c: scgi_spawn_connection
+ - lighttpd1.4/prevFiles/prev_d7638b_49c74f_src#mod_fastcgi.c: fcgi_spawn_connection
+*/
+
+// ---------------------------------------------

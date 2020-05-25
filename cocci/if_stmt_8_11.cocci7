@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->essence_container_ul[14] == 0x01)  
++ if (E0->essence_container_ul[13] == 0x01)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_c74915_e395e2_libavformat#mxf.c,revFiles/c74915_e395e2_libavformat#mxf.c}: mxf_parse_structural_metadata)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

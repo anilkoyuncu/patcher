@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- adlib_portio_list[1].offset = E0->port; 
++ adlib_portio_list[0].offset = E0->port; 
+// Infered from: (qemu/{prevFiles/prev_7f0ba7b_0e8ae6_hw#audio#adlib.c,revFiles/7f0ba7b_0e8ae6_hw#audio#adlib.c}: adlib_realizefn)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

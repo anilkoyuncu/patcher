@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = vlc_module_create(E1); 
++ E0 = vlc_module_create(VLC_OBJECT(E1)); 
+// Infered from: (vlc/{prevFiles/prev_f5a651_264a44_src#libvlc-common.c,revFiles/f5a651_264a44_src#libvlc-common.c}: libvlc_InternalInit)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

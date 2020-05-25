@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && (E1 = strchr(E1, E0)) != NULL)  
++ if (E0 && (E1 = strchr(E1 + 1, E0)) != NULL)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_65b5f8_1e4e06_src#text#url.c,revFiles/65b5f8_1e4e06_src#text#url.c}: vlc_UrlParse)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

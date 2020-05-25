@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 += sizeof(int ) + *((int *)(E1->data + E0)); 
++ E0 += sizeof(size_t ) + *((size_t *)(E1->data + E0)); 
+// Infered from: (vlc/{prevFiles/prev_24bd74_2dd544_src#win32#specific.c,revFiles/24bd74_2dd544_src#win32#specific.c}: WMCOPYWNDPROC)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

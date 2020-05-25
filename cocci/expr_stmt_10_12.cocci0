@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- addReplyErrorFormat(E0, "I don't know about node %s",  (char *)E0->argv[3]->ptr); 
++ addReplyErrorFormat(E0, "I don't know about node %s",  (char *)E0->argv[4]->ptr); 
+// Infered from: (redis/{prevFiles/prev_2cdf4c_b80e46_src#cluster.c,revFiles/2cdf4c_b80e46_src#cluster.c}: clusterCommand)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

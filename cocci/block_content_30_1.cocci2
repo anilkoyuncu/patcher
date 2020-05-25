@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- fprintf(E0, "%s, %10.10ld bytes (0x%8.8lx)\n", E1, (long )E2, (long )E2); 
++ fprintf(E0, "%s, %10.10lu bytes (0x%8.8lx)\n", E1, E2, E2); 
+// Infered from: (curl/{prevFiles/prev_13505d_4c735b_docs#examples#debug.c,revFiles/13505d_4c735b_docs#examples#debug.c}: dump), (curl/{prevFiles/prev_13505d_4c735b_docs#examples#multi-debugcallback.c,revFiles/13505d_4c735b_docs#examples#multi-debugcallback.c}: dump)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

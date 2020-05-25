@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- git_config_set(E0, "true"); 
++ git_config_set_or_die(E0, "true"); 
+// Infered from: (git/{prevFiles/prev_2ee35c_c397de_builtin#clone.c,revFiles/2ee35c_c397de_builtin#clone.c}: write_refspec_config), (git/{prevFiles/prev_2ee35c_c397de_builtin#clone.c,revFiles/2ee35c_c397de_builtin#clone.c}: cmd_clone)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

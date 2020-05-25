@@ -1,0 +1,49 @@
+@@
+expression list E8;
+expression E6, E1, E2, E3, E4, E7, E0, E5;
+@@
+- ppc_find_by_name (E0, E1); 
+- if (E2 ==  E3)  
+- {
+- cpu_abort (E4, E5); 
+- }
+- cpu_ppc_register (E4, E2); 
+- cpu_ppc_tb_init (E4, E6); 
+  ...
+- E7 = pic_init (E8); 
++ isa_pic = pic_init(pic_irq_request, first_cpu); 
+// Infered from: (qemu/{prevFiles/prev_c68ea7_173d6c_hw#ppc_prep.c,revFiles/c68ea7_173d6c_hw#ppc_prep.c}: ppc_prep_init)
+// False positives: (qemu/revFiles/c68ea7_173d6c_hw#ppc_prep.c: ppc_prep_init)
+// Recall: 0.07, Precision: 0.71, Matching recall: 0.45
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 1.00
+// -- Node Change --
+// Recall: 0.31, Precision: 0.88
+// -- General --
+// Functions fully changed: 4/18(22%)
+
+/*
+Functions where the patch did not apply:
+ - gstreamer/prevFiles/prev_12a72d_0d57bd_libs#gst#base#gstbasetransform.c: gst_base_transform_acceptcaps_default
+ - qemu/prevFiles/prev_ba0d89_aa77be_tcg#mips#tcg-target.c: tcg_out_qemu_ld
+ - linux/prevFiles/prev_284384_247bd4_arch#blackfin#mach-common#ints-priority.c: bfin_gpio_irq_type
+ - qemu/prevFiles/prev_a5cdf9_ad1a89_hw#iommu.c: sparc_iommu_memory_rw
+ - qemu/prevFiles/prev_ba0d89_aa77be_tcg#mips#tcg-target.c: tcg_out_qemu_st
+ - qemu/prevFiles/prev_e58143_1f5476_target-sparc#op.c: op_noop
+ - wireshark/prevFiles/prev_772200_021273_epan#dissectors#packet-dns.c: dissect_dns_answer
+ - wireshark/prevFiles/prev_7c05f6_ec6fa1_epan#dissectors#packet-zbee-nwk.c: dissect_zbee_nwk_full
+ - linux/prevFiles/prev_284384_247bd4_arch#blackfin#mach-common#ints-priority.c: bfin_set_irq_handler
+ - qemu/prevFiles/prev_ea7a53_b36356_exec.c: cpu_memory_rw_debug
+ - wireshark/prevFiles/prev_772200_021273_epan#dissectors#packet-dns.c: expand_dns_name
+ - wireshark/prevFiles/prev_a974e1_7ac2adc_epan#dissectors#packet-per.c: dissect_per_sequence_of
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_e58143_1f5476_target-sparc#op.c: op_generic_branch_a
+ - qemu/prevFiles/prev_c68ea7_173d6c_hw#ppc_prep.c: ppc_prep_init
+*/
+
+// ---------------------------------------------

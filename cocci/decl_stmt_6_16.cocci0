@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- int I0 = REG_NEWLINE; 
++ int I0 = 0; 
+// Infered from: (git/{prevFiles/prev_1ceaba_07a3d4_grep.c,revFiles/1ceaba_07a3d4_grep.c}: compile_fixed_regexp)
+// False positives: (git/revFiles/1ceaba_07a3d4_grep.c: compile_regexp)
+// Recall: 0.11, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

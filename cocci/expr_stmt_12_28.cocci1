@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = mkstemps(E1[E2].path, E3 ? strlen(E3) :0); 
++ E0 = mkstemps(E1[E2].path, E3 ? (int )strlen(E3) :0); 
+// Infered from: (wireshark/{prevFiles/prev_119279_69a258_wsutil#tempfile.c,revFiles/119279_69a258_wsutil#tempfile.c}: create_tempfile)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_c9357f_598337_sapi#phpdbg#phpdbg_prompt.c: phpdbg_execute_ex
+ - cpython/prevFiles/prev_a0378e_89841b_Objects#unicodeobject.c: PyUnicode_Format
+*/
+
+// ---------------------------------------------

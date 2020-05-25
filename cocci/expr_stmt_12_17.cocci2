@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = _("Searching"); 
++ E0 = g_strdup(_("Searching")); 
+// Infered from: (gtk/{prevFiles/prev_fc9dc9_d11c78_gtk#gtkfilechooserwidget.c,revFiles/fc9dc9_d11c78_gtk#gtkfilechooserwidget.c}: gtk_file_chooser_widget_get_subtitle)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

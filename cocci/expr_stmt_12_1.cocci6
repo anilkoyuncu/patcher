@@ -1,0 +1,9 @@
+@@
+expression E3, E2, E1, E0, E4;
+@@
+- proto_item_append_text(E0, E1,  tvb_get_string(wmem_packet_scope(), E2, E3, E4)); 
++ proto_item_append_text(E0, E1,  tvb_get_string_enc(wmem_packet_scope(), E2, E3, E4,  ENC_ASCII)); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-dhcp-failover.c,revFiles/971ffd_421d81_epan#dissectors#packet-dhcp-failover.c}: dissect_dhcpfo_pdu), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-tnef.c,revFiles/971ffd_421d81_epan#dissectors#packet-tnef.c}: dissect_tnef), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-reload.c,revFiles/971ffd_421d81_epan#dissectors#packet-reload.c}: dissect_reload_messagecontents)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

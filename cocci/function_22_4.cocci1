@@ -1,0 +1,33 @@
+@@
+identifier I2, I4;
+expression E0, E1, E3;
+@@
+- E0 = ROUND_UP_POW2(E0, E1); 
+- I2 = (char *)valloc(E0); 
+- if (!I2)  
+- {
+- opal_output(ompi_bcol_base_framework.framework_output,  "failed to allocate bcol/basesmuma control memory"); 
+- return OMPI_ERR_OUT_OF_RESOURCE; 
+- }
+- E3->sm_ctl_structs = bcol_basesmuma_smcm_mem_reg(I2, E0, getpagesize(), I4); 
++ E0 = OPAL_ALIGN(E0, E1, size_t ); 
++ E3->sm_ctl_structs = bcol_basesmuma_smcm_mem_reg(NULL, E0, getpagesize(), I4); 
+// Infered from: (ompi/{prevFiles/prev_22e59b_dedf6b_ompi#mca#bcol#basesmuma#bcol_basesmuma_component.c,revFiles/22e59b_dedf6b_ompi#mca#bcol#basesmuma#bcol_basesmuma_component.c}: mca_bcol_basesmuma_allocate_sm_ctl_memory)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.13, Precision: 1.00
+// -- Node Change --
+// Recall: 0.23, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/15(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_2d54bb_c5f9a6_libavfilter#vsrc_buffer.c: av_vsrc_buffer_add_video_buffer_ref
+ - ompi/prevFiles/prev_22e59b_dedf6b_ompi#mca#bcol#basesmuma#bcol_basesmuma_component.c: mca_bcol_basesmuma_allocate_sm_ctl_memory
+*/
+
+// ---------------------------------------------

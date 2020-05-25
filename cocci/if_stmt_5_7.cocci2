@@ -1,0 +1,66 @@
+@@
+expression E0;
+@@
+- if (!E0->mmucr & MMUCR_AT)  
++ if (!(E0->mmucr & MMUCR_AT))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_0c16e7_2d5b50_target-sh4#helper.c,revFiles/0c16e7_2d5b50_target-sh4#helper.c}: get_physical_address)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.07, Precision: 1.00
+// -- Node Change --
+// Recall: 0.06, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/44(6%)
+
+/*
+Functions where the patch did not apply:
+ - libarchive/prevFiles/prev_f0039a_b2088c_libarchive#archive_write_set_format_iso9660.c: isoent_cmp_iso9660_identifier
+ - vlc/prevFiles/prev_52259b_a731c3_modules#demux#mpeg#h26x.c: ProbeHEVC
+ - vlc/prevFiles/prev_706d3a_18dfa7_modules#video_filter#mosaic.c: Filter
+ - codeflaws/prevFiles/prev_680-B-18339407-18339463.c: main
+ - FFmpeg/prevFiles/prev_d64fe9_04826b_libavcodec#ccaption_dec.c: process_cc608
+ - openssl/prevFiles/prev_d6f68f_645820_crypto#asn1#p5_pbe.c: PKCS5_pbe_set
+ - codeflaws/prevFiles/prev_463-A-17816573-17816583.c: main
+ - FFmpeg/prevFiles/prev_7bea13_b97b4b_libswscale#swscale.c: planarCopyWrapper
+ - codeflaws/prevFiles/prev_493-B-15602330-15602350.c: main
+ - wireshark/prevFiles/prev_ed78f0_88d53d_epan#dissectors#packet-dcm.c: dissect_dcm_tag_value
+ - codeflaws/prevFiles/prev_387-A-13476571-13476696.c: main
+ - gtk/prevFiles/prev_94e0f1_77ee1b_gtk#gtkstylecontext.c: _gtk_style_context_queue_invalidate
+ - codeflaws/prevFiles/prev_659-A-18046824-18046876.c: main
+ - codeflaws/prevFiles/prev_412-A-6416517-6416531.c: main
+ - codeflaws/prevFiles/prev_166-A-13703427-13703776.c: main
+ - qemu/prevFiles/prev_0c16e7_2d5b50_target-sh4#helper.c: get_mmu_address
+ - lighttpd2/prevFiles/prev_707806_a41b92_src#main#filter_chunked.c: li_filter_chunked_decode
+ - libarchive/prevFiles/prev_9ef8e7_be58e7_libarchive#archive_write_set_format_iso9660.c: isoent_cmp_iso9660_identifier
+ - codeflaws/prevFiles/prev_533-C-11110039-11110056.c: main
+ - codeflaws/prevFiles/prev_288-A-15596425-15596449.c: main
+ - openssl/prevFiles/prev_e8da6a_305514_ssl#ssl_sess.c: ssl_get_prev_session
+ - codeflaws/prevFiles/prev_190-A-13252806-13252830.c: main
+ - FFmpeg/prevFiles/prev_7bea13_b97b4b_libswscale#swscale.c: 
+ - php-src/prevFiles/prev_d492bc_eba0e0_sapi#litespeed#lsapilib.c: LSAPI_ReadReqBody_r
+ - openssl/prevFiles/prev_e62fb0_43687d_crypto#asn1#p5_scrypt.c: PKCS5_pbe2_set_scrypt
+ - codeflaws/prevFiles/prev_363-A-7669248-7669256.c: main
+ - php-src/prevFiles/prev_d492bc_eba0e0_sapi#litespeed#lsapilib.c: LSAPI_ReqBodyGetLine_r
+ - FFmpeg/prevFiles/prev_1330a0_58c6dc_libavcodec#nvenc.c: nvenc_setup_rate_control
+ - gtk/prevFiles/prev_cddc9f_e73dc5_gdk#win32#gdkevents-win32.c: low_level_keystroke_handler
+ - codeflaws/prevFiles/prev_535-A-13875329-13875346.c: main
+ - codeflaws/prevFiles/prev_611-A-18197396-18197911.c: main
+ - wireshark/prevFiles/prev_ea1ba6_9a8a45_wsutil#nstime.c: nstime_delta
+ - codeflaws/prevFiles/prev_166-A-10685737-10686166.c: teamsComp
+ - codeflaws/prevFiles/prev_673-A-18161764-18161769.c: main
+ - libarchive/prevFiles/prev_9ef8e7_be58e7_libarchive#archive_write_set_format_iso9660.c: isoent_cmp_joliet_identifier
+ - codeflaws/prevFiles/prev_59-A-17706574-17706595.c: main
+ - codeflaws/prevFiles/prev_6-A-16937698-16937889.c: main
+ - FFmpeg/prevFiles/prev_b3dc51_dec816_libavfilter#f_bench.c: filter_frame
+ - curl/prevFiles/prev_7e36c4_3c7a80_lib#ftp.c: Curl_GetFTPResponse
+ - php-src/prevFiles/prev_16e2d6_98672f_ext#interbase#ibase_query.c: _php_ibase_var_zval
+ - libarchive/prevFiles/prev_f0039a_b2088c_libarchive#archive_write_set_format_iso9660.c: isoent_cmp_joliet_identifier
+*/
+
+// ---------------------------------------------

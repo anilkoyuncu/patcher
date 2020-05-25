@@ -1,0 +1,29 @@
+@@
+identifier I0;
+expression E2, E3, E1;
+@@
+- char I0[128]; 
+- snprintf(I0, sizeof(I0), E1, E2, E3); 
++ char *I0; 
++ I0 = g_strdup_printf(E1, E2, E3); 
+// Infered from: (qemu/{prevFiles/prev_2fb513_853f8c_hw#ppc#e500.c,revFiles/2fb513_853f8c_hw#ppc#e500.c}: dt_serial_create)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_760aa1_dfa50e_dumpcap.c: do_file_switch_or_stop
+ - qemu/prevFiles/prev_2fb513_853f8c_hw#ppc#e500.c: ppce500_load_device_tree
+ - wireshark/prevFiles/prev_760aa1_dfa50e_dumpcap.c: capture_loop_init_output
+ - qemu/prevFiles/prev_2fb513_853f8c_hw#ppc#e500.c: dt_serial_create
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef bool;
+@@
+- return 2 == sscanf(E0, "%15[^?&/:]://%c", E1, &E2); 
++ return (bool )(2 == sscanf(E0, "%15[^?&/:]://%c", E1, &E2)); 
+// Infered from: (curl/{prevFiles/prev_2ef72f_eae27d_lib#transfer.c,revFiles/2ef72f_eae27d_lib#transfer.c}: is_absolute_url)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

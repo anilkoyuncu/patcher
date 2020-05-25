@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->index = E1 ? E1->index + E1->length :0; 
++ E0->idx = E1 ? E1->idx + E1->length :0; 
+// Infered from: (wireshark/{prevFiles/prev_2be382_32e785_epan#dissectors#packet-bthsp.c,revFiles/2be382_32e785_epan#dissectors#packet-bthsp.c}: dissect_bthsp), (wireshark/{prevFiles/prev_2be382_32e785_epan#dissectors#packet-bthfp.c,revFiles/2be382_32e785_epan#dissectors#packet-bthfp.c}: dissect_bthfp)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

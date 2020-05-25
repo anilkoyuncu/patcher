@@ -1,0 +1,20 @@
+@@
+assignment operator A1;
+expression E2, E0;
+@@
+- E0 A1 1 << E2; 
++ E0 A1 BIT(E2); 
+// Infered from: (linux/{prevFiles/prev_c762ef_158f03_drivers#staging#media#omap4iss#iss_ipipe.c,revFiles/c762ef_158f03_drivers#staging#media#omap4iss#iss_ipipe.c}: ipipe_init_entities), (linux/{prevFiles/prev_b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7854.c,revFiles/b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7854.c}: ade7854_reset), (linux/{prevFiles/prev_b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7854.c,revFiles/b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7854.c}: ade7854_set_irq), (linux/{prevFiles/prev_b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7754.c,revFiles/b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7754.c}: ade7754_reset), (linux/{prevFiles/prev_b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7754.c,revFiles/b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7754.c}: ade7754_set_irq), (linux/{prevFiles/prev_01b7215_483936_drivers#staging#iio#meter#ade7854.c,revFiles/01b7215_483936_drivers#staging#iio#meter#ade7854.c}: ade7854_reset), (linux/{prevFiles/prev_01b7215_483936_drivers#staging#iio#meter#ade7854.c,revFiles/01b7215_483936_drivers#staging#iio#meter#ade7854.c}: ade7854_set_irq), (linux/{prevFiles/prev_c762ef_158f03_drivers#staging#media#omap4iss#iss_ipipeif.c,revFiles/c762ef_158f03_drivers#staging#media#omap4iss#iss_ipipeif.c}: ipipeif_init_entities), (linux/{prevFiles/prev_01b7215_483936_drivers#staging#iio#meter#ade7754.c,revFiles/01b7215_483936_drivers#staging#iio#meter#ade7754.c}: ade7754_reset), (linux/{prevFiles/prev_01b7215_483936_drivers#staging#iio#meter#ade7754.c,revFiles/01b7215_483936_drivers#staging#iio#meter#ade7754.c}: ade7754_set_irq), (linux/{prevFiles/prev_c762ef_158f03_drivers#staging#media#omap4iss#iss_csi2.c,revFiles/c762ef_158f03_drivers#staging#media#omap4iss#iss_csi2.c}: csi2_init_entities), (linux/{prevFiles/prev_b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7758_core.c,revFiles/b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7758_core.c}: ade7758_reset), (linux/{prevFiles/prev_b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7758_core.c,revFiles/b4d8ac_5b8ffb_drivers#staging#iio#meter#ade7758_core.c}: ade7758_set_irq), (linux/{prevFiles/prev_c762ef_158f03_drivers#staging#media#omap4iss#iss_resizer.c,revFiles/c762ef_158f03_drivers#staging#media#omap4iss#iss_resizer.c}: resizer_init_entities), (linux/{prevFiles/prev_01b7215_483936_drivers#staging#iio#meter#ade7758_core.c,revFiles/01b7215_483936_drivers#staging#iio#meter#ade7758_core.c}: ade7758_reset), (linux/{prevFiles/prev_01b7215_483936_drivers#staging#iio#meter#ade7758_core.c,revFiles/01b7215_483936_drivers#staging#iio#meter#ade7758_core.c}: ade7758_set_irq), (linux/{prevFiles/prev_f422920_6995a65_drivers#media#platform#omap3isp#ispstat.c,revFiles/f422920_6995a65_drivers#media#platform#omap3isp#ispstat.c}: isp_stat_init_entities)
+// Recall: 0.74, Precision: 1.00, Matching recall: 0.74
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 17/17(100%)
+
+
+// ---------------------------------------------

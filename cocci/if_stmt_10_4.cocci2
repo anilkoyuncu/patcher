@@ -1,0 +1,12 @@
+@@
+expression E0, E2, E1;
+@@
+- if (strncmp(E0, E1, E2))  
++ if (prefixcmp(E0, E1))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_1968d7_599065_builtin-show-branch.c,revFiles/1968d7_599065_builtin-show-branch.c}: append_head_ref), (git/{prevFiles/prev_1968d7_599065_builtin-show-branch.c,revFiles/1968d7_599065_builtin-show-branch.c}: append_remote_ref)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

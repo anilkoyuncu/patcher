@@ -1,0 +1,40 @@
+@@
+identifier I0, I1, I2;
+typedef Py_ssize_t;
+@@
+  Py_ssize_t _Py_read(int I0, void *I1, size_t I2)  
+  {
+  ...
+- if (!_PyVerify_fd(self->fd))  
++ if (!_PyVerify_fd(I0))  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_c1cf4f_c9382eb_Python#fileutils.c,revFiles/c1cf4f_c9382eb_Python#fileutils.c}: _Py_read)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.91, Precision: 1.00
+// -- Node Change --
+// Recall: 0.84, Precision: 0.95
+// -- General --
+// Functions fully changed: 8/11(72%)
+
+/*
+Functions where the patch applied partially:
+ - redis/prevFiles/prev_8ea2df_f67e33_src#bio.c: bioProcessBackgroundJobs
+*/
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_19b77c_fa517b_Objects#dictobject.c: dict_print
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_cf7b9a_9ca791b_drivers#video#atmel_lcdfb.c: init_backlight
+*/
+
+// ---------------------------------------------

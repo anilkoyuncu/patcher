@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stdout, "# %zd\n", E0); 
++ fprintf(stdout, "# %zu\n", E0); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_acad2c_393dfd_src#array.c,revFiles/acad2c_393dfd_src#array.c}: array_print), (lighttpd1.4/{prevFiles/prev_acad2c_393dfd_src#array.c,revFiles/acad2c_393dfd_src#array.c}: array_print)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

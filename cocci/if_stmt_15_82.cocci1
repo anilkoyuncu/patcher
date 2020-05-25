@@ -1,0 +1,30 @@
+@@
+expression E0;
+@@
+- if (MCA_PML_BASE_SEND_BUFFERED == E0->send.mode)  
++ if ((E0->flags & MCA_PML_UCX_REQUEST_FLAG_SEND) && (MCA_PML_BASE_SEND_BUFFERED == E0->send.mode))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_944881_d1fed7_ompi#mca#pml#ucx#pml_ucx_request.c,revFiles/944881_d1fed7_ompi#mca#pml#ucx#pml_ucx_request.c}: mca_pml_ucx_persistent_request_free)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch did not apply:
+ - tcl/prevFiles/prev_9e5e75_ae6d85_generic#tclCompCmds.c: TclCompileArraySetCmd
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_399073_fa2e90_Zend#zend_compile.c: zend_do_foreach_cont
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0 = {GDK_IS_DEVICE ,GDK_IS_SCREEN ,GST_IS_INDEX ,GTK_IS_FILE_CHOOSER_ENTRY };
+expression E1;
+@@
+- g_return_if_fail(I0(E1)); 
++ g_return_if_fail(E1 == NULL || I0(E1)); 
+// Infered from: (gtk/{prevFiles/prev_c7d73e_b837ef_gdk#gdkdevice.c,revFiles/c7d73e_b837ef_gdk#gdkdevice.c}: _gdk_device_set_associated_device), (gtk/{prevFiles/prev_4dafcf_017025_gtk#gtkfilechooserwidget.c,revFiles/4dafcf_017025_gtk#gtkfilechooserwidget.c}: gtk_file_chooser_widget_set_save_entry), (gstreamer/{prevFiles/prev_a3f990_a9095a_gst#gstelement.c,revFiles/a3f990_a9095a_gst#gstelement.c}: gst_element_set_index), (gtk/{prevFiles/prev_4dc9b2_2b2e60_gtk#gtkstylecontext.c,revFiles/4dc9b2_2b2e60_gtk#gtkstylecontext.c}: gtk_style_context_set_screen)
+// False positives: (gtk/revFiles/4dc9b2_2b2e60_gtk#gtkstylecontext.c: gtk_style_context_add_provider_for_screen), (gtk/revFiles/4dc9b2_2b2e60_gtk#gtkstylecontext.c: gtk_style_context_remove_provider_for_screen), (gtk/revFiles/c7d73e_b837ef_gdk#gdkdevice.c: _gdk_device_set_associated_device), (gtk/revFiles/c7d73e_b837ef_gdk#gdkdevice.c: gdk_device_get_state), (gtk/revFiles/c7d73e_b837ef_gdk#gdkdevice.c: gdk_device_set_axis_use), (gtk/revFiles/c7d73e_b837ef_gdk#gdkdevice.c: gdk_device_set_key), (gtk/revFiles/c7d73e_b837ef_gdk#gdkdevice.c: gdk_device_set_source)
+// Recall: 0.73, Precision: 0.36, Matching recall: 1.00
+
+// ---------------------------------------------

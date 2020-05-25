@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->fifo.audio.first = NULL; 
++ E0->fifo.pic.first = NULL; 
+// Infered from: (vlc/{prevFiles/prev_2d74fb_16bae9_modules#stream_out#transcode#video.c,revFiles/2d74fb_16bae9_modules#stream_out#transcode#video.c}: transcode_video_add)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

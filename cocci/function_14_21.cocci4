@@ -1,0 +1,32 @@
+@@
+expression E0;
+@@
+- msg_Dbg(E0, "initializing interaction system"); 
+// Infered from: (vlc/{prevFiles/prev_470b47_4dfd83_src#interface#interaction.c,revFiles/470b47_4dfd83_src#interface#interaction.c}: intf_InteractionInit)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.78, Precision: 0.70
+// -- Node Change --
+// Recall: 0.82, Precision: 0.45
+// -- General --
+// Functions fully changed: 4/12(33%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_3356df_90b0c4_modules#video_output#xcb#window.c: EmOpen
+ - vlc/prevFiles/prev_3356df_90b0c4_modules#video_output#xcb#events.c: RegisterMouseEvents
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_4a3342_dbbbe5_src#playlist#tree.c: GetPrevItem
+ - vlc/prevFiles/prev_3356df_90b0c4_modules#video_output#xcb#events.c: ManageEvent
+ - vlc/prevFiles/prev_4a3342_dbbbe5_src#playlist#tree.c: GetNextItem
+ - vlc/prevFiles/prev_3356df_90b0c4_modules#video_output#xcb#window.c: Open
+ - vlc/prevFiles/prev_3356df_90b0c4_modules#video_output#xcb#window.c: Thread
+ - vlc/prevFiles/prev_470b47_4dfd83_src#interface#interaction.c: intf_InteractionInit
+*/
+
+// ---------------------------------------------

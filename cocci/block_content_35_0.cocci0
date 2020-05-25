@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E3, E1, E2;
+@@
+- struct resource *I0; 
+- I0 = platform_get_resource(E1, IORESOURCE_MEM, E2); 
+- E3 = devm_ioremap_resource(&E1->dev, I0); 
++ E3 = devm_platform_ioremap_resource(E1, E2); 
+// Infered from: (linux/{prevFiles/prev_0f0a6a2_24b822_drivers#watchdog#mt7621_wdt.c,revFiles/0f0a6a2_24b822_drivers#watchdog#mt7621_wdt.c}: mt7621_wdt_probe), (linux/{prevFiles/prev_5b18f9_c7c16c58_drivers#char#hw_random#pasemi-rng.c,revFiles/5b18f9_c7c16c58_drivers#char#hw_random#pasemi-rng.c}: rng_probe)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

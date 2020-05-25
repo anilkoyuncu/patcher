@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!EVP_PKEY_set_type(E0, E1))  
++ if (E1 != EVP_PKEY_id(E0) && !EVP_PKEY_set_type(E0, E1))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_2aa2be_b1522f_crypto#asn1#d2i_pu.c,revFiles/2aa2be_b1522f_crypto#asn1#d2i_pu.c}: d2i_PublicKey)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

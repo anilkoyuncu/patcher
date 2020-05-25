@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 > 4)  
++ if (E0 <= 0 || E0 > 4)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_c6eb12_b3862d_epan#dissectors#packet-coap.c,revFiles/c6eb12_b3862d_epan#dissectors#packet-coap.c}: dissect_coap_opt_time)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

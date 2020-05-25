@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- gtk_widget_set_sensitive(E0, FALSE); 
++ gtk_widget_set_sensitive(GTK_WIDGET(E0), FALSE); 
+// Infered from: (gtk/{prevFiles/prev_ac2696_3a9633_gtk#gtkprinteroptionwidget.c,revFiles/ac2696_3a9633_gtk#gtkprinteroptionwidget.c}: construct_widgets), (gtk/{prevFiles/prev_20dcd8_ea7bd0_gtk#gtkprinteroptionwidget.c,revFiles/20dcd8_ea7bd0_gtk#gtkprinteroptionwidget.c}: construct_widgets)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

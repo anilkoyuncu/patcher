@@ -1,0 +1,10 @@
+@@
+identifier I0, I1;
+expression E2;
+@@
+- struct I0 *I1 = dm_alloc(E2); 
++ struct I0 *I1 = kzalloc(E2, GFP_KERNEL); 
+// Infered from: (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#gpio#gpio_base.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#gpio#gpio_base.c}: dal_gpio_create), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce#dce_abm.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce#dce_abm.c}: dce_abm_create), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce#dce_audio.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce#dce_audio.c}: dce_audio_create)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

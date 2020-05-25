@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+typedef s32;
+typedef u8;
+@@
+- E0 = (s32 )*(u8 *)E1; 
++ E0 = (s32 )*E1; 
+// Infered from: (linux/{prevFiles/prev_45d18c_898699_drivers#net#wireless#mwifiex#scan.c,revFiles/45d18c_898699_drivers#net#wireless#mwifiex#scan.c}: mwifiex_parse_single_response_buf)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

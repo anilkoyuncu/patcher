@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((*E0) > x && (*E1) > y && (*E0) < 1 && (*E1) < 1)  
++ if ((*E0) > x || (*E1) > y || (*E0) < 1 || (*E1) < 1)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_606-B-14733385-14733456.c,revFiles/606-B-14733385-14733456.c}: call)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

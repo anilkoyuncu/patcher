@@ -1,0 +1,9 @@
+@@
+@@
+- goto  out_release_region; 
++ goto  out_unmap; 
+// Infered from: (linux/{prevFiles/prev_25cecd_20d436_drivers#net#ethernet#stmicro#stmmac#stmmac_platform.c,revFiles/25cecd_20d436_drivers#net#ethernet#stmicro#stmmac#stmmac_platform.c}: stmmac_pltfr_probe)
+// False positives: (linux/revFiles/25cecd_20d436_drivers#net#ethernet#stmicro#stmmac#stmmac_platform.c: stmmac_pltfr_probe)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

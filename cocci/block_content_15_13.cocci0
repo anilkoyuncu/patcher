@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef int64_t;
+@@
+- E0 = LOGICAL_BLOCK_SIZE * E1->location; 
++ E0 = LOGICAL_BLOCK_SIZE * (int64_t )E1->location; 
+// Infered from: (libarchive/{prevFiles/prev_3ad08e_05caad_libarchive#archive_read_support_format_iso9660.c,revFiles/3ad08e_05caad_libarchive#archive_read_support_format_iso9660.c}: choose_volume), (libarchive/{prevFiles/prev_3ad08e_05caad_libarchive#archive_read_support_format_iso9660.c,revFiles/3ad08e_05caad_libarchive#archive_read_support_format_iso9660.c}: choose_volume)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

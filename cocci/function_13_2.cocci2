@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- memset(&E0, 0, sizeof(struct sockaddr_in6 )); 
++ memset(&E0, 0, sizeof(E0)); 
+// Infered from: (curl/{prevFiles/prev_094afb_1fddcb_tests#server#tftpd.c,revFiles/094afb_1fddcb_tests#server#tftpd.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.08
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.92, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 1.00
+// -- General --
+// Functions fully changed: 11/13(84%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_094afb_1fddcb_tests#server#tftpd.c: main
+*/
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_d1717e_e569ff_lib#connect.c: bindlocal
+*/
+
+// ---------------------------------------------

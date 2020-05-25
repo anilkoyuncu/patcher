@@ -1,0 +1,11 @@
+@@
+@@
+- if (sk_X509_POLICY_NODE_find(*pnodes, pcy) != -1)  
++ if (sk_X509_POLICY_NODE_find(*pnodes, pcy) >= 0)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_5b37fe_28ad73_crypto#x509v3#pcy_tree.c,revFiles/5b37fe_28ad73_crypto#x509v3#pcy_tree.c}: tree_add_auth_node)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

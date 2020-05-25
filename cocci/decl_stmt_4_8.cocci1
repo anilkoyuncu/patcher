@@ -1,0 +1,31 @@
+@@
+identifier I0;
+@@
+- char *I0[20]; 
++ char I0[20]; 
+// Infered from: (vlc/{prevFiles/prev_4d7e35_82b181_modules#demux#vobsub.c,revFiles/4d7e35_82b181_modules#demux#vobsub.c}: ParseVobSubIDX)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.18, Precision: 1.00
+// -- Node Change --
+// Recall: 0.18, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/11(18%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_eda14b_bbcb73_gtk#gtknotebook.c: gtk_notebook_set_group_name
+ - ompi/prevFiles/prev_9455eb_baab4e_opal#mca#memory#ptmalloc2#hooks.c: opal_memory_ptmalloc2_hook_pull
+ - gtk/prevFiles/prev_3b1157_31b77a_gtk#inspector#general.c: append_egl_extension_row
+ - php-src/prevFiles/prev_81999f_f2d2da_ext#pdo#pdo_stmt.c: rewrite_name_to_position
+ - php-src/prevFiles/prev_2fbb9a_c9d9e0_ext#mysql#php_mysql.c: PHP_FUNCTION
+ - cpython/prevFiles/prev_c5d47d_b81e53_Python#future.c: future_parse
+ - gtk/prevFiles/prev_3b1157_31b77a_gdk#wayland#gdkglcontext-wayland.c: gdk_wayland_display_init_gl
+ - gtk/prevFiles/prev_3b1157_31b77a_gtk#inspector#general.c: init_gl
+ - FFmpeg/prevFiles/prev_8b43b0_873dac_ffmpeg.c: print_report
+*/
+
+// ---------------------------------------------

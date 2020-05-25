@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- BIO_printf(bio_s_out, "identity_len=%d identity=%s\n", E0 ? strlen(E0) :0, E0); 
++ BIO_printf(bio_s_out, "identity_len=%d identity=%s\n",  E0 ? (int )strlen(E0) :0, E0); 
+// Infered from: (openssl/{prevFiles/prev_d82a61_e7e8f4_apps#s_server.c,revFiles/d82a61_e7e8f4_apps#s_server.c}: psk_server_cb)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

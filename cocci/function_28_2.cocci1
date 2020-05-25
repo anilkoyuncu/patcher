@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- ff_id3v2_read(E0, ID3v2_DEFAULT_MAGIC); 
+// Infered from: (FFmpeg/{prevFiles/prev_6612d8_113685_libavformat#aacdec.c,revFiles/6612d8_113685_libavformat#aacdec.c}: adts_aac_read_header), (FFmpeg/{prevFiles/prev_6612d8_113685_libavformat#mp3.c,revFiles/6612d8_113685_libavformat#mp3.c}: mp3_read_header)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

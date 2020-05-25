@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->fmt_out.video.i_aspect = E1.i_width * VOUT_ASPECT_FACTOR / E1.i_height; 
++ E1.video.i_aspect = E1.i_width * VOUT_ASPECT_FACTOR / E1.i_height; 
+// Infered from: (vlc/{prevFiles/prev_e1a578_a84ef6_modules#codec#fake.c,revFiles/e1a578_a84ef6_modules#codec#fake.c}: OpenDecoder)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

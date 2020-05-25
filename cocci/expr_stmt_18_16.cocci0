@@ -1,0 +1,10 @@
+@@
+expression E0, E2, E3, E1;
+@@
+- infof(E0, E1, E2, E3 & CURL_POLL_IN ? "IN" :"",  E3 & CURL_POLL_OUT ? "OUT" :""); 
++ infof(E0, E1, E2, (E3 & CURL_POLL_IN) ? "IN" :"",  (E3 & CURL_POLL_OUT) ? "OUT" :""); 
+// Infered from: (curl/{prevFiles/prev_15fd9a_6b3dde_lib#easy.c,revFiles/15fd9a_6b3dde_lib#easy.c}: events_socket), (curl/{prevFiles/prev_6b3dde_5f8b9f_lib#easy.c,revFiles/6b3dde_5f8b9f_lib#easy.c}: events_socket)
+// False positives: (curl/revFiles/6b3dde_5f8b9f_lib#easy.c: events_socket)
+// Recall: 0.50, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

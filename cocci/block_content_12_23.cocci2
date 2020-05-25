@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef ngx_int_t;
+@@
+- int I0; 
++ ngx_int_t I0; 
+  ...
+- ngx_log_debug3(NGX_LOG_DEBUG_HTTP, E1->log, 0,  "http writer output filter: %d, \"%V?%V\"", I0, &E2->uri,  &E2->args); 
++ ngx_log_debug3(NGX_LOG_DEBUG_HTTP, E1->log, 0,  "http writer output filter: %i, \"%V?%V\"", I0, &E2->uri,  &E2->args); 
+// Infered from: (nginx/{prevFiles/prev_9ac9fe_c31239_src#http#ngx_http_request.c,revFiles/9ac9fe_c31239_src#http#ngx_http_request.c}: ngx_http_writer)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

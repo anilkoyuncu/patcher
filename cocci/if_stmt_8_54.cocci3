@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (E0->s.avctx->codec->id == AV_CODEC_ID_MSS2)  
++ if (E0->s.avctx->codec_id == AV_CODEC_ID_MSS2)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_5d2be7_6304f7_libavcodec#vc1.c,revFiles/5d2be7_6304f7_libavcodec#vc1.c}: ff_vc1_parse_frame_header)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = vlc_http_auth_FormatAuthorizationHeader(VLC_OBJECT(E1), &E2->proxy_auth,  "GET", E2->url.psz_path,  E2->url.psz_username,  E2->url.psz_password); 
++ E0 = vlc_http_auth_FormatAuthorizationHeader(VLC_OBJECT(E1), &E2->proxy_auth,  "GET", E2->url.psz_path,  E2->proxy.psz_username,  E2->proxy.psz_password); 
+// Infered from: (vlc/{prevFiles/prev_b2a504_19c324_modules#access#http.c,revFiles/b2a504_19c324_modules#access#http.c}: Connect)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

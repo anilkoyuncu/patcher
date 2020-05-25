@@ -1,0 +1,19 @@
+@@
+identifier I0;
+@@
+- static int I0 = 0; 
++ static int vlc_initialized = 0; 
+  ...
+- if (I0)  
++ if (vlc_initialized)  
+  {
+- return 0; 
++ return 0; 
+  }
+  ...
+- I0 = 1; 
++ vlc_initialized = 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavcodec#mpc7.c,revFiles/5e5348_f1cc49_libavcodec#mpc7.c}: mpc7_decode_init), (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavcodec#mpc8.c,revFiles/5e5348_f1cc49_libavcodec#mpc8.c}: mpc8_decode_init)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

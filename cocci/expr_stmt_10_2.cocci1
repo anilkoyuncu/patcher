@@ -1,0 +1,33 @@
+@@
+identifier I0 = {RETURN_STR ,apr_sleep ,gtk_cell_layout_clear ,hide_interface }, I1 = {GTK_CELL_LAYOUT ,apr_time_from_msec ,g_strdup ,zend_string_copy };
+expression E2;
+@@
+- I0(I1(E2)); 
++ I0(E2); 
+// Infered from: (php-src/{prevFiles/prev_6ae57d_201f66_ext#standard#string.c,revFiles/6ae57d_201f66_ext#standard#string.c}: PHP_FUNCTION), (gtk/{prevFiles/prev_ab6981_13fc06_gtk#gtkentrycompletion.c,revFiles/ab6981_13fc06_gtk#gtkentrycompletion.c}: gtk_entry_completion_clear_text_column_renderer), (wireshark/{prevFiles/prev_9107fb_571ed4_ui#gtk#capture_dlg.c,revFiles/9107fb_571ed4_ui#gtk#capture_dlg.c}: ok_remote_cb), (apr/{prevFiles/prev_e794b9_e4af46_test#sendfile.c,revFiles/e794b9_e4af46_test#sendfile.c}: client)
+// False positives: (gtk/revFiles/ab6981_13fc06_gtk#gtkentrycompletion.c: gtk_entry_completion_clear), (gtk/revFiles/ab6981_13fc06_gtk#gtkentrycompletion.c: gtk_entry_completion_set_text_column), (php-src/revFiles/6ae57d_201f66_ext#standard#string.c: PHP_FUNCTION), (wireshark/revFiles/9107fb_571ed4_ui#gtk#capture_dlg.c: apply_local_cb)
+// Recall: 0.50, Precision: 0.44, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.71, Precision: 0.62
+// -- Node Change --
+// Recall: 0.62, Precision: 0.50
+// -- General --
+// Functions fully changed: 4/10(40%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_79aa3c8_8b281a_modules#video_output#wingdi.c: 
+ - vlc/prevFiles/prev_e63589_2739cd_modules#gui#minimal_macosx#macosx.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_6ae57d_201f66_ext#standard#string.c: PHP_FUNCTION
+ - wireshark/prevFiles/prev_9107fb_571ed4_ui#gtk#capture_dlg.c: apply_local_cb
+ - gtk/prevFiles/prev_ab6981_13fc06_gtk#gtkentrycompletion.c: gtk_entry_completion_set_text_column
+ - gtk/prevFiles/prev_ab6981_13fc06_gtk#gtkentrycompletion.c: gtk_entry_completion_clear
+*/
+
+// ---------------------------------------------

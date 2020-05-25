@@ -1,0 +1,26 @@
+@@
+expression E0, E1;
+@@
+- E0->output_format.i_rate = E1->nSamplesPerSec; 
+- E0->output_format.i_physical_channels = E0->output_format.i_original_channels = pi_channels_maps[  E1->nChannels]; 
++ E0->output_format.i_rate = E0->OutputFormatInfo.sampleRate; 
++ E0->output_format.i_physical_channels = E0->output_format.i_original_channels = pi_channels_maps[  E0->OutputFormatInfo.numChannels]; 
+// Infered from: (vlc/{prevFiles/prev_699c64_c60aac_modules#codec#quicktime.c,revFiles/699c64_c60aac_modules#codec#quicktime.c}: InitThreadAudio)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.43, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - nginx/prevFiles/prev_098ac9_0da6d2_src#http#modules#ngx_http_sub_filter_module.c: ngx_http_sub_body_filter
+ - nginx/prevFiles/prev_098ac9_0da6d2_src#http#modules#ngx_http_ssi_filter_module.c: ngx_http_ssi_body_filter
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- col_append_fstr(E0->cinfo, COL_INFO, " { %s } ",  tvb_format_text(E1, E2, E3 - 1)); 
++ col_append_fstr(E0->cinfo, COL_INFO, " { %s } ", tvb_format_text(E1, E2, E3)); 
+// Infered from: (wireshark/{prevFiles/prev_320090_59ab27_epan#dissectors#packet-mysql.c,revFiles/320090_59ab27_epan#dissectors#packet-mysql.c}: mysql_dissect_request)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.44
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_e1b386_2ef0c6_epan#dissectors#packet-megaco.c: dissect_megaco_text
+*/
+
+// ---------------------------------------------

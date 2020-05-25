@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 /= E1; 
++ E0 /= 10; 
+// Infered from: (codeflaws/{prevFiles/prev_49-B-1338572-1338580.c,revFiles/49-B-1338572-1338580.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

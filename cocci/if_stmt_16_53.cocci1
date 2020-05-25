@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- if (E0 && E0->interface_id == E1 && E0->adapter_id == E2 && E0->chandle == E3 && E0->scid == (  E4 | ((E5->p2p_dir == P2P_DIR_RECV) ? 0x00000000 :0x80000000)))  
++ if (E0 && E0->interface_id == E1 && E0->adapter_id == E2 && E0->chandle == E3 && E0->scid == (  E4 | ((E5->p2p_dir == P2P_DIR_RECV) ? 0x00000000 :0x80000000)) && E0->disconnect_in_frame > E5->fd->num)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_045152_63987d_epan#dissectors#packet-btl2cap.c,revFiles/045152_63987d_epan#dissectors#packet-btl2cap.c}: dissect_connresponse)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_045152_63987d_epan#dissectors#packet-btl2cap.c: dissect_connresponse
+*/
+
+// ---------------------------------------------

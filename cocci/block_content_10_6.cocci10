@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0; 
++ size_t I0; 
+  ...
+- E1->ai_addrlen = I0; 
++ E1->ai_addrlen = (int )I0; 
+// Infered from: (curl/{prevFiles/prev_c382c5_c66349_lib#curl_addrinfo.c,revFiles/c382c5_c66349_lib#curl_addrinfo.c}: Curl_he2ai)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

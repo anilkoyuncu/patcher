@@ -1,0 +1,45 @@
+@@
+identifier I0, I1, I2, I3;
+expression E4;
+typedef AVCodecContext;
+typedef AVFrame;
+typedef AVPacket;
+@@
+  int alac_encode_frame(AVCodecContext *I0, AVPacket *I1, const  AVFrame *I2,  int *I3)  
+  {
+  ...
+- if (E4)  
++ if (I2->nb_samples < DEFAULT_FRAME_SIZE)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_ec7a212_5d4ef0_libavcodec#alacenc.c,revFiles/ec7a212_5d4ef0_libavcodec#alacenc.c}: alac_encode_frame)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.45, Precision: 0.83
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_7a76a7_cc1161_src#input#decoder.c: input_DecoderFrameNext
+ - qemu/prevFiles/prev_140fd5_ec6d89_block#qcow2.c: qcow2_close
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_fcd3f2_5275db_hw#core#machine.c: machine_run_board_init
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!(-prefixcmp(E0, "--exec=")))  
++ if (!prefixcmp(E0, "--exec="))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_599065_cc44c7_builtin-archive.c,revFiles/599065_cc44c7_builtin-archive.c}: run_remote_archiver)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

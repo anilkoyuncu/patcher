@@ -1,0 +1,38 @@
+@@
+identifier I1, I3;
+expression E0, E2, E4;
+@@
+- E0->I1 = E2->I3 = E4; 
++ E0->I1 = E4; 
+// Infered from: (FFmpeg/{prevFiles/prev_cd6851_1c4371_libavformat#utils.c,revFiles/cd6851_1c4371_libavformat#utils.c}: compute_pkt_fields), (vlc/{prevFiles/prev_796b1e_67ddda_modules#video_output#fb.c,revFiles/796b1e_67ddda_modules#video_output#fb.c}: Create), (qemu/{prevFiles/prev_a76e6b_4da58f_audio#paaudio.c,revFiles/a76e6b_4da58f_audio#paaudio.c}: qpa_init_out), (qemu/{prevFiles/prev_a76e6b_4da58f_audio#paaudio.c,revFiles/a76e6b_4da58f_audio#paaudio.c}: qpa_init_in)
+// False positives: (FFmpeg/revFiles/cd6851_1c4371_libavformat#utils.c: avformat_open_input), (FFmpeg/revFiles/cd6851_1c4371_libavformat#utils.c: compute_pkt_fields2), (FFmpeg/revFiles/cd6851_1c4371_libavformat#utils.c: flush_packet_queue)
+// Recall: 0.31, Precision: 0.57, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 0.73
+// -- Node Change --
+// Recall: 0.62, Precision: 0.73
+// -- General --
+// Functions fully changed: 5/13(38%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_fe8aa1_5209ac_transport.c: fetch_refs_via_pack
+ - gtk/prevFiles/prev_d3beea_bccaeb_gtk#gtkframe.c: gtk_frame_real_compute_child_allocation
+ - FFmpeg/prevFiles/prev_e878ec_33d412_libavcodec#aic.c: aic_decode_init
+*/
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_00c27a_fc46ed_ompi#mca#mtl#mxm#mtl_mxm.c: ompi_mtl_mxm_module_init
+ - qemu/prevFiles/prev_a76e6b_4da58f_audio#paaudio.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_cd6851_1c4371_libavformat#utils.c: avformat_open_input
+ - FFmpeg/prevFiles/prev_cd6851_1c4371_libavformat#utils.c: compute_pkt_fields2
+ - FFmpeg/prevFiles/prev_cd6851_1c4371_libavformat#utils.c: flush_packet_queue
+*/
+
+// ---------------------------------------------

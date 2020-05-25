@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef GSList;
+@@
+- GSList *I0 = E1->rt_list; 
++ GSList *I0; 
+// Infered from: (wireshark/{prevFiles/prev_d986c6_a9ce06_ui#cli#tap-icmpv6stat.c,revFiles/d986c6_a9ce06_ui#cli#tap-icmpv6stat.c}: compute_stats), (wireshark/{prevFiles/prev_d986c6_a9ce06_ui#cli#tap-icmpstat.c,revFiles/d986c6_a9ce06_ui#cli#tap-icmpstat.c}: compute_stats)
+// Recall: 0.19, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

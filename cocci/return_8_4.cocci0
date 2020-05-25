@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return request_threaded_irq(E0->client->irq, NULL, lp8727_isr_func,  IRQF_TRIGGER_FALLING, "lp8727_irq", E0); 
++ return request_threaded_irq(E0->client->irq, NULL, lp8727_isr_func,  IRQF_TRIGGER_FALLING | IRQF_ONESHOT,  "lp8727_irq", E0); 
+// Infered from: (linux/{prevFiles/prev_7c577c0d_f1ade35_drivers#power#lp8727_charger.c,revFiles/7c577c0d_f1ade35_drivers#power#lp8727_charger.c}: lp8727_intr_config)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

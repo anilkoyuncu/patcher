@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- init_get_bits8(&E0, E1->extradata, E1->extradata_size); 
++ int ret = init_get_bits8(&E0, E1->extradata, E1->extradata_size); 
++ av_assert0(ret >= 0); 
+// Infered from: (FFmpeg/{prevFiles/prev_879603_8d2b4b_libavformat#latmenc.c,revFiles/879603_8d2b4b_libavformat#latmenc.c}: latm_write_frame_header)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+expression E0;
+iterator name RAMBLOCK_FOREACH;
+iterator name RAMBLOCK_FOREACH_MIGRATABLE;
+@@
+- RAMBLOCK_FOREACH (E0)  
++ RAMBLOCK_FOREACH_MIGRATABLE (E0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_ff0769_ea134c_migration#ram.c,revFiles/ff0769_ea134c_migration#ram.c}: ram_state_resume_prepare), (qemu/{prevFiles/prev_ff0769_ea134c_migration#ram.c,revFiles/ff0769_ea134c_migration#ram.c}: ram_dirty_bitmap_sync_all)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

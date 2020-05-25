@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->blockingto < E1)  
++ if (E0->blockingto != 0 && E0->blockingto < E1)  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_58d976_f86a74_redis.c,revFiles/58d976_f86a74_redis.c}: closeTimedoutClients)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

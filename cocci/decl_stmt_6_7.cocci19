@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef xmlNodePtr;
+@@
+- xmlNodePtr I0 = E1->childs; 
++ xmlNodePtr I0 = E1->xmlChildrenNode; 
+// Infered from: (gstreamer/{prevFiles/prev_b12b28_954663_gst#gstpad.c,revFiles/b12b28_954663_gst#gstpad.c}: gst_pad_load_and_connect), (gstreamer/{prevFiles/prev_b12b28_954663_gst#gstpad.c,revFiles/b12b28_954663_gst#gstpad.c}: gst_padtemplate_load_thyself)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

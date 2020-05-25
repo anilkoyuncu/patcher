@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- server.ipfd_count = E0 - 1; 
++ server.ipfd_count += (E0 - 1); 
+// Infered from: (redis/{prevFiles/prev_a0e986_cba7a4_src#redis.c,revFiles/a0e986_cba7a4_src#redis.c}: initServer)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_a0e986_cba7a4_src#redis.c: initServer
+*/
+
+// ---------------------------------------------

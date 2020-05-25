@@ -1,0 +1,8 @@
+@@
+@@
+- redisLog(REDIS_WARNING, "Fatal error loading the DB. Exiting."); 
++ redisLog(REDIS_WARNING, "Fatal error loading the DB: %s. Exiting.",  strerror(errno)); 
+// Infered from: (redis/{prevFiles/prev_4178a8_91d3b4_src#redis.c,revFiles/4178a8_91d3b4_src#redis.c}: loadDataFromDisk)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

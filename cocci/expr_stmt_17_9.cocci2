@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- gtk_widget_set_tooltip_text(E0->button, E1); 
++ gtk_widget_set_tooltip_text(gtk_tree_view_column_get_widget(E0), E1); 
+// Infered from: (wireshark/{prevFiles/prev_6d20f4_916644_gtk#profile_dlg.c,revFiles/6d20f4_916644_gtk#profile_dlg.c}: profile_dialog_new), (wireshark/{prevFiles/prev_6d20f4_916644_gtk#uat_gui.c,revFiles/6d20f4_916644_gtk#uat_gui.c}: uat_window)
+// Recall: 0.60, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

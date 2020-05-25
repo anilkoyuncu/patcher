@@ -1,0 +1,11 @@
+@@
+typedef PyObject;
+@@
+- PyErr_SetObject(PyExc_OSError,  Py_BuildValue("is", 0, "unexpected NULL from tmpnam_r")); 
++ PyObject *err = Py_BuildValue("is", 0, "unexpected NULL from tmpnam_r"); 
++ PyErr_SetObject(PyExc_OSError, err); 
++ Py_XDECREF(err); 
+// Infered from: (cpython/{prevFiles/prev_d1e0ef_c3264e_Modules#posixmodule.c,revFiles/d1e0ef_c3264e_Modules#posixmodule.c}: posix_tmpnam)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

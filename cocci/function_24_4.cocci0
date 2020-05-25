@@ -1,0 +1,11 @@
+@@
+expression E1, E0;
+@@
+- if (E0)  
+- {
+- block_Release(E1->p_block_in); 
+- }
+// Infered from: (vlc/{prevFiles/prev_587910_e0321a_modules#demux#mpeg#mpga.c,revFiles/587910_e0321a_modules#demux#mpeg#mpga.c}: Close), (vlc/{prevFiles/prev_0caa38_55b5dd_modules#demux#mpeg#mpga.c,revFiles/0caa38_55b5dd_modules#demux#mpeg#mpga.c}: Close)
+// Recall: 0.27, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

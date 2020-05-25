@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- struct mxs_gpio_port *I0 = (struct mxs_gpio_port *)get_irq_data(E1); 
++ struct mxs_gpio_port *I0 = (struct mxs_gpio_port *)irq_get_handler_data(  E1); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-mxs#gpio.c,revFiles/6845664a_25a566_arch#arm#mach-mxs#gpio.c}: mxs_gpio_irq_handler)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

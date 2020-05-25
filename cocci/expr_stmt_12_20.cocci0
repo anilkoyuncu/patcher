@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->history[MAX_PAST + MAX_FUTURE].field = vlc_vdp_video_detach(E1); 
++ E0->history[MAX_PAST + MAX_FUTURE].field = vlc_vdp_video_copy(E1->context); 
+// Infered from: (vlc/{prevFiles/prev_0002b7_6ffb75_modules#hw#vdpau#chroma.c,revFiles/0002b7_6ffb75_modules#hw#vdpau#chroma.c}: MixerRender)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

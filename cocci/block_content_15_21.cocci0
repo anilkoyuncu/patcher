@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- I0 = 1; 
++ I0 = true; 
+// Infered from: (linux/{prevFiles/prev_3db1cd5_a8e510_net#ipv4#tcp_timer.c,revFiles/3db1cd5_a8e510_net#ipv4#tcp_timer.c}: tcp_write_timeout), (linux/{prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c,revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c}: dispc_ovl_check), (linux/{prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c,revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c}: dispc_ovl_setup_common), (linux/{prevFiles/prev_3db1cd5_a8e510_net#netfilter#ipvs#ip_vs_pe_sip.c,revFiles/3db1cd5_a8e510_net#netfilter#ipvs#ip_vs_pe_sip.c}: ip_vs_sip_ct_match), (linux/{prevFiles/prev_19cd22_a568dc_drivers#staging#vt6655#rxtx.c,revFiles/19cd22_a568dc_drivers#staging#vt6655#rxtx.c}: s_uGetDataDuration)
+// False positives: (linux/revFiles/3db1cd5_a8e510_net#ipv4#tcp_timer.c: tcp_out_of_resources), (linux/revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c: calc_core_clk_34xx), (linux/revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_mgr_set_io_pad_mode), (linux/revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_mgr_set_tft_data_lines), (linux/revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_ovl_set_accu_uv), (linux/revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_ovl_set_channel_out), (linux/revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_ovl_set_color_mode), (linux/revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_ovl_set_rotation_attrs), (linux/revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_ovl_setup_common)
+// Recall: 0.50, Precision: 0.28, Matching recall: 0.50
+
+// ---------------------------------------------

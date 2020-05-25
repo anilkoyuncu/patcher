@@ -1,0 +1,9 @@
+@@
+@@
+- SIGNAL_BEGIN_CRITICAL(); 
+- SIGG(active) = 0; 
++ *((volatile  int *)&SIGG(active)) = 0; 
+// Infered from: (php-src/{prevFiles/prev_38f128_68fd43_Zend#zend_signal.c,revFiles/38f128_68fd43_Zend#zend_signal.c}: zend_signal_deactivate)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.27
+
+// ---------------------------------------------

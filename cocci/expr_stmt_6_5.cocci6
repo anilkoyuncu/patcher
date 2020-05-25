@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->afi[0][(E1 - 0x700) / 4] = E2; 
++ E0->afi[0][(E1 - 0xA60) / 4] = E2; 
+// Infered from: (qemu/{prevFiles/prev_0d10f6_e32605_hw#zynq_slcr.c,revFiles/0d10f6_e32605_hw#zynq_slcr.c}: zynq_slcr_write)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

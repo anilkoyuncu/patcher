@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- E0->bit_rate = get_le32(&E1) * 8; 
++ skip_bits(&E1, 32); 
++ skip_bits(&E1, 16); 
+// Infered from: (FFmpeg/{prevFiles/prev_077454_a1f788_libavcodec#shorten.c,revFiles/077454_a1f788_libavcodec#shorten.c}: decode_wave_header)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.07, Precision: 1.00
+// -- Node Change --
+// Recall: 0.22, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/14(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_077454_a1f788_libavcodec#shorten.c: decode_wave_header
+*/
+
+// ---------------------------------------------

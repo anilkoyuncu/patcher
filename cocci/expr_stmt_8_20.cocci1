@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = sysbus_create_simple(E1, 0, NULL); 
++ E0 = sysbus_create_simple(E1, -1, NULL); 
+// Infered from: (qemu/{prevFiles/prev_d04fba_23910d_hw#musicpal.c,revFiles/d04fba_23910d_hw#musicpal.c}: musicpal_init), (qemu/{prevFiles/prev_d04fba_23910d_hw#musicpal.c,revFiles/d04fba_23910d_hw#musicpal.c}: musicpal_init)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

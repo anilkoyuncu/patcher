@@ -1,0 +1,17 @@
+@@
+expression E0, E2, E3, E1;
+@@
+- if (!E0)  
++ if (!E0 || !E0->info->parse)  
+  {
+  ...
+  }
+- if (!E1)  
+- {
+- fprintf(stderr, "property \"%s.%s\" has no parser\n", E2->info->name, E3); 
+- return -1; 
+- }
+// Infered from: (qemu/{prevFiles/prev_036f71_c64eaf_hw#qdev-properties.c,revFiles/036f71_c64eaf_hw#qdev-properties.c}: qdev_prop_parse)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

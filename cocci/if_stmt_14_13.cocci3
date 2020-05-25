@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0[0] != '/')  
++ if (0 != strncmp(E0, DIR_CHAR, 1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_fa446f_7a7430_src#main.c,revFiles/fa446f_7a7430_src#main.c}: create_dir_hierarchy)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

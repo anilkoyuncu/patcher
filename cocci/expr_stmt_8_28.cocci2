@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = dt2801_writedata(E1, (E2 >> 8)); 
++ E0 = dt2801_writedata(E1, E2 >> 8); 
+// Infered from: (linux/{prevFiles/prev_25ff6f_e922df_drivers#staging#comedi#drivers#dt2801.c,revFiles/25ff6f_e922df_drivers#staging#comedi#drivers#dt2801.c}: dt2801_writedata2)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

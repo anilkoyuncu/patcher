@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 && E1->naxisn[E2] > SIZE_MAX / E0)  
++ if (E0 == 0 || E1->naxisn[E2] > SIZE_MAX / E0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_4a3303_a76a51_libavcodec#fitsdec.c,revFiles/4a3303_a76a51_libavcodec#fitsdec.c}: fits_read_header)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

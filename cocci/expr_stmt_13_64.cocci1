@@ -1,0 +1,22 @@
+@@
+identifier I0;
+expression E1;
+@@
+  int I0 = -1; 
+  ...
+- zend_list_delete (Z_LVAL_PP (E1)); 
++ zend_list_delete(I0); 
+// Infered from: (php-src/{prevFiles/prev_344955_bcb763_ext#pgsql#pgsql.c,revFiles/344955_bcb763_ext#pgsql#pgsql.c}: PHP_FUNCTION)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+
+// ---------------------------------------------

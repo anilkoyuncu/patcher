@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- split_get_params (E0, E1, E2, E3); 
++ split_get_params (E2, E3); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_470690_38b24d_src#mod_flv_streaming.c,revFiles/470690_38b24d_src#mod_flv_streaming.c}: URIHANDLER_FUNC)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

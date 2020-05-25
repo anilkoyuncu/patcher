@@ -1,0 +1,12 @@
+@@
+expression E0, E2, E3, E1;
+@@
+- if (E0 || E1 != E2 || E1 != E3)  
++ if (E0 || (E1 != E2 && E1 != E3))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_55ccb5_78194a_ext#ftp#ftp.c,revFiles/55ccb5_78194a_ext#ftp#ftp.c}: ftp_genlist), (vlc/{prevFiles/prev_414f55_33d2c6_modules#audio_filter#converter#a52tospdif.c,revFiles/414f55_33d2c6_modules#audio_filter#converter#a52tospdif.c}: Create)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

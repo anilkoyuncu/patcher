@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0)  
+- {
+- memcpy(memory_region_get_ram_ptr(E1), memory_region_get_ram_ptr(E2), E3); 
+- }
+// Infered from: (qemu/{prevFiles/prev_f05d4d_b0932e_hw#mips#mips_malta.c,revFiles/f05d4d_b0932e_hw#mips#mips_malta.c}: mips_malta_init)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_f05d4d_b0932e_hw#mips#mips_malta.c: mips_malta_init
+*/
+
+// ---------------------------------------------

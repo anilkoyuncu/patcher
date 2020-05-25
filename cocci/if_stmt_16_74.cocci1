@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (jiffies - E0 > E1)  
++ if (time_after(jiffies, E0 + E1))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_168c626_9e05c0f_drivers#media#video#ivtv#ivtv-mailbox.c,revFiles/168c626_9e05c0f_drivers#media#video#ivtv#ivtv-mailbox.c}: get_mailbox), (linux/{prevFiles/prev_168c626_9e05c0f_drivers#media#video#ivtv#ivtv-mailbox.c,revFiles/168c626_9e05c0f_drivers#media#video#ivtv#ivtv-mailbox.c}: ivtv_api_call), (linux/{prevFiles/prev_168c626_9e05c0f_drivers#media#video#ivtv#ivtv-fileops.c,revFiles/168c626_9e05c0f_drivers#media#video#ivtv#ivtv-fileops.c}: ivtv_get_buffer)
+// Recall: 0.80, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

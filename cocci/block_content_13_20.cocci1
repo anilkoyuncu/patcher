@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef int16_t;
+@@
+- E0 = E1->alpMmxFilter; 
++ E0 = (int16_t *)E1->alpMmxFilter; 
+// Infered from: (FFmpeg/{prevFiles/prev_aa9507_05d81a_libswscale#swscale.c,revFiles/aa9507_05d81a_libswscale#swscale.c}: swScale)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

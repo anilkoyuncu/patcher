@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- msg_Dbg(E0,  "IDirectXVideoAccelerationService_CreateSurface succeed with %d surfaces (%dx%d)",  E1, E2->i_width, E2->i_height); 
++ msg_Dbg(E0,  "IDirectXVideoAccelerationService_CreateSurface succeed with %zu surfaces (%dx%d)",  E1, E2->i_width, E2->i_height); 
+// Infered from: (vlc/{prevFiles/prev_c8cd12_99c965_modules#codec#avcodec#dxva2.c,revFiles/c8cd12_99c965_modules#codec#avcodec#dxva2.c}: DxCreateVideoDecoder)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

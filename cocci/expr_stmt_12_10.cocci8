@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- msg_Dbg(E0, "   %d Hz -> factor:%f alpha:%f beta:%f gamma:%f",  (int )E1.band[E2].f_frequency, E3->f_amp[E2], E3->f_alpha[E2],  E3->f_beta[E2], E3->f_gamma[E2]); 
++ msg_Dbg(E0, "   %.2f Hz -> factor:%f alpha:%f beta:%f gamma:%f",  E1.band[E2].f_frequency, E3->f_amp[E2], E3->f_alpha[E2],  E3->f_beta[E2], E3->f_gamma[E2]); 
+// Infered from: (vlc/{prevFiles/prev_a2f451_1b6c99_modules#audio_filter#equalizer.c,revFiles/a2f451_1b6c99_modules#audio_filter#equalizer.c}: EqzInit)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = sizeof(E1) < E2 ? E1 :g_malloc(MIN(65536, E2)); 
++ E0 = sizeof(E1) >= E2 ? E1 :g_malloc(MIN(65536, E2)); 
+// Infered from: (qemu/{prevFiles/prev_2563c9_b31f84_nbd#client.c,revFiles/2563c9_b31f84_nbd#client.c}: drop_sync)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

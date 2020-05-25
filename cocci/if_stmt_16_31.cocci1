@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!strncmp(E0, "refs/heads/", 11) && !strncmp(E1, "refs/heads/", 11))  
++ if (!prefixcmp(E0, "refs/heads/") && !prefixcmp(E1, "refs/heads/"))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_cc44c7_cff030_refs.c,revFiles/cc44c7_cff030_refs.c}: rename_ref)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

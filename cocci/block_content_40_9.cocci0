@@ -1,0 +1,12 @@
+@@
+identifier I1;
+assignment operator A2;
+expression E0, E3;
+@@
+- E0.I1 A2 E3; 
++ E0.bg = E3; 
+// Infered from: (tmux/{prevFiles/prev_1ba5ce_f949107_clock.c,revFiles/1ba5ce_f949107_clock.c}: clock_draw), (tmux/{prevFiles/prev_fde3bd_1a5aba_clock.c,revFiles/fde3bd_1a5aba_clock.c}: clock_draw)
+// False positives: (tmux/revFiles/1ba5ce_f949107_clock.c: clock_draw), (tmux/revFiles/fde3bd_1a5aba_clock.c: clock_draw)
+// Recall: 0.57, Precision: 0.50, Matching recall: 0.57
+
+// ---------------------------------------------

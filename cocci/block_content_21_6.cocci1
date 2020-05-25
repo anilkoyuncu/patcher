@@ -1,0 +1,20 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5;
+typedef gchar;
+@@
+- const  gchar *I0; 
++ const  gchar *ip_address; 
+  ...
+- I0 = get_addr_str(E1, E2, E3, &E4); 
+- if (I0 && E3)  
++ ip_address = get_addr_str(E1, E2, E3, &E4); 
++ if (ip_address && E3)  
+  {
+- proto_item_append_text(E5, ", Address: %s", I0); 
++ proto_item_append_text(E5, ", Address: %s", ip_address); 
+  }
+// Infered from: (wireshark/{prevFiles/prev_3f5699_f37116_epan#dissectors#packet-lisp.c,revFiles/3f5699_f37116_epan#dissectors#packet-lisp.c}: dissect_lcaf_geo)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

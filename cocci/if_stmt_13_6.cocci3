@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->frame.start < 1)  
++ if (E0->frame.start < 1 || E0->frame.start > 5)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e90f0a_da6db8_libavcodec#ilbcdec.c,revFiles/e90f0a_da6db8_libavcodec#ilbcdec.c}: ilbc_decode_frame)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

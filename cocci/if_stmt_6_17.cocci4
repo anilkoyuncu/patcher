@@ -1,0 +1,11 @@
+@@
+@@
+- if (i + b > m && i - b <= 0)  
++ if (j + b > m && j - b <= 0)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_374-A-16321915-16321928.c,revFiles/374-A-16321915-16321928.c}: func)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

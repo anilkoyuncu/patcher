@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 + E1 <= E0)  
++ if (E0 >= INT_MAX - E1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_96dac2_fd4530_src#playlist#fetcher.c,revFiles/96dac2_fd4530_src#playlist#fetcher.c}: DownloadArt)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0->req.length % E1->ep.maxpacket) && (E0->zero == 0))  
++ if ((E0->req.length % E1->ep.maxpacket) && !E0->zero)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_5cbca95_1a366ab_drivers#staging#emxx_udc#emxx_udc.c,revFiles/5cbca95_1a366ab_drivers#staging#emxx_udc#emxx_udc.c}: _nbu2ss_epn_out_dma_int)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

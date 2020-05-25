@@ -1,0 +1,11 @@
+@@
+identifier I1;
+expression E0, E2, E3, E4, E5;
+@@
+- proto_tree_add_bits_item(E0, I1, E2, E3 + E4, E5, FALSE) 
++ proto_tree_add_bits_item(E0, I1, E2, E3 + E4, E5, ENC_BIG_ENDIAN) 
+  ... when any
+// Infered from: (wireshark/{prevFiles/prev_54b72021_6a5895_epan#dissectors#packet-vnc.c,revFiles/54b72021_6a5895_epan#dissectors#packet-vnc.c}: vnc_tight_encoding), (wireshark/{prevFiles/prev_54b72021_6a5895_epan#dissectors#packet-vnc.c,revFiles/54b72021_6a5895_epan#dissectors#packet-vnc.c}: vnc_tight_encoding), (wireshark/{prevFiles/prev_54b72021_6a5895_epan#dissectors#packet-vnc.c,revFiles/54b72021_6a5895_epan#dissectors#packet-vnc.c}: vnc_tight_encoding), (wireshark/{prevFiles/prev_54b72021_6a5895_epan#dissectors#packet-vnc.c,revFiles/54b72021_6a5895_epan#dissectors#packet-vnc.c}: vnc_tight_encoding), (wireshark/{prevFiles/prev_54b72021_6a5895_epan#dissectors#packet-vnc.c,revFiles/54b72021_6a5895_epan#dissectors#packet-vnc.c}: vnc_tight_encoding), (wireshark/{prevFiles/prev_54b72021_6a5895_epan#dissectors#packet-vnc.c,revFiles/54b72021_6a5895_epan#dissectors#packet-vnc.c}: vnc_tight_encoding)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

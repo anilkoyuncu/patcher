@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gtk_button_set_icon_name(GTK_BUTTON(E0), "emblem-system-symbolic"); 
++ gtk_menu_button_set_icon_name(GTK_MENU_BUTTON(E0), "emblem-system-symbolic"); 
+// Infered from: (gtk/{prevFiles/prev_6b1cfd_22e078_demos#gtk-demo#sliding_puzzle.c,revFiles/6b1cfd_22e078_demos#gtk-demo#sliding_puzzle.c}: do_sliding_puzzle), (gtk/{prevFiles/prev_f95627_5a0c88_demos#gtk-demo#sliding_puzzle.c,revFiles/f95627_5a0c88_demos#gtk-demo#sliding_puzzle.c}: do_sliding_puzzle)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

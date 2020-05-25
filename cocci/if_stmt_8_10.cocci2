@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (av_dict_set(&E0->video_conf, E1, "1", 0) < 0)  
++ if (av_dict_set(&E0->video_conf, "VideoGopSize", "1", 0) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_3f07dd_1a054b_ffserver_config.c,revFiles/3f07dd_1a054b_ffserver_config.c}: ffserver_parse_config_stream)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

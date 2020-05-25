@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef p9_conn_req_callback;
+@@
+- p9_conn_req_callback I0; 
+  ...
+- I0 = E1; 
+// Infered from: (linux/{prevFiles/prev_53a620_421f099_net#9p#trans_fd.c,revFiles/53a620_421f099_net#9p#trans_fd.c}: p9_mux_flush_cb)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

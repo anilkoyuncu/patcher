@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->mfindex_kick = (E0->trbs[0].control >> TRB_TR_FRAMEID_SHIFT) & TRB_TR_FRAMEID_MASK; 
++ E0->mfindex_kick = ((E0->trbs[0].control >> TRB_TR_FRAMEID_SHIFT) & TRB_TR_FRAMEID_MASK) << 3; 
+// Infered from: (qemu/{prevFiles/prev_786ad2_c348e48_hw#usb#hcd-xhci.c,revFiles/786ad2_c348e48_hw#usb#hcd-xhci.c}: xhci_calc_iso_kick)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- tcg_gen_extract_tl(cpu_ov, cpu_ov, 63, 1); 
++ tcg_gen_extract_tl(cpu_ov, cpu_ov, TARGET_LONG_BITS - 1, 1); 
+// Infered from: (qemu/{prevFiles/prev_38a61d_f24411_target#ppc#translate.c,revFiles/38a61d_f24411_target#ppc#translate.c}: gen_op_arith_compute_ov)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

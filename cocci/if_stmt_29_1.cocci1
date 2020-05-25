@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- zend_error(E_ERROR, "Out of memory: cannot allocate %d bytes!", E0); 
++ zend_error(E_ERROR, "Out of memory: cannot allocate %zd bytes!", E0); 
+// Infered from: (php-src/{prevFiles/prev_ede985_1d3c79_Zend#zend_mm.c,revFiles/ede985_1d3c79_Zend#zend_mm.c}: zend_mm_alloc), (php-src/{prevFiles/prev_ede985_1d3c79_Zend#zend_mm.c,revFiles/ede985_1d3c79_Zend#zend_mm.c}: zend_mm_alloc)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

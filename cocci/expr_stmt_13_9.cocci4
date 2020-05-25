@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- msg_Err(E0, "You might give a non empty host"); 
++ msg_Err(E0, "Unable to extract host from %s", E0->psz_url); 
+// Infered from: (vlc/{prevFiles/prev_693962_e5172a_modules#access#sftp.c,revFiles/693962_e5172a_modules#access#sftp.c}: Open)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

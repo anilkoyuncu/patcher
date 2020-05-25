@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0.i_byte_offset = atol(E1 + 6); 
++ E0.i_byte_offset = atoll(E1 + 6); 
+// Infered from: (vlc/{prevFiles/prev_05654d_fb105c_src#input#input.c,revFiles/05654d_fb105c_src#input#input.c}: __input_CreateThread)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

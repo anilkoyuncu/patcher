@@ -1,0 +1,9 @@
+@@
+expression E0, E2, E1;
+@@
+- g_snprintf(E0, SUM_STR_MAX, E1, E2.file_length); 
++ g_snprintf(E0, SUM_STR_MAX, E1, (long long )E2.file_length); 
+// Infered from: (wireshark/{prevFiles/prev_76729e_d3d3f9_gtk#gsm_map_summary.c,revFiles/76729e_d3d3f9_gtk#gsm_map_summary.c}: gsm_map_stat_gtk_sum_cb), (wireshark/{prevFiles/prev_76729e_d3d3f9_gtk#summary_dlg.c,revFiles/76729e_d3d3f9_gtk#summary_dlg.c}: summary_open_cb), (wireshark/{prevFiles/prev_76729e_d3d3f9_gtk#mtp3_summary.c,revFiles/76729e_d3d3f9_gtk#mtp3_summary.c}: mtp3_sum_gtk_sum_cb)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

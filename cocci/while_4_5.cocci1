@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- while (*E0 < E1 && E2 < ZBEE_ZCL_NUM_ATTR_ETT)  
++ while (*E0 < E1 && E2 < ZBEE_ZCL_APPL_CTRL_NUM_FUNC_ETT)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_b1197f_53d351_epan#dissectors#packet-zbee-zcl-general.c,revFiles/b1197f_53d351_epan#dissectors#packet-zbee-zcl-general.c}: dissect_zcl_appl_ctrl_wr_funcs)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

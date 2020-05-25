@@ -1,0 +1,28 @@
+@@
+identifier I0, I1;
+@@
+  int client_main(struct client_ctx *I0)  
+  {
+  ...
+- int I1; 
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_83f558_884ebb_client.c,revFiles/83f558_884ebb_client.c}: client_main), (tmux/{prevFiles/prev_751a2f_81a457_client.c,revFiles/751a2f_81a457_client.c}: client_main)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.12
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.36, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - tmux/prevFiles/prev_83f558_884ebb_client.c: client_main
+ - tmux/prevFiles/prev_751a2f_81a457_client.c: client_main
+*/
+
+// ---------------------------------------------

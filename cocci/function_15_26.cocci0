@@ -1,0 +1,8 @@
+@@
+@@
+- server.pidfile = zstrdup(REDIS_DEFAULT_PID_FILE); 
++ server.pidfile = NULL; 
+// Infered from: (redis/{prevFiles/prev_5e8b7e_e6d499_src#redis.c,revFiles/5e8b7e_e6d499_src#redis.c}: initServerConfig)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

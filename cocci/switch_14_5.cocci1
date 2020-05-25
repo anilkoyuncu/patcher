@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0.i_height = E0.i_visible_height = E1->output.i_height / 2; 
++ E0.i_height /= 2; 
++ E0.i_visible_height /= 2; 
++ E0.i_y_offset /= 2; 
++ E0.i_aspect /= 2; 
++ E0.i_sar_den *= 2; 
+// Infered from: (vlc/{prevFiles/prev_a5f23e_bc9929_modules#video_filter#deinterlace.c,revFiles/a5f23e_bc9929_modules#video_filter#deinterlace.c}: SpawnRealVout)
+// Recall: 0.35, Precision: 1.00, Matching recall: 0.43
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.82, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E3, E1, E2;
+@@
+- E0 = tvb_get_string(wmem_packet_scope(), E1, E2, E3); 
++ E0 = tvb_get_string_enc(wmem_packet_scope(), E1, E2, E3, ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-dvbci.c,revFiles/971ffd_421d81_epan#dissectors#packet-dvbci.c}: dissect_dvbci_ami_file_ack), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-dvbci.c,revFiles/971ffd_421d81_epan#dissectors#packet-dvbci.c}: dissect_dvbci_payload_ami), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-fcgi.c,revFiles/971ffd_421d81_epan#dissectors#packet-fcgi.c}: dissect_nv_pairs), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-wsp.c,revFiles/971ffd_421d81_epan#dissectors#packet-wsp.c}: add_post_variable)
+// Recall: 0.70, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

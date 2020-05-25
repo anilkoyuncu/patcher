@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- return devm_request_threaded_irq(E0->dev, E1, NULL, E2, 0, E3, E4); 
++ return devm_request_threaded_irq(E0->dev, E1, NULL, E2, IRQF_ONESHOT, E3, E4); 
+// Infered from: (linux/{prevFiles/prev_0b182c_7d5b1e_drivers#mfd#mc13xxx-core.c,revFiles/0b182c_7d5b1e_drivers#mfd#mc13xxx-core.c}: mc13xxx_irq_request)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

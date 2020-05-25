@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->x = E1.x; 
++ E0->x = 0; 
+// Infered from: (gtk/{prevFiles/prev_d3beea_bccaeb_gtk#gtkframe.c,revFiles/d3beea_bccaeb_gtk#gtkframe.c}: gtk_frame_real_compute_child_allocation)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

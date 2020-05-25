@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- ARRAY_FIELD_DP32(E0->regs, CRB_LOC_STATE, tpmRegValidSts, 1); 
+// Infered from: (qemu/{prevFiles/prev_be052a_f1a63f_hw#tpm#tpm_crb.c,revFiles/be052a_f1a63f_hw#tpm#tpm_crb.c}: tpm_crb_mmio_write)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.22, Precision: 1.00
+// -- Node Change --
+// Recall: 0.17, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/9(22%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_28cb1c_db67bd_modules#demux#ts.c: PMTSetupEsHDMV
+ - qemu/prevFiles/prev_a5e3d9_f8b6d6_hw#scsi-bus.c: scsi_req_xfer_mode
+*/
+
+// ---------------------------------------------

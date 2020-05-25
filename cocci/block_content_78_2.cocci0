@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((E0 - E1) + 1 + E2 + 1 >= MAXPATHLEN)  
++ if (E2 > (MAXPATHLEN - 2) || (E0 - E1) > MAXPATHLEN || (E0 - E1) + 1 + (  size_t )E2 + 1 >= MAXPATHLEN)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_f8be3e_6f9c3b_main#fopen_wrappers.c,revFiles/f8be3e_6f9c3b_main#fopen_wrappers.c}: php_resolve_path), (php-src/{prevFiles/prev_c4c2cc_58b188_main#fopen_wrappers.c,revFiles/c4c2cc_58b188_main#fopen_wrappers.c}: php_resolve_path)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------

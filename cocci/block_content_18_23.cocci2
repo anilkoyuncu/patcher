@@ -1,0 +1,9 @@
+@@
+@@
+- ompi_event_loop(0); 
++ int rc = ompi_event_loop(0); 
++ assert(rc == 0); 
+// Infered from: (ompi/{prevFiles/prev_5a97a8_7bd0f1_src#event#event.c,revFiles/5a97a8_7bd0f1_src#event#event.c}: ompi_event_run)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

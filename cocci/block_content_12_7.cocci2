@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- seq_printf(E0, " %14s", get_irq_desc_chip(E1)->name); 
++ seq_printf(E0, " %14s", irq_desc_get_chip(E1)->name); 
+// Infered from: (linux/{prevFiles/prev_0ebec35_4bdab7_arch#um#kernel#irq.c,revFiles/0ebec35_4bdab7_arch#um#kernel#irq.c}: show_interrupts)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.62, Precision: 0.57
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_0ebec35_4bdab7_arch#um#kernel#irq.c: init_IRQ
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_912ce9_800ea2_libavcodec#jpeg2000.c: ff_jpeg2000_init_component
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0.format.video.xFramerate = (1 << 16) * E1->time_base.den / E1->time_base.num; 
++ E0.format.video.xFramerate = (1LL << 16) * E1->time_base.den / E1->time_base.num; 
+// Infered from: (FFmpeg/{prevFiles/prev_b022d9_f4eb7d_libavcodec#omx.c,revFiles/b022d9_f4eb7d_libavcodec#omx.c}: omx_component_init)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

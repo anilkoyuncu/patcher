@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 >= _NSIG)  
++ if (E0 < 0 || E0 >= _NSIG)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_167c50_7ff7b6_linux-user#signal.c,revFiles/167c50_7ff7b6_linux-user#signal.c}: target_to_host_signal)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

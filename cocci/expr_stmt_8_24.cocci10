@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- printf("%lld", ((E0 * E0) / 4 * (E1 * E1) / 4)); 
++ printf("%lld", ((E0 * E0) / 4) * ((E1 * E1) / 4)); 
+// Infered from: (codeflaws/{prevFiles/prev_189-B-18252831-18252846.c,revFiles/189-B-18252831-18252846.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

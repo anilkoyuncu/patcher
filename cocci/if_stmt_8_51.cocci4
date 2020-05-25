@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- if (((E0->sysinfo) == 0x00))  
++ if (E0->sysinfo == 0x00)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_6ad633_ecf8cb_epan#dissectors#packet-sbus.c,revFiles/6ad633_ecf8cb_epan#dissectors#packet-sbus.c}: dissect_sbus)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_197053_9edc19_hw#rdma#vmw#pvrdma_cmd.c: modify_qp
+*/
+
+// ---------------------------------------------

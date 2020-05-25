@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == strlen(servalpn) && memcmp(E1, "goodalpn", E0) == 0)  
++ if (E0 == strlen(servalpn) && memcmp(E1, servalpn, E0) == 0)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_0bd42f_c7558d_test#sslapitest.c,revFiles/0bd42f_c7558d_test#sslapitest.c}: alpn_select_cb)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

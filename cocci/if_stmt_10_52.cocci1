@@ -1,0 +1,18 @@
+@@
+expression E0, E1;
+@@
+- if (stream_Peek(E0->s, &E1, 5) < 5)  
++ if (stream_Peek(E0->s, &E1, 4) < 4)  
+  {
+- return VLC_EGENERIC; 
++ return VLC_EGENERIC; 
+  }
+- if (E1[0] != 0x00 || E1[1] != 0x00 || E1[2] != 0x00 || E1[3] != 0x01 || E1[  4] != 0x0f)  
++ if (E1[0] != 0x00 || E1[1] != 0x00 || E1[2] != 0x01 || E1[3] != 0x0f)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_bdb8ae_c3334e_modules#demux#vc1.c,revFiles/bdb8ae_c3334e_modules#demux#vc1.c}: Open)
+// Recall: 0.44, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

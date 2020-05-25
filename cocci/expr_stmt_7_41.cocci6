@@ -1,0 +1,25 @@
+@@
+expression E0;
+@@
+- return (E0.tv_sec * 1e9 + E0.tv_nsec); 
++ return (E0.tv_sec * 1e6 + E0.tv_nsec / 1000); 
+// Infered from: (ompi/{prevFiles/prev_04a4cb_c88f18_opal#mca#timer#linux#timer_linux_component.c,revFiles/04a4cb_c88f18_opal#mca#timer#linux#timer_linux_component.c}: opal_timer_base_get_usec_clock_gettime)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.95, Precision: 0.78
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_dc3f14_a87aa4_ompi#mca#btl#openib#connect#btl_openib_connect_rdmacm.c: rdmacm_setup_qp
+ - ompi/prevFiles/prev_dc3f14_a87aa4_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c: xoob_send_qp_create
+ - ompi/prevFiles/prev_04a4cb_c88f18_opal#mca#timer#linux#timer_linux_component.c: opal_timer_base_get_cycles_clock_gettime
+*/
+
+// ---------------------------------------------

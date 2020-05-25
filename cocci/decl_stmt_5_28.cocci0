@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- int I0 = -1; 
++ int I0 = 1; 
+// Infered from: (codeflaws/{prevFiles/prev_670-C-17764828-17764874.c,revFiles/670-C-17764828-17764874.c}: main)
+// False positives: (php-src/revFiles/80108a_73630a_ext#pdo#pdo_stmt.c: row_prop_exists)
+// Recall: 0.29, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------

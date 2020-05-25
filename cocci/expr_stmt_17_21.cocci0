@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- av_log(E0->avccontext, AV_LOG_ERROR,  "partition out of bounds: type, begin, end, size, blocksize: %d, %d, %d, %d, %d\n",  E1->type, E1->begin, E1->end, E1->partition_size, E0->blocksize[  1] / 2); 
+// Infered from: (FFmpeg/{prevFiles/prev_c31afa_2a9b5c_libavcodec#vorbis_dec.c,revFiles/c31afa_2a9b5c_libavcodec#vorbis_dec.c}: vorbis_parse_setup_hdr_residues)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- av_bprintf(&E0, "%s occured", E1); 
++ av_bprintf(&E0, "%s occurred", E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_a008a7_89862c_libavcodec#ffjni.c,revFiles/a008a7_89862c_libavcodec#ffjni.c}: ff_jni_exception_get_summary)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

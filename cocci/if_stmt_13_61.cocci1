@@ -1,0 +1,27 @@
+@@
+type T1;
+expression E0, E2;
+@@
+- if (!asn1_octet_decode(E0, (T1 *)E2++))  
++ if (!asn1_octet_decode(E0, E2++))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_e31926_29a6b6_net#ipv4#netfilter#nf_nat_snmp_basic.c,revFiles/e31926_29a6b6_net#ipv4#netfilter#nf_nat_snmp_basic.c}: asn1_octets_decode)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_e31926_29a6b6_net#l2tp#l2tp_ppp.c: pppol2tp_getsockopt
+*/
+
+// ---------------------------------------------

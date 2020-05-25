@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!g_ascii_isxdigit(E0[0]) || !g_ascii_isxdigit(E0[0]))  
++ if (!g_ascii_isxdigit(E0[0]) || !g_ascii_isxdigit(E0[1]))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_120628_63ebe9_text2pcap.c,revFiles/120628_63ebe9_text2pcap.c}: parse_token)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- decode_vui_parameters(E0, E1); 
++ if (decode_vui_parameters(E0, E1) < 0)  
++ {
++ goto  fail; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_e5f61b_11d058_libavcodec#h264.c,revFiles/e5f61b_11d058_libavcodec#h264.c}: ff_h264_decode_seq_parameter_set)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.80
+// -- Node Change --
+// Recall: 0.67, Precision: 0.80
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_679800_581f08_hw#core#qdev.c: device_set_realized
+ - FFmpeg/prevFiles/prev_9f9440_e2b8b4_libavcodec#hevc_ps.c: ff_hevc_decode_nal_pps
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_776654_d65225_crypto#rsa#rsa_eay.c: RSA_eay_private_encrypt
+*/
+
+// ---------------------------------------------

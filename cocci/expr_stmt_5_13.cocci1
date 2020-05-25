@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+typedef int64_t;
+@@
+- E0->ninclpasses = getcut(E0, E1->lambda,  (int64_t )dwt_norms[E2->transform][E3][E4] * (  int64_t )E5->stepsize >> 13); 
++ E0->ninclpasses = getcut(E0, E1->lambda,  (int64_t )dwt_norms[E2->transform][E3][E4] * (  int64_t )E5->stepsize >> 16); 
+// Infered from: (FFmpeg/{prevFiles/prev_243cc3_1b5cb6_libavcodec#j2kenc.c,revFiles/243cc3_1b5cb6_libavcodec#j2kenc.c}: truncpasses)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- proto_tree_add_item(E0, hf_skinny_serviceURLDisplayName, E1, E2 + 12,  StationMaxNameSize, TRUE); 
++ proto_tree_add_item(E0, hf_skinny_serviceURLDisplayName, E1,  E2 + 16 + StationMaxServiceURLSize, StationMaxNameSize,  TRUE); 
+// Infered from: (wireshark/{prevFiles/prev_211b65_889d33_epan#dissectors#packet-skinny.c,revFiles/211b65_889d33_epan#dissectors#packet-skinny.c}: dissect_skinny_pdu)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

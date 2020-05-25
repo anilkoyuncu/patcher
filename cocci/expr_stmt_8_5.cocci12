@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = lookup_commit_reference(E1); 
++ E0 = lookup_commit_reference_gently(E1, 1); 
+// Infered from: (git/{prevFiles/prev_473d40_114203_tar-tree.c,revFiles/473d40_114203_tar-tree.c}: main), (git/{prevFiles/prev_42a321_1aa3d0_builtin-fetch--tool.c,revFiles/42a321_1aa3d0_builtin-fetch--tool.c}: append_fetch_head)
+// False positives: (git/revFiles/42a321_1aa3d0_builtin-fetch--tool.c: update_local_ref)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I1, I3;
+expression E0, E2;
+@@
+- copy_address_shallow(&E0->I1.ipaddress, &E2->I3); 
++ copy_address_wmem(wmem_file_scope(), &E0->I1.ipaddress, &E2->I3); 
+// Infered from: (wireshark/{prevFiles/prev_177962_b70eb1_epan#dissectors#packet-enip.c,revFiles/177962_b70eb1_epan#dissectors#packet-enip.c}: enip_open_cip_connection), (wireshark/{prevFiles/prev_177962_b70eb1_epan#dissectors#packet-enip.c,revFiles/177962_b70eb1_epan#dissectors#packet-enip.c}: enip_open_cip_connection)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

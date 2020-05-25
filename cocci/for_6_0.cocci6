@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- for(E0 = E1, E2 = E3;E0 < (E1 + E4) && E2 < (E3 + sizeof(E3) / sizeof(*E3));E0 += 2)  
++ for(E0 = E1, E2 = E3;E0 < (E1 + E4) && E2 < (E3 + sizeof(E3) / sizeof(  *E3) - 1);E0 += 2)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_524ec3_ab07bb_libarchive#archive_read_support_format_iso9660.c,revFiles/524ec3_ab07bb_libarchive#archive_read_support_format_iso9660.c}: parse_file_info)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

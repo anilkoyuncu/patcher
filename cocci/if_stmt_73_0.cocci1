@@ -1,0 +1,12 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- E0->_filename = kmalloc(E1 + 1, GFP_KERNEL); 
++ E0->_filename = kmemdup(E0->I2, E1 + 1, GFP_KERNEL); 
+  ...
+- memcpy(E0->_filename, E0->I2, E1 + 1); 
+// Infered from: (linux/{prevFiles/prev_0ceaec1_82c80f_drivers#media#video#cx25821#cx25821-video-upstream.c,revFiles/0ceaec1_82c80f_drivers#media#video#cx25821#cx25821-video-upstream.c}: cx25821_vidupstream_init_ch1), (linux/{prevFiles/prev_0ceaec1_82c80f_drivers#media#video#cx25821#cx25821-video-upstream.c,revFiles/0ceaec1_82c80f_drivers#media#video#cx25821#cx25821-video-upstream.c}: cx25821_vidupstream_init_ch1)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

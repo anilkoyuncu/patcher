@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- snprintf(E0 + strlen(E0), sizeof(E0) - strlen(E0), "q=%2.1f ",  !E1->st->stream_copy ? E2->coded_frame->quality / (float )FF_QP2LAMBDA :-1); 
++ snprintf(E0 + strlen(E0), sizeof(E0) - strlen(E0), "q=%2.1f ", q); 
+// Infered from: (FFmpeg/{prevFiles/prev_5da116_bbc572_ffmpeg.c,revFiles/5da116_bbc572_ffmpeg.c}: print_report), (FFmpeg/{prevFiles/prev_6b1c88_126539_ffmpeg.c,revFiles/6b1c88_126539_ffmpeg.c}: print_report)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.22
+
+// ---------------------------------------------

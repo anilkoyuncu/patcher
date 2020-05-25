@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- realHeaderSize += E0 * E1; 
++ realHeaderSize += curlx_uztoul(E0 * E1); 
+// Infered from: (curl/{prevFiles/prev_d8273e_8f4014_tests#libtest#lib1509.c,revFiles/d8273e_8f4014_tests#libtest#lib1509.c}: WriteHeader)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

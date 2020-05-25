@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 &= 0xffffffffUL; 
++ E1 &= 0xffffffffUL; 
+  ...
+- if (E0 == E2)  
+- {
+- helper_st_asi(E3, E1 & 0xffffffffUL, E4, 4); 
+- }
+// Infered from: (qemu/{prevFiles/prev_1121f8_64c680_target-sparc#op_helper.c,revFiles/1121f8_64c680_target-sparc#op_helper.c}: helper_cas_asi)
+// Recall: 0.15, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

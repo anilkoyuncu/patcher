@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (prefixcmp(E0, E1) || strcmp(E0 + strlen(E1), "/.git"))  
++ if (!starts_with(E0, E1) || strcmp(E0 + strlen(E1), "/.git"))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_595565_956623_builtin#init-db.c,revFiles/595565_956623_builtin#init-db.c}: create_default_files)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

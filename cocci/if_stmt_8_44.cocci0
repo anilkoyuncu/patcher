@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((!GTK_IS_GESTURE_SINGLE(E0->controller) || GTK_IS_GESTURE_DRAG(E0->controller) || GTK_IS_GESTURE_SWIPE(  E0->controller)) && gtk_gesture_get_sequence_state(GTK_GESTURE(E0->controller),  E1) != GTK_EVENT_SEQUENCE_DENIED)  
++ if ((!GTK_IS_GESTURE_SINGLE(E0->controller) || GTK_IS_GESTURE_DRAG(E0->controller) || GTK_IS_GESTURE_SWIPE(  E0->controller)) && gtk_gesture_handles_sequence(GTK_GESTURE(E0->controller),  E1))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_0167f7_32eda1_gtk#gtkwidget.c,revFiles/0167f7_32eda1_gtk#gtkwidget.c}: _gtk_widget_consumes_motion)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

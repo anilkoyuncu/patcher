@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ERROR_IF(E0 == 16, "Unsupported sample rate %d\n", E1->sample_rate); 
++ ERROR_IF(E0 >= 12, "Unsupported sample rate %d\n", E1->sample_rate); 
+// Infered from: (FFmpeg/{prevFiles/prev_704c980_a6baef_libavcodec#aacenc.c,revFiles/704c980_a6baef_libavcodec#aacenc.c}: aac_encode_init)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

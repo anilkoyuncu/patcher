@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef mca_bml_base_btl_t;
+@@
+- mca_bml_base_btl_t *I0 = mca_bml_base_btl_array_get_index(&E1->btl_send, E2); 
++ mca_bml_base_btl_t *I0 = mca_bml_base_btl_array_get_index(&E1->btl_eager, E2); 
+// Infered from: (ompi/{prevFiles/prev_fc96b0_e97e4c_ompi#mca#bml#r2#bml_r2.c,revFiles/fc96b0_e97e4c_ompi#mca#bml#r2#bml_r2.c}: mca_bml_r2_del_procs)
+// False positives: (ompi/revFiles/ef4548_27d3e1_ompi#mca#bml#r2#bml_r2.c: mca_bml_r2_add_procs), (ompi/revFiles/ef4548_27d3e1_ompi#mca#bml#r2#bml_r2.c: mca_bml_r2_del_procs), (ompi/revFiles/fc96b0_e97e4c_ompi#mca#bml#r2#bml_r2.c: mca_bml_r2_add_procs)
+// Recall: 0.11, Precision: 0.25, Matching recall: 0.50
+
+// ---------------------------------------------

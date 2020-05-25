@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- if (E0)  
+- {
+- E1 += ff_id3v2_tag_len(E1); 
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_6612d8_113685_libavformat#aacdec.c,revFiles/6612d8_113685_libavformat#aacdec.c}: adts_aac_probe), (FFmpeg/{prevFiles/prev_6612d8_113685_libavformat#mp3.c,revFiles/6612d8_113685_libavformat#mp3.c}: mp3_read_probe)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

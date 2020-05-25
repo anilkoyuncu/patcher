@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = PyMem_Malloc(sizeof(struct PostCallbackData )); 
++ E0 = PyMem_RawMalloc(sizeof(struct PostCallbackData )); 
+// Infered from: (cpython/{prevFiles/prev_13be7d_2025d7_Modules#overlapped.c,revFiles/13be7d_2025d7_Modules#overlapped.c}: overlapped_RegisterWaitWithQueue), (cpython/{prevFiles/prev_6150f3_ce911c_Modules#overlapped.c,revFiles/6150f3_ce911c_Modules#overlapped.c}: overlapped_RegisterWaitWithQueue)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

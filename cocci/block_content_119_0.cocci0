@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+@@
+- return E0->m_pHttpHeader + E0->m_pHeaderIndex->m_headerOff[E1]; 
++ pValue = E0->m_pHttpHeader + E0->m_pHeaderIndex->m_headerOff[E1]; 
++ if (*(pValue + E0->m_pHeaderIndex->m_headerLen[E1]) != '\0')  
++ {
++ *(pValue + E0->m_pHeaderIndex->m_headerLen[E1]) = '\0'; 
++ }
++ return pValue; 
+// Infered from: (php-src/{prevFiles/prev_8584cc_c17a17_sapi#litespeed#lsapilib.c,revFiles/8584cc_c17a17_sapi#litespeed#lsapilib.c}: GetHeaderVar), (php-src/{prevFiles/prev_bb491c_156e78_sapi#litespeed#lsapilib.c,revFiles/bb491c_156e78_sapi#litespeed#lsapilib.c}: GetHeaderVar), (php-src/{prevFiles/prev_65810b_9502d6_sapi#litespeed#lsapilib.c,revFiles/65810b_9502d6_sapi#litespeed#lsapilib.c}: GetHeaderVar), (php-src/{prevFiles/prev_f13a88_34d397_sapi#litespeed#lsapilib.c,revFiles/f13a88_34d397_sapi#litespeed#lsapilib.c}: GetHeaderVar)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

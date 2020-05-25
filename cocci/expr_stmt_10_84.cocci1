@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- Tcl_AppendResult(E0, "already mounted at ", E1->mntpt, (char *)NULL); 
++ Tcl_AppendResult(E0, "already mounted on \"", E1->mntptlen ? E1->mntpt :"/",  "\"", (char *)NULL); 
+// Infered from: (tcl/{prevFiles/prev_72d87a_6422fb_generic#zipfs.c,revFiles/72d87a_6422fb_generic#zipfs.c}: Zipfs_Mount)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------

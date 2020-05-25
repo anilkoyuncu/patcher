@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0; 
+- for(I0 = 0;I0 < E1->p->p_item->i_options;I0++)  
++ for(int I0 = 0;I0 < E1->p->p_item->i_options;I0++)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_6d3bb0_799622_src#input#input.c,revFiles/6d3bb0_799622_src#input#input.c}: Init)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

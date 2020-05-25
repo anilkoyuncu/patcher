@@ -1,0 +1,16 @@
+@@
+identifier I0, I1, I2;
+expression E3;
+typedef _PyTime_t;
+@@
+  int _PyTime_FromTimeval(_PyTime_t *I0, struct timeval *I1, int I2)  
+  {
+  ...
+- assert(sizeof(E3) <= sizeof(_PyTime_t )); 
++ assert(sizeof(I1->tv_sec) <= sizeof(_PyTime_t )); 
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_51b939_c60542_Python#pytime.c,revFiles/51b939_c60542_Python#pytime.c}: _PyTime_FromTimeval)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

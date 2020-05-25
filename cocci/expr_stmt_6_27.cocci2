@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- return cfs_hash_bd_lookup_intent(E0, E1, E2, E3,  CFS_HS_LOOKUP_IT_ADD | (!E4 * CFS_HS_LOOKUP_MASK_REF)); 
++ return cfs_hash_bd_lookup_intent(E0, E1, E2, E3,  (!E4 * CFS_HS_LOOKUP_MASK_REF) | CFS_HS_LOOKUP_IT_ADD); 
+// Infered from: (linux/{prevFiles/prev_3cfc537_a75e7ac_drivers#staging#lustre#lustre#libcfs#hash.c,revFiles/3cfc537_a75e7ac_drivers#staging#lustre#lustre#libcfs#hash.c}: cfs_hash_bd_findadd_locked)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.83
+// -- Node Change --
+// Recall: 1.00, Precision: 0.83
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_1aab14_265bee_drivers#net#ethernet#intel#fm10k#fm10k_pf.c: fm10k_iov_set_lport_pf
+*/
+
+// ---------------------------------------------

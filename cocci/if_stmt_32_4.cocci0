@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->format != PIX_FMT_PAL8)  
++ if (E0->format != PIX_FMT_PAL8 && E0->format != PIX_FMT_BGR4_BYTE && E0->format != PIX_FMT_RGB4_BYTE && E0->format != PIX_FMT_BGR8 && E0->format != PIX_FMT_RGB8)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_5c3c0e_dd18b3_libavfilter#vf_crop.c,revFiles/5c3c0e_dd18b3_libavfilter#vf_crop.c}: start_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

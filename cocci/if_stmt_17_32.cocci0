@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!(E0->i_sb->s_flags & MS_RDONLY))  
++ if (!sb_rdonly(E0->i_sb))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_bc98a4_94e92e_fs#btrfs#inode.c,revFiles/bc98a4_94e92e_fs#btrfs#inode.c}: btrfs_lookup_dentry)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

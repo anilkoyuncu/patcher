@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef input_attachment_t;
+@@
+- *E0 = xmalloc(sizeof(input_attachment_t **) * E1->i_attachments); 
++ *E0 = xmalloc(sizeof(input_attachment_t *) * E1->i_attachments); 
+// Infered from: (vlc/{prevFiles/prev_780325_e7e811_modules#demux#flac.c,revFiles/780325_e7e811_modules#demux#flac.c}: Control)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

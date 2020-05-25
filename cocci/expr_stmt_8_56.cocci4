@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[0] = (E1 ? E1 :SHMEM_SYNC_READY); 
++ E0[0] = (E1 ? (long )E1 :SHMEM_SYNC_READY); 
+// Infered from: (ompi/{prevFiles/prev_6839f0_c49613_oshmem#mca#scoll#basic#scoll_basic_collect.c,revFiles/6839f0_c49613_oshmem#mca#scoll#basic#scoll_basic_collect.c}: _algorithm_central_collector)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 & (SSL_kEECDH | SSL_kECDHr | SSL_kECDHe))  
++ if (E0 & (SSL_kECDHr | SSL_kECDHe))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_882d29_ee373e_ssl#ssl_lib.c,revFiles/882d29_ee373e_ssl#ssl_lib.c}: ssl_get_server_send_cert)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

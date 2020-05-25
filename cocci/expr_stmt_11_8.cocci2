@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- zend_unmangle_property_name(E0->arKey, &E1, &E2); 
++ zend_unmangle_property_name_ex(E0->arKey, E0->nKeyLength, &E1, &E2); 
+// Infered from: (php-src/{prevFiles/prev_4b9b55_f43767_ext#standard#var.c,revFiles/4b9b55_f43767_ext#standard#var.c}: php_object_property_dump), (php-src/{prevFiles/prev_4b9b55_f43767_ext#standard#var.c,revFiles/4b9b55_f43767_ext#standard#var.c}: php_object_element_export)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

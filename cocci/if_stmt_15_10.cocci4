@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- gtk_widget_queue_draw(E0->scrollbar); 
+// Infered from: (gtk/{prevFiles/prev_307719_ac4660_gtk#gtkscrolledwindow.c,revFiles/307719_ac4660_gtk#gtkscrolledwindow.c}: indicator_set_fade)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+expression E2, E0, E1;
+@@
+- if (colo_compare_packet_payload(E0, E1, E0->header_size + E0->offset,  E1->header_size + E1->offset,  E2->payload_size - E2->offset))  
++ if (!colo_compare_packet_payload(E0, E1, E0->header_size + E0->offset,  E1->header_size + E1->offset,  E2->payload_size - E2->offset))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_1e907a_7788c3_net#colo-compare.c,revFiles/1e907a_7788c3_net#colo-compare.c}: colo_mark_tcp_pkt), (qemu/{prevFiles/prev_1e907a_7788c3_net#colo-compare.c,revFiles/1e907a_7788c3_net#colo-compare.c}: colo_mark_tcp_pkt)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

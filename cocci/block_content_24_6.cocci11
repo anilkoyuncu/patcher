@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- config_PutPsz(E0, "auhal-audio-device", aout_DeviceGet(E0)); 
++ char *psz_device = aout_DeviceGet(E0); 
++ config_PutPsz(E0, "auhal-audio-device", psz_device); 
++ free(psz_device); 
+// Infered from: (vlc/{prevFiles/prev_ccd894_d58619_modules#audio_output#auhal.c,revFiles/ccd894_d58619_modules#audio_output#auhal.c}: Close)
+// False positives: (vlc/revFiles/a2a2b5_f12046_modules#audio_output#auhal.c: Close)
+// Recall: 0.07, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

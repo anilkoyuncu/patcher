@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- _gtk_entry_completion_popup(E0); 
++ gtk_entry_completion_popup(E0); 
+// Infered from: (gtk/{prevFiles/prev_12683d_48c6b3_gtk#gtkentrycompletion.c,revFiles/12683d_48c6b3_gtk#gtkentrycompletion.c}: gtk_entry_completion_timeout)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.15, Precision: 1.00
+// -- Node Change --
+// Recall: 0.10, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/20(15%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_12683d_48c6b3_gtk#gtktoolpalette.c: _gtk_tool_palette_compare_groups
+ - gtk/prevFiles/prev_12683d_48c6b3_gtk#gtkentrycompletion.c: _gtk_entry_completion_popup
+ - curl/prevFiles/prev_40f8aa_374f48_lib#ftp.c: 
+ - curl/prevFiles/prev_40f8aa_374f48_lib#ftp.c: Curl_ftp_wc_data_dtor
+*/
+
+// ---------------------------------------------

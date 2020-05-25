@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!filter_chain_AppendConverter(E0->p->filter.chain_interactive, &E1, &E2))  
++ if (filter_chain_AppendConverter(E0->p->filter.chain_interactive, &E1, &E2) != 0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_9a0299_beaf1f_src#video_output#video_output.c,revFiles/9a0299_beaf1f_src#video_output#video_output.c}: ThreadChangeFilters)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

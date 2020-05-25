@@ -1,0 +1,46 @@
+@@
+identifier I0, I2, I3;
+expression E1, E4;
+@@
+- if (zend_hash_index_find(I0->value.ht, E1, (void **)&I2) == FAILURE)  
++ if (zend_hash_index_find(I0->value.ht, E1, (void **)&I3) == FAILURE)  
+  {
+  ...
+  }
+  ...
+- convert_to_string(I3); 
+- if (I3->value.str.len > 10 || I3->value.str.len == 0)  
++ convert_to_string_ex(I3); 
++ if ((*I3)->value.str.len > 10 || (*I3)->value.str.len == 0)  
+  {
+- php_error(E_WARNING,  "invalid field name '%s' (must be non-empty and less than or equal to 10 characters)",  I3->value.str.val); 
++ php_error(E_WARNING,  "invalid field name '%s' (must be non-empty and less than or equal to 10 characters)",  (*I3)->value.str.val); 
+  ...
+  }
+- copy_crimp(E4->db_fname, I3->value.str.val, I3->value.str.len); 
++ copy_crimp(E4->db_fname, (*I3)->value.str.val, (*I3)->value.str.len); 
+  ...
+- convert_to_string(I3); 
+- E4->db_type = toupper(*I3->value.str.val); 
++ convert_to_string_ex(I3); 
++ E4->db_type = toupper(*(*I3)->value.str.val); 
+// Infered from: (php-src/{prevFiles/prev_7f7c14_1ca7f0_ext#dbase#dbase.c,revFiles/7f7c14_1ca7f0_ext#dbase#dbase.c}: PHP_FUNCTION)
+// Recall: 0.26, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.47, Precision: 0.55
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_8a6f3f_4638a90_ext#dbase#dbase.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_7f7c14_1ca7f0_ext#dbase#dbase.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_93acbe_20c007_ext#dbase#dbase.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->nb_filters || E0->hwaccel_id != HWACCEL_QSV || !E0->dec || !E0->dec->pix_fmts)  
++ if (E0->hwaccel_id != HWACCEL_QSV || !E0->dec || !E0->dec->pix_fmts)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_46bfc1_a2c409_ffmpeg_qsv.c,revFiles/46bfc1_a2c409_ffmpeg_qsv.c}: qsv_transcode_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

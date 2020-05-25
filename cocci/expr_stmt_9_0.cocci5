@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- buffer_copy_string_buffer(E0->physical.doc_root, con->conf.document_root); 
++ buffer_copy_string_buffer(E0->physical.doc_root, con->physical.doc_root); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_052f83_780bc9_src#mod_webdav.c,revFiles/052f83_780bc9_src#mod_webdav.c}: URIHANDLER_FUNC)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

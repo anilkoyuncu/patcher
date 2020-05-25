@@ -1,0 +1,11 @@
+@@
+identifier I0, I1;
+@@
+- int I0 = 0; 
+- int I1 = 0; 
++ int sz_local = 0; 
++ int n_local = 0; 
+// Infered from: (wireshark/{prevFiles/prev_33af75_d897f4_epan#dissectors#packet-icq.c,revFiles/33af75_d897f4_epan#dissectors#packet-icq.c}: icqv5_decode_msgType)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

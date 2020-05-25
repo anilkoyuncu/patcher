@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0 = get_irq_desc_chip(E1); 
++ E0 = irq_desc_get_chip(E1); 
+// Infered from: (linux/{prevFiles/prev_ec775d_7bfbc1f2_arch#powerpc#kernel#irq.c,revFiles/ec775d_7bfbc1f2_arch#powerpc#kernel#irq.c}: virq_debug_show)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.70, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_798500_fa0efe_ext#iconv#iconv.c: _php_iconv_substr
+*/
+
+// ---------------------------------------------

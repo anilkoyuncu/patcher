@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- dissector_try_string(thread_coap_namespace, E0[1], E1, E2, E3, NULL); 
++ dissector_try_string(thread_coap_namespace, E0[0], E1, E2, E3, NULL); 
+// Infered from: (wireshark/{prevFiles/prev_020474_ff2881_epan#dissectors#packet-thread.c,revFiles/020474_ff2881_epan#dissectors#packet-thread.c}: dissect_thread_coap)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = spapr_phb_get_loc_code(E1, E2); 
+- if (!E0)  
+- {
+- error_report("Failed setting the ibm,loc-code"); 
+- return -1; 
+- }
++ E0 = spapr_phb_get_loc_code(E1, E2); 
+// Infered from: (qemu/{prevFiles/prev_d049bd_8f6876_hw#ppc#spapr_pci.c,revFiles/d049bd_8f6876_hw#ppc#spapr_pci.c}: spapr_populate_pci_child_dt)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

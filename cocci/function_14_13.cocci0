@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0)  
+- {
+- cf_callback_invoke (E1, E2); 
+- }
+// Infered from: (wireshark/{prevFiles/prev_0b132c_778c9a_file.c,revFiles/0b132c_778c9a_file.c}: cf_start_tail)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

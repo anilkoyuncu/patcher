@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3;
+typedef guint8;
+@@
+- E0->data = (guint8 *)g_malloc(E1); 
+- tvb_memcpy(E2, E0->data, E3, E1); 
++ E0->data = (guint8 *)tvb_memdup(wmem_file_scope(), E2, E3, E1); 
+// Infered from: (wireshark/{prevFiles/prev_2db3db_3ba56ce_epan#dissectors#packet-umts_rlc.c,revFiles/2db3db_3ba56ce_epan#dissectors#packet-umts_rlc.c}: rlc_frag_assign_data)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

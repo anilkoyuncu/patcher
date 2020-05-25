@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- put_le32(E0, E1->tag); 
+- E1->enc->codec_tag = E1->tag >> 16; 
++ put_le32(E0, E1->tag); 
++ E1->enc->codec_tag = av_bswap16(E1->tag >> 16); 
+// Infered from: (FFmpeg/{prevFiles/prev_795ed2_f258964_libavformat#movenc.c,revFiles/795ed2_f258964_libavformat#movenc.c}: mov_write_ms_tag), (FFmpeg/{prevFiles/prev_9653e7_0ca4fc_libavformat#movenc.c,revFiles/9653e7_0ca4fc_libavformat#movenc.c}: mov_write_ms_tag)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

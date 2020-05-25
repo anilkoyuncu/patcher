@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = GET_FIELD_SP(E1, 0, 13) | (GET_FIELD_SP(E1, 20, 21) >> 7); 
++ E0 = GET_FIELD_SP(E1, 0, 13) | (GET_FIELD_SP(E1, 20, 21) << 14); 
+// Infered from: (qemu/{prevFiles/prev_13846e_3cb085_target-sparc#translate.c,revFiles/13846e_3cb085_target-sparc#translate.c}: disas_sparc_insn)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

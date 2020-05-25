@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- snprintf((char *)E0, sizeof(E0), "\\%03o", *E1++ & 0377); 
++ sprintf((char *)E0, "\\%03o", *E1++ & 0377); 
+// Infered from: (php-src/{prevFiles/prev_331034_3c21c0_ext#mbstring#oniguruma#regerror.c,revFiles/331034_3c21c0_ext#mbstring#oniguruma#regerror.c}: onig_snprintf_with_pattern), (php-src/{prevFiles/prev_331034_3c21c0_ext#mbstring#oniguruma#regerror.c,revFiles/331034_3c21c0_ext#mbstring#oniguruma#regerror.c}: onig_snprintf_with_pattern)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

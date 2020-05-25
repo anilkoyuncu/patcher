@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->channels = get_le16(&E1); 
++ skip_bits(&E1, 16); 
+// Infered from: (FFmpeg/{prevFiles/prev_077454_a1f788_libavcodec#shorten.c,revFiles/077454_a1f788_libavcodec#shorten.c}: decode_wave_header)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

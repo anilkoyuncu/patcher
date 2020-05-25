@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- const  int I0 = FFMIN(E1->nb_threads, E1->planeheight[E2] / E1->block_step); 
++ const  int I0 = FFMIN(E1->nb_threads, E1->planeheight[E2] / E1->block_size); 
+// Infered from: (FFmpeg/{prevFiles/prev_365083_074908_libavfilter#vf_bm3d.c,revFiles/365083_074908_libavfilter#vf_bm3d.c}: filter_frame)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

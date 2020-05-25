@@ -1,0 +1,35 @@
+@@
+expression E0;
+@@
+- if (E0->p_info->current_fbuf != NULL)  
++ if (E0->p_info->current_fbuf != NULL && E0->p_info->current_fbuf->id != NULL)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_1fe87c_b70a9e_modules#codec#libmpeg2.c,revFiles/1fe87c_b70a9e_modules#codec#libmpeg2.c}: RunDecoder)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 0.89
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_ee9798_87bc64_libavfilter#src_movie.c: movie_push_frame
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - nginx/prevFiles/prev_5e7535_fac1f2_src#http#ngx_http_upstream.c: ngx_http_upstream_init_request
+*/
+
+// ---------------------------------------------

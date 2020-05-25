@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->channels > 2)  
++ if (E0->channels <= 0 || E0->channels > 2)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_6fd075_4f1a78_libavcodec#adx.c,revFiles/6fd075_4f1a78_libavcodec#adx.c}: avpriv_adx_decode_header)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

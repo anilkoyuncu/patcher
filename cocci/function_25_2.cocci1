@@ -1,0 +1,8 @@
+@@
+@@
+- le_zp = register_list_destructors(phpi_destructor_gzclose, NULL); 
++ le_zp = register_list_destructors(phpi_destructor_gzclose, NULL, "zlib"); 
+// Infered from: (php-src/{prevFiles/prev_7b4983_a0cfab_ext#zlib#zlib.c,revFiles/7b4983_a0cfab_ext#zlib#zlib.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

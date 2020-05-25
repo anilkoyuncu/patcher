@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+typedef guint8;
+@@
+- if (!is_ascii_str(E0, E1 / 2))  
++ if (!is_ascii_str((const  guint8 *)E0, E1 / 2))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_d94a13_438043_epan#dissectors#packet-btobex.c,revFiles/d94a13_438043_epan#dissectors#packet-btobex.c}: display_unicode_string)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

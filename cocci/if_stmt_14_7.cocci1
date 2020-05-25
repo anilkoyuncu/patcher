@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->m_size > E1)  
++ if (M_ROOM(E0) > E1)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_09b94a_09d98b_slirp#mbuf.c,revFiles/09b94a_09d98b_slirp#mbuf.c}: m_inc)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

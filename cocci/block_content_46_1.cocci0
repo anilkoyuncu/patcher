@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- av_log(E0->fc, AV_LOG_WARNING, "\"OPAtom\" with %u ECs - assuming OP1a\n", E1); 
++ av_log(E0->fc, AV_LOG_WARNING, "\"OPAtom\" with %u ECs - assuming %s\n", E1,  op == OP1a ? "OP1a" :"OPAtom"); 
+// Infered from: (FFmpeg/{prevFiles/prev_8c7721_bf2290a8_libavformat#mxfdec.c,revFiles/8c7721_bf2290a8_libavformat#mxfdec.c}: mxf_read_partition_pack), (FFmpeg/{prevFiles/prev_fb8fa3_1fadf5_libavformat#mxfdec.c,revFiles/fb8fa3_1fadf5_libavformat#mxfdec.c}: mxf_read_partition_pack)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

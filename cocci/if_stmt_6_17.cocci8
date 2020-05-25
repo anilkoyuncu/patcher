@@ -1,0 +1,18 @@
+@@
+expression E0;
+typedef uint16;
+@@
+- if ((E0[1] != (float *)NULL) && (E0[2] != (float *)NULL))  
++ if ((E0[1] != (uint16 *)NULL) && (E0[2] != (uint16 *)NULL))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (libtiff/{prevFiles/prev_d4f213_3dd8f6_tools#tiff2pdf.c,revFiles/d4f213_3dd8f6_tools#tiff2pdf.c}: t2p_read_tiff_init), (libtiff/{prevFiles/prev_d4f213_3dd8f6_tools#tiff2pdf.c,revFiles/d4f213_3dd8f6_tools#tiff2pdf.c}: t2p_read_tiff_data)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

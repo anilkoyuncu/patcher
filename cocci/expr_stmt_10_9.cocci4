@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef guint;
+@@
+- E0 = (guint )strtol((char *)gtk_entry_get_text(GTK_ENTRY(E1)), NULL, 10); 
++ E0 = (guint )strtol(gtk_entry_get_text(GTK_ENTRY(E1)), NULL, 10); 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#time_shift_dlg.c,revFiles/3ae2e5_8aebe1_ui#gtk#time_shift_dlg.c}: time_shift_apply_cb)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

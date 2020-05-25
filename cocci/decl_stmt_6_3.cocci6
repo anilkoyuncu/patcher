@@ -1,0 +1,36 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef uint32_t;
+@@
+- const  uint32_t I0 = E1[E2]; 
++ const  uint32_t I0 = E1[E2] & 0xffffff; 
+// Infered from: (FFmpeg/{prevFiles/prev_b6408f_91a5b4_libavformat#gif.c,revFiles/b6408f_91a5b4_libavformat#gif.c}: gif_image_write_header)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.31, Precision: 1.00
+// -- General --
+// Functions fully changed: 8/20(40%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_e026f3_4390c3_src#misc#variables.c: var_LocationParse
+ - codeflaws/prevFiles/prev_676-C-18100056-18100214.c: main
+ - codeflaws/prevFiles/prev_676-C-18099897-18100214.c: main
+ - FFmpeg/prevFiles/prev_a2802d_7f866c_libavcodec#imgconvert.c: get_pix_fmt_score
+ - qemu/prevFiles/prev_cd37aa_b92ad3_hw#arm#virt-acpi-build.c: acpi_dsdt_add_flash
+ - git/prevFiles/prev_0da467_0e26f7_commit.c: add_rfc2047
+ - FFmpeg/prevFiles/prev_2f4374_d6cfbc_ffmpeg.c: print_report
+ - vlc/prevFiles/prev_21f584_72c7dd_modules#services_discovery#sap.c: ParseSDP
+ - git/prevFiles/prev_0da467_0e26f7_commit.c: pretty_print_commit
+ - FFmpeg/prevFiles/prev_005b36_e749b5_libavformat#hlsenc.c: hls_write_header
+ - git/prevFiles/prev_4fa160_b32e98_connect.c: match_explicit_refs
+ - cairo/prevFiles/prev_db1b18_cf473f_src#cairo-xlib-surface.c: _cairo_xlib_surface_add_glyph
+*/
+
+// ---------------------------------------------

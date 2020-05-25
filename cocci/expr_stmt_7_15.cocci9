@@ -1,0 +1,34 @@
+@@
+identifier I0;
+@@
+- I0 = ompi_rte_recv_buffer_nb(OMPI_NAME_WILDCARD, OMPI_RML_TAG_XOPENIB,  OMPI_RML_PERSISTENT, xoob_rml_recv_cb, NULL); 
+- if (OMPI_SUCCESS != I0)  
+- {
+- opal_output_verbose(5, ompi_btl_base_framework.framework_output,  "openib BTL: xoob CPC system error %d (%s)", I0,  opal_strerror(I0)); 
+- return I0; 
+- }
++ ompi_rte_recv_buffer_nb(OMPI_NAME_WILDCARD, OMPI_RML_TAG_XOPENIB,  OMPI_RML_PERSISTENT, xoob_rml_recv_cb, NULL); 
+// Infered from: (ompi/{prevFiles/prev_96457d_63ac60_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c,revFiles/96457d_63ac60_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c}: xoob_component_query)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 1.00
+// -- Node Change --
+// Recall: 0.64, Precision: 1.00
+// -- General --
+// Functions fully changed: 10/14(71%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_96457d_63ac60_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c: xoob_component_query
+ - ompi/prevFiles/prev_96457d_63ac60_ompi#mca#common#ofacm#common_ofacm_xoob.c: xoob_component_query
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_d89928_9ce0e9_target-mips#dsp_helper.c: 
+ - cpython/prevFiles/prev_78dc82_be30c6_Modules#pyexpat.c: call_with_frame
+*/
+
+// ---------------------------------------------

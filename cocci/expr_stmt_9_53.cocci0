@@ -1,0 +1,8 @@
+@@
+@@
+- WRONG_PARAM_COUNT; 
++ WRONG_PARAM_COUNT_WITH_RETVAL(FAILURE); 
+// Infered from: (php-src/{prevFiles/prev_0be362_f3052c_ext#spl#spl_directory.c,revFiles/0be362_f3052c_ext#spl#spl_directory.c}: spl_filesystem_file_call)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

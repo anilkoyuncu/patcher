@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (0 == strncmp("OMPI_", environ[E0], 5))  
++ if (0 == strncmp("OMPI_MCA", environ[E0], 8))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_df9bd0_a980ee_orte#mca#plm#rsh#plm_rsh_module.c,revFiles/df9bd0_a980ee_orte#mca#plm#rsh#plm_rsh_module.c}: setup_launch)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

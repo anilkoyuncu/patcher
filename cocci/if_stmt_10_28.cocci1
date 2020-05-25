@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!getcwd(E0, sizeof(E0)) || E0[0] != '/')  
++ if (!getcwd(E0, sizeof(E0) - 1) || E0[0] != '/')  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_96a570_8bb2b5_setup.c,revFiles/96a570_8bb2b5_setup.c}: setup_git_directory_gently)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

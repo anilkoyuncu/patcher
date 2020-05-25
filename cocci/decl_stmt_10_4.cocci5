@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef GdkWindowImplQuartz;
+@@
+- GdkWindowImplQuartz *I0 = GDK_WINDOW_IMPL_QUARTZ(E1->imp); 
++ GdkWindowImplQuartz *I0 = GDK_WINDOW_IMPL_QUARTZ(E1->impl); 
+// Infered from: (gtk/{prevFiles/prev_e148be0d_b75aa6_gdk#quartz#gdkwindow-quartz.c,revFiles/e148be0d_b75aa6_gdk#quartz#gdkwindow-quartz.c}: gdk_window_impl_quartz_begin_paint_region)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

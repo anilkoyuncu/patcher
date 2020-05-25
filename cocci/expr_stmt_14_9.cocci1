@@ -1,0 +1,9 @@
+@@
+expression E0, E2, E1;
+@@
+- E0 = xstrdup(mkpath(E1, E2)); 
++ E0 = mkpathdup(E1, E2); 
+// Infered from: (git/{prevFiles/prev_4e2d09_d292bfa_builtin#clone.c,revFiles/4e2d09_d292bfa_builtin#clone.c}: cmd_clone), (git/{prevFiles/prev_4e2d09_d292bfa_builtin#prune.c,revFiles/4e2d09_d292bfa_builtin#prune.c}: cmd_prune), (git/{prevFiles/prev_4e2d09_d292bfa_builtin#branch.c,revFiles/4e2d09_d292bfa_builtin#branch.c}: delete_branches)
+// Recall: 0.30, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

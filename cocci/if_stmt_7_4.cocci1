@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0->is_multicast || !E0->local_port) && (E1->flags & AVIO_FLAG_READ))  
++ if ((E0->is_multicast || E0->local_port < 0) && (E1->flags & AVIO_FLAG_READ))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_61dc9d_8655c5_libavformat#udp.c,revFiles/61dc9d_8655c5_libavformat#udp.c}: udp_open)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

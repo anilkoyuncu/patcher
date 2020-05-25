@@ -1,0 +1,22 @@
+@@
+identifier I0;
+@@
+- char I0[16]; 
+// Infered from: (FFmpeg/{prevFiles/prev_7b56dd_20361b_libavfilter#af_amerge.c,revFiles/7b56dd_20361b_libavfilter#af_amerge.c}: init)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.14, Precision: 1.00
+// -- Node Change --
+// Recall: 0.18, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/7(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_7b56dd_20361b_libavfilter#af_amerge.c: init
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!E0->subtitle_disable && (E1->oformat->subtitle_codec != AV_CODEC_ID_NONE || E2))  
++ if (!E0->subtitle_disable && (avcodec_find_encoder(E1->oformat->subtitle_codec) || E2))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_25bcf2_267c57_ffmpeg_opt.c,revFiles/25bcf2_267c57_ffmpeg_opt.c}: open_output_file)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

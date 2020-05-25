@@ -1,0 +1,20 @@
+@@
+expression E0, E1;
+@@
+- add_next_index_ascii_string(E0, *E1++, 1); 
++ add_next_index_ascii_string(E0, *E1, 1); 
++ E1++; 
+// Infered from: (php-src/{prevFiles/prev_18ce51_b40d75_ext#curl#interface.c,revFiles/18ce51_b40d75_ext#curl#interface.c}: PHP_FUNCTION)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

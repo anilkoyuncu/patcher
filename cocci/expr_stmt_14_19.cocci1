@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- msg_rc("Currently playing chapter %ld/%ld.", E0, E1->chapter_count); 
++ msg_rc("Currently playing chapter %zd/%zu.", E0, E1->chapter_count); 
+// Infered from: (vlc/{prevFiles/prev_318a21_69504ee_modules#control#oldrc.c,revFiles/318a21_69504ee_modules#control#oldrc.c}: Input)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

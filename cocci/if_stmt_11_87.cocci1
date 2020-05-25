@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- if ((php_stream_read(E0, (char *)E1, sizeof(E1))) <= 0)  
++ if ((php_stream_read(E0, (char *)E1, sizeof(E1))) != sizeof(E1))  
+  {
+- return 0; 
++ return 0; 
+  }
+// Infered from: (php-src/{prevFiles/prev_79bb2a_6fab90_ext#standard#image.c,revFiles/79bb2a_6fab90_ext#standard#image.c}: php_read2)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

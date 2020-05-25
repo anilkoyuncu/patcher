@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (pci_set_dma_mask(E0, DMA_BIT_MASK(32)))  
++ if (dma_set_mask(&E0->dev, DMA_BIT_MASK(32)))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_d681f116_54e514_drivers#ide#cs5520.c,revFiles/d681f116_54e514_drivers#ide#cs5520.c}: cs5520_init_one)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0 = tolower(E0); 
++ E0 = tolower(Py_CHARMASK(E0)); 
+// Infered from: (cpython/{prevFiles/prev_237bf4_82d4cc_Python#codecs.c,revFiles/237bf4_82d4cc_Python#codecs.c}: normalizestring)
+// False positives: (git/revFiles/7a5375_d0b8c9_config.c: git_config_set_multivar)
+// Recall: 0.11, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

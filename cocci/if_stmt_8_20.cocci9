@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->op1.op_type == IS_UNUSED && E0->op2.op_type == IS_UNUSED)  
++ if (E0->result.op_type == IS_UNUSED && E0->op1.op_type == IS_UNUSED)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_2af866_74775a_Zend#zend_compile.c,revFiles/2af866_74775a_Zend#zend_compile.c}: generate_free_foreach_copy)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "Unhandled vector for IRQ %d\n", E0); 
++ error_report("Unhandled vector for IRQ %d", E0); 
+// Infered from: (qemu/{prevFiles/prev_45876e_f90ea7_hw#m68k#mcf5206.c,revFiles/45876e_f90ea7_hw#m68k#mcf5206.c}: m5206_mbar_update)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

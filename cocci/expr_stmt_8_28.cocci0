@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- write_reg(E0, E1, (E2 << E3)); 
++ write_reg(E0, E1, E2 << E3); 
+// Infered from: (linux/{prevFiles/prev_53ce1c0_721bc8_drivers#staging#fbtft#fb_hx8353d.c,revFiles/53ce1c0_721bc8_drivers#staging#fbtft#fb_hx8353d.c}: set_var), (linux/{prevFiles/prev_0401b4_6e686d_drivers#staging#fbtft#fb_st7735r.c,revFiles/0401b4_6e686d_drivers#staging#fbtft#fb_st7735r.c}: set_var), (linux/{prevFiles/prev_6b38452_2f4a74_drivers#staging#fbtft#fb_agm1264k-fl.c,revFiles/6b38452_2f4a74_drivers#staging#fbtft#fb_agm1264k-fl.c}: write_vmem), (linux/{prevFiles/prev_6e686d_53ce1c0_drivers#staging#fbtft#fb_s6d02a1.c,revFiles/6e686d_53ce1c0_drivers#staging#fbtft#fb_s6d02a1.c}: set_var), (linux/{prevFiles/prev_721bc8_6b38452_drivers#staging#fbtft#fb_hx8340bn.c,revFiles/721bc8_6b38452_drivers#staging#fbtft#fb_hx8340bn.c}: set_var)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((strtoul_ui(E0[E1 + 1], 8, &E2) != 1) || get_sha1_hex(E0[E1 + 2], E3) || add_cacheinfo(  E2, E3, E0[E1 + 3], 0))  
++ if (strtoul_ui(E0[E1 + 1], 8, &E2) || get_sha1_hex(E0[E1 + 2], E3) || add_cacheinfo(  E2, E3, E0[E1 + 3], 0))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_6e6db3_9f1beb_builtin-update-index.c,revFiles/6e6db3_9f1beb_builtin-update-index.c}: cmd_update_index)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,35 @@
+@@
+expression E0, E1;
+@@
+- if (!E0 && E1)  
++ if (!E0 && E1 && !(PHPDBG_G(flags) & PHPDBG_IS_REMOTE))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_db1299_87b556e_phpdbg_cmd.c,revFiles/db1299_87b556e_phpdbg_cmd.c}: phpdbg_read_input)
+// False positives: (php-src/revFiles/447ec0_c1e123_phpdbg_prompt.c: phpdbg_create_execute_data)
+// Recall: 0.15, Precision: 0.50, Matching recall: 0.18
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 0.50
+// -- Node Change --
+// Recall: 0.77, Precision: 0.83
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_db1299_87b556e_phpdbg_cmd.c: phpdbg_read_input
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_447ec0_c1e123_phpdbg_prompt.c: PHPDBG_COMMAND
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_447ec0_c1e123_phpdbg_prompt.c: phpdbg_create_execute_data
+*/
+
+// ---------------------------------------------

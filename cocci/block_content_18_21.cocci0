@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5, E6;
+typedef GError;
+typedef GSpawnFlags;
+@@
+- GError *I0 = NULL; 
+  ...
+- E1 = g_spawn_sync(E2, E3, E4, (GSpawnFlags )0, NULL, NULL, &E5, NULL, &E6,  &I0); 
++ E1 = g_spawn_sync(E2, E3, E4, (GSpawnFlags )0, NULL, NULL, &E5, NULL, &E6,  NULL); 
+// Infered from: (wireshark/{prevFiles/prev_a53ab9_14d6c2_extcap.c,revFiles/a53ab9_14d6c2_extcap.c}: extcap_foreach)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

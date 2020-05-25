@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- while (E0 < E1 + 4)  
++ while (E0 < E1)  
+  {
+  ...
+- *E0++ = (((*E2++) * E3) + ((*E4++) * E5)) >> 7; 
++ *E0++ = (((*E2++) * E3) + ((*E4++) * E5)) >> 7; 
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_d54e32_2d8a1a_modules#video_filter#motionblur.c,revFiles/d54e32_2d8a1a_modules#video_filter#motionblur.c}: RenderBlur)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

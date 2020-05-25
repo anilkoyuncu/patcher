@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (NULL == strncmp(E0->app, OPAL_PATH_SEP, 1))  
++ if (0 == strncmp(E0->app, OPAL_PATH_SEP, 1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_a2964f_de676d_orte#tools#orterun#totalview.c,revFiles/a2964f_de676d_orte#tools#orterun#totalview.c}: orte_totalview_init_after_spawn)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

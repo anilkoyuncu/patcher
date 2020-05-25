@@ -1,0 +1,11 @@
+@@
+identifier I0 = {Curl_socket_ready ,PyErr_SyntaxLocationObject ,msg_Dbg };
+expression E1, E2, E3;
+@@
+- I0(E1, E2, E3); 
++ I0(E1, E2, (int )(E3)); 
+// Infered from: (vlc/{prevFiles/prev_f4dd0b_2d61d6_modules#access#cdda.c,revFiles/f4dd0b_2d61d6_modules#access#cdda.c}: GetCDDBInfo), (cpython/{prevFiles/prev_c88461_e78dac_Parser#tokenizer.c,revFiles/c88461_e78dac_Parser#tokenizer.c}: syntaxerror), (curl/{prevFiles/prev_affff4_d6981c_lib#ssh.c,revFiles/affff4_d6981c_lib#ssh.c}: ssh_easy_statemach)
+// False positives: (vlc/revFiles/3f576c_1fa83e_modules#codec#avcodec#dxva2.c: DxCreateVideoDecoder), (vlc/revFiles/3f576c_1fa83e_modules#codec#avcodec#dxva2.c: DxFindVideoServiceConversion), (vlc/revFiles/f4dd0b_2d61d6_modules#access#cdda.c: GetTracks)
+// Recall: 0.06, Precision: 0.38, Matching recall: 1.00
+
+// ---------------------------------------------

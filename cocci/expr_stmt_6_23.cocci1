@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->first_rtcp_ntp_time = AV_NOPTS_VALUE; 
++ E0->first_rtcp_ntp_time = ntp_time(); 
+// Infered from: (FFmpeg/{prevFiles/prev_4e8052_7515ed_libavformat#rtpenc.c,revFiles/4e8052_7515ed_libavformat#rtpenc.c}: rtp_write_header)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

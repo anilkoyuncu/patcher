@@ -1,0 +1,20 @@
+@@
+identifier I0;
+typedef curl_socket_t;
+@@
+- int I0 = socket(PF_INET6, SOCK_DGRAM, 0); 
+- if (I0 == -1)  
++ curl_socket_t I0 = socket(PF_INET6, SOCK_DGRAM, 0); 
++ if (I0 == CURL_SOCKET_BAD)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_890406_5b778a_tests#server#resolve.c,revFiles/890406_5b778a_tests#server#resolve.c}: main)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

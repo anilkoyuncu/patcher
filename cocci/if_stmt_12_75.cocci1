@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- construct_center_widget(E0); 
+// Infered from: (gtk/{prevFiles/prev_3efd0b_cc6ffd_gtk#gtkactionbar.c,revFiles/3efd0b_cc6ffd_gtk#gtkactionbar.c}: gtk_action_bar_set_center_widget)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

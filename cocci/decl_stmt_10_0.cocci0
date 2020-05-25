@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- dev_err (&E0->dev, E1); 
++ dev_err(dev, E1); 
+// Infered from: (linux/{prevFiles/prev_edad752_0a48f2_drivers#watchdog#tegra_wdt.c,revFiles/edad752_0a48f2_drivers#watchdog#tegra_wdt.c}: tegra_wdt_probe), (linux/{prevFiles/prev_44affc_09fb6d_drivers#watchdog#ts4800_wdt.c,revFiles/44affc_09fb6d_drivers#watchdog#ts4800_wdt.c}: ts4800_wdt_probe), (linux/{prevFiles/prev_44affc_09fb6d_drivers#watchdog#ts4800_wdt.c,revFiles/44affc_09fb6d_drivers#watchdog#ts4800_wdt.c}: ts4800_wdt_probe), (linux/{prevFiles/prev_44affc_09fb6d_drivers#watchdog#ts4800_wdt.c,revFiles/44affc_09fb6d_drivers#watchdog#ts4800_wdt.c}: ts4800_wdt_probe), (linux/{prevFiles/prev_44affc_09fb6d_drivers#watchdog#ts4800_wdt.c,revFiles/44affc_09fb6d_drivers#watchdog#ts4800_wdt.c}: ts4800_wdt_probe), (linux/{prevFiles/prev_dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c,revFiles/dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c}: sama5d4_wdt_probe), (linux/{prevFiles/prev_dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c,revFiles/dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c}: sama5d4_wdt_probe)
+// False positives: (linux/revFiles/396164_c8841a6_drivers#watchdog#intel-mid_wdt.c: mid_wdt_probe), (linux/revFiles/5ee212_051b982_drivers#net#ehea#ehea_main.c: ehea_probe_adapter), (linux/revFiles/72c71f_e12274_drivers#staging#slicoss#slicoss.c: slic_card_init), (linux/revFiles/72c71f_e12274_drivers#staging#slicoss#slicoss.c: slic_entry_probe), (linux/revFiles/72c71f_e12274_drivers#staging#slicoss#slicoss.c: slic_rspqueue_init), (linux/revFiles/7db163_9e14375_drivers#watchdog#aspeed_wdt.c: aspeed_wdt_probe), (linux/revFiles/cb5c14_30cba9a1_drivers#watchdog#mena21_wdt.c: a21_wdt_probe)
+// Recall: 0.08, Precision: 0.57, Matching recall: 0.20
+
+// ---------------------------------------------

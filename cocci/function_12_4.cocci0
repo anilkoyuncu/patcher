@@ -1,0 +1,16 @@
+@@
+expression E0;
+@@
+- E0->has_zero_init = E0->min_sparse && !E0->target_has_backing ? bdrv_has_zero_init(  blk_bs(E0->target)) :false; 
++ if (E0->target_is_new && E0->min_sparse && !E0->target_has_backing)  
++ {
++ E0->has_zero_init = bdrv_has_zero_init(blk_bs(E0->target)); 
++ }
++ else
++ {
++ E0->has_zero_init = false; 
++ }
+// Infered from: (qemu/{prevFiles/prev_4d7c48_672de7_qemu-img.c,revFiles/4d7c48_672de7_qemu-img.c}: convert_do_copy)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

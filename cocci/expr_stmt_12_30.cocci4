@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->callback(E0->arg, ARES_SUCCESS, E1->h_name, E2); 
++ E0->callback(E0->arg, ARES_SUCCESS, (char *)(E1->h_name), E2); 
+// Infered from: (curl/{prevFiles/prev_db22c8_a4b39c_ares#ares_getnameinfo.c,revFiles/db22c8_a4b39c_ares#ares_getnameinfo.c}: nameinfo_callback)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

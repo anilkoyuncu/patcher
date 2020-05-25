@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (E0->overlap && E0->condover != CONDOVER_NONE)  
++ if (E0->overlap && (E0->pq >= 9 || E0->condover != CONDOVER_NONE))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_1cf612_6b453a_libavcodec#vc1_block.c,revFiles/1cf612_6b453a_libavcodec#vc1_block.c}: vc1_decode_i_blocks_adv)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

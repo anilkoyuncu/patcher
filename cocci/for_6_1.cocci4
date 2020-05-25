@@ -1,0 +1,19 @@
+@@
+identifier I0;
+expression E1;
+typedef AVClass;
+@@
+  const  AVClass *ff_urlcontext_child_class_next(const  AVClass *I0)  
+  {
+  ...
+- for(E1 = 0;url_protocols[E1];E1++)  
++ for(E1 = 0;I0 && url_protocols[E1];E1++)  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_4899c0_a6cd81_libavformat#protocols.c,revFiles/4899c0_a6cd81_libavformat#protocols.c}: ff_urlcontext_child_class_next)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

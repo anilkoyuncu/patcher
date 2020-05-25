@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->length_sector_long = cpu_to_le32(E1->sector_count - E1->first_sectors_number + 1); 
++ E0->length_sector_long = cpu_to_le32(E1->bs->total_sectors - E1->first_sectors_number + 1); 
+// Infered from: (qemu/{prevFiles/prev_f91cbe_61a8d6_block#vvfat.c,revFiles/f91cbe_61a8d6_block#vvfat.c}: init_mbr)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

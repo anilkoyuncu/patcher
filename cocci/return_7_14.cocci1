@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- return capable(CAP_SYS_RAWIO) ? nonseekable_open(E0, E1) :-EPERM; 
++ return capable(CAP_SYS_RAWIO) ? stream_open(E0, E1) :-EPERM; 
+// Infered from: (linux/{prevFiles/prev_c5bf68_184012_arch#x86#kernel#cpu#microcode#core.c,revFiles/c5bf68_184012_arch#x86#kernel#cpu#microcode#core.c}: microcode_open)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

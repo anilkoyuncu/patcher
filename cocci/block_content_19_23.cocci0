@@ -1,0 +1,8 @@
+@@
+@@
+- proto_docsis_regrsp = proto_register_protocol("DOCSIS Registration Requests",  "DOCSIS REG-RSP",  "docsis_regrsp"); 
++ proto_docsis_regrsp = proto_register_protocol("DOCSIS Registration Responses",  "DOCSIS REG-RSP",  "docsis_regrsp"); 
+// Infered from: (wireshark/{prevFiles/prev_86576c_e0e712_plugins#docsis#packet-regrsp.c,revFiles/86576c_e0e712_plugins#docsis#packet-regrsp.c}: proto_register_docsis_regrsp)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (strchr(" \t\r\n", *E0))  
++ while (*E0 && strchr(" \t\r\n", *E0))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_a86eff_49277b_ext#dba#libinifile#inifile.c,revFiles/a86eff_49277b_ext#dba#libinifile#inifile.c}: etrim)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

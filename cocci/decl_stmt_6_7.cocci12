@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef CERT_PKEY;
+@@
+- CERT_PKEY *I0 = E1->key + E2; 
++ CERT_PKEY *I0 = E1->pkeys + E2; 
+// Infered from: (openssl/{prevFiles/prev_9330a8_0dd5b9_ssl#ssl_cert.c,revFiles/9330a8_0dd5b9_ssl#ssl_cert.c}: ssl_cert_set_current)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+@@
+- if (E0 < 3 && E1 < 3)  
++ if (E0 == 1 && E1 == 1)  
+  {
+- printf("0"); 
+- return 0; 
++ printf("0"); 
++ return 0; 
+  }
+// Infered from: (codeflaws/{prevFiles/prev_651-A-18248433-18248449.c,revFiles/651-A-18248433-18248449.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

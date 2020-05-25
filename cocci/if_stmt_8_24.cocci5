@@ -1,0 +1,35 @@
+@@
+expression E0;
+@@
+- if (E0[6] & 0xf8)  
++ if ((E0[6] & 0xf8) == 0x50)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_ca3355_50d45d_modules#codec#a52.c,revFiles/ca3355_50d45d_modules#codec#a52.c}: SyncInfo)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 1.00
+// -- Node Change --
+// Recall: 0.87, Precision: 0.87
+// -- General --
+// Functions fully changed: 5/7(71%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_95f6fa_e9c23e9_src#misc#win32_specific.c: system_End
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_e13951_0bbac6_disas.c: target_disas
+*/
+
+// ---------------------------------------------

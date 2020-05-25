@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- av_dlog(NULL, "diff=%f adiff=%f sample_diff=%d apts=%0.3f vpts=%0.3f %f\n",  E0, E1, E2 - E3, E4->audio_clock, E4->video_clock,  E4->audio_diff_threshold); 
++ av_dlog(NULL, "diff=%f adiff=%f sample_diff=%d apts=%0.3f %f\n", E0, E1,  E2 - E3, E4->audio_clock, E4->audio_diff_threshold); 
+// Infered from: (FFmpeg/{prevFiles/prev_5534d8_b853cf_ffplay.c,revFiles/5534d8_b853cf_ffplay.c}: synchronize_audio)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.77, Precision: 1.00
+// -- Node Change --
+// Recall: 0.56, Precision: 1.00
+// -- General --
+// Functions fully changed: 10/13(76%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_cd5c7a_2037bb_src#network#httpd.c: httpd_HostThread
+ - FFmpeg/prevFiles/prev_5534d8_b853cf_ffplay.c: 
+ - FFmpeg/prevFiles/prev_5534d8_b853cf_ffplay.c: queue_picture
+*/
+
+// ---------------------------------------------

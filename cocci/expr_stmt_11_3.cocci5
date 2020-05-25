@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[E1] = toupper(E0[E1]); 
++ E0[E1] = toupper((int )(E0[E1])); 
+// Infered from: (cmake/{prevFiles/prev_05e162_589cf3_Source#CursesDialog#form#frm_req_name.c,revFiles/05e162_589cf3_Source#CursesDialog#form#frm_req_name.c}: form_request_by_name)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

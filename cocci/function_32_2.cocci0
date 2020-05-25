@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->p_hotkeys = p_hotkeys; 
++ memcpy(E0->p_hotkeys, p_hotkeys, sizeof(p_hotkeys)); 
+// Infered from: (vlc/{prevFiles/prev_4ae90d_89fd53_src#libvlc.c,revFiles/4ae90d_89fd53_src#libvlc.c}: VLC_Init)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

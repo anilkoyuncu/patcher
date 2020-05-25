@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 < E1 && E0 > E2)  
++ if (E0 < E1 || E0 > E2)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_035e93_1638d9_libavformat#vivo.c,revFiles/035e93_1638d9_libavformat#vivo.c}: vivo_probe), (redis/{prevFiles/prev_e927a2_288f81_src#scripting.c,revFiles/e927a2_288f81_src#scripting.c}: luaLogCommand)
+// Recall: 0.67, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

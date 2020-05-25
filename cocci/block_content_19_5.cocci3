@@ -1,0 +1,14 @@
+@@
+expression E0;
+@@
+- CRYPTO_THREAD_set_local(&threadstopkey, E0); 
++ if (E0 != NULL && !CRYPTO_THREAD_set_local(&threadstopkey, E0))  
++ {
++ OPENSSL_free(E0); 
++ return NULL; 
++ }
+// Infered from: (openssl/{prevFiles/prev_3ac6d5_af6de4_crypto#init.c,revFiles/3ac6d5_af6de4_crypto#init.c}: ossl_init_get_thread_local)
+// False positives: (openssl/revFiles/3ac6d5_af6de4_crypto#init.c: ossl_init_get_thread_local)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

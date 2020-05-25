@@ -1,0 +1,18 @@
+@@
+expression E0;
+@@
+- if (E0 == 2)  
++ if (E0 == MMU_INST_FETCH)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_461a4b_3fee02_target#openrisc#mmu.c,revFiles/461a4b_3fee02_target#openrisc#mmu.c}: cpu_openrisc_get_phys_addr)
+// False positives: (qemu/revFiles/461a4b_3fee02_target#openrisc#mmu.c: cpu_openrisc_raise_mmu_exception)
+// Recall: 0.04, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

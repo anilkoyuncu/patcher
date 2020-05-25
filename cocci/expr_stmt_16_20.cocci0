@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- OBD_ALLOC_PTR(E0); 
++ E0 = kzalloc(sizeof(*E0), GFP_NOFS); 
+  ...
+- OBD_FREE_PTR(E0); 
++ kfree(E0); 
+// Infered from: (linux/{prevFiles/prev_8bcf30_352f78_drivers#staging#lustre#lustre#lmv#lmv_intent.c,revFiles/8bcf30_352f78_drivers#staging#lustre#lustre#lmv#lmv_intent.c}: lmv_intent_remote)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

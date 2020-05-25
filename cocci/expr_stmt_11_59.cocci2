@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (E0->width & 1)  
+- {
+- av_log(E0, AV_LOG_ERROR, "v210 needs even width\n"); 
+- return AVERROR_INVALIDDATA; 
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_d391fe_0275b2_libavcodec#v210dec.c,revFiles/d391fe_0275b2_libavcodec#v210dec.c}: decode_init)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

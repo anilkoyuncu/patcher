@@ -1,0 +1,30 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = (int )strlen(E1); 
+- if (I0 + 1 + E2 + 1 >= MAXPATHLEN)  
++ size_t I0 = strlen(E1); 
++ if (E2 > (MAXPATHLEN - 2) || I0 > MAXPATHLEN || I0 + 1 + (size_t )E2 + 1 >= MAXPATHLEN)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_f8be3e_6f9c3b_main#fopen_wrappers.c,revFiles/f8be3e_6f9c3b_main#fopen_wrappers.c}: php_resolve_path), (php-src/{prevFiles/prev_c4c2cc_58b188_main#fopen_wrappers.c,revFiles/c4c2cc_58b188_main#fopen_wrappers.c}: php_resolve_path)
+// Recall: 0.57, Precision: 1.00, Matching recall: 0.57
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_c4c2cc_58b188_main#fopen_wrappers.c: php_resolve_path
+ - php-src/prevFiles/prev_f8be3e_6f9c3b_main#fopen_wrappers.c: php_resolve_path
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E3, E2;
+@@
+- memory_region_init_ram (E0, E1, E2, E3); 
+- vmstate_register_ram_global (E0); 
++ memory_region_allocate_system_memory(E0, NULL, E2, E3); 
+// Infered from: (qemu/{prevFiles/prev_e938ba_063cac_hw#ppc#e500.c,revFiles/e938ba_063cac_hw#ppc#e500.c}: ppce500_init), (qemu/{prevFiles/prev_e938ba_063cac_hw#ppc#virtex_ml507.c,revFiles/e938ba_063cac_hw#ppc#virtex_ml507.c}: virtex_init), (qemu/{prevFiles/prev_e938ba_063cac_hw#ppc#prep.c,revFiles/e938ba_063cac_hw#ppc#prep.c}: ppc_prep_init)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

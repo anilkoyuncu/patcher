@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;E0 < E1->channels;E0++)  
++ for(E0 = 0;E0 < E1->out_channels;E0++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_6c82c8_a1c5cc_libavcodec#ac3dec.c,revFiles/6c82c8_a1c5cc_libavcodec#ac3dec.c}: ac3_decode_frame)
+// False positives: (FFmpeg/revFiles/6c82c8_a1c5cc_libavcodec#ac3dec.c: ac3_decode_frame)
+// Recall: 0.20, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

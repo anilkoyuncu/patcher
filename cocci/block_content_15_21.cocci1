@@ -1,0 +1,36 @@
+@@
+identifier I0;
+typedef bool;
+@@
+- bool I0 = 0; 
++ bool I0 = false; 
+// Infered from: (linux/{prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c,revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c}: dispc_ovl_check), (linux/{prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c,revFiles/62a8318_24586d_drivers#video#omap2#dss#dispc.c}: dispc_ovl_setup_common), (linux/{prevFiles/prev_3db1cd5_a8e510_net#netfilter#ipvs#ip_vs_pe_sip.c,revFiles/3db1cd5_a8e510_net#netfilter#ipvs#ip_vs_pe_sip.c}: ip_vs_sip_ct_match), (linux/{prevFiles/prev_19cd22_a568dc_drivers#staging#vt6655#rxtx.c,revFiles/19cd22_a568dc_drivers#staging#vt6655#rxtx.c}: s_uGetDataDuration)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.38
+// -- Node Change --
+// Recall: 0.90, Precision: 0.41
+// -- General --
+// Functions fully changed: 3/13(23%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_3db1cd5_a8e510_net#ipv4#tcp_timer.c: tcp_write_timeout
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_ovl_set_channel_out
+ - linux/prevFiles/prev_3db1cd5_a8e510_net#ipv4#tcp_timer.c: tcp_out_of_resources
+ - linux/prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_ovl_set_accu_uv
+ - linux/prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_mgr_set_tft_data_lines
+ - linux/prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_ovl_set_color_mode
+ - linux/prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_mgr_set_io_pad_mode
+ - linux/prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c: calc_core_clk_34xx
+ - linux/prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_ovl_setup_common
+ - linux/prevFiles/prev_62a8318_24586d_drivers#video#omap2#dss#dispc.c: dispc_ovl_set_rotation_attrs
+*/
+
+// ---------------------------------------------

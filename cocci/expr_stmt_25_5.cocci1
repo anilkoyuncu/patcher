@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- wlc_phy_set_rfseq_nphy(E0, NPHY_RFSEQ_UPDATEGAINU, E1, E2,  sizeof(E1) / sizeof(E1[0])); 
++ wlc_phy_set_rfseq_nphy(E0, NPHY_RFSEQ_UPDATEGAINU, E1, E2, ARRAY_SIZE(E1)); 
+// Infered from: (linux/{prevFiles/prev_18907f2_53ac79_drivers#net#wireless#broadcom#brcm80211#brcmsmac#phy#phy_n.c,revFiles/18907f2_53ac79_drivers#net#wireless#broadcom#brcm80211#brcmsmac#phy#phy_n.c}: wlc_phy_workarounds_nphy_gainctrl)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

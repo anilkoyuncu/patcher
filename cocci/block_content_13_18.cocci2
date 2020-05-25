@@ -1,0 +1,10 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- E0->I1.I2 = DP_TRAIN_PRE_EMPHASIS_6; 
++ E0->I1.I2 = DP_TRAIN_PRE_EMPH_LEVEL_2; 
+// Infered from: (linux/{prevFiles/prev_311600_0ded92_drivers#gpu#drm#gma500#intel_bios.c,revFiles/311600_0ded92_drivers#gpu#drm#gma500#intel_bios.c}: parse_edp), (linux/{prevFiles/prev_bd60018_eeb82a_drivers#gpu#drm#i915#intel_bios.c,revFiles/bd60018_eeb82a_drivers#gpu#drm#i915#intel_bios.c}: parse_edp)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.12
+
+// ---------------------------------------------

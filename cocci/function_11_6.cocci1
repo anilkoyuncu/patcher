@@ -1,0 +1,47 @@
+@@
+expression E0;
+@@
+- if (++E0->nesting > Py_GetRecursionLimit())  
++ if (Py_EnterRecursiveCall(" while pickling an object") < 0)  
+  {
+- PyErr_SetString(PyExc_RuntimeError, "maximum recursion depth exceeded"); 
+- goto  error; 
++ return -1; 
+  }
+  ...
+- E0->nesting--; 
++ Py_LeaveRecursiveCall(); 
+// Infered from: (cpython/{prevFiles/prev_dff183_2bc91df_Modules#_pickle.c,revFiles/dff183_2bc91df_Modules#_pickle.c}: save)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.09, Precision: 1.00
+// -- Node Change --
+// Recall: 0.18, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/22(9%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_390aab_ef8cc0_libavformat#tcp.c: tcp_open
+ - FFmpeg/prevFiles/prev_854728_102d39_libavcodec#h263.c: h263_decode_picture_header
+ - qemu/prevFiles/prev_5540cb_b148ed_hw#i2c#aspeed_i2c.c: aspeed_i2c_bus_handle_cmd
+ - cpython/prevFiles/prev_dff183_2bc91df_Modules#_pickle.c: Pickler_init
+ - linux/prevFiles/prev_61241d_22b4dc5_drivers#staging#ft1000#ft1000-usb#ft1000_chdev.c: ft1000_CreateDevice
+ - qemu/prevFiles/prev_462c25_643fbf_target#microblaze#translate.c: decode
+ - apr/prevFiles/prev_470778_a57b55_time#win32#time.c: ap_explode_gmt
+ - cpython/prevFiles/prev_dff183_2bc91df_Modules#_pickle.c: 
+ - FFmpeg/prevFiles/prev_2cfa6f_541efe_libavcodec#mjpegdec.c: ff_mjpeg_decode_frame
+ - qemu/prevFiles/prev_15c773_0c6f9c_block.c: bdrv_open_common
+ - FFmpeg/prevFiles/prev_390aab_ef8cc0_libavformat#tcp.c: 
+ - qemu/prevFiles/prev_462c25_643fbf_target#microblaze#translate.c: gen_intermediate_code
+ - php-src/prevFiles/prev_a7d57a_af6a28_ext#phar#phar.c: phar_destroy_phar_data
+ - FFmpeg/prevFiles/prev_853759_494065_libavformat#timefilter.c: ff_timefilter_reset
+ - qemu/prevFiles/prev_462c25_643fbf_target#microblaze#translate.c: 
+ - linux/prevFiles/prev_3fcedec_229aebb_drivers#vhost#vhost.c: vhost_vq_reset
+ - qemu/prevFiles/prev_b21227_103f9a_hw#apb_pci.c: pbm_pci_host_class_init
+*/
+
+// ---------------------------------------------

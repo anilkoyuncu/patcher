@@ -1,0 +1,43 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = tvb_new_real_data(E1, E2, E3); 
++ E0 = tvb_new_child_real_data(E4, E1, E2, E3); 
+  ...
+- tvb_set_child_real_data_tvbuff(E4, E0); 
+// Infered from: (wireshark/{prevFiles/prev_324af9_11ef8a_epan#dissectors#pidl#mapi#request.cnf.c,revFiles/324af9_11ef8a_epan#dissectors#pidl#mapi#request.cnf.c}: mapi_dissect_element_EcDoRpc_request_), (wireshark/{prevFiles/prev_324af9_11ef8a_epan#dissectors#pidl#mapi#response.cnf.c,revFiles/324af9_11ef8a_epan#dissectors#pidl#mapi#response.cnf.c}: mapi_dissect_element_EcDoRpc_response_)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.95
+// -- Node Change --
+// Recall: 1.00, Precision: 0.83
+// -- General --
+// Functions fully changed: 92/111(82%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#plat-nomadik#gpio.c: nmk_gpio_init_irq
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#mach-tegra#gpio.c: tegra_gpio_init
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#plat-stmp3xxx#pinmux.c: stmp3xxx_pinmux_init
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#mach-gemini#gpio.c: gemini_gpio_init
+ - linux/prevFiles/prev_d6f7ce9f_d5bb122_drivers#mfd#t7l66xb.c: t7l66xb_attach_irq
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#mach-mxs#gpio.c: mxs_gpio_init
+ - linux/prevFiles/prev_d6f7ce9f_d5bb122_drivers#mfd#tc6393xb.c: tc6393xb_detach_irq
+ - linux/prevFiles/prev_d6f7ce9f_d5bb122_drivers#mfd#tc6393xb.c: tc6393xb_attach_irq
+ - linux/prevFiles/prev_d6f7ce9f_d5bb122_drivers#mfd#htc-egpio.c: egpio_probe
+ - linux/prevFiles/prev_d6f7ce9f_d5bb122_drivers#mfd#t7l66xb.c: t7l66xb_detach_irq
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#common#locomo.c: __locomo_remove
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#common#sa1111.c: __sa1111_remove
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#plat-samsung#irq-uart.c: s3c_init_uart_irq
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#plat-versatile#fpga-irq.c: fpga_irq_init
+ - linux/prevFiles/prev_d6f7ce9f_d5bb122_drivers#mfd#asic3.c: asic3_irq_probe
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#common#sa1111.c: sa1111_setup_irq
+ - linux/prevFiles/prev_bb56fc35_1b11b0_drivers#pinctrl#samsung#pinctrl-exynos.c: exynos_eint_wkup_init
+ - linux/prevFiles/prev_f38c02f_9323f261_arch#arm#plat-mxc#gpio.c: mxc_gpio_init
+ - linux/prevFiles/prev_f7f8775_77c77e_drivers#gpio#gpiolib.c: gpiochip_irqchip_remove
+*/
+
+// ---------------------------------------------

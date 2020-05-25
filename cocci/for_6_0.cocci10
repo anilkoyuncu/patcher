@@ -1,0 +1,47 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- for(int I0 = 0;I0 < E1 - E2;I0++)  
++ for(int I0 = 0;I0 < E1 - E2 + 1;I0++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_337-A-18227162-18227183.c,revFiles/337-A-18227162-18227183.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.52, Precision: 0.81
+// -- Node Change --
+// Recall: 0.52, Precision: 0.68
+// -- General --
+// Functions fully changed: 10/28(35%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_9ecdd7_aba678_libavfilter#vf_curves.c: init
+ - lighttpd1.4/prevFiles/prev_f2cd82_85b1f6_src#mod_rewrite.c: process_rewrite_rules
+ - vlc/prevFiles/prev_359d2b_2a70d8_modules#video_chroma#copy.c: SplitPlanes
+ - codeflaws/prevFiles/prev_99-A-6985349-6985355.c: main
+ - FFmpeg/prevFiles/prev_ded847_68fc9c_libavcodec#mpegvideo.c: select_input_picture
+ - codeflaws/prevFiles/prev_344-A-18103543-18103567.c: main
+ - codeflaws/prevFiles/prev_266-A-18153802-18153883.c: main
+ - codeflaws/prevFiles/prev_49-C-224303-224310.c: main
+ - codeflaws/prevFiles/prev_337-A-17700524-17700599.c: main
+ - lighttpd1.4/prevFiles/prev_f2cd82_85b1f6_src#mod_redirect.c: mod_redirect_uri_handler
+ - tmux/prevFiles/prev_0d0b3c_84612a_window-copy.c: window_copy_search_down
+ - lighttpd1.4/prevFiles/prev_c634a5_a8ffcb_src#etag.c: etag_mutate
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_9ecdd7_aba678_libavfilter#vf_curves.c: interpolate
+ - FFmpeg/prevFiles/prev_d4cb9e_d1530c_postproc#postprocess.c: postProcess
+ - FFmpeg/prevFiles/prev_723d69_d4d6b7_libavfilter#vf_lagfun.c: lagfun_frame8
+ - qemu/prevFiles/prev_ce3e14_57c83d_ui#vnc.c: find_and_clear_dirty_height
+ - FFmpeg/prevFiles/prev_d4cb9e_d1530c_postproc#postprocess_template.c: postProcess
+ - FFmpeg/prevFiles/prev_a12899_0b360c_libavfilter#vf_mix.c: process_frame
+*/
+
+// ---------------------------------------------

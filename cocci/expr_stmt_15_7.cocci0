@@ -1,0 +1,10 @@
+@@
+identifier I2, I0 = {ide_init2 ,omap_clk_adduser };
+expression E1, E3;
+@@
+- I0(E1, qemu_allocate_irqs(I2, E3, 1)[0]); 
++ I0(E1, qemu_allocate_irq(I2, E3, 0)); 
+// Infered from: (qemu/{prevFiles/prev_f3c7d0_127a4e_hw#ide#microdrive.c,revFiles/f3c7d0_127a4e_hw#ide#microdrive.c}: microdrive_realize), (qemu/{prevFiles/prev_f3c7d0_127a4e_hw#timer#omap_gptimer.c,revFiles/f3c7d0_127a4e_hw#timer#omap_gptimer.c}: omap_gp_timer_clk_setup), (qemu/{prevFiles/prev_f3c7d0_127a4e_hw#dma#omap_dma.c,revFiles/f3c7d0_127a4e_hw#dma#omap_dma.c}: omap_dma_init), (qemu/{prevFiles/prev_f3c7d0_127a4e_hw#dma#omap_dma.c,revFiles/f3c7d0_127a4e_hw#dma#omap_dma.c}: omap_dma4_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

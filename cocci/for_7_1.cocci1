@@ -1,0 +1,30 @@
+@@
+identifier I0;
+expression E1;
+@@
+- for(int I0 = 0;I0 < E1;++I0)  
++ for(int I0 = 1;I0 < E1;++I0)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_fc17de_3a3b13_ompi#mca#coll#libnbc#nbc_ibarrier.c,revFiles/fc17de_3a3b13_ompi#mca#coll#libnbc#nbc_ibarrier.c}: ompi_coll_libnbc_ibarrier_inter), (ompi/{prevFiles/prev_8eb2d6_5d44a3_ompi#mca#coll#sm#coll_sm_module.c,revFiles/8eb2d6_5d44a3_ompi#mca#coll#sm#coll_sm_module.c}: bootstrap_comm)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_2098f7_e5ab4b_bin#vlc.c: main
+ - vlc/prevFiles/prev_4b5c54_685eb4_bin#vlc.c: main
+ - vlc/prevFiles/prev_5450e8_197948_bin#vlc.c: main
+ - ompi/prevFiles/prev_9c45c6_637917_ompi#dpm#dpm.c: ompi_dpm_group_is_dyn
+*/
+
+// ---------------------------------------------

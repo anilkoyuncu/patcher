@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 & 0x01) != 0x00 && (E1 && 0x01) != 0x01)  
++ if (((E0 & 0x01) != 0x00) && ((E1 & 0x01) != 0x01))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_50fc84_f2bdbd6_epan#dissectors#packet-v120.c,revFiles/50fc84_f2bdbd6_epan#dissectors#packet-v120.c}: dissect_v120)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

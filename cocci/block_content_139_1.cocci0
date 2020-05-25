@@ -1,0 +1,9 @@
+@@
+expression E0, E2, E1;
+typedef uint32_t;
+@@
+- *(uint32_t *)(E0 + E1) = *(uint32_t *)(copy_dst + E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_6642a1_b351ba_libavcodec#vp8.c,revFiles/6642a1_b351ba_libavcodec#vp8.c}: intra_predict), (FFmpeg/{prevFiles/prev_6642a1_b351ba_libavcodec#vp8.c,revFiles/6642a1_b351ba_libavcodec#vp8.c}: intra_predict), (FFmpeg/{prevFiles/prev_6642a1_b351ba_libavcodec#vp8.c,revFiles/6642a1_b351ba_libavcodec#vp8.c}: intra_predict), (FFmpeg/{prevFiles/prev_9d4bdc_f81c7a_libavcodec#vp8.c,revFiles/9d4bdc_f81c7a_libavcodec#vp8.c}: intra_predict), (FFmpeg/{prevFiles/prev_9d4bdc_f81c7a_libavcodec#vp8.c,revFiles/9d4bdc_f81c7a_libavcodec#vp8.c}: intra_predict), (FFmpeg/{prevFiles/prev_9d4bdc_f81c7a_libavcodec#vp8.c,revFiles/9d4bdc_f81c7a_libavcodec#vp8.c}: intra_predict)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

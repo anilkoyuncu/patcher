@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- sprintf(E0, "set_%s(func): argument not callable", E1); 
++ sprintf(E0, "set_%.50s(func): argument not callable", E1); 
+// Infered from: (cpython/{prevFiles/prev_d4c0a9c_5107b4_Modules#readline.c,revFiles/d4c0a9c_5107b4_Modules#readline.c}: set_hook)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

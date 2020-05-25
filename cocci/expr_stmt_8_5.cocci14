@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- bzero(E0, E1); 
++ memset(E0, 0, E1); 
+// Infered from: (ompi/{prevFiles/prev_08cc4e_bc3177_oshmem#proc#proc.c,revFiles/08cc4e_bc3177_oshmem#proc#proc.c}: oshmem_proc_construct), (libarchive/{prevFiles/prev_1f012c_ab94a8_libarchive#archive_write_set_format_xar.c,revFiles/1f012c_ab94a8_libarchive#archive_write_set_format_xar.c}: compression_init_encoder_xz), (libarchive/{prevFiles/prev_1f012c_ab94a8_libarchive#archive_write_add_filter_xz.c,revFiles/1f012c_ab94a8_libarchive#archive_write_add_filter_xz.c}: archive_compressor_xz_init_stream), (wireshark/{prevFiles/prev_670605_9feb37_packet-radius.c,revFiles/670605_9feb37_packet-radius.c}: rd_value_to_str)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

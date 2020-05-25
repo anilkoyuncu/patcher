@@ -1,0 +1,30 @@
+@@
+@@
+- php_error(E_WARNING, "Type not supportet or not yet implemented."); 
++ php_error(E_WARNING, "Type not supported or not yet implemented."); 
+// Infered from: (php-src/{prevFiles/prev_3110a5_65af93_ext#com#conversion.c,revFiles/3110a5_65af93_ext#com#conversion.c}: php_pval_to_variant_ex), (php-src/{prevFiles/prev_3110a5_65af93_ext#rpc#com#conversion.c,revFiles/3110a5_65af93_ext#rpc#com#conversion.c}: php_pval_to_variant_ex)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 0.62, Precision: 0.71
+// -- General --
+// Functions fully changed: 0/6(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_3110a5_65af93_ext#com#conversion.c: php_variant_to_pval
+ - php-src/prevFiles/prev_3110a5_65af93_ext#rpc#com#conversion.c: php_variant_to_pval
+ - php-src/prevFiles/prev_3110a5_65af93_ext#rpc#com#conversion.c: php_pval_to_variant_ex
+ - php-src/prevFiles/prev_3110a5_65af93_ext#com#conversion.c: php_pval_to_variant_ex
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_3110a5_65af93_ext#com#conversion.c: php_pval_to_variant
+ - php-src/prevFiles/prev_3110a5_65af93_ext#rpc#com#conversion.c: php_pval_to_variant
+*/
+
+// ---------------------------------------------

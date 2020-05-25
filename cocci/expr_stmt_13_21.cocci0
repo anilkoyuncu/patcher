@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gst_structure_set_parent_refcount(E0, &E1->event.mini_object.refcount); 
++ gst_structure_set_parent_refcount(GST_EVENT_STRUCTURE(E1),  &E1->event.mini_object.refcount); 
+// Infered from: (gstreamer/{prevFiles/prev_b1676b_fa6bcd_gst#gstevent.c,revFiles/b1676b_fa6bcd_gst#gstevent.c}: _gst_event_copy)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

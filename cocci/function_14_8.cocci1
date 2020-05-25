@@ -1,0 +1,34 @@
+@@
+@@
+- packet_list_recreate(); 
++ g_idle_add(packet_list_recreate_delayed, NULL); 
+// Infered from: (wireshark/{prevFiles/prev_ff01bc_553da3_ui#gtk#packet_list.c,revFiles/ff01bc_553da3_ui#gtk#packet_list.c}: column_dnd_changed_cb)
+// False positives: (wireshark/revFiles/ff01bc_553da3_ui#gtk#packet_list.c: col_title_change_ok), (wireshark/revFiles/ff01bc_553da3_ui#gtk#packet_list.c: packet_list_remove_column), (wireshark/revFiles/ff01bc_553da3_ui#gtk#packet_list.c: packet_list_toggle_resolved)
+// Recall: 0.02, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.03, Precision: 0.40
+// -- Node Change --
+// Recall: 0.12, Precision: 0.71
+// -- General --
+// Functions fully changed: 1/81(1%)
+
+/*
+Functions where the patch applied partially:
+ - lighttpd1.4/prevFiles/prev_3caf47_680b71_src#fdevent_libev.c: fdevent_libev_poll
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_79ab8b_bb6756_tests#test-bdrv-drain.c: test_nested
+ - gtk/prevFiles/prev_5438e5_6f10ed_examples#bp#bloatpad.c: bloat_pad_startup
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_ff01bc_553da3_ui#gtk#packet_list.c: col_title_change_ok
+ - wireshark/prevFiles/prev_ff01bc_553da3_ui#gtk#packet_list.c: packet_list_toggle_resolved
+ - wireshark/prevFiles/prev_ff01bc_553da3_ui#gtk#packet_list.c: packet_list_remove_column
+*/
+
+// ---------------------------------------------

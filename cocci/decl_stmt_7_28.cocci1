@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->info.filetime = (long )curl_getdate(E1, &E2); 
++ E0->info.filetime = curl_getdate(E1, &E2); 
+// Infered from: (curl/{prevFiles/prev_ddd31d_9409d0_lib#ftp.c,revFiles/ddd31d_9409d0_lib#ftp.c}: ftp_state_mdtm_resp)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_ddd31d_9409d0_lib#ftp.c: ftp_state_mdtm_resp
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- add_assoc_stringl_ex(E0, E1, E2 + 1, E3, E4->header_len - (E3 - E4->header),  1); 
++ add_assoc_stringl_ex(E0, E1, E2, E3, E4->header_len - (E3 - E4->header), 1); 
+// Infered from: (php-src/{prevFiles/prev_232f3e_c094fc_sapi#cli#php_cli_server.c,revFiles/232f3e_c094fc_sapi#cli#php_cli_server.c}: add_response_header)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 1.00
+// -- Node Change --
+// Recall: 0.62, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_5f9ea6_2d63b6_src#input#demux.c: demux_vaControlHelper
+ - codeflaws/prevFiles/prev_141-B-12854738-12854834.c: main
+ - codeflaws/prevFiles/prev_476-A-17878210-17878237.c: main
+*/
+
+// ---------------------------------------------

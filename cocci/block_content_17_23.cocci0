@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- zval_dtor(E0); 
++ zval_ptr_dtor(&E0); 
+// Infered from: (php-src/{prevFiles/prev_17dc89_a48b65_ext#pcre#php_pcre.c,revFiles/17dc89_a48b65_ext#pcre#php_pcre.c}: preg_do_repl_func)
+// False positives: (php-src/revFiles/17dc89_a48b65_ext#pcre#php_pcre.c: preg_do_eval)
+// Recall: 0.33, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------

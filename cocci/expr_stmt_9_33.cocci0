@@ -1,0 +1,12 @@
+@@
+identifier I1, I3;
+expression E0, E2;
+@@
+- E0->pic_timing.I1 = 2 * E2->vui.num_units_in_tick * E0->I3; 
++ E0->pic_timing.cpb_removal_delay = 2 * E0->cpb_delay; 
++ E0->pic_timing.dpb_output_delay = 2 * E0->dpb_delay; 
+// Infered from: (FFmpeg/{prevFiles/prev_94a404_0bc757_libavcodec#vaapi_encode_h264.c,revFiles/94a404_0bc757_libavcodec#vaapi_encode_h264.c}: vaapi_encode_h264_init_picture_params), (FFmpeg/{prevFiles/prev_306451_f940c8_libavcodec#vaapi_encode_h264.c,revFiles/306451_f940c8_libavcodec#vaapi_encode_h264.c}: vaapi_encode_h264_init_picture_params)
+// False positives: (FFmpeg/revFiles/306451_f940c8_libavcodec#vaapi_encode_h264.c: vaapi_encode_h264_init_picture_params), (FFmpeg/revFiles/94a404_0bc757_libavcodec#vaapi_encode_h264.c: vaapi_encode_h264_init_picture_params)
+// Recall: 0.67, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

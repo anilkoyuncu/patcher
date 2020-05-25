@@ -1,0 +1,44 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- for(E0 = 0, E1 = *E2 + 1;E0 < E3 - 1;E0++, E1++)  
++ for(E0 = 0, E1 = *E2;E0 < E3;E0++, E1++)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_9fe51d_b79853_crypto#asn1#a_object.c,revFiles/9fe51d_b79853_crypto#asn1#a_object.c}: c2i_ASN1_OBJECT)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.43, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 0.92
+// -- General --
+// Functions fully changed: 11/28(39%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_fda538_46857d_epan#dissectors#packet-tpncp.c: fill_enums_id_vals
+ - FFmpeg/prevFiles/prev_b2b12b_9c0aba4_libavcodec#diracdec.c: decode_subband
+ - FFmpeg/prevFiles/prev_430d12_c918e0_libavcodec#pcx.c: pcx_decode_frame
+ - wireshark/prevFiles/prev_fe679b_8f40e2_epan#dissectors#packet-opensafety.c: findSafetyFrame
+ - FFmpeg/prevFiles/prev_7bc155_30659a_libavcodec#sgidec.c: expand_rle_row
+ - FFmpeg/prevFiles/prev_e3c901_3c247b_libavcodec#xsubdec.c: decode_frame
+ - wireshark/prevFiles/prev_fe679b_8f40e2_epan#dissectors#packet-opensafety.c: opensafety_package_dissector
+ - codeflaws/prevFiles/prev_463-A-14787145-14787180.c: main
+ - FFmpeg/prevFiles/prev_646226_034a12_libavcodec#pcx.c: pcx_decode_frame
+ - vlc/prevFiles/prev_da2a14_6d8f45_src#modules#entry.c: vlc_module_set
+ - codeflaws/prevFiles/prev_272-A-17070551-17074485.c: main
+ - wireshark/prevFiles/prev_fda538_46857d_epan#dissectors#packet-tpncp.c: fill_tpncp_id_vals
+ - FFmpeg/prevFiles/prev_b2b12b_9c0aba4_libavcodec#diracdec.c: codeblock
+ - codeflaws/prevFiles/prev_318-A-18258032-18258084.c: main
+ - php-src/prevFiles/prev_9557b4_d3fda7_ext#gd#libgd#gd_topal.c: pass2_no_dither
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_9583b4_8219bc_docs#examples#ftpgetinfo.c: main
+*/
+
+// ---------------------------------------------

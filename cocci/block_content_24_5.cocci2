@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- playlist_AddExt(E0, make_URI(E1[E2]), NULL,  PLAYLIST_APPEND | ((E2 || E3->enqueue) ? 0 :PLAYLIST_GO),  PLAYLIST_END, -1, E4,  (const  char **)(E4 ? &E1[E2 + 1] :NULL),  VLC_INPUT_OPTION_TRUSTED, true, pl_Unlocked); 
++ char *psz_URI = make_URI(E1[E2]); 
++ playlist_AddExt(E0, psz_URI, NULL,  PLAYLIST_APPEND | ((E2 || E3->enqueue) ? 0 :PLAYLIST_GO),  PLAYLIST_END, -1, E4,  (const  char **)(E4 ? &E1[E2 + 1] :NULL),  VLC_INPUT_OPTION_TRUSTED, true, pl_Unlocked); 
+// Infered from: (vlc/{prevFiles/prev_2e9590_724044_src#win32#specific.c,revFiles/2e9590_724044_src#win32#specific.c}: WMCOPYWNDPROC)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 0.92
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_2e9590_724044_src#win32#specific.c: WMCOPYWNDPROC
+*/
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_3aea0d_9ae920_lib#ssluse.c: cert_stuff
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_a1f3bb_13399a_backends#hostmem-file.c: file_memory_backend_set_pmem
+*/
+
+// ---------------------------------------------

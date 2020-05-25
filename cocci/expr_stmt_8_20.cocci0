@@ -1,0 +1,10 @@
+@@
+identifier I2, I3;
+expression E4, E0, E1;
+@@
+- register_savevm(E0, 0, E1, I2, I3, E4); 
++ register_savevm(E0, -1, E1, I2, I3, E4); 
+// Infered from: (qemu/{prevFiles/prev_18fdb1_2cfc5f1_hw#rtl8139.c,revFiles/18fdb1_2cfc5f1_hw#rtl8139.c}: pci_rtl8139_init), (qemu/{prevFiles/prev_18fdb1_2cfc5f1_hw#eepro100.c,revFiles/18fdb1_2cfc5f1_hw#eepro100.c}: nic_init), (qemu/{prevFiles/prev_18fdb1_2cfc5f1_hw#pcnet.c,revFiles/18fdb1_2cfc5f1_hw#pcnet.c}: pcnet_common_init), (qemu/{prevFiles/prev_18fdb1_2cfc5f1_hw#ne2000.c,revFiles/18fdb1_2cfc5f1_hw#ne2000.c}: isa_ne2000_init), (qemu/{prevFiles/prev_18fdb1_2cfc5f1_hw#ne2000.c,revFiles/18fdb1_2cfc5f1_hw#ne2000.c}: pci_ne2000_init)
+// Recall: 0.26, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

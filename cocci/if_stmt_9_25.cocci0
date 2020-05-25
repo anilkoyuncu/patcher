@@ -1,0 +1,9 @@
+@@
+@@
+- goto  end; 
++ return 0; 
+// Infered from: (openssl/{prevFiles/prev_d813f9_c5f2b5_ssl#t1_lib.c,revFiles/d813f9_c5f2b5_ssl#t1_lib.c}: tls1_check_chain), (openssl/{prevFiles/prev_d813f9_c5f2b5_ssl#t1_lib.c,revFiles/d813f9_c5f2b5_ssl#t1_lib.c}: tls1_check_chain), (openssl/{prevFiles/prev_63eb10_158e52_crypto#asn1#asn1_par.c,revFiles/63eb10_158e52_crypto#asn1#asn1_par.c}: asn1_parse2)
+// False positives: (openssl/revFiles/63eb10_158e52_crypto#asn1#asn1_par.c: asn1_parse2), (openssl/revFiles/d813f9_c5f2b5_ssl#t1_lib.c: tls1_check_chain)
+// Recall: 0.40, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

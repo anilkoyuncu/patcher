@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->frame_offset = E1->index_entries[E2].timestamp; 
++ E0->frame_offset = E1->index_entries[E2].timestamp * FFMAX(1, E0->sample_size); 
+// Infered from: (FFmpeg/{prevFiles/prev_a3bb56_d1ca18_libavformat#avidec.c,revFiles/a3bb56_d1ca18_libavformat#avidec.c}: avi_read_packet)
+// False positives: (FFmpeg/revFiles/a3bb56_d1ca18_libavformat#avidec.c: avi_read_seek)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

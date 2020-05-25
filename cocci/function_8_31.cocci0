@@ -1,0 +1,9 @@
+@@
+@@
+- register_init_routine(&h223_init_protocol); 
++ register_init_routine(&circuit_chain_init); 
++ register_cleanup_routine(&circuit_chain_destroy); 
+// Infered from: (wireshark/{prevFiles/prev_ea46cf_7ce77c_epan#dissectors#packet-h223.c,revFiles/ea46cf_7ce77c_epan#dissectors#packet-h223.c}: proto_register_h223)
+// Recall: 0.23, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

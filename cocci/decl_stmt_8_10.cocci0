@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef GtkTreePath;
+@@
+- GtkTreePath *I0 = gtk_tree_path_new(); 
++ GtkTreePath *I0 = NULL; 
+// Infered from: (gtk/{prevFiles/prev_5a5737_a124d1_gtk#gtkfontchooserwidget.c,revFiles/5a5737_a124d1_gtk#gtkfontchooserwidget.c}: cursor_changed_cb)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

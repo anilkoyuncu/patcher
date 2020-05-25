@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+typedef guchar;
+@@
+- return gdk_pixbuf_loader_write(E0, E1, E2, E3); 
++ return gdk_pixbuf_loader_write(E0, (const  guchar *)E1, E2, E3); 
+// Infered from: (gtk/{prevFiles/prev_73cfcf_c60547_demos#testpixbuf-save.c,revFiles/73cfcf_c60547_demos#testpixbuf-save.c}: save_to_loader)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- qtest_qmp_device_add(E0->device_model, E1, "'core-id':'%i'", E2); 
++ qtest_qmp_device_add(E0->device_model, E1, "'core-id':%u", E2); 
+// Infered from: (qemu/{prevFiles/prev_530e79_015715_tests#cpu-plug-test.c,revFiles/530e79_015715_tests#cpu-plug-test.c}: test_plug_with_device_add_coreid)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

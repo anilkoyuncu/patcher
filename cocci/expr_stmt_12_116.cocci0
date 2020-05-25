@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = malloc(E1 * sizeof(E0[0])); 
++ E0 = calloc(E1, sizeof(E0[0])); 
+// Infered from: (libarchive/{prevFiles/prev_a33b1a_807ea6_libarchive#archive_read_support_format_iso9660.c,revFiles/a33b1a_807ea6_libarchive#archive_read_support_format_iso9660.c}: register_CE)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

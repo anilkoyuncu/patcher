@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = PyMem_REALLOC(E0, E1 + E2); 
++ E0 = PyObject_REALLOC(E0, E1 + E2); 
+// Infered from: (cpython/{prevFiles/prev_2c4e4f_65c05b_Parser#myreadline.c,revFiles/2c4e4f_65c05b_Parser#myreadline.c}: PyOS_StdioReadline)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

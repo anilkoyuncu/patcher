@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (E0 && (E1[E0] == '\r' || E1[E0] == '\n'))  
++ while (E0 > 0 && (E1[E0] == '\r' || E1[E0] == '\n'))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_ca5c6a_8428d0_ext#pgsql#pgsql.c,revFiles/ca5c6a_8428d0_ext#pgsql#pgsql.c}: _php_pgsql_trim_message)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

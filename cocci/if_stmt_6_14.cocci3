@@ -1,0 +1,11 @@
+@@
+@@
+- if (FAILURE == php_com_do_invoke_by_id())  
++ if (SUCCESS != php_com_do_invoke_by_id())  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_783190_5f83d7_ext#com_dotnet#com_handlers.c,revFiles/783190_5f83d7_ext#com_dotnet#com_handlers.c}: com_object_cast)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

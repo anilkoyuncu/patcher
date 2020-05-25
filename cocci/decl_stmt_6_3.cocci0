@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef zend_bool;
+@@
+- zend_bool I0 = E1 && (Z_TYPE(E2.u.constant) == IS_NULL || (Z_TYPE(E2.u.constant) == IS_CONSTANT && strcasecmp(  Z_STRVAL(E2.u.constant),  "NULL")) || Z_TYPE(  E2.u.constant) == IS_CONSTANT_AST); 
++ zend_bool I0 = E1 && (Z_TYPE(E2.u.constant) == IS_NULL || (Z_TYPE(E2.u.constant) == IS_CONSTANT && strcasecmp(  Z_STRVAL(E2.u.constant),  "NULL") == 0) || Z_TYPE(  E2.u.constant) == IS_CONSTANT_AST); 
+// Infered from: (php-src/{prevFiles/prev_659270_ae7e66_Zend#zend_compile.c,revFiles/659270_ae7e66_Zend#zend_compile.c}: zend_compile_params)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

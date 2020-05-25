@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- AUD_log(AUDIO_CAP, "Reason: status code %ld\n", E0); 
+// Infered from: (qemu/{prevFiles/prev_744d36_cbc36c_audio#coreaudio.c,revFiles/744d36_cbc36c_audio#coreaudio.c}: coreaudio_logstatus)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_838ecf_f8117f_http.c: new_http_object_request
+ - qemu/prevFiles/prev_744d36_cbc36c_audio#coreaudio.c: coreaudio_logstatus
+ - git/prevFiles/prev_838ecf_f8117f_http.c: new_http_pack_request
+*/
+
+// ---------------------------------------------

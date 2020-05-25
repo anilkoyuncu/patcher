@@ -1,0 +1,27 @@
+@@
+identifier I0;
+expression E1;
+@@
+- struct ext2_block_alloc_info *I0 = E1->i_block_alloc_info; 
++ struct ext2_block_alloc_info *I0; 
+// Infered from: (linux/{prevFiles/prev_6e3d6ca0_1cde20_fs#ext2#balloc.c,revFiles/6e3d6ca0_1cde20_fs#ext2#balloc.c}: ext2_init_block_alloc_info)
+// False positives: (linux/revFiles/6e3d6ca0_1cde20_fs#ext2#balloc.c: ext2_discard_reservation)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.62
+// -- Node Change --
+// Recall: 1.00, Precision: 0.70
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_782191_ad52a3_epan#dissectors#packet-tcp.c: dissect_tcp
+ - linux/prevFiles/prev_461302_6e3d6ca0_fs#ext3#balloc.c: ext3_discard_reservation
+ - linux/prevFiles/prev_6e3d6ca0_1cde20_fs#ext2#balloc.c: ext2_discard_reservation
+*/
+
+// ---------------------------------------------

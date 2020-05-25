@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->local += E1; 
++ E0->local += (int )E1; 
+// Infered from: (cpython/{prevFiles/prev_70792d_e82896_Modules#sha512module.c,revFiles/70792d_e82896_Modules#sha512module.c}: sha512_update), (cpython/{prevFiles/prev_70792d_e82896_Modules#sha256module.c,revFiles/70792d_e82896_Modules#sha256module.c}: sha_update)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 += E1 = (E1 << 8) + wp_log2_table[(E2 >> (E1 - 9)) & 0xff]; 
++ *E0 += E1 = (E1 << 8) + wp_log2_table[(E2 >> (E1 - 9)) & 0xff]; 
+// Infered from: (FFmpeg/{prevFiles/prev_e706fe_2b501b_libavcodec#wavpackenc.c,revFiles/e706fe_2b501b_libavcodec#wavpackenc.c}: log2sample)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

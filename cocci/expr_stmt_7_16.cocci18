@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ngx_log_error(NGX_LOG_ERR, E0->log, 0,  "certificate status \"%s\" in the OCSP response", E1,  OCSP_cert_status_str(E1)); 
++ ngx_log_error(NGX_LOG_ERR, E0->log, 0,  "certificate status \"%s\" in the OCSP response",  OCSP_cert_status_str(E1)); 
+// Infered from: (nginx/{prevFiles/prev_1b10a9_859721_src#event#ngx_event_openssl_stapling.c,revFiles/1b10a9_859721_src#event#ngx_event_openssl_stapling.c}: ngx_ssl_stapling_ocsp_handler)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

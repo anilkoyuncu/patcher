@@ -1,0 +1,20 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = FFMIN(E1->mb_height - 1, E1->mb_y + ((yoff + E2 + 21) >> 4)); 
++ int I0 = FFMIN(E1->mb_height - 1,  E1->mb_y + ((yoff + E2 + 5 + 8 * height) >> 4)); 
+// Infered from: (FFmpeg/{prevFiles/prev_3547f8_e1e369_libavcodec#rv34.c,revFiles/3547f8_e1e369_libavcodec#rv34.c}: rv34_mc)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

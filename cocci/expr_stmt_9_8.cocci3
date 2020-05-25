@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- dprintf(" TD @ 0x%.8x %u bytes %s r=%d cbp=0x%.8x be=0x%.8x\n", E0, E1, E2,  E3, E4.cbp, E4.be); 
+// Infered from: (qemu/{prevFiles/prev_0bf9e3_c0a2a0_hw#usb-ohci.c,revFiles/0bf9e3_c0a2a0_hw#usb-ohci.c}: ohci_service_td)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

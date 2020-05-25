@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+@@
+- SSE_SplitPlanes(E0->p[2].p_pixels, E0->p[2].i_pitch, E0->p[1].p_pixels,  E0->p[1].i_pitch, E1[1], E2[1], E3->buffer, E3->size, E4 / 2,  E5 / 2, E6); 
++ SSE_SplitPlanes(E0->p[2].p_pixels, E0->p[2].i_pitch, E0->p[1].p_pixels,  E0->p[1].i_pitch, E1[1], E2[1], E3->buffer, E3->size,  (E4 + 1) / 2, (E5 + 1) / 2, E6); 
+// Infered from: (vlc/{prevFiles/prev_5e4ff1_9d567f_modules#video_chroma#copy.c,revFiles/5e4ff1_9d567f_modules#video_chroma#copy.c}: SSE_CopyFromNv12)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.69, Precision: 0.92
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_fd52d2_7457af_libavcodec#mpegvideo_motion.c: gmc_motion
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_4991cb_04064e1_libavcodec#mpegvideo_enc.c: encode_mb_internal
+*/
+
+// ---------------------------------------------

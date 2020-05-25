@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef z_streamp;
+@@
+- z_streamp I0 = &E1->compression_out_stream; 
++ z_streamp I0 = &E1->compression_in_stream; 
+// Infered from: (openssh-portable/{prevFiles/prev_550c05_55d06c_packet.c,revFiles/550c05_55d06c_packet.c}: ssh_packet_close_internal)
+// False positives: (openssh-portable/revFiles/550c05_55d06c_packet.c: ssh_packet_close_internal)
+// Recall: 0.02, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

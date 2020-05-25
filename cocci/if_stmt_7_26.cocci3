@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- if (E0->upstream.store != 0)  
++ if (E0->upstream.store == NGX_CONF_UNSET)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_fb7d63_827b25_src#http#modules#ngx_http_scgi_module.c,revFiles/fb7d63_827b25_src#http#modules#ngx_http_scgi_module.c}: ngx_http_scgi_merge_loc_conf), (nginx/{prevFiles/prev_fb7d63_827b25_src#http#modules#ngx_http_proxy_module.c,revFiles/fb7d63_827b25_src#http#modules#ngx_http_proxy_module.c}: ngx_http_proxy_merge_loc_conf), (nginx/{prevFiles/prev_fb7d63_827b25_src#http#modules#ngx_http_fastcgi_module.c,revFiles/fb7d63_827b25_src#http#modules#ngx_http_fastcgi_module.c}: ngx_http_fastcgi_merge_loc_conf), (nginx/{prevFiles/prev_fb7d63_827b25_src#http#modules#ngx_http_uwsgi_module.c,revFiles/fb7d63_827b25_src#http#modules#ngx_http_uwsgi_module.c}: ngx_http_uwsgi_merge_loc_conf)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.73, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 8/11(72%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_d168b2_d49d02_src#redis-cli.c: clusterManagerNodeLoadInfo
+ - codeflaws/prevFiles/prev_592-C-15431722-15431767.c: main
+ - codeflaws/prevFiles/prev_294-A-6898180-6898225.c: main
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 <<= E1; 
++ E0 *= 1 << E1; 
+// Infered from: (FFmpeg/{prevFiles/prev_095373_100293_libavcodec#nellymoser.c,revFiles/095373_100293_libavcodec#nellymoser.c}: headroom), (FFmpeg/{prevFiles/prev_cbbd33_c3f10e_libavcodec#alsdec.c,revFiles/cbbd33_c3f10e_libavcodec#alsdec.c}: read_var_block_data)
+// False positives: (FFmpeg/revFiles/cbbd33_c3f10e_libavcodec#alsdec.c: decode_block), (FFmpeg/revFiles/cbbd33_c3f10e_libavcodec#alsdec.c: decode_rice), (FFmpeg/revFiles/cbbd33_c3f10e_libavcodec#alsdec.c: get_block_sizes)
+// Recall: 0.40, Precision: 0.40, Matching recall: 0.67
+
+// ---------------------------------------------

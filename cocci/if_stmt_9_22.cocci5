@@ -1,0 +1,37 @@
+@@
+expression E0, E1;
+typedef gchar;
+@@
+- if (!g_utf8_validate(E0, -1, (const  gchar *)&E1))  
++ if (!g_utf8_validate(E0, -1, (const  gchar **)&E1))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_6a278a_3e5934_gtk#gtkmountoperation-x11.c,revFiles/6a278a_3e5934_gtk#gtkmountoperation-x11.c}: pid_get_env), (gtk/{prevFiles/prev_6a278a_3e5934_gtk#gtkmountoperation-x11.c,revFiles/6a278a_3e5934_gtk#gtkmountoperation-x11.c}: pid_get_command_line)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.46, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/14(42%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_f5cb63_e1b2c3_modules#access#mms#mmstu.c: MMSOpen
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_d241df_91284d_modules#audio_output#audiounit_ios.c: StartAnalog
+ - cpython/prevFiles/prev_eaa1ed_e32d15_Modules#almodule.c: alp_ReadFrames
+ - cpython/prevFiles/prev_3c8ba7_862c6f_Modules#stdwinmodule.c: window_setwincursor
+ - vlc/prevFiles/prev_d241df_91284d_modules#audio_output#audiounit_ios.c: Play
+ - cpython/prevFiles/prev_eaa1ed_e32d15_Modules#almodule.c: python2param
+ - vlc/prevFiles/prev_7222bb_282848_modules#audio_filter#channel_mixer#simple.c: OpenFilter
+ - cpython/prevFiles/prev_3c8ba7_862c6f_Modules#stdwinmodule.c: drawing_setfont
+*/
+
+// ---------------------------------------------

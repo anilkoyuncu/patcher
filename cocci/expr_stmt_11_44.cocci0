@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- av_log(E0, AV_LOG_ERROR, "%s\n", quvi_strerror(&E1, E2)); 
+- E3 = E2; 
++ av_log(E0, AV_LOG_ERROR, "%s\n", quvi_strerror(E1, E2)); 
++ E3 = AVERROR_EXTERNAL; 
+// Infered from: (FFmpeg/{prevFiles/prev_e66a10_da1bb2_libavformat#libquvi.c,revFiles/e66a10_da1bb2_libavformat#libquvi.c}: libquvi_read_header)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

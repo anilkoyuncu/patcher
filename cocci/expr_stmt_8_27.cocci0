@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = (char *)malloc(2048); 
++ E0 = (char *)malloc(MLTI_BUF_MAX_SIZE); 
+// Infered from: (vlc/{prevFiles/prev_19bd7f_3a57af_modules#access#rtsp#real.c,revFiles/19bd7f_3a57af_modules#access#rtsp#real.c}: real_parse_sdp)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- kill(getpid(), SIGUSR2); 
++ pthread_kill(pthread_self(), SIGUSR2); 
+// Infered from: (qemu/{prevFiles/prev_99b5be_77f4c9_coroutine-sigaltstack.c,revFiles/99b5be_77f4c9_coroutine-sigaltstack.c}: coroutine_new)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

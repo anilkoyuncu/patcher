@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- const  struct cache_entry *I0 = cache_dir_exists(E1, E2 + 1); 
++ const  struct cache_entry *I0 = cache_dir_exists(E1, E2); 
+// Infered from: (git/{prevFiles/prev_d28eec_ebbd74_dir.c,revFiles/d28eec_ebbd74_dir.c}: directory_exists_in_index_icase)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

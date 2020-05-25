@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->is_multicast && !(E1->flags & AVIO_FLAG_WRITE))  
++ if (E0->is_multicast && (E1->flags & AVIO_FLAG_READ))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_a7ea5e_f9a6cf_libavformat#udp.c,revFiles/a7ea5e_f9a6cf_libavformat#udp.c}: udp_close)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

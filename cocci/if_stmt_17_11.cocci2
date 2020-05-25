@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- if (E0 >= E1->ex)  
++ if (E0 > E1->ex)  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_20ed20_9802fe_screen.c,revFiles/20ed20_9802fe_screen.c}: screen_check_selection), (tmux/{prevFiles/prev_0b8ce5_095ffe_screen.c,revFiles/0b8ce5_095ffe_screen.c}: screen_check_selection)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_333583_a5a5f5_fpu#softfloat.c: round_to_int_and_pack
+ - nginx/prevFiles/prev_e47cad_e7f83e_src#http#modules#ngx_http_fastcgi_module.c: ngx_http_fastcgi_create_request
+ - wireshark/prevFiles/prev_10c508_979808_epan#dissectors#packet-wsp.c: add_headers
+*/
+
+// ---------------------------------------------

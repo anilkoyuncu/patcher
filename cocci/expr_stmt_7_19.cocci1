@@ -1,0 +1,8 @@
+@@
+@@
+- EX(func)->common.prototype = NULL; 
++ EX(func) = NULL; 
+// Infered from: (php-src/{prevFiles/prev_05bd33_91fb3a_Zend#zend_closures.c,revFiles/05bd33_91fb3a_Zend#zend_closures.c}: zend_closure_internal_handler)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

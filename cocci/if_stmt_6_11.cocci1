@@ -1,0 +1,18 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+typedef guint32;
+@@
+- if (E0 && E0 && E0->bus_id == E1 && E0->device_address == E2 && dissector_try_uint_new(  product_to_dissector, (guint32 )(E0->vendor << 16 | E0->product), E3, E4,  E5, FALSE, E6))  
++ if (E0 && E0->bus_id == E1 && E0->device_address == E2 && dissector_try_uint_new(  product_to_dissector, (guint32 )(E0->vendor << 16 | E0->product), E3, E4,  E5, FALSE, E6))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_b03a63_e56661_epan#dissectors#packet-usb.c,revFiles/b03a63_e56661_epan#dissectors#packet-usb.c}: dissect_usb_common)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

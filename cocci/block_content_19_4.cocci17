@@ -1,0 +1,26 @@
+@@
+@@
+- g_warning("menu_export_object_list: No submenu_exportobject_list found, path= /Menubar/FileMenu/ExportObjects"); 
++ g_warning("menu_export_object_list: No submenu_exportobject_list found, path= /Menubar/FileMenu/ExportObjectsMenu"); 
+// Infered from: (wireshark/{prevFiles/prev_32a31c_5a3d31_ui#gtk#main_menubar.c,revFiles/32a31c_5a3d31_ui#gtk#main_menubar.c}: menu_export_object_list)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 18 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.91
+// -- Node Change --
+// Recall: 0.95, Precision: 0.90
+// -- General --
+// Functions fully changed: 9/11(81%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_eb4968_4062bc_lib#http_proxy.c: CONNECT
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_7871c5_ae2b55_capture.c: capture_interface_list
+*/
+
+// ---------------------------------------------

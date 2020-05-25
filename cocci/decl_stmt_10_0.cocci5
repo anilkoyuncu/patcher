@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = devm_kzalloc(&E1->dev, sizeof(*E0), GFP_KERNEL); 
+  ...
+- E2->parent = &E1->dev; 
+  ...
+- E3 = devm_watchdog_register_device(&E1->dev, E2); 
++ watchdog_stop_on_unregister(E2); 
++ E3 = devm_watchdog_register_device(dev, E2); 
+  ...
+- dev_info(&E1->dev, "initialized (heartbeat = %d sec, nowayout = %d)\n",  heartbeat, nowayout); 
++ dev_info(dev, "initialized (heartbeat = %d sec, nowayout = %d)\n", heartbeat,  nowayout); 
+// Infered from: (linux/{prevFiles/prev_edad752_0a48f2_drivers#watchdog#tegra_wdt.c,revFiles/edad752_0a48f2_drivers#watchdog#tegra_wdt.c}: tegra_wdt_probe)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.58
+
+// ---------------------------------------------

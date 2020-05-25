@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- try_decode_frame(E0, E1, (E2 && E3 <= E4) ? &E2[E3] :NULL); 
++ try_decode_frame(E0, E1, (E2 && E3 < E4) ? &E2[E3] :NULL); 
+// Infered from: (FFmpeg/{prevFiles/prev_e358f7_35d2e4_libavformat#utils.c,revFiles/e358f7_35d2e4_libavformat#utils.c}: avformat_find_stream_info)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_4ea7ba7_fd46d9_ext#standard#datetime.c: php_date
+*/
+
+// ---------------------------------------------

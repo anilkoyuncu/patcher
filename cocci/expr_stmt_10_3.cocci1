@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(E0->info->device, "%s: error: len=%zu must be divisible by 8\n",  __func__, E1); 
++ dev_err(E0->info->device, "error: len=%zu must be divisible by 8\n", E1); 
+// Infered from: (linux/{prevFiles/prev_aed1c7_14f63e_drivers#staging#fbtft#fbtft-io.c,revFiles/aed1c7_14f63e_drivers#staging#fbtft#fbtft-io.c}: fbtft_write_spi_emulate_9)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

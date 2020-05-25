@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- ssl_debug_printf("ssl_init %s addr '%s' (%s) port '%d' filename '%s' password(only for p12 file) '%s'\n",  (E0[E1] == AT_IPv4) ? "IPv4" :"IPv6", E2->ipaddr,  ep_address_to_str(&E3->addr), E3->port, E2->keyfile,  E2->password); 
++ ssl_debug_printf("ssl_init %s addr '%s' (%s) port '%d' filename '%s' password(only for p12 file) '%s'\n",  (E0[E1] == AT_IPv4) ? "IPv4" :"IPv6", E2->ipaddr,  address_to_str(wmem_packet_scope(), &E3->addr), E3->port,  E2->keyfile, E2->password); 
+// Infered from: (wireshark/{prevFiles/prev_7fea55_021e7a_epan#dissectors#packet-ssl-utils.c,revFiles/7fea55_021e7a_epan#dissectors#packet-ssl-utils.c}: ssl_parse_key_list)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

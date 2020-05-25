@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->local_ref = resolve_ref("NOTES_MERGE_REF", E1, 0, 0); 
++ E0->local_ref = resolve_ref("NOTES_MERGE_REF", E1, 0, NULL); 
+// Infered from: (git/{prevFiles/prev_c2e86a_08c8d5_builtin#notes.c,revFiles/c2e86a_08c8d5_builtin#notes.c}: merge_commit)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

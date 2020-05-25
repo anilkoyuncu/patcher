@@ -1,0 +1,7 @@
+@@
+@@
+- xmlMemoryDump(); 
+// Infered from: (php-src/{prevFiles/prev_d85845_892c1f_ext#dom#php_dom.c,revFiles/d85845_892c1f_ext#dom#php_dom.c}: PHP_MSHUTDOWN_FUNCTION)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

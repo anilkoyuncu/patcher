@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- gtk_tree_model_get_iter_first(GTK_TREE_MODEL(E0), &E1); 
+// Infered from: (wireshark/{prevFiles/prev_f9dce3_1093fa_ui#gtk#airpcap_dlg.c,revFiles/f9dce3_1093fa_ui#gtk#airpcap_dlg.c}: display_airpcap_key_management_cb)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,30 @@
+@@
+identifier I0;
+typedef zval;
+@@
+  zval *I0; 
+  ...
+- RETURN_ZVAL(getThis(), 1, 0); 
++ RETURN_ZVAL(I0, 1, 0); 
+// Infered from: (php-src/{prevFiles/prev_a06181_017b1f_ext#date#php_date.c,revFiles/a06181_017b1f_ext#date#php_date.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.67
+// -- Node Change --
+// Recall: 0.67, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_23fe2b_a0dba6_hw#virtio#virtio-pci.c: virtio_pci_set_guest_notifiers
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_a3bff7_c9add3_gdk#win32#gdkwindow-win32.c: gdk_display_warp_device
+*/
+
+// ---------------------------------------------

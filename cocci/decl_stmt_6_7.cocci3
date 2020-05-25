@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef bool;
+@@
+- bool I0 = (E1->req.cmd.xfer == SCSI_XFER_FROM_DEV); 
++ bool I0 = (E1->req.cmd.mode == SCSI_XFER_FROM_DEV); 
+// Infered from: (qemu/{prevFiles/prev_c85a7a_1cc933_hw#scsi#scsi-disk.c,revFiles/c85a7a_1cc933_hw#scsi#scsi-disk.c}: scsi_handle_rw_error)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

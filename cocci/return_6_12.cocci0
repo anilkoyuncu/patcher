@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return (E0 > 12 || E1 > 3 + 2 * E2) ? AVPROBE_SCORE_EXTENSION + 2 :AVPROBE_SCORE_EXTENSION / 2; 
++ return (E0 > 12 || E1 > 6 + 2 * E2) ? AVPROBE_SCORE_EXTENSION + 2 :AVPROBE_SCORE_EXTENSION / 2; 
+// Infered from: (FFmpeg/{prevFiles/prev_4e5049_fdb8c45_libavformat#mpeg.c,revFiles/4e5049_fdb8c45_libavformat#mpeg.c}: mpegps_probe)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

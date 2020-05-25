@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- PyMem_Free(E0); 
++ PyMem_RawFree(E0); 
+// Infered from: (cpython/{prevFiles/prev_13be7d_2025d7_Modules#overlapped.c,revFiles/13be7d_2025d7_Modules#overlapped.c}: PostToQueueCallback), (cpython/{prevFiles/prev_13be7d_2025d7_Modules#overlapped.c,revFiles/13be7d_2025d7_Modules#overlapped.c}: overlapped_RegisterWaitWithQueue), (cpython/{prevFiles/prev_6150f3_ce911c_Modules#overlapped.c,revFiles/6150f3_ce911c_Modules#overlapped.c}: PostToQueueCallback), (cpython/{prevFiles/prev_6150f3_ce911c_Modules#overlapped.c,revFiles/6150f3_ce911c_Modules#overlapped.c}: overlapped_RegisterWaitWithQueue)
+// False positives: (cpython/revFiles/13be7d_2025d7_Modules#overlapped.c: ConnectPipe), (cpython/revFiles/6150f3_ce911c_Modules#overlapped.c: ConnectPipe)
+// Recall: 0.10, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I1;
+expression E0, E2, E3;
+@@
+- av_fifo_generic_read(E0->I1, E2, E3, &avio_write); 
++ av_fifo_generic_read(E0->I1, E2, E3, (void *)avio_write); 
+// Infered from: (FFmpeg/{prevFiles/prev_e3323a_47ec65_libavformat#swfenc.c,revFiles/e3323a_47ec65_libavformat#swfenc.c}: swf_write_video), (FFmpeg/{prevFiles/prev_e3323a_47ec65_libavformat#mpegenc.c,revFiles/e3323a_47ec65_libavformat#mpegenc.c}: flush_packet)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

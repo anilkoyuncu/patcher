@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- object_property_add_uint32_ptr(OBJECT(E0), ACPI_PCIHP_PROP_BSEL, E1, NULL); 
++ object_property_add_uint32_ptr(OBJECT(E0), ACPI_PCIHP_PROP_BSEL, E1,  &error_abort); 
+// Infered from: (qemu/{prevFiles/prev_f0c9d6_2607b6_hw#i386#acpi-build.c,revFiles/f0c9d6_2607b6_hw#i386#acpi-build.c}: acpi_set_bsel)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 0.67
+// -- Node Change --
+// Recall: 0.81, Precision: 0.57
+// -- General --
+// Functions fully changed: 4/11(36%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_483-B-9092564-9092589.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_f0c9d6_2607b6_hw#i386#acpi-build.c: build_dmar_q35
+ - php-src/prevFiles/prev_2eab21_249d4c_ext#zlib#zlib.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_2eab21_249d4c_ext#zlib#zlib.c: zlib_create_dictionary_string
+ - FFmpeg/prevFiles/prev_696c30_e3227b_libavformat#avs.c: avs_read_packet
+ - qemu/prevFiles/prev_f0c9d6_2607b6_hw#i386#acpi-build.c: acpi_build
+*/
+
+// ---------------------------------------------

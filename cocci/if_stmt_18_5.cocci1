@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- LOGERR("CONTROLVM_DEVICE_CREATE Failed: busNo=%lu, devNo=%lu kmaloc failed",  E0, E1); 
+// Infered from: (linux/{prevFiles/prev_edff16_9a174a_drivers#staging#unisys#visorchipset#visorchipset_main.c,revFiles/edff16_9a174a_drivers#staging#unisys#visorchipset#visorchipset_main.c}: my_device_create)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

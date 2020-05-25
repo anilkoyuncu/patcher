@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- dev_err(E0, "%s: FBTFT_GAMMA_MAX_VALUES_TOTAL=%d is exceeded\n", __func__,  FBTFT_GAMMA_MAX_VALUES_TOTAL); 
++ dev_err(E0, "FBTFT_GAMMA_MAX_VALUES_TOTAL=%d is exceeded\n",  FBTFT_GAMMA_MAX_VALUES_TOTAL); 
+// Infered from: (linux/{prevFiles/prev_aed1c7_14f63e_drivers#staging#fbtft#fbtft-core.c,revFiles/aed1c7_14f63e_drivers#staging#fbtft#fbtft-core.c}: fbtft_framebuffer_alloc)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

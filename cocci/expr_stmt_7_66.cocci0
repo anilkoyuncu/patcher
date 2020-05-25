@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 |= tvb_get_guint8(E1, E2) & 0xF0; 
++ E0 |= (tvb_get_guint8(E1, E2) & 0x0F) << 4; 
+// Infered from: (wireshark/{prevFiles/prev_824fef_b3c924_epan#dissectors#packet-artnet.c,revFiles/824fef_b3c924_epan#dissectors#packet-artnet.c}: dissect_artnet_poll_reply)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

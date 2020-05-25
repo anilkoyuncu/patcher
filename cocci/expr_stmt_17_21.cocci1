@@ -1,0 +1,22 @@
+@@
+@@
+- g_print("execution ended after %llu iterations (sum %llu ns, average %llu ns, min %llu ns, max %llu ns)\n",  iterations, sum, sum / iterations, min, max); 
+// Infered from: (gstreamer/{prevFiles/prev_393033_2c4d0a_tools#gst-launch.c,revFiles/393033_2c4d0a_tools#gst-launch.c}: idle_func)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_c31afa_2a9b5c_libavcodec#vorbis_dec.c: vorbis_parse_setup_hdr_residues
+ - gstreamer/prevFiles/prev_393033_2c4d0a_tools#gst-launch.c: idle_func
+*/
+
+// ---------------------------------------------

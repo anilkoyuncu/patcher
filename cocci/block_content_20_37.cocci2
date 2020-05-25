@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (_PyObject_GC_IS_TRACKED(E0) || (E1 != NULL && _PyObject_GC_IS_TRACKED(E1)))  
++ if (_PyObject_GC_MAY_BE_TRACKED(E0) || (E1 != NULL && _PyObject_GC_MAY_BE_TRACKED(  E1)))  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_6ab629_b31206_Python#context.c,revFiles/6ab629_b31206_Python#context.c}: contextvar_new)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

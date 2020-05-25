@@ -1,0 +1,13 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef zend_class_entry;
+@@
+- zend_class_entry *I0 = emalloc(sizeof(zend_class_entry )); 
+- char *I1 = zend_str_tolower_dup(E2->u.constant.value.str.val,  E2->u.constant.value.str.len); 
++ zend_class_entry *I0; 
++ char *I1; 
+// Infered from: (php-src/{prevFiles/prev_5ead61_dba3fe_Zend#zend_compile.c,revFiles/5ead61_dba3fe_Zend#zend_compile.c}: zend_do_begin_class_declaration)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

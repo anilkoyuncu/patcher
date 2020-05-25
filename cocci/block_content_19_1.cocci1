@@ -1,0 +1,10 @@
+@@
+expression E0, E2, E1;
+@@
+- E0->p_module = module_Need(E0, E1, E2, VLC_TRUE); 
++ E0->p_module = module_Need(E0, E1, E2, VLC_FALSE); 
+// Infered from: (vlc/{prevFiles/prev_5480fa_efa014_src#audio_output#input.c,revFiles/5480fa_efa014_src#audio_output#input.c}: aout_InputNew), (vlc/{prevFiles/prev_5480fa_efa014_src#audio_output#input.c,revFiles/5480fa_efa014_src#audio_output#input.c}: aout_InputNew)
+// False positives: (vlc/revFiles/5480fa_efa014_src#audio_output#input.c: allocateUserChannelMixer)
+// Recall: 0.18, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

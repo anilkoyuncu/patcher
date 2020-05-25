@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (QTAILQ_EMPTY(&E0->ep->queue) || E0->ep->pipeline)  
++ if (QTAILQ_EMPTY(&E0->ep->queue) || E0->ep->pipeline || E0->stream)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_c96c41_1556a8_hw#usb#core.c,revFiles/c96c41_1556a8_hw#usb#core.c}: usb_handle_packet)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+typedef int16_t;
+@@
+- av_assert1(E0 + E1 - 1 < E2 + E3 * 2); 
++ av_assert1(E0 + E1 - 1 < (const  int16_t **)E2 + E3 * 2); 
+// Infered from: (FFmpeg/{prevFiles/prev_353bd1_63c61f_libswscale#swscale.c,revFiles/353bd1_63c61f_libswscale#swscale.c}: swScale), (FFmpeg/{prevFiles/prev_353bd1_63c61f_libswscale#swscale.c,revFiles/353bd1_63c61f_libswscale#swscale.c}: swScale)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

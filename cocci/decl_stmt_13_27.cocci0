@@ -1,0 +1,11 @@
+@@
+identifier I1, I2 = {g_queue_pop_head ,g_static_private_get };
+type T0;
+expression E3;
+@@
+- T0 I1 = (T0 )I2(E3); 
++ T0 I1 = GPOINTER_TO_INT(I2(E3)); 
+// Infered from: (gstreamer/{prevFiles/prev_393033_2c4d0a_gst#gstinfo.c,revFiles/393033_2c4d0a_gst#gstinfo.c}: gst_default_debug_handler), (gstreamer/{prevFiles/prev_393033_2c4d0a_gst#gstinfo.c,revFiles/393033_2c4d0a_gst#gstinfo.c}: gst_default_info_handler), (gtk/{prevFiles/prev_20f123_8831a4_modules#other#gail#gailbutton.c,revFiles/20f123_8831a4_modules#other#gail#gailbutton.c}: idle_do_action)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- gtk_tree_store_set(E0, E1, 0, gtk_tree_path_to_string(E2), 1, E3, -1); 
++ path_string = gtk_tree_path_to_string(E2); 
++ gtk_tree_store_set(E0, E1, 0, path_string, 1, E3, -1); 
+// Infered from: (gtk/{prevFiles/prev_855fee_c2f661_gtk#tests#filtermodel.c,revFiles/855fee_c2f661_gtk#tests#filtermodel.c}: create_tree_store_set_values)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------

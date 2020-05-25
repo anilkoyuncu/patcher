@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (myself->configEpoch != E0)  
++ if (myself->configEpoch == 0 || myself->configEpoch != E0)  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_8dea20_a89c8b_src#cluster.c,revFiles/8dea20_a89c8b_src#cluster.c}: clusterCommand)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

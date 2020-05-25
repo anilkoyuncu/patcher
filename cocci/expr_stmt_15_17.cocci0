@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- write_pdml_preamble(stdout, E0->filename); 
++ write_pdml_preamble(stdout, E0 ? E0->filename :NULL); 
+// Infered from: (wireshark/{prevFiles/prev_c66df8_339136_tshark.c,revFiles/c66df8_339136_tshark.c}: write_preamble)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

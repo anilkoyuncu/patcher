@@ -1,0 +1,9 @@
+@@
+expression E0, E2, E3, E4, E1;
+@@
+- ps_mm_debug (E0, E1, E2, E3, E4); 
++ ps_mm_debug (E1, E2, E3, E4); 
+// Infered from: (php-src/{prevFiles/prev_3ffaa6_a25f89_ext#session#mod_mm.c,revFiles/3ffaa6_a25f89_ext#session#mod_mm.c}: ps_sd_lookup)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

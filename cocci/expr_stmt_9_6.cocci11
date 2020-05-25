@@ -1,0 +1,8 @@
+@@
+@@
+- gtk_menu_bar_append(GTK_MENU_BAR(menubar), menutop); 
++ gtk_menu_shell_append(GTK_MENU_SHELL(menubar), menutop); 
+// Infered from: (gtk/{prevFiles/prev_6389f1_a27da3_modules#other#gail#tests#ferret.c,revFiles/6389f1_a27da3_modules#other#gail#tests#ferret.c}: _create_window)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

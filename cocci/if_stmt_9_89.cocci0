@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (strspn(E0, " \t") == (strchr(E0, '*') - E0))  
++ if (strspn(E0, " \t") == (size_t )((strchr(E0, '*') - E0)))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_799672_a39e4e_gtk#colors.c,revFiles/799672_a39e4e_gtk#colors.c}: read_filters)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

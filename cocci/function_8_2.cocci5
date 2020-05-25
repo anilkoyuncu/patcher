@@ -1,0 +1,34 @@
+@@
+expression E0, E1;
+@@
+- while (E0 >  E1)  
+- {
+- PictureDeinit(PP_OUTPUTPICTURE[--I_OUTPUTPICTURES]); 
+- }
+// Infered from: (vlc/{prevFiles/prev_00155d_ad9613_modules#video_output#xcb#xcb.c,revFiles/00155d_ad9613_modules#video_output#xcb#xcb.c}: Deinit)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.07, Precision: 1.00
+// -- Node Change --
+// Recall: 0.18, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/58(5%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_00155d_ad9613_modules#video_output#xcb#xcb.c: Deinit
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_1a37e3_effecc_block#vpc.c: create_fixed_disk
+ - php-src/prevFiles/prev_5b08e5_4bdd9a_sapi#litespeed#lsapi_main.c: 
+ - php-src/prevFiles/prev_0cc260_bdac08_sapi#litespeed#lsapi_main.c: 
+ - php-src/prevFiles/prev_26ff3a_4e7b31_sapi#litespeed#lsapi_main.c: 
+ - wireshark/prevFiles/prev_6167a0_cac302_epan#dissectors#packet-smb2.c: dissect_smb2_break_response
+ - php-src/prevFiles/prev_a7d274_2470e0_sapi#litespeed#lsapi_main.c: 
+*/
+
+// ---------------------------------------------

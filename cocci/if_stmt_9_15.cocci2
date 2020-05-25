@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->ieee80211_ptr && E0->ieee80211_ptr && E0->ieee80211_ptr->wiphy && E0->ieee80211_ptr->wiphy->wext && E0->ieee80211_ptr->wiphy->wext->get_wireless_stats)  
++ if (E0->ieee80211_ptr && E0->ieee80211_ptr->wiphy && E0->ieee80211_ptr->wiphy->wext && E0->ieee80211_ptr->wiphy->wext->get_wireless_stats)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_365391_9df86e_net#wireless#wext-core.c,revFiles/365391_9df86e_net#wireless#wext-core.c}: get_wireless_stats)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

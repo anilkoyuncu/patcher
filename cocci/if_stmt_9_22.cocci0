@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (svq3_decode_block(&E0->gb, E1->mb_luma_dc, 0, 1))  
++ if (svq3_decode_block(&E0->gb, *E1->mb_luma_dc, 0, 1))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_96df29_280bee_libavcodec#svq3.c,revFiles/96df29_280bee_libavcodec#svq3.c}: svq3_decode_mb)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

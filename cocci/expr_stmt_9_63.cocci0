@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- error_set(E0, QERR_DEVICE_NOT_FOUND, E1); 
++ error_setg(E0, "Device '%s' not found", E1); 
+// Infered from: (qemu/{prevFiles/prev_f3cf80_5a4992_ui#vnc.c,revFiles/f3cf80_5a4992_ui#vnc.c}: vnc_display_open)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

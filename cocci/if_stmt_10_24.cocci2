@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- mark_object(E0, OBJ_ANY, 0); 
++ mark_object(E0, OBJ_ANY, NULL); 
+// Infered from: (git/{prevFiles/prev_2af202_a49eb1_builtin-fsck.c,revFiles/2af202_a49eb1_builtin-fsck.c}: mark_object_reachable)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

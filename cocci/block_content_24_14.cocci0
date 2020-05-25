@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- set_irq_chip(E0, &intc_irq_chip_edge_port); 
++ irq_set_chip(E0, &intc_irq_chip_edge_port); 
+// Infered from: (linux/{prevFiles/prev_0b98b16_a3b975_arch#m68k#platform#coldfire#intc-2.c,revFiles/0b98b16_a3b975_arch#m68k#platform#coldfire#intc-2.c}: init_IRQ), (linux/{prevFiles/prev_0b98b16_a3b975_arch#m68k#platform#coldfire#intc-simr.c,revFiles/0b98b16_a3b975_arch#m68k#platform#coldfire#intc-simr.c}: init_IRQ)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

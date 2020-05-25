@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = sscanf(E1, "%3d:%2u", &E2, &E3); 
++ sscanf(E1, "%3d:%2u", &E2, &E3); 
+// Infered from: (wireshark/{prevFiles/prev_1fcb32_ccf37e_wiretap#nettrace_3gpp_32_423.c,revFiles/1fcb32_ccf37e_wiretap#nettrace_3gpp_32_423.c}: nettrace_parse_begin_time)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.18
+
+// ---------------------------------------------

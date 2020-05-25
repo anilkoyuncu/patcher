@@ -1,0 +1,21 @@
+@@
+expression E0, E1;
+@@
+- gtk_box_pack_start(GTK_BOX(E0), E1->save_widgets); 
+- gtk_box_reorder_child(GTK_BOX(E0), E1->save_widgets, 0); 
++ gtk_box_pack_start(GTK_BOX(E1->box), E1->save_widgets); 
++ gtk_box_reorder_child(GTK_BOX(E1->box), E1->save_widgets, 0); 
+// Infered from: (gtk/{prevFiles/prev_cc7038_24f79b_gtk#gtkfilechooserwidget.c,revFiles/cc7038_24f79b_gtk#gtkfilechooserwidget.c}: save_widgets_create)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

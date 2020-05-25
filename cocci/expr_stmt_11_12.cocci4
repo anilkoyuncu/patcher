@@ -1,0 +1,10 @@
+@@
+expression E2, E0, E1;
+typedef ngx_http_core_loc_conf_t;
+@@
+- E0 = ngx_palloc(E1->pool, (E2 + 1) * sizeof(ngx_http_core_loc_conf_t **)); 
++ E0 = ngx_palloc(E1->pool, (E2 + 1) * sizeof(ngx_http_core_loc_conf_t *)); 
+// Infered from: (nginx/{prevFiles/prev_25250a_1a5cda_src#http#ngx_http.c,revFiles/25250a_1a5cda_src#http#ngx_http.c}: ngx_http_init_locations), (nginx/{prevFiles/prev_25250a_1a5cda_src#http#ngx_http.c,revFiles/25250a_1a5cda_src#http#ngx_http.c}: ngx_http_init_locations)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

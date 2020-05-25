@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+typedef __wsum;
+typedef u16;
+@@
+- E0->fw_ip_csum_wo_len_flags_frag = bswab16(csum_fold((~E1->check) - E1->tot_len - E1->frag_off)); 
++ u16 csum = (u16 )(~E1->check) - (u16 )E1->tot_len - (u16 )E1->frag_off; 
++ E0->fw_ip_csum_wo_len_flags_frag = bswab16(csum_fold((__wsum )csum)); 
+// Infered from: (linux/{prevFiles/prev_c957d09_6da334_drivers#net#ethernet#broadcom#bnx2x#bnx2x_cmn.c,revFiles/c957d09_6da334_drivers#net#ethernet#broadcom#bnx2x#bnx2x_cmn.c}: bnx2x_update_pbds_gso_enc)
+// Recall: 0.23, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.54, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_c957d09_6da334_drivers#net#ethernet#broadcom#bnx2x#bnx2x_cmn.c: bnx2x_setup_irqs
+ - php-src/prevFiles/prev_39253a_c89111_ext#iconv#iconv.c: _php_iconv_substr
+*/
+
+// ---------------------------------------------

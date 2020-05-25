@@ -1,0 +1,43 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef int32_t;
+@@
+- static int32_t I0 = 0; 
+- int32_t I1 = 0; 
+- if (opal_atomic_compare_exchange_strong_32(&I0, &I1, 1) && oshmem_shmem_initialized && !oshmem_shmem_aborted)  
++ if (oshmem_shmem_initialized && !oshmem_shmem_aborted)  
+  {
+  ...
+- if ((OSHMEM_SUCCESS == E2) && ompi_mpi_initialized && !ompi_mpi_finalized)  
+- {
+- PMPI_Comm_free(&oshmem_comm_world); 
+- E2 = ompi_mpi_finalize(); 
+- }
+  ...
+  }
++ if ((OSHMEM_SUCCESS == E2) && ompi_mpi_initialized && !ompi_mpi_finalized && oshmem_shmem_globalexit_status == 0)  
++ {
++ PMPI_Comm_free(&oshmem_comm_world); 
++ E2 = ompi_mpi_finalize(); 
++ }
+// Infered from: (ompi/{prevFiles/prev_4aad38_44a1c7_oshmem#runtime#oshmem_shmem_finalize.c,revFiles/4aad38_44a1c7_oshmem#runtime#oshmem_shmem_finalize.c}: oshmem_shmem_finalize)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.08, Precision: 1.00
+// -- Node Change --
+// Recall: 0.20, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/24(8%)
+
+/*
+Functions where the patch did not apply:
+ - openssh-portable/prevFiles/prev_368dd9_f00211_clientloop.c: client_loop
+ - gtk/prevFiles/prev_e32ab8_c7d73e_gdk#x11#gdkmain-x11.c: 
+ - gtk/prevFiles/prev_e32ab8_c7d73e_gdk#x11#gdkmain-x11.c: _gdk_x11_error_handler_push
+*/
+
+// ---------------------------------------------

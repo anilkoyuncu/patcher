@@ -1,0 +1,15 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 == CAIRO_STATUS_SUCCESS)  
+- {
+- _cairo_path_fixed_approximate_fill_extents(E1, &E2); 
+- }
+- else
+- {
+  ...
+- }
+// Infered from: (cairo/{prevFiles/prev_bb4055_d37464_src#cairo-analysis-surface.c,revFiles/bb4055_d37464_src#cairo-analysis-surface.c}: _cairo_analysis_surface_fill), (cairo/{prevFiles/prev_b8347e_cfff4f_src#cairo-analysis-surface.c,revFiles/b8347e_cfff4f_src#cairo-analysis-surface.c}: _cairo_analysis_surface_fill)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

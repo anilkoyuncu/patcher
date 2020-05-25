@@ -1,0 +1,15 @@
+@@
+expression E0, E1;
+@@
+- E0->filesystem_table = realloc(E0->filesystem_table,  E1 * sizeof(*E0->filesystem_table)); 
+- if (E0->filesystem_table == NULL)  
++ p = realloc(E0->filesystem_table, E1 * sizeof(*E0->filesystem_table)); 
++ if (p == NULL)  
+  {
+  ...
+  }
++ E0->filesystem_table = (struct filesystem *)p; 
+// Infered from: (libarchive/{prevFiles/prev_0ddb05_52ca91_libarchive#archive_read_disk_windows.c,revFiles/0ddb05_52ca91_libarchive#archive_read_disk_windows.c}: update_current_filesystem), (libarchive/{prevFiles/prev_0ddb05_52ca91_libarchive#archive_read_disk_posix.c,revFiles/0ddb05_52ca91_libarchive#archive_read_disk_posix.c}: update_current_filesystem)
+// Recall: 0.56, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------

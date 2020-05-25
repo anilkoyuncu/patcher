@@ -1,0 +1,8 @@
+@@
+@@
+- ELEM_OPT_TLV(gsm_bssmap_le_elem_strings[BSSMAP_LE_LCS_CAUSE].value,  GSM_PDU_TYPE_BSSMAP_LE, BSSMAP_LE_LCS_CAUSE, ""); 
++ ELEM_OPT_TLV(gsm_bssmap_le_elem_strings[DE_BMAPLE_LCS_CAUSE].value,  GSM_PDU_TYPE_BSSMAP_LE, BSSMAP_LE_LCS_CAUSE, ""); 
+// Infered from: (wireshark/{prevFiles/prev_5052b7_b45b91_epan#dissectors#packet-gsm_bssmap_le.c,revFiles/5052b7_b45b91_epan#dissectors#packet-gsm_bssmap_le.c}: bssmap_le_perf_loc_resp)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((E0 = ff_alloc_packet2(E1, E2, E3)))  
++ if ((E0 = ff_alloc_packet2(E1, E2, E3, 0)))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_a0044b_3fe01e_libavcodec#libshine.c,revFiles/a0044b_3fe01e_libavcodec#libshine.c}: libshine_encode_frame)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- if (E0 < 14)  
++ if (E0 < 12)  
+  {
+- av_log(E1->fc, AV_LOG_ERROR,  "loci too short (%u bytes left, need at least %d)\n", E0, 14); 
++ av_log(E1->fc, AV_LOG_ERROR,  "loci too short (%u bytes left, need at least %d)\n", E0, 12); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_f12636_704d2b_libavformat#mov.c,revFiles/f12636_704d2b_libavformat#mov.c}: mov_metadata_loci)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_a20cfc_995e10_pcapio.c: libpcap_write_interface_description_block
+*/
+
+// ---------------------------------------------

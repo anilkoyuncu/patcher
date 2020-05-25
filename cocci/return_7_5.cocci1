@@ -1,0 +1,24 @@
+@@
+identifier I0 = {php_cli_server_send_error_page ,php_stream_filter_register_factory ,string_compare_function_ex };
+expression list E1;
+@@
+- return I0(E1); 
++ return I0(); 
+// Infered from: (php-src/{prevFiles/prev_a329dc_4762ed_sapi#cli#php_cli_server.c,revFiles/a329dc_4762ed_sapi#cli#php_cli_server.c}: php_cli_server_begin_send_static), (php-src/{prevFiles/prev_090e30_ccf515_ext#standard#string.c,revFiles/090e30_ccf515_ext#standard#string.c}: PHP_MINIT_FUNCTION), (php-src/{prevFiles/prev_895a10_7bd505_Zend#zend_operators.c,revFiles/895a10_7bd505_Zend#zend_operators.c}: string_compare_function), (php-src/{prevFiles/prev_895a10_7bd505_Zend#zend_operators.c,revFiles/895a10_7bd505_Zend#zend_operators.c}: string_case_compare_function), (php-src/{prevFiles/prev_cb7474_6affeb_Zend#zend_operators.c,revFiles/cb7474_6affeb_Zend#zend_operators.c}: string_compare_function), (php-src/{prevFiles/prev_cb7474_6affeb_Zend#zend_operators.c,revFiles/cb7474_6affeb_Zend#zend_operators.c}: string_case_compare_function), (php-src/{prevFiles/prev_68a51a_c3eeb8_sapi#cli#php_cli_server.c,revFiles/68a51a_c3eeb8_sapi#cli#php_cli_server.c}: php_cli_server_begin_send_static)
+// Recall: 0.83, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.92, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_090e30_ccf515_ext#standard#string.c: PHP_MSHUTDOWN_FUNCTION
+*/
+
+// ---------------------------------------------

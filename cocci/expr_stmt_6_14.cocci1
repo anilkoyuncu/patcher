@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0->end_mb_y = (E1 <= E2 + 1) ? E3 :FFMIN(E3, E4[E1].mby_start % E3); 
++ E0->end_mb_y = (E1 == E2 + 1) ? E3 :FFMIN(E3, E4[E1].mby_start % E3); 
+// Infered from: (FFmpeg/{prevFiles/prev_2b86472_ca8788_libavcodec#vc1dec.c,revFiles/2b86472_ca8788_libavcodec#vc1dec.c}: vc1_decode_frame)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

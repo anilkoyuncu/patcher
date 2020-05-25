@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (bdrv_is_removable(E0) || bdrv_is_read_only(E0))  
++ if (!bdrv_is_inserted(E0) || bdrv_is_read_only(E0))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_07b70b_c602a4_savevm.c,revFiles/07b70b_c602a4_savevm.c}: do_savevm), (qemu/{prevFiles/prev_07b70b_c602a4_savevm.c,revFiles/07b70b_c602a4_savevm.c}: load_vmstate)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,42 @@
+@@
+@@
+- goto  _fail_timer_2; 
++ goto  _fail_; 
+// Infered from: (linux/{prevFiles/prev_17db84e_960819_drivers#staging#wilc1000#host_interface.c,revFiles/17db84e_960819_drivers#staging#wilc1000#host_interface.c}: host_int_init)
+// False positives: (linux/revFiles/17db84e_960819_drivers#staging#wilc1000#host_interface.c: host_int_init)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.59, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 0.53
+// -- General --
+// Functions fully changed: 0/17(0%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_63f242_d74b9c_ext#pdo_dblib#dblib_driver.c: pdo_dblib_handle_factory
+ - qemu/prevFiles/prev_fdfcc9_4c1586_hw#9pfs#9p.c: v9fs_write
+ - qemu/prevFiles/prev_6bb9a0_e7f083_target-ppc#excp_helper.c: powerpc_excp
+ - linux/prevFiles/prev_ceeab9_31f73be_fs#ecryptfs#file.c: ecryptfs_open
+ - php-src/prevFiles/prev_fa4029_5ce23f_ext#pdo_dblib#dblib_driver.c: pdo_dblib_handle_factory
+ - vlc/prevFiles/prev_19bd05_6cecc60_modules#misc#network#ipv6.c: OpenUDP
+ - openssl/prevFiles/prev_c0aa6b_a30b05_ssl#statem#statem_clnt.c: tls_process_server_hello
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_1783e60_b57838e_drivers#s390#char#tape_3590.c: tape_3590_setup_device
+ - linux/prevFiles/prev_a2dc56_a1e9adc_sound#soc#nuc900#nuc900-ac97.c: nuc900_ac97_drvprobe
+ - linux/prevFiles/prev_17db84e_960819_drivers#staging#wilc1000#host_interface.c: host_int_init
+ - ompi/prevFiles/prev_d5f6b0_cf4910_ompi#mca#osc#ucx#osc_ucx_component.c: component_select
+ - ompi/prevFiles/prev_50c909_906616_orte#mca#filem#base#filem_base_select.c: orte_filem_base_select
+ - qemu/prevFiles/prev_075311_4f2d31_qobject#json-streamer.c: json_message_process_token
+ - linux/prevFiles/prev_b8f37a4a_653108_drivers#s390#net#ctcm_main.c: add_channel
+ - linux/prevFiles/prev_25cecd_20d436_drivers#net#ethernet#stmicro#stmmac#stmmac_platform.c: stmmac_pltfr_probe
+ - linux/prevFiles/prev_2492c6e_655e24_drivers#usb#host#ehci-fsl.c: usb_hcd_fsl_probe
+ - linux/prevFiles/prev_96101b_57cf9d_sound#soc#kirkwood#kirkwood-i2s.c: kirkwood_i2s_dev_probe
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,26 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef uint32_t;
+@@
+- uint32_t I0 = x86_cpu_get_supported_feature_word(E1, E2->migratable); 
++ uint32_t I0 = x86_cpu_get_supported_feature_word(E1, false); 
+// Infered from: (qemu/{prevFiles/prev_46c032_b54c93_target-i386#cpu.c,revFiles/46c032_b54c93_target-i386#cpu.c}: x86_cpu_filter_features)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_e4f0c6_b0fbe4_target#ppc#compat.c: ppc_set_compat
+ - vlc/prevFiles/prev_fd7b89_b33d89_modules#stream_out#rtp.c: Add
+*/
+
+// ---------------------------------------------

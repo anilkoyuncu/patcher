@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- qemu_set_irq(s->readonly_cb, E0->wp_switch); 
++ qemu_set_irq(E0->readonly_cb, E0->wp_switch); 
+// Infered from: (qemu/{prevFiles/prev_257514_5747c0_hw#sd.c,revFiles/257514_5747c0_hw#sd.c}: sd_cardchange)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

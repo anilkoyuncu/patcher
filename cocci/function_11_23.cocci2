@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- E0 = container_of(E1->dn, struct cfsrvl , layer); 
+- WARN_ON(E1 == NULL || E1->dn == NULL); 
++ if (WARN_ON(E1 == NULL || E1->dn == NULL))  
++ {
++ return; 
++ }
++ E0 = container_of(E1->dn, struct cfsrvl , layer); 
+// Infered from: (linux/{prevFiles/prev_566f26a_2120c52_net#caif#cfsrvl.c,revFiles/566f26a_2120c52_net#caif#cfsrvl.c}: caif_client_register_refcnt)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

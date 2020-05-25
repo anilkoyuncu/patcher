@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->pos == E0->last)  
++ if (E0->file_pos == E0->file_last)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_52a934_1849ba_src#core#ngx_output_chain.c,revFiles/52a934_1849ba_src#core#ngx_output_chain.c}: ngx_output_chain_copy_buf)
+// False positives: (nginx/revFiles/52a934_1849ba_src#core#ngx_output_chain.c: ngx_output_chain_copy_buf)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

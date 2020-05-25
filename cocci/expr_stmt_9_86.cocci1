@@ -1,0 +1,22 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+  const  int I0 = E1->size - E2; 
+  ...
+- bytestream2_put_be32(&E3, 0); 
++ bytestream2_put_be32(&E3, I0 + 11); 
+// Infered from: (FFmpeg/{prevFiles/prev_e01ad9_3496a2_libavformat#rtmpproto.c,revFiles/e01ad9_3496a2_libavformat#rtmpproto.c}: append_flv_data)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

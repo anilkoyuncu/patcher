@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef hb_unicode_funcs_t;
+@@
+- hb_unicode_funcs_t *I0 = hb_unicode_funcs_get_default(); 
++ hb_unicode_funcs_t *I0 = hb_unicode_funcs_create(hb_unicode_funcs_get_default(  )); 
+// Infered from: (vlc/{prevFiles/prev_8c2351_130d97_modules#text_renderer#freetype#text_layout.c,revFiles/8c2351_130d97_modules#text_renderer#freetype#text_layout.c}: AnalyzeParagraph)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

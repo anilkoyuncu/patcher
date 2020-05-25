@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (E1 - E2) / 2; 
++ E0 = (E2 - E1) / 2; 
+// Infered from: (codeflaws/{prevFiles/prev_581-A-16943262-16943281.c,revFiles/581-A-16943262-16943281.c}: main)
+// False positives: (codeflaws/revFiles/581-A-16943262-16943281.c: main)
+// Recall: 0.03, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

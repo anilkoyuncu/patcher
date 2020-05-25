@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef fd_mask;
+@@
+- E0 = 1 << (E1 % (NBBY * sizeof(fd_mask ))); 
++ E0 = ((fd_mask )1) << (E1 % (NBBY * sizeof(fd_mask ))); 
+// Infered from: (tcl/{prevFiles/prev_de316a_560ef2_unix#tclUnixChan.c,revFiles/de316a_560ef2_unix#tclUnixChan.c}: TclUnixWaitForFile)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

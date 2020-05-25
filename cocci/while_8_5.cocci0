@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (av_fifo_size(E0->fifo))  
++ while (E0->fifo && av_fifo_size(E0->fifo))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_8b05e1_fad729f_libavfilter#buffersrc.c,revFiles/8b05e1_fad729f_libavfilter#buffersrc.c}: uninit)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

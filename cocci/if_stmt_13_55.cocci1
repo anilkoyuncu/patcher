@@ -1,0 +1,25 @@
+@@
+@@
+- gdMutexShutdown(gdFontCacheMutex); 
++ gdMutexLock(gdFontCacheMutex); 
+// Infered from: (php-src/{prevFiles/prev_7d437f_65b54b_ext#gd#libgd#gdft.c,revFiles/7d437f_65b54b_ext#gd#libgd#gdft.c}: gdFontCacheShutdown)
+// False positives: (php-src/revFiles/7d437f_65b54b_ext#gd#libgd#gdft.c: gdFontCacheSetup), (php-src/revFiles/7d437f_65b54b_ext#gd#libgd#gdft.c: gdFontCacheShutdown)
+// Recall: 0.33, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.67
+// -- Node Change --
+// Recall: 0.67, Precision: 0.33
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_7d437f_65b54b_ext#gd#libgd#gdft.c: gdFontCacheShutdown
+ - php-src/prevFiles/prev_7d437f_65b54b_ext#gd#libgd#gdft.c: gdFontCacheSetup
+ - git/prevFiles/prev_13019d_705acc_object.c: parse_object
+*/
+
+// ---------------------------------------------

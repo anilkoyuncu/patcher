@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->format.i_nb_samples = E0->format.i_frame_length; 
++ E0->i_nb_samples = E0->format.i_frame_length; 
+// Infered from: (vlc/{prevFiles/prev_8aebae_9cb642_modules#audio_output#auhal.c,revFiles/8aebae_9cb642_modules#audio_output#auhal.c}: OpenSPDIF)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

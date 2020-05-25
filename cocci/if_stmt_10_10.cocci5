@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!strncmp(E0, "--no-merges", 11))  
++ if (!strcmp(E0, "--no-merges"))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_5cdeae_acb725_revision.c,revFiles/5cdeae_acb725_revision.c}: setup_revisions)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

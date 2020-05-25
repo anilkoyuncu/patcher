@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!_flatten1(&E0, E1))  
++ if (!_flatten1(&E0, E1, 0))  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_288e97_49ef6d_Modules#_tkinter.c,revFiles/288e97_49ef6d_Modules#_tkinter.c}: Tkinter_Flatten)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

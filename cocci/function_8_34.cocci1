@@ -1,0 +1,11 @@
+@@
+identifier I0, I2;
+expression E1;
+typedef int64_t;
+@@
+- int I0 = E1; 
+- int64_t I2 = 0; 
+// Infered from: (qemu/{prevFiles/prev_f1a7ff_fc2490_block#nfs.c,revFiles/f1a7ff_fc2490_block#nfs.c}: nfs_file_create)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

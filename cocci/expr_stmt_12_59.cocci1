@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.id = orte_process_info.peer_modex; 
++ E0.id = orte_grpcomm_base_get_coll_id(ORTE_PROC_MY_NAME); 
+// Infered from: (ompi/{prevFiles/prev_2ce11e_080d88_orte#mca#ess#pmi#ess_pmi_module.c,revFiles/2ce11e_080d88_orte#mca#ess#pmi#ess_pmi_module.c}: rte_init)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0 = timeval_diff_secs(&E1.ru_utime, &start_grus.ru_utime); 
++ E0 = rusage_diff_secs(&E1, &start_grus); 
+// Infered from: (gmp/{prevFiles/prev_3f4053_964789_tune#time.c,revFiles/3f4053_964789_tune#time.c}: speed_endtime)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.88, Precision: 1.00
+// -- Node Change --
+// Recall: 0.88, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/8(87%)
+
+/*
+Functions where the patch did not apply:
+ - gmp/prevFiles/prev_3f4053_964789_tune#time.c: 
+*/
+
+// ---------------------------------------------

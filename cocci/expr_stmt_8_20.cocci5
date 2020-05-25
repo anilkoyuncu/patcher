@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gst_buffer_copy_into(*E0, E1,  GST_BUFFER_COPY_FLAGS | GST_BUFFER_COPY_TIMESTAMPS, 0, 0); 
++ gst_buffer_copy_into(*E0, E1,  GST_BUFFER_COPY_FLAGS | GST_BUFFER_COPY_TIMESTAMPS, 0,  -1); 
+// Infered from: (gstreamer/{prevFiles/prev_121b82_9ff103_libs#gst#base#gstbasetransform.c,revFiles/121b82_9ff103_libs#gst#base#gstbasetransform.c}: gst_base_transform_prepare_output_buffer), (gstreamer/{prevFiles/prev_121b82_9ff103_libs#gst#base#gstbasetransform.c,revFiles/121b82_9ff103_libs#gst#base#gstbasetransform.c}: gst_base_transform_prepare_output_buffer)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

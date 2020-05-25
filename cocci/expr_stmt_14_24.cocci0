@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- sprintf(E0, "Illegal NetBIOS name (%d bytes long)", E1 - E0); 
++ sprintf(E0, "Illegal NetBIOS name (%ld bytes long)", (long )(E1 - E0)); 
+// Infered from: (wireshark/{prevFiles/prev_44c17a_75b9af_packet-nbns.c,revFiles/44c17a_75b9af_packet-nbns.c}: get_nbns_name_type_class)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

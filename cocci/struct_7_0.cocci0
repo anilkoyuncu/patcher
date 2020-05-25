@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->i_input_size = E0->i_next_offset = E0->frame.i_size; 
++ E0->i_input_size = E0->frame.i_size; 
+// Infered from: (vlc/{prevFiles/prev_a80030_d44f9d_modules#codec#libmpeg2.c,revFiles/a80030_d44f9d_modules#codec#libmpeg2.c}: GetNewPicture), (vlc/{prevFiles/prev_19676e_870b6d_modules#packetizer#a52.c,revFiles/19676e_870b6d_modules#packetizer#a52.c}: PacketizeBlock)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

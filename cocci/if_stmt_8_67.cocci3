@@ -1,0 +1,39 @@
+@@
+expression E2, E0, E1, E3, E5, E4;
+@@
+- sprintf(E0, E1, E2); 
+  ...
+- num_open.rlim_max = num_open.rlim_cur + 2 - SAFETY_MARGIN; 
++ num_open.rlim_max = num_open.rlim_cur - SAFETY_MARGIN; 
+  ...
+- sprintf(E3, E4, E0); 
+  ...
+- if (!E5)  
++ if (E5)  
+  {
+- ...
+- fprintf(stderr, "%s\n", E3); 
+- }
+- else
+- {
+  ...
+  }
++ break; 
+// Infered from: (curl/{prevFiles/prev_1dee2c_426ecf_tests#libtest#lib537.c,revFiles/1dee2c_426ecf_tests#libtest#lib537.c}: rlimit)
+// Recall: 0.43, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.65, Precision: 0.94
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_1dee2c_426ecf_tests#libtest#lib537.c: rlimit
+*/
+
+// ---------------------------------------------

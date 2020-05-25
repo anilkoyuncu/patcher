@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+typedef rpc_proc_info_value;
+@@
+- E0->proc_info = (rpc_proc_info_value *)wmem_memdup(wmem_file_scope(), E1,  sizeof(*E1)); 
++ E0->proc_info = E1 ? (rpc_proc_info_value *)wmem_memdup(wmem_file_scope(  ), E1, sizeof(  *E1)) :NULL; 
+// Infered from: (wireshark/{prevFiles/prev_c321dc_d0c031_epan#dissectors#packet-rpc.c,revFiles/c321dc_d0c031_epan#dissectors#packet-rpc.c}: dissect_rpc_message)
+// False positives: (wireshark/revFiles/c321dc_d0c031_epan#dissectors#packet-rpc.c: dissect_rpc_indir_call)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

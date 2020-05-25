@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0->p_vod = vlc_custom_create(VLC_OBJECT(E0), sizeof(E0->p_vod),  VLC_OBJECT_GENERIC, "vod server"); 
++ E0->p_vod = vlc_custom_create(VLC_OBJECT(E0), sizeof(vod_t),  VLC_OBJECT_GENERIC, "vod server"); 
+// Infered from: (vlc/{prevFiles/prev_a9a95b_a9d773_src#input#vlm.c,revFiles/a9a95b_a9d773_src#input#vlm.c}: vlm_ControlMediaAdd)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

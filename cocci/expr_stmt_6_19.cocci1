@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->p_sys->s_rect.size.width = E0->render.i_width; 
++ E0->p_sys->s_rect.size.width = E0->i_window_width; 
+// Infered from: (vlc/{prevFiles/prev_35d31a_c58149_plugins#macosx#vout_macosx.c,revFiles/35d31a_c58149_plugins#macosx#vout_macosx.c}: vout_Create)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

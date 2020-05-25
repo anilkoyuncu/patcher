@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0 = (E0 + 4096) >> 13; 
++ E0 = (int )(E0 + 4096U) >> 13; 
+// Infered from: (FFmpeg/{prevFiles/prev_6ea428_bd404e_libavcodec#dss_sp.c,revFiles/6ea428_bd404e_libavcodec#dss_sp.c}: dss_sp_shift_sq_sub)
+// False positives: (FFmpeg/revFiles/6ea428_bd404e_libavcodec#dss_sp.c: dss_sp_shift_sq_add)
+// Recall: 0.12, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

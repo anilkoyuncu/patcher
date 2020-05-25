@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- pr_warn("%s has zero vcodiv (index %d)\n", __clk_get_name(E0->clk), E1); 
++ pr_warn("%s has zero vcodiv (index %d)\n", clk_hw_get_name(E0), E1); 
+// Infered from: (linux/{prevFiles/prev_836ee0_e7df6f6_drivers#clk#berlin#berlin2-pll.c,revFiles/836ee0_e7df6f6_drivers#clk#berlin#berlin2-pll.c}: berlin2_pll_recalc_rate)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

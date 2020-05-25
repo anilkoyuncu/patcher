@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->host = g_strdup(E1 ? E1 :"0.0.0.0"); 
++ E0->host = g_strdup(E1 ? E1 :"*"); 
+// Infered from: (qemu/{prevFiles/prev_4f60af_ff788b_ui#spice-core.c,revFiles/4f60af_ff788b_ui#spice-core.c}: qmp_query_spice)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

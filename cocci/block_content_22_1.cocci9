@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- return GPOINTER_TO_UINT(g_object_get_qdata(E0, number_quark)); 
++ number = GPOINTER_TO_UINT(g_object_get_qdata(E0, number_quark)); 
++ g_object_unref(E0); 
++ return number; 
+// Infered from: (gtk/{prevFiles/prev_168c1f_33a8ef_testsuite#gtk#treelistmodel.c,revFiles/168c1f_33a8ef_testsuite#gtk#treelistmodel.c}: get), (gtk/{prevFiles/prev_168c1f_33a8ef_testsuite#gtk#slicelistmodel.c,revFiles/168c1f_33a8ef_testsuite#gtk#slicelistmodel.c}: get), (gtk/{prevFiles/prev_168c1f_33a8ef_testsuite#gtk#maplistmodel.c,revFiles/168c1f_33a8ef_testsuite#gtk#maplistmodel.c}: get), (gtk/{prevFiles/prev_168c1f_33a8ef_testsuite#gtk#flattenlistmodel.c,revFiles/168c1f_33a8ef_testsuite#gtk#flattenlistmodel.c}: get), (gtk/{prevFiles/prev_168c1f_33a8ef_testsuite#gtk#filterlistmodel.c,revFiles/168c1f_33a8ef_testsuite#gtk#filterlistmodel.c}: get), (gtk/{prevFiles/prev_168c1f_33a8ef_testsuite#gtk#sortlistmodel.c,revFiles/168c1f_33a8ef_testsuite#gtk#sortlistmodel.c}: get)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

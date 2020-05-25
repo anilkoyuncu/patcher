@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- gtk_style_context_set_screen(E0->priv->context, gtk_widget_get_screen(E0)); 
++ screen = gtk_widget_get_screen(E0); 
++ if (screen)  
++ {
++ gtk_style_context_set_screen(E0->priv->context, screen); 
++ }
+// Infered from: (gtk/{prevFiles/prev_217d3f_f23585_gtk#gtkwidget.c,revFiles/217d3f_f23585_gtk#gtkwidget.c}: gtk_widget_set_parent), (gtk/{prevFiles/prev_217d3f_f23585_gtk#gtkwidget.c,revFiles/217d3f_f23585_gtk#gtkwidget.c}: gtk_widget_get_style_context)
+// Recall: 0.53, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

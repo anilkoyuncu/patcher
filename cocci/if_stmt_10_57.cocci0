@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!float_near_abs_eps(cdst[E0], odst[E0], FLT_EPSILON))  
++ if (!float_near_abs_eps(cdst[E0], odst[E0], 6.2e-05))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_f477ee_9217de_tests#checkasm#af_afir.c,revFiles/f477ee_9217de_tests#checkasm#af_afir.c}: test_fcmul_add)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

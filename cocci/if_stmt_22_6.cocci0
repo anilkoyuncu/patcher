@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!cairo_test_is_target_enabled(&E0, "ps"))  
++ if (!(cairo_test_is_target_enabled(&E0, "ps2") || cairo_test_is_target_enabled(  &E0, "ps3")))  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_cca1fc_39e4a0_test#ps-features.c,revFiles/cca1fc_39e4a0_test#ps-features.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- av_assert0(E0->channel_layout == E1); 
++ av_assert0(E0->channel_layout == E1 || !E0->channel_layout); 
+// Infered from: (FFmpeg/{prevFiles/prev_2bd104_89f9f6_libavfilter#af_aresample.c,revFiles/2bd104_89f9f6_libavfilter#af_aresample.c}: config_output)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = gtk_notebook_get_page(E1, E2); 
++ E0 = GTK_NOTEBOOK_PAGE(gtk_notebook_get_page(E1, E2)); 
+// Infered from: (gtk/{prevFiles/prev_248c07_b01cf6_gtk#a11y#gtknotebookpageaccessible.c,revFiles/248c07_b01cf6_gtk#a11y#gtknotebookpageaccessible.c}: gtk_notebook_page_accessible_new)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- php_info_printf("%pd", E0); 
++ php_info_printf(ZEND_ULONG_FMT, E0); 
+// Infered from: (php-src/{prevFiles/prev_d59480_dda7a0_ext#standard#info.c,revFiles/d59480_dda7a0_ext#standard#info.c}: php_print_gpcse_array)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

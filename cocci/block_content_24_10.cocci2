@@ -1,0 +1,27 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = curl_easy_perform(E1); 
++ curl_easy_perform(E1); 
+// Infered from: (curl/{prevFiles/prev_b06981_528b28_docs#examples#smooth-gtk-thread.c,revFiles/b06981_528b28_docs#examples#smooth-gtk-thread.c}: pull_one_url)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.78, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_b06981_528b28_docs#examples#smooth-gtk-thread.c: create_thread
+ - curl/prevFiles/prev_b06981_528b28_docs#examples#smooth-gtk-thread.c: pull_one_url
+ - curl/prevFiles/prev_b06981_528b28_docs#examples#threaded-ssl.c: main
+ - curl/prevFiles/prev_b06981_528b28_docs#examples#multithread.c: main
+*/
+
+// ---------------------------------------------

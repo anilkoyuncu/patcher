@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 && E0->data[0] == 'c')  
++ if (E0->size && E0->data[0] == 'c')  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_c7e587_371386_hw#9pfs#virtio-9p.c,revFiles/c7e587_371386_hw#9pfs#virtio-9p.c}: v9mode_to_mode)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

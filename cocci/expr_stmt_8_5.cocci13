@@ -1,0 +1,11 @@
+@@
+type T1;
+expression E0, E2;
+@@
+- E0 = (T1 *)emalloc(E2); 
++ E0 = (T1 *)ecalloc(1, E2); 
+// Infered from: (php-src/{prevFiles/prev_0a7292_104cd2_ext#pdo_firebird#firebird_statement.c,revFiles/0a7292_104cd2_ext#pdo_firebird#firebird_statement.c}: firebird_stmt_describe), (php-src/{prevFiles/prev_a8cc93_3c8bd9_ext#pdo_firebird#firebird_statement.c,revFiles/a8cc93_3c8bd9_ext#pdo_firebird#firebird_statement.c}: firebird_stmt_describe), (php-src/{prevFiles/prev_f7ee12_ccae79_ext#pdo_firebird#firebird_statement.c,revFiles/f7ee12_ccae79_ext#pdo_firebird#firebird_statement.c}: firebird_stmt_describe), (php-src/{prevFiles/prev_cddd25_53f976_ext#iconv#iconv.c,revFiles/cddd25_53f976_ext#iconv#iconv.c}: php_iconv_string)
+// False positives: (php-src/revFiles/f14d11_9b674c_ext#oci8#oci8_statement.c: php_oci_bind_array_helper_double), (php-src/revFiles/f14d11_9b674c_ext#oci8#oci8_statement.c: php_oci_bind_array_helper_number)
+// Recall: 0.11, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

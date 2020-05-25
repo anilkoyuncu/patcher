@@ -1,0 +1,23 @@
+@@
+@@
+- line_count_exit: 
+// Infered from: (linux/{prevFiles/prev_084185_58fba46_drivers#gpu#drm#msm#disp#dpu1#dpu_hw_pingpong.c,revFiles/084185_58fba46_drivers#gpu#drm#msm#disp#dpu1#dpu_hw_pingpong.c}: dpu_hw_pp_get_line_count)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.62, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_084185_58fba46_drivers#gpu#drm#msm#disp#dpu1#dpu_hw_pingpong.c: dpu_hw_pp_get_line_count
+ - qemu/prevFiles/prev_65d21b_d24667_block#raw-posix.c: raw_pread_aligned
+ - qemu/prevFiles/prev_65d21b_d24667_block#raw-posix.c: raw_pwrite_aligned
+*/
+
+// ---------------------------------------------

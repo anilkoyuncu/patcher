@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1] = E2[E1] << 4; 
++ E0[E1] = E2[E1] * 16; 
+// Infered from: (FFmpeg/{prevFiles/prev_78bf44_464c4b_libavcodec#ra144.c,revFiles/78bf44_464c4b_libavcodec#ra144.c}: ff_eval_coefs)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

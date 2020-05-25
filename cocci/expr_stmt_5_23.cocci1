@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->device = (E0->device & 0xF0) || (E1 >> 24) & 0x0F; 
++ E0->device = (E0->device & 0xF0) | ((E1 >> 24) & 0x0F); 
+// Infered from: (qemu/{prevFiles/prev_455e86_008b6e1_tests#libqos#ahci.c,revFiles/455e86_008b6e1_tests#libqos#ahci.c}: ahci_command_set_offset)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

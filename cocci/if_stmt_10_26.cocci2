@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (av_opt_get(E0->pb, *E1, AV_OPT_SEARCH_CHILDREN, &E2) >= 0)  
++ if (av_opt_get(E0->pb, *E1, AV_OPT_SEARCH_CHILDREN | AV_OPT_ALLOW_NULL, &E2) >= 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_f00ec7_0562f9_libavformat#hls.c,revFiles/f00ec7_0562f9_libavformat#hls.c}: save_avio_options)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

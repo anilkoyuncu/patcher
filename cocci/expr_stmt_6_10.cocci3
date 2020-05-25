@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->sync_opts += E1 / E2->channels; 
++ E0->sync_opts += E1 / (2 * E2->channels); 
+// Infered from: (FFmpeg/{prevFiles/prev_c43042_37cdf9_ffmpeg.c,revFiles/c43042_37cdf9_ffmpeg.c}: do_audio_out)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

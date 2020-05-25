@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if ((E0 != E1->xoffset || E2 != E1->yoffset) && E3 != -1 && !gtk_widget_keynav_failed(  GTK_WIDGET(E4), E3))  
++ if ((E0 == E1->xoffset && E2 == E1->yoffset) && E3 != -1 && !gtk_widget_keynav_failed(  GTK_WIDGET(E4), E3))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_bd8e90_6ab7b8_gtk#gtktextview.c,revFiles/bd8e90_6ab7b8_gtk#gtktextview.c}: gtk_text_view_move_cursor_internal)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+@@
+- if (vallen < data->st_size)  
++ if ((int )vallen < data->st_size)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_948edd_439038_ext#session#mod_files.c,revFiles/948edd_439038_ext#session#mod_files.c}: PS_WRITE_FUNC)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

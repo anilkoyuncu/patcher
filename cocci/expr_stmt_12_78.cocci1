@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0[VISIBILITY_NOTIFY_EVENT] = g_signal_new(I_("visibility-notify-event"),  G_TYPE_FROM_CLASS(E1),  G_SIGNAL_RUN_LAST,  G_STRUCT_OFFSET(GtkWidgetClass,  visibility_notify_event),  _gtk_boolean_handled_accumulator,  NULL, _gtk_marshal_BOOLEAN__BOXED,  G_TYPE_BOOLEAN, 1,  GDK_TYPE_EVENT | G_SIGNAL_TYPE_STATIC_SCOPE | G_SIGNAL_DEPRECATED); 
++ E0[VISIBILITY_NOTIFY_EVENT] = g_signal_new(I_("visibility-notify-event"),  G_TYPE_FROM_CLASS(E1),  G_SIGNAL_RUN_LAST | G_SIGNAL_DEPRECATED,  G_STRUCT_OFFSET(GtkWidgetClass,  visibility_notify_event),  _gtk_boolean_handled_accumulator,  NULL, _gtk_marshal_BOOLEAN__BOXED,  G_TYPE_BOOLEAN, 1,  GDK_TYPE_EVENT | G_SIGNAL_TYPE_STATIC_SCOPE); 
+// Infered from: (gtk/{prevFiles/prev_2ffeb5_7fae04_gtk#gtkwidget.c,revFiles/2ffeb5_7fae04_gtk#gtkwidget.c}: gtk_widget_class_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

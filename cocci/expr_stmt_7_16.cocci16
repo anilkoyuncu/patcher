@@ -1,0 +1,11 @@
+@@
+identifier I0 = {gdk_window_ensure_native ,tcg_dump_ops };
+expression E1, E2;
+@@
+- I0(E1, E2); 
++ I0(E1); 
+// Infered from: (qemu/{prevFiles/prev_affe51_47ecbd_tcg#ppc#tcg-target.c,revFiles/affe51_47ecbd_tcg#ppc#tcg-target.c}: tcg_out_op), (gtk/{prevFiles/prev_953be0_943713_tests#testwindows.c,revFiles/953be0_943713_tests#testwindows.c}: native_window_clicked), (qemu/{prevFiles/prev_affe51_47ecbd_tcg#ppc64#tcg-target.c,revFiles/affe51_47ecbd_tcg#ppc64#tcg-target.c}: tcg_out_op)
+// False positives: (qemu/revFiles/b1d6d5_e9119c_tcg#ppc64#tcg-target.c: tcg_out_op)
+// Recall: 0.04, Precision: 0.75, Matching recall: 1.00
+
+// ---------------------------------------------

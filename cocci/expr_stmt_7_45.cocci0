@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- TEST_true(SSL_CTX_set_tlsext_max_fragment_length(E0,  E1->client.max_fragment_len_mode)); 
++ SSL_CTX_set_tlsext_max_fragment_length(E0, E1->client.max_fragment_len_mode); 
+// Infered from: (openssl/{prevFiles/prev_88e09f_b6306d_test#handshake_helper.c,revFiles/88e09f_b6306d_test#handshake_helper.c}: configure_handshake_ctx)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

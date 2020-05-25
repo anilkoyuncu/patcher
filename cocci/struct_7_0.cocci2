@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->len == E1 && !memcmp(E0->pattern, E2, E1))  
++ if (!strncmp(E0->pattern, E2, E1) && E0->pattern[E1] == '\0')  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_c3a700_a08595_builtin#reflog.c,revFiles/c3a700_a08595_builtin#reflog.c}: find_cfg_ent)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

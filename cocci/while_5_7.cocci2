@@ -1,0 +1,30 @@
+@@
+binary operator B1 = {!= ,&& };
+expression E2, E0;
+@@
+- while (E0 B1 E2)  
++ while (E0)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_118-A-18071189-18071250.c,revFiles/118-A-18071189-18071250.c}: main), (codeflaws/{prevFiles/prev_94-B-562660-562666.c,revFiles/94-B-562660-562666.c}: main)
+// False positives: (vlc/revFiles/82687c_07ffb2_src#input#decoder.c: DecoderFlush), (vlc/revFiles/82687c_07ffb2_src#input#decoder.c: DecoderPlayAudio), (vlc/revFiles/82687c_07ffb2_src#input#decoder.c: input_DecoderWaitBuffering)
+// Recall: 0.62, Precision: 0.50, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 0.88, Precision: 0.58
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_82687c_07ffb2_src#input#decoder.c: DecoderFlush
+ - vlc/prevFiles/prev_82687c_07ffb2_src#input#decoder.c: input_DecoderWaitBuffering
+ - vlc/prevFiles/prev_82687c_07ffb2_src#input#decoder.c: DecoderPlayAudio
+*/
+
+// ---------------------------------------------

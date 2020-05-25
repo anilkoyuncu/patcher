@@ -1,0 +1,20 @@
+@@
+expression E0, E1;
+typedef guint32;
+@@
+- wmem_map_remove(E0->channels, GUINT_TO_POINTER(E1)); 
++ wmem_map_remove(E0->channels, GUINT_TO_POINTER((guint32 )E1)); 
+// Infered from: (wireshark/{prevFiles/prev_c7d98e1_6d7b29_epan#dissectors#packet-amqp.c,revFiles/c7d98e1_6d7b29_epan#dissectors#packet-amqp.c}: dissect_amqp_0_9_method_channel_close)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

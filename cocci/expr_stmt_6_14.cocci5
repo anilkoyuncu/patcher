@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->stride = E1 >= 0 ? E1 :E0->width; 
++ E0->stride = E1 > 0 ? E1 :E0->width; 
+// Infered from: (FFmpeg/{prevFiles/prev_f3ec8a_c2bbcf_libavcodec#mediacodecdec.c,revFiles/f3ec8a_c2bbcf_libavcodec#mediacodecdec.c}: mediacodec_dec_parse_format)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

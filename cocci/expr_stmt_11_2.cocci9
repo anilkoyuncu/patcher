@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- smart_str_appendl(&E0, xmlOutputBufferGetContent(E1),  xmlOutputBufferGetSize(E1)); 
+// Infered from: (php-src/{prevFiles/prev_97b5da_d88edb_ext#dom#documenttype.c,revFiles/97b5da_d88edb_ext#dom#documenttype.c}: dom_documenttype_internal_subset_read)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

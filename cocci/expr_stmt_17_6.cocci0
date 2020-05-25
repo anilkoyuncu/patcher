@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gdk_window_raise(E0->window); 
++ gdk_window_raise(gtk_widget_get_window(E0)); 
+// Infered from: (wireshark/{prevFiles/prev_bb7650_f161dc_gtk#rpc_stat.c,revFiles/bb7650_f161dc_gtk#rpc_stat.c}: gtk_rpcstat_init), (wireshark/{prevFiles/prev_bb7650_f161dc_gtk#rpc_stat.c,revFiles/bb7650_f161dc_gtk#rpc_stat.c}: gtk_rpcstat_cb), (wireshark/{prevFiles/prev_bb7650_f161dc_gtk#sctp_stat_dlg.c,revFiles/bb7650_f161dc_gtk#sctp_stat_dlg.c}: gtk_sctpstat_dlg), (wireshark/{prevFiles/prev_bb7650_f161dc_gtk#voip_calls_dlg.c,revFiles/bb7650_f161dc_gtk#voip_calls_dlg.c}: voip_calls_init_tap), (wireshark/{prevFiles/prev_bb7650_f161dc_gtk#wlan_stat_dlg.c,revFiles/bb7650_f161dc_gtk#wlan_stat_dlg.c}: wlan_filter_toggle_dest), (wireshark/{prevFiles/prev_bb7650_f161dc_gtk#wlan_stat_dlg.c,revFiles/bb7650_f161dc_gtk#wlan_stat_dlg.c}: wlanstat_dlg_create), (wireshark/{prevFiles/prev_bb7650_f161dc_gtk#compare_stat.c,revFiles/bb7650_f161dc_gtk#compare_stat.c}: gtk_comparestat_cb)
+// Recall: 0.88, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

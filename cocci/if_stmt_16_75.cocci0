@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "can't create socket\n"); 
++ fprintf(stderr, "can't create socket: %s\n", strerror(errno)); 
+// Infered from: (tmux/{prevFiles/prev_bda970_75ec17_tmux.c,revFiles/bda970_75ec17_tmux.c}: main), (tmux/{prevFiles/prev_e4dc15_1bd085_tmux.c,revFiles/e4dc15_1bd085_tmux.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

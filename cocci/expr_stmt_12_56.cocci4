@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2;
+typedef uint8_t;
+@@
+- E0 = avcodec_encode_video(E1->p_context, (uint8_t *)E1->p_buffer_out,  p_context->height * p_context->width * 3, &E2); 
++ E0 = avcodec_encode_video(E1->p_context, (uint8_t *)E1->p_buffer_out,  E1->p_context->height * E1->p_context->width * 3,  &E2); 
+// Infered from: (vlc/{prevFiles/prev_daa358_20ef75_modules#codec#ffmpeg#encoder.c,revFiles/daa358_20ef75_modules#codec#ffmpeg#encoder.c}: EncodeVideo)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

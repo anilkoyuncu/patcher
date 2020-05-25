@@ -1,0 +1,31 @@
+@@
+@@
+- if (zend_hash_str_exists(&module_registry, "mbstring", sizeof("mbstring")))  
++ if (zend_hash_str_exists(&module_registry, "mbstring", sizeof("mbstring") - 1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_6cab75_0a134d_ext#exif#exif.c,revFiles/6cab75_0a134d_ext#exif#exif.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 10/12(83%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_6cab75_0a134d_ext#exif#exif.c: add_assoc_image_info
+ - vlc/prevFiles/prev_8a22ae_2e81569_modules#misc#webservices#acoustid.c: DoAcoustIdWebRequest
+*/
+
+// ---------------------------------------------

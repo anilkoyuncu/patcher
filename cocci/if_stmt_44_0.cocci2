@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef gint;
+@@
+- E0 = E1->xoffset - gtk_adjustment_get_value(E2); 
++ E0 = E1->xoffset - (gint )gtk_adjustment_get_value(E2); 
+// Infered from: (gtk/{prevFiles/prev_9ad6ac_90bcde_gtk#gtktextview.c,revFiles/9ad6ac_90bcde_gtk#gtktextview.c}: gtk_text_view_value_changed), (gtk/{prevFiles/prev_016f65_2aaba3_gtk#gtktextview.c,revFiles/016f65_2aaba3_gtk#gtktextview.c}: gtk_text_view_value_changed)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

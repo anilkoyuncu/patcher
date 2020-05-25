@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- if (E0->shm && _cairo_xlib_shm_surface_is_idle(E0->shm))  
++ if (E0->shm && _cairo_xlib_shm_surface_is_idle(E0->shm))  
+  {
+- cairo_surface_destroy(E0->shm); 
+- E0->shm = NULL; 
+- _cairo_damage_destroy(E0->base.damage); 
+- E0->base.damage = NULL; 
++ _cairo_xlib_surface_discard_shm(E0); 
+  }
+// Infered from: (cairo/{prevFiles/prev_5c59d9_97282e_src#cairo-xlib-surface.c,revFiles/5c59d9_97282e_src#cairo-xlib-surface.c}: _cairo_xlib_surface_flush)
+// Recall: 0.38, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.85, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+
+// ---------------------------------------------

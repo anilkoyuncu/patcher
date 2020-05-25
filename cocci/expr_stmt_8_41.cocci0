@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = dissect_ndr_pointer(E1, E0, E2, E3, E4,  srvsvc_dissect_SHARE_INFO_struct, NDR_POINTER_REF,  "Info", hf_srvsvc_share_info, NULL); 
++ E0 = dissect_ndr_pointer(E1, E0, E2, E3, E4,  srvsvc_dissect_SHARE_INFO_struct, NDR_POINTER_REF,  "Info", hf_srvsvc_share_info, 0); 
+// Infered from: (wireshark/{prevFiles/prev_1188ba_ad6e52_packet-dcerpc-srvsvc.c,revFiles/1188ba_ad6e52_packet-dcerpc-srvsvc.c}: srvsvc_dissect_net_share_get_info_reply)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

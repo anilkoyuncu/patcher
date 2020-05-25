@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef uint8_t;
+@@
+- E0->idle = E1; 
++ E0->idle = (uint8_t )(E1 >> 8); 
+// Infered from: (qemu/{prevFiles/prev_181a29_ef96779_hw#usb-hid.c,revFiles/181a29_ef96779_hw#usb-hid.c}: usb_hid_handle_control)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

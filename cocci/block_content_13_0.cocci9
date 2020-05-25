@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- __set_irq_handler_unlocked(E0->irq, E1); 
++ __irq_set_handler_locked(E0->irq, E1); 
+// Infered from: (linux/{prevFiles/prev_ec775d_7bfbc1f2_arch#powerpc#platforms#52xx#mpc52xx_pic.c,revFiles/ec775d_7bfbc1f2_arch#powerpc#platforms#52xx#mpc52xx_pic.c}: mpc52xx_extirq_set_type)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

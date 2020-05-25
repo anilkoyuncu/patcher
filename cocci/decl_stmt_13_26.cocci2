@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+@@
+- char *I0 = FCGI_GETENV(E1, "PATH_INFO"); 
++ char *I0 = E1 ? FCGI_GETENV(E1, "PATH_INFO") :NULL; 
+// Infered from: (php-src/{prevFiles/prev_a247c3_4febfc_sapi#fpm#fpm#fpm_main.c,revFiles/a247c3_4febfc_sapi#fpm#fpm#fpm_main.c}: sapi_cgi_register_variables)
+// False positives: (php-src/revFiles/a247c3_4febfc_sapi#fpm#fpm#fpm_main.c: init_request_info)
+// Recall: 0.20, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,31 @@
+@@
+@@
+- DMA_init(); 
++ DMA_init(0); 
+// Infered from: (qemu/{prevFiles/prev_7c29d0_514fb8_hw#pc.c,revFiles/7c29d0_514fb8_hw#pc.c}: pc_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 24 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.65, Precision: 1.00
+// -- General --
+// Functions fully changed: 29/36(80%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_49dba5_ab620e_modules#demux#rawvid.c: Open
+*/
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_71eba4_4e141d_redis.c: feedAppendOnlyFile
+ - vlc/prevFiles/prev_affd79_89e655_src#win32#plugin.c: module_Load
+ - git/prevFiles/prev_9240be_a1c757_sequencer.c: run_git_commit
+ - vlc/prevFiles/prev_e7d409_8172a7_modules#misc#gnutls.c: OpenClient
+ - vlc/prevFiles/prev_49dba5_ab620e_modules#demux#rawvid.c: 
+ - git/prevFiles/prev_000942_9240be_sequencer.c: run_git_commit
+*/
+
+// ---------------------------------------------

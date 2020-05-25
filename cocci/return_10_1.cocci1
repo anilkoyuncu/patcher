@@ -1,0 +1,24 @@
+@@
+type T2;
+expression E0, E1, E3, E4;
+@@
+- return E0(E1, (T2 *)E3, E4); 
++ return E0(E1, E3, E4); 
+// Infered from: (linux/{prevFiles/prev_e31926_29a6b6_net#ipv4#af_inet.c,revFiles/e31926_29a6b6_net#ipv4#af_inet.c}: inet_dgram_connect), (openssh-portable/{prevFiles/prev_4b2e2d_75b8af_sshbuf-getput-basic.c,revFiles/4b2e2d_75b8af_sshbuf-getput-basic.c}: sshbuf_put_cstring)
+// Recall: 0.44, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_179ae5_599b4c_libavcodec#proresdec.c: decode_slice
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,45 @@
+@@
+expression E0;
+@@
+- broadway_server_read_all_input_nonblocking(E0); 
++ if (!broadway_server_read_all_input_nonblocking(E0))  
++ {
++ return FALSE; 
++ }
+// Infered from: (gtk/{prevFiles/prev_fffbe61_030aa5_gdk#broadway#broadway-server.c,revFiles/fffbe61_030aa5_gdk#broadway#broadway-server.c}: input_data_cb)
+// False positives: (gtk/revFiles/fffbe61_030aa5_gdk#broadway#broadway-server.c: broadway_server_consume_all_input)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.47, Precision: 0.70
+// -- Node Change --
+// Recall: 0.31, Precision: 0.63
+// -- General --
+// Functions fully changed: 5/18(27%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_73abc3_8888c7_libavcodec#aacdec.c: decode_audio_specific_config
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_fe4c76_a981d1_libavcodec#roqvideoenc.c: roq_encode_frame
+ - FFmpeg/prevFiles/prev_ccb76a_2af8f2_libavcodec#cook.c: joint_decode
+ - FFmpeg/prevFiles/prev_383555_27d23a_libavfilter#avfiltergraph.c: reduce_formats
+ - FFmpeg/prevFiles/prev_fe4c76_a981d1_libavcodec#roqvideoenc.c: roq_encode_video
+ - FFmpeg/prevFiles/prev_383555_27d23a_libavfilter#avfiltergraph.c: 
+ - FFmpeg/prevFiles/prev_ccb76a_2af8f2_libavcodec#cook.c: decouple_info
+ - FFmpeg/prevFiles/prev_383555_27d23a_libavfilter#avfiltergraph.c: graph_config_formats
+ - gtk/prevFiles/prev_fffbe61_030aa5_gdk#broadway#broadway-server.c: broadway_server_read_all_input_nonblocking
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_ccb76a_2af8f2_libavcodec#cook.c: decode_bytes_and_gain
+ - FFmpeg/prevFiles/prev_73abc3_8888c7_libavcodec#aacdec.c: latm_decode_frame
+ - FFmpeg/prevFiles/prev_73abc3_8888c7_libavcodec#aacdec.c: aac_decode_frame
+ - gtk/prevFiles/prev_fffbe61_030aa5_gdk#broadway#broadway-server.c: broadway_server_consume_all_input
+*/
+
+// ---------------------------------------------

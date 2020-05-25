@@ -1,0 +1,19 @@
+@@
+expression E1, E0;
+@@
+- dev_set_drvdata(&E0->dev, E1); 
++ usb_set_intfdata(E0, E1); 
+// Infered from: (linux/{prevFiles/prev_f4e9749_42a6e6_sound#usb#caiaq#caiaq-device.c,revFiles/f4e9749_42a6e6_sound#usb#caiaq#caiaq-device.c}: snd_probe), (linux/{prevFiles/prev_f4e9749_42a6e6_sound#usb#usx2y#usbusx2y.c,revFiles/f4e9749_42a6e6_sound#usb#usx2y#usbusx2y.c}: snd_usX2Y_probe)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

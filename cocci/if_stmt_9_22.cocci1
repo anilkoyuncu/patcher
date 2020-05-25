@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (asprintf(E0, "\\\\192.168.0.1\\TCP\\1242") < 0)  
++ if (asprintf(&E0, "\\\\192.168.0.1\\TCP\\1242") < 0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_f5cb63_e1b2c3_modules#access#mms#mmstu.c,revFiles/f5cb63_e1b2c3_modules#access#mms#mmstu.c}: MMSOpen)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

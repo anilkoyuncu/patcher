@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = BIO_wpending(SSL_get_wbio(E1)) + DTLS1_RT_HEADER_LENGTH + E2 + E3; 
++ E0 = BIO_wpending(E1->wbio) + DTLS1_RT_HEADER_LENGTH + E2 + E3; 
+// Infered from: (openssl/{prevFiles/prev_2e7dc7_590ed3_ssl#statem#statem_dtls.c,revFiles/2e7dc7_590ed3_ssl#statem#statem_dtls.c}: dtls1_do_write)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

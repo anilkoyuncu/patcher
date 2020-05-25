@@ -1,0 +1,13 @@
+@@
+expression E1, E0, E2, E3;
+@@
+- E0 = watchdog_register_device(E1); 
++ watchdog_stop_on_reboot(E1); 
++ E0 = devm_watchdog_register_device(&E2->dev, &E3->wdt_dev); 
+  ...
+- platform_set_drvdata(E2, E3); 
+// Infered from: (linux/{prevFiles/prev_c8841a6_42f826_drivers#watchdog#meson_wdt.c,revFiles/c8841a6_42f826_drivers#watchdog#meson_wdt.c}: meson_wdt_probe)
+// False positives: (linux/revFiles/72dbc2_dcc3ce0_drivers#watchdog#sirfsoc_wdt.c: sirfsoc_wdt_probe)
+// Recall: 0.04, Precision: 0.75, Matching recall: 0.46
+
+// ---------------------------------------------

@@ -1,0 +1,30 @@
+@@
+@@
+- APR_SUCCESS; 
++ return APR_SUCCESS; 
+// Infered from: (apr/{prevFiles/prev_bf4566_ab8371_file_io#win32#open.c,revFiles/bf4566_ab8371_file_io#win32#open.c}: ap_eof)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 12 rules):
+// -- Edit Location --
+// Recall: 0.95, Precision: 0.91
+// -- Node Change --
+// Recall: 0.92, Precision: 0.87
+// -- General --
+// Functions fully changed: 18/24(75%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_84f231_dbd02a_Zend#zend_API.c: zend_update_class_constants
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_f6d3a1_e66123_modules#demux#avformat#demux.c: Control
+ - vlc/prevFiles/prev_b0293e_d8d34f_modules#access#bluray.c: blurayControl
+ - vlc/prevFiles/prev_3a62db_ec9b71_src#input#control.c: input_vaControl
+ - php-src/prevFiles/prev_f81498_ffaf8b_ext#mysqlnd#mysqlnd_ps.c: mysqlnd_stmt_execute_parse_response
+ - vlc/prevFiles/prev_99f48b_780325_modules#demux#mp4#mp4.c: MP4_frg_GetChunk
+*/
+
+// ---------------------------------------------

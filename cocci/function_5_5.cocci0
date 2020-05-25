@@ -1,0 +1,13 @@
+@@
+identifier I1, I2, I3, I4;
+expression E0;
+@@
+- if (E0)  
+- {
+- qemu_run_timers(&active_timers[I1], qemu_get_clock(I2)); 
+- }
+- qemu_run_timers(&active_timers[I3], qemu_get_clock(I4)); 
+// Infered from: (gtk/{prevFiles/prev_713fce_d0137e_gdk#wayland#gdkdisplay-wayland.c,revFiles/713fce_d0137e_gdk#wayland#gdkdisplay-wayland.c}: output_handle_scale), (curl/{prevFiles/prev_72c14b_0413e2_lib#ftp.c,revFiles/72c14b_0413e2_lib#ftp.c}: ftp_state_use_port), (qemu/{prevFiles/prev_e6bf7d_2cade6a_target-sparc#helper.c,revFiles/e6bf7d_2cade6a_target-sparc#helper.c}: do_interrupt), (qemu/{prevFiles/prev_357c69_9c99d2_vl.c,revFiles/357c69_9c99d2_vl.c}: try_to_rearm_timer)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 & UART_IIR_THRI)  
++ if ((E0 & UART_IIR_ID) == UART_IIR_THRI)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_cdee7b_2f4f22_hw#serial.c,revFiles/cdee7b_2f4f22_hw#serial.c}: serial_ioport_read)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I1;
+expression E0;
+@@
+- E0 = kmalloc(sizeof(struct I1 ), GFP_ATOMIC); 
++ E0 = kmalloc(sizeof(*E0), GFP_ATOMIC); 
+// Infered from: (linux/{prevFiles/prev_bd9dc6_3ae707_drivers#staging#rtl8712#rtl871x_mp.c,revFiles/bd9dc6_3ae707_drivers#staging#rtl8712#rtl871x_mp.c}: r8712_SetChannel), (linux/{prevFiles/prev_bd9dc6_3ae707_drivers#staging#rtl8712#rtl871x_io.c,revFiles/bd9dc6_3ae707_drivers#staging#rtl8712#rtl871x_io.c}: r8712_alloc_io_queue)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

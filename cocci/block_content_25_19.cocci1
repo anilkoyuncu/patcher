@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->error(E0, "unknown command: %s", E1->argv[0]); 
++ E0->error(E0, "unknown command: %s", E1->argv[1]); 
+// Infered from: (tmux/{prevFiles/prev_137742_3de170_cmd-bind-key.c,revFiles/137742_3de170_cmd-bind-key.c}: cmd_bind_key_table), (tmux/{prevFiles/prev_e3defd_193018_cmd-bind-key.c,revFiles/e3defd_193018_cmd-bind-key.c}: cmd_bind_key_table)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

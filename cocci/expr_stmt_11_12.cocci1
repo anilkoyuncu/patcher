@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef input_title_t;
+@@
+- *E0 = malloc(sizeof(input_title_t **)); 
++ *E0 = malloc(sizeof(input_title_t *)); 
+// Infered from: (vlc/{prevFiles/prev_f6d3a1_e66123_modules#demux#avformat#demux.c,revFiles/f6d3a1_e66123_modules#demux#avformat#demux.c}: Control), (vlc/{prevFiles/prev_2c470d_513a51_modules#access#vdr.c,revFiles/2c470d_513a51_modules#access#vdr.c}: Control), (vlc/{prevFiles/prev_99f48b_780325_modules#demux#mp4#mp4.c,revFiles/99f48b_780325_modules#demux#mp4#mp4.c}: Control)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return E0->flush(E1, E2); 
++ return (E0->flush(E1, E2) == GST_FLOW_OK); 
+// Infered from: (gstreamer/{prevFiles/prev_1a3bf3_96b88f_libs#gst#base#gstaggregator.c,revFiles/1a3bf3_96b88f_libs#gst#base#gstaggregator.c}: gst_aggregator_pad_flush)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

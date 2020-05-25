@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (!zend_normalize_identifier(&E0, &E1, E2.u, E3, 0))  
++ if (zend_normalize_identifier(&E0, &E1, E2.u, E3, 0) == FAILURE)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_d350e4_e454e2_ext#standard#array.c,revFiles/d350e4_e454e2_ext#standard#array.c}: php_compact_var)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.89, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef mbedtls_ssl_context;
+@@
+- mbedtls_ssl_context *I0 = (mbedtls_ssl_context *)&E1->ssl[E2].ssl; 
+- return I0->in_msglen != 0; 
++ return mbedtls_ssl_get_bytes_avail(&E1->ssl[E2].ssl) != 0; 
+// Infered from: (curl/{prevFiles/prev_a7e434_3cc222_lib#vtls#mbedtls.c,revFiles/a7e434_3cc222_lib#vtls#mbedtls.c}: Curl_mbedtls_data_pending)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

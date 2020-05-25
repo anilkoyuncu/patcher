@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- return error("patch fragment without header at line %d: %.*s", linenr,  (int )E0 - 1, E1); 
++ die("patch fragment without header at line %d: %.*s", linenr, (int )E0 - 1,  E1); 
+// Infered from: (git/{prevFiles/prev_653414_5a17b5_builtin-apply.c,revFiles/653414_5a17b5_builtin-apply.c}: find_header)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_67783b_039c58_Objects#typeobject.c: object_format
+ - FFmpeg/prevFiles/prev_674cc2_331a33_libavfilter#vf_nnedi.c: init
+*/
+
+// ---------------------------------------------

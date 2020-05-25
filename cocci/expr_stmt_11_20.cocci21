@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "fsdev: No id specified\n"); 
++ error_report("fsdev: No id specified"); 
+// Infered from: (qemu/{prevFiles/prev_ea753f_63325b_fsdev#qemu-fsdev.c,revFiles/ea753f_63325b_fsdev#qemu-fsdev.c}: qemu_fsdev_add)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

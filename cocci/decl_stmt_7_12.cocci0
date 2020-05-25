@@ -1,0 +1,9 @@
+@@
+typedef wilc_spi_t;
+@@
+- memset(&g_spi, 0, sizeof(wilc_spi_t )); 
++ memset(&g_spi, 0, sizeof(struct wilc_spi )); 
+// Infered from: (linux/{prevFiles/prev_6a707a9_5bc321_drivers#staging#wilc1000#wilc_spi.c,revFiles/6a707a9_5bc321_drivers#staging#wilc1000#wilc_spi.c}: wilc_spi_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

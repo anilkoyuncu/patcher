@@ -1,0 +1,8 @@
+@@
+@@
+- PHPDBG_G(last)->handler(); 
++ return PHPDBG_G(last)->handler(); 
+// Infered from: (php-src/{prevFiles/prev_515f78_44d272_phpdbg_prompt.c,revFiles/515f78_44d272_phpdbg_prompt.c}: phpdbg_interactive)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

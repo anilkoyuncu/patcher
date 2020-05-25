@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef uint32_t;
+@@
+- uint32_t I0 = (E1 - E2->priority_base) >> 2; 
++ uint32_t I0 = (E1 - E2->pending_base) >> 2; 
+// Infered from: (qemu/{prevFiles/prev_e41848_ef9e41_hw#riscv#sifive_plic.c,revFiles/e41848_ef9e41_hw#riscv#sifive_plic.c}: sifive_plic_read)
+// False positives: (qemu/revFiles/e41848_ef9e41_hw#riscv#sifive_plic.c: sifive_plic_read), (qemu/revFiles/e41848_ef9e41_hw#riscv#sifive_plic.c: sifive_plic_write)
+// Recall: 0.02, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

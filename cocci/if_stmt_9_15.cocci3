@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0)  
+- {
+- ...
+- E1->showed_packed_warning = 1; 
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_1f47c2_6eb695_libavcodec#mpeg4videodec.c,revFiles/1f47c2_6eb695_libavcodec#mpeg4videodec.c}: decode_user_data)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

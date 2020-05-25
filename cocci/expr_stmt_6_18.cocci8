@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 += E1 - E2->width; 
++ E0 += (E1 - E2->width) * 4; 
+// Infered from: (FFmpeg/{prevFiles/prev_6bcc82_cbf1dc_libavcodec#r210enc.c,revFiles/6bcc82_cbf1dc_libavcodec#r210enc.c}: encode_frame)
+// False positives: (FFmpeg/revFiles/6a6a06_750b10_libavcodec#r210dec.c: decode_frame)
+// Recall: 0.06, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

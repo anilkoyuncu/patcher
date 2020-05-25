@@ -1,0 +1,42 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- for(E0 = 0, E1 = E2;E0 < E3;E0++, E1 = (char *)E1 + php_tiff_bytes_per_format[  E4])  
++ for(E0 = 0, E1 = E2;E0 < (size_t )E3;E0++, E1 = (char *)E1 + php_tiff_bytes_per_format[  E4])  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_a84133_fb37c4_ext#exif#exif.c,revFiles/a84133_fb37c4_ext#exif#exif.c}: exif_iif_add_value)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 0.92
+// -- Node Change --
+// Recall: 0.45, Precision: 0.85
+// -- General --
+// Functions fully changed: 11/25(44%)
+
+/*
+Functions where the patch did not apply:
+ - libarchive/prevFiles/prev_f5e691_9af877_libarchive#test#test_write_format_iso9660_filename.c: create_iso_image
+ - openssl/prevFiles/prev_f920c5_05fc70_crypto#rc4#rc4test.c: main
+ - php-src/prevFiles/prev_948edd_439038_ext#session#mod_files.c: ps_files_path_create
+ - libarchive/prevFiles/prev_433f74_2b046e_libarchive#test#test_write_format_iso9660_filename.c: create_iso_image
+ - FFmpeg/prevFiles/prev_d1916d_0673ed_libavcodec#dsputil.c: diff_bytes_c
+ - FFmpeg/prevFiles/prev_454a11_86736f_libavcodec#dsputil.c: diff_bytes_c
+ - wireshark/prevFiles/prev_799479_411249_epan#dissectors#packet-ospf.c: dissect_ospf_lsa_mpls
+ - FFmpeg/prevFiles/prev_454a11_86736f_libavcodec#dsputil.c: add_bytes_c
+ - openssl/prevFiles/prev_275459_2ce90b_apps#enc.c: MAIN
+ - FFmpeg/prevFiles/prev_d1916d_0673ed_libavcodec#dsputil.c: add_bytes_c
+ - FFmpeg/prevFiles/prev_43abef_282bb0_libavformat#rpl.c: read_line
+ - vlc/prevFiles/prev_e592b8_7e115e_modules#access_output#livehttp.c: isFirstItemRemovable
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_a84133_fb37c4_ext#exif#exif.c: exif_get_sectionlist
+ - FFmpeg/prevFiles/prev_43abef_282bb0_libavformat#rpl.c: rpl_read_header
+*/
+
+// ---------------------------------------------

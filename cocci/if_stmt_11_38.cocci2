@@ -1,0 +1,15 @@
+@@
+expression E0, E1, E2, E3;
+typedef DWORD;
+typedef LPOVERLAPPED;
+typedef LPVOID;
+@@
+- if (ReadConsole(E0->handle, (LPVOID )E1, (DWORD )E2, &E3, (LPOVERLAPPED )NULL) == TRUE)  
++ if (ReadConsole(E0->handle, (LPVOID )E1, (DWORD )E2, &E3, NULL) == TRUE)  
+  {
+  ...
+  }
+// Infered from: (tcl/{prevFiles/prev_693fab_57bcf0_win#tclWinConsole.c,revFiles/693fab_57bcf0_win#tclWinConsole.c}: ConsoleInputProc)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

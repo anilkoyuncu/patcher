@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2;
+@@
+- return omap_badwidth_write8(E0, E1, E2); 
++ omap_badwidth_write8(E0, E1, E2); 
++ return; 
+// Infered from: (qemu/{prevFiles/prev_77a825_0289a4_hw#char#omap_uart.c,revFiles/77a825_0289a4_hw#char#omap_uart.c}: omap_uart_write)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.77, Precision: 1.00
+// -- Node Change --
+// Recall: 0.77, Precision: 1.00
+// -- General --
+// Functions fully changed: 10/13(76%)
+
+/*
+Functions where the patch did not apply:
+ - cairo/prevFiles/prev_8345fe_b6c371_src#cairo-spline.c: _cairo_spline_decompose_into
+ - php-src/prevFiles/prev_309025_396aff_ext#spl#spl_array.c: spl_array_write_property
+ - FFmpeg/prevFiles/prev_300018_0bf980_libavcodec#pngenc.c: png_write_image_data
+*/
+
+// ---------------------------------------------

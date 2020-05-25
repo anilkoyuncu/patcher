@@ -1,0 +1,9 @@
+@@
+identifier I0 = {cpu_interrupt ,cpu_reset_interrupt };
+@@
+- I0(cpu_single_env, CPU_INTERRUPT_HARD); 
++ I0(first_cpu, CPU_INTERRUPT_HARD); 
+// Infered from: (qemu/{prevFiles/prev_c68ea7_173d6c_hw#heathrow_pic.c,revFiles/c68ea7_173d6c_hw#heathrow_pic.c}: heathrow_pic_update), (qemu/{prevFiles/prev_c68ea7_173d6c_hw#heathrow_pic.c,revFiles/c68ea7_173d6c_hw#heathrow_pic.c}: heathrow_pic_update), (qemu/{prevFiles/prev_c68ea7_173d6c_hw#ppc_prep.c,revFiles/c68ea7_173d6c_hw#ppc_prep.c}: pic_irq_request), (qemu/{prevFiles/prev_c68ea7_173d6c_hw#ppc_prep.c,revFiles/c68ea7_173d6c_hw#ppc_prep.c}: pic_irq_request)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

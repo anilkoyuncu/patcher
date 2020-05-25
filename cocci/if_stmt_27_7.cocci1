@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0->motion_val[E1] = E0->motion_val_base[E1] + 2; 
++ E0->motion_val[E1] = E0->motion_val_base[E1] + 4; 
+// Infered from: (FFmpeg/{prevFiles/prev_02dc89_d4e87f_libavcodec#mpegvideo.c,revFiles/02dc89_d4e87f_libavcodec#mpegvideo.c}: alloc_picture), (FFmpeg/{prevFiles/prev_02dc89_d4e87f_libavcodec#mpegvideo.c,revFiles/02dc89_d4e87f_libavcodec#mpegvideo.c}: alloc_picture)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.75
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_37923c_67086c_libavcodec#mpegvideo.c: alloc_picture
+*/
+
+// ---------------------------------------------

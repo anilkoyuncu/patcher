@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- stl_phys(E0, E1->host_features); 
++ stl_phys(E0, bswap32(E1->host_features)); 
+// Infered from: (qemu/{prevFiles/prev_8f1675_7b3da9_hw#s390-virtio-bus.c,revFiles/8f1675_7b3da9_hw#s390-virtio-bus.c}: s390_virtio_device_sync)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.83
+// -- Node Change --
+// Recall: 1.00, Precision: 0.86
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_0387d9_fe33cc_target-sparc#translate.c: disas_sparc_insn
+*/
+
+// ---------------------------------------------

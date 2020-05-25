@@ -1,0 +1,47 @@
+@@
+expression E0;
+@@
+- opal_output(orte_clean_output, "Reported: %d(%d) daemons %d(%d) procs",  (int )num_daemons_reported, (int )orte_process_info.num_procs,  (int )E0->num_launched, (int )E0->num_procs); 
++ opal_output(orte_clean_output,  "Reported: %d (out of %d) daemons - %d (out of %d) procs",  (int )num_daemons_reported, (int )orte_process_info.num_procs,  (int )E0->num_launched, (int )E0->num_procs); 
+// Infered from: (ompi/{prevFiles/prev_dbb3cb_a489f3_orte#mca#plm#base#plm_base_launch_support.c,revFiles/dbb3cb_a489f3_orte#mca#plm#base#plm_base_launch_support.c}: orte_plm_base_app_report_launch)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.93, Precision: 0.47
+// -- Node Change --
+// Recall: 0.82, Precision: 0.39
+// -- General --
+// Functions fully changed: 9/31(29%)
+
+/*
+Functions where the patch did not apply:
+ - gstreamer/prevFiles/prev_6697f1_4c4775_libs#gst#base#gstaggregator.c: gst_aggregator_class_init
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_9ffcb9_1a89d9_modules#stream_filter#httplive.c: hls_New
+ - vlc/prevFiles/prev_9ffcb9_1a89d9_modules#stream_filter#httplive.c: parse_M3U8
+ - openssh-portable/prevFiles/prev_83f8ff_369d61_sshd.c: close_listen_socks
+ - vlc/prevFiles/prev_9ffcb9_1a89d9_modules#stream_filter#httplive.c: parse_SegmentInformation
+ - openssh-portable/prevFiles/prev_83f8ff_369d61_sshd.c: privsep_preauth
+ - openssh-portable/prevFiles/prev_83f8ff_369d61_sshd.c: privsep_postauth
+ - openssh-portable/prevFiles/prev_83f8ff_369d61_sshd.c: server_accept_inetd
+ - openssh-portable/prevFiles/prev_83f8ff_369d61_sshd.c: main
+ - curl/prevFiles/prev_e96371_dc1123_src#main.c: formparse
+ - vlc/prevFiles/prev_9ffcb9_1a89d9_modules#stream_filter#httplive.c: hls_Thread
+ - php-src/prevFiles/prev_7f81a4_ac16ad_ext#pgsql#pgsql.c: PHP_RINIT_FUNCTION
+ - cpython/prevFiles/prev_b183a2_6974a5_Modules#_testcapimodule.c: test_L_code
+ - curl/prevFiles/prev_e96371_dc1123_src#main.c: msdosify
+ - curl/prevFiles/prev_e96371_dc1123_src#main.c: getparameter
+ - curl/prevFiles/prev_e96371_dc1123_src#main.c: ftruncate64
+ - curl/prevFiles/prev_e96371_dc1123_src#main.c: operate
+ - ompi/prevFiles/prev_dbb3cb_a489f3_orte#mca#plm#base#plm_base_launch_support.c: 
+ - openssh-portable/prevFiles/prev_83f8ff_369d61_sshd.c: server_accept_loop
+ - gstreamer/prevFiles/prev_6697f1_4c4775_libs#gst#base#gstaggregator.c: gst_aggregator_init
+ - vlc/prevFiles/prev_9ffcb9_1a89d9_modules#stream_filter#httplive.c: Open
+ - php-src/prevFiles/prev_1027dfc_ea6ed5_main#network.c: php_connect_nonb
+*/
+
+// ---------------------------------------------

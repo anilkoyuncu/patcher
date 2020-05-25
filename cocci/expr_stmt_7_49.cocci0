@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->gather.pp_last = &E1->u.p_pes->gather.p_data; 
++ E0->gather.pp_last = &E0->gather.p_data; 
+// Infered from: (vlc/{prevFiles/prev_01423a_e2805c_modules#demux#mpeg#ts.c,revFiles/01423a_e2805c_modules#demux#mpeg#ts.c}: PushPESBlock)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

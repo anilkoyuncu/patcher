@@ -1,0 +1,18 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef u8;
+@@
+  u8 *I0; 
+  ...
+- if (E1)  
++ if (!I0)  
+  {
+- dev_err(E2->adapter->dev, " failed to alloc bss_desc\n"); 
++ dev_err(E2->adapter->dev, " failed to alloc beacon_ie\n"); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_f75032_8b0be9_drivers#net#wireless#mwifiex#scan.c,revFiles/f75032_8b0be9_drivers#net#wireless#mwifiex#scan.c}: mwifiex_update_curr_bss_params)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

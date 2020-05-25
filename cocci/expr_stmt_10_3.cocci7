@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(&E0->pci->dev, "Error in %s: chip->srb = %p\n", __func__, E1->srb); 
++ dev_err(&E0->pci->dev, "Error: chip->srb = %p\n", E1->srb); 
+// Infered from: (linux/{prevFiles/prev_651cd1_ce82410c_drivers#staging#rts5208#rtsx.c,revFiles/651cd1_ce82410c_drivers#staging#rts5208#rtsx.c}: queuecommand_lck)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

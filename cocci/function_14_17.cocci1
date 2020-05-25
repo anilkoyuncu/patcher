@@ -1,0 +1,47 @@
+@@
+identifier I0;
+assignment operator A5, A2;
+expression E6, E3, E1, E4;
+@@
+- int I0 = 0; 
+  ...
+- if (I0)  
+- {
+- E1 A2 E3; 
+- }
+- E4 A5 E6; 
+// Infered from: (FFmpeg/{prevFiles/prev_6bcafa_bb2856_libav#grab.c,revFiles/6bcafa_bb2856_libav#grab.c}: grab_read_packet)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.12, Precision: 1.00
+// -- Node Change --
+// Recall: 0.26, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/17(5%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_6bcafa_bb2856_libav#grab.c: grab_read_packet
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_9dc1a1_a82e5f_modules#codec#dvbsub.c: render
+ - linux/prevFiles/prev_327cded_d94b27_drivers#net#caif#caif_serial.c: ldisc_receive
+ - FFmpeg/prevFiles/prev_4f123a_78a041_libavformat#avisynth.c: avisynth_read_packet
+ - qemu/prevFiles/prev_7e3d98_8bfea1_block.c: bdrv_move_feature_fields
+ - vlc/prevFiles/prev_a5bf56_d305c3_modules#stream_out#switcher.c: VideoGetBuffer
+ - FFmpeg/prevFiles/prev_a6f2c0_1599c4_libavcodec#motion_est.c: ff_init_me
+ - curl/prevFiles/prev_4015fa_49d73d_lib#url.c: call_extract_if_dead
+ - FFmpeg/prevFiles/prev_6bcafa_bb2856_libav#grab.c: 
+ - vlc/prevFiles/prev_a5bf56_d305c3_modules#stream_out#switcher.c: AudioGetBuffer
+ - FFmpeg/prevFiles/prev_e72690_4db2bf_libavcodec#h264_picture.c: ff_h264_ref_picture
+ - ompi/prevFiles/prev_dd82bd_712514_ompi#mca#btl#usnic#btl_usnic_endpoint.c: endpoint_construct
+ - FFmpeg/prevFiles/prev_a2e6c7_172938_libavformat#rawdec.c: ff_raw_video_read_header
+ - FFmpeg/prevFiles/prev_6bcafa_bb2856_libav#grab.c: grab_read_header
+ - FFmpeg/prevFiles/prev_cdf58f_a312f7_libavcodec#avpacket.c: av_packet_copy_props
+*/
+
+// ---------------------------------------------

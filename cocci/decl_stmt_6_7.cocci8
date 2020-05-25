@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef vlc_fourcc_t;
+@@
+- vlc_fourcc_t I0 = E1->fmt_out.i_codec; 
++ vlc_fourcc_t I0 = E1->fmt_in.i_codec; 
+// Infered from: (vlc/{prevFiles/prev_5d53aa_d913ae_modules#packetizer#copy.c,revFiles/5d53aa_d913ae_modules#packetizer#copy.c}: Open)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

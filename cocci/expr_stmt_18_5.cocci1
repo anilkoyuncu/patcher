@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2, E3;
+typedef guint8;
+@@
+- expert_add_info_format(E0, E1, PI_UNDECODED, PI_NOTE,  "DUALSTRINGARRAY: multiple IP's %s %s",  ip_to_str((char *)&E2), ip_to_str((char *)&E3)); 
++ expert_add_info_format(E0, E1, PI_UNDECODED, PI_NOTE,  "DUALSTRINGARRAY: multiple IP's %s %s",  ip_to_str((guint8 *)&E2), ip_to_str((guint8 *)&E3)); 
+// Infered from: (wireshark/{prevFiles/prev_597ee6_974a0d_epan#dissectors#packet-dcom.c,revFiles/597ee6_974a0d_epan#dissectors#packet-dcom.c}: dissect_dcom_DUALSTRINGARRAY)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - gmp/prevFiles/prev_bda69d_e7a876_mpz#clears.c: mpz_clears
+ - php-src/prevFiles/prev_bced21_1e11e7_Zend#zend_API.c: zend_is_callable
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (*E0 && isspace(*E0))  
++ while (*E0 && isspace((int )(*E0)))  
+  {
+  ...
+  }
+// Infered from: (cmake/{prevFiles/prev_05e162_589cf3_Source#CursesDialog#form#fty_ipv4.c,revFiles/05e162_589cf3_Source#CursesDialog#form#fty_ipv4.c}: Check_IPV4_Field)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

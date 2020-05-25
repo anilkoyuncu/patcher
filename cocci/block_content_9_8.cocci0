@@ -1,0 +1,9 @@
+@@
+identifier I1;
+expression E0;
+@@
+- register_stat_cmd_arg(E0, I1); 
+// Infered from: (wireshark/{prevFiles/prev_ce8ac3_650647_gtk#mtp3_stat.c,revFiles/ce8ac3_650647_gtk#mtp3_stat.c}: register_tap_listener_gtkmtp3_stat), (wireshark/{prevFiles/prev_ce8ac3_650647_gtk#ansi_map_stat.c,revFiles/ce8ac3_650647_gtk#ansi_map_stat.c}: register_tap_listener_gtkansi_map_stat), (wireshark/{prevFiles/prev_ce8ac3_650647_gtk#gsm_map_stat.c,revFiles/ce8ac3_650647_gtk#gsm_map_stat.c}: register_tap_listener_gtkgsm_map_stat)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

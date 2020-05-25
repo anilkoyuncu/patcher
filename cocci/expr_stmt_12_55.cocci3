@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- proto_tree_add_string_format(E0,  ((E1 & 0x07) == 3) ? hf_gsm_a_imeisv :hf_gsm_a_imsi,  E2, E3, E4 - (E3 - E5), a_bigbuf,  "BCD Digits: %s", a_bigbuf); 
++ proto_tree_add_string_format(E0,  ((E1 & 0x07) == 3) ? hf_gsm_a_imeisv :hf_gsm_a_imsi,  E2, E3 - 1, E4 - (E3 - E5) + 1, a_bigbuf,  "BCD Digits: %s", a_bigbuf); 
+// Infered from: (wireshark/{prevFiles/prev_448b9a_0b1e02_epan#dissectors#packet-gsm_a_common.c,revFiles/448b9a_0b1e02_epan#dissectors#packet-gsm_a_common.c}: de_mid)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.35, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - cairo/prevFiles/prev_70bb2a_dcab50_src#cairo-ft-font.c: _compute_transform
+*/
+
+// ---------------------------------------------

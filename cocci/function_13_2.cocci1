@@ -1,0 +1,10 @@
+@@
+@@
+- perror("opening stream socket"); 
+- logmsg("Error opening socket"); 
++ error = SOCKERRNO; 
++ logmsg("Error creating socket: (%d) %s", error, strerror(error)); 
+// Infered from: (curl/{prevFiles/prev_094afb_1fddcb_tests#server#tftpd.c,revFiles/094afb_1fddcb_tests#server#tftpd.c}: main)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

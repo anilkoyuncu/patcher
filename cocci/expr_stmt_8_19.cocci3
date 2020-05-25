@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- av_frame_unref(E0); 
++ av_frame_free(&E0); 
+// Infered from: (FFmpeg/{prevFiles/prev_286153_f566ac_libavfilter#vf_alphaextract.c,revFiles/286153_f566ac_libavfilter#vf_alphaextract.c}: filter_frame), (FFmpeg/{prevFiles/prev_2b27f7_f7ab23_libavfilter#vf_thumbnail.c,revFiles/2b27f7_f7ab23_libavfilter#vf_thumbnail.c}: get_best_frame), (FFmpeg/{prevFiles/prev_2b27f7_f7ab23_libavfilter#vf_thumbnail.c,revFiles/2b27f7_f7ab23_libavfilter#vf_thumbnail.c}: uninit), (FFmpeg/{prevFiles/prev_62f56f_70db0c_libavfilter#buffersink.c,revFiles/62f56f_70db0c_libavfilter#buffersink.c}: uninit)
+// False positives: (FFmpeg/revFiles/0c1d66_885a9d_avconv_vaapi.c: vaapi_retrieve_data), (FFmpeg/revFiles/4213fc_e55e09_libavcodec#svq1dec.c: svq1_decode_frame), (FFmpeg/revFiles/4213fc_e55e09_libavcodec#svq1dec.c: svq1_flush), (FFmpeg/revFiles/42a2ed_6dfda3_tools#target_dec_fuzzer.c: LLVMFuzzerTestOneInput), (FFmpeg/revFiles/e1c789_006286_libavcodec#vp9.c: vp9_decode_flush), (FFmpeg/revFiles/e1c789_006286_libavcodec#vp9.c: vp9_decode_frame), (FFmpeg/revFiles/e1c789_006286_libavcodec#vp9.c: vp9_decode_free)
+// Recall: 0.10, Precision: 0.33, Matching recall: 0.67
+
+// ---------------------------------------------

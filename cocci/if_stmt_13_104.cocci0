@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0.num > 0 && E0.den > 0 && av_q2d(E0) < av_q2d(E1) * 0.7 && fabs(  1.0 - av_q2d(av_div_q(E2, E1))) > 0.1)  
++ if (E0.num > 0 && E0.den > 0 && (E1.num == 0 || av_q2d(E0) < av_q2d(E1) * 0.7 && fabs(  1.0 - av_q2d(av_div_q(E2, E1))) > 0.1))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e8f814_238247_libavformat#utils.c,revFiles/e8f814_238247_libavformat#utils.c}: av_guess_frame_rate)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

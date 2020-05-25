@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef proto_item;
+@@
+- proto_item *I0 = proto_tree_add_text(E1->tree, E2, 0, 4,  "Error! AVP value MUST be 4 bytes"); 
+- expert_add_info_format(E1->pinfo, I0, PI_MALFORMED, PI_NOTE,  "Bad Timestamp Length (%u)", E3); 
++ proto_item *pi_local = proto_tree_add_text(E1->tree, E2, 0, 4,  "Error! AVP value MUST be 4 bytes"); 
++ expert_add_info_format(E1->pinfo, pi_local, PI_MALFORMED, PI_NOTE,  "Bad Timestamp Length (%u)", E3); 
+// Infered from: (wireshark/{prevFiles/prev_f8e382_09868c_epan#dissectors#packet-diameter.c,revFiles/f8e382_09868c_epan#dissectors#packet-diameter.c}: time_avp)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

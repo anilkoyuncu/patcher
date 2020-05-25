@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- char I0[64]; 
++ char I0[BER_MAX_OID_STR_LEN]; 
+// Infered from: (wireshark/{prevFiles/prev_6ba8b2_277728_epan#dissectors#packet-tcap.c,revFiles/6ba8b2_277728_epan#dissectors#packet-tcap.c}: dissect_tcap_dlg_application_context_name), (wireshark/{prevFiles/prev_6ba8b2_277728_epan#dissectors#packet-tcap.c,revFiles/6ba8b2_277728_epan#dissectors#packet-tcap.c}: dissect_tcap_dlg_user_info)
+// False positives: (redis/revFiles/6168d5_d88302_src#redis-cli.c: statMode), (redis/revFiles/c38884_ef57f9_src#sentinel.c: sentinelSetClientName)
+// Recall: 0.22, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

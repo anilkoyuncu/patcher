@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef uint16_t;
+typedef uint32_t;
+@@
+- uint16_t I0 = (uint16_t )(*(uint32_t *)&E1->code_ptr); 
++ uint16_t I0 = (uint16_t )(*(uint32_t *)E1->code_ptr); 
+// Infered from: (qemu/{prevFiles/prev_d43ffc_9a3abc_tcg#mips#tcg-target.c,revFiles/d43ffc_9a3abc_tcg#mips#tcg-target.c}: tcg_out_opc_br)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

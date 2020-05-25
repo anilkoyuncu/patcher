@@ -1,0 +1,37 @@
+@@
+expression E0;
+@@
+- send_present(E0); 
++ return send_present(E0); 
+// Infered from: (php-src/{prevFiles/prev_6ad3b2b_4acbbc_ext#yaz#php_yaz.c,revFiles/6ad3b2b_4acbbc_ext#yaz#php_yaz.c}: send_sort_present)
+// False positives: (php-src/revFiles/6ad3b2b_4acbbc_ext#yaz#php_yaz.c: handle_apdu)
+// Recall: 0.04, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.06, Precision: 0.67
+// -- Node Change --
+// Recall: 0.07, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/37(2%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_6ad3b2b_4acbbc_ext#yaz#php_yaz.c: send_sort_present
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_c70480_0a7bf3_libavcodec#cook.c: decouple_info
+ - FFmpeg/prevFiles/prev_2b97be_b117c3_doc#examples#filtering.c: open_input_file
+ - openssl/prevFiles/prev_03a084_916167_crypto#bn#expspeed.c: do_mul_exp
+ - FFmpeg/prevFiles/prev_fafbc7_3a1fa4_libavcodec#mpegvideo.c: encode_mb
+ - openssl/prevFiles/prev_03a084_916167_crypto#bn#expspeed.c: 
+ - cmake/prevFiles/prev_b727f3_c03fa9_Source#CTest#Curl#CMake#CurlTests.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_6ad3b2b_4acbbc_ext#yaz#php_yaz.c: handle_apdu
+*/
+
+// ---------------------------------------------

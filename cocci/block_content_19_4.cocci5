@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- printf("%-23s %9d\n", E0->pdu_stats[E1].type, E0->pdu_stats[E1].packets); 
++ printf("%-23s %9u\n", E0->pdu_stats[E1].type, E0->pdu_stats[E1].packets); 
+// Infered from: (wireshark/{prevFiles/prev_e88a11_2078a9_ui#cli#tap-wspstat.c,revFiles/e88a11_2078a9_ui#cli#tap-wspstat.c}: wspstat_draw)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

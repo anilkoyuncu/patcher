@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 != NULL && E0[strlen(E0) - 1] != '/')  
++ if (E0 != NULL && E0[0] != '\0' && E0[strlen(E0) - 1] != '/')  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_c246ec_412bae_libarchive#archive_write_set_format_pax.c,revFiles/c246ec_412bae_libarchive#archive_write_set_format_pax.c}: archive_write_pax_header), (libarchive/{prevFiles/prev_c246ec_412bae_libarchive#archive_write_set_format_gnutar.c,revFiles/c246ec_412bae_libarchive#archive_write_set_format_gnutar.c}: archive_write_gnutar_header), (libarchive/{prevFiles/prev_5b7448_daf8a7_libarchive#archive_write_set_format_ustar.c,revFiles/5b7448_daf8a7_libarchive#archive_write_set_format_ustar.c}: archive_write_ustar_header), (libarchive/{prevFiles/prev_c246ec_412bae_libarchive#archive_write_set_format_v7tar.c,revFiles/c246ec_412bae_libarchive#archive_write_set_format_v7tar.c}: archive_write_v7tar_header)
+// Recall: 0.42, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

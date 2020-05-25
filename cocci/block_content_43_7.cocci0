@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = wmem_strdup_printf(NULL, "\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"", E1[  0], E1[1], E1[2], E1[3], E2); 
++ E0 = wmem_strdup_printf(NULL, "\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"", E1[  0], E1[1], E1[2], path, E2); 
++ g_free(path); 
+// Infered from: (wireshark/{prevFiles/prev_170def_09ae05_epan#dissectors#packet-ssl.c,revFiles/170def_09ae05_epan#dissectors#packet-ssl.c}: ssl_parse_old_keys)
+// Recall: 0.38, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

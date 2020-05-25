@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((NULL != E0) && GNUTLS_E_SUCCESS != (E1 = gnutls_certificate_set_x509_trust_file(  E2->server_cert, E0,  GNUTLS_X509_FMT_PEM)))  
++ if ((NULL != E0) && 0 > (E1 = gnutls_certificate_set_x509_trust_file(  E2->server_cert, E0, GNUTLS_X509_FMT_PEM)))  
+  {
+  ...
+  }
+// Infered from: (lighttpd2/{prevFiles/prev_4793e4_186309_src#modules#mod_gnutls.c,revFiles/4793e4_186309_src#modules#mod_gnutls.c}: gnutls_setup)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

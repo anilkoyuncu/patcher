@@ -1,0 +1,25 @@
+@@
+expression E0;
+@@
+- E0->op = OP1a; 
++ E0->op = op; 
+// Infered from: (FFmpeg/{prevFiles/prev_8c7721_bf2290a8_libavformat#mxfdec.c,revFiles/8c7721_bf2290a8_libavformat#mxfdec.c}: mxf_read_partition_pack), (FFmpeg/{prevFiles/prev_fb8fa3_1fadf5_libavformat#mxfdec.c,revFiles/fb8fa3_1fadf5_libavformat#mxfdec.c}: mxf_read_partition_pack)
+// False positives: (FFmpeg/revFiles/8c7721_bf2290a8_libavformat#mxfdec.c: mxf_read_partition_pack), (FFmpeg/revFiles/fb8fa3_1fadf5_libavformat#mxfdec.c: mxf_read_partition_pack)
+// Recall: 0.40, Precision: 0.50, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 0.67
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_8c7721_bf2290a8_libavformat#mxfdec.c: mxf_read_partition_pack
+ - FFmpeg/prevFiles/prev_fb8fa3_1fadf5_libavformat#mxfdec.c: mxf_read_partition_pack
+*/
+
+// ---------------------------------------------

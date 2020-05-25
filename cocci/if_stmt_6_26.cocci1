@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->dts.i_divider_den != E1 && E0->dts.i_divider_num != E2)  
++ if (E0->dts.i_divider_den != E1 && E0->dts.i_divider_num != 2 * E2)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_32b7a35_48b08b_modules#packetizer#hevc.c,revFiles/32b7a35_48b08b_modules#packetizer#hevc.c}: ActivateSets)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

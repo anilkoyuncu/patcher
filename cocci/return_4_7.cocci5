@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- return ((E0 + (E0 >> 4) & 0xF0F0F0F) * 0x1010101) >> 24; 
++ return (((E0 + (E0 >> 4)) & 0xF0F0F0F) * 0x1010101) >> 24; 
+// Infered from: (cpython/{prevFiles/prev_6ab629_b31206_Python#hamt.c,revFiles/6ab629_b31206_Python#hamt.c}: hamt_bitcount)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_06d1e5_c8aee6_libavformat#utils.c: get_std_framerate
+ - FFmpeg/prevFiles/prev_085ea8_bd141a_libavutil#eval.c: eval_expr
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (S_ISREG(E0->d_inode->i_mode))  
++ if (d_is_reg(E0))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_e36cb0_2c616d_fs#9p#vfs_inode.c,revFiles/e36cb0_2c616d_fs#9p#vfs_inode.c}: v9fs_vfs_setattr)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

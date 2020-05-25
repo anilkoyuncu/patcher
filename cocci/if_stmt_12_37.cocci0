@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->mb_intra)  
++ if (E0->mb_intra && E0->dc_val[0])  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_2d3601_0bae10_libavcodec#mpegvideo.c,revFiles/2d3601_0bae10_libavcodec#mpegvideo.c}: encode_thread), (FFmpeg/{prevFiles/prev_2d3601_0bae10_libavcodec#mpegvideo.c,revFiles/2d3601_0bae10_libavcodec#mpegvideo.c}: encode_thread)
+// False positives: (FFmpeg/revFiles/2d3601_0bae10_libavcodec#mpegvideo.c: encode_thread), (FFmpeg/revFiles/a62d75_fb85b0_libavcodec#h263.c: ff_h263_decode_mb), (FFmpeg/revFiles/a62d75_fb85b0_libavcodec#h263.c: ff_mpeg4_decode_mb)
+// Recall: 0.33, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------

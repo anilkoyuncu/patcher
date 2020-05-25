@@ -1,0 +1,32 @@
+@@
+expression E0;
+@@
+- if (E0->type == IS_OBJECT)  
++ if ((E0->type == IS_OBJECT) || (E0->type == IS_RESOURCE))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_e0b0919_da98ca_ext#oci8#oci8.c,revFiles/e0b0919_da98ca_ext#oci8#oci8.c}: oci_bind_out_callback)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/8(50%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_fa48da_a1af50_ffmpeg.c: print_report
+ - libarchive/prevFiles/prev_4b5901_3d469d_libarchive#archive_read_support_filter_uu.c: uudecode_filter_read
+*/
+
+// ---------------------------------------------

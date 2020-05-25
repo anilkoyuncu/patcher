@@ -1,0 +1,8 @@
+@@
+@@
+- php_sysvshm.le_shm = register_list_destructors(php_release_sysvshm, NULL); 
++ php_sysvshm.le_shm = register_list_destructors(php_release_sysvshm, NULL,  "sysvshm"); 
+// Infered from: (php-src/{prevFiles/prev_7b4983_a0cfab_ext#sysvshm#sysvshm.c,revFiles/7b4983_a0cfab_ext#sysvshm#sysvshm.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+identifier I0 = {Tcl_CreateThreadExitHandler ,g_clear_pointer ,json_print_base64 ,printf };
+type T2;
+expression E1, E3;
+@@
+- I0(E1, (T2 )E3); 
++ I0(E1, E3); 
+// Infered from: (wireshark/{prevFiles/prev_50510a_7a9b9f_sharkd_session.c,revFiles/50510a_7a9b9f_sharkd_session.c}: sharkd_session_process_download), (gtk/{prevFiles/prev_87d334_002e48_gsk#vulkan#gskvulkanrenderer.c,revFiles/87d334_002e48_gsk#vulkan#gskvulkanrenderer.c}: gsk_vulkan_renderer_unrealize), (tcl/{prevFiles/prev_4a6ee2_06b98b_win#tclWinThrd.c,revFiles/4a6ee2_06b98b_win#tclWinThrd.c}: Tcl_ConditionWait), (curl/{prevFiles/prev_13505d_4c735b_docs#examples#getinmemory.c,revFiles/13505d_4c735b_docs#examples#getinmemory.c}: main)
+// False positives: (wireshark/revFiles/50510a_7a9b9f_sharkd_session.c: sharkd_session_process_info_nstat_cb)
+// Recall: 0.23, Precision: 0.80, Matching recall: 1.00
+
+// ---------------------------------------------

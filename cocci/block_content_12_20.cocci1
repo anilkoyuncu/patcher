@@ -1,0 +1,37 @@
+@@
+identifier I0;
+typedef u8;
+@@
+- u8 I0 = false; 
+- return I0; 
++ return false; 
+// Infered from: (linux/{prevFiles/prev_6c1437_acc6539_drivers#staging#rtl8192u#ieee80211#rtl819x_HTProc.c,revFiles/6c1437_acc6539_drivers#staging#rtl8192u#ieee80211#rtl819x_HTProc.c}: HTIOTActIsDisableEDCATurbo)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.78, Precision: 0.47
+// -- Node Change --
+// Recall: 0.78, Precision: 0.46
+// -- General --
+// Functions fully changed: 7/17(41%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_6c1437_acc6539_drivers#staging#rtl8192u#ieee80211#rtl819x_HTProc.c: HTIOTActIsDisableMCSTwoSpatialStream
+ - linux/prevFiles/prev_f3dbf6_c3fb33_drivers#staging#rtl8723bs#core#rtw_recv.c: wlanhdr_to_ethhdr
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_f3dbf6_c3fb33_drivers#staging#rtl8723bs#core#rtw_recv.c: process_recv_indicatepkts
+ - linux/prevFiles/prev_35a007_147e45d_drivers#staging#rtl8723au#os_dep#os_intfs.c: _rtw_drv_register_netdev
+ - linux/prevFiles/prev_35a007_147e45d_drivers#staging#rtl8723au#os_dep#os_intfs.c: rtw_init_drv_sw23a
+ - linux/prevFiles/prev_f3dbf6_c3fb33_drivers#staging#rtl8723bs#core#rtw_recv.c: recv_func_prehandle
+ - linux/prevFiles/prev_8ffca9_8a5e7b_drivers#staging#rtl8712#rtl8712_recv.c: r8712_init_recv_priv
+ - linux/prevFiles/prev_8ffca9_8a5e7b_drivers#staging#rtl8712#rtl8712_recv.c: recv_func
+ - linux/prevFiles/prev_35a007_147e45d_drivers#staging#rtl8723au#os_dep#os_intfs.c: rtw_drv_register_netdev
+ - linux/prevFiles/prev_f3dbf6_c3fb33_drivers#staging#rtl8723bs#core#rtw_recv.c: recv_func_posthandle
+*/
+
+// ---------------------------------------------

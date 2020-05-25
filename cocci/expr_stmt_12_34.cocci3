@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- memcpy(&E0, E1, sizeof(struct rs_rate )); 
++ memcpy(&E0, E1, sizeof(E0)); 
+// Infered from: (linux/{prevFiles/prev_9e898f_aaa4e74_drivers#net#wireless#iwlwifi#mvm#rs.c,revFiles/9e898f_aaa4e74_drivers#net#wireless#iwlwifi#mvm#rs.c}: rs_build_rates_table)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.75
+// -- Node Change --
+// Recall: 1.00, Precision: 0.78
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_9e898f_aaa4e74_drivers#net#wireless#iwlwifi#mvm#rs.c: rs_sta_dbgfs_scale_table_write
+ - linux/prevFiles/prev_bd9dc6_3ae707_drivers#staging#rtl8712#rtl871x_io.c: unregister_intf_hdl
+*/
+
+// ---------------------------------------------

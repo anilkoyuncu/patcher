@@ -1,0 +1,70 @@
+@@
+expression E0;
+@@
+- if (E0->qscale < 5)  
++ if (E0->qscale < 5 || E0->msmpeg4_version == 2)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_2ed627_3c4f18_libavcodec#msmpeg4.c,revFiles/2ed627_3c4f18_libavcodec#msmpeg4.c}: msmpeg4_dc_scale)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 14 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 0.60
+// -- Node Change --
+// Recall: 0.72, Precision: 0.43
+// -- General --
+// Functions fully changed: 19/56(33%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_71-C-366584-366587.c: main
+ - codeflaws/prevFiles/prev_71-B-510629-510634.c: main
+ - codeflaws/prevFiles/prev_385-A-12308294-12308311.c: main
+ - codeflaws/prevFiles/prev_652-B-16976473-16976485.c: main
+ - qemu/prevFiles/prev_21bf9b_af4ba4_target#arm#arm-semi.c: alloc_guestfd
+ - codeflaws/prevFiles/prev_79-C-2405446-2405476.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: encode_frame
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: write_quant_table
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: read_quant_table
+ - codeflaws/prevFiles/prev_637-A-16747066-16747205.c: main
+ - codeflaws/prevFiles/prev_454-A-14788727-14788751.c: main
+ - codeflaws/prevFiles/prev_131-A-18069181-18073244.c: main
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: encode_init
+ - codeflaws/prevFiles/prev_543-A-11188983-11189003.c: main
+ - ompi/prevFiles/prev_aaec8e_1d1571_orte#orted#orted_comm.c: orte_daemon_process_commands
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: write_header
+ - gtk/prevFiles/prev_aadb19_7a9a30_gdk#gdkoffscreenwindow.c: gdk_offscreen_window_draw_points
+ - codeflaws/prevFiles/prev_140-F-1016008-1016010.c: main
+ - codeflaws/prevFiles/prev_284-A-17986776-17986843.c: main
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: init_slice_state
+ - gtk/prevFiles/prev_aadb19_7a9a30_gdk#gdkoffscreenwindow.c: gdk_offscreen_window_draw_polygon
+ - FFmpeg/prevFiles/prev_6abe7e_5aa710_libavcodec#ffv1enc.c: ffv1_encode_init
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: read_extra_header
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: find_best_state
+ - FFmpeg/prevFiles/prev_6abe7e_5aa710_libavcodec#ffv1enc.c: write_extradata
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: read_header
+ - FFmpeg/prevFiles/prev_6abe7e_5aa710_libavcodec#ffv1enc.c: write_quant_table
+ - FFmpeg/prevFiles/prev_6abe7e_5aa710_libavcodec#ffv1enc.c: sort_stt
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: write_extra_header
+ - FFmpeg/prevFiles/prev_6abe7e_5aa710_libavcodec#ffv1enc.c: write_header
+ - FFmpeg/prevFiles/prev_54b2d3_d2a618_libavcodec#ffv1.c: sort_stt
+ - codeflaws/prevFiles/prev_284-A-3415239-3415277.c: main
+ - FFmpeg/prevFiles/prev_6abe7e_5aa710_libavcodec#ffv1enc.c: find_best_state
+ - gtk/prevFiles/prev_360820_214d5e_gdk#gdkoffscreenwindow.c: gdk_offscreen_window_draw_polygon
+ - gtk/prevFiles/prev_360820_214d5e_gdk#gdkoffscreenwindow.c: gdk_offscreen_window_draw_points
+ - FFmpeg/prevFiles/prev_6abe7e_5aa710_libavcodec#ffv1enc.c: ffv1_encode_frame
+ - codeflaws/prevFiles/prev_430-A-6618281-6618282.c: main
+*/
+
+// ---------------------------------------------

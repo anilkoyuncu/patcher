@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- __irq_set_handler_locked(E0->irq, handle_level_irq); 
++ irq_set_handler_locked(E0, handle_level_irq); 
+// Infered from: (linux/{prevFiles/prev_1aa74fd_c21f78_drivers#pinctrl#bcm#pinctrl-bcm2835.c,revFiles/1aa74fd_c21f78_drivers#pinctrl#bcm#pinctrl-bcm2835.c}: bcm2835_gpio_irq_set_type), (linux/{prevFiles/prev_2dbf1b_c639845b_drivers#pinctrl#pinctrl-rockchip.c,revFiles/2dbf1b_c639845b_drivers#pinctrl#pinctrl-rockchip.c}: rockchip_irq_set_type), (linux/{prevFiles/prev_7c51173_a7147db_drivers#pinctrl#pinctrl-pistachio.c,revFiles/7c51173_a7147db_drivers#pinctrl#pinctrl-pistachio.c}: pistachio_gpio_irq_set_type), (linux/{prevFiles/prev_40ec16_34c0ad8_drivers#pinctrl#samsung#pinctrl-exynos.c,revFiles/40ec16_34c0ad8_drivers#pinctrl#samsung#pinctrl-exynos.c}: exynos_irq_set_type), (linux/{prevFiles/prev_e9e879a_6b83bd_arch#powerpc#sysdev#cpm2_pic.c,revFiles/e9e879a_6b83bd_arch#powerpc#sysdev#cpm2_pic.c}: cpm2_set_irq_type), (linux/{prevFiles/prev_9758a7b_e9e879a_arch#powerpc#sysdev#ipic.c,revFiles/9758a7b_e9e879a_arch#powerpc#sysdev#ipic.c}: ipic_set_irq_type), (linux/{prevFiles/prev_915456_5a0654_arch#mips#bcm63xx#irq.c,revFiles/915456_5a0654_arch#mips#bcm63xx#irq.c}: bcm63xx_external_irq_set_type), (linux/{prevFiles/prev_b11b7a_72b2a9_drivers#gpio#gpio-msm-v2.c,revFiles/b11b7a_72b2a9_drivers#gpio#gpio-msm-v2.c}: msm_gpio_irq_set_type), (linux/{prevFiles/prev_a7147db_9ca86b2_drivers#gpio#gpio-vf610.c,revFiles/a7147db_9ca86b2_drivers#gpio#gpio-vf610.c}: vf610_gpio_irq_set_type)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 9/9(100%)
+
+
+// ---------------------------------------------

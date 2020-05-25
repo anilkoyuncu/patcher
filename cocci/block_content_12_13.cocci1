@@ -1,0 +1,22 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef gchar;
+@@
+- const  gchar *I0; 
+- I0 = dissect_e212_imsi(E1, E2, E3, E4 + 1, 8, FALSE); 
++ dissect_e212_imsi(E1, E2, E3, E4 + 1, 8, FALSE); 
+// Infered from: (wireshark/{prevFiles/prev_5c554c_8670d9_epan#dissectors#packet-gtp.c,revFiles/5c554c_8670d9_epan#dissectors#packet-gtp.c}: decode_gtp_imsi)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

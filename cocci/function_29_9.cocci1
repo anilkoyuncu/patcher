@@ -1,0 +1,28 @@
+@@
+identifier I0, I1;
+typedef ASN1_STRING;
+@@
+- ASN1_STRING *I0 = NULL; 
+  ...
+- if (I0 != I1)  
+- {
+- ASN1_STRING_free(I0); 
+- }
+// Infered from: (openssl/{prevFiles/prev_67b6f1_a4ff39_crypto#asn1#t_x509.c,revFiles/67b6f1_a4ff39_crypto#asn1#t_x509.c}: X509_print_ex)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_562808_8f10c2_orte#mca#pls#rsh#pls_rsh_module.c: orte_pls_rsh_launch
+*/
+
+// ---------------------------------------------

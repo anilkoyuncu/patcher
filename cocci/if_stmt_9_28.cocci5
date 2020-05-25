@@ -1,0 +1,8 @@
+@@
+@@
+- fatal("fcntl failedo"); 
++ fatal("fcntl failed"); 
+// Infered from: (tmux/{prevFiles/prev_474fde_9ced01_tty.c,revFiles/474fde_9ced01_tty.c}: tty_open), (tmux/{prevFiles/prev_182560_43ff21_tty.c,revFiles/182560_43ff21_tty.c}: tty_open)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

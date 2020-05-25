@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0[0][E1] = 1 << (E2->bits + E3 - 1); 
++ E0[0][E1] = 1 << (E2->bits - 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_b0143d_83f708_libavcodec#mjpegdec.c,revFiles/b0143d_83f708_libavcodec#mjpegdec.c}: ljpeg_decode_rgb_scan)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

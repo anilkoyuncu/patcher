@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- av_free(E0->extradata); 
+// Infered from: (vlc/{prevFiles/prev_a3bbec_37e605_modules#codec#avcodec#audio.c,revFiles/a3bbec_37e605_modules#codec#avcodec#audio.c}: InitAudioDec)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

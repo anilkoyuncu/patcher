@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = (((int )E1 + E2 / 3) & (~3)) - (int )E1; 
++ int I0 = (((long )E1 + E2 / 3) & (~3)) - (long )E1; 
+// Infered from: (FFmpeg/{prevFiles/prev_2c6563_80a499_libavcodec#h263.c,revFiles/2c6563_80a499_libavcodec#h263.c}: ff_mpeg4_init_partitions)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

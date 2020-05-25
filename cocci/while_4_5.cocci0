@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2;
+typedef off_t;
+typedef zend_off_t;
+@@
+- while (!E0->eof && !E1 && (E0->writepos - E0->readpos < (off_t )E2))  
++ while (!E0->eof && !E1 && (E0->writepos - E0->readpos < (zend_off_t )E2))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_ea83e5_5b79e95_main#streams#streams.c,revFiles/ea83e5_5b79e95_main#streams#streams.c}: _php_stream_fill_read_buffer)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

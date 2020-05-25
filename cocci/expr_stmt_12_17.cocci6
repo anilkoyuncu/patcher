@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = g_object_ref(gtk_entry_completion_get_model(E1)); 
++ E0 = GTK_LIST_STORE(g_object_ref(gtk_entry_completion_get_model(E1))); 
+// Infered from: (gtk/{prevFiles/prev_072f06_1c9e3a_tests#testentrycompletion.c,revFiles/072f06_1c9e3a_tests#testentrycompletion.c}: animation_timer)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

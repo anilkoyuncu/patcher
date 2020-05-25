@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0->flags & AV_PIX_FMT_FLAG_RGB) || E0->nb_components < 3)  
++ if ((E0->flags & AV_PIX_FMT_FLAG_RGB) || !(E0->flags & AV_PIX_FMT_FLAG_PLANAR) || E0->nb_components < 3)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_ab1e43_b140b5_libavcodec#tiff.c,revFiles/ab1e43_b140b5_libavcodec#tiff.c}: init_image)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

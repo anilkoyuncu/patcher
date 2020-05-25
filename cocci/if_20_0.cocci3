@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (zend_stat(E0, &E1))  
++ if (php_sys_stat(E0, &E1))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_2860fd_fbf46d_sapi#cli#php_cli_server.c,revFiles/2860fd_fbf46d_sapi#cli#php_cli_server.c}: do_cli_server)
+// False positives: (php-src/revFiles/64fee0_736633_sapi#cli#php_cli_server.c: do_cli_server)
+// Recall: 0.17, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "fsdev: fsdriver %s not found\n", E0); 
++ error_report("fsdev: fsdriver %s not found", E0); 
+// Infered from: (qemu/{prevFiles/prev_ea753f_63325b_fsdev#qemu-fsdev.c,revFiles/ea753f_63325b_fsdev#qemu-fsdev.c}: qemu_fsdev_add)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

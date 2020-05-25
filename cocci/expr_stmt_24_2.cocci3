@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->coded_height = AV_RB32(E0->extradata + 24); 
++ E0->coded_height = FFMAX(AV_RB32(E0->extradata + 24), E0->height); 
+// Infered from: (FFmpeg/{prevFiles/prev_0f199f_5d18dc_libavcodec#mss12.c,revFiles/0f199f_5d18dc_libavcodec#mss12.c}: ff_mss12_decode_init)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

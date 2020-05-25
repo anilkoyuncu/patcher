@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (E0 + (1 << (E1 - 1))) >> E1; 
++ E0 = (int )(E0 + (1U << (E1 - 1))) >> E1; 
+// Infered from: (FFmpeg/{prevFiles/prev_9d3dde_43b341_libavcodec#apedec.c,revFiles/9d3dde_43b341_libavcodec#apedec.c}: do_apply_filter)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

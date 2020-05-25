@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- DBG_8723A("%s(%s): allocate mon_wdev fail\n", __func__, E0->pnetdev->name); 
+// Infered from: (linux/{prevFiles/prev_c15cc4_b32f6f_drivers#staging#rtl8723au#os_dep#ioctl_cfg80211.c,revFiles/c15cc4_b32f6f_drivers#staging#rtl8723au#os_dep#ioctl_cfg80211.c}: rtw_cfg80211_add_monitor_if)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

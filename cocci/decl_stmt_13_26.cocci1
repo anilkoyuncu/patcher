@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef gchar;
+@@
+- gchar **I0 = g_strsplit(E1, ",", 0); 
++ gchar **I0 = E1 ? g_strsplit(E1, ",", 0) :NULL; 
+// Infered from: (gstreamer/{prevFiles/prev_8e5c22_5f9f9b_tools#gst-launch.c,revFiles/8e5c22_5f9f9b_tools#gst-launch.c}: main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

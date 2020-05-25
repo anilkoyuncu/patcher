@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0[0] = '\0'; 
++ E0[0] = '-'; 
+// Infered from: (wireshark/{prevFiles/prev_f900d9_d0a970f_epan#to_str.c,revFiles/f900d9_d0a970f_epan#to_str.c}: display_signed_time), (wireshark/{prevFiles/prev_f900d9_d0a970f_epan#to_str.c,revFiles/f900d9_d0a970f_epan#to_str.c}: display_epoch_time)
+// False positives: (wireshark/revFiles/f900d9_d0a970f_epan#to_str.c: decode_bits_in_field)
+// Recall: 0.33, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------

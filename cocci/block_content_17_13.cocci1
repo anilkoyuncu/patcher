@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- list_splice(&TxAnchor.anon_list2, &TxAnchor.anon_list); 
+- INIT_LIST_HEAD(&E0); 
++ list_splice_init(&TxAnchor.anon_list2, &TxAnchor.anon_list); 
+// Infered from: (linux/{prevFiles/prev_240c51_7cfcd8_fs#jfs#jfs_txnmgr.c,revFiles/240c51_7cfcd8_fs#jfs#jfs_txnmgr.c}: txQuiesce)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

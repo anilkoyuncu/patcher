@@ -1,0 +1,34 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- char *I0; 
+- if (asprintf(&I0, "%s://%s/%s", E1->b_file ? "file" :"directory",  E2->psz_current_dir, E1->psz_path) == -1)  
++ char *I0 = make_URI(psz_path, E1->b_file ? "file" :"directory"); 
++ free(psz_path); 
++ if (I0 == NULL)  
+  {
+- return false; 
++ return true; 
+  }
+// Infered from: (vlc/{prevFiles/prev_d13717_d2dbed_modules#gui#ncurses.c,revFiles/d13717_d2dbed_modules#gui#ncurses.c}: HandleBrowseKey)
+// Recall: 0.32, Precision: 1.00, Matching recall: 0.44
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.77, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_d13717_d2dbed_modules#gui#ncurses.c: IsFile
+ - vlc/prevFiles/prev_d13717_d2dbed_modules#gui#ncurses.c: HandleBrowseKey
+ - wireshark/prevFiles/prev_2dd96f_cc43ff_wiretap#daintree-sna.c: daintree_sna_read
+ - wireshark/prevFiles/prev_2dd96f_cc43ff_wiretap#daintree-sna.c: daintree_sna_seek_read
+*/
+
+// ---------------------------------------------

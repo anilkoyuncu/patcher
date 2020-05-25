@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 |= le32_to_cpu(*E1 << BYTE_OFFSET(E2)); 
++ E0 |= le32_to_cpu((__le32)(*E1 << BYTE_OFFSET(E2))); 
+// Infered from: (linux/{prevFiles/prev_c957d09_6da334_drivers#net#ethernet#broadcom#bnx2x#bnx2x_ethtool.c,revFiles/c957d09_6da334_drivers#net#ethernet#broadcom#bnx2x#bnx2x_ethtool.c}: bnx2x_nvram_write1)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

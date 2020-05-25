@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- gtk_widget_get_allocation(E0->icons[E1]->widget, &E2); 
++ gtk_widget_get_outer_allocation(E0->icons[E1]->widget, &E2); 
+// Infered from: (gtk/{prevFiles/prev_2c2867_6f7387_gtk#gtkentry.c,revFiles/2c2867_6f7387_gtk#gtkentry.c}: gtk_entry_event)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

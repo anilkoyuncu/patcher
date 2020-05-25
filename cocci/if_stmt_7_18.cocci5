@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && E1->set.ssl.verifypeer)  
++ if (E0 && E1->set.ssl.primary.verifypeer)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_8cb872_cb4e2b_lib#vtls#mbedtls.c,revFiles/8cb872_cb4e2b_lib#vtls#mbedtls.c}: mbed_connect_step2)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

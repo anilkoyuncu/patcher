@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->checksum_size >= 1U << 28 || !E0->checksum_size)  
++ if (E0->checksum_size >= 1U << 28 || E0->checksum_size <= 1)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e36ccb_dc3f327_libavcodec#qdm2.c,revFiles/e36ccb_dc3f327_libavcodec#qdm2.c}: qdm2_decode_init)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

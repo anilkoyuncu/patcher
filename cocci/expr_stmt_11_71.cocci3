@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef AVPicture;
+@@
+- ff_msrle_decode(E0, (AVPicture *)&E1->pic, E1->bpp, E1->decomp_buf,  E1->zstream.avail_out); 
++ ff_msrle_decode(E0, (AVPicture *)&E1->pic, E1->bpp, E1->decomp_buf,  E1->decomp_size - E1->zstream.avail_out); 
+// Infered from: (FFmpeg/{prevFiles/prev_eebece_fd07f8_libavcodec#tscc.c,revFiles/eebece_fd07f8_libavcodec#tscc.c}: decode_frame)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

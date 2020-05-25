@@ -1,0 +1,10 @@
+@@
+identifier I0 = {rev_list ,subpicture_Delete };
+expression E1, E2;
+@@
+- I0(E1, E2); 
++ I0(E2); 
+// Infered from: (git/{prevFiles/prev_e40a9e_1ed481_send-pack.c,revFiles/e40a9e_1ed481_send-pack.c}: rev_list_generate), (vlc/{prevFiles/prev_337786_c1111a_modules#codec#kate.c,revFiles/337786_c1111a_modules#codec#kate.c}: SetupSimpleKateSPU)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

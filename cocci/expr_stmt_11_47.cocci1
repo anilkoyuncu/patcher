@@ -1,0 +1,37 @@
+@@
+identifier I0, I1;
+expression E2, E3, E4;
+typedef u32;
+@@
+  int add_port(struct ports_device *I0, u32 I1)  
+  {
+  ...
+- send_control_msg (E2, E3, E4); 
++ __send_control_msg(I0, I1, VIRTIO_CONSOLE_PORT_READY, 0); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_0643e4c_8345ad_drivers#char#virtio_console.c,revFiles/0643e4c_8345ad_drivers#char#virtio_console.c}: add_port)
+// False positives: (linux/revFiles/0643e4c_8345ad_drivers#char#virtio_console.c: add_port)
+// Recall: 0.20, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/5(20%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_1e68f5_04a366_lib#media_player.c: libvlc_media_player_set_pause
+ - FFmpeg/prevFiles/prev_95ae72_5b2bf9_libavcodec#ac3dec.c: ac3_decode_frame
+ - qemu/prevFiles/prev_e58d64_a4207e_hw#usb#ccid-card-passthru.c: passthru_realize
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_0643e4c_8345ad_drivers#char#virtio_console.c: add_port
+*/
+
+// ---------------------------------------------

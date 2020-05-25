@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- I0 = (const  char *)tvb_get_ptr(E1, E2, E3); 
++ keyx_t = (const  char *)tvb_get_ptr(E1, E2, E3); 
+// Infered from: (wireshark/{prevFiles/prev_f8e382_09868c_epan#dissectors#packet-dcerpc-rs_acct.c,revFiles/f8e382_09868c_epan#dissectors#packet-dcerpc-rs_acct.c}: rs_acct_dissect_lookup_rqst)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

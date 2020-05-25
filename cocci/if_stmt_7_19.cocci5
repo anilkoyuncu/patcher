@@ -1,0 +1,14 @@
+@@
+expression E2, E0;
+binary operator B1 = {% ,& };
+@@
+- if (!(E0 B1 E2))  
++ if (E0 B1 E2)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_5-B-10350073-10350082.c,revFiles/5-B-10350073-10350082.c}: main), (FFmpeg/{prevFiles/prev_6674a1_fa12b5_libavcodec#h263.c,revFiles/6674a1_fa12b5_libavcodec#h263.c}: decode_vop_header)
+// False positives: (FFmpeg/revFiles/6674a1_fa12b5_libavcodec#h263.c: h263_pred_acdc), (FFmpeg/revFiles/6674a1_fa12b5_libavcodec#h263.c: mpeg4_encode_picture_header), (FFmpeg/revFiles/6674a1_fa12b5_libavcodec#h263.c: mpeg4_encode_vol_header), (git/revFiles/599065_cc44c7_builtin-show-branch.c: join_revs), (git/revFiles/599065_cc44c7_daemon.c: kill_some_children)
+// Recall: 0.21, Precision: 0.38, Matching recall: 0.75
+
+// ---------------------------------------------

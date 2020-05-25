@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = (E1[E2] - E3) << 7; 
++ E0 = (E1[E2] - E3) * 128; 
+// Infered from: (FFmpeg/{prevFiles/prev_e3f5b6_94ccba_libavcodec#ac3.c,revFiles/e3f5b6_94ccba_libavcodec#ac3.c}: ff_ac3_bit_alloc_calc_mask), (FFmpeg/{prevFiles/prev_e3f5b6_94ccba_libavcodec#ac3.c,revFiles/e3f5b6_94ccba_libavcodec#ac3.c}: ff_ac3_bit_alloc_calc_mask)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

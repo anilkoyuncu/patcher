@@ -1,0 +1,13 @@
+@@
+expression E0;
+typedef DCTELEM;
+@@
+- for(;E0 < sizeof(DCTELEM ) * 6 * 64;E0 += 32)  
++ for(;E0 < sizeof(DCTELEM ) * 6 * 64 - 31;E0 += 32)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b1d041_c42fa80_libavcodec#ppc#dsputil_ppc.c,revFiles/b1d041_c42fa80_libavcodec#ppc#dsputil_ppc.c}: clear_blocks_dcbz32_ppc)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

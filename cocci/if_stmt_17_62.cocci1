@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (E0 - E1 + SCREEN_WIDE < E2 || E3 - E0 < E2 + E4)  
++ if (E0 - E1 + SCREEN_WIDE < -E2 || E3 - E0 < E2 + E4)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_debbcf_679c57_libavcodec#bmv.c,revFiles/debbcf_679c57_libavcodec#bmv.c}: decode_bmv_frame), (FFmpeg/{prevFiles/prev_debbcf_679c57_libavcodec#bmv.c,revFiles/debbcf_679c57_libavcodec#bmv.c}: decode_bmv_frame)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

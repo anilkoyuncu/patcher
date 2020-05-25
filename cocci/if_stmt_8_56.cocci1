@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->flags & CODEC_FLAG_GLOBAL_HEADER)  
++ if (E0->extradata_size)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_21b374_8f39b7_libavformat#sdp.c,revFiles/21b374_8f39b7_libavformat#sdp.c}: sdp_media_attributes)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- return sds_cnos_module; 
++ return &sds_cnos_module; 
+// Infered from: (ompi/{prevFiles/prev_93ddb4_a7a919_orte#mca#sds#cnos#sds_cnos_component.c,revFiles/93ddb4_a7a919_orte#mca#sds#cnos#sds_cnos_component.c}: orte_sds_cnos_component_init)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

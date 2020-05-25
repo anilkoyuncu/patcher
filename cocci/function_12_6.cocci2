@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- power_supply_unregister(&E0->battery); 
+  ...
+- kfree(E0); 
++ power_supply_unregister(&E0->battery); 
+// Infered from: (linux/{prevFiles/prev_0853699_8feffd1_drivers#power#88pm860x_battery.c,revFiles/0853699_8feffd1_drivers#power#88pm860x_battery.c}: pm860x_battery_remove)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_0853699_8feffd1_drivers#power#88pm860x_battery.c: pm860x_battery_probe
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_fc4a47_617902_vl.c: register_global_properties
+*/
+
+// ---------------------------------------------

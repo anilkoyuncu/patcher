@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- d[1][E0][E1] = 0; 
++ d[1][E0][E1] = -1000000; 
+// Infered from: (codeflaws/{prevFiles/prev_213-C-2794587-2794591.c,revFiles/213-C-2794587-2794591.c}: swapd)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

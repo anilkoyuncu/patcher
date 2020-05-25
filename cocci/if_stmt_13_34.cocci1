@@ -1,0 +1,33 @@
+@@
+expression E0;
+@@
+- if (E0->search_model_filter)  
++ if (E0->operation_mode == OPERATION_MODE_SEARCH && E0->search_model_filter != NULL)  
+  {
+  ...
+  }
+- if (E0->recent_model_filter)  
++ if (E0->operation_mode == OPERATION_MODE_RECENT)  
+  {
+- gtk_tree_model_filter_refilter(E0->recent_model_filter); 
++ recent_start_loading(E0); 
+  }
+// Infered from: (gtk/{prevFiles/prev_2d7940_6f0f5f_gtk#gtkfilechooserdefault.c,revFiles/2d7940_6f0f5f_gtk#gtkfilechooserdefault.c}: set_current_filter)
+// False positives: (gtk/revFiles/2d7940_6f0f5f_gtk#gtkfilechooserdefault.c: _gtk_file_chooser_label_for_file)
+// Recall: 0.50, Precision: 0.75, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.80
+// -- Node Change --
+// Recall: 1.00, Precision: 0.86
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_2d7940_6f0f5f_gtk#gtkfilechooserdefault.c: _gtk_file_chooser_label_for_file
+*/
+
+// ---------------------------------------------

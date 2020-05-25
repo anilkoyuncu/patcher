@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- sysbus_connect_irq(SYS_BUS_DEVICE(&E0->timer1), 0,  qdev_get_gpio_in(DEVICE(&E0->armv7m), 3)); 
++ sysbus_connect_irq(SYS_BUS_DEVICE(&E0->timer1), 0,  qdev_get_gpio_in(DEVICE(&E0->armv7m), 4)); 
+// Infered from: (qemu/{prevFiles/prev_984b0c_942566_hw#arm#iotkit.c,revFiles/984b0c_942566_hw#arm#iotkit.c}: iotkit_realize)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.89, Precision: 1.00
+// -- Node Change --
+// Recall: 0.90, Precision: 1.00
+// -- General --
+// Functions fully changed: 8/9(88%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_ff6739_6c2611_modules#video_output#directx#direct3d.c: Direct3DVoutRenderScene
+*/
+
+// ---------------------------------------------

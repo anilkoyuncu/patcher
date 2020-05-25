@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef bool;
+@@
+- E0->pipelining_enabled = va_arg(E1, long ); 
++ E0->pipelining_enabled = (bool )(0 != va_arg(E1, long )); 
+// Infered from: (curl/{prevFiles/prev_bb87b6_b0f6e7_lib#multi.c,revFiles/bb87b6_b0f6e7_lib#multi.c}: curl_multi_setopt)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

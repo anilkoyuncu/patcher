@@ -1,0 +1,32 @@
+@@
+expression E0, E1;
+@@
+- aout_TimeReport(E0, mdate() + E1); 
++ aout_TimeReport(E0, mdate() - E1); 
+// Infered from: (vlc/{prevFiles/prev_d219a2_3c13f0_src#audio_output#output.c,revFiles/d219a2_3c13f0_src#audio_output#output.c}: aout_PacketPlay)
+// False positives: (vlc/revFiles/4b7f56_34bc07_src#audio_output#output.c: aout_PacketPlay)
+// Recall: 0.25, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.67
+// -- Node Change --
+// Recall: 0.50, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_4b7f56_34bc07_src#audio_output#output.c: aout_PacketNext
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_d219a2_3c13f0_src#audio_output#output.c: aout_PacketNext
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_4b7f56_34bc07_src#audio_output#output.c: aout_PacketPlay
+*/
+
+// ---------------------------------------------

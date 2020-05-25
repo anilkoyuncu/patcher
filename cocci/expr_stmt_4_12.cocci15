@@ -1,0 +1,21 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+  int finish_rebase(struct rebase_options *I0)  
+  {
+  ...
+- remove_dir_recursively(&E1, 0); 
++ if (remove_dir_recursively(&E1, 0))  
++ {
++ ret = error(_("could not remove '%s'"), I0->state_dir); 
++ }
+  ...
+- return E2; 
++ return ret; 
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_d3fce4_7372ea_builtin#rebase.c,revFiles/d3fce4_7372ea_builtin#rebase.c}: finish_rebase)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------

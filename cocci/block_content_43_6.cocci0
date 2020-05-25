@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- cairo_test_log("%d %d HERE!\n", E0, E1); 
++ cairo_test_log("%d %d HERE!\n", (int )E0, (int )E1); 
+// Infered from: (cairo/{prevFiles/prev_a06af4_58963a_test#operator-source.c,revFiles/a06af4_58963a_test#operator-source.c}: draw), (cairo/{prevFiles/prev_a06af4_58963a_test#unbounded-operator.c,revFiles/a06af4_58963a_test#unbounded-operator.c}: draw), (cairo/{prevFiles/prev_a06af4_58963a_test#operator-clear.c,revFiles/a06af4_58963a_test#operator-clear.c}: draw)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

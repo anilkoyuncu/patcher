@@ -1,0 +1,11 @@
+@@
+expression E2, E1, E0;
+@@
+- for(E0 = 0;E0 < (sizeof(E1) / sizeof(E1[0]));E2)  
+- {
+  ...
+- }
+// Infered from: (linux/{prevFiles/prev_9cbd7d_401c31_drivers#staging#ccree#ssi_sysfs.c,revFiles/9cbd7d_401c31_drivers#staging#ccree#ssi_sysfs.c}: ssi_sys_help_show), (linux/{prevFiles/prev_b330f60_487db4_drivers#staging#rtl8192e#rtllib_wx.c,revFiles/b330f60_487db4_drivers#staging#rtl8192e#rtllib_wx.c}: rtl819x_translate_scan)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

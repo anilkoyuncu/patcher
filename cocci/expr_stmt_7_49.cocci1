@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0->win32.base.content = CAIRO_CONTENT_COLOR_ALPHA; 
++ E0->content = CAIRO_CONTENT_COLOR_ALPHA; 
+// Infered from: (cairo/{prevFiles/prev_e5d4f5_495362_src#win32#cairo-win32-printing-surface.c,revFiles/e5d4f5_495362_src#win32#cairo-win32-printing-surface.c}: cairo_win32_printing_surface_create)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_01423a_e2805c_modules#demux#mpeg#ts.c: PushPESBlock
+*/
+
+// ---------------------------------------------

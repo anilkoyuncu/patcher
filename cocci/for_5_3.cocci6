@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 1;E1[E0];E0++)  
++ for(E0 = 0;E1[E0];E0++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_131-A-18069181-18073244.c,revFiles/131-A-18069181-18073244.c}: main)
+// False positives: (codeflaws/revFiles/131-A-18069181-18073244.c: main)
+// Recall: 0.03, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

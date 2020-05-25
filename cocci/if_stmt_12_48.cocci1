@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == 0 && E1 == 0)  
++ if (E0 == 0 && E1 == 0 || E1 == 0 && E0 == 1)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_149-B-1169277-1169292.c,revFiles/149-B-1169277-1169292.c}: main)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch did not apply:
+ - cairo/prevFiles/prev_2fd50a_0359ad_src#cairo-quartz-surface.c: cairo_quartz_surface_create
+ - codeflaws/prevFiles/prev_359-A-5034880-5034905.c: main
+ - codeflaws/prevFiles/prev_633-A-17175159-17175278.c: main
+ - codeflaws/prevFiles/prev_340-B-9369797-9369822.c: main
+*/
+
+// ---------------------------------------------

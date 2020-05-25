@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (E0 + E1 + 256) % 256; 
++ E0 = (E0 + 256U + E1) % 256; 
+// Infered from: (FFmpeg/{prevFiles/prev_672632_08cb69_libavcodec#hevc_ps.c,revFiles/672632_08cb69_libavcodec#hevc_ps.c}: scaling_list_data)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

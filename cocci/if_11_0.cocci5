@@ -1,0 +1,37 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 > 1 && E1->sx - E0 > E2)  
++ if (E0 > 1 && E1->sy - E0 > E2)  
+  {
+- E2 = E1->sx - E0; 
++ E2 = E1->sy - E0; 
+  }
+// Infered from: (tmux/{prevFiles/prev_c3794d_4fbb29_layout-set.c,revFiles/c3794d_4fbb29_layout-set.c}: layout_set_main_h), (tmux/{prevFiles/prev_9f738d_6c1c30_layout-set.c,revFiles/9f738d_6c1c30_layout-set.c}: layout_set_main_h)
+// False positives: (tmux/revFiles/9f738d_6c1c30_layout-set.c: layout_set_main_v), (tmux/revFiles/c3794d_4fbb29_layout-set.c: layout_set_main_v)
+// Recall: 0.16, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 0.80
+// -- Node Change --
+// Recall: 0.60, Precision: 0.79
+// -- General --
+// Functions fully changed: 8/15(53%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_b8b40f_625978_Zend#zend_list.c: plist_entry_destructor
+ - libarchive/prevFiles/prev_458281_64082b_libarchive#archive_read_disk_posix.c: 
+ - libarchive/prevFiles/prev_458281_64082b_libarchive#archive_read_disk_windows.c: 
+ - vlc/prevFiles/prev_bf36cd_b2e31b_modules#access_filter#timeshift.c: GetTmpFilePath
+ - FFmpeg/prevFiles/prev_12ceaf_a19bac_fftools#ffprobe.c: read_interval_packets
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - tmux/prevFiles/prev_9f738d_6c1c30_layout-set.c: layout_set_main_v
+ - tmux/prevFiles/prev_c3794d_4fbb29_layout-set.c: layout_set_main_v
+*/
+
+// ---------------------------------------------

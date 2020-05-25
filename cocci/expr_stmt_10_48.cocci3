@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- REG_WR(E0,  (E1) ? NIG_REG_P1_TX_ARB_NUM_STRICT_ARB_SLOTS :NIG_REG_P1_TX_ARB_NUM_STRICT_ARB_SLOTS,  0x100); 
++ REG_WR(E0,  (E1) ? NIG_REG_P1_TX_ARB_NUM_STRICT_ARB_SLOTS :NIG_REG_P0_TX_ARB_NUM_STRICT_ARB_SLOTS,  0x100); 
+// Infered from: (linux/{prevFiles/prev_dd612f18_9a99dc_drivers#net#ethernet#broadcom#bnx2x#bnx2x_link.c,revFiles/dd612f18_9a99dc_drivers#net#ethernet#broadcom#bnx2x#bnx2x_link.c}: bnx2x_ets_e3b0_nig_disabled)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

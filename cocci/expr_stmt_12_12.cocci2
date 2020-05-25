@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- opal_pointer_array_add (E0, strdup(E1)); 
++ opal_pointer_array_add(&mca_pml_base_pml, E1); 
+// Infered from: (ompi/{prevFiles/prev_91415c_c83ef6_ompi#mca#pml#base#pml_base_open.c,revFiles/91415c_c83ef6_ompi#mca#pml#base#pml_base_open.c}: mca_pml_base_open)
+// False positives: (ompi/revFiles/91415c_c83ef6_ompi#mca#pml#base#pml_base_open.c: mca_pml_base_open)
+// Recall: 0.08, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------

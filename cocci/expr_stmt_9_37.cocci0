@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- zend_string_extend(Z_STR_P(E0), E1 + 1, 0); 
++ Z_STR_P(E0) = zend_string_extend(Z_STR_P(E0), E1 + 1, 0); 
+// Infered from: (php-src/{prevFiles/prev_ed0602_06699a_Zend#zend_compile.c,revFiles/ed0602_06699a_Zend#zend_compile.c}: zend_negate_num_string)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

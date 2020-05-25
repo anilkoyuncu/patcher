@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->b_absolute = false; 
++ E0->b_absolute = true; 
+// Infered from: (vlc/{prevFiles/prev_9dc1a1_a82e5f_modules#codec#dvbsub.c,revFiles/9dc1a1_a82e5f_modules#codec#dvbsub.c}: Open)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

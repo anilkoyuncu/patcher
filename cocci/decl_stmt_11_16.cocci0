@@ -1,0 +1,18 @@
+@@
+type T2;
+identifier I0, I1, I3;
+expression E4;
+typedef AVFilterLink;
+typedef AVFrame;
+@@
+  int filter_frame(AVFilterLink *I0, AVFrame *I1)  
+  {
+  ...
+- T2 I3 = av_get_channel_layout_nb_channels (E4); 
++ int I3 = I0->channels; 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_634782_aac57c_libavfilter#avf_showwaves.c,revFiles/634782_aac57c_libavfilter#avf_showwaves.c}: filter_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

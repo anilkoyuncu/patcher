@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- myglobals.basename = opal_basename(E0[0]); 
++ orte_basename = opal_basename(E0[0]); 
+// Infered from: (ompi/{prevFiles/prev_f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c,revFiles/f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c}: main)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.07
+
+// ---------------------------------------------

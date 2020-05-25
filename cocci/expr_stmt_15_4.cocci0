@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef gpointer;
+@@
+- g_hash_table_insert(E0, (gpointer )E1, E2); 
++ g_hash_table_insert(E0, GINT_TO_POINTER(E1), E2); 
+// Infered from: (wireshark/{prevFiles/prev_22d254_520296_gtk#dfilter_expr_dlg.c,revFiles/22d254_520296_gtk#dfilter_expr_dlg.c}: dfilter_expr_dlg_new)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

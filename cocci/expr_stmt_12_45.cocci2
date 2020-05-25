@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- gnome_app_set_contents(GNOME_APP(E0),  gst_util_get_pointer_arg(GTK_OBJECT(E1), "widget")); 
++ gnome_app_set_contents(GNOME_APP(E0),  gst_util_get_pointer_arg(G_OBJECT(E1), "widget")); 
+// Infered from: (gstreamer/{prevFiles/prev_4b447f_11ff1a_test#mpeg2parse.c,revFiles/4b447f_11ff1a_test#mpeg2parse.c}: mpeg2parse_newpad)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+
+// ---------------------------------------------

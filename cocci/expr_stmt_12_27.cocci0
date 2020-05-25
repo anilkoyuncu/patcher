@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fput(E0->file); 
++ sockfd_put(E0); 
+// Infered from: (linux/{prevFiles/prev_67b232_3becd5_net#bluetooth#bnep#sock.c,revFiles/67b232_3becd5_net#bluetooth#bnep#sock.c}: bnep_sock_ioctl), (linux/{prevFiles/prev_67b232_3becd5_net#bluetooth#bnep#sock.c,revFiles/67b232_3becd5_net#bluetooth#bnep#sock.c}: bnep_sock_ioctl), (linux/{prevFiles/prev_67b232_3becd5_net#bluetooth#cmtp#sock.c,revFiles/67b232_3becd5_net#bluetooth#cmtp#sock.c}: cmtp_sock_ioctl), (linux/{prevFiles/prev_67b232_3becd5_net#bluetooth#cmtp#sock.c,revFiles/67b232_3becd5_net#bluetooth#cmtp#sock.c}: cmtp_sock_ioctl)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

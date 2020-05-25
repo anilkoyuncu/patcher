@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- fprintf(E0, "%4.4lx: ", (long )E1); 
++ fprintf(E0, "%4.4lx: ", E1); 
+// Infered from: (curl/{prevFiles/prev_13505d_4c735b_docs#examples#http2-upload.c,revFiles/13505d_4c735b_docs#examples#http2-upload.c}: dump), (curl/{prevFiles/prev_13505d_4c735b_docs#examples#debug.c,revFiles/13505d_4c735b_docs#examples#debug.c}: dump), (curl/{prevFiles/prev_13505d_4c735b_docs#examples#http2-serverpush.c,revFiles/13505d_4c735b_docs#examples#http2-serverpush.c}: dump), (curl/{prevFiles/prev_13505d_4c735b_docs#examples#http2-download.c,revFiles/13505d_4c735b_docs#examples#http2-download.c}: dump), (curl/{prevFiles/prev_13505d_4c735b_docs#examples#multi-debugcallback.c,revFiles/13505d_4c735b_docs#examples#multi-debugcallback.c}: dump)
+// Recall: 0.42, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

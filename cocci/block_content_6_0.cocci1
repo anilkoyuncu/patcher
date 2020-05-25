@@ -1,0 +1,77 @@
+@@
+type T0;
+identifier I1;
+expression E2;
+@@
+- T0 I1 = *(T0 *)E2; 
++ T0 I1; 
++ memcpy(&I1, E2, sizeof(T0 )); 
+// Infered from: (git/{prevFiles/prev_2b7963_070879_object.c,revFiles/2b7963_070879_object.c}: hashtable_index)
+// False positives: (qemu/revFiles/4f0800_90527d_savevm.c: qemu_announce_self_once)
+// Recall: 0.02, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.04, Precision: 0.67
+// -- Node Change --
+// Recall: 0.04, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/53(3%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_aa10ac_d066ed_ext#standard#var.c: php_var_serialize_class
+ - linux/prevFiles/prev_3423d80_4ec6496_drivers#mmc#host#s3cmci.c: finalize_request
+ - php-src/prevFiles/prev_f63393_a08c0d_ext#date#php_date.c: date_object_period_get_iterator
+ - wireshark/prevFiles/prev_0aa0fb_24768a_extcap#extcap-base.c: extcap_base_register_interface_ext
+ - FFmpeg/prevFiles/prev_eb5530_cb1c69_libavfilter#avfilter.c: avfilter_config_links
+ - FFmpeg/prevFiles/prev_7be340_b25ee3f_libavformat#mxfenc.c: mxf_write_partition
+ - wireshark/prevFiles/prev_fec821_35dd3b_epan#wslua#wslua_pinfo.c: Pinfo_hi
+ - lighttpd1.4/prevFiles/prev_72b133_1a1866_src#lempar.c: yy_pop_parser_stack
+ - FFmpeg/prevFiles/prev_de3b11_82c005_libavcodec#eatgq.c: tgq_decode_frame
+ - wireshark/prevFiles/prev_fec821_35dd3b_epan#wslua#wslua_pinfo.c: Pinfo_lo
+ - FFmpeg/prevFiles/prev_3ff999_16d14d_libavfilter#vf_crop.c: start_frame
+ - qemu/prevFiles/prev_4f0800_90527d_savevm.c: qemu_fopen_socket
+ - wireshark/prevFiles/prev_fe5f07_8204b9_epan#wslua#wslua_tvb.c: TvbRange_range
+ - FFmpeg/prevFiles/prev_5eafc8_58ef4e_libavcodec#pthread.c: release_delayed_buffers
+ - php-src/prevFiles/prev_364c2f_af77fd_sapi#apache2handler#sapi_apache2.c: php_apache_sapi_get_request_time
+ - wireshark/prevFiles/prev_401dba_551dcf_epan#dissectors#packet-image-gif.c: dissect_gif
+ - qemu/prevFiles/prev_728470_145267_migration#rdma.c: qemu_fopen_rdma
+ - qemu/prevFiles/prev_388a86_f75023_hw#virtio#vhost.c: vhost_iommu_region_add
+ - php-src/prevFiles/prev_7d5f71_5a6da7_Zend#zend_virtual_cwd.c: realpath_cache_key
+ - FFmpeg/prevFiles/prev_262196_3c9267_libavcodec#wmavoice.c: synth_frame
+ - qemu/prevFiles/prev_196d4f_89d5cb_hw#scsi#virtio-scsi-dataplane.c: virtio_scsi_vring_init
+ - ompi/prevFiles/prev_aa35ef_63c33a_opal#mca#base#mca_base_component_find.c: open_component
+ - qemu/prevFiles/prev_eef9f1_e0dadc_hw#block#m25p80.c: flash_sync_page
+ - qemu/prevFiles/prev_eef9f1_e0dadc_hw#block#m25p80.c: flash_sync_area
+ - gtk/prevFiles/prev_a99c69_cf4e17_gtk#gtklabel.c: gtk_label_get_request_mode
+ - wireshark/prevFiles/prev_a8f432_01f7a0_epan#dissectors#packet-m3ua.c: dissect_protocol_data_parameter
+ - php-src/prevFiles/prev_03e298_f5ddb6_Zend#zend_builtin_functions.c: ZEND_FUNCTION
+ - codeflaws/prevFiles/prev_258-A-18231307-18231329.c: main
+ - FFmpeg/prevFiles/prev_7dafb3_52773a2_libavfilter#vf_hwupload_cuda.c: cudaupload_query_formats
+ - FFmpeg/prevFiles/prev_f2eca8_acecd6_libavcodec#hevc.c: verify_md5
+ - FFmpeg/prevFiles/prev_a1f8b3_f09151_libavcodec#iff.c: decodeplane8
+ - php-src/prevFiles/prev_67f077_915a37_Zend#zend_virtual_cwd.c: realpath_cache_key
+ - qemu/prevFiles/prev_17866f_522fcc_hw#display#vmware_vga.c: vmsvga_update_display
+ - redis/prevFiles/prev_bbec45_41809f_src#t_stream.c: streamReplyWithRange
+ - qemu/prevFiles/prev_672558_769240_numa.c: numa_set_mem_node_id
+ - gtk/prevFiles/prev_c9ca4b_b0713f_gtk#gtksizerequest.c: gtk_distribute_natural_allocation
+ - qemu/prevFiles/prev_41cc52_daafc6_ui#gtk.c: gd_ungrab_pointer
+ - qemu/prevFiles/prev_ad0c60_11e732_exec.c: address_space_map
+ - vlc/prevFiles/prev_be82d4_956ce1_modules#video_output#xcb#xvideo.c: Open
+ - lighttpd2/prevFiles/prev_bfad82_67f89a_src#worker.c: worker_add_closing_socket
+ - qemu/prevFiles/prev_f62492_384417_block#qapi.c: qmp_query_blockstats
+ - FFmpeg/prevFiles/prev_d185c8_f03c0f_libavcodec#tiff.c: doubles2str
+ - qemu/prevFiles/prev_e8dcb8_68898b_ui#sdl2-2d.c: sdl2_2d_update
+ - wireshark/prevFiles/prev_a49fee_fae315_epan#dissectors#packet-diameter.c: dissect_diameter_avp
+ - lighttpd2/prevFiles/prev_542031_9f8413_src#response.c: response_send_headers
+ - linux/prevFiles/prev_36a45e_7cd10a_arch#ia64#kernel#machine_kexec.c: ia64_machine_kexec
+ - git/prevFiles/prev_2b7963_070879_object.c: find_object
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_4f0800_90527d_savevm.c: qemu_announce_self_once
+*/
+
+// ---------------------------------------------

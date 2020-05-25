@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2;
+@@
+- g_print("%07d:%08lld min:%08lld max:%08lld avg:%08lld avg-s:0.%09d\r", count,  E0, min, max, E1, E2); 
+// Infered from: (gstreamer/{prevFiles/prev_393033_2c4d0a_tests#lat.c,revFiles/393033_2c4d0a_tests#lat.c}: handoff_sink)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

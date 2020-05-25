@@ -1,0 +1,16 @@
+@@
+identifier I0, I1;
+typedef ASN1_OBJECT;
+typedef X509_ATTRIBUTE;
+@@
+  int X509_ATTRIBUTE_set1_object(X509_ATTRIBUTE *I0, const  ASN1_OBJECT *I1)  
+  {
+  ...
+- return (1); 
++ return I0->object != NULL; 
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_4e0e4d_e073fd_crypto#x509#x509_att.c,revFiles/4e0e4d_e073fd_crypto#x509#x509_att.c}: X509_ATTRIBUTE_set1_object)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

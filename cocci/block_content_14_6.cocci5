@@ -1,0 +1,33 @@
+@@
+expression list E2;
+identifier I0;
+expression E1, E3, E4, E5;
+typedef guint32;
+@@
+- guint32 I0; 
++ guint32 slrx; 
+  ...
+- E1 = tvb_get_letoh24 (E2); 
++ slrx = tvb_get_letoh24(E3, 1); 
+  ...
+- proto_tree_add_uint(E4, hf_sccp_segmentation_slr, E3, 1, E5, I0); 
++ proto_tree_add_uint(E4, hf_sccp_segmentation_slr, E3, 1, E5, slrx); 
+// Infered from: (wireshark/{prevFiles/prev_ceebcc_e78313_epan#dissectors#packet-sccp.c,revFiles/ceebcc_e78313_epan#dissectors#packet-sccp.c}: dissect_sccp_segmentation_param)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.70, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_65877a_ecf63b_libavcodec#ppc#h264dsp.c: h264_deblock_q1
+ - wireshark/prevFiles/prev_7ca5ad_72deda_epan#dissectors#packet-rtsp.c: rtsp_create_conversation
+*/
+
+// ---------------------------------------------

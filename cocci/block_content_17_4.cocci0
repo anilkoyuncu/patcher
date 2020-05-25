@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = E1; 
+- var_Set(E2, "intf-change", E3); 
++ var_SetBool(E2, "intf-change", true); 
+// Infered from: (vlc/{prevFiles/prev_19efca_f27309_modules#audio_output#alsa.c,revFiles/19efca_f27309_modules#audio_output#alsa.c}: Probe), (vlc/{prevFiles/prev_19efca_f27309_modules#audio_output#waveout.c,revFiles/19efca_f27309_modules#audio_output#waveout.c}: Probe), (vlc/{prevFiles/prev_19efca_f27309_modules#audio_output#portaudio.c,revFiles/19efca_f27309_modules#audio_output#portaudio.c}: PAOpenDevice), (vlc/{prevFiles/prev_19efca_f27309_modules#audio_output#sdl.c,revFiles/19efca_f27309_modules#audio_output#sdl.c}: Open)
+// Recall: 0.36, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

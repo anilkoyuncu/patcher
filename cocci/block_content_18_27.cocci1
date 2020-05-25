@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- printf("\n%s (%u)\n", E0, E1); 
++ printf("\n%s (%d)\n", E0, E1); 
+// Infered from: (wireshark/{prevFiles/prev_e88a11_2078a9_ui#cli#tap-expert.c,revFiles/e88a11_2078a9_ui#cli#tap-expert.c}: draw_items_for_severity)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+identifier I3;
+type T1;
+expression E2, E4, E6, E0;
+binary operator B5 = {* ,/ };
+@@
+- E0 = (T1 *)(E2->I3 + (E4 B5 E6)); 
++ E0 = (E2->I3 + (E4 B5 E6)); 
+// Infered from: (linux/{prevFiles/prev_c2fd03_2c20889_drivers#net#can#mcp251x.c,revFiles/c2fd03_2c20889_drivers#net#can#mcp251x.c}: mcp251x_can_probe), (linux/{prevFiles/prev_c2fd03_2c20889_drivers#net#fddi#defxx.c,revFiles/c2fd03_2c20889_drivers#net#fddi#defxx.c}: dfx_rcv_init)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

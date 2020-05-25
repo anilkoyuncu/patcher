@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef pixman_box32_t;
+@@
+- pixman_box32_t I0[CAIRO_STACK_ARRAY_LENGTH(pixman_rectangle16_t)]; 
++ pixman_box32_t I0[CAIRO_STACK_ARRAY_LENGTH(pixman_box32_t )]; 
+// Infered from: (cairo/{prevFiles/prev_c7027c_852e78_src#cairo-image-surface.c,revFiles/c7027c_852e78_src#cairo-image-surface.c}: _cairo_image_surface_fill_rectangles), (cairo/{prevFiles/prev_91a6fe_83259f_src#cairo-image-surface.c,revFiles/91a6fe_83259f_src#cairo-image-surface.c}: _cairo_image_surface_fill_rectangles)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = E1->hflags; 
++ int I0 = E1->hflags & MIPS_HFLAG_BMASK; 
+// Infered from: (qemu/{prevFiles/prev_c53f4a_5a63bc_target-mips#translate.c,revFiles/c53f4a_5a63bc_target-mips#translate.c}: decode_opc)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.69, Precision: 0.90
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_75d5ec_6d11d9_target-ppc#mmu-hash32.c: ppc_hash32_pte_raddr
+*/
+
+// ---------------------------------------------

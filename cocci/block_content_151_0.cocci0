@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->width - E1->right_margin; 
++ E0 = E1->width - E1->right_margin - E1->left_padding - 1; 
+// Infered from: (gtk/{prevFiles/prev_9ad6ac_90bcde_gtk#gtktextview.c,revFiles/9ad6ac_90bcde_gtk#gtktextview.c}: _gtk_text_view_scroll_to_iter), (gtk/{prevFiles/prev_016f65_2aaba3_gtk#gtktextview.c,revFiles/016f65_2aaba3_gtk#gtktextview.c}: _gtk_text_view_scroll_to_iter)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.09
+
+// ---------------------------------------------

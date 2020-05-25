@@ -1,0 +1,16 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef clusterNode;
+@@
+  int clusterAddSlot(clusterNode *I0, int I1)  
+  {
+  ...
+- server.cluster.slots[E2] = server.cluster.myself; 
++ server.cluster.slots[E2] = I0; 
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_a55c78_5a547b_src#cluster.c,revFiles/a55c78_5a547b_src#cluster.c}: clusterAddSlot)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

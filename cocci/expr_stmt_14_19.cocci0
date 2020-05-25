@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- msg_rc("Currently playing title %ld/%ld.", E0, E1); 
++ msg_rc("Currently playing title %zd/%zu.", E0, E1); 
+// Infered from: (vlc/{prevFiles/prev_318a21_69504ee_modules#control#oldrc.c,revFiles/318a21_69504ee_modules#control#oldrc.c}: Input)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

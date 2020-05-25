@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E1;
+typedef php_int_t;
+@@
+- long I0 = 0; 
++ php_int_t I0 = 0; 
+  ...
+- if (sizeof(long ) > 4 && E1)  
++ if (SIZEOF_ZEND_INT > 4 && E1)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_7cf682_637e9f_ext#standard#pack.c,revFiles/7cf682_637e9f_ext#standard#pack.c}: PHP_FUNCTION)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

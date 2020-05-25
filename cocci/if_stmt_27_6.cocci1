@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- col_add_str(E0->cinfo, COL_INFO,  val_to_str(session->spdu_type, ses_vals,  "Unknown Ppdu type (0x%02x)")); 
++ col_add_str(E0->cinfo, COL_INFO,  val_to_str(session->spdu_type, ses_vals,  "Unknown PPDU type (0x%02x)")); 
+// Infered from: (wireshark/{prevFiles/prev_8aa735_9b2f05_epan#dissectors#packet-pres.c,revFiles/8aa735_9b2f05_epan#dissectors#packet-pres.c}: dissect_ppdu), (wireshark/{prevFiles/prev_8aa735_9b2f05_asn1#pres#packet-pres-template.c,revFiles/8aa735_9b2f05_asn1#pres#packet-pres-template.c}: dissect_ppdu)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.50
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_8aa735_9b2f05_epan#dissectors#packet-pres.c: pres_try_users_table
+ - wireshark/prevFiles/prev_8aa735_9b2f05_asn1#pres#packet-pres-template.c: pres_try_users_table
+*/
+
+// ---------------------------------------------

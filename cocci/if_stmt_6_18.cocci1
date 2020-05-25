@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->ste_type == ModuleBlock || !E0->ste_unoptimized || !(E0->ste_free || E0->ste_child_free))  
++ if (E0->ste_type != FunctionBlock || !E0->ste_unoptimized || !(E0->ste_free || E0->ste_child_free))  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_2dfcef_8b528b_Python#symtable.c,revFiles/2dfcef_8b528b_Python#symtable.c}: check_unoptimized)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

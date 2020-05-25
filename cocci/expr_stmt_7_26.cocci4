@@ -1,0 +1,15 @@
+@@
+expression E0, E1;
+@@
+- if (strcmp((char *)E0, E1) == 0)  
+- {
+  ...
+- }
+- else
+- {
+  ...
+- }
+// Infered from: (wireshark/{prevFiles/prev_f6c5cf_37c928_epan#dissectors#packet-sdp.c,revFiles/f6c5cf_37c928_epan#dissectors#packet-sdp.c}: dissect_sdp_session_attribute), (wireshark/{prevFiles/prev_f6c5cf_37c928_epan#dissectors#packet-sdp.c,revFiles/f6c5cf_37c928_epan#dissectors#packet-sdp.c}: dissect_sdp_session_attribute)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

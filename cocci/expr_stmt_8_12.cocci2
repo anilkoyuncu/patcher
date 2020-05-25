@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = g_strjoin("/", E1, E2, NULL); 
++ E0 = g_build_filename(E1, E2, NULL); 
+// Infered from: (gstreamer/{prevFiles/prev_5f6bfb_6b2986_gst#gstregistry.c,revFiles/5f6bfb_6b2986_gst#gstregistry.c}: gst_registry_scan_path_level)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

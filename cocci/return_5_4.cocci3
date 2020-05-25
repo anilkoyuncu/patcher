@@ -1,0 +1,26 @@
+@@
+@@
+- if (!slirp_vc)  
+- {
+- return; 
+- }
+// Infered from: (qemu/{prevFiles/prev_d6cf84_d918f2_net.c,revFiles/d6cf84_d918f2_net.c}: slirp_output)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.70
+// -- Node Change --
+// Recall: 1.00, Precision: 0.64
+// -- General --
+// Functions fully changed: 7/10(70%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_52ffe2_9b50cf_ext#fileinfo#libmagic#cdf.c: cdf_count_chain
+ - libarchive/prevFiles/prev_6d3edb_644408_libarchive#archive_string.c: my_mbtowc_utf8
+ - php-src/prevFiles/prev_ea27fd_5645de_ext#fileinfo#libmagic#cdf.c: cdf_count_chain
+*/
+
+// ---------------------------------------------

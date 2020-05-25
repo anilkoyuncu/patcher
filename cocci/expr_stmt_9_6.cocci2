@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0[E1].thr_quiet = fmaxf(PSY_3GPP_RPEMIN * E0[E1].thr_quiet,  fminf(E0[E1].thr_quiet,  PSY_3GPP_RPELEV * E2->prev_band[E3 + E1].thr_quiet)); 
++ E0[E1].thr_quiet = FFMAX(PSY_3GPP_RPEMIN * E0[E1].thr_quiet,  FFMIN(E0[E1].thr_quiet,  PSY_3GPP_RPELEV * E2->prev_band[E3 + E1].thr_quiet)); 
+// Infered from: (FFmpeg/{prevFiles/prev_988c17_181b33_libavcodec#aacpsy.c,revFiles/988c17_181b33_libavcodec#aacpsy.c}: psy_3gpp_analyze)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I2;
+expression E3, E0, E1;
+typedef Py_ssize_t;
+@@
+- E0 = MIN(E1, (I2 - E3->curlen)); 
++ E0 = MIN(E1, (Py_ssize_t )(I2 - E3->curlen)); 
+// Infered from: (cpython/{prevFiles/prev_081fe4_0bec35_Modules#sha1module.c,revFiles/081fe4_0bec35_Modules#sha1module.c}: sha1_process), (cpython/{prevFiles/prev_081fe4_0bec35_Modules#md5module.c,revFiles/081fe4_0bec35_Modules#md5module.c}: md5_process)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

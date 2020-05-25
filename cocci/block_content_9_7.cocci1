@@ -1,0 +1,14 @@
+@@
+expression E0;
+@@
+- if (E0->object.flags & DUPCHECK)  
++ if (E0->object.flags & SEEN)  
+  {
+  ...
+  }
+- E0->object.flags |= DUPCHECK; 
++ E0->object.flags |= SEEN; 
+// Infered from: (git/{prevFiles/prev_960cea_e6c350_rev-list.c,revFiles/960cea_e6c350_rev-list.c}: main)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

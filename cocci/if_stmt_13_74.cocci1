@@ -1,0 +1,30 @@
+@@
+expression E0, E1, E2, E3;
+typedef nspr_hd_v20_t;
+typedef nspr_pktracefull_v20_t;
+@@
+- if (!nstrace_ensure_buflen(E0, E1, sizeof(nspr_hd_v20_t ), E2, E3))  
++ if (!nstrace_ensure_buflen(E0, E1, sizeof(nspr_pktracefull_v20_t ), E2, E3))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_e38fea_5ead0a_wiretap#netscaler.c,revFiles/e38fea_5ead0a_wiretap#netscaler.c}: nstrace_read_v20)
+// False positives: (wireshark/revFiles/e38fea_5ead0a_wiretap#netscaler.c: nstrace_read_v20), (wireshark/revFiles/e38fea_5ead0a_wiretap#netscaler.c: nstrace_read_v30)
+// Recall: 0.50, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.50
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_e38fea_5ead0a_wiretap#netscaler.c: nstrace_read_v30
+ - wireshark/prevFiles/prev_e38fea_5ead0a_wiretap#netscaler.c: nstrace_read_v20
+*/
+
+// ---------------------------------------------

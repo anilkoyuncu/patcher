@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- ff_rv34_decode_init(E0); 
++ ret = ff_rv34_decode_init(E0); 
++ if (ret < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_b86651_5d3c30_libavcodec#rv40.c,revFiles/b86651_5d3c30_libavcodec#rv40.c}: rv40_decode_init), (FFmpeg/{prevFiles/prev_b86651_5d3c30_libavcodec#rv30.c,revFiles/b86651_5d3c30_libavcodec#rv30.c}: rv30_decode_init)
+// Recall: 0.27, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!(E0->flags & IFF_PROMISC) && !is_multicast_ether_addr(E1) && compare_ether_addr(  E0->dev_addr, E1) != 0)  
++ if (!(E0->flags & IFF_PROMISC) && !is_multicast_ether_addr(E1) && !ether_addr_equal(  E0->dev_addr, E1))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_7367d0b_c9b374_drivers#net#ethernet#tile#tilegx.c,revFiles/7367d0b_c9b374_drivers#net#ethernet#tile#tilegx.c}: filter_packet)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

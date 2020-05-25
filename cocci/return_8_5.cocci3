@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ABTS_STR_EQUAL(E0, "2002-08-14 19:05:36.186711 +0000 [257 Sat]",  print_time(p, &E1)); 
++ ABTS_STR_EQUAL(E0, "2002-09-14 19:05:36.186711 +0000 [257 Sat]",  print_time(p, &E1)); 
+// Infered from: (apr/{prevFiles/prev_023aec_3e75ca_test#testtime.c,revFiles/023aec_3e75ca_test#testtime.c}: test_gmtstr)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

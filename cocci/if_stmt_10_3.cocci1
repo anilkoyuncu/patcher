@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!has_object_file(&E0->old_oid))  
++ if (!has_object_file_with_flags(&E0->old_oid, OBJECT_INFO_QUICK))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_c29129_7893bf_fetch-pack.c,revFiles/c29129_7893bf_fetch-pack.c}: everything_local)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

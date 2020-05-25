@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- capture_opts->iface = g_strdup(E0->capture_device); 
++ capture_opts->iface = g_strdup(get_if_name(E0->capture_device)); 
+// Infered from: (wireshark/{prevFiles/prev_a7a107_8efa36_gtk#main.c,revFiles/a7a107_8efa36_gtk#main.c}: main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

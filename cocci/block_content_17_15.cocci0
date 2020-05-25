@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- I0 = pthread_join(E1[E2], NULL); 
++ pthread_join(E1[E2], NULL); 
+// Infered from: (curl/{prevFiles/prev_b06981_528b28_docs#examples#smooth-gtk-thread.c,revFiles/b06981_528b28_docs#examples#smooth-gtk-thread.c}: create_thread)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

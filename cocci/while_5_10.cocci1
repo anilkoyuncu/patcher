@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (E0 <= 100000)  
++ while (E0 < 1000000)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_146-B-1113178-1113179.c,revFiles/146-B-1113178-1113179.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

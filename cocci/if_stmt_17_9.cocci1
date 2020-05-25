@@ -1,0 +1,36 @@
+@@
+expression E0;
+@@
+- if (E0->p_sys->hparent)  
++ if (E0->p_sys->hparent && !E0->b_fullscreen)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_595f0c_39a42e_modules#video_output#directx#directx.c,revFiles/595f0c_39a42e_modules#video_output#directx#directx.c}: Manage)
+// False positives: (vlc/revFiles/595f0c_39a42e_modules#video_output#directx#directx.c: Manage)
+// Recall: 0.12, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.17, Precision: 1.00
+// -- Node Change --
+// Recall: 0.19, Precision: 0.60
+// -- General --
+// Functions fully changed: 0/12(0%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_6b8c8e_e71ade_src#input#input.c: __input_Preparse
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_595f0c_39a42e_modules#video_output#directx#directx.c: Manage
+*/
+
+// ---------------------------------------------

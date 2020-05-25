@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- long long I0 = (server.appendonly_current_size * 100 / E1); 
++ long long I0 = (server.appendonly_current_size * 100 / E1) - 100; 
+// Infered from: (redis/{prevFiles/prev_0b1751_9e40bc_src#redis.c,revFiles/0b1751_9e40bc_src#redis.c}: serverCron)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

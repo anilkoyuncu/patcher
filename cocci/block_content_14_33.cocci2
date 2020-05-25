@@ -1,0 +1,27 @@
+@@
+identifier I0;
+typedef gint32;
+typedef gint64;
+@@
+- gint32 I0 = -1; 
++ gint64 I0 = -1; 
+// Infered from: (wireshark/{prevFiles/prev_3b5745_602d7d_epan#dissectors#packet-adb_cs.c,revFiles/3b5745_602d7d_epan#dissectors#packet-adb_cs.c}: dissect_adb_cs)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.50
+// -- Node Change --
+// Recall: 0.75, Precision: 0.50
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_3b5745_602d7d_epan#dissectors#packet-adb_cs.c: dissect_ascii_data_length
+ - libarchive/prevFiles/prev_4f5459_6f00b2_libarchive#archive_read_support_filter_uu.c: uudecode_bidder_init
+ - libarchive/prevFiles/prev_4f5459_6f00b2_libarchive#archive_read_support_filter_uu.c: uudecode_filter_read
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,30 @@
+@@
+expression E0;
+@@
+- if (!phpdbg_write(phpdbg_get_prompt(TSRMLS_C)) || !fgets(buf, PHPDBG_MAX_CMD,  PHPDBG_G(io)[  PHPDBG_STDIN]))  
++ if ((!(PHPDBG_G(flags) & PHPDBG_IS_REMOTE) && !phpdbg_write(phpdbg_get_prompt(  TSRMLS_C))) || !fgets(  buf, PHPDBG_MAX_CMD, PHPDBG_G(io)[PHPDBG_STDIN]))  
+  {
+  ...
+  }
+  ...
+- E0 = readline(phpdbg_get_prompt(TSRMLS_C)); 
++ if ((PHPDBG_G(flags) & PHPDBG_IS_REMOTE))  
++ {
++ char buf[PHPDBG_MAX_CMD]; 
++ if (fgets(buf, PHPDBG_MAX_CMD, PHPDBG_G(io)[PHPDBG_STDIN]))  
++ {
++ E0 = buf; 
++ }
++ else
++ {
++ E0 = NULL; 
++ }
++ }
++ else
++ {
++ E0 = readline(phpdbg_get_prompt(TSRMLS_C)); 
++ }
+// Infered from: (php-src/{prevFiles/prev_db1299_87b556e_phpdbg_cmd.c,revFiles/db1299_87b556e_phpdbg_cmd.c}: phpdbg_read_input)
+// Recall: 0.62, Precision: 1.00, Matching recall: 0.73
+
+// ---------------------------------------------

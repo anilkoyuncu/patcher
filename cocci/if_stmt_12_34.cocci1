@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!(E0->msr & FD_MSR_NONDMA))  
++ if (E0->dma_chann != -1 && !(E0->msr & FD_MSR_NONDMA))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_441f66_5e3c02_hw#block#fdc.c,revFiles/441f66_5e3c02_hw#block#fdc.c}: fdctrl_stop_transfer)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

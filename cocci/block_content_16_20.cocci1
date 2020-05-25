@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- set_menu_sensitivity(ui_manager_main_menubar,  "/Menubar/GoMenu/GotoCorrespondingPacket", E0); 
++ set_menu_sensitivity(ui_manager_main_menubar, "/Menubar/GoMenu/Goto", E0); 
+// Infered from: (wireshark/{prevFiles/prev_6c7dcf_7daf9b_gtk#main_menubar.c,revFiles/6c7dcf_7daf9b_gtk#main_menubar.c}: set_menus_for_captured_packets)
+// False positives: (wireshark/revFiles/6c7dcf_7daf9b_gtk#main_menubar.c: set_menus_for_selected_tree_row)
+// Recall: 0.22, Precision: 0.33, Matching recall: 0.67
+
+// ---------------------------------------------

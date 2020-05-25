@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = block_Realloc(E0, 8, 0); 
++ E0 = block_Realloc(E0, 8, E0->i_buffer); 
+// Infered from: (vlc/{prevFiles/prev_c85308_8831fe_modules#mux#avi.c,revFiles/c85308_8831fe_modules#mux#avi.c}: Mux)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

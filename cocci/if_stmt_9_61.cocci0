@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0->b_seen && E0->es && E0->es->id && E0->i_owner_number == E1->i_number && E2->i_pid != E3)  
++ if (E0->b_seen && E0->es && E0->es->id && E0->i_owner_number == E1->i_number && (  !E2 || E2->i_pid != E3))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_426eda_a56bd7_modules#demux#ts.c,revFiles/426eda_a56bd7_modules#demux#ts.c}: FindPCRCandidate)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

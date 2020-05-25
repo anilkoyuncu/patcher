@@ -1,0 +1,13 @@
+@@
+identifier I0;
+typedef guint8;
+@@
+- char *I0; 
++ guint8 *I0; 
+  ...
+- I0 = (char *)g_malloc(PACKET_MAX_SIZE); 
++ I0 = (guint8 *)g_malloc(PACKET_MAX_SIZE); 
+// Infered from: (wireshark/{prevFiles/prev_640ded_075fc1_extcap#ciscodump.c,revFiles/640ded_075fc1_extcap#ciscodump.c}: ssh_loop_read)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

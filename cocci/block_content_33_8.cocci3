@@ -1,0 +1,29 @@
+@@
+identifier I0;
+expression E1, E3, E2;
+@@
+- msg_Warn(I0, E1, E2, E3); 
++ msg_Warn(I0, "%s\n%s %d", E1, E2, E3); 
+// Infered from: (vlc/{prevFiles/prev_2f65bd_b11fb3_modules#access#cdda#access.c,revFiles/2f65bd_b11fb3_modules#access#cdda#access.c}: cdio_log_handler), (vlc/{prevFiles/prev_2f65bd_b11fb3_modules#access#vcdx#access.c,revFiles/2f65bd_b11fb3_modules#access#vcdx#access.c}: cdio_log_handler)
+// False positives: (vlc/revFiles/2f65bd_b11fb3_modules#access#vcdx#access.c: VCDControl)
+// Recall: 0.18, Precision: 0.67, Matching recall: 0.25
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.38
+// -- Node Change --
+// Recall: 1.00, Precision: 0.48
+// -- General --
+// Functions fully changed: 3/8(37%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_2f65bd_b11fb3_modules#access#vcdx#access.c: VCDEntryPoints
+ - vlc/prevFiles/prev_2f65bd_b11fb3_modules#access#cdda#access.c: CDDAControl
+ - vlc/prevFiles/prev_2f65bd_b11fb3_modules#access#cdda#access.c: CDDAOpen
+ - vlc/prevFiles/prev_2f65bd_b11fb3_modules#access#vcdx#access.c: VCDOpen
+ - vlc/prevFiles/prev_2f65bd_b11fb3_modules#access#vcdx#access.c: VCDControl
+*/
+
+// ---------------------------------------------

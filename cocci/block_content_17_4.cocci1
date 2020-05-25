@@ -1,0 +1,26 @@
+@@
+@@
+- return 1; 
++ return VLC_ENOMEM; 
+// Infered from: (vlc/{prevFiles/prev_19efca_f27309_modules#audio_output#waveout.c,revFiles/19efca_f27309_modules#audio_output#waveout.c}: Open)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.14
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.42, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_19efca_f27309_modules#audio_output#waveout.c: Open
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_19efca_f27309_modules#audio_output#portaudio.c: Open
+*/
+
+// ---------------------------------------------

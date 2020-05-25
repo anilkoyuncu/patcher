@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- proto_item_append_text(E0, "T: The SDU contains %s",  E1 == 0 ? "data" :"signalling (e.g. related to GMM)"); 
++ proto_item_append_text(E0, "T: The SDU contains %s",  E1 == 0 ? "signalling (e.g. related to GMM)" :"data"); 
+// Infered from: (wireshark/{prevFiles/prev_e7ca77_e6647d_epan#dissectors#packet-bssgp.c,revFiles/e7ca77_e6647d_epan#dissectors#packet-bssgp.c}: decode_iei_qos_profile)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.73, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/11(63%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_49f638_14a6294_packet-giop.c: dissect_giop
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_b4ccb69_fadba4_sapi#fpm#fpm#fpm_conf.c: fpm_conf_ini_parser_array
+ - php-src/prevFiles/prev_10a112_36103d_sapi#fpm#fpm#fpm_conf.c: fpm_conf_ini_parser_array
+ - codeflaws/prevFiles/prev_456-B-16741139-16741161.c: main
+*/
+
+// ---------------------------------------------

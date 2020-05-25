@@ -1,0 +1,18 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef zend_ulong;
+iterator name ZEND_HASH_FOREACH_KEY_PTR;
+iterator name ZEND_HASH_FOREACH_STR_KEY_PTR;
+@@
+- zend_ulong I0; 
+  ...
+- ZEND_HASH_FOREACH_KEY_PTR (E1->prop_handler, I0, E2, E3)  
++ ZEND_HASH_FOREACH_STR_KEY_PTR (E1->prop_handler, E2, E3)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_4d10e1_595e46_ext#zip#php_zip.c,revFiles/4d10e1_595e46_ext#zip#php_zip.c}: php_zip_get_properties)
+// Recall: 0.38, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

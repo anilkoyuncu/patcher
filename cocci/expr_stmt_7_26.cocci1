@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef hdcp_transaction_t;
+@@
+- E0 = se_tree_lookup32_le(transactions, PINFO_FD_NUM(E1)); 
++ E0 = (hdcp_transaction_t *)se_tree_lookup32_le(transactions, PINFO_FD_NUM(E1)); 
+// Infered from: (wireshark/{prevFiles/prev_a75210_2c103b_epan#dissectors#packet-hdcp.c,revFiles/a75210_2c103b_epan#dissectors#packet-hdcp.c}: dissect_hdcp)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->p_sys->i_height = VOUT_HEIGHT_DEFAULT; 
++ E0->p_sys->i_height = main_GetIntVariable(VOUT_HEIGHT_VAR,  VOUT_HEIGHT_DEFAULT); 
+// Infered from: (vlc/{prevFiles/prev_420ec3_b8899c_plugins#sdl#vout_sdl.c,revFiles/420ec3_b8899c_plugins#sdl#vout_sdl.c}: vout_SDLCreate)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

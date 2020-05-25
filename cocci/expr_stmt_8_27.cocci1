@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E1, E0, E3, E4;
+@@
+- E0 = request_threaded_irq(E1, NULL, I2, 0, E3, E4); 
++ E0 = request_threaded_irq(E1, NULL, I2, IRQF_ONESHOT, E3, E4); 
+// Infered from: (linux/{prevFiles/prev_1a5259_0b182c_drivers#mfd#wm831x-auxadc.c,revFiles/1a5259_0b182c_drivers#mfd#wm831x-auxadc.c}: wm831x_auxadc_init), (linux/{prevFiles/prev_a2778b_7c577c0d_drivers#power#twl4030_charger.c,revFiles/a2778b_7c577c0d_drivers#power#twl4030_charger.c}: twl4030_bci_probe), (linux/{prevFiles/prev_a81df9_2b12978_drivers#usb#phy#phy-tahvo.c,revFiles/a81df9_2b12978_drivers#usb#phy#phy-tahvo.c}: tahvo_usb_probe), (linux/{prevFiles/prev_b3c8c8_cea2cc_drivers#mfd#wm8350-core.c,revFiles/b3c8c8_cea2cc_drivers#mfd#wm8350-core.c}: wm8350_device_init)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

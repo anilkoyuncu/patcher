@@ -1,0 +1,31 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- E0 += (E1->i_sample - E1->chunk[E1->i_chunk].i_sample_first) * I2->i_channelcount * I2->i_samplesize / 8; 
++ E0 += (E1->i_sample - E1->chunk[E1->i_chunk].i_sample_first) * E1->i_sample_size; 
+// Infered from: (vlc/{prevFiles/prev_321d55_e02be5_modules#demux#mp4#mp4.c,revFiles/321d55_e02be5_modules#demux#mp4#mp4.c}: MP4_TrackGetPos)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.38
+// -- Node Change --
+// Recall: 1.00, Precision: 0.48
+// -- General --
+// Functions fully changed: 5/13(38%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_321d55_e02be5_modules#demux#mp4#mp4.c: TrackCreateES
+ - vlc/prevFiles/prev_321d55_e02be5_modules#demux#mp4#mp4.c: TrackCreateChunksIndex
+ - vlc/prevFiles/prev_321d55_e02be5_modules#demux#mp4#mp4.c: MP4_TrackSeek
+ - openssl/prevFiles/prev_a89325_380a52_ssl#d1_lib.c: dtls1_link_min_mtu
+ - openssl/prevFiles/prev_a89325_380a52_ssl#d1_lib.c: dtls1_default_timeout
+ - vlc/prevFiles/prev_321d55_e02be5_modules#demux#mp4#mp4.c: TrackCreateSamplesIndex
+ - openssl/prevFiles/prev_a89325_380a52_ssl#d1_lib.c: dtls1_ctrl
+ - vlc/prevFiles/prev_321d55_e02be5_modules#demux#mp4#mp4.c: TrackTimeToSampleChunk
+*/
+
+// ---------------------------------------------

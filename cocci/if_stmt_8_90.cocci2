@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- if (E0 == true)  
++ if (E0)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_1208f1_938db28_drivers#staging#vt6655#wpa2.c,revFiles/1208f1_938db28_drivers#staging#vt6655#wpa2.c}: WPA2vParseRSN)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_1208f1_938db28_drivers#staging#vt6655#wpactl.c: wpa_set_keys
+*/
+
+// ---------------------------------------------

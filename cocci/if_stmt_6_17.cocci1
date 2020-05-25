@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((double )LONG_MIN <= E0 && E0 <= (double )LONG_MAX)  
++ if ((double )ZEND_INT_MIN <= E0 && E0 <= (double )ZEND_INT_MAX)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_c23bab_7e20b1_ext#standard#array.c,revFiles/c23bab_7e20b1_ext#standard#array.c}: PHP_FUNCTION)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

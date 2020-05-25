@@ -1,0 +1,51 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- I0 = get_le16(E1); 
++ E2->frame_rate = get_le16(E1); 
+  ...
+- E2->ms_per_frame = (1000 * 256) / I0; 
+  ...
+- if (E3)  
++ if (E3)  
+  {
+- av_set_pts_info(E3, 24, 1, 1000); 
+- ...
++ av_set_pts_info(E3, 64, 256, E2->frame_rate); 
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b912ef_d0429b_libavformat#swf.c,revFiles/b912ef_d0429b_libavformat#swf.c}: swf_read_header)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 0.57
+// -- Node Change --
+// Recall: 0.78, Precision: 0.54
+// -- General --
+// Functions fully changed: 4/16(25%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_b912ef_d0429b_libavformat#swf.c: swf_read_header
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_436c45_dc172e_libavcodec#h264.c: prefetch_motion
+ - FFmpeg/prevFiles/prev_b912ef_d0429b_libavformat#swf.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_pack
+ - FFmpeg/prevFiles/prev_480b13_ba605c_libavcodec#wavpack.c: wavpack_decode_block
+ - ompi/prevFiles/prev_a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_pack_homogeneous_with_memcpy
+ - ompi/prevFiles/prev_a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_get_packed_size
+ - ompi/prevFiles/prev_a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_get_unpacked_size
+ - ompi/prevFiles/prev_a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_pack_homogeneous
+ - ompi/prevFiles/prev_91c857_23c2a3_ompi#mca#io#ompio#io_ompio.c: ompi_io_ompio_set_explicit_offset
+ - ompi/prevFiles/prev_a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_pack_homogeneous_contig
+ - ompi/prevFiles/prev_91c857_23c2a3_ompi#mca#io#ompio#io_ompio.c: ompi_io_ompio_break_file_view
+*/
+
+// ---------------------------------------------

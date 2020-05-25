@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+typedef Py_ssize_t;
+@@
+- Py_ssize_t I0; 
++ Py_ssize_t I0 = (E1 == NULL) ? 0 :PyTuple_GET_SIZE(E1); 
+  ...
+- I0 = (E1 == NULL) ? 0 :PyTuple_GET_SIZE(E1); 
+// Infered from: (cpython/{prevFiles/prev_476bd5_44abad_Objects#methodobject.c,revFiles/476bd5_44abad_Objects#methodobject.c}: _PyCFunction_FastCallKeywords)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

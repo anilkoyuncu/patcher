@@ -1,0 +1,28 @@
+@@
+expression E0, E1, E2;
+@@
+- while ((E0 = getopt(E1, E2, "CqP:")) != -1)  
++ while ((E0 = getopt(E1, E2, "CfqP:")) != -1)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_4ca1d3_3a3086_qemu-io-cmds.c,revFiles/4ca1d3_3a3086_qemu-io-cmds.c}: writev_f)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.46, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_4ca1d3_3a3086_qemu-io-cmds.c: aio_write_f
+ - openssh-portable/prevFiles/prev_1b7344_c4b7fe_ssh.c: 
+ - ompi/prevFiles/prev_2815cb_99d881_opal#util#if.c: opal_ifinit
+*/
+
+// ---------------------------------------------

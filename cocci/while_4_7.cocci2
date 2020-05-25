@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- while (*E0 && isspace(E0[E1 - 1]))  
++ while (E0 && isspace(E0[E1 - 1]))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_86faf2_42b3724_phpdbg_prompt.c,revFiles/86faf2_42b3724_phpdbg_prompt.c}: phpdbg_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

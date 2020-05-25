@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+typedef gint;
+@@
+- E0->width = MAX(1, (gint )E1.width - (E2 * 2) - E3.left - E3.right); 
++ E0->width = MAX(1, (gint )(E1.width - (E2 * 2) - E3.left - E3.right)); 
+// Infered from: (gtk/{prevFiles/prev_064204_a7f3a9_gtk#gtkframe.c,revFiles/064204_a7f3a9_gtk#gtkframe.c}: gtk_frame_real_compute_child_allocation)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

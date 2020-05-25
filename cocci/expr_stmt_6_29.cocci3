@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E1[E2] + ((E0 + 0x800) >> 12); 
++ E0 = E1[E2] + ((int )(E0 + 0x800U) >> 12); 
+// Infered from: (FFmpeg/{prevFiles/prev_8bcb5f_a0ae4b_libavcodec#truespeech.c,revFiles/8bcb5f_a0ae4b_libavcodec#truespeech.c}: truespeech_synth)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

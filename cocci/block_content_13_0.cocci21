@@ -1,0 +1,30 @@
+@@
+expression E0, E1;
+@@
+- event_active(E0, E1, 1); 
++ event_active_i(E0, E1, 1); 
+// Infered from: (ompi/{prevFiles/prev_3a7ede_24de93_opal#event#rtsig.c,revFiles/3a7ede_24de93_opal#event#rtsig.c}: rtsig_dispatch)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 22 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.89, Precision: 0.97
+// -- General --
+// Functions fully changed: 18/23(78%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_11a9f5_51060a_mergecap.c: main
+ - qemu/prevFiles/prev_5f6eab_49cd80_hw#nand.c: nand_done
+ - wireshark/prevFiles/prev_02a64f_aa5904_wiretap#radcom.c: radcom_open
+ - php-src/prevFiles/prev_1a4722_25e5c8_ext#gd#libgd#gd_interpolation.c: gdImageScaleTwoPass
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_a92bbb_e2c9d0_epan#dissectors#packet-bthci_acl.c: dissect_bthci_acl
+*/
+
+// ---------------------------------------------

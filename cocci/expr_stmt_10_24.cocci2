@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->start_time % AV_TIME_BASE; 
++ E0 = abs(E1->start_time % AV_TIME_BASE); 
+// Infered from: (FFmpeg/{prevFiles/prev_b16307_48ac22_libavformat#utils.c,revFiles/b16307_48ac22_libavformat#utils.c}: dump_format)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

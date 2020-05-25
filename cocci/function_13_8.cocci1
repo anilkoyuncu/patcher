@@ -1,0 +1,15 @@
+@@
+@@
+- SIGNAL_END_CRITICAL(); 
++ if (SIGG(phead) && SIGG(ptail))  
++ {
++ SIGG(ptail)->next = SIGG(pavail); 
++ SIGG(pavail) = SIGG(phead); 
++ SIGG(phead) = NULL; 
++ SIGG(ptail) = NULL; 
++ }
+// Infered from: (php-src/{prevFiles/prev_38f128_68fd43_Zend#zend_signal.c,revFiles/38f128_68fd43_Zend#zend_signal.c}: zend_signal_deactivate)
+// False positives: (php-src/revFiles/38f128_68fd43_Zend#zend_signal.c: zend_signal_handler_unblock)
+// Recall: 0.21, Precision: 0.50, Matching recall: 0.55
+
+// ---------------------------------------------

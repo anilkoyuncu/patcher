@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 != E1 && E1 != E0 - 5 && strncmp(E2, "refs/heads/", 11) && strncmp(  E2, "refs/tags/", 10))  
++ if (E0 != E1 && E1 != E0 - 5 && prefixcmp(E2, "refs/heads/") && prefixcmp(  E2, "refs/tags/"))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_cc44c7_cff030_connect.c,revFiles/cc44c7_cff030_connect.c}: count_refspec_match)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

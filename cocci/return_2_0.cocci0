@@ -1,0 +1,11 @@
+@@
+identifier I0 = {AVERROR ,newintobject ,send_present ,zend_handle_loops_and_finally_ex };
+expression E1;
+@@
+- I0(E1); 
++ return I0(E1); 
+// Infered from: (php-src/{prevFiles/prev_6ad3b2b_4acbbc_ext#yaz#php_yaz.c,revFiles/6ad3b2b_4acbbc_ext#yaz#php_yaz.c}: send_sort_present), (FFmpeg/{prevFiles/prev_f0a75e_4c27207_libavcodec#motionpixels.c,revFiles/f0a75e_4c27207_libavcodec#motionpixels.c}: mp_decode_frame), (php-src/{prevFiles/prev_87a5f2_aaf763_Zend#zend_compile.c,revFiles/87a5f2_aaf763_Zend#zend_compile.c}: zend_handle_loops_and_finally), (cpython/{prevFiles/prev_719f5f_dcc6ef_Objects#intobject.c,revFiles/719f5f_dcc6ef_Objects#intobject.c}: int_mod)
+// False positives: (php-src/revFiles/6ad3b2b_4acbbc_ext#yaz#php_yaz.c: handle_apdu)
+// Recall: 0.26, Precision: 0.80, Matching recall: 0.89
+
+// ---------------------------------------------

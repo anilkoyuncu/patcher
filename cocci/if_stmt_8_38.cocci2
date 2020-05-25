@@ -1,0 +1,33 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (!E0 && !E1 && !E2 && E3 == 0)  
++ if (!E0 && !E1 && E3 == 0)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_5cd75c_b15aa97_builtin#branch.c,revFiles/5cd75c_b15aa97_builtin#branch.c}: cmd_branch)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/5(0%)
+
+/*
+Functions where the patch applied partially:
+ - codeflaws/prevFiles/prev_41-C-17917572-17917578.c: main
+ - git/prevFiles/prev_5cd75c_b15aa97_builtin#branch.c: cmd_branch
+ - php-src/prevFiles/prev_5c7542_a7a797b_ext#standard#string.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_c9280f_f4c91f_ext#standard#string.c: PHP_FUNCTION
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_0a0767_83c44b_hw#usb#hcd-xhci.c: xhci_doorbell_write
+*/
+
+// ---------------------------------------------

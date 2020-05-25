@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef enum_mysqlnd_collected_stats;
+@@
+- enum_mysqlnd_collected_stats I0 = STAT_LAST; 
++ enum_mysqlnd_collected_stats statistic = STAT_LAST; 
+// Infered from: (php-src/{prevFiles/prev_0e519d_412d15_ext#mysqlnd#mysqlnd_result.c,revFiles/0e519d_412d15_ext#mysqlnd#mysqlnd_result.c}: mysqlnd_query_read_result_set_header), (php-src/{prevFiles/prev_2d2d6f_a4252ab_ext#mysqlnd#mysqlnd_result.c,revFiles/2d2d6f_a4252ab_ext#mysqlnd#mysqlnd_result.c}: mysqlnd_query_read_result_set_header)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------

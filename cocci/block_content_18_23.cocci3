@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- read(E0, E1, 1); 
++ ssize_t ret = read(E0, E1, 1); 
++ assert(ret == 1); 
+// Infered from: (ompi/{prevFiles/prev_d57ef70_5a885a_orte#mca#oob#tcp#oob_tcp.c,revFiles/d57ef70_5a885a_orte#mca#oob#tcp#oob_tcp.c}: mca_oob_tcp_accept_thread_handler)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.79, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_5a97a8_7bd0f1_src#event#event.c: ompi_event_del_i
+*/
+
+// ---------------------------------------------

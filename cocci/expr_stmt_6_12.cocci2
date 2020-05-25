@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- TclEmitOpcode(INST_RETURN_STK, E0); 
++ TclEmitInvoke(E0, INST_RETURN_STK); 
+// Infered from: (tcl/{prevFiles/prev_d9096d_fc1064_generic#tclCompCmds.c,revFiles/d9096d_fc1064_generic#tclCompCmds.c}: TclCompileDictUpdateCmd), (tcl/{prevFiles/prev_d9096d_fc1064_generic#tclCompCmds.c,revFiles/d9096d_fc1064_generic#tclCompCmds.c}: TclCompileDictWithCmd)
+// False positives: (tcl/revFiles/d9096d_fc1064_generic#tclCompCmds.c: CompileDictEachCmd), (tcl/revFiles/d9096d_fc1064_generic#tclCompCmds.c: TclCompileDictMergeCmd)
+// Recall: 0.22, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

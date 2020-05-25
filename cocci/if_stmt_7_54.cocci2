@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef php_stream;
+@@
+- if (!php_stream_cast((php_stream *)E0, PHP_STREAM_AS_STDIO, (void *)&E1,  REPORT_ERRORS))  
++ if (php_stream_cast((php_stream *)E0, PHP_STREAM_AS_STDIO, (void *)&E1,  REPORT_ERRORS) != SUCCESS)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_cd0cec_c19dda_ext#ming#ming.c,revFiles/cd0cec_c19dda_ext#ming#ming.c}: getInput)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

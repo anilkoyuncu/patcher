@@ -1,0 +1,11 @@
+@@
+expression E0;
+typedef plugin_config;
+typedef specific_config;
+@@
+- E0->config_storage = calloc(1,  srv->config_context->used * sizeof(specific_config *)); 
++ E0->config_storage = calloc(1,  srv->config_context->used * sizeof(plugin_config *)); 
+// Infered from: (php-src/{prevFiles/prev_78dfa9_61a058_ext#mcrypt#mcrypt.c,revFiles/78dfa9_61a058_ext#mcrypt#mcrypt.c}: PHP_MINFO_FUNCTION), (php-src/{prevFiles/prev_448835_731029_ext#xsl#xsltprocessor.c,revFiles/448835_731029_ext#xsl#xsltprocessor.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_448835_731029_ext#xsl#xsltprocessor.c,revFiles/448835_731029_ext#xsl#xsltprocessor.c}: PHP_FUNCTION), (gstreamer/{prevFiles/prev_767e0e_0cb394_tests#check#libs#gsttestclock.c,revFiles/767e0e_0cb394_tests#check#libs#gsttestclock.c}: GST_START_TEST), (php-src/{prevFiles/prev_eb1927_546af7_ext#imap#imap.c,revFiles/eb1927_546af7_ext#imap#imap.c}: PHP_MINIT_FUNCTION), (php-src/{prevFiles/prev_747822_397422_ext#standard#dir.c,revFiles/747822_397422_ext#standard#dir.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_b4c2bd_bcc677_ext#standard#crypt.c,revFiles/b4c2bd_bcc677_ext#standard#crypt.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_d6ba95_ca5c6a_ext#imap#php_imap.c,revFiles/d6ba95_ca5c6a_ext#imap#php_imap.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_894a74_cf9aaf_ext#xsl#xsltprocessor.c,revFiles/894a74_cf9aaf_ext#xsl#xsltprocessor.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_894a74_cf9aaf_ext#xsl#xsltprocessor.c,revFiles/894a74_cf9aaf_ext#xsl#xsltprocessor.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_cb6e4c_bdc309_ext#tidy#tidy.c,revFiles/cb6e4c_bdc309_ext#tidy#tidy.c}: PHP_MINIT_FUNCTION), (php-src/{prevFiles/prev_f4196d_6b0ca6_ext#vpopmail#php_vpopmail.c,revFiles/f4196d_6b0ca6_ext#vpopmail#php_vpopmail.c}: PHP_FUNCTION), (lighttpd1.4/{prevFiles/prev_6f208c_6b7240_src#mod_accesslog.c,revFiles/6f208c_6b7240_src#mod_accesslog.c}: FREE_FUNC), (lighttpd1.4/{prevFiles/prev_6f208c_6b7240_src#mod_accesslog.c,revFiles/6f208c_6b7240_src#mod_accesslog.c}: SETDEFAULTS_FUNC)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef guint32;
+@@
+- g_object_set_data(G_OBJECT(E0), E_BYTE_VIEW_MASK_HI_KEY,  GINT_TO_POINTER(E1 >> 32)); 
++ g_object_set_data(G_OBJECT(E0), E_BYTE_VIEW_MASK_HI_KEY,  GINT_TO_POINTER((guint32 )(E1 >> 32))); 
+// Infered from: (wireshark/{prevFiles/prev_e3c3d7_717215_ui#gtk#packet_panes.c,revFiles/e3c3d7_717215_ui#gtk#packet_panes.c}: packet_hex_print), (wireshark/{prevFiles/prev_e3c3d7_717215_ui#gtk#packet_panes.c,revFiles/e3c3d7_717215_ui#gtk#packet_panes.c}: packet_hex_editor_print)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

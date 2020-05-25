@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (zend_hash_exists(SG(rfc1867_uploaded_files), E0, strlen(E0) + 1))  
++ if (zend_hash_exists(SG(rfc1867_uploaded_files), (char *)E0, strlen(E0) + 1))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_033190c_488d80_main#safe_mode.c,revFiles/033190c_488d80_main#safe_mode.c}: php_checkuid)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

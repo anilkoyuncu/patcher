@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- memmove(&E0->history[E1], &E0->history[E1 + 1],  (READLINE_MAX_CMDS - E1 + 1) * sizeof(char *)); 
++ memmove(&E0->history[E1], &E0->history[E1 + 1],  (READLINE_MAX_CMDS - (E1 + 1)) * sizeof(char *)); 
+// Infered from: (qemu/{prevFiles/prev_8af428_47e8dd_readline.c,revFiles/8af428_47e8dd_readline.c}: readline_hist_add)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

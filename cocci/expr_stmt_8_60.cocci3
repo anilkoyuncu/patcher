@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (1 << E1[E2].crumb_bit_length) - 1; 
++ E0 = (G_GUINT64_CONSTANT(1) << E1[E2].crumb_bit_length) - 1; 
+// Infered from: (wireshark/{prevFiles/prev_3e5204_b74438_epan#proto.c,revFiles/3e5204_b74438_epan#proto.c}: proto_tree_add_split_bits_item_ret_val)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

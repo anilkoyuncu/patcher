@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return error(_("read of %s failed"), E0); 
++ return error(_("failed to read %s"), E0); 
+// Infered from: (git/{prevFiles/prev_e923a8_62d09e_builtin#apply.c,revFiles/e923a8_62d09e_builtin#apply.c}: load_patch_target), (git/{prevFiles/prev_e923a8_62d09e_builtin#apply.c,revFiles/e923a8_62d09e_builtin#apply.c}: load_preimage)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

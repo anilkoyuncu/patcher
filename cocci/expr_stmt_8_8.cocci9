@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = proto_tree_add_uint_format_value(E1, hf_pdu_type, E2, E3, 1, E4,  "%s (0x%02x)", get_type(E4), E4); 
++ E0 = proto_tree_add_uint_format(E1, hf_pdu_type, E2, E3, 1, E4,  "PDU Type: %s (0x%02x)", get_type(E4), E4); 
+// Infered from: (wireshark/{prevFiles/prev_2ab292_e9424f_epan#dissectors#packet-p_mul.c,revFiles/2ab292_e9424f_epan#dissectors#packet-p_mul.c}: dissect_p_mul)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

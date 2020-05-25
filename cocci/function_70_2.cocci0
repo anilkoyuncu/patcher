@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+iterator name list_for_each_entry_safe;
+@@
+- while (list_empty(&E0->prov_list) == 0)  
++ list_for_each_entry_safe (E1, tmp, &E0->prov_list, list)  
+  {
+- E1 = list_entry(E0->prov_list.next, struct prov_record , list); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_d19cb86_68f4b7_drivers#staging#ft1000#ft1000-pcmcia#ft1000_hw.c,revFiles/d19cb86_68f4b7_drivers#staging#ft1000#ft1000-pcmcia#ft1000_hw.c}: stop_ft1000_card)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

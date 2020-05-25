@@ -1,0 +1,31 @@
+@@
+expression E1, E0;
+@@
+- *E0++ = (E1->key_idx << 6) | (1 << 5); 
++ *E0++ = (E1->key_idx << 6) | BIT(5); 
+// Infered from: (linux/{prevFiles/prev_9f3839_9361076_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_ccmp.c,revFiles/9f3839_9361076_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_ccmp.c}: ieee80211_ccmp_encrypt), (linux/{prevFiles/prev_37b299_9f3839_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_tkip.c,revFiles/37b299_9f3839_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_tkip.c}: ieee80211_tkip_encrypt)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/8(25%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_37b299_9f3839_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_tkip.c: ieee80211_tkip_decrypt
+ - linux/prevFiles/prev_4f8f316_22d89c_drivers#staging#rts5208#rtsx_chip.c: rtsx_write_register
+ - linux/prevFiles/prev_9f3839_9361076_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_ccmp.c: ieee80211_ccmp_decrypt
+*/
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_557e361_9a3aeb_drivers#staging#comedi#drivers#dyna_pci10xx.c: dyna_pci10xx_ai_eoc
+ - linux/prevFiles/prev_4f8f316_22d89c_drivers#staging#rts5208#rtsx_chip.c: rtsx_read_register
+ - linux/prevFiles/prev_412ef9_077d457_drivers#staging#comedi#drivers#mpc624.c: mpc624_ai_rinsn
+*/
+
+// ---------------------------------------------

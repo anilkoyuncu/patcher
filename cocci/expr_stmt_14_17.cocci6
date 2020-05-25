@@ -1,0 +1,30 @@
+@@
+identifier I1 = {gtk_widget_get_screen ,gtk_widget_in_destruction };
+expression E0, E2;
+@@
+- E0 = I1(E2); 
++ E0 = I1(GTK_WIDGET(E2)); 
+// Infered from: (gtk/{prevFiles/prev_6c7daa_7adeca_gtk#gtknotebook.c,revFiles/6c7daa_7adeca_gtk#gtknotebook.c}: gtk_notebook_real_remove), (gtk/{prevFiles/prev_1a385c_272c30_gtk#gtktreeview.c,revFiles/1a385c_272c30_gtk#gtktreeview.c}: gtk_tree_view_ensure_interactive_directory)
+// False positives: (gtk/revFiles/1a385c_272c30_gtk#gtktreeview.c: gtk_tree_view_key_press)
+// Recall: 0.22, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.89, Precision: 0.80
+// -- Node Change --
+// Recall: 0.89, Precision: 0.80
+// -- General --
+// Functions fully changed: 8/11(72%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_281e5f_f4a738_Modules#_ssl.c: COMP_get_name
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_1a385c_272c30_gtk#gtktreeview.c: gtk_tree_view_key_press
+ - git/prevFiles/prev_7a5375_d0b8c9_config.c: git_config_set_multivar
+*/
+
+// ---------------------------------------------

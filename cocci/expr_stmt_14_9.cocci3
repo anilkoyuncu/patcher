@@ -1,0 +1,20 @@
+@@
+identifier I0;
+expression E1;
+@@
+- char *I0 = xstrdup(mkpath("%s/.git", E1)); 
++ char *I0 = mkpathdup("%s/.git", E1); 
+// Infered from: (git/{prevFiles/prev_4e2d09_d292bfa_builtin#clone.c,revFiles/4e2d09_d292bfa_builtin#clone.c}: add_one_reference)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 10/10(100%)
+
+
+// ---------------------------------------------

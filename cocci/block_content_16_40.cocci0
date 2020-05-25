@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1++] = E2->name; 
++ E0[E2->module_number] = E2->name; 
++ E1++; 
+// Infered from: (php-src/{prevFiles/prev_9075bf_b48436_Zend#zend_builtin_functions.c,revFiles/9075bf_b48436_Zend#zend_builtin_functions.c}: ZEND_FUNCTION)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

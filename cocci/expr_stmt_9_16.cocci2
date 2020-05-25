@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_item(E0, E1, E2, E3 + 4, 8, FALSE); 
++ proto_tree_add_item(E0, E1, E2, E3 + 4, 8, ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_c4b633_1b75d2_epan#dissectors#packet-collectd.c,revFiles/c4b633_1b75d2_epan#dissectors#packet-collectd.c}: dissect_collectd_integer)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

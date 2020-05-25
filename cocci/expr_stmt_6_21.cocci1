@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->psz_current; 
++ *E0 = *(E1->psz_current); 
+// Infered from: (vlc/{prevFiles/prev_fb8aac_2a8c2b_src#misc#configuration.c,revFiles/fb8aac_2a8c2b_src#misc#configuration.c}: __config_LoadCmdLine)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+identifier I1 = {cairo_pdf_surface_create ,cairo_ps_surface_create ,cairo_svg_surface_create };
+expression E0, E3, E2;
+@@
+- E0 = I1(E2, E3, E3); 
+// Infered from: (cairo/{prevFiles/prev_673102_f3574b_test#pdf-surface-source.c,revFiles/673102_f3574b_test#pdf-surface-source.c}: create_source_surface), (cairo/{prevFiles/prev_673102_f3574b_test#svg-surface-source.c,revFiles/673102_f3574b_test#svg-surface-source.c}: create_source_surface), (cairo/{prevFiles/prev_673102_f3574b_test#ps-surface-source.c,revFiles/673102_f3574b_test#ps-surface-source.c}: create_source_surface)
+// Recall: 0.16, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

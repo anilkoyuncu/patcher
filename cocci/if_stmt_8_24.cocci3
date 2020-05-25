@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = E1[3] == ' '))  
++ if ((E0 = (E1[3] == ' ')) != 0)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_9c4ff4_46a006_lib#smtp.c,revFiles/9c4ff4_46a006_lib#smtp.c}: smtp_endofresp)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

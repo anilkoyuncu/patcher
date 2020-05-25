@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (this_ptr && (E0->func.common.fn_flags & ZEND_ACC_STATIC) == 0)  
++ if (this_ptr && Z_TYPE_P(this_ptr) == IS_OBJECT && (E0->func.common.fn_flags & ZEND_ACC_STATIC) == 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_08d9a4_a18a95_Zend#zend_closures.c,revFiles/08d9a4_a18a95_Zend#zend_closures.c}: zend_create_closure)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

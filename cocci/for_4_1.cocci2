@@ -1,0 +1,14 @@
+@@
+identifier I0, I3, I4;
+expression E1, E2;
+typedef vec_u8;
+@@
+- vec_u8 I0 = vec_perm(E1, E2, I3); 
++ vec_u8 I0 = vec_perm(E1, E2, perm); 
+  ...
+- I0 = vec_perm(E1, E2, I4); 
++ I0 = vec_perm(E1, E2, perm); 
+// Infered from: (FFmpeg/{prevFiles/prev_3932cc_f84ae3_libavcodec#ppc#pixblockdsp.c,revFiles/3932cc_f84ae3_libavcodec#ppc#pixblockdsp.c}: diff_pixels_altivec)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

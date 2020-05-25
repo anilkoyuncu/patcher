@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- stream_Read(E0->s, NULL, E1); 
++ if (stream_Read(E0->s, NULL, E1) < E1)  
++ {
++ return false; 
++ }
+// Infered from: (vlc/{prevFiles/prev_ddcf5d_cd734d_src#input#demux.c,revFiles/ddcf5d_cd734d_src#input#demux.c}: SkipID3Tag), (vlc/{prevFiles/prev_ddcf5d_cd734d_src#input#demux.c,revFiles/ddcf5d_cd734d_src#input#demux.c}: SkipAPETag)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

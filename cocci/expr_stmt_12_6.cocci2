@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- strcpy(E0, qbool_get_int(qobject_to_qbool(E1)) ? "on" :"off"); 
++ pstrcpy(E0, sizeof(E0), qbool_get_int(qobject_to_qbool(E1)) ? "on" :"off"); 
+// Infered from: (qemu/{prevFiles/prev_d35215f_43dc2a_qemu-option.c,revFiles/d35215f_43dc2a_qemu-option.c}: qemu_opts_from_qdict_1)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

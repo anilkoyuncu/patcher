@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- DEBUGF(infof(E0, "Pausing with %d bytes in buffer for type %02x\n", (  int )E1, E2)); 
++ DEBUGF(infof(E0, "Pausing with %zu bytes in buffer for type %02x\n", E1, E2)); 
+// Infered from: (curl/{prevFiles/prev_7aef17_f47b84_lib#sendf.c,revFiles/7aef17_f47b84_lib#sendf.c}: pausewrite)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,42 @@
+@@
+expression E1, E0;
+@@
+- E0 = E1 << 1; 
++ E0 = E1 * 2; 
+// Infered from: (FFmpeg/{prevFiles/prev_a6eb00_f08122_libavcodec#svq3.c,revFiles/a6eb00_f08122_libavcodec#svq3.c}: svq3_mc_dir), (FFmpeg/{prevFiles/prev_a6eb00_f08122_libavcodec#svq3.c,revFiles/a6eb00_f08122_libavcodec#svq3.c}: svq3_mc_dir), (FFmpeg/{prevFiles/prev_44e210_f4c230_libavcodec#amrwbdec.c,revFiles/44e210_f4c230_libavcodec#amrwbdec.c}: decode_pitch_lag_high), (FFmpeg/{prevFiles/prev_ac457a_e82a61_libavcodec#vc2enc_dwt.c,revFiles/ac457a_e82a61_libavcodec#vc2enc_dwt.c}: vc2_subband_dwt_97)
+// False positives: (FFmpeg/revFiles/1b7d02_c54b9f_libavcodec#ralf.c: init_ralf_vlc), (FFmpeg/revFiles/2f289e_54e1ef_libavcodec#ac3enc.c: ff_ac3_encode_init), (FFmpeg/revFiles/2f289e_54e1ef_libavcodec#ac3enc.c: mul_poly), (FFmpeg/revFiles/2f289e_54e1ef_libavcodec#ac3enc.c: output_frame_end), (FFmpeg/revFiles/2f289e_54e1ef_libavcodec#ac3enc.c: validate_options), (FFmpeg/revFiles/93ac72_030c7f_libavcodec#dvdec.c: dv_init_weight_tables), (FFmpeg/revFiles/ac457a_e82a61_libavcodec#vc2enc_dwt.c: vc2_subband_dwt_53), (FFmpeg/revFiles/b153ba_da93e2_libavcodec#vc1_block.c: vc1_decode_i_blocks)
+// Recall: 0.17, Precision: 0.29, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 12 rules):
+// -- Edit Location --
+// Recall: 0.95, Precision: 0.59
+// -- Node Change --
+// Recall: 0.96, Precision: 0.55
+// -- General --
+// Functions fully changed: 17/33(51%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_e55eaf_e4c86a_epan#dissectors#packet-bgp.c: decode_flowspec_nlri
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_b153ba_da93e2_libavcodec#vc1_block.c: vc1_decode_i_blocks
+ - FFmpeg/prevFiles/prev_b153ba_da93e2_libavcodec#vc1_block.c: vc1_decode_b_mb
+ - FFmpeg/prevFiles/prev_93ac72_030c7f_libavcodec#dvdec.c: dv_init_weight_tables
+ - FFmpeg/prevFiles/prev_5a950f_5cae5a_libavcodec#cfhd.c: cfhd_decode
+ - FFmpeg/prevFiles/prev_1b7d02_c54b9f_libavcodec#ralf.c: init_ralf_vlc
+ - FFmpeg/prevFiles/prev_2f289e_54e1ef_libavcodec#ac3enc.c: mul_poly
+ - FFmpeg/prevFiles/prev_b153ba_da93e2_libavcodec#vc1_block.c: vc1_decode_p_mb
+ - FFmpeg/prevFiles/prev_2f289e_54e1ef_libavcodec#ac3enc.c: output_frame_end
+ - FFmpeg/prevFiles/prev_b153ba_da93e2_libavcodec#vc1_block.c: vc1_decode_b_mb_intfi
+ - FFmpeg/prevFiles/prev_2f588c_9b533d_libavcodec#vc1_block.c: vc1_decode_b_mb_intfi
+ - FFmpeg/prevFiles/prev_2f289e_54e1ef_libavcodec#ac3enc.c: ff_ac3_encode_init
+ - FFmpeg/prevFiles/prev_c722a6_181e13_libavcodec#vc1_block.c: vc1_decode_p_mb
+ - FFmpeg/prevFiles/prev_2f289e_54e1ef_libavcodec#ac3enc.c: validate_options
+ - FFmpeg/prevFiles/prev_c722a6_181e13_libavcodec#vc1_block.c: vc1_decode_b_mb_intfi
+ - FFmpeg/prevFiles/prev_ac457a_e82a61_libavcodec#vc2enc_dwt.c: vc2_subband_dwt_53
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef gchar;
+typedef guchar;
+@@
+- guchar *I0; 
++ gchar *I0; 
+  ...
+- I0 = tvb_get_stringz_enc(wmem_packet_scope(), E1, E2, &E3, ENC_ASCII); 
++ I0 = (gchar *)tvb_get_stringz_enc(wmem_packet_scope(), E1, E2, &E3, ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_96abc0_62abdd_epan#dissectors#packet-c15ch.c,revFiles/96abc0_62abdd_epan#dissectors#packet-c15ch.c}: add_string_field), (wireshark/{prevFiles/prev_96abc0_62abdd_epan#dissectors#packet-c15ch.c,revFiles/96abc0_62abdd_epan#dissectors#packet-c15ch.c}: dissect_c15ch_nitnxlate)
+// False positives: (wireshark/revFiles/96abc0_62abdd_epan#dissectors#packet-c15ch.c: dissect_c15ch_clli), (wireshark/revFiles/96abc0_62abdd_epan#dissectors#packet-c15ch.c: dissect_c15ch_nitnxlate)
+// Recall: 0.67, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------

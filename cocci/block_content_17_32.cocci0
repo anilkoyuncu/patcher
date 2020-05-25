@@ -1,0 +1,9 @@
+@@
+expression E2, E0, E1;
+@@
+- E0 = tvb_get_string(wmem_packet_scope(), E1, E2, 20); 
++ E0 = tvb_get_string_enc(wmem_packet_scope(), E1, E2, 20, ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-soupbintcp.c,revFiles/971ffd_421d81_epan#dissectors#packet-soupbintcp.c}: dissect_soupbintcp_common), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-soupbintcp.c,revFiles/971ffd_421d81_epan#dissectors#packet-soupbintcp.c}: dissect_soupbintcp_common), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-soupbintcp.c,revFiles/971ffd_421d81_epan#dissectors#packet-soupbintcp.c}: dissect_soupbintcp_common)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

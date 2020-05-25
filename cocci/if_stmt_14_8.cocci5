@@ -1,0 +1,35 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 == NULL || E1->headers_out.ranges.nelts == 0)  
++ if (E0 == NULL || E1->headers_out.ranges.nelts == 0 || ngx_buf_special(  E0->buf))  
+  {
+  ...
+  }
+  ...
+- *E2->last++ = '-'; 
+// Infered from: (nginx/{prevFiles/prev_818700_0e8fc7_src#http#modules#ngx_http_range_filter_module.c,revFiles/818700_0e8fc7_src#http#modules#ngx_http_range_filter_module.c}: ngx_http_range_body_filter)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.78, Precision: 0.70
+// -- Node Change --
+// Recall: 0.78, Precision: 0.58
+// -- General --
+// Functions fully changed: 7/12(58%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_94d883e_7481e9_libavformat#img.c: 
+ - gtk/prevFiles/prev_343a25_13f928_gtk#gtkwindow.c: gtk_window_map
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_dd0c34_174482_cache-tree.c: read_one
+ - git/prevFiles/prev_dd0c34_174482_cache-tree.c: write_one
+ - vlc/prevFiles/prev_17c488_f77e83_modules#demux#avformat#demux.c: OpenDemux
+*/
+
+// ---------------------------------------------

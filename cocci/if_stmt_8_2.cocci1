@@ -1,0 +1,81 @@
+@@
+binary operator B1 = {== ,&& };
+expression E0, E2;
+@@
+- if (E0 B1 E2)  
++ if (E2 B1 E0)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_hvector_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_create_hvector_f.c}: mpi_type_create_hvector_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#ibsend_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#ibsend_f.c}: mpi_ibsend_f), (FFmpeg/{prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c,revFiles/23e9e5_507c04_libavformat#rtmpproto.c}: rtmp_handshake), (FFmpeg/{prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c,revFiles/23e9e5_507c04_libavformat#rtmpproto.c}: rtmp_handshake), (FFmpeg/{prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c,revFiles/23e9e5_507c04_libavformat#rtmpproto.c}: rtmp_handshake), (FFmpeg/{prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c,revFiles/23e9e5_507c04_libavformat#rtmpproto.c}: rtmp_handshake), (FFmpeg/{prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c,revFiles/23e9e5_507c04_libavformat#rtmpproto.c}: rtmp_handshake), (FFmpeg/{prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c,revFiles/23e9e5_507c04_libavformat#rtmpproto.c}: rtmp_handshake), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_subarray_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_create_subarray_f.c}: mpi_type_create_subarray_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_resized_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_create_resized_f.c}: mpi_type_create_resized_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_match_size_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_match_size_f.c}: mpi_type_match_size_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#send_init_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#send_init_f.c}: mpi_send_init_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_darray_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_create_darray_f.c}: mpi_type_create_darray_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_extent_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_extent_f.c}: mpi_type_extent_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#bsend_init_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#bsend_init_f.c}: mpi_bsend_init_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_dup_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_dup_f.c}: mpi_type_dup_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_ub_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_ub_f.c}: mpi_type_ub_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#status_set_cancelled_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#status_set_cancelled_f.c}: mpi_status_set_cancelled_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_f90_real_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_create_f90_real_f.c}: mpi_type_create_f90_real_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#irecv_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#irecv_f.c}: mpi_irecv_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#get_count_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#get_count_f.c}: mpi_get_count_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_delete_attr_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_delete_attr_f.c}: mpi_type_delete_attr_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#ssend_init_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#ssend_init_f.c}: mpi_ssend_init_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#recv_init_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#recv_init_f.c}: mpi_recv_init_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#status_set_elements_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#status_set_elements_f.c}: mpi_status_set_elements_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#get_elements_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#get_elements_f.c}: mpi_get_elements_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#irsend_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#irsend_f.c}: mpi_irsend_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_indexed_block_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_create_indexed_block_f.c}: mpi_type_create_indexed_block_f), (FFmpeg/{prevFiles/prev_71258e_2139e5_libavcodec#ac3dec.c,revFiles/71258e_2139e5_libavcodec#ac3dec.c}: decode_transform_coeffs_ch), (FFmpeg/{prevFiles/prev_71258e_2139e5_libavcodec#ac3dec.c,revFiles/71258e_2139e5_libavcodec#ac3dec.c}: decode_audio_block), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#issend_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#issend_f.c}: mpi_issend_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_get_true_extent_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_get_true_extent_f.c}: mpi_type_get_true_extent_f)
+// False positives: (FFmpeg/revFiles/23e9e5_507c04_libavformat#rtmpproto.c: get_packet), (FFmpeg/revFiles/23e9e5_507c04_libavformat#rtmpproto.c: handle_invoke_result), (FFmpeg/revFiles/23e9e5_507c04_libavformat#rtmpproto.c: handle_invoke_status), (FFmpeg/revFiles/23e9e5_507c04_libavformat#rtmpproto.c: handle_ping), (FFmpeg/revFiles/23e9e5_507c04_libavformat#rtmpproto.c: read_connect), (FFmpeg/revFiles/23e9e5_507c04_libavformat#rtmpproto.c: rtmp_handshake), (FFmpeg/revFiles/23e9e5_507c04_libavformat#rtmpproto.c: rtmp_open), (FFmpeg/revFiles/23e9e5_507c04_libavformat#rtmpproto.c: rtmp_send_packet), (FFmpeg/revFiles/23e9e5_507c04_libavformat#rtmpproto.c: rtmp_uncompress_swfplayer), (FFmpeg/revFiles/23e9e5_507c04_libavformat#rtmpproto.c: rtmp_write), (FFmpeg/revFiles/71258e_2139e5_libavcodec#ac3dec.c: ac3_decode_frame), (FFmpeg/revFiles/71258e_2139e5_libavcodec#ac3dec.c: ac3_parse_header), (FFmpeg/revFiles/71258e_2139e5_libavcodec#ac3dec.c: calc_transform_coeffs_cpl), (FFmpeg/revFiles/71258e_2139e5_libavcodec#ac3dec.c: decode_audio_block), (FFmpeg/revFiles/71258e_2139e5_libavcodec#ac3dec.c: remove_dithering), (FFmpeg/revFiles/71258e_2139e5_libavcodec#ac3dec.c: set_downmix_coeffs), (ompi/revFiles/cd8f55_eb8cba_src#mpi#f77#group_difference_f.c: mpi_group_difference_f)
+// Recall: 0.99, Precision: 0.41, Matching recall: 0.99
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.11, Precision: 0.22
+// -- Node Change --
+// Recall: 0.09, Precision: 0.06
+// -- General --
+// Functions fully changed: 1/52(1%)
+
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_lb_f.c: mpi_type_lb_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#recv_init_f.c: mpi_recv_init_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_vector_f.c: mpi_type_vector_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#send_init_f.c: mpi_send_init_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_resized_f.c: mpi_type_create_resized_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#bsend_init_f.c: mpi_bsend_init_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_indexed_f.c: mpi_type_indexed_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_get_true_extent_f.c: mpi_type_get_true_extent_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#issend_f.c: mpi_issend_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#status_set_elements_f.c: mpi_status_set_elements_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#status_set_cancelled_f.c: mpi_status_set_cancelled_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_subarray_f.c: mpi_type_create_subarray_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_get_extent_f.c: mpi_type_get_extent_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_extent_f.c: mpi_type_extent_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#get_count_f.c: mpi_get_count_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_ub_f.c: mpi_type_ub_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_match_size_f.c: mpi_type_match_size_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#irecv_f.c: mpi_irecv_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#ssend_init_f.c: mpi_ssend_init_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_commit_f.c: mpi_type_commit_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_set_attr_f.c: mpi_type_set_attr_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#irsend_f.c: mpi_irsend_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_f90_real_f.c: mpi_type_create_f90_real_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#wait_f.c: mpi_wait_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_f90_integer_f.c: mpi_type_create_f90_integer_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_contiguous_f.c: mpi_type_contiguous_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_dup_f.c: mpi_type_dup_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_delete_attr_f.c: mpi_type_delete_attr_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_darray_f.c: mpi_type_create_darray_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_indexed_block_f.c: mpi_type_create_indexed_block_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#get_elements_f.c: mpi_get_elements_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#ibsend_f.c: mpi_ibsend_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_hvector_f.c: mpi_type_create_hvector_f
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#start_f.c: mpi_start_f
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c: rtmp_uncompress_swfplayer
+ - FFmpeg/prevFiles/prev_71258e_2139e5_libavcodec#ac3dec.c: calc_transform_coeffs_cpl
+ - FFmpeg/prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c: rtmp_open
+ - FFmpeg/prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c: handle_invoke_status
+ - FFmpeg/prevFiles/prev_71258e_2139e5_libavcodec#ac3dec.c: decode_audio_block
+ - FFmpeg/prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c: rtmp_send_packet
+ - FFmpeg/prevFiles/prev_71258e_2139e5_libavcodec#ac3dec.c: set_downmix_coeffs
+ - FFmpeg/prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c: rtmp_write
+ - FFmpeg/prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c: get_packet
+ - FFmpeg/prevFiles/prev_71258e_2139e5_libavcodec#ac3dec.c: ac3_parse_header
+ - FFmpeg/prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c: rtmp_handshake
+ - ompi/prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#group_difference_f.c: mpi_group_difference_f
+ - FFmpeg/prevFiles/prev_71258e_2139e5_libavcodec#ac3dec.c: remove_dithering
+ - FFmpeg/prevFiles/prev_71258e_2139e5_libavcodec#ac3dec.c: ac3_decode_frame
+ - FFmpeg/prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c: read_connect
+ - FFmpeg/prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c: handle_invoke_result
+ - FFmpeg/prevFiles/prev_23e9e5_507c04_libavformat#rtmpproto.c: handle_ping
+*/
+
+// ---------------------------------------------

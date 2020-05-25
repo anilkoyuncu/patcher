@@ -1,0 +1,10 @@
+@@
+type T1;
+expression E0;
+@@
+- E0 = (T1 *)malloc(sizeof(T1 *)); 
++ E0 = (T1 *)malloc(sizeof(T1 )); 
+// Infered from: (vlc/{prevFiles/prev_a1036e_8bf00f_modules#misc#lua#intf.c,revFiles/a1036e_8bf00f_modules#misc#lua#intf.c}: Open_LuaIntf), (vlc/{prevFiles/prev_3bf760_ee0b40_modules#misc#gnutls.c,revFiles/3bf760_ee0b40_modules#misc#gnutls.c}: gnutls_ServerSessionPrepare), (ompi/{prevFiles/prev_5b41de_757b40_opal#dss#dss_copy.c,revFiles/5b41de_757b40_opal#dss#dss_copy.c}: opal_dss_copy_null)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

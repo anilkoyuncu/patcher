@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->i_physical_channels == E1->i_physical_channels)  
++ if (E0->i_physical_channels == E1->i_physical_channels && E0->i_chan_mode == E1->i_chan_mode)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_31e11f_8c1c88_modules#audio_filter#channel_mixer#trivial.c,revFiles/31e11f_8c1c88_modules#audio_filter#channel_mixer#trivial.c}: Create)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

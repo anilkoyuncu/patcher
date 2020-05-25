@@ -1,0 +1,29 @@
+@@
+expression E0, E2, E3, E1;
+@@
+- gtk_box_pack_start (E0, E1); 
+- gtk_box_reorder_child(GTK_BOX(E2), E3->save_widgets, 0); 
++ gtk_box_pack_start(GTK_BOX(E3->box), E3->save_widgets); 
++ gtk_box_reorder_child(GTK_BOX(E3->box), E3->save_widgets, 0); 
+// Infered from: (gtk/{prevFiles/prev_cc7038_24f79b_gtk#gtkfilechooserwidget.c,revFiles/cc7038_24f79b_gtk#gtkfilechooserwidget.c}: save_widgets_create)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 0.80
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_18db64_328add_modules#printbackends#cups#gtkprintbackendcups.c: cups_create_printer
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_55d50b_9dee34_gtk#gtkfontchooser.c: gtk_font_chooser_init
+*/
+
+// ---------------------------------------------

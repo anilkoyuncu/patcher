@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return send(E0->fd, E1, E2, 0); 
++ return send(E0->fd, E1, E2, MSG_NOSIGNAL); 
+// Infered from: (vlc/{prevFiles/prev_8349fa_c1df2e_src#network#tls.c,revFiles/8349fa_c1df2e_src#network#tls.c}: vlc_tls_DummySend)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

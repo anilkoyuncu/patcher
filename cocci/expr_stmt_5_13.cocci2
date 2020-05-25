@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0->fontstyle.i_font_color = (E1 << 24) | (E2 << 16) | (E3 << 8); 
++ E0->fontstyle.i_font_color = (E1 << 16) | (E2 << 8) | (E3 << 0); 
+// Infered from: (vlc/{prevFiles/prev_65876a_6a5e46_modules#video_filter#dynamicoverlay#dynamicoverlay_commands.c,revFiles/65876a_6a5e46_modules#video_filter#dynamicoverlay#dynamicoverlay_commands.c}: parser_SetTextColor)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

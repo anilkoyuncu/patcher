@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = sprintf(E1,  "Congratulations, you have successfully modified ext/extname/config.m4, module %s is compiled into PHP",  Z_STRVAL_PP(E2)); 
++ E0 = sprintf(E1,  "Congratulations, you have successfully modified ext/%.80s/config.m4, module %.80s is compiled into PHP",  "extname", Z_STRVAL_PP(E2)); 
+// Infered from: (php-src/{prevFiles/prev_10eaf1_349b2b_ext#skeleton#skeleton.c,revFiles/10eaf1_349b2b_ext#skeleton#skeleton.c}: PHP_FUNCTION)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.55, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch applied partially:
+ - tcl/prevFiles/prev_72d87a_6422fb_generic#zipfs.c: Zipfs_Mount
+*/
+
+// ---------------------------------------------

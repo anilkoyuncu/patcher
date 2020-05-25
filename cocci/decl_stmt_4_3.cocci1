@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- const  char **I0 = realloc(E1->pp_shortcuts, sizeof(I0[0]) * (E2 + E3)); 
++ char **I0 = realloc(E1->pp_shortcuts, sizeof(I0[0]) * (E2 + E3)); 
+// Infered from: (vlc/{prevFiles/prev_081ffe_f0d135_src#modules#entry.c,revFiles/081ffe_f0d135_src#modules#entry.c}: vlc_plugin_set)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

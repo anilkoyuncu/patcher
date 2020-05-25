@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = php_openssl_dh_pub_from_priv(E1, E2, E3, E4); 
++ E0 = php_openssl_dh_pub_from_priv(E2, E3, E4); 
+// Infered from: (php-src/{prevFiles/prev_0f4216_461add_ext#openssl#openssl.c,revFiles/0f4216_461add_ext#openssl#openssl.c}: php_openssl_pkey_init_dh)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

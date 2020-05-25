@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- snprintf(E0, E1 - (E2 - E0), "%s\n", E3); 
+- E0 += E4 + 2; 
++ snprintf(E0, E1 - (E0 - E2), "%s\n", E3); 
++ E0 += E4 + 1; 
+// Infered from: (php-src/{prevFiles/prev_97f4fc_c0f806_ext#interbase#ibase_service.c,revFiles/97f4fc_c0f806_ext#interbase#ibase_service.c}: _php_ibase_service_query)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

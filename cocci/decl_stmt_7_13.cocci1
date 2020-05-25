@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef uint8_t;
+@@
+- uint8_t I0[FRAME_HEADER_SIZE]; 
++ uint8_t I0[FRAME_HEADER_SIZE + 4]; 
+// Infered from: (FFmpeg/{prevFiles/prev_6d083d_ae10e1_libavformat#ffmenc.c,revFiles/6d083d_ae10e1_libavformat#ffmenc.c}: ffm_write_packet)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- ascii_to_wc(E0, E1->value); 
++ put_buffer(E0, E1->value, strlen(E1->value) + 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_15c315_135c8c_libavformat#movenc.c,revFiles/15c315_135c8c_libavformat#movenc.c}: mov_write_3gp_udta_tag)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

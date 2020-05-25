@@ -1,0 +1,9 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = strlen(E1); 
+// Infered from: (openssl/{prevFiles/prev_835d35_29fd67_fips#aes#fips_aesavs.c,revFiles/835d35_29fd67_fips#aes#fips_aesavs.c}: proc_file), (openssl/{prevFiles/prev_835d35_29fd67_fips#des#fips_desmovs.c,revFiles/835d35_29fd67_fips#des#fips_desmovs.c}: tproc_file)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

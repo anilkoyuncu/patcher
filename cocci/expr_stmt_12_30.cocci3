@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- printf("NODE:%p parent:%p left:0x%p right:%px key:%d data:%p\n", E0,  E0->parent, E0->left, E0->right, E0->key32, E0->data); 
++ printf("NODE:%p parent:%p left:0x%p right:%px key:%d data:%p\n", (void *)E0,  (void *)(E0->parent), (void *)(E0->left), (void *)(E0->right),  (E0->key32), E0->data); 
+// Infered from: (wireshark/{prevFiles/prev_980b39_b25aa0_epan#emem.c,revFiles/980b39_b25aa0_epan#emem.c}: emem_tree_print_nodes)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

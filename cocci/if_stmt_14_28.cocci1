@@ -1,0 +1,29 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = !(E1->flags & AV_PIX_FMT_FLAG_RGB) && E1->nb_components >= 2; 
++ int I0 = !(E1->flags & AV_PIX_FMT_FLAG_RGB) && (E1->flags & AV_PIX_FMT_FLAG_PLANAR) && E1->nb_components >= 3; 
+// Infered from: (FFmpeg/{prevFiles/prev_ab1e43_b140b5_libavcodec#tiff.c,revFiles/ab1e43_b140b5_libavcodec#tiff.c}: tiff_unpack_strip)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/7(0%)
+
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_a45fb6_eb8c5b_dir.c: dir_add_name
+ - php-src/prevFiles/prev_518a8f_2badeb5_ext#opcache#ZendAccelerator.c: preload_link
+ - FFmpeg/prevFiles/prev_ab1e43_b140b5_libavcodec#tiff.c: tiff_unpack_strip
+ - nginx/prevFiles/prev_a9af7b_fa808b_src#mail#ngx_mail_handler.c: ngx_smtp_auth_state
+ - nginx/prevFiles/prev_a9af7b_fa808b_src#mail#ngx_mail_handler.c: ngx_pop3_auth_state
+ - FFmpeg/prevFiles/prev_ab1e43_b140b5_libavcodec#tiff.c: init_image
+*/
+
+// ---------------------------------------------

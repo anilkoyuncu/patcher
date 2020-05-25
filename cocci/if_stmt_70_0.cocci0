@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->type & ARM_CP_64BIT)  
+- {
+- CPREG_FIELD64(E1, E0) = E2; 
+- }
+- else
+- {
+- CPREG_FIELD32(E1, E0) = E2; 
+- }
++ raw_write(E1, E0, E2); 
+// Infered from: (qemu/{prevFiles/prev_afb253_a4f0ce_target-arm#helper.c,revFiles/afb253_a4f0ce_target-arm#helper.c}: write_raw_cp_reg), (qemu/{prevFiles/prev_8455bc_d04581_target-arm#helper.c,revFiles/8455bc_d04581_target-arm#helper.c}: write_raw_cp_reg)
+// False positives: (qemu/revFiles/8455bc_d04581_target-arm#helper.c: raw_write), (qemu/revFiles/afb253_a4f0ce_target-arm#helper.c: raw_write)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

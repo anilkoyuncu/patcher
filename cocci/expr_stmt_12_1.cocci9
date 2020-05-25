@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef QNum;
+@@
+- E0 = qobject_to_qnum(E1); 
++ E0 = qobject_to(QNum , E1); 
+// Infered from: (qemu/{prevFiles/prev_7dc847_1a56b1_tests#check-qlist.c,revFiles/7dc847_1a56b1_tests#check-qlist.c}: iter_func)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

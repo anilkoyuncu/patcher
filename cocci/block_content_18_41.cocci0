@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = localtime(&E1); 
++ ttstamp = E1; 
++ E0 = localtime(&ttstamp); 
+// Infered from: (php-src/{prevFiles/prev_1b0104_6c394c_ext#com_dotnet#com_variant.c,revFiles/1b0104_6c394c_ext#com_dotnet#com_variant.c}: PHP_FUNCTION)
+// Recall: 0.38, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

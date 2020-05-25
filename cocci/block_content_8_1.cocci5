@@ -1,0 +1,33 @@
+@@
+identifier I0;
+typedef gpointer;
+@@
+- return (gpointer )*I0; 
++ return GUINT_TO_POINTER(*I0); 
+// Infered from: (wireshark/{prevFiles/prev_8906e9_b4dea54_epan#dissectors#packet-btobex.c,revFiles/8906e9_b4dea54_epan#dissectors#packet-btobex.c}: btobex_profile_value)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.78, Precision: 0.88
+// -- Node Change --
+// Recall: 0.82, Precision: 0.88
+// -- General --
+// Functions fully changed: 6/10(60%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_70160a_2bd216_src#video_output#video_output.c: MaskToShift
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_121a6f_251b66_epan#dissectors#packet-bthfp.c: 
+ - wireshark/prevFiles/prev_640ded_075fc1_extcap#ciscodump.c: parse_line
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_f33dea_5d4cf5_Python#asdl.c: asdl_seq_new
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->length; 
++ E0 = sg_dma_len(E1); 
+// Infered from: (linux/{prevFiles/prev_fdaf9c_cbb796c_drivers#dma#imx-sdma.c,revFiles/fdaf9c_cbb796c_drivers#dma#imx-sdma.c}: sdma_prep_slave_sg)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

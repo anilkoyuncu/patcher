@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- msg_Warn(E0, "Unsupported profile %d for %s ", E1->i_profile,  directx_va_GetDecoderName(E2->guid)); 
++ char *psz_name = directx_va_GetDecoderName(E2->guid); 
++ msg_Warn(E0, "Unsupported profile %d for %s ", E1->i_profile, psz_name); 
++ free(psz_name); 
+// Infered from: (vlc/{prevFiles/prev_f7b42e_db019b_modules#codec#avcodec#directx_va.c,revFiles/f7b42e_db019b_modules#codec#avcodec#directx_va.c}: FindVideoServiceConversion)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

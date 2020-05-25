@@ -1,0 +1,38 @@
+@@
+expression E0, E1, E2;
+@@
+- (*E0) = apr_hash_get(E1->prog_data, E2, strlen(E2)); 
+// Infered from: (apr/{prevFiles/prev_92eed9_d9be41_misc#unix#start.c,revFiles/92eed9_d9be41_misc#unix#start.c}: apr_get_userdata)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.42, Precision: 0.83
+// -- Node Change --
+// Recall: 0.17, Precision: 0.64
+// -- General --
+// Functions fully changed: 2/13(15%)
+
+/*
+Functions where the patch applied partially:
+ - openssl/prevFiles/prev_cc99bf_e44380_crypto#x509#x_x509.c: d2i_X509_AUX
+ - apr/prevFiles/prev_92eed9_d9be41_misc#unix#start.c: apr_get_userdata
+*/
+/*
+Functions where the patch did not apply:
+ - apr/prevFiles/prev_92eed9_d9be41_misc#unix#start.c: apr_set_userdata
+ - curl/prevFiles/prev_1ab6c3_5162cb_lib#ssh.c: ssh_statemach_act
+ - curl/prevFiles/prev_1ab6c3_5162cb_lib#ssh.c: ssh_check_fingerprint
+ - openssl/prevFiles/prev_cc99bf_e44380_crypto#bio#bio_lib.c: BIO_next
+ - openssl/prevFiles/prev_f2582f_62b0a0_apps#spkac.c: spkac_main
+ - cairo/prevFiles/prev_4e0f0d_b0c086_src#cairo-surface.c: _cairo_surface_create_similar_scratch
+ - openssl/prevFiles/prev_e38565_625146_crypto#async#arch#async_win.c: async_set_pool
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_cc99bf_e44380_crypto#bio#bio_lib.c: BIO_find_type
+ - curl/prevFiles/prev_1ab6c3_5162cb_lib#ssh.c: ssh_block2waitfor
+*/
+
+// ---------------------------------------------

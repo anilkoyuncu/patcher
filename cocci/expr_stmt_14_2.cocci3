@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- php_stream_notify_progress(E0->context, E1, E2); 
++ php_stream_notify_progress(E0->context, (size_t )E1, (size_t )E2); 
+// Infered from: (php-src/{prevFiles/prev_21f836_6068ce_ext#curl#streams.c,revFiles/21f836_6068ce_ext#curl#streams.c}: on_progress_avail), (php-src/{prevFiles/prev_89de34_1941fb_ext#curl#streams.c,revFiles/89de34_1941fb_ext#curl#streams.c}: on_progress_avail), (php-src/{prevFiles/prev_da62d8_47add2_ext#curl#streams.c,revFiles/da62d8_47add2_ext#curl#streams.c}: on_progress_avail)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

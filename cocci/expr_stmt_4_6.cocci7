@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1 << 2; 
++ E0 = E1 * 4; 
+// Infered from: (FFmpeg/{prevFiles/prev_93ac72_030c7f_libavcodec#dvdec.c,revFiles/93ac72_030c7f_libavcodec#dvdec.c}: dv_decode_video_segment), (FFmpeg/{prevFiles/prev_2f289e_54e1ef_libavcodec#ac3enc.c,revFiles/2f289e_54e1ef_libavcodec#ac3enc.c}: bit_alloc)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

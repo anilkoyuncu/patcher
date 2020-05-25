@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, E0, myglobals.basename); 
++ fprintf(stderr, E0, orte_basename); 
+// Infered from: (ompi/{prevFiles/prev_f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c,revFiles/f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c}: main), (ompi/{prevFiles/prev_f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c,revFiles/f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c}: main)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.15
+
+// ---------------------------------------------

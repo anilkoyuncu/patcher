@@ -1,0 +1,10 @@
+@@
+type T0;
+expression E1, E2;
+@@
+- memcpy((T0 *)E1->p_headers + E1->i_headers - E2->bytes, E2->packet,  E1->i_headers); 
++ memcpy((T0 *)E1->p_headers + E1->i_headers - E2->bytes, E2->packet, E2->bytes); 
+// Infered from: (vlc/{prevFiles/prev_6a41b0_0cdf8d_modules#demux#ogg.c,revFiles/6a41b0_0cdf8d_modules#demux#ogg.c}: Ogg_DecodePacket)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

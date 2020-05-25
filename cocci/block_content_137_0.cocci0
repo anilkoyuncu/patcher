@@ -1,0 +1,10 @@
+@@
+identifier I4;
+expression E0, E1, E2, E3;
+@@
+- E0 = regexec(&E1, &E2[E3], (size_t )NS, I4, (E3 ? REG_NOTBOL :0)); 
++ E0 = regexec(&E1, &E2[E3], E1.re_nsub + 1, I4, (E3 ? REG_NOTBOL :0)); 
+// Infered from: (php-src/{prevFiles/prev_cc4b27_4214a0_ext#ereg#ereg.c,revFiles/cc4b27_4214a0_ext#ereg#ereg.c}: php_reg_replace), (php-src/{prevFiles/prev_cc4b27_4214a0_ext#standard#reg.c,revFiles/cc4b27_4214a0_ext#standard#reg.c}: php_reg_replace)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.18
+
+// ---------------------------------------------

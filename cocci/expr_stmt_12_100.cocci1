@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef OCICallbackLobRead;
+typedef dvoid;
+typedef ub1;
+typedef ub2;
+@@
+- E0->error = OCILobRead(E0->pServiceContext, E0->pError, E1->ocidescr, &E2,  E3 + 1, (dvoid *)E4 + E3, E2, (dvoid *)0,  (OCICallbackLobRead )0, (ub2 )0, (ub1 )SQLCS_IMPLICIT); 
++ E0->error = OCILobRead(E0->pServiceContext, E0->pError, E1->ocidescr, &E2,  E3 + 1, (dvoid *)((char *)E4 + E3), E2, (dvoid *)0,  (OCICallbackLobRead )0, (ub2 )0, (ub1 )SQLCS_IMPLICIT); 
+// Infered from: (php-src/{prevFiles/prev_ffad41_41360c_ext#oci8#oci8.c,revFiles/ffad41_41360c_ext#oci8#oci8.c}: oci_loadlob)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

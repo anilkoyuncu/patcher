@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- av_assert0(E0 == 1 || E0 == 3); 
++ av_assert0(E0 >= 1 && E0 <= 3); 
+// Infered from: (FFmpeg/{prevFiles/prev_4c8018_b23aff_libavcodec#mjpegdec.c,revFiles/4c8018_b23aff_libavcodec#mjpegdec.c}: ljpeg_decode_yuv_scan)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

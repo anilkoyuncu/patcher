@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- g_print(_("Additional debug info:\n%s\n"), E0); 
++ g_printerr(_("Additional debug info:\n%s\n"), E0); 
+// Infered from: (gstreamer/{prevFiles/prev_589499_0de2f6_gst#gstutils.c,revFiles/589499_0de2f6_gst#gstutils.c}: gst_object_default_error)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

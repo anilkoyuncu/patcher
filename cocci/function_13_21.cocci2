@@ -1,0 +1,20 @@
+@@
+identifier I0, I2;
+expression E1;
+typedef EHCIQueue;
+@@
+- EHCIQueue *I0 = E1->queue; 
+- int I2 = ehci_get_state(I0->ehci, I0->async); 
+- fprintf(stderr, "EHCI: Warning packet completed but not processed\n"); 
+- ehci_state_executing(I0); 
+- ehci_state_writeback(I0); 
+- if (!(I0->qh.token & QTD_TOKEN_HALT))  
+- {
+- ehci_state_advqueue(I0); 
+- }
+- ehci_set_state(I0->ehci, I0->async, I2); 
++ ehci_writeback_async_complete_packet(E1); 
+// Infered from: (qemu/{prevFiles/prev_f881c8_8e4a42_hw#usb#hcd-ehci.c,revFiles/f881c8_8e4a42_hw#usb#hcd-ehci.c}: ehci_free_packet)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- return 10 + (E0 - 'a'); 
++ return 10 + (E0 - 'A'); 
+// Infered from: (qemu/{prevFiles/prev_2a802a_ef18c2_qtest.c,revFiles/2a802a_ef18c2_qtest.c}: hex2nib)
+// False positives: (qemu/revFiles/2a802a_ef18c2_qtest.c: hex2nib)
+// Recall: 0.17, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

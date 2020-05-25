@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+typedef PyContextVar;
+@@
+- return contextvar_new (E0, E1); 
++ PyContextVar *var = contextvar_new(E0, E1); 
++ Py_DECREF(E0); 
++ return var; 
+// Infered from: (cpython/{prevFiles/prev_6ab629_b31206_Python#context.c,revFiles/6ab629_b31206_Python#context.c}: PyContextVar_New)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

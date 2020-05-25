@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- PyErr_SetObject(PyExc_KeyError, E0); 
++ set_key_error(E0); 
+// Infered from: (cpython/{prevFiles/prev_9c14ff_0c8508_Objects#setobject.c,revFiles/9c14ff_0c8508_Objects#setobject.c}: set_remove)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.48, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_d986c6_a9ce06_ui#cli#tap-icmpstat.c: compute_stats
+ - wireshark/prevFiles/prev_d986c6_a9ce06_ui#cli#tap-icmpv6stat.c: compute_stats
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,35 @@
+@@
+expression E0;
+@@
+- if (E0 == NULL)  
++ if (E0 == NULL || *E0 == '\0')  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_474fde_9ced01_tty.c,revFiles/474fde_9ced01_tty.c}: tty_init), (tmux/{prevFiles/prev_182560_43ff21_tty.c,revFiles/182560_43ff21_tty.c}: tty_init)
+// False positives: (git/revFiles/63e50d_ee24ee_builtin-apply.c: check_patch), (git/revFiles/63e50d_ee24ee_builtin-apply.c: parse_binary_hunk), (php-src/revFiles/cda7dc_6afcd6_main#streams#xp_socket.c: php_tcp_sockop_accept)
+// Recall: 0.20, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.69
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 9/13(69%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_cda7dc_6afcd6_main#streams#xp_socket.c: php_tcp_sockop_accept
+ - git/prevFiles/prev_63e50d_ee24ee_builtin-apply.c: check_patch
+ - git/prevFiles/prev_63e50d_ee24ee_builtin-apply.c: parse_binary_hunk
+ - git/prevFiles/prev_63e50d_ee24ee_builtin-apply.c: gitdiff_index
+*/
+
+// ---------------------------------------------

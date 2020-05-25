@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef uint32_t;
+@@
+- int I0 = avio_rl32(E1); 
++ uint32_t I0 = avio_rl32(E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_7276e9_b0bc0e_libavformat#pmpdec.c,revFiles/7276e9_b0bc0e_libavformat#pmpdec.c}: pmp_header)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

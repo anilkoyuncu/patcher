@@ -1,0 +1,9 @@
+@@
+expression list E1;
+expression E0;
+@@
+- E0 = realloc (E1); 
+// Infered from: (php-src/{prevFiles/prev_9b3087_9190e7_phpdbg_prompt.c,revFiles/9b3087_9190e7_phpdbg_prompt.c}: phpdbg_init)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

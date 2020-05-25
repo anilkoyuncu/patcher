@@ -1,0 +1,8 @@
+@@
+@@
+- php_error(E_WARNING, "%s() can't initialize array for 3rd argument",  get_active_function_name(TSRMLS_C)); 
++ php_error(E_WARNING, "%s() can't initialize array for 4th argument",  get_active_function_name(TSRMLS_C)); 
+// Infered from: (php-src/{prevFiles/prev_38a632_303b62_ext#sockets#sockets.c,revFiles/38a632_303b62_ext#sockets#sockets.c}: PHP_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

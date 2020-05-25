@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0->c_dc_scale = E0->c_dc_scale_table[E0->qscale]; 
++ E0->c_dc_scale = E0->c_dc_scale_table[E0->chroma_qscale]; 
+// Infered from: (FFmpeg/{prevFiles/prev_6beeb9_b7cbfc_libavcodec#h263dec.c,revFiles/6beeb9_b7cbfc_libavcodec#h263dec.c}: decode_slice)
+// False positives: (FFmpeg/revFiles/6beeb9_b7cbfc_libavcodec#h263dec.c: decode_slice)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

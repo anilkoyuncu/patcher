@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- compute_child_offset(E0, E1->priv->active_menu_item, &E2, &E3, NULL); 
+// Infered from: (gtk/{prevFiles/prev_a265d8_480a00_gtk#gtkmenu.c,revFiles/a265d8_480a00_gtk#gtkmenu.c}: gtk_menu_real_move_scroll)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_f9dce3_1093fa_ui#gtk#airpcap_dlg.c: display_airpcap_key_management_cb
+ - gtk/prevFiles/prev_a265d8_480a00_gtk#gtkmenu.c: gtk_menu_real_move_scroll
+ - FFmpeg/prevFiles/prev_6153aa_ace916_libavcodec#jacosubdec.c: insert_datetime
+ - gtk/prevFiles/prev_8916ff_02892c_gtk#gtkiconview.c: gtk_icon_view_row_deleted
+*/
+
+// ---------------------------------------------

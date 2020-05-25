@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- register char *I0 = E1; 
++ register const  char *I0 = E1; 
+// Infered from: (php-src/{prevFiles/prev_b3dfb5_d4b1c1_ext#mysqlnd#mysqlnd_result_meta.c,revFiles/b3dfb5_d4b1c1_ext#mysqlnd#mysqlnd_result_meta.c}: mysqlnd_is_key_numeric), (php-src/{prevFiles/prev_234181_4c8803_ext#mysqlnd#mysqlnd_result_meta.c,revFiles/234181_4c8803_ext#mysqlnd#mysqlnd_result_meta.c}: mysqlnd_is_key_numeric)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

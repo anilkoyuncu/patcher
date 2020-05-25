@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->pseudo_header.ieee_802_11.data_rate = E1.rate; 
++ E0->pseudo_header.ieee_802_11.data_rate = E1.rate | (E1.direction << 8); 
+// Infered from: (wireshark/{prevFiles/prev_8c112f_5e4085_wiretap#commview.c,revFiles/8c112f_5e4085_wiretap#commview.c}: commview_read_and_process_header)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

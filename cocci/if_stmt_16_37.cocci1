@@ -1,0 +1,25 @@
+@@
+identifier I0;
+@@
+- int I0 = 0; 
++ size_t I0 = 0; 
+// Infered from: (php-src/{prevFiles/prev_4fa924_5b9f3a_ext#standard#password.c,revFiles/4fa924_5b9f3a_ext#standard#password.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/4fa924_5b9f3a_ext#standard#password.c: php_password_make_salt)
+// Recall: 0.18, Precision: 0.50, Matching recall: 0.22
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 0.64, Precision: 0.70
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_4fa924_5b9f3a_ext#standard#password.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_4fa924_5b9f3a_ext#standard#password.c: php_password_make_salt
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1;
+typedef vlc_sem_t;
+@@
+  void vlc_sem_wait(vlc_sem_t *I0)  
+  {
+  ...
+- mutex_cleanup_push (E1); 
++ mutex_cleanup_push(&I0->lock); 
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_1009e7_8c3486_src#misc#threads.c,revFiles/1009e7_8c3486_src#misc#threads.c}: vlc_sem_wait)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

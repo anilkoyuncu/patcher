@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- *E0++ = bswap_32(*E1++); 
++ *E0++ = bswap_32(*E1); 
++ E1++; 
+// Infered from: (cairo/{prevFiles/prev_ce3ad6_be4ffa_src#cairo-xlib-surface.c,revFiles/ce3ad6_be4ffa_src#cairo-xlib-surface.c}: _cairo_xlib_surface_add_glyph)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

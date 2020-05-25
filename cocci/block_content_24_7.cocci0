@@ -1,0 +1,12 @@
+@@
+identifier I0;
+@@
+- char I0[100]; 
++ char *I0; 
+  ...
+- g_snprintf(I0, sizeof(I0), "Dumpcap (Wireshark) %s",  get_ws_vcs_version_info()); 
++ I0 = g_strdup_printf("Dumpcap (Wireshark) %s", get_ws_vcs_version_info()); 
+// Infered from: (wireshark/{prevFiles/prev_760aa1_dfa50e_dumpcap.c,revFiles/760aa1_dfa50e_dumpcap.c}: capture_loop_init_output), (wireshark/{prevFiles/prev_760aa1_dfa50e_dumpcap.c,revFiles/760aa1_dfa50e_dumpcap.c}: do_file_switch_or_stop)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

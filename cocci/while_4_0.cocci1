@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+@@
+- while (E0 >= 0 && E1 >= 0 && E2[E3].stream->index_entries[E0].pos < E4->index_entries[  E1].pos && E4->index_entries[E5].timestamp - E2[E3].stream->index_entries[  E0].timestamp < 30000000000 / E6->time_scale)  
++ while (E0 >= 0 && E1 > 0 && E2[E3].stream->index_entries[E0].pos < E4->index_entries[  E1].pos && E4->index_entries[E5].timestamp - E2[E3].stream->index_entries[  E0].timestamp < 30000000000 / E6->time_scale)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b3dfeb_8bfb4d_libavformat#matroskadec.c,revFiles/b3dfeb_8bfb4d_libavformat#matroskadec.c}: matroska_read_seek)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

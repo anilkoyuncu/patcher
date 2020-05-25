@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (E0->mode & SSL_MODE_RELEASE_BUFFERS)  
++ if (E0->mode & SSL_MODE_RELEASE_BUFFERS && E0->s3->rbuf.left == 0)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_94d1f4_4ba5e6_ssl#s3_pkt.c,revFiles/94d1f4_4ba5e6_ssl#s3_pkt.c}: ssl3_read_bytes)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (zend_lookup_class(E0, E1, &E2) != SUCCESS)  
++ if (zend_lookup_class() != SUCCESS)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_2c7ebe5_eb33ad_Zend#zend_constants.c,revFiles/2c7ebe5_eb33ad_Zend#zend_constants.c}: zend_get_constant)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

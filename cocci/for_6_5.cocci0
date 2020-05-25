@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- for(zend_hash_internal_pointer_reset_ex(E0, &E1);zend_hash_get_current_data_ex(  E0, (void **)&E2, &E1);zend_hash_move_forward_ex(E0, &E1))  
++ for(zend_hash_internal_pointer_reset_ex(E0, &E1);zend_hash_get_current_data_ex(  E0, (void **)&E2, &E1) == SUCCESS;zend_hash_move_forward_ex(E0, &E1))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_9e76e8_2b28fd_ext#mysqlnd#php_mysqlnd.c,revFiles/9e76e8_2b28fd_ext#mysqlnd#php_mysqlnd.c}: mysqlnd_minfo_dump_api_plugins)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- E0 = g_malloc(E1 + 1); 
++ E0 = ep_alloc(E1 + 1); 
+  ...
+- g_free(E0); 
+// Infered from: (wireshark/{prevFiles/prev_68bfa7_db4cbf_epan#dissectors#packet-ftp.c,revFiles/68bfa7_db4cbf_epan#dissectors#packet-ftp.c}: parse_port_pasv)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

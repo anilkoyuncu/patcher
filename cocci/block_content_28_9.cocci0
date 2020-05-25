@@ -1,0 +1,17 @@
+@@
+identifier I5;
+expression E1, E0, E2, E3, E4;
+@@
+- E0 = devm_request_and_ioremap(E1, E2); 
+- if (!E0)  
++ E0 = devm_ioremap_resource(E1, E2); 
++ if (IS_ERR(E0))  
+  {
+- dev_err(&E3->dev, E4); 
+- return -I5; 
++ return PTR_ERR(E0); 
+  }
+// Infered from: (linux/{prevFiles/prev_9b43b5_79719e6_drivers#staging#imx-drm#imx-tve.c,revFiles/9b43b5_79719e6_drivers#staging#imx-drm#imx-tve.c}: imx_tve_probe), (linux/{prevFiles/prev_cc721c_5df605_drivers#cpufreq#kirkwood-cpufreq.c,revFiles/cc721c_5df605_drivers#cpufreq#kirkwood-cpufreq.c}: kirkwood_cpufreq_probe)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0 = proto_tree_add_uint_hidden(E1, hf_rtcp_rtpfb_nack_pid, E2, E3, 2,  E4 + E5 + 1); 
++ E0 = proto_tree_add_uint(E1, hf_rtcp_rtpfb_nack_pid, E2, E3, 2, E4 + E5 + 1); 
++ PROTO_ITEM_SET_HIDDEN(E0); 
+// Infered from: (wireshark/{prevFiles/prev_b3aa52_558c1b_epan#dissectors#packet-rtcp.c,revFiles/b3aa52_558c1b_epan#dissectors#packet-rtcp.c}: dissect_rtcp_rtpfb)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.71
+// -- Node Change --
+// Recall: 0.97, Precision: 0.49
+// -- General --
+// Functions fully changed: 8/14(57%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_a9f850_faaeee_ext#exif#exif.c: scan_JPEG_header
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_1a4229_4493ec_orte#mca#plm#base#plm_base_orted_cmds.c: orte_plm_base_orted_exit
+ - php-src/prevFiles/prev_bdb7a5_2a3c08_ext#mbstring#mbstring.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_f85344_c1ec21_ext#standard#file.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_f21eb5_915a8a2_ext#standard#string.c: PHP_FUNCTION
+ - ompi/prevFiles/prev_1a4229_4493ec_orte#mca#plm#base#plm_base_orted_cmds.c: orte_plm_base_orted_kill_local_procs
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,21 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0; 
++ int errorcode; 
+  ...
+- I0 = ssl_choose_client_version(E1, E2); 
+- if (I0 != 0)  
++ errorcode = ssl_choose_client_version(E1, E2); 
++ if (errorcode != 0)  
+  {
+  ...
+- SSLerr(SSL_F_TLS_PROCESS_HELLO_RETRY_REQUEST, I0); 
++ SSLerr(SSL_F_TLS_PROCESS_HELLO_RETRY_REQUEST, errorcode); 
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_2248db_b0bfd1_ssl#statem#statem_clnt.c,revFiles/2248db_b0bfd1_ssl#statem#statem_clnt.c}: tls_process_hello_retry_request)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

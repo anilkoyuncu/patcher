@@ -1,0 +1,11 @@
+@@
+identifier I1;
+expression E0;
+@@
+- E0 = I1 + E0; 
++ E0 = (long )I1 + E0; 
+// Infered from: (php-src/{prevFiles/prev_91ceb2_99442a_ext#standard#string.c,revFiles/91ceb2_99442a_ext#standard#string.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_a61c75_51ddf6_ext#standard#string.c,revFiles/a61c75_51ddf6_ext#standard#string.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/91ceb2_99442a_ext#standard#string.c: PHP_FUNCTION), (php-src/revFiles/a61c75_51ddf6_ext#standard#string.c: PHP_FUNCTION)
+// Recall: 0.12, Precision: 0.50, Matching recall: 0.12
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (0 > (E0 = orte_init()))  
++ if (0 > (E0 = orte_init(ORTE_NON_INFRASTRUCTURE, ORTE_NON_BARRIER)))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_b4e3ad_dd8bea_orte#test#system#spin.c,revFiles/b4e3ad_dd8bea_orte#test#system#spin.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

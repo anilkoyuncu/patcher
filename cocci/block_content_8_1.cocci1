@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+typedef gchar;
+typedef guint8;
+@@
+- guint8 *I0; 
+- I0 = (guint8 *)wmem_alloc(wmem_packet_scope(), E1 + 1); 
++ gchar *I0; 
++ I0 = (gchar *)wmem_alloc(wmem_packet_scope(), E1 + 1); 
+// Infered from: (wireshark/{prevFiles/prev_121a6f_251b66_epan#dissectors#packet-bthfp.c,revFiles/121a6f_251b66_epan#dissectors#packet-bthfp.c}: get_uint_parameter), (wireshark/{prevFiles/prev_121a6f_251b66_epan#dissectors#packet-bthfp.c,revFiles/121a6f_251b66_epan#dissectors#packet-bthfp.c}: get_uint_hex_parameter)
+// Recall: 0.24, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

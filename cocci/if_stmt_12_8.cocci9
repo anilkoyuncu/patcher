@@ -1,0 +1,33 @@
+@@
+@@
+- pr_err("alloc_netdev failed\n"); 
+// Infered from: (linux/{prevFiles/prev_a41d42_83cdfc17_drivers#staging#gdm724x#gdm_lte.c,revFiles/a41d42_83cdfc17_drivers#staging#gdm724x#gdm_lte.c}: register_lte_device)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.57, Precision: 1.00
+// -- Node Change --
+// Recall: 0.55, Precision: 1.00
+// -- General --
+// Functions fully changed: 11/21(52%)
+
+/*
+Functions where the patch applied partially:
+ - codeflaws/prevFiles/prev_3-C-17712535-17712546.c: illegal
+*/
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_471-B-13345617-13345636.c: main
+ - php-src/prevFiles/prev_01f31d_3996f3_ext#mysqli#mysqli.c: php_clear_mysql
+ - codeflaws/prevFiles/prev_40-B-180031-180149.c: main
+ - php-src/prevFiles/prev_01f31d_3996f3_ext#mysqli#mysqli.c: php_local_infile_end
+ - linux/prevFiles/prev_edff16_9a174a_drivers#staging#unisys#virtpci#virtpci.c: virtpci_device_add
+ - linux/prevFiles/prev_edff16_9a174a_drivers#staging#unisys#uislib#uislib.c: create_device
+ - codeflaws/prevFiles/prev_99-B-4618949-4618956.c: main
+ - codeflaws/prevFiles/prev_202-A-1864388-1905671.c: main
+ - linux/prevFiles/prev_edff16_9a174a_drivers#staging#unisys#uislib#uislib.c: create_bus
+*/
+
+// ---------------------------------------------

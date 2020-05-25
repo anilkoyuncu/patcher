@@ -1,0 +1,8 @@
+@@
+@@
+- return AVPROBE_SCORE_EXTENSION; 
++ return AVPROBE_SCORE_EXTENSION + 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_52e563_345f22_libavformat#cavsvideodec.c,revFiles/52e563_345f22_libavformat#cavsvideodec.c}: cavsvideo_probe), (FFmpeg/{prevFiles/prev_a8a45d_e0f8be_libavformat#avs.c,revFiles/a8a45d_e0f8be_libavformat#avs.c}: avs_probe)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

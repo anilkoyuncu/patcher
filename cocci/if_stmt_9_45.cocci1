@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- if (E0)  
+- {
+- E1->i_length = E1->subtitles.p_array[E1->subtitles.i_count - 1].i_start + 1; 
+- }
+// Infered from: (vlc/{prevFiles/prev_83e21b_0d62f7_modules#demux#subtitle.c,revFiles/83e21b_0d62f7_modules#demux#subtitle.c}: Open)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/5(20%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_f8a13c_96cd6f_libavformat#rtsp.c: ff_rtsp_open_transport_ctx
+ - FFmpeg/prevFiles/prev_df3795_bdf761_libavformat#rtsp.c: ff_rtsp_open_transport_ctx
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_53a9fa_06682f_modules#packetizer#h264.c: OutputPicture
+ - vlc/prevFiles/prev_83e21b_0d62f7_modules#demux#subtitle.c: Control
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = BIO_get_mem_data(E1, &E2); 
++ E0 = BIO_get_mem_data(E1, (char **)&E2); 
+// Infered from: (nginx/{prevFiles/prev_592dbcc_c40d8d_src#event#ngx_event_openssl.c,revFiles/592dbcc_c40d8d_src#event#ngx_event_openssl.c}: ngx_ssl_parse_time), (nginx/{prevFiles/prev_592dbcc_c40d8d_src#event#ngx_event_openssl_stapling.c,revFiles/592dbcc_c40d8d_src#event#ngx_event_openssl_stapling.c}: ngx_ssl_stapling_time)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

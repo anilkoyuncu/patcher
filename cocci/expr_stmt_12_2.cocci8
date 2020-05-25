@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- msg_Err(E0, "Failed to create %dx%d picture for OSD",  E1->fmt.i_visible_width, E1->fmt.i_visible_height); 
++ msg_Err(E0, "Failed to create %dx%d picture for OSD", E1->fmt.i_width,  E1->fmt.i_height); 
+// Infered from: (vlc/{prevFiles/prev_86ade3_3ae059_modules#video_output#win32#direct3d11.c,revFiles/86ade3_3ae059_modules#video_output#win32#direct3d11.c}: Direct3D11MapSubpicture)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

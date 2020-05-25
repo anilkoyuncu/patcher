@@ -1,0 +1,18 @@
+@@
+expression E0, E1;
+@@
+- strcpy(E0->info.ip, E1->ip_addr_str); 
+// Infered from: (curl/{prevFiles/prev_c32821_f6f5d7_lib#url.c,revFiles/c32821_f6f5d7_lib#url.c}: create_conn)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+
+// ---------------------------------------------

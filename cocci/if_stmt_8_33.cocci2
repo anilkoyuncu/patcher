@@ -1,0 +1,36 @@
+@@
+identifier I0;
+@@
+- struct nf_conn *I0 = NULL; 
++ struct nf_conn *I0; 
+// Infered from: (linux/{prevFiles/prev_cd7fcb_71320a_net#netfilter#nf_conntrack_core.c,revFiles/cd7fcb_71320a_net#netfilter#nf_conntrack_core.c}: nf_conntrack_alloc)
+// False positives: (linux/revFiles/cd7fcb_71320a_net#netfilter#nf_conntrack_netlink.c: ctnetlink_new_conntrack)
+// Recall: 0.08, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.27, Precision: 0.60
+// -- Node Change --
+// Recall: 0.25, Precision: 0.60
+// -- General --
+// Functions fully changed: 3/13(23%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_20dacc_5651cb_gdk#x11#gdkscreen-x11.c: init_randr13
+ - ompi/prevFiles/prev_064a67_39b44d_ompi#mpi#c#get_address.c: MPI_Get_address
+ - linux/prevFiles/prev_b8d9cb2_322162a_drivers#pci#hotplug#cpqphp_ctrl.c: cpqhp_pushbutton_thread
+ - wireshark/prevFiles/prev_fb207b_6c4697_ui#gtk#dfilter_expr_dlg.c: dfilter_expr_dlg_accept_cb
+ - linux/prevFiles/prev_cd7fcb_71320a_net#netfilter#nf_conntrack_netlink.c: ctnetlink_create_conntrack
+ - tmux/prevFiles/prev_b26523_8fb796_window.c: window_pane_reset_mode
+ - linux/prevFiles/prev_4b3be6a_b71207e_sound#pci#ali5451#ali5451.c: snd_ali_free_voice
+ - linux/prevFiles/prev_cd7fcb_71320a_net#netfilter#nf_conntrack_core.c: init_conntrack
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_cd7fcb_71320a_net#netfilter#nf_conntrack_netlink.c: ctnetlink_new_conntrack
+ - gtk/prevFiles/prev_266866_c62a1f_gdk#x11#gdkwindow-x11.c: gdk_x11_window_get_shape
+*/
+
+// ---------------------------------------------

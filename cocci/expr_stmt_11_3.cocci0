@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = ompi_attr_create_keyval(COMM_ATTR, E1, E2, E3, E4,  OMPI_KEYVAL_F77 | OMPI_KEYVAL_F77_MPI1, NULL); 
++ E0 = ompi_attr_create_keyval(COMM_ATTR, E1, E2, E3, (void *)*E4,  OMPI_KEYVAL_F77 | OMPI_KEYVAL_F77_MPI1, NULL); 
+// Infered from: (ompi/{prevFiles/prev_0a24ea_fc8993_ompi#mpi#f77#keyval_create_f.c,revFiles/0a24ea_fc8993_ompi#mpi#f77#keyval_create_f.c}: mpi_keyval_create_f)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

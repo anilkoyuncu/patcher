@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef guint8;
+@@
+- E0 = proto_tree_add_ipv6(E1, hf_socks_ip6_dst, E2, E3, 0, E4->dst_addr.data); 
++ E0 = proto_tree_add_ipv6(E1, hf_socks_ip6_dst, E2, E3, 0,  (const  guint8 *)E4->dst_addr.data); 
+// Infered from: (wireshark/{prevFiles/prev_c3780c_494fe3_epan#dissectors#packet-socks.c,revFiles/c3780c_494fe3_epan#dissectors#packet-socks.c}: dissect_socks)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

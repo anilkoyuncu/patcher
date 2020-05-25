@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2, E3;
+typedef uint64_t;
+@@
+- if (E0 + (uint64_t )E1 > E2->fsize || E3[0] > 127)  
++ if (E0 * (E2->io_fsize > 0) + (uint64_t )E1 > E2->fsize || E3[0] > 127)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_27b7bf_500986_libavformat#avidec.c,revFiles/27b7bf_500986_libavformat#avidec.c}: avi_sync)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

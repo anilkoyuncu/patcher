@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (main_GetIntVariable(INPUT_DVD_SUBTITLE_VAR, 0) == ((E0->i_id & 0x1F00) >> 8))  
++ if (main_GetIntVariable(INPUT_DVD_SUBTITLE_VAR, -1) == ((E0->i_id & 0x1F00) >> 8))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_12d3f3_671e88_src#input#mpeg_system.c,revFiles/12d3f3_671e88_src#input#mpeg_system.c}: input_ParsePS)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

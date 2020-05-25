@@ -1,0 +1,10 @@
+@@
+identifier I1;
+expression E0, E2;
+@@
+- E0->I1 = ioremap(E2->start, E2->end - E2->start + 1); 
++ E0->I1 = ioremap(E2->start, resource_size(E2)); 
+// Infered from: (linux/{prevFiles/prev_72398e4_666cbe3_drivers#input#misc#cobalt_btns.c,revFiles/72398e4_666cbe3_drivers#input#misc#cobalt_btns.c}: cobalt_buttons_probe), (linux/{prevFiles/prev_8e2943_e4c830_drivers#spi#spi-ath79.c,revFiles/8e2943_e4c830_drivers#spi#spi-ath79.c}: ath79_spi_probe), (linux/{prevFiles/prev_6c724cb_6fae58f_drivers#staging#iio#adc#lpc32xx_adc.c,revFiles/6c724cb_6fae58f_drivers#staging#iio#adc#lpc32xx_adc.c}: lpc32xx_adc_probe), (linux/{prevFiles/prev_6a966e0_cfbeb59c_drivers#mmc#host#android-goldfish.c,revFiles/6a966e0_cfbeb59c_drivers#mmc#host#android-goldfish.c}: goldfish_mmc_probe), (linux/{prevFiles/prev_72398e4_666cbe3_drivers#input#serio#at32psif.c,revFiles/72398e4_666cbe3_drivers#input#serio#at32psif.c}: psif_probe)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

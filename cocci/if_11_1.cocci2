@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+@@
+- if (tvb_length_remaining(E0, E1) > 0)  
++ if (tvb_reported_length_remaining(E0, E1) > 0)  
+  {
+  ...
+- E1 += tvb_length_remaining(E0, E1); 
++ E1 += tvb_reported_length_remaining(E0, E1); 
+  }
+// Infered from: (wireshark/{prevFiles/prev_768e37b_77d2dc_epan#dissectors#packet-bt3ds.c,revFiles/768e37b_77d2dc_epan#dissectors#packet-bt3ds.c}: dissect_bt3ds)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

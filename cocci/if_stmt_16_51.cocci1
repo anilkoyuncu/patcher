@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == 1 && E1[0] > 0)  
++ if (E0 == 1 && E1[0] == E1[9] && E1[0] > 0)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_138-B-978293-978474.c,revFiles/138-B-978293-978474.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- avio_printf(E0->list_pb, "#EXT-X-MEDIA-SEQUENCE:%d\n", E0->list_count); 
++ avio_printf(E0->list_pb, "#EXT-X-MEDIA-SEQUENCE:%d\n", E0->segment_idx); 
+// Infered from: (FFmpeg/{prevFiles/prev_8b6aeb_5a1ac4_libavformat#segment.c,revFiles/8b6aeb_5a1ac4_libavformat#segment.c}: segment_list_open)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

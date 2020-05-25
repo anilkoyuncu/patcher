@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = getenv("GIT_EXTERNAL_DIFF"); 
++ E0 = xstrdup_or_null(getenv("GIT_EXTERNAL_DIFF")); 
+// Infered from: (git/{prevFiles/prev_6776a8_0d0ac3_diff.c,revFiles/6776a8_0d0ac3_diff.c}: external_diff)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

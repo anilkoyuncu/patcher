@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2, E3;
+typedef gint32;
+@@
+- E0 = libpcap_write_packet(libpcap_write_to_file, global_ld.pdh,  E1->ts.tv_sec, E1->ts.tv_usec, E1->caplen, E1->len,  E2, &global_ld.bytes_written, &E3); 
++ E0 = libpcap_write_packet(libpcap_write_to_file, global_ld.pdh,  E1->ts.tv_sec, (gint32 )E1->ts.tv_usec, E1->caplen,  E1->len, E2, &global_ld.bytes_written, &E3); 
+// Infered from: (wireshark/{prevFiles/prev_a1abe1_36f3b7_dumpcap.c,revFiles/a1abe1_36f3b7_dumpcap.c}: capture_loop_write_packet_cb)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.62
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gstreamer/prevFiles/prev_1a5018_245089_plugins#elements#gstqueue2.c: gst_queue2_open_temp_location_file
+ - gstreamer/prevFiles/prev_1a5018_245089_plugins#elements#gstqueue2.c: apply_buffer
+ - gstreamer/prevFiles/prev_1a5018_245089_plugins#elements#gstqueue2.c: apply_segment
+*/
+
+// ---------------------------------------------

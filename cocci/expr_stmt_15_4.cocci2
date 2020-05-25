@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef gint;
+@@
+- gint I0 = (gint )g_queue_pop_head(E1->action_queue); 
++ gint I0 = GPOINTER_TO_INT(g_queue_pop_head(E1->action_queue)); 
+// Infered from: (gtk/{prevFiles/prev_20f123_8831a4_modules#other#gail#gailbutton.c,revFiles/20f123_8831a4_modules#other#gail#gailbutton.c}: idle_do_action)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

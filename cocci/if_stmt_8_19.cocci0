@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 == (struct imf_field *)NULL)  
++ if (E0 == NULL)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_2d2109_43b089_epan#dissectors#packet-imf.c,revFiles/2d2109_43b089_epan#dissectors#packet-imf.c}: dissect_imf)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

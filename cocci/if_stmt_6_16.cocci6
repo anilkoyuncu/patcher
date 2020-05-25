@@ -1,0 +1,40 @@
+@@
+expression E0;
+@@
+- if (E0 >= E0 && E0 % 2 == 0)  
++ if (E0 >= 4 && E0 % 2 == 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_4-A-18258406-18258457.c,revFiles/4-A-18258406-18258457.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.41, Precision: 1.00
+// -- Node Change --
+// Recall: 0.31, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/17(41%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_550-D-12590078-12590244.c: main
+ - codeflaws/prevFiles/prev_485-A-14797884-14797928.c: main
+ - linux/prevFiles/prev_0d87116_1640bb5_drivers#hwmon#hwmon.c: hwmon_genattr
+ - tmux/prevFiles/prev_044c0f_3dc7b8_screen-write.c: screen_write_cell
+ - FFmpeg/prevFiles/prev_456f0c_02f12d_libavcodec#paf.c: paf_vid_decode
+ - cpython/prevFiles/prev_b64c2c_5d25f2_Objects#obmalloc.c: _Py_GetAllocatedBlocks
+ - codeflaws/prevFiles/prev_231-D-2317412-2317509.c: main
+ - FFmpeg/prevFiles/prev_985920_112017_libavformat#asfenc.c: asf_write_trailer
+ - tmux/prevFiles/prev_635194_65fc8e_screen-write.c: screen_write_cell
+ - openssh-portable/prevFiles/prev_e30cab_714e36_sftp-client.c: upload_dir_internal
+*/
+
+// ---------------------------------------------

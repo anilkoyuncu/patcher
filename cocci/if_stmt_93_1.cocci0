@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- RETVAL_STRINGL((char *)xmlOutputBufferGetContent(E0),  xmlOutputBufferGetSize(E0)); 
+// Infered from: (php-src/{prevFiles/prev_e7e608_8e2c90_ext#simplexml#simplexml.c,revFiles/e7e608_8e2c90_ext#simplexml#simplexml.c}: SXE_METHOD), (php-src/{prevFiles/prev_4ef793_01280f_ext#simplexml#simplexml.c,revFiles/4ef793_01280f_ext#simplexml#simplexml.c}: SXE_METHOD)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.08
+
+// ---------------------------------------------

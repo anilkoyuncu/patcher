@@ -1,0 +1,29 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- decode_rle(E0, E1 * 2, E1, E2 / 2, E3, E4 * 2, E5); 
++ decode_rle(E0, E1 * 2, E1, (E2 + 1) / 2, E3, E4 * 2, E5); 
+// Infered from: (FFmpeg/{prevFiles/prev_4ee976_68fcdb_libavcodec#dvdsubdec.c,revFiles/4ee976_68fcdb_libavcodec#dvdsubdec.c}: decode_dvd_subtitles)
+// False positives: (FFmpeg/revFiles/4ee976_68fcdb_libavcodec#dvdsubdec.c: decode_dvd_subtitles)
+// Recall: 0.06, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 14 rules):
+// -- Edit Location --
+// Recall: 0.87, Precision: 1.00
+// -- Node Change --
+// Recall: 0.89, Precision: 0.94
+// -- General --
+// Functions fully changed: 12/15(80%)
+
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_0a91d7_acf64b_ompi#mca#topo#treematch#treematch#tm_mapping.c: build_binding_constraints
+ - php-src/prevFiles/prev_fcacee_c86ba5_phpdbg_btree.c: phpdbg_btree_delete
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_4ee976_68fcdb_libavcodec#dvdsubdec.c: decode_dvd_subtitles
+*/
+
+// ---------------------------------------------

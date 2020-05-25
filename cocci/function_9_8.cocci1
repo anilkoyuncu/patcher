@@ -1,0 +1,11 @@
+@@
+@@
+- if (sizeof(long ) > 4)  
++ if (SIZEOF_ZEND_INT > 4)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_7cf682_637e9f_ext#standard#pack.c,revFiles/7cf682_637e9f_ext#standard#pack.c}: PHP_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

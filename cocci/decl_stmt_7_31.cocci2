@@ -1,0 +1,35 @@
+@@
+identifier I0;
+@@
+- struct tree_desc I0[3]; 
++ struct tree_desc I0[MAX_TREES]; 
+// Infered from: (git/{prevFiles/prev_f34f2b_79d722_builtin-read-tree.c,revFiles/f34f2b_79d722_builtin-read-tree.c}: cmd_read_tree)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.71, Precision: 0.56
+// -- Node Change --
+// Recall: 0.56, Precision: 0.56
+// -- General --
+// Functions fully changed: 4/11(36%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_f34f2b_79d722_builtin-read-tree.c: cmd_read_tree
+*/
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_6168d5_d88302_src#redis-cli.c: findBigKeys
+ - git/prevFiles/prev_f34f2b_79d722_builtin-read-tree.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - redis/prevFiles/prev_c38884_ef57f9_src#sentinel.c: sentinelSetClientName
+ - redis/prevFiles/prev_6168d5_d88302_src#redis-cli.c: statMode
+ - redis/prevFiles/prev_c38884_ef57f9_src#sentinel.c: sentinelSendSlaveOf
+ - redis/prevFiles/prev_c38884_ef57f9_src#sentinel.c: sentinelAskMasterStateToOtherSentinels
+*/
+
+// ---------------------------------------------

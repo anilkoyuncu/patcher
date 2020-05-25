@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (E0->restart_interval && (E0->restart_interval < 1350) && !--E0->restart_count)  
++ if (E0->restart_interval && !--E0->restart_count)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_47b5b0_cbd783_libavcodec#mjpegdec.c,revFiles/47b5b0_cbd783_libavcodec#mjpegdec.c}: mjpeg_decode_scan)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- for(E0 = 0;E0 < 64;E0 += 16)  
++ for(E0 = 0;E0 < 64;E0 += 4)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_de0b1b_90f671_target#arm#pauth_helper.c,revFiles/de0b1b_90f671_target#arm#pauth_helper.c}: pac_sub), (qemu/{prevFiles/prev_de0b1b_90f671_target#arm#pauth_helper.c,revFiles/de0b1b_90f671_target#arm#pauth_helper.c}: pac_inv_sub)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

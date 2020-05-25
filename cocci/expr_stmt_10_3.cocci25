@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- printf("0/%d", E0); 
++ printf("0/1"); 
+// Infered from: (codeflaws/{prevFiles/prev_337-B-6149542-6149706.c,revFiles/337-B-6149542-6149706.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

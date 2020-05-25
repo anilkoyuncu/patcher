@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0[E1] == E0[E2])  
++ if (E0[E1] == E0[E2] && E0[E1] != 0)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_291-A-9194241-9194245.c,revFiles/291-A-9194241-9194245.c}: main)
+// False positives: (codeflaws/revFiles/618-A-15693099-15693123.c: main)
+// Recall: 0.33, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 0.75
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_158-A-18237828-18237840.c: main
+ - codeflaws/prevFiles/prev_158-A-18164999-18165022.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - codeflaws/prevFiles/prev_618-A-15693099-15693123.c: main
+*/
+
+// ---------------------------------------------

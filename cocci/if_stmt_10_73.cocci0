@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 > 32)  
++ if (E0 > 32 || E0 > 3 * SMKTREE_BITS)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_2c69fc_50cbe0_libavcodec#smacker.c,revFiles/2c69fc_50cbe0_libavcodec#smacker.c}: smacker_decode_tree)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

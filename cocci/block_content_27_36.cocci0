@@ -1,0 +1,12 @@
+@@
+identifier I1, I2;
+expression E0, E3, E4, E5;
+@@
+- E0 = spprintf(&I1, 0, "[%s] mail() on [%s:%d]: To: %s -- Headers: %s\n", I2,  zend_get_executed_filename(TSRMLS_C),  zend_get_executed_lineno(TSRMLS_C), E3, E4 ? E4 :""); 
+- efree(E5); 
++ E0 = spprintf(&I1, 0, "[%s] mail() on [%s:%d]: To: %s -- Headers: %s\n",  I2->val, zend_get_executed_filename(TSRMLS_C),  zend_get_executed_lineno(TSRMLS_C), E3, E4 ? E4 :""); 
++ STR_FREE(I2); 
+// Infered from: (php-src/{prevFiles/prev_1aecda_ca146a6_ext#standard#mail.c,revFiles/1aecda_ca146a6_ext#standard#mail.c}: php_mail)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.57
+
+// ---------------------------------------------

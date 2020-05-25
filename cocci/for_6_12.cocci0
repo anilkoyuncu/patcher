@@ -1,0 +1,11 @@
+@@
+@@
+- for(i = 0;i < 100;i++)  
++ for(i = 0;i <= 10000;i++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_515-B-10257399-10257461.c,revFiles/515-B-10257399-10257461.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E2, E0, E1, E3;
+@@
+- if (!E0 && (E1 = av_opt_find(&E2, E3, NULL, 0,  AV_OPT_SEARCH_CHILDREN | AV_OPT_SEARCH_FAKE_OBJ)))  
++ if (!E0 && av_opt_find(&E2, E3, NULL, 0,  AV_OPT_SEARCH_CHILDREN | AV_OPT_SEARCH_FAKE_OBJ))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_aa4782_2ecf94_cmdutils.c,revFiles/aa4782_2ecf94_cmdutils.c}: opt_default), (FFmpeg/{prevFiles/prev_aa4782_2ecf94_cmdutils.c,revFiles/aa4782_2ecf94_cmdutils.c}: opt_default)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

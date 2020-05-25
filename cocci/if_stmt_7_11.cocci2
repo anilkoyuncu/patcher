@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (qio_channel_socket_dgram_sync(E0, E1->remote, E1->local, E2) < 0)  
++ if (qio_channel_socket_dgram_sync(E0, E1->local, E1->remote, E2) < 0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_150dcd_c9a19d_qemu-char.c,revFiles/150dcd_c9a19d_qemu-char.c}: qmp_chardev_open_udp)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!chroma_compatible(E0, E1->format.i_chroma) || E2->width > (int )E1->format.i_width || E2->height > (  int )E1->format.i_height)  
++ if (!chroma_compatible(E0, E1->format.i_chroma) || E2->width != (int )E1->format.i_visible_width || E2->height < (  int )E1->format.i_visible_height)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_603eca_6ae1fd_modules#codec#avcodec#video.c,revFiles/603eca_6ae1fd_modules#codec#avcodec#video.c}: lavc_CopyPicture)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

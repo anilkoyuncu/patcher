@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- vlc_ureduce(&E0, &E1, E2->fmt_in.video.i_sar_num, E2->fmt_in.video.i_sar_den); 
++ vlc_ureduce(&E0, &E1, E2->fmt_in.video.i_sar_num, E2->fmt_in.video.i_sar_den,  0); 
+// Infered from: (vlc/{prevFiles/prev_c5a60e_9ba508_modules#codec#x264.c,revFiles/c5a60e_9ba508_modules#codec#x264.c}: Open)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

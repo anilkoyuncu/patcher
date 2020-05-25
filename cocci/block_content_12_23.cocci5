@@ -1,0 +1,10 @@
+@@
+identifier I3;
+expression E0, E1, E2;
+@@
+- infof(E0->easy_handle, "STATE: %s => %s handle %p; (connection #%d) \n",  E1[E2], E1[E0->state], (char *)E0, I3); 
++ infof(E0->easy_handle, "STATE: %s => %s handle %p; (connection #%ld) \n",  E1[E2], E1[E0->state], (char *)E0, I3); 
+// Infered from: (curl/{prevFiles/prev_bb87b6_b0f6e7_lib#multi.c,revFiles/bb87b6_b0f6e7_lib#multi.c}: multistate)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

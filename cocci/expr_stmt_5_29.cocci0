@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0.VsrW(E1) = 0; 
++ E0.VsrD(E1) = 0; 
+// Infered from: (qemu/{prevFiles/prev_7fa0dd_63be02_target#ppc#int_helper.c,revFiles/7fa0dd_63be02_target#ppc#int_helper.c}: helper_vsum2sws)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

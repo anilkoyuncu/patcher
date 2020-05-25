@@ -1,0 +1,40 @@
+@@
+expression E0, E1;
+@@
+- E0 &= ~le32_to_cpu(0xff << BYTE_OFFSET(E1)); 
++ E0 &= ~le32_to_cpu((__le32)(0xff << BYTE_OFFSET(E1))); 
+// Infered from: (linux/{prevFiles/prev_c957d09_6da334_drivers#net#ethernet#broadcom#bnx2x#bnx2x_ethtool.c,revFiles/c957d09_6da334_drivers#net#ethernet#broadcom#bnx2x#bnx2x_ethtool.c}: bnx2x_nvram_write1)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.18, Precision: 1.00
+// -- Node Change --
+// Recall: 0.21, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/22(18%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_2468f6_820063_Modules#_randommodule.c: random_setstate
+ - openssl/prevFiles/prev_1e26a8_7c337e_crypto#cms#cms_dd.c: cms_DigestedData_do_final
+ - php-src/prevFiles/prev_81df62_06b5f1_ext#mbstring#mbregex.c: 
+ - php-src/prevFiles/prev_3bc864_17b2f3_ext#com_dotnet#com_iterator.c: com_iter_get_key
+ - php-src/prevFiles/prev_3bc864_17b2f3_ext#com_dotnet#com_iterator.c: com_iter_move_forwards
+ - libarchive/prevFiles/prev_d2d75e_82d66e_libarchive#archive_rb.c: __archive_rb_tree_iterate
+ - cpython/prevFiles/prev_929ab9_2c7242_Modules#_ctypes#cfield.c: get_ulong
+ - cpython/prevFiles/prev_929ab9_2c7242_Modules#_randommodule.c: random_setstate
+ - libarchive/prevFiles/prev_01580b_c477ed_libarchive#archive_rb.c: __archive_rb_tree_iterate
+ - cpython/prevFiles/prev_2468f6_820063_Modules#_ctypes#cfield.c: get_ulong
+ - cpython/prevFiles/prev_9cc2cf_3bef15_Modules#_ctypes#cfield.c: get_ulong
+ - openssl/prevFiles/prev_a0aa8b_2c059d_apps#s_client.c: psk_client_cb
+ - cpython/prevFiles/prev_9cc2cf_3bef15_Modules#_randommodule.c: random_setstate
+ - tcl/prevFiles/prev_402b20_3c0046_win#tclWinFile.c: TclNativeCreateNativeRep
+ - php-src/prevFiles/prev_81df62_06b5f1_ext#mbstring#mbregex.c: re_compile_pattern
+ - openssl/prevFiles/prev_1e26a8_7c337e_ssl#t1_lib.c: tls1_ec_curve_id2nid
+ - cpython/prevFiles/prev_b8584e_1a7aab_Python#pythonrun.c: maybe_pyc_file
+ - tcl/prevFiles/prev_251f50_c30ce8_generic#tclCompile.c: CompileSubstObj
+*/
+
+// ---------------------------------------------

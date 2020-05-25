@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+@@
+- for(int I0 = 0;E1->trackc;I0++)  
++ for(int I0 = 0;I0 < E1->trackc;I0++)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_79621a_75d96e_modules#stream_out#rtsp.c,revFiles/79621a_75d96e_modules#stream_out#rtsp.c}: RtspTrackAttach), (vlc/{prevFiles/prev_79621a_75d96e_modules#stream_out#rtsp.c,revFiles/79621a_75d96e_modules#stream_out#rtsp.c}: RtspTrackDetach)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

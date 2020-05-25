@@ -1,0 +1,37 @@
+@@
+expression E0;
+@@
+- if (E0->colorspace != E0->color_primaries || E0->colorspace != E0->color_trc)  
++ if (E0->colorspace != (int )E0->color_primaries || E0->colorspace != (  int )E0->color_trc)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_f6a8c7_9889b2_libavcodec#utils.c,revFiles/f6a8c7_9889b2_libavcodec#utils.c}: avcodec_string)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.56, Precision: 1.00
+// -- Node Change --
+// Recall: 0.54, Precision: 1.00
+// -- General --
+// Functions fully changed: 10/18(55%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_049e50_daca3d_Objects#bytesobject.c: _PyBytes_FromSize
+ - cpython/prevFiles/prev_0138c4_8bf5fe_Python#pystrhex.c: _Py_strhex_impl
+ - FFmpeg/prevFiles/prev_14fcf4_17209e_libavcodec#rv10.c: rv20_decode_picture_header
+ - codeflaws/prevFiles/prev_569-C-12461736-12461979.c: main
+ - vlc/prevFiles/prev_f3ad48_729cf5_modules#video_output#sdl.c: Manage
+ - vlc/prevFiles/prev_697264_c16bb9_modules#codec#cdg.c: DecodeScroll
+ - cpython/prevFiles/prev_049e50_daca3d_Modules#_codecsmodule.c: unicode_internal_encode
+*/
+
+// ---------------------------------------------

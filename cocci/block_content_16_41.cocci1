@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+typedef Py_UNICODE;
+@@
+  Py_UNICODE *I0 = E1->rec; 
+  ...
+- E1->rec = PyMem_Resize(E1->rec, Py_UNICODE , E1->rec_size); 
++ E1->rec = PyMem_Resize(I0, Py_UNICODE , E1->rec_size); 
+// Infered from: (cpython/{prevFiles/prev_17a332_399df5_Modules#_csv.c,revFiles/17a332_399df5_Modules#_csv.c}: join_check_rec_size)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

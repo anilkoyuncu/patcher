@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- fprintf(stderr, "%s ADDR_PARAM(%llu)\n", E0, E1->addr); 
+// Infered from: (php-src/{prevFiles/prev_3f3e340_781065_sapi#phpdbg#phpdbg_cmd.c,revFiles/3f3e340_781065_sapi#phpdbg#phpdbg_cmd.c}: phpdbg_param_debug)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

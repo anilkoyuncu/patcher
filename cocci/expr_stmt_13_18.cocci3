@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0 = ngx_pool_cleanup_add(E1->pool, sizeof(ngx_pool_cleanup_file_t)); 
++ E0 = ngx_pool_cleanup_add(E1->pool, 0); 
+// Infered from: (nginx/{prevFiles/prev_405f4f_3351fb_src#http#v2#ngx_http_v2.c,revFiles/405f4f_3351fb_src#http#v2#ngx_http_v2.c}: ngx_http_v2_init)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_d4d87d_0326b0_tests#unit#unit1604.c: getflagstr
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- asf_StreamSelect(&E0->asfh, var_CreateGetInteger(E1, "mms-maxbitrate"),  var_CreateGetBool(E1, "mms-all"),  var_CreateGetInteger(E1, "audio"),  var_CreateGetInteger(E1, "video")); 
++ asf_StreamSelect(&E0->asfh, var_CreateGetInteger(E1, "mms-maxbitrate"),  var_CreateGetBool(E1, "mms-all"),  var_CreateGetBool(E1, "audio"),  var_CreateGetBool(E1, "video")); 
+// Infered from: (vlc/{prevFiles/prev_42ef22_f5db1a_modules#access#mms#mmsh.c,revFiles/42ef22_f5db1a_modules#access#mms#mmsh.c}: Reset), (vlc/{prevFiles/prev_42ef22_f5db1a_modules#access#mms#mmsh.c,revFiles/42ef22_f5db1a_modules#access#mms#mmsh.c}: Describe)
+// False positives: (vlc/revFiles/103f5b_aceca99_modules#access#mms#mmstu.c: MMSOpen)
+// Recall: 0.31, Precision: 0.83, Matching recall: 0.83
+
+// ---------------------------------------------

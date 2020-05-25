@@ -1,0 +1,25 @@
+@@
+identifier I0;
+@@
+- if (I0)  
+- {
+- kbd_layout = init_keyboard_layout(name2keysym, keyboard_layout, &error_fatal); 
+- }
+// Infered from: (qemu/{prevFiles/prev_707f75_30f5a9_ui#input-barrier.c,revFiles/707f75_30f5a9_ui#input-barrier.c}: input_barrier_class_init)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.54, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_ea46cf_7ce77c_epan#dissectors#packet-h223.c: h223_init_protocol
+*/
+
+// ---------------------------------------------

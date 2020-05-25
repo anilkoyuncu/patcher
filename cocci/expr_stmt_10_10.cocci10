@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- stw_phys(E0 + offsetof(struct vmcb_seg , attrib),  (E1->flags >> 8) | ((E1->flags >> 12) & 0x0f00)); 
++ stw_phys(E0 + offsetof(struct vmcb_seg , attrib),  ((E1->flags >> 8) & 0xff) | ((E1->flags >> 12) & 0x0f00)); 
+// Infered from: (qemu/{prevFiles/prev_e72210_fa4fbf_target-i386#op_helper.c,revFiles/e72210_fa4fbf_target-i386#op_helper.c}: svm_save_seg)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

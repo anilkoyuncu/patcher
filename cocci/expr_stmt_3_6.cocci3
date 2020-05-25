@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef uint32_t;
+@@
+- E0 = ((uint32_t *)(E1[1]))[E2]; 
++ E0 = ((const  uint32_t *)(E1[1]))[E2]; 
+// Infered from: (FFmpeg/{prevFiles/prev_e922e3_145461_libswscale#swscale.c,revFiles/e922e3_145461_libswscale#swscale.c}: sws_scale)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

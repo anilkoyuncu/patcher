@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = E1->fdn_ndx = E1->fd; 
++ int I0 = E1->fde_ndx = E1->fd; 
+// Infered from: (lighttpd1.4/{prevFiles/prev_32a8f0_51a46f_src#fdevent_solaris_port.c,revFiles/32a8f0_51a46f_src#fdevent_solaris_port.c}: fdevent_solaris_port_event_set)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

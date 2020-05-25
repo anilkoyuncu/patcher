@@ -1,0 +1,33 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- if (E0)  
+- {
+  ...
+- }
+- if (!EVP_PKEY_keygen(E1, &E2) || !EVP_PKEY_keygen(E1, &E3) || !(E4 = EVP_PKEY_CTX_new(  E2, NULL)) || !EVP_PKEY_derive_init(  E4) || !EVP_PKEY_derive_set_peer(E4, E3) || !EVP_PKEY_derive(E4, NULL,  &E5) || E5 == 0 || E5 > MAX_ECDH_SIZE)  
+- {
+  ...
+- }
+// Infered from: (openssl/{prevFiles/prev_7e3ae2_df0822_apps#speed.c,revFiles/7e3ae2_df0822_apps#speed.c}: speed_main)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch applied partially:
+ - openssl/prevFiles/prev_7e3ae2_df0822_apps#speed.c: speed_main
+*/
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_3b2ae9_e8b640_gtk#gtktoolitemgroup.c: gtk_tool_item_group_settings_change_notify
+*/
+
+// ---------------------------------------------

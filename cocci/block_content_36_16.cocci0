@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+typedef gchar;
+@@
+- gchar *I0; 
+- E1 = capture_pcap_linktype_list(global_capture_opts.iface, &I0); 
++ gchar *error_string; 
++ E1 = capture_pcap_linktype_list(global_capture_opts.iface, &error_string); 
+// Infered from: (wireshark/{prevFiles/prev_7e9418_10ffd1_gtk#main.c,revFiles/7e9418_10ffd1_gtk#main.c}: main), (wireshark/{prevFiles/prev_4a1b06_7e9418_tshark.c,revFiles/4a1b06_7e9418_tshark.c}: main)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

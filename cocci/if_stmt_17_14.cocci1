@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- if (avio_read(E0, E1, VQA_PREAMBLE_SIZE) != VQA_PREAMBLE_SIZE)  
++ if (avio_read(E0, E1, VQA_PREAMBLE_SIZE) != VQA_PREAMBLE_SIZE)  
+  {
+- av_free (E2); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e31238_b226af_libavformat#westwood.c,revFiles/e31238_b226af_libavformat#westwood.c}: wsvqa_read_header)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

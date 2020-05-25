@@ -1,0 +1,35 @@
+@@
+identifier I0;
+expression E1;
+typedef Tcl_Mutex;
+@@
+  void Tcl_MutexUnlockAndFinalize(Tcl_Mutex *I0)  
+  {
+  ...
+- ForgetSyncObject(&E1, &mutexRecord); 
++ ForgetSyncObject(I0, &mutexRecord); 
+  ...
+  }
+// Infered from: (tcl/{prevFiles/prev_f8ae66_2ce0ed_generic#tclThread.c,revFiles/f8ae66_2ce0ed_generic#tclThread.c}: Tcl_MutexUnlockAndFinalize)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch applied partially:
+ - cpython/prevFiles/prev_19b55f_a2e268_Python#errors.c: PyErr_NormalizeException
+*/
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_582eb8_159999_read-cache.c: add_to_index
+ - ompi/prevFiles/prev_27dcca_b5aea7_opal#mca#pmix#base#pmix_base_fns.c: opal_pmix_base_commit_packed
+*/
+
+// ---------------------------------------------

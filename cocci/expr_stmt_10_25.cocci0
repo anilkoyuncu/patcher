@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- dctcoef_set(E0->mb + E1 * 256, E2, E3[E4],  dctcoef_get(E0->mb_luma_dc[E1], E2, E4)); 
++ dctcoef_set(E0->mb + (E1 * 256 << E2), E2, E3[E4],  dctcoef_get(E0->mb_luma_dc[E1], E2, E4)); 
+// Infered from: (FFmpeg/{prevFiles/prev_fdb531_61856d_libavcodec#h264.c,revFiles/fdb531_61856d_libavcodec#h264.c}: hl_decode_mb_predict_luma)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

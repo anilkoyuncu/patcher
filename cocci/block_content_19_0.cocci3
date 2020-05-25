@@ -1,0 +1,13 @@
+@@
+identifier I0;
+typedef gsize;
+@@
+- for(gsize I0 = 0;I0 < 40;I0 += 4)  
++ for(I0 = 0;I0 < 40;I0 += 4)  
+  {
+  ...
+  }
+// Infered from: (gstreamer/{prevFiles/prev_8a1f05_ee1bbe_tests#check#gst#gstevent.c,revFiles/8a1f05_ee1bbe_tests#check#gst#gstevent.c}: GST_START_TEST)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

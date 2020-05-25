@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- opal_output_verbose(20, USNIC_OUT,  "btl:usnic:filter_module: parsed %s device name: %s", E0,  E1->elts[E1->n_elt].if_name); 
++ opal_output_verbose(20, USNIC_OUT,  "btl:usnic:parse_ifex_str: parsed %s device name: %s",  E0, E1->elts[E1->n_elt].if_name); 
+// Infered from: (ompi/{prevFiles/prev_a220b9_955f3c_opal#mca#btl#usnic#btl_usnic_component.c,revFiles/a220b9_955f3c_opal#mca#btl#usnic#btl_usnic_component.c}: parse_ifex_str)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- snprintf(E0, sizeof(E0),  "video_size=%dx%d:pix_fmt=%d:time_base=%d/%d:pixel_aspect=%d/%d",  E1->width, E1->height, E1->pix_fmt, E2->video_st->time_base.num,  E2->video_st->time_base.den, E1->sample_aspect_ratio.num,  E1->sample_aspect_ratio.den); 
++ snprintf(E0, sizeof(E0),  "video_size=%dx%d:pix_fmt=%d:time_base=%d/%d:pixel_aspect=%d/%d",  E1->width, E1->height, E1->pix_fmt, E2->video_st->time_base.num,  E2->video_st->time_base.den, E1->sample_aspect_ratio.num,  FFMAX(E1->sample_aspect_ratio.den, 1)); 
+// Infered from: (FFmpeg/{prevFiles/prev_a63d72_bc077c_ffplay.c,revFiles/a63d72_bc077c_ffplay.c}: configure_video_filters)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,63 @@
+@@
+expression E0, E1;
+typedef u8;
+@@
+- E0 = (u8 *)E1->pfirmware; 
++ E0 = E1->pfirmware; 
+// Infered from: (linux/{prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8188ee#fw.c,revFiles/1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8188ee#fw.c}: rtl88e_download_fw), (linux/{prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8723com#fw_common.c,revFiles/1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8723com#fw_common.c}: rtl8723_download_fw)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.93, Precision: 0.46
+// -- Node Change --
+// Recall: 0.91, Precision: 0.38
+// -- General --
+// Functions fully changed: 21/58(36%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_c004de_103410_libavcodec#gifdec.c: gif_fill_rect
+ - vlc/prevFiles/prev_2d91e6_feaa55_modules#services_discovery#sap.c: Run
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_41ced61_12f2a4_drivers#net#ethernet#altera#altera_tse_main.c: altera_tse_mdio_read
+ - linux/prevFiles/prev_898699_9cb76aa_drivers#net#wireless#ath#carl9170#rx.c: carl9170_ba_check
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8723be#trx.c: _rtl8723be_query_rxphystatus
+ - linux/prevFiles/prev_e31926_29a6b6_net#atm#lec.c: lec_arp_clear_vccs
+ - vlc/prevFiles/prev_2d91e6_feaa55_modules#services_discovery#sap.c: Demux
+ - linux/prevFiles/prev_898699_9cb76aa_drivers#net#wireless#ath#carl9170#rx.c: carl9170_rx_copy_data
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8188ee#trx.c: _rtl88ee_query_rxphystatus
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rt2860#common#cmm_mac_pci.c: RadioOnExec
+ - linux/prevFiles/prev_e31926_29a6b6_net#atm#lec.c: lec_arp_expire_vcc
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8723ae#trx.c: rtl8723ae_tx_fill_cmddesc
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rt2860#common#cmm_mac_usb.c: NICInitRecv
+ - vlc/prevFiles/prev_2d91e6_feaa55_modules#services_discovery#sap.c: Close
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8188ee#trx.c: rtl88ee_tx_fill_cmddesc
+ - vlc/prevFiles/prev_2d91e6_feaa55_modules#services_discovery#sap.c: CreateAnnounce
+ - linux/prevFiles/prev_e31926_29a6b6_net#atm#lec.c: lec_arp_check_empties
+ - vlc/prevFiles/prev_2d91e6_feaa55_modules#services_discovery#sap.c: Open
+ - linux/prevFiles/prev_c2fd03_2c20889_drivers#net#appletalk#cops.c: cops_poll
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rt2860#common#cmm_mac_pci.c: PsPollWakeExec
+ - vlc/prevFiles/prev_2d91e6_feaa55_modules#services_discovery#sap.c: RemoveAnnounce
+ - linux/prevFiles/prev_e31926_29a6b6_net#mac80211#scan.c: ieee80211_rx_bss_free
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8723com#fw_common.c: rtl8723_fw_block_write
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rt2860#common#cmm_mac_usb.c: BeaconUpdateExec
+ - linux/prevFiles/prev_41ced61_12f2a4_drivers#net#ethernet#altera#altera_tse_main.c: altera_tse_mdio_write
+ - linux/prevFiles/prev_c2fd03_2c20889_drivers#net#appletalk#cops.c: cops_ioctl
+ - linux/prevFiles/prev_c2fd03_2c20889_drivers#net#appletalk#cops.c: cops_load
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rt2860#common#cmm_mac_usb.c: NICInitTransmit
+ - FFmpeg/prevFiles/prev_c004de_103410_libavcodec#gifdec.c: gif_fill
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8723be#trx.c: rtl8723be_is_tx_desc_closed
+ - linux/prevFiles/prev_e31926_29a6b6_net#atm#lec.c: lec_push
+ - linux/prevFiles/prev_e31926_29a6b6_net#atm#lec.c: lec_atm_send
+ - linux/prevFiles/prev_e31926_29a6b6_net#atm#lec.c: lec_atm_close
+ - linux/prevFiles/prev_898699_9cb76aa_drivers#net#wireless#ath#carl9170#rx.c: carl9170_find_ie
+ - vlc/prevFiles/prev_2d91e6_feaa55_modules#services_discovery#sap.c: OpenDemux
+ - linux/prevFiles/prev_324148_a05d08_drivers#staging#rt2860#common#cmm_mac_usb.c: RTMPFreeTxRxRingMemory
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8188ee#fw.c: _rtl88e_fw_block_write
+*/
+
+// ---------------------------------------------

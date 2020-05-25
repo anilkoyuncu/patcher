@@ -1,0 +1,8 @@
+@@
+@@
+- printf("%d %d %d", t, s, z); 
++ printf("%d %d", t, s); 
+// Infered from: (codeflaws/{prevFiles/prev_34-A-11354973-11354982.c,revFiles/34-A-11354973-11354982.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

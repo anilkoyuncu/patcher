@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+@@
+- E0[VAR_DAR] = E0[VAR_A] = (float )E1->w / E1->h; 
+- E0[VAR_SAR] = E1->sample_aspect_ratio.num ? (float )E1->sample_aspect_ratio.num / E1->sample_aspect_ratio.den :1; 
++ E0[VAR_DAR] = E0[VAR_A] = (double )E1->w / E1->h; 
++ E0[VAR_SAR] = E1->sample_aspect_ratio.num ? (double )E1->sample_aspect_ratio.num / E1->sample_aspect_ratio.den :1; 
+// Infered from: (FFmpeg/{prevFiles/prev_ba0417_c07d56a_libavfilter#vf_scale.c,revFiles/ba0417_c07d56a_libavfilter#vf_scale.c}: config_props)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_8e9efe_22b16e_libavformat#flvdec.c: flv_set_audio_codec
+*/
+
+// ---------------------------------------------

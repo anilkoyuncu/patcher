@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gtk_widget_set_sensitive(E0, TRUE); 
++ gtk_widget_set_sensitive(GTK_WIDGET(E0), TRUE); 
+// Infered from: (gtk/{prevFiles/prev_ac2696_3a9633_gtk#gtkprinteroptionwidget.c,revFiles/ac2696_3a9633_gtk#gtkprinteroptionwidget.c}: construct_widgets), (gtk/{prevFiles/prev_20dcd8_ea7bd0_gtk#gtkprinteroptionwidget.c,revFiles/20dcd8_ea7bd0_gtk#gtkprinteroptionwidget.c}: construct_widgets)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

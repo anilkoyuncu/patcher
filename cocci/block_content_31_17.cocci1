@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0.line_len = sizeof("HTTP/1.0 404 Not Found") + 1; 
++ E0.line_len = sizeof("HTTP/1.0 404 Not Found") - 1; 
+// Infered from: (php-src/{prevFiles/prev_daa190_1551f2_ext#phar#phar_object.c,revFiles/daa190_1551f2_ext#phar#phar_object.c}: phar_do_404), (php-src/{prevFiles/prev_032bbc_0a9143_ext#phar#phar_object.c,revFiles/032bbc_0a9143_ext#phar#phar_object.c}: phar_do_404)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

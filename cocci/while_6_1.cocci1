@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- while (!av_isspace(*E0))  
++ while (*E0 && !av_isspace(*E0))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_4f8608_94a4be_libavformat#http.c,revFiles/4f8608_94a4be_libavformat#http.c}: process_line), (FFmpeg/{prevFiles/prev_85f91e_a142ff_libavformat#http.c,revFiles/85f91e_a142ff_libavformat#http.c}: process_line)
+// False positives: (FFmpeg/revFiles/4f8608_94a4be_libavformat#http.c: process_line)
+// Recall: 0.18, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

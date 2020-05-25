@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef guint32;
+@@
+- long I0 = strtol(E1, NULL, 16); 
++ guint32 I0 = (guint32 )strtol(E1, NULL, 16); 
+// Infered from: (wireshark/{prevFiles/prev_09ea47_ecc29e_epan#dissectors#packet-bootp.c,revFiles/09ea47_ecc29e_epan#dissectors#packet-bootp.c}: dissect_vendor_tr111_suboption)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

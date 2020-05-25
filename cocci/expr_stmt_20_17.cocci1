@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- error_set(&E0->migration_blocker, QERR_VIRTFS_FEATURE_BLOCKS_MIGRATION,  E0->ctx.fs_root, E0->tag); 
++ error_set(&E0->migration_blocker, QERR_VIRTFS_FEATURE_BLOCKS_MIGRATION,  E0->ctx.fs_root ? E0->ctx.fs_root :"NULL", E0->tag); 
+// Infered from: (qemu/{prevFiles/prev_71f86c_2d4056_hw#9pfs#virtio-9p.c,revFiles/71f86c_2d4056_hw#9pfs#virtio-9p.c}: v9fs_attach)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

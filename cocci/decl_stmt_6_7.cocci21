@@ -1,0 +1,59 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (ompi_convertor_need_buffers(E0) || E1 < mca_btl_self.btl_max_send_size)  
++ if (ompi_convertor_need_buffers(E0) || E1 < mca_btl_self.btl_max_send_size || E2 != 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+- E3 = E2 +  E1; 
++ E3 = E1; 
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_3f396a_5f949b_ompi#mca#btl#self#btl_self.c,revFiles/3f396a_5f949b_ompi#mca#btl#self#btl_self.c}: mca_btl_self_prepare_src)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 22 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.77
+// -- Node Change --
+// Recall: 0.61, Precision: 0.74
+// -- General --
+// Functions fully changed: 21/43(48%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_f4e5e6_19b00c_libavcodec#vorbis_enc.c: window
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_a8f139_acf7b7_tcg#mips#tcg-target.c: tcg_out_qemu_ld_slow_path
+ - vlc/prevFiles/prev_9b0fc82_aa4464_modules#codec#kate.c: PostprocessTigerImage
+ - gtk/prevFiles/prev_e06044_7ce7e5_gtk#gtkwidgetfocus.c: tab_sort_func
+ - FFmpeg/prevFiles/prev_8f4c3e_7ec9c5_libavcodec#pngenc.c: apng_encode_frame
+ - FFmpeg/prevFiles/prev_0afa25_6a7980_libavcodec#hevc.c: hls_pcm_sample
+ - gtk/prevFiles/prev_dfff35_4c6721_gdk#quartz#gdkdisplay-quartz.c: gdk_quartz_display_init_input
+ - ompi/prevFiles/prev_3f396a_5f949b_ompi#mca#btl#self#btl_self.c: mca_btl_self_rdma
+ - FFmpeg/prevFiles/prev_be4ffb_c83ed1_libavfilter#vf_ass.c: 
+ - qemu/prevFiles/prev_a8f139_acf7b7_tcg#mips#tcg-target.c: tcg_out_qemu_st_slow_path
+ - FFmpeg/prevFiles/prev_85b745_32d023_libavcodec#hevc_parser.c: parse_nal_units
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_e41848_ef9e41_hw#riscv#sifive_plic.c: sifive_plic_write
+ - qemu/prevFiles/prev_e41848_ef9e41_hw#riscv#sifive_plic.c: sifive_plic_read
+ - vlc/prevFiles/prev_a54d62_ecedb2_src#misc#variables.c: TriggerCallback
+ - tcl/prevFiles/prev_7bcce3_efde63_win#tclWinConsole.c: WaitForRead
+ - tcl/prevFiles/prev_e9a6c3_bb70b1_win#tclWinConsole.c: WaitForRead
+ - openssh-portable/prevFiles/prev_550c05_55d06c_packet.c: ssh_packet_close_internal
+ - tcl/prevFiles/prev_e9a6c3_bb70b1_win#tclWinConsole.c: ConsoleReaderThread
+ - tcl/prevFiles/prev_7bcce3_efde63_win#tclWinConsole.c: ConsoleReaderThread
+ - FFmpeg/prevFiles/prev_b9df3f_53a374_libswresample#swresample.c: swr_convert
+*/
+
+// ---------------------------------------------

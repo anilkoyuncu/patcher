@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef gint8;
+@@
+- proto_item_append_text(E0->item_tag, ", Max :%d", tvb_get_guint8(E1, E2)); 
++ proto_item_append_text(E0->item_tag, ", Max: %d",  (gint8 )tvb_get_guint8(E1, E2)); 
+// Infered from: (wireshark/{prevFiles/prev_e08511_777b17_epan#dissectors#packet-ieee80211.c,revFiles/e08511_777b17_epan#dissectors#packet-ieee80211.c}: ieee80211_tag_power_capability)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

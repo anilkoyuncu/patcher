@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = E1 + 1;E0 > E2;E0--)  
++ for(E0 = E1;E0 > E2;E0--)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_d6b6ab_d342eb_hw#nvram#fw_cfg.c,revFiles/d6b6ab_d342eb_hw#nvram#fw_cfg.c}: fw_cfg_add_file_callback)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

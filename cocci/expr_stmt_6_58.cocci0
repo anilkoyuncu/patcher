@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef Tcl_WideInt;
+@@
+- E0 = (Tcl_WideInt )(E1.sec * 1000000 + E1.usec); 
++ E0 = ((Tcl_WideInt )E1.sec) * 1000000 + E1.usec; 
+// Infered from: (tcl/{prevFiles/prev_01e851_33772e_unix#tclUnixTime.c,revFiles/01e851_33772e_unix#tclUnixTime.c}: TclpGetWideClicks)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = proto_tree_add_item(E1, hf_status, E2, E3, 4, ENC_NA | ENC_ASCII); 
++ proto_tree_add_item(E1, hf_status, E2, E3, 4, ENC_NA | ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_1b210e_e009dc_epan#dissectors#packet-adb_cs.c,revFiles/1b210e_e009dc_epan#dissectors#packet-adb_cs.c}: dissect_adb_cs)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

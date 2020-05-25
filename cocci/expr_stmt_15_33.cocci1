@@ -1,0 +1,20 @@
+@@
+expression E0;
+typedef gchar;
+@@
+- fail_unless(gst_type_find_register(NULL, "foo/x-bar", GST_RANK_PRIMARY + 50,  foobar_typefind, E0, FOOBAR_CAPS, NULL,  NULL)); 
++ fail_unless(gst_type_find_register(NULL, "foo/x-bar", GST_RANK_PRIMARY + 50,  foobar_typefind, (gchar **)E0,  FOOBAR_CAPS, NULL, NULL)); 
+// Infered from: (gstreamer/{prevFiles/prev_0723c8_4ba031_tests#check#libs#typefindhelper.c,revFiles/0723c8_4ba031_tests#check#libs#typefindhelper.c}: GST_START_TEST)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

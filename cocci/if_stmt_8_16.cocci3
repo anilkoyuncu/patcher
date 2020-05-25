@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (a[E0 - E1])  
++ if (a[Nmax - E1])  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_406-B-6137247-6138024.c,revFiles/406-B-6137247-6138024.c}: main)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

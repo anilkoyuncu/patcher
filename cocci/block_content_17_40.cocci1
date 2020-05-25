@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- zend_unmangle_property_name(E0, E1 - 1, &E2, &E3); 
++ int mangled = zend_unmangle_property_name(E0, E1 - 1, &E2, &E3); 
+  ...
+- if (E2)  
++ if (E2 && mangled == SUCCESS)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_978dd0_2820e9_Zend#zend.c,revFiles/978dd0_2820e9_Zend#zend.c}: print_hash)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

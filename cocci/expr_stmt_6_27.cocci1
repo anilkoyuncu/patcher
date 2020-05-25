@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- fm10k_write_reg(E0, FM10K_RXQCTL(E1),  FM10K_RXQCTL_VF | (E2 << FM10K_RXQCTL_VF_SHIFT)); 
++ fm10k_write_reg(E0, FM10K_RXQCTL(E1),  (E2 << FM10K_RXQCTL_VF_SHIFT) | FM10K_RXQCTL_VF); 
+// Infered from: (linux/{prevFiles/prev_1aab14_265bee_drivers#net#ethernet#intel#fm10k#fm10k_pf.c,revFiles/1aab14_265bee_drivers#net#ethernet#intel#fm10k#fm10k_pf.c}: fm10k_iov_assign_resources_pf)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

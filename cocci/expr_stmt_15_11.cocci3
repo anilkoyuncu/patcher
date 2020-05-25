@@ -1,0 +1,11 @@
+@@
+identifier I1;
+expression E0, E2;
+@@
+- strcpy(E0->I1, E2); 
++ av_strlcpy(E0->I1, E2, sizeof(E0->I1)); 
+// Infered from: (FFmpeg/{prevFiles/prev_d5ef93_f1de23_libavformat#rtspdec.c,revFiles/d5ef93_f1de23_libavformat#rtspdec.c}: parse_command_line), (FFmpeg/{prevFiles/prev_4a7c0c_79e6e8_libavformat#http.c,revFiles/4a7c0c_79e6e8_libavformat#http.c}: process_line)
+// False positives: (qemu/revFiles/eba2af_95ce32_block.c: bdrv_open)
+// Recall: 0.36, Precision: 0.83, Matching recall: 0.83
+
+// ---------------------------------------------

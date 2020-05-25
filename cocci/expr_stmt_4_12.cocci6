@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 -= gtk_container_get_border_width(GTK_CONTAINER(E1)) + gtk_widget_get_style(  E1)->ythickness * 2; 
++ E0 -= (gtk_container_get_border_width(GTK_CONTAINER(E1)) + gtk_widget_get_style(  E1)->ythickness) * 2; 
+// Infered from: (gtk/{prevFiles/prev_90d9bf_f0039a_gtk#gtkmenu.c,revFiles/90d9bf_f0039a_gtk#gtkmenu.c}: get_menu_height)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

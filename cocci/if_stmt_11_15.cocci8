@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (verify_args.depth >= E0)  
++ if (verify_args.depth < 0 || verify_args.depth >= E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_780211_4af583_apps#s_cb.c,revFiles/780211_4af583_apps#s_cb.c}: verify_callback)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

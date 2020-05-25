@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- if (_cairo_surface_is_recording(E0->surface))  
++ if (E0->surface->type == CAIRO_SURFACE_TYPE_RECORDING)  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_90d50c_d69dd6_src#win32#cairo-win32-printing-surface.c,revFiles/90d50c_d69dd6_src#win32#cairo-win32-printing-surface.c}: _cairo_win32_printing_surface_analyze_operation)
+// False positives: (cairo/revFiles/90d50c_d69dd6_src#win32#cairo-win32-printing-surface.c: surface_pattern_supported)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 0.67, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_901e5ff_7e201e_gtk#gtkscrolledwindow.c: gtk_scrolled_window_measure
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_90d50c_d69dd6_src#win32#cairo-win32-printing-surface.c: surface_pattern_supported
+*/
+
+// ---------------------------------------------

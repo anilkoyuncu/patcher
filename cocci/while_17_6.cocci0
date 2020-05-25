@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (*E0 && !isdigit((int )*E0))  
++ while (*E0 && !isdigit(Py_CHARMASK(*E0)))  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_30b5c5_5d0ad5_Modules#_hotshot.c,revFiles/30b5c5_5d0ad5_Modules#_hotshot.c}: get_version_string)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

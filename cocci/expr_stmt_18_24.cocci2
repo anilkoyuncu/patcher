@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- E0 = (int *)malloc(E1->f_procs_per_group * sizeof(int )); 
++ E0 = (int *)calloc(E1->f_procs_per_group, sizeof(int )); 
+// Infered from: (ompi/{prevFiles/prev_a899c0_941d4f_ompi#mca#fcoll#static#fcoll_static_file_read_all.c,revFiles/a899c0_941d4f_ompi#mca#fcoll#static#fcoll_static_file_read_all.c}: mca_fcoll_static_file_read_all), (ompi/{prevFiles/prev_a899c0_941d4f_ompi#mca#fcoll#static#fcoll_static_file_read_all.c,revFiles/a899c0_941d4f_ompi#mca#fcoll#static#fcoll_static_file_read_all.c}: mca_fcoll_static_file_read_all)
+// False positives: (ompi/revFiles/a899c0_941d4f_ompi#mca#fcoll#static#fcoll_static_file_read_all.c: mca_fcoll_static_file_read_all)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_a899c0_941d4f_ompi#mca#fcoll#static#fcoll_static_file_read_all.c: mca_fcoll_static_file_read_all
+*/
+
+// ---------------------------------------------

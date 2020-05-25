@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- mxm_cleanup(ompi_mtl_mxm.mxm_context); 
+- E0 = NULL; 
+// Infered from: (ompi/{prevFiles/prev_e3c869_b360c9_ompi#mca#mtl#mxm#mtl_mxm.c,revFiles/e3c869_b360c9_ompi#mca#mtl#mxm#mtl_mxm.c}: ompi_mtl_mxm_finalize)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

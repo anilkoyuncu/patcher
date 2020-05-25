@@ -1,0 +1,9 @@
+@@
+expression E2, E0, E1;
+@@
+- E0 = spprintf(&E1, 12, "%ld", E2); 
++ E0 = spprintf(&E1, 0, "%ld", E2); 
+// Infered from: (php-src/{prevFiles/prev_4ebc03_c803ef_ext#standard#http.c,revFiles/4ebc03_c803ef_ext#standard#http.c}: php_url_encode_hash_ex), (php-src/{prevFiles/prev_4ebc03_c803ef_ext#standard#http.c,revFiles/4ebc03_c803ef_ext#standard#http.c}: php_url_encode_hash_ex), (php-src/{prevFiles/prev_4ebc03_c803ef_ext#standard#http.c,revFiles/4ebc03_c803ef_ext#standard#http.c}: php_url_encode_hash_ex), (php-src/{prevFiles/prev_0c8555_c2f893_ext#standard#http.c,revFiles/0c8555_c2f893_ext#standard#http.c}: php_url_encode_hash_ex), (php-src/{prevFiles/prev_0c8555_c2f893_ext#standard#http.c,revFiles/0c8555_c2f893_ext#standard#http.c}: php_url_encode_hash_ex), (php-src/{prevFiles/prev_0c8555_c2f893_ext#standard#http.c,revFiles/0c8555_c2f893_ext#standard#http.c}: php_url_encode_hash_ex), (php-src/{prevFiles/prev_8a37504_38ac30_ext#standard#http.c,revFiles/8a37504_38ac30_ext#standard#http.c}: php_url_encode_hash_ex), (php-src/{prevFiles/prev_8a37504_38ac30_ext#standard#http.c,revFiles/8a37504_38ac30_ext#standard#http.c}: php_url_encode_hash_ex), (php-src/{prevFiles/prev_8a37504_38ac30_ext#standard#http.c,revFiles/8a37504_38ac30_ext#standard#http.c}: php_url_encode_hash_ex)
+// Recall: 0.67, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

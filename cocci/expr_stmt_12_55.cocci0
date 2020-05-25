@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0[IENCODING].value = xstrndup(E1 + E2, E3 - E2); 
++ E0[IENCODING].value = xstrndup(E1 + E2 + 9, E3 - E2 - 9); 
+// Infered from: (git/{prevFiles/prev_6a5ea2_542e16_commit.c,revFiles/6a5ea2_542e16_commit.c}: format_commit_message)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

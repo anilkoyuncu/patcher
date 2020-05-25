@@ -1,0 +1,16 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->size = resource_size(E1); 
+- if (!devm_request_mem_region(&E2->dev, E1->start, E0->size, E2->name))  
++ E1 = platform_get_resource(E2, IORESOURCE_MEM, 0); 
++ if (IS_ERR(ds1511_base))  
+  {
+- return -EBUSY; 
++ return PTR_ERR(ds1511_base); 
+  }
+// Infered from: (linux/{prevFiles/prev_7c1d69_1735be_drivers#rtc#rtc-ds1511.c,revFiles/7c1d69_1735be_drivers#rtc#rtc-ds1511.c}: ds1511_rtc_probe)
+// False positives: (linux/revFiles/7c1d69_1735be_drivers#rtc#rtc-ds1511.c: ds1511_rtc_probe)
+// Recall: 0.07, Precision: 0.83, Matching recall: 0.45
+
+// ---------------------------------------------

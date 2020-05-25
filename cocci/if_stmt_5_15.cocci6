@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (*E0 >= 'A' && *E0 <= 'f')  
++ if (*E0 >= 'A' && *E0 <= 'F')  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_01f5b4_ff975d_libarchive#archive_write_set_format_iso9660.c,revFiles/01f5b4_ff975d_libarchive#archive_write_set_format_iso9660.c}: iso9660_options)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

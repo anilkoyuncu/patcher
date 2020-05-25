@@ -1,0 +1,30 @@
+@@
+expression E0, E1;
+@@
+- if (object_class_by_name(E0) == NULL)  
++ oc = cpu_class_by_name(TYPE_M68K_CPU, E0); 
++ if (oc == NULL)  
+  {
+  ...
+  }
+- E1 = M68K_CPU(object_new(E0)); 
++ E1 = M68K_CPU(object_new(object_class_get_name(oc))); 
+// Infered from: (qemu/{prevFiles/prev_bc5b2d_0e44a02_target-m68k#helper.c,revFiles/bc5b2d_0e44a02_target-m68k#helper.c}: cpu_m68k_init)
+// Recall: 0.42, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_bc5b2d_0e44a02_target-m68k#helper.c: cpu_m68k_init
+ - qemu/prevFiles/prev_d89e12_bd039c_target-unicore32#helper.c: uc32_cpu_init
+*/
+
+// ---------------------------------------------

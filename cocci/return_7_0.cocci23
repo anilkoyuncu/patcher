@@ -1,0 +1,41 @@
+@@
+expression E0;
+@@
+- if (!PyArg_ParseTuple(E0, "l:get_debug", &debug))  
++ if (!PyArg_ParseTuple(E0, "i:set_debug", &debug))  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_7760cf_4a5eb9_Modules#gcmodule.c,revFiles/7760cf_4a5eb9_Modules#gcmodule.c}: gc_set_debug)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 24 rules):
+// -- Edit Location --
+// Recall: 0.82, Precision: 0.79
+// -- Node Change --
+// Recall: 0.80, Precision: 0.81
+// -- General --
+// Functions fully changed: 27/40(67%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_9ce8e3_6ca130_Modules#socketmodule.c: socket_getaddrinfo
+ - cpython/prevFiles/prev_7660b8_9a644b_Objects#listobject.c: 
+ - cpython/prevFiles/prev_2c278e_fd4ff5_Mac#Python#macglue.c: PyMac_GetEventRecord
+ - git/prevFiles/prev_04a74b_06cb84_builtin#fast-export.c: handle_tag
+ - gstreamer/prevFiles/prev_c349a5_61a4a6_gst#gstelement.c: gst_element_state_get_name
+ - nginx/prevFiles/prev_1b4397_befc11_src#http#modules#ngx_http_log_module.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - nginx/prevFiles/prev_1b4397_befc11_src#http#modules#ngx_http_log_module.c: ngx_http_log_connection_requests
+ - cpython/prevFiles/prev_7760cf_4a5eb9_Modules#gcmodule.c: gc_get_debug
+ - cpython/prevFiles/prev_7760cf_4a5eb9_Modules#gcmodule.c: gc_isenabled
+ - cpython/prevFiles/prev_10c660_0e371f_Objects#abstract.c: PyObject_GetItem
+ - cpython/prevFiles/prev_10c660_0e371f_Objects#abstract.c: PyObject_DelItem
+ - cpython/prevFiles/prev_f0cab1_ec0d6f_Modules#socketmodule.c: makesockaddr
+ - cpython/prevFiles/prev_10c660_0e371f_Objects#abstract.c: PyObject_SetItem
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- es_out_Control(E0->out, ES_OUT_SET_NEXT_DISPLAY_TIME, E1->p_es,  E1->i_pts_start); 
++ es_out_Control(E0->out, ES_OUT_SET_NEXT_DISPLAY_TIME, E1->p_es,  E1->i_pts_start + E1->i_time_offset); 
+// Infered from: (vlc/{prevFiles/prev_069f26_b1cea0_modules#demux#flac.c,revFiles/069f26_b1cea0_modules#demux#flac.c}: ControlSetTime)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

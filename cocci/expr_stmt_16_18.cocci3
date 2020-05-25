@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- return tvb_get_string(wmem_packet_scope(), E0, E1 + 4, E2); 
++ return tvb_get_string_enc(wmem_packet_scope(), E0, E1 + 4, E2, ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-fcdns.c,revFiles/971ffd_421d81_epan#dissectors#packet-fcdns.c}: zonenm_to_str)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

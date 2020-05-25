@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;E0 < 255 && E1->index < E1->size_in_bits;E0++)  
++ for(E0 = 0;E0 < 255 && get_bits_count(E1) < E1->size_in_bits;E0++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_25be48_d00f8e_libavcodec#h263.c,revFiles/25be48_d00f8e_libavcodec#h263.c}: decode_user_data)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

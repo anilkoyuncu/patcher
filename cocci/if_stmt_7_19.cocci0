@@ -1,0 +1,11 @@
+@@
+@@
+- if (!(PHPDBG_G(flags) & PHPDBG_IS_INTERACTIVE))  
++ if (PHPDBG_G(flags) & PHPDBG_IS_INTERACTIVE)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_cf227d_e289dc_phpdbg.c,revFiles/cf227d_e289dc_phpdbg.c}: phpdbg_sigint_handler)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

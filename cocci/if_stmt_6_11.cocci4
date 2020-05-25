@@ -1,0 +1,48 @@
+@@
+expression E0, E1;
+@@
+- E0 = 1 << read_module_param(E1, 1, 63); 
++ E0 = 1ull << read_module_param(E1, 1, 63); 
+// Infered from: (ompi/{prevFiles/prev_b038eb_ceb319_opal#mca#btl#openib#btl_openib_component.c,revFiles/b038eb_ceb319_opal#mca#btl#openib#btl_openib_component.c}: calculate_max_reg), (ompi/{prevFiles/prev_b038eb_ceb319_opal#mca#btl#openib#btl_openib_component.c,revFiles/b038eb_ceb319_opal#mca#btl#openib#btl_openib_component.c}: calculate_max_reg), (ompi/{prevFiles/prev_b038eb_ceb319_opal#mca#btl#openib#btl_openib_component.c,revFiles/b038eb_ceb319_opal#mca#btl#openib#btl_openib_component.c}: calculate_max_reg)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.16, Precision: 1.00
+// -- Node Change --
+// Recall: 0.21, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/31(16%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_ed2510_0ea5de_epan#dissectors#packet-radius.c: dissect_radius
+ - wireshark/prevFiles/prev_9e7c7e_9315a4_epan#dissectors#packet-dcerpc.c: dissect_dcerpc_cn_resp
+ - vlc/prevFiles/prev_2b8674_95422a_modules#access#vdr.c: ImportMarks
+ - wireshark/prevFiles/prev_3037a8_e59bb0_epan#dissectors#packet-usb.c: dissect_linux_usb_common
+ - ompi/prevFiles/prev_b038eb_ceb319_opal#mca#btl#openib#btl_openib_component.c: handle_wc
+ - linux/prevFiles/prev_63a9c3_37d13c2_drivers#staging#rtl8723bs#os_dep#ioctl_cfg80211.c: cfg80211_rtw_scan
+ - FFmpeg/prevFiles/prev_cb65b3_6d55a4_libavformat#mp3enc.c: mp3_write_audio_packet
+ - linux/prevFiles/prev_0d0659_0fc251_arch#sparc#kernel#sun4d_irq.c: sun4d_free_irq
+ - wireshark/prevFiles/prev_ed2510_0ea5de_epan#dissectors#packet-mgcp.c: dissect_mgcp_firstline
+ - vlc/prevFiles/prev_6608e8_6b2fcb_modules#stream_filter#hds#hds.c: parse_Manifest
+ - linux/prevFiles/prev_ee3bd84_8a13449_drivers#crypto#chelsio#chcr_core.c: assign_chcr_device
+ - qemu/prevFiles/prev_6a7b2b_949055_qemu-char.c: qemu_chr_add_handlers_full
+ - wireshark/prevFiles/prev_e5be60_2a7bef_epan#dissectors#packet-radius.c: dissect_radius
+ - FFmpeg/prevFiles/prev_b97839_419800_libavformat#oggparsevorbis.c: ff_vorbis_comment
+ - wireshark/prevFiles/prev_de71f0_6f67da_epan#dissectors#packet-atm.c: dissect_reassembled_pdu
+ - wireshark/prevFiles/prev_43b089_ed2510_epan#dissectors#packet-dcm.c: dissect_dcm_pdv_fragmented
+ - linux/prevFiles/prev_2fa8e9_e2ab32_drivers#gpu#drm#vc4#vc4_crtc.c: vc4_get_clock_select
+ - linux/prevFiles/prev_622301_28bcb1_virt#kvm#eventfd.c: kvm_irqfd_assign
+ - linux/prevFiles/prev_5fba61_d1efa2_arch#powerpc#platforms#powermac#feature.c: set_initial_features
+ - FFmpeg/prevFiles/prev_cf410f_e9c580_ffmpeg.c: transcode_init
+ - FFmpeg/prevFiles/prev_8f3a96_1b539f_ffmpeg_filter.c: configure_filtergraph
+ - linux/prevFiles/prev_f70cb3_a4d935_fs#dlm#lowcomms.c: assoc2con
+ - FFmpeg/prevFiles/prev_a147c1_1ba0d9_libavformat#oggenc.c: ogg_write_header
+ - linux/prevFiles/prev_1c17a3_b4a90d_drivers#usb#gadget#function#rndis.c: rndis_free_response
+ - wireshark/prevFiles/prev_4545d7_8fa686_gtk#graph_analysis.c: dialog_graph_draw
+ - FFmpeg/prevFiles/prev_a91ced_1687fa_libavfilter#ebur128.c: ff_ebur128_relative_threshold
+*/
+
+// ---------------------------------------------

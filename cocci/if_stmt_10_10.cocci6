@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!strncmp(E0, E1, E2))  
++ if (!prefixcmp(E0, E1))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_cc44c7_cff030_builtin-unpack-objects.c,revFiles/cc44c7_cff030_builtin-unpack-objects.c}: cmd_unpack_objects), (git/{prevFiles/prev_cc44c7_cff030_builtin-read-tree.c,revFiles/cc44c7_cff030_builtin-read-tree.c}: cmd_read_tree), (git/{prevFiles/prev_1968d7_599065_builtin-rev-parse.c,revFiles/1968d7_599065_builtin-rev-parse.c}: cmd_rev_parse), (git/{prevFiles/prev_1968d7_599065_builtin-ls-tree.c,revFiles/1968d7_599065_builtin-ls-tree.c}: cmd_ls_tree), (git/{prevFiles/prev_1968d7_599065_revision.c,revFiles/1968d7_599065_revision.c}: setup_revisions)
+// False positives: (git/revFiles/12ba7e_bbca20_rev-list.c: main), (git/revFiles/5cdeae_acb725_revision.c: setup_revisions)
+// Recall: 0.35, Precision: 0.48, Matching recall: 0.89
+
+// ---------------------------------------------

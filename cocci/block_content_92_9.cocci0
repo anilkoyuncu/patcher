@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0 = OMPI_ERR_OUT_OF_RESOURCE; 
+- goto  clean; 
++ return OMPI_ERR_OUT_OF_RESOURCE; 
+// Infered from: (ompi/{prevFiles/prev_c08e23_8ba41a_ompi#mca#pml#bfo#pml_bfo.c,revFiles/c08e23_8ba41a_ompi#mca#pml#bfo#pml_bfo.c}: mca_pml_bfo_ft_event), (ompi/{prevFiles/prev_c08e23_8ba41a_ompi#mca#pml#bfo#pml_bfo.c,revFiles/c08e23_8ba41a_ompi#mca#pml#bfo#pml_bfo.c}: mca_pml_bfo_ft_event), (ompi/{prevFiles/prev_c08e23_8ba41a_ompi#mca#pml#ob1#pml_ob1.c,revFiles/c08e23_8ba41a_ompi#mca#pml#ob1#pml_ob1.c}: mca_pml_ob1_ft_event), (ompi/{prevFiles/prev_c08e23_8ba41a_ompi#mca#pml#ob1#pml_ob1.c,revFiles/c08e23_8ba41a_ompi#mca#pml#ob1#pml_ob1.c}: mca_pml_ob1_ft_event)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

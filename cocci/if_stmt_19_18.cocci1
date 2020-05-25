@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- strcpy(E0, E1->filename); 
++ if (av_strlcpy(E0, E1->filename, sizeof(E0)) >= sizeof(E0))  
++ {
++ return AVERROR(EINVAL); 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_35eeff_47b7c6_libavfilter#vf_signature.c,revFiles/35eeff_47b7c6_libavfilter#vf_signature.c}: export)
+// Recall: 0.23, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

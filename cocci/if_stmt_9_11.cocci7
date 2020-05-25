@@ -1,0 +1,14 @@
+@@
+identifier I1;
+binary operator B5 = {< ,!= };
+expression E0, E2, E4, E3;
+@@
+- if (request_irq(E0, &I1, E2, E3, E4) B5 0)  
++ if (request_irq(E0, I1, E2, E3, E4) B5 0)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_a0607f_2939e27_drivers#net#wan#sealevel.c,revFiles/a0607f_2939e27_drivers#net#wan#sealevel.c}: slvl_init), (linux/{prevFiles/prev_a0607f_2939e27_drivers#net#tokenring#ibmtr.c,revFiles/a0607f_2939e27_drivers#net#tokenring#ibmtr.c}: ibmtr_probe1), (linux/{prevFiles/prev_a0607f_2939e27_drivers#net#wan#hostess_sv11.c,revFiles/a0607f_2939e27_drivers#net#wan#hostess_sv11.c}: sv11_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

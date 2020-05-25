@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 >> 16)  
++ if ((E0 >> 16) & 1)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_e13951_0bbac6_disas.c,revFiles/e13951_0bbac6_disas.c}: target_disas)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

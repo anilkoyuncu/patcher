@@ -1,0 +1,14 @@
+@@
+binary operator B1 = {>= ,!= };
+expression E0;
+@@
+- while (E0 B1 0)  
++ while (E0 > 0)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_0d2271_5e6cc00_epan#dissectors#packet-gsm_abis_ip.c,revFiles/0d2271_5e6cc00_epan#dissectors#packet-gsm_abis_ip.c}: dissect_ipa_attr), (wireshark/{prevFiles/prev_0d2271_5e6cc00_epan#dissectors#packet-gsm_abis_ip.c,revFiles/0d2271_5e6cc00_epan#dissectors#packet-gsm_abis_ip.c}: dissect_abisip), (codeflaws/{prevFiles/prev_402-A-9220746-9220767.c,revFiles/402-A-9220746-9220767.c}: main), (FFmpeg/{prevFiles/prev_dc0ad4_edfa89_libavcodec#ac3dsp.c,revFiles/dc0ad4_edfa89_libavcodec#ac3dsp.c}: ac3_update_bap_counts_c)
+// False positives: (codeflaws/revFiles/13-A-14578265-14578281.c: main), (wireshark/revFiles/4275845_7a2770_pcap-util.c: get_interface_list)
+// Recall: 0.10, Precision: 0.62, Matching recall: 0.71
+
+// ---------------------------------------------

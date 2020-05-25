@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = vmdk_add_extent(E1, E2, true, E3, 0, 0, 0, 0, E3, &E4); 
++ E0 = vmdk_add_extent(E1, E2, true, E3, 0, 0, 0, 0, 0, &E4); 
+// Infered from: (qemu/{prevFiles/prev_301c7d_1f9db2_block#vmdk.c,revFiles/301c7d_1f9db2_block#vmdk.c}: vmdk_parse_extents)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

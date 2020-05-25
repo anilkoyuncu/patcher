@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- proto_tree_add_string(E0, &hfi_fcdns_rply_ownerid, E1, E2 + 1, 3,  fc_to_str(tvb_get_string(wmem_packet_scope(), E1,  E2 + 1, 3))); 
++ proto_tree_add_string(E0, &hfi_fcdns_rply_ownerid, E1, E2 + 1, 3,  fc_to_str(tvb_get_string_enc(wmem_packet_scope(  ), E1, E2 + 1, 3,  ENC_ASCII))); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-fcdns.c,revFiles/971ffd_421d81_epan#dissectors#packet-fcdns.c}: dissect_fcdns_swils_entries)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

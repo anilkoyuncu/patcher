@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- E0 = (float )strtod(E1->v, NULL); 
+// Infered from: (wireshark/{prevFiles/prev_4c9975_379a40_plugins#mate#mate_util.c,revFiles/4c9975_379a40_plugins#mate#mate_util.c}: match_avp)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

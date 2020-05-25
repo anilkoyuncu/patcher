@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = cmd_find_client(E1, NULL); 
++ E0 = cmd_find_client(E1, NULL, 1); 
+// Infered from: (tmux/{prevFiles/prev_bb8457_3eae71_cmd-pipe-pane.c,revFiles/bb8457_3eae71_cmd-pipe-pane.c}: cmd_pipe_pane_exec)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

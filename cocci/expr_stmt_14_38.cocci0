@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ZVAL_LONG(&E0->data, php_parse_date(E1, NULL)); 
++ ZVAL_LONG(&E0->data, php_parse_date(ZSTR_VAL(E1), NULL)); 
+// Infered from: (php-src/{prevFiles/prev_06c054_356b58_ext#wddx#wddx.c,revFiles/06c054_356b58_ext#wddx#wddx.c}: php_wddx_process_data)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

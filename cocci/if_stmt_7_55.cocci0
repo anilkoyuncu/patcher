@@ -1,0 +1,14 @@
+@@
+identifier I0 = {atomic_inc_return ,strcmp };
+expression list E1;
+expression E2;
+@@
+- if (!I0(E1) == E2)  
++ if (I0(E1) != E2)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_290d4c_5aaeab_drivers#staging#winbond#mds.c,revFiles/290d4c_5aaeab_drivers#staging#winbond#mds.c}: Mds_Tx), (gtk/{prevFiles/prev_0d57d2_f8961f_gtk#gtkbuilderparser.c,revFiles/0d57d2_f8961f_gtk#gtkbuilderparser.c}: subparser_end)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

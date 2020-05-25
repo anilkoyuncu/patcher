@@ -1,0 +1,27 @@
+@@
+identifier I0;
+@@
+- struct group *I0; 
++ struct passwd *I0; 
+// Infered from: (tcl/{prevFiles/prev_96e8b0_770ad9_unix#tclUnixCompat.c,revFiles/96e8b0_770ad9_unix#tclUnixCompat.c}: TclpGetPwNam), (tcl/{prevFiles/prev_96e8b0_770ad9_unix#tclUnixCompat.c,revFiles/96e8b0_770ad9_unix#tclUnixCompat.c}: TclpGetPwUid)
+// False positives: (tcl/revFiles/96e8b0_770ad9_unix#tclUnixCompat.c: TclpGetGrGid), (tcl/revFiles/96e8b0_770ad9_unix#tclUnixCompat.c: TclpGetGrNam)
+// Recall: 0.40, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.62
+// -- Node Change --
+// Recall: 1.00, Precision: 0.56
+// -- General --
+// Functions fully changed: 4/8(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - tcl/prevFiles/prev_96e8b0_770ad9_unix#tclUnixCompat.c: TclpGetGrGid
+ - curl/prevFiles/prev_920f77_013954_tests#server#util.c: logmsg
+ - tcl/prevFiles/prev_96e8b0_770ad9_unix#tclUnixCompat.c: TclpGetGrNam
+ - curl/prevFiles/prev_920f77_013954_tests#server#util.c: wait_ms
+*/
+
+// ---------------------------------------------

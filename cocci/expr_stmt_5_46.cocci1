@@ -1,0 +1,25 @@
+@@
+expression E0;
+@@
+- E0 = 8; 
++ E0 = 16 * 2; 
+// Infered from: (FFmpeg/{prevFiles/prev_e3201c_9870c0_libavcodec#utils.c,revFiles/e3201c_9870c0_libavcodec#utils.c}: avcodec_align_dimensions2)
+// False positives: (FFmpeg/revFiles/e3201c_9870c0_libavcodec#utils.c: avcodec_align_dimensions2)
+// Recall: 0.50, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.44
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_1f3358_92510b_target-i386#helper.c: helper_cpuid
+ - FFmpeg/prevFiles/prev_e3201c_9870c0_libavcodec#utils.c: avcodec_align_dimensions2
+*/
+
+// ---------------------------------------------

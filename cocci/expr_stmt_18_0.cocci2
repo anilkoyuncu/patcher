@@ -1,0 +1,19 @@
+@@
+expression E2, E0, E1;
+@@
+- E0 = (E0 << 8) + (E1 + E2 / 2) / E2; 
++ E0 = (E0 << 8) + DIV_ROUND_CLOSEST(E1, E2); 
+// Infered from: (linux/{prevFiles/prev_75b697f_166987_drivers#media#dvb#frontends#tda10021.c,revFiles/75b697f_166987_drivers#media#dvb#frontends#tda10021.c}: tda10021_set_symbolrate), (linux/{prevFiles/prev_75b697f_166987_drivers#media#dvb#frontends#ves1820.c,revFiles/75b697f_166987_drivers#media#dvb#frontends#ves1820.c}: ves1820_set_symbolrate)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 18/18(100%)
+
+
+// ---------------------------------------------

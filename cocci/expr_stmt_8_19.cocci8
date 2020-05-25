@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- av_fast_malloc(E0->pkt_swapped, &E0->pkt_swapped_allocated, E1); 
++ av_fast_padded_malloc(&E0->pkt_swapped, &E0->pkt_swapped_allocated, E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_4213fc_e55e09_libavcodec#svq1dec.c,revFiles/4213fc_e55e09_libavcodec#svq1dec.c}: svq1_decode_frame)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0 = {zend_binary_strncasecmp_l ,zend_binary_strncmp };
+expression E1, E2, E3, E4, E5, E6;
+typedef php_size_t;
+@@
+- RETURN_LONG(I0(E1 + E2, (E3 - E2), E4, E5, (php_size_t )E6)); 
++ RETURN_INT(I0(E1 + E2, (E3 - E2), E4, E5, (php_size_t )E6)); 
+// Infered from: (php-src/{prevFiles/prev_65f17d_28dbad_ext#standard#string.c,revFiles/65f17d_28dbad_ext#standard#string.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_65f17d_28dbad_ext#standard#string.c,revFiles/65f17d_28dbad_ext#standard#string.c}: PHP_FUNCTION)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+expression E0;
+@@
+- assert(!E0->is_empty_fill); 
+- if (_cairo_path_fixed_is_rectilinear_fill(E0))  
++ assert(!_cairo_path_fixed_fill_is_empty(E0)); 
++ if (_cairo_path_fixed_fill_is_rectilinear(E0))  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_330b34_5b2ed2_src#drm#cairo-drm-i965-surface.c,revFiles/330b34_5b2ed2_src#drm#cairo-drm-i965-surface.c}: i965_surface_fill)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

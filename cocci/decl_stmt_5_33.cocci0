@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef uint32_t;
+typedef uint8_t;
+@@
+- uint32_t *I0 = av_packet_get_side_data(E1, AV_PKT_DATA_SKIP_SAMPLES, &E2); 
++ const  uint8_t *I0 = av_packet_get_side_data(E1, AV_PKT_DATA_SKIP_SAMPLES,  &E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_23c918_cfcab4_libavcodec#aacdec.c,revFiles/23c918_cfcab4_libavcodec#aacdec.c}: aac_decode_frame_int)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

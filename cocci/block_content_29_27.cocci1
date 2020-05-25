@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = tvb_new_subset(E1, E2 / 8, -1, E3 / 8); 
++ E0 = tvb_new_subset(E1, E2 / 8, -1, E3); 
+// Infered from: (wireshark/{prevFiles/prev_8552f0_e67292_epan#dissectors#packet-mpeg-pes.c,revFiles/8552f0_e67292_epan#dissectors#packet-mpeg-pes.c}: dissect_mpeg_pes), (wireshark/{prevFiles/prev_8552f0_e67292_asn1#mpeg-pes#packet-mpeg-pes-template.c,revFiles/8552f0_e67292_asn1#mpeg-pes#packet-mpeg-pes-template.c}: dissect_mpeg_pes)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

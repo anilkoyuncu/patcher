@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0->in_cnt = E1; 
++ E0->in_cnt = (int )E1; 
+// Infered from: (libarchive/{prevFiles/prev_4f5459_6f00b2_libarchive#archive_read_support_filter_uu.c,revFiles/4f5459_6f00b2_libarchive#archive_read_support_filter_uu.c}: uudecode_filter_read)
+// False positives: (libarchive/revFiles/4f5459_6f00b2_libarchive#archive_read_support_filter_uu.c: uudecode_bidder_init), (libarchive/revFiles/4f5459_6f00b2_libarchive#archive_read_support_filter_uu.c: uudecode_filter_read)
+// Recall: 0.25, Precision: 0.33, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->initrd_size = load_image_targphys(E1->initrd_filename, E0->initrd_base,  0x10000000); 
++ E0->initrd_size = load_image_targphys(E1->initrd_filename, E0->initrd_base,  INITRD_MAX_SIZE); 
+// Infered from: (qemu/{prevFiles/prev_584ea7_b45b56_hw#ppc#pnv.c,revFiles/584ea7_b45b56_hw#ppc#pnv.c}: pnv_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

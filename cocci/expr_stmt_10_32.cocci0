@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- RETURN_LONG(inet_addr((*E0)->value.str.val)); 
++ RETURN_LONG(ntohl(inet_addr((*E0)->value.str.val))); 
+// Infered from: (php-src/{prevFiles/prev_65bb19_08c677_ext#standard#basic_functions.c,revFiles/65bb19_08c677_ext#standard#basic_functions.c}: PHP_FUNCTION)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

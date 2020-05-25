@@ -1,0 +1,13 @@
+@@
+expression E2, E0, E1, E3;
+@@
+- pread(E0, g2h(E1), E2, E3); 
++ if (pread(E0, g2h(E1), E2, E3) == -1)  
++ {
++ return -1; 
++ }
+// Infered from: (qemu/{prevFiles/prev_fb7e37_27e3dd_linux-user#mmap.c,revFiles/fb7e37_27e3dd_linux-user#mmap.c}: mmap_frag)
+// False positives: (qemu/revFiles/fb7e37_27e3dd_linux-user#mmap.c: target_mmap)
+// Recall: 0.33, Precision: 0.83, Matching recall: 0.83
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 < 0 || E0 > 0)  
++ if (E0 != 0)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_2838df_d28e3d_ext#readline#readline.c,revFiles/2838df_d28e3d_ext#readline#readline.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

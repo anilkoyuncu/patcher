@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return (!E0->sendleft && E0->cache && E0->nread_resp < E0->cache_size); 
++ return (!E0->sendleft && E0->cache && E0->nread_resp < E0->cache_size) ? TRUE :FALSE; 
+// Infered from: (curl/{prevFiles/prev_fa637c_036366_lib#pingpong.c,revFiles/fa637c_036366_lib#pingpong.c}: Curl_pp_moredata)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

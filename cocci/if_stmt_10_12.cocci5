@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((E0 == 0) && (E1 != NULL) && Tcl_ObjSetVar2(E2, E1, NULL,  Tcl_NewWideIntObj(E3),  TCL_LEAVE_ERR_MSG) == NULL)  
++ if ((E0 == 0) && (E1 != NULL) && Tcl_ObjSetVar2(E2, E1, NULL,  TclNewWideIntObjFromSize(  E3), TCL_LEAVE_ERR_MSG) == NULL)  
+  {
+  ...
+  }
+// Infered from: (tcl/{prevFiles/prev_7bd1fe_369172_generic#tclCmdMZ.c,revFiles/7bd1fe_369172_generic#tclCmdMZ.c}: StringIsCmd)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

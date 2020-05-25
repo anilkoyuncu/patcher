@@ -1,0 +1,23 @@
+@@
+@@
+- return S_IRUGO | S_IWUSR; 
++ return 0644; 
+// Infered from: (linux/{prevFiles/prev_5c06d5_7f9d05_drivers#hwmon#lm95241.c,revFiles/5c06d5_7f9d05_drivers#hwmon#lm95241.c}: lm95241_is_visible), (linux/{prevFiles/prev_51148a_5abcbc_drivers#hwmon#tmp102.c,revFiles/51148a_5abcbc_drivers#hwmon#tmp102.c}: tmp102_is_visible)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_51148a_5abcbc_drivers#hwmon#tmp102.c: tmp102_is_visible
+ - linux/prevFiles/prev_5c06d5_7f9d05_drivers#hwmon#lm95241.c: lm95241_is_visible
+*/
+
+// ---------------------------------------------

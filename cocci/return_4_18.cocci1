@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (sscanf(E0, "%u:%u.%u", &E1, &E2, &E3) == 3)  
++ if (sscanf(E0, "%u:%u.%u", &E1, &E2, &E3) == 3)  
+  {
+- return (E1 * 60 + E2) * 1000 + E3; 
++ return (E1 * 60LL + E2) * 1000LL + E3; 
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_99a520_1ea3c0_libavformat#webvttdec.c,revFiles/99a520_1ea3c0_libavformat#webvttdec.c}: read_ts)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

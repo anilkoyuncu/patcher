@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+typedef http_header;
+@@
+- E0 = (http_header *)E1; 
++ E0 = (http_header *)E1->data; 
+// Infered from: (lighttpd2/{prevFiles/prev_2ac5c5_5dde1f_src#http_headers.c,revFiles/2ac5c5_5dde1f_src#http_headers.c}: http_header_append), (lighttpd2/{prevFiles/prev_2ac5c5_5dde1f_src#http_headers.c,revFiles/2ac5c5_5dde1f_src#http_headers.c}: http_header_overwrite)
+// False positives: (lighttpd2/revFiles/2ac5c5_5dde1f_src#http_headers.c: http_header_find_first), (lighttpd2/revFiles/2ac5c5_5dde1f_src#http_headers.c: http_header_find_last), (lighttpd2/revFiles/2ac5c5_5dde1f_src#http_headers.c: http_header_find_next)
+// Recall: 0.07, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------

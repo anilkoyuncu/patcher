@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = Curl_GetFTPResponse(E1->firstsocket, E1->data->state.buffer, E1, NULL); 
++ E0 = Curl_GetFTPResponse(E1->data->state.buffer, E1, NULL); 
+// Infered from: (curl/{prevFiles/prev_09da2c_ae2ecf_lib#security.c,revFiles/09da2c_ae2ecf_lib#security.c}: Curl_sec_login), (curl/{prevFiles/prev_09da2c_ae2ecf_lib#krb4.c,revFiles/09da2c_ae2ecf_lib#krb4.c}: krb4_auth)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

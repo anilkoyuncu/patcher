@@ -1,0 +1,21 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = devm_kzalloc(&E1->dev, sizeof(*E0), GFP_KERNEL); 
++ E0 = devm_kzalloc(dev, sizeof(*E0), GFP_KERNEL); 
+  ...
+- E0->wdt_dev.parent = &E1->dev; 
+- watchdog_init_timeout(&E0->wdt_dev, timeout, &E1->dev); 
++ E0->wdt_dev.parent = dev; 
++ watchdog_init_timeout(&E0->wdt_dev, timeout, dev); 
+  ...
+- E2 = watchdog_register_device(&E0->wdt_dev); 
++ watchdog_stop_on_reboot(&E0->wdt_dev); 
++ E2 = devm_watchdog_register_device(dev, &E0->wdt_dev); 
+  ...
+- dev_info(&E1->dev, "Watchdog enabled (timeout=%d sec, nowayout=%d)\n",  E0->wdt_dev.timeout, nowayout); 
++ dev_info(dev, "Watchdog enabled (timeout=%d sec, nowayout=%d)\n",  E0->wdt_dev.timeout, nowayout); 
+// Infered from: (linux/{prevFiles/prev_a15f6e_615e40_drivers#watchdog#mtk_wdt.c,revFiles/a15f6e_615e40_drivers#watchdog#mtk_wdt.c}: mtk_wdt_probe)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.92
+
+// ---------------------------------------------

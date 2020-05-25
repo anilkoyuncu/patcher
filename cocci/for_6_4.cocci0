@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+@@
+- for(int I0 = 0;I0 < E1;I0++)  
++ for(size_t I0 = 0;I0 < E1;I0++)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_9b48c2_10d5d4_src#video_output#video_output.c,revFiles/9b48c2_10d5d4_src#video_output#video_output.c}: ThreadChangeFilters), (vlc/{prevFiles/prev_3d2049_979111_test#src#misc#epg.c,revFiles/3d2049_979111_test#src#misc#epg.c}: print_order)
+// False positives: (vlc/revFiles/31fef8_f901bb_modules#packetizer#mlp.c: SyncInfo), (vlc/revFiles/31fef8_f901bb_modules#packetizer#mlp.c: TrueHdChannels), (vlc/revFiles/4b7977_0b574d_src#libvlc.c: ListModules), (vlc/revFiles/654886_c465b5_modules#hw#mmal#deinterlace.c: create_picture_pool), (vlc/revFiles/9b48c2_10d5d4_src#video_output#video_output.c: ThreadChangeFilters), (vlc/revFiles/c8a17e_3800e5_modules#demux#asf#libasf.c: ASF_FreeObject_extended_stream_properties), (vlc/revFiles/c8a17e_3800e5_modules#demux#asf#libasf.c: ASF_ReadObjectRoot), (vlc/revFiles/c8a17e_3800e5_modules#demux#asf#libasf.c: ASF_ReadObject_extended_content_description), (vlc/revFiles/c8a17e_3800e5_modules#demux#asf#libasf.c: AsfObjectHelperReadString)
+// Recall: 0.26, Precision: 0.35, Matching recall: 0.64
+
+// ---------------------------------------------

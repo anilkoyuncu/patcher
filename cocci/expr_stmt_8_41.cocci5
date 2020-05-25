@@ -1,0 +1,9 @@
+@@
+@@
+- ORTE_TERMINATE(ORTE_ERROR_DEFAULT_EXIT_CODE); 
++ ORTE_TERMINATE(0); 
+// Infered from: (ompi/{prevFiles/prev_62c2ff_058452_orte#mca#errmgr#default_orted#errmgr_default_orted.c,revFiles/62c2ff_058452_orte#mca#errmgr#default_orted#errmgr_default_orted.c}: proc_errors)
+// False positives: (ompi/revFiles/62c2ff_058452_orte#mca#errmgr#default_orted#errmgr_default_orted.c: job_errors), (ompi/revFiles/62c2ff_058452_orte#mca#errmgr#default_orted#errmgr_default_orted.c: proc_errors)
+// Recall: 0.11, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

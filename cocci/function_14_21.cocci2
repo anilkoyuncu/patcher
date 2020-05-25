@@ -1,0 +1,7 @@
+@@
+@@
+- fprintf(stderr, "called\n"); 
+// Infered from: (curl/{prevFiles/prev_0a7215_3e6a35_src#main.c,revFiles/0a7215_3e6a35_src#main.c}: GetStr)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

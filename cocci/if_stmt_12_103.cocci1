@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (url_exist(E0))  
++ if (avio_check(E0, 0) == 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_55815e_59d969_ffmpeg.c,revFiles/55815e_59d969_ffmpeg.c}: opt_output_file)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,32 @@
+@@
+expression E0, E1;
+@@
+- if (atof(E0.psz_string) < 6)  
++ if (us_atof(E0.psz_string) < 6)  
+  {
+- E1->param.i_level_idc = (int )(10 * atof(E0.psz_string) + .5); 
++ E1->param.i_level_idc = (int )(10 * us_atof(E0.psz_string) + .5); 
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_48a3ce_a9b60a_modules#codec#x264.c,revFiles/48a3ce_a9b60a_modules#codec#x264.c}: Open)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.91, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_f4c547_a12001_arch#mn10300#kernel#irq.c: init_IRQ
+*/
+
+// ---------------------------------------------

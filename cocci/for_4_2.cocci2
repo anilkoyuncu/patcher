@@ -1,0 +1,38 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- struct thread_params I0[delta_search_threads]; 
+  ...
+- data_requester->list = E1; 
+- data_requester->list_size = E2; 
++ target = data_requester; 
++ target->list = E1; 
++ target->list_size = E2; 
+  ...
+- pthread_mutex_unlock(&data_request); 
+// Infered from: (git/{prevFiles/prev_b81d9a_367f4a_builtin-pack-objects.c,revFiles/b81d9a_367f4a_builtin-pack-objects.c}: ll_find_deltas)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.70
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.18, Precision: 1.00
+// -- Node Change --
+// Recall: 0.29, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/11(0%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_8d44d7_004160_opal#mca#hwloc#base#hwloc_base_util.c: opal_hwloc_get_sorted_numa_list
+ - git/prevFiles/prev_b81d9a_367f4a_builtin-pack-objects.c: ll_find_deltas
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_2fb240_a20254_libavcodec#ac3dec.c: ac3_decode_frame
+ - FFmpeg/prevFiles/prev_b45a31_e03077_libavcodec#ffv1.c: decode_frame
+ - FFmpeg/prevFiles/prev_460bec_075ebd_libavcodec#wmalosslessdec.c: lms_update
+*/
+
+// ---------------------------------------------

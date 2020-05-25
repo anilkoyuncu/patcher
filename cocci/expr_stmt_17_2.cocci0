@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gettimeofday(&E0, 0); 
++ E0 = tutil_tvnow(); 
+// Infered from: (curl/{prevFiles/prev_7c0cbc_076e1f_tests#libtest#lib1501.c,revFiles/7c0cbc_076e1f_tests#libtest#lib1501.c}: test), (curl/{prevFiles/prev_7c0cbc_076e1f_tests#libtest#lib582.c,revFiles/7c0cbc_076e1f_tests#libtest#lib582.c}: getMicroSecondTimeout)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

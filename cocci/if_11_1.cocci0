@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->param.analyse.f_psy_trellis = E1 ? atof(E1 + 1) :0; 
++ E0->param.analyse.f_psy_trellis = E1 ? us_atof(E1 + 1) :0; 
+// Infered from: (vlc/{prevFiles/prev_48a3ce_a9b60a_modules#codec#x264.c,revFiles/48a3ce_a9b60a_modules#codec#x264.c}: Open)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

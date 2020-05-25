@@ -1,0 +1,33 @@
+@@
+expression E0, E1;
+@@
+- E0 = -E1; 
++ E0 -= E1; 
+// Infered from: (openssl/{prevFiles/prev_44eff4_8b4520_ssl#d1_pkt.c,revFiles/44eff4_8b4520_ssl#d1_pkt.c}: satsub64be), (wireshark/{prevFiles/prev_4e4f1d_e82adf_epan#dissectors#packet-ieee1905.c,revFiles/4e4f1d_e82adf_epan#dissectors#packet-ieee1905.c}: dissect_beacon_metrics_response), (qemu/{prevFiles/prev_5d0248_bdd7e1_linux-user#arm#nwfpe#fpa11.c,revFiles/5d0248_bdd7e1_linux-user#arm#nwfpe#fpa11.c}: EmulateAll), (qemu/{prevFiles/prev_bdd7e1_f90554_hw#twl92230.c,revFiles/bdd7e1_f90554_hw#twl92230.c}: menelaus_rtc_stop), (wireshark/{prevFiles/prev_9a5521_07d078_epan#dissectors#packet-ieee802154.c,revFiles/9a5521_07d078_epan#dissectors#packet-ieee802154.c}: dissect_ieee802154_decrypt)
+// False positives: (openssl/revFiles/44eff4_8b4520_ssl#d1_pkt.c: dtls1_record_bitmap_update), (openssl/revFiles/44eff4_8b4520_ssl#d1_pkt.c: dtls1_record_replay_check), (wireshark/revFiles/d5055d_a33d27_epan#dissectors#packet-nas_eps.c: de_emm_ciph_key_data), (wireshark/revFiles/d5055d_a33d27_epan#dissectors#packet-nas_eps.c: disect_nas_eps_esm_msg), (wireshark/revFiles/d5055d_a33d27_epan#dissectors#packet-nas_eps.c: dissect_nas_eps_emm_msg), (wireshark/revFiles/d5055d_a33d27_epan#dissectors#packet-nas_eps.c: proto_register_nas_eps)
+// Recall: 0.57, Precision: 0.25, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 0.55
+// -- Node Change --
+// Recall: 0.86, Precision: 0.33
+// -- General --
+// Functions fully changed: 5/12(41%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_44eff4_8b4520_ssl#d1_pkt.c: satsub64be
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_44eff4_8b4520_ssl#d1_pkt.c: dtls1_record_bitmap_update
+ - wireshark/prevFiles/prev_d5055d_a33d27_epan#dissectors#packet-nas_eps.c: disect_nas_eps_esm_msg
+ - openssl/prevFiles/prev_44eff4_8b4520_ssl#d1_pkt.c: dtls1_record_replay_check
+ - wireshark/prevFiles/prev_d5055d_a33d27_epan#dissectors#packet-nas_eps.c: proto_register_nas_eps
+ - wireshark/prevFiles/prev_d5055d_a33d27_epan#dissectors#packet-nas_eps.c: de_emm_ciph_key_data
+ - wireshark/prevFiles/prev_d5055d_a33d27_epan#dissectors#packet-nas_eps.c: dissect_nas_eps_emm_msg
+*/
+
+// ---------------------------------------------

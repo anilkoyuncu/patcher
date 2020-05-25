@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef int64_t;
+@@
+- E0->start = E1->pts - E0->duration / av_q2d(E2->time_base); 
++ E0->start = E1->pts - (int64_t )(E0->duration / av_q2d(E2->time_base) + .5); 
+// Infered from: (FFmpeg/{prevFiles/prev_273fca_99a520_libavfilter#af_silencedetect.c,revFiles/273fca_99a520_libavfilter#af_silencedetect.c}: filter_samples)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

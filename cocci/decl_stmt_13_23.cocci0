@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- if (E0 == 7 || E0 == 8)  
+- {
+- return VLC_SUCCESS; 
+- }
+// Infered from: (vlc/{prevFiles/prev_fd7b89_b33d89_modules#stream_out#rtp.c,revFiles/fd7b89_b33d89_modules#stream_out#rtp.c}: rtp_packetize_h264_nal)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

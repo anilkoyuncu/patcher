@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+typedef gint;
+@@
+- return E0 - E1; 
++ return (gint )(E0 - E1); 
+// Infered from: (wireshark/{prevFiles/prev_832fc1_8647bb_gtk#conversations_table.c,revFiles/832fc1_8647bb_gtk#conversations_table.c}: ct_sort_column), (wireshark/{prevFiles/prev_832fc1_8647bb_gtk#hostlist_table.c,revFiles/832fc1_8647bb_gtk#hostlist_table.c}: hostlist_sort_column)
+// False positives: (curl/revFiles/bbefdf_06c96d_lib#cookie.c: cookie_sort)
+// Recall: 0.25, Precision: 0.83, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.89, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.94
+// -- General --
+// Functions fully changed: 7/9(77%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_bbefdf_06c96d_lib#cookie.c: Curl_cookie_getlist
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_bbefdf_06c96d_lib#cookie.c: cookie_sort
+*/
+
+// ---------------------------------------------

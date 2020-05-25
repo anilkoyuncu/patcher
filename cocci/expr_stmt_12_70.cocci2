@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- E0 = zmalloc(E1); 
++ E0 = zmalloc(sizeof(int ) * E1); 
+// Infered from: (redis/{prevFiles/prev_6e1b9b_b4b514_src#db.c,revFiles/6e1b9b_b4b514_src#db.c}: zunionInterGetKeys)
+// False positives: (redis/revFiles/6e1b9b_b4b514_src#db.c: getKeysUsingCommandTable)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.75
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - redis/prevFiles/prev_6e1b9b_b4b514_src#db.c: getKeysUsingCommandTable
+*/
+
+// ---------------------------------------------

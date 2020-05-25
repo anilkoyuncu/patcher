@@ -1,0 +1,46 @@
+@@
+identifier I0, I2;
+expression E1;
+typedef qemu_acl_entry;
+iterator name QTAILQ_FOREACH;
+iterator name QTAILQ_FOREACH_SAFE;
+@@
+- qemu_acl_entry *I0; 
+  ...
+- QTAILQ_FOREACH (I0, &E1->I2, next)  
++ QTAILQ_FOREACH_SAFE (I0, &E1->I2, next, next_entry)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_0ce6a4_acf839_acl.c,revFiles/0ce6a4_acf839_acl.c}: qemu_acl_reset)
+// False positives: (qemu/revFiles/0ce6a4_acf839_acl.c: qemu_acl_insert), (qemu/revFiles/0ce6a4_acf839_acl.c: qemu_acl_party_is_allowed), (qemu/revFiles/0ce6a4_acf839_acl.c: qemu_acl_remove)
+// Recall: 0.25, Precision: 0.25, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.29
+// -- Node Change --
+// Recall: 0.50, Precision: 0.29
+// -- General --
+// Functions fully changed: 0/8(0%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_d492a7_3b2fce_hw#ppc#spapr_events.c: spapr_clear_pending_events
+ - qemu/prevFiles/prev_0ce6a4_acf839_acl.c: qemu_acl_reset
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_77fa9a_a229c0_hw#usb#hcd-uhci.c: uhci_async_cancel_all
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_d492a7_3b2fce_hw#ppc#spapr_events.c: rtas_event_log_dequeue
+ - qemu/prevFiles/prev_0ce6a4_acf839_acl.c: qemu_acl_party_is_allowed
+ - qemu/prevFiles/prev_d492a7_3b2fce_hw#ppc#spapr_events.c: rtas_event_log_contains
+ - qemu/prevFiles/prev_0ce6a4_acf839_acl.c: qemu_acl_remove
+ - qemu/prevFiles/prev_0ce6a4_acf839_acl.c: qemu_acl_insert
+*/
+
+// ---------------------------------------------

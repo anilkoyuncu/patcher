@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- for(E0 = 1;E0 < 11;E0 = E0 + 2)  
++ for(E0 = 1;E0 <= 21;E0 = E0 + 2)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_475-A-9548233-9548277.c,revFiles/475-A-9548233-9548277.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

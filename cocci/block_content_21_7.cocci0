@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && (E0->procedure_hfs->len > E1))  
++ if (E0 && E0->procedure_hfs && (E0->procedure_hfs->len > E1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_8c7055_541bea_epan#dissectors#packet-rpc.c,revFiles/8c7055_541bea_epan#dissectors#packet-rpc.c}: dissect_rpc_message)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (E1->p_buffer[0] & 0xC0) >> 6; 
++ E0 = E1->p_buffer[0] >> 6; 
+// Infered from: (vlc/{prevFiles/prev_906a3b_54b1df_modules#access#udp.c,revFiles/906a3b_54b1df_modules#access#udp.c}: BlockChoose)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

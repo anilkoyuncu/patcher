@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (((E0->pc ^ E1) & TARGET_PAGE_MASK) != 0)  
++ if (((E0->tb->pc ^ E1) & TARGET_PAGE_MASK) != 0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_433d33_178ac1_target-xtensa#translate.c,revFiles/433d33_178ac1_target-xtensa#translate.c}: gen_jumpi), (qemu/{prevFiles/prev_433d33_178ac1_target-xtensa#translate.c,revFiles/433d33_178ac1_target-xtensa#translate.c}: gen_callwi)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

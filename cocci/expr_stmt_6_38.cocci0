@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0.flags = 0; 
++ E0.flags = UCP_MEM_MAP_ALLOCATE | UCP_MEM_MAP_FIXED; 
+// Infered from: (ompi/{prevFiles/prev_c9b5b1_c63137_oshmem#mca#sshmem#ucx#sshmem_ucx_module.c,revFiles/c9b5b1_c63137_oshmem#mca#sshmem#ucx#sshmem_ucx_module.c}: segment_create)
+// False positives: (qemu/revFiles/79b6f2_9b1786_target-i386#kvm.c: kvm_put_debugregs), (qemu/revFiles/79b6f2_9b1786_target-i386#kvm.c: kvm_put_vcpu_events), (qemu/revFiles/79b6f2_9b1786_target-i386#kvm.c: kvm_put_xcrs)
+// Recall: 0.33, Precision: 0.25, Matching recall: 0.50
+
+// ---------------------------------------------

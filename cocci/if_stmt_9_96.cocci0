@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 == E1 / 2 || E0 == E1 / 2 + 1 || E2 == E1 / 2 || E2 == E1 / 2 + 1)  
++ if ((E0 == E1 / 2 || E0 == E1 / 2 + 1) && (E2 == E1 / 2 || E2 == E1 / 2 + 1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_112-B-861875-861881.c,revFiles/112-B-861875-861881.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

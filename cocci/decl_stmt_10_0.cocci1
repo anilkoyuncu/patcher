@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_warn (&E0->dev, E1); 
++ dev_warn(dev, "failed to get IRQ from DT\n"); 
+// Infered from: (linux/{prevFiles/prev_dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c,revFiles/dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c}: sama5d4_wdt_probe)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.11
+
+// ---------------------------------------------

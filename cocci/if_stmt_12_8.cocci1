@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (!E0)  
++ if (!E0)  
+  {
+- CERROR(E1); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_2f27a3_04697f7_drivers#staging#lustre#lustre#obdclass#llog.c,revFiles/2f27a3_04697f7_drivers#staging#lustre#lustre#obdclass#llog.c}: llog_process_or_fork), (linux/{prevFiles/prev_2f27a3_04697f7_drivers#staging#lustre#lustre#libcfs#linux#linux-crypto.c,revFiles/2f27a3_04697f7_drivers#staging#lustre#lustre#libcfs#linux#linux-crypto.c}: cfs_crypto_test_hashes)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

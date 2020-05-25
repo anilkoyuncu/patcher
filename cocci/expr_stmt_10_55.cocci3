@@ -1,0 +1,18 @@
+@@
+@@
+- printf("%s %s\n", __progname, VERSION); 
++ printf("%s %s\n", getprogname(), VERSION); 
+// Infered from: (tmux/{prevFiles/prev_c10d83_a2e0db_tmux.c,revFiles/c10d83_a2e0db_tmux.c}: main)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

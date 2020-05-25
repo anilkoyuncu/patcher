@@ -1,0 +1,15 @@
+@@
+expression E0;
+@@
+- if (E0->callee_func->common.num_args == 0 && E0->callee_func->common.required_num_args == 0)  
+- {
+  ...
+- }
+- else
+- {
+  ...
+- }
+// Infered from: (php-src/{prevFiles/prev_62f339_6f9dfd_ext#opcache#Optimizer#zend_func_info.c,revFiles/62f339_6f9dfd_ext#opcache#Optimizer#zend_func_info.c}: zend_get_func_info), (php-src/{prevFiles/prev_31ce1c_209b12_ext#opcache#Optimizer#zend_func_info.c,revFiles/31ce1c_209b12_ext#opcache#Optimizer#zend_func_info.c}: zend_get_func_info)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.09
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 <<= 4; 
++ E0 *= 16; 
+// Infered from: (FFmpeg/{prevFiles/prev_fc2c42_38e79d9_libavcodec#mimic.c,revFiles/fc2c42_38e79d9_libavcodec#mimic.c}: vlc_decode_block)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- while ((avio_tell(E0) % E1->packet_size) != 0)  
++ while ((avio_tell(E0) % E1->packet_size) != 0 && !E0->eof_reached)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_6fa988_66879e_libavformat#ffmdec.c,revFiles/6fa988_66879e_libavformat#ffmdec.c}: ffm2_read_header), (FFmpeg/{prevFiles/prev_6fa988_66879e_libavformat#ffmdec.c,revFiles/6fa988_66879e_libavformat#ffmdec.c}: ffm_read_header)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

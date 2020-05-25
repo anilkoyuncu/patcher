@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (strcmp(tvb_get_string(wmem_packet_scope(), E0, 0, 2), ZEP_PREAMBLE))  
++ if (strcmp(tvb_get_string_enc(wmem_packet_scope(), E0, 0, 2, ENC_ASCII),  ZEP_PREAMBLE))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-zep.c,revFiles/971ffd_421d81_epan#dissectors#packet-zep.c}: dissect_zep)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

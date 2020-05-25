@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+typedef CPUState;
+@@
+  CPUState *I0; 
+  ...
+- cpu_reset (ENV_GET_CPU (E1)); 
++ cpu_reset(I0); 
+// Infered from: (qemu/{prevFiles/prev_0ac46a_f0ef1c_linux-user#main.c,revFiles/0ac46a_f0ef1c_linux-user#main.c}: main)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

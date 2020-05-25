@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- av_log(E0, AV_LOG_INFO, "R : %9s : %20s :", E1 ? E1 :"Unsupported",  E2.description); 
++ av_log(E0, AV_LOG_INFO, "Raw       : %9s : %20s :", E1 ? E1 :"Unsupported",  E2.description); 
+// Infered from: (FFmpeg/{prevFiles/prev_fce1650_1b325c_libavdevice#v4l2.c,revFiles/fce1650_1b325c_libavdevice#v4l2.c}: list_formats)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

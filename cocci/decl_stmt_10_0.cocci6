@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = devm_kzalloc(&E1->dev, sizeof(*E0), GFP_KERNEL); 
+  ...
+- E2 = irq_of_parse_and_map(E1->dev.of_node, 0); 
+  ...
+- E3 = of_sama5d4_wdt_init(E1->dev.of_node, E0); 
+  ...
+- watchdog_init_timeout(E4, wdt_timeout, &E1->dev); 
++ watchdog_init_timeout(E4, wdt_timeout, dev); 
+  ...
+- E3 = watchdog_register_device(E4); 
++ watchdog_stop_on_unregister(E4); 
++ E3 = devm_watchdog_register_device(dev, E4); 
+  ...
+- dev_info(&E1->dev, "initialized (timeout = %d sec, nowayout = %d)\n",  E4->timeout, nowayout); 
++ dev_info(dev, "initialized (timeout = %d sec, nowayout = %d)\n", E4->timeout,  nowayout); 
+// Infered from: (linux/{prevFiles/prev_dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c,revFiles/dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c}: sama5d4_wdt_probe)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.45
+
+// ---------------------------------------------

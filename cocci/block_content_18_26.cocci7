@@ -1,0 +1,24 @@
+@@
+identifier I0, I4;
+expression E1, E2, E3, E5;
+@@
+- if (I0 == 0)  
++ if (n_local == 0)  
+  {
+- proto_tree_add_text(E1, E2, E3, I4, "Number of pairs: %.*s", I4 - 1,  tvb_get_ptr(E2, E3, I4)); 
+- I0++; 
++ proto_tree_add_text(E1, E2, E3, sz_local, "Number of pairs: %.*s",  sz_local - 1, tvb_get_ptr(E2, E3, sz_local)); 
++ n_local++; 
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+- E5 -= (I4 + 1); 
++ E5 -= (sz_local + 1); 
+// Infered from: (wireshark/{prevFiles/prev_33af75_d897f4_epan#dissectors#packet-icq.c,revFiles/33af75_d897f4_epan#dissectors#packet-icq.c}: icqv5_decode_msgType)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

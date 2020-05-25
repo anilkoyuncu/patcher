@@ -1,0 +1,26 @@
+@@
+expression E0, E1;
+typedef zend_extension;
+@@
+- return strcmp(((zend_extension *)(*E0)->data)->name,  ((zend_extension *)(*E1)->data)->name); 
++ zend_extension *fe = (zend_extension *)(*E0)->data; 
++ zend_extension *se = (zend_extension *)(*E1)->data; 
++ return strcmp(fe->name, se->name); 
+// Infered from: (php-src/{prevFiles/prev_0cfb47_0ac514_sapi#cgi#cgi_main.c,revFiles/0cfb47_0ac514_sapi#cgi#cgi_main.c}: extension_name_cmp), (php-src/{prevFiles/prev_0cfb47_0ac514_sapi#cli#php_cli.c,revFiles/0cfb47_0ac514_sapi#cli#php_cli.c}: extension_name_cmp), (php-src/{prevFiles/prev_0cfb47_0ac514_sapi#fpm#fpm#fpm_main.c,revFiles/0cfb47_0ac514_sapi#fpm#fpm#fpm_main.c}: extension_name_cmp)
+// Recall: 0.55, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.82, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_0cfb47_0ac514_sapi#cli#php_cli.c: cli_register_file_handles
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 1;E1[E0] != '\0';E0++)  
++ for(E0 = 0;E1[E0] != '\0';E0++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_158-C-9815086-9815194.c,revFiles/158-C-9815086-9815194.c}: cd)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

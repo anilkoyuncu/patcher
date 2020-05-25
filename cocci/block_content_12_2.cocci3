@@ -1,0 +1,19 @@
+@@
+identifier I0;
+@@
+- static int I0 = 0; 
+- if (I0)  
++ static int cosmod_initialized = 0; 
++ if (cosmod_initialized)  
+  {
+- return; 
++ return; 
+  }
+  ...
+- I0 = 1; 
++ cosmod_initialized = 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavcodec#dca.c,revFiles/5e5348_f1cc49_libavcodec#dca.c}: pre_calc_cosmod)
+// False positives: (FFmpeg/revFiles/5e5348_f1cc49_libavcodec#qdm2.c: qdm2_init), (FFmpeg/revFiles/5e5348_f1cc49_libavcodec#utils.c: avcodec_init)
+// Recall: 0.22, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- E0 = create_dissector_handle(I1, I2); 
++ E0 = new_create_dissector_handle(I1, I2); 
+// Infered from: (wireshark/{prevFiles/prev_c6fc19_2e79d1_epan#dissectors#packet-sebek.c,revFiles/c6fc19_2e79d1_epan#dissectors#packet-sebek.c}: proto_reg_handoff_sebek), (wireshark/{prevFiles/prev_7437dc_3716b4_epan#dissectors#packet-enttec.c,revFiles/7437dc_3716b4_epan#dissectors#packet-enttec.c}: proto_reg_handoff_enttec), (wireshark/{prevFiles/prev_bcefa6_52ba0a_epan#dissectors#packet-srvloc.c,revFiles/bcefa6_52ba0a_epan#dissectors#packet-srvloc.c}: proto_reg_handoff_srvloc)
+// False positives: (wireshark/revFiles/47de3f_e919ec_epan#dissectors#packet-zebra.c: proto_reg_handoff_zebra), (wireshark/revFiles/5634cf_ba19f7_epan#dissectors#packet-bssap.c: proto_reg_handoff_bssap), (wireshark/revFiles/771999_01f88e_epan#dissectors#packet-tds.c: proto_reg_handoff_tds), (wireshark/revFiles/97ba22_bfd7c9_epan#dissectors#packet-fcp.c: proto_reg_handoff_fcp), (wireshark/revFiles/98305b_ebc01b_epan#dissectors#packet-ieee80211.c: proto_reg_handoff_ieee80211), (wireshark/revFiles/bcefa6_52ba0a_epan#dissectors#packet-srvloc.c: proto_reg_handoff_srvloc)
+// Recall: 0.06, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------

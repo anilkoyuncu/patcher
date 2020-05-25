@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E0 + p[E1]; 
++ E0 = (E0 + p[E1]) % MOD; 
+// Infered from: (codeflaws/{prevFiles/prev_327-C-4099318-4099362.c,revFiles/327-C-4099318-4099362.c}: main)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return aprintf("%s:%d", E0, E1->port); 
++ return aprintf("%s:%ld", E0, E1->port); 
+// Infered from: (curl/{prevFiles/prev_ddedc1_f45de0_lib#conncache.c,revFiles/ddedc1_f45de0_lib#conncache.c}: hashkey)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

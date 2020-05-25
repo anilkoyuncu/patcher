@@ -1,0 +1,20 @@
+@@
+expression E0, E1;
+@@
+- irq_set_chained_handler(E0, intc_redirect_irq); 
+- irq_set_handler_data(E0, (void *)E1); 
++ irq_set_chained_handler_and_data(E0, intc_redirect_irq, (void *)E1); 
+// Infered from: (linux/{prevFiles/prev_51b971b_beab99_drivers#sh#intc#core.c,revFiles/51b971b_beab99_drivers#sh#intc#core.c}: register_intc_controller)
+// Recall: 0.16, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

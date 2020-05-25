@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->alpha &= E1->flags & AV_PIX_FMT_FLAG_ALPHA; 
++ E0->alpha &= !!(E1->flags & AV_PIX_FMT_FLAG_ALPHA); 
+// Infered from: (FFmpeg/{prevFiles/prev_a3d62f_af1257_libavfilter#vf_fade.c,revFiles/a3d62f_af1257_libavfilter#vf_fade.c}: config_props)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

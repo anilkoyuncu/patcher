@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (vlc_object_waitpipe(E0) == -1)  
++ if (vlc_object_waitpipe(VLC_OBJECT(E0)) == -1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_e59bea_77ca78_src#network#httpd.c,revFiles/e59bea_77ca78_src#network#httpd.c}: httpd_TLSHostNew)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

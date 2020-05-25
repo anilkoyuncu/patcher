@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- object_initialize(&E0->cpu, sizeof(E0->cpu), TYPE_MICROBLAZE_CPU); 
+- object_property_add_child(E1, "pmu-cpu", OBJECT(&E0->cpu), &error_abort); 
+- object_initialize(&E0->intc, sizeof(E0->intc), TYPE_XLNX_PMU_IO_INTC); 
+- qdev_set_parent_bus(DEVICE(&E0->intc), sysbus_get_default()); 
++ object_initialize_child(E1, "pmu-cpu", &E0->cpu, sizeof(E0->cpu),  TYPE_MICROBLAZE_CPU, &error_abort, NULL); 
++ sysbus_init_child_obj(E1, "intc", &E0->intc, sizeof(E0->intc),  TYPE_XLNX_PMU_IO_INTC); 
+// Infered from: (qemu/{prevFiles/prev_7b6d7b_55b1f1_hw#microblaze#xlnx-zynqmp-pmu.c,revFiles/7b6d7b_55b1f1_hw#microblaze#xlnx-zynqmp-pmu.c}: xlnx_zynqmp_pmu_soc_init)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

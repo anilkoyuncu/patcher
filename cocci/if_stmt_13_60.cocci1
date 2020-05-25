@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (!fgets(*E0 + E1, *E2 - E1, E3))  
++ if (!fgets(*E0 + E1, (int )(*E2 - E1), E3))  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_f1aa93_a5ba25_ares#ares__read_line.c,revFiles/f1aa93_a5ba25_ares#ares__read_line.c}: ares__read_line)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

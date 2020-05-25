@@ -1,0 +1,8 @@
+@@
+@@
+- proto_gtpprime = proto_register_protocol_in_name_only("GPRS Tunneling Protocol Prime",  "GTP (Prime)",  "gtpprime", proto_gtp,  FT_PROTOCOL); 
++ proto_gtpprime = proto_register_protocol("GPRS Tunneling Protocol Prime",  "GTP (Prime)", "gtpprime"); 
+// Infered from: (wireshark/{prevFiles/prev_a0eb34_e60319_epan#dissectors#packet-gtp.c,revFiles/a0eb34_e60319_epan#dissectors#packet-gtp.c}: proto_register_gtp)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

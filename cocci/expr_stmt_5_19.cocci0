@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->desegment_len = E1 - E2; 
++ E0->desegment_len = DESEGMENT_ONE_MORE_SEGMENT; 
+// Infered from: (wireshark/{prevFiles/prev_cc6fc2_28ef67_epan#dissectors#packet-ssl.c,revFiles/cc6fc2_28ef67_epan#dissectors#packet-ssl.c}: dissect_ssl2_record)
+// False positives: (wireshark/revFiles/cc6fc2_28ef67_epan#dissectors#packet-ssl.c: dissect_ssl2_record)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

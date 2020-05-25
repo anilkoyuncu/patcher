@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef rsvp_conversation_info;
+@@
+- const  rsvp_conversation_info *I0 = (rsvp_conversation_info *)E1; 
++ const  rsvp_conversation_info *I0 = (const  rsvp_conversation_info *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#conversations_rsvp.c,revFiles/3ae2e5_8aebe1_ui#gtk#conversations_rsvp.c}: rsvp_conversation_packet), (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#hostlist_rsvp.c,revFiles/3ae2e5_8aebe1_ui#gtk#hostlist_rsvp.c}: rsvp_hostlist_packet)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

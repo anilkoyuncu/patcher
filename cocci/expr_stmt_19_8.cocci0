@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- DPRINTF("%s(%04x:%02x:%02x.%x, msi%s)\n", __func__, E0->host.domain,  E0->host.bus, E0->host.slot, E0->host.function, msix ? "x" :""); 
++ DPRINTF("%s(%04x:%02x:%02x.%x)\n", __func__, E0->host.domain, E0->host.bus,  E0->host.slot, E0->host.function); 
+// Infered from: (qemu/{prevFiles/prev_a011b1_141496_hw#vfio_pci.c,revFiles/a011b1_141496_hw#vfio_pci.c}: vfio_disable_msix)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

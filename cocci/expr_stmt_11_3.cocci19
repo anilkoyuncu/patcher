@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- async_read_internal(E0, NULL, E1 - E2->logical_pos, 1, fifo_do_not_copy_func); 
++ async_read_internal(E0, NULL, (int )(E1 - E2->logical_pos), 1,  fifo_do_not_copy_func); 
+// Infered from: (FFmpeg/{prevFiles/prev_b821ae_1964ae_libavformat#async.c,revFiles/b821ae_1964ae_libavformat#async.c}: async_seek)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

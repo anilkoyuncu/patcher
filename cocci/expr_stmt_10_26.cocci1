@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- printf("%d\n", tab[E0][E1][0] + tab[E0][E1][1]); 
++ printf("%d\n", (tab[E0][E1][0] + tab[E0][E1][1]) % 100000000); 
+// Infered from: (codeflaws/{prevFiles/prev_118-D-989663-989669.c,revFiles/118-D-989663-989669.c}: main)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

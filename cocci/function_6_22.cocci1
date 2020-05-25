@@ -1,0 +1,29 @@
+@@
+expression E0;
+typedef filter_sys_t;
+@@
+- free(E0->p_sys->p_at); 
++ filter_sys_t *p_sys = E0->p_sys; 
++ free(p_sys->p_at); 
+// Infered from: (vlc/{prevFiles/prev_98f134_c73675_modules#video_filter#bluescreen.c,revFiles/98f134_c73675_modules#video_filter#bluescreen.c}: Destroy)
+// Recall: 0.27, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.45, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_98f134_c73675_modules#video_filter#bluescreen.c: Destroy
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_6d8f98_7d1bbc_libavformat#utils.c: av_write_frame
+*/
+
+// ---------------------------------------------

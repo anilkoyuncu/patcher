@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+typedef GdkEvent;
+@@
+- E0 = gtk_get_event_widget((GdkEvent *)E1); 
++ E0 = gtk_get_event_target(E1); 
+// Infered from: (gtk/{prevFiles/prev_33162e_a89e88_gtk#gtkwindow.c,revFiles/33162e_a89e88_gtk#gtkwindow.c}: drag_gesture_update_cb)
+// False positives: (gtk/revFiles/33162e_a89e88_gtk#gtkwindow.c: multipress_gesture_pressed_cb)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_33162e_a89e88_gtk#gtkwindow.c: multipress_gesture_pressed_cb
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (E0 !=  E1)  
++ if (strcmp(E0, E1) !=  0)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_867a794_549bba_ext#xmlrpc#xmlrpc-epi-php.c,revFiles/867a794_549bba_ext#xmlrpc#xmlrpc-epi-php.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_e13d01_2f2fb60_ext#xmlrpc#xmlrpc-epi-php.c,revFiles/e13d01_2f2fb60_ext#xmlrpc#xmlrpc-epi-php.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/867a794_549bba_ext#xmlrpc#xmlrpc-epi-php.c: PHP_FUNCTION), (php-src/revFiles/e13d01_2f2fb60_ext#xmlrpc#xmlrpc-epi-php.c: PHP_FUNCTION)
+// Recall: 0.67, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

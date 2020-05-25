@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+typedef curl_context_t;
+@@
+- E0 = (curl_context_t *)E1; 
++ E0 = (curl_context_t *)E1->data; 
+// Infered from: (curl/{prevFiles/prev_50ef91_62a809_docs#examples#multi-uv.c,revFiles/50ef91_62a809_docs#examples#multi-uv.c}: curl_perform)
+// False positives: (curl/revFiles/50ef91_62a809_docs#examples#multi-uv.c: create_curl_context), (curl/revFiles/50ef91_62a809_docs#examples#multi-uv.c: handle_socket)
+// Recall: 0.03, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,26 @@
+@@
+expression E0, E1;
+@@
+- es_format_Init(&E0->fmt, VIDEO_ES, E1->i_handler); 
++ es_format_Init(&E0->fmt, VIDEO_ES,  AVI_FourccGetCodec(VIDEO_ES, E1->i_handler)); 
+  ...
+- E0->i_dv_audio_rate = E1->i_handler == VLC_CODEC_DV ? -1 :0; 
++ E0->i_dv_audio_rate = E0->fmt.i_codec == VLC_CODEC_DV ? -1 :0; 
+// Infered from: (vlc/{prevFiles/prev_d3a801d_16d2a7_modules#demux#avi#avi.c,revFiles/d3a801d_16d2a7_modules#demux#avi#avi.c}: Open)
+// Recall: 0.31, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.46, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_6bd322_abf802_epan#dissectors#packet-tcp.c: dissect_tcp
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- col_set_writable(E0->cinfo, FALSE); 
++ if (check_col(E0->cinfo, COL_INFO))  
++ {
++ col_set_fence(E0->cinfo, COL_INFO); 
++ }
+// Infered from: (wireshark/{prevFiles/prev_0bb7de_71d81e_epan#dissectors#packet-http.c,revFiles/0bb7de_71d81e_epan#dissectors#packet-http.c}: dissect_http)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+type T1;
+expression E0, E2;
+@@
+- E0 = -(T1 )E2 - 1; 
++ E0 = 0 - (T1 )E2 - 1; 
+// Infered from: (openssl/{prevFiles/prev_68d4bcf_244d7b_crypto#asn1#x_long.c,revFiles/68d4bcf_244d7b_crypto#asn1#x_long.c}: long_i2c)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

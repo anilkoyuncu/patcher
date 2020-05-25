@@ -1,0 +1,30 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = E1[E2] + E3; 
++ E0 = (E1[E2] + E3) & BN_MASK2; 
+// Infered from: (openssl/{prevFiles/prev_df94f1_b92c0d_crypto#bn#bn_asm.c,revFiles/df94f1_b92c0d_crypto#bn#bn_asm.c}: bn_mul_mont), (openssl/{prevFiles/prev_df94f1_b92c0d_crypto#bn#bn_asm.c,revFiles/df94f1_b92c0d_crypto#bn#bn_asm.c}: bn_mul_mont)
+// False positives: (codeflaws/revFiles/327-C-4099318-4099362.c: main), (openssl/revFiles/df94f1_b92c0d_crypto#bn#bn_asm.c: bn_mul_mont)
+// Recall: 0.21, Precision: 0.50, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.57, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 0.80
+// -- General --
+// Functions fully changed: 3/7(42%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_127-A-13419090-13419121.c: main
+ - codeflaws/prevFiles/prev_5-A-11082258-11082263.c: main
+ - codeflaws/prevFiles/prev_485-A-13178230-13186933.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_df94f1_b92c0d_crypto#bn#bn_asm.c: bn_mul_mont
+*/
+
+// ---------------------------------------------

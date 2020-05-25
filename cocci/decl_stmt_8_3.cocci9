@@ -1,0 +1,15 @@
+@@
+identifier I0, I2;
+expression E1, E3;
+@@
+- size_t I0 = E1 + strlen(I2); 
++ size_t I0 = E1 + strlen(newtok); 
+  ...
+- strcpy(E3->buf + E1, I2); 
+- PyObject_FREE(I2); 
++ strcpy(E3->buf + E1, newtok); 
++ PyObject_FREE(newtok); 
+// Infered from: (cpython/{prevFiles/prev_114900_319c47_Parser#tokenizer.c,revFiles/114900_319c47_Parser#tokenizer.c}: tok_nextc)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.38
+
+// ---------------------------------------------

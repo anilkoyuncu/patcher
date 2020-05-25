@@ -1,0 +1,33 @@
+@@
+expression E0, E1;
+typedef uint8_t;
+@@
+- vapic_enable(E0, E1); 
++ static const  uint8_t enabled = 1; 
++ cpu_physical_memory_write(E0->vapic_paddr + offsetof(VAPICState, enabled),  &enabled, sizeof(enabled)); 
++ apic_enable_vapic(E1->apic_state, E0->vapic_paddr); 
++ E0->state = VAPIC_ACTIVE; 
+// Infered from: (qemu/{prevFiles/prev_5a6e8b_a30cf8_hw#i386#kvmvapic.c,revFiles/5a6e8b_a30cf8_hw#i386#kvmvapic.c}: do_vapic_enable)
+// False positives: (qemu/revFiles/5a6e8b_a30cf8_hw#i386#kvmvapic.c: vapic_report_tpr_access), (qemu/revFiles/5a6e8b_a30cf8_hw#i386#kvmvapic.c: vapic_write)
+// Recall: 0.29, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 0.60
+// -- Node Change --
+// Recall: 0.53, Precision: 0.47
+// -- General --
+// Functions fully changed: 2/11(18%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_bd27a9_3b10bb_libavcodec#h263dec.c: h263_get_format
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_5a6e8b_a30cf8_hw#i386#kvmvapic.c: vapic_write
+ - qemu/prevFiles/prev_5a6e8b_a30cf8_hw#i386#kvmvapic.c: vapic_report_tpr_access
+*/
+
+// ---------------------------------------------

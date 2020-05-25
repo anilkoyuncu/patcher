@@ -1,0 +1,29 @@
+@@
+expression E0, E1, E2;
+@@
+- ff_set_common_formats(E0, ff_all_formats(AVMEDIA_TYPE_AUDIO)); 
+- ff_set_common_channel_layouts(E0, avfilter_make_format64_list(E1)); 
+- ff_set_common_samplerates(E0, ff_make_format_list(E2)); 
++ int ret; 
++ if ((ret = ff_set_common_formats(E0, ff_all_formats(AVMEDIA_TYPE_AUDIO))) < 0 || (  ret = ff_set_common_channel_layouts(E0, avfilter_make_format64_list(E1))) < 0 || (  ret = ff_set_common_samplerates(E0, ff_make_format_list(E2))) < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_6aaac2_8ededd_libavfilter#asrc_anullsrc.c,revFiles/6aaac2_8ededd_libavfilter#asrc_anullsrc.c}: query_formats)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_6aaac2_8ededd_libavfilter#vf_paletteuse.c: query_formats
+*/
+
+// ---------------------------------------------

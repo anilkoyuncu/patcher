@@ -1,0 +1,9 @@
+@@
+expression E1, E0, E2;
+@@
+- return mtd_device_parse_register(E0, NULL, 0, E1, E2); 
++ return mtd_device_parse_register(E0, NULL, NULL, E1, E2); 
+// Infered from: (linux/{prevFiles/prev_42d7fbe_ee478af_drivers#mtd#nand#s3c2410.c,revFiles/42d7fbe_ee478af_drivers#mtd#nand#s3c2410.c}: s3c2410_nand_add_partition), (linux/{prevFiles/prev_42d7fbe_ee478af_drivers#mtd#maps#intel_vr_nor.c,revFiles/42d7fbe_ee478af_drivers#mtd#maps#intel_vr_nor.c}: vr_nor_init_partitions)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

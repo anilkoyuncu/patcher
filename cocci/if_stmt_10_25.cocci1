@@ -1,0 +1,11 @@
+@@
+@@
+- if (n < abs(x))  
++ if (abs(n) < abs(x))  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_30-A-16795687-16795691.c,revFiles/30-A-16795687-16795691.c}: main)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

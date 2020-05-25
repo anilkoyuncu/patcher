@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6, E7, E8;
+@@
+- vlc_blend_packed(&E0[E1 * E2], &E3[E1 * E2], E4, E5, E6, rgbpal[E7[E1]][  0], rgbpal[E7[E1]][1], rgbpal[E7[E1]][3], E8, true); 
++ vlc_blend_packed(&E0[E1 * E2], &E3[E1 * E2], E4, E5, E6, rgbpal[E7[E1]][  0], rgbpal[E7[E1]][1], rgbpal[E7[E1]][2], E8, true); 
+// Infered from: (vlc/{prevFiles/prev_4a1600_3cbe2b_modules#video_filter#blend.c,revFiles/4a1600_3cbe2b_modules#video_filter#blend.c}: BlendPalRV)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

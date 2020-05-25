@@ -1,0 +1,11 @@
+@@
+identifier I0, I3;
+expression E1, E2;
+@@
+- int I0; 
+- I0 = intf_UserProgress(E1, "Shoutcast", _("Connecting..."), 0.0, 0); 
+- E2->b_dialog = I3; 
+// Infered from: (vlc/{prevFiles/prev_ace408_aba3de_modules#services_discovery#shout.c,revFiles/ace408_aba3de_modules#services_discovery#shout.c}: Run)
+// Recall: 0.16, Precision: 1.00, Matching recall: 0.19
+
+// ---------------------------------------------

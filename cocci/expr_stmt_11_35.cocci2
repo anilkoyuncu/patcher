@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->precision_fine[E1] = E0->precision_coarse[E1] - 15; 
++ E0->precision_fine[E1] = FFMIN(E0->precision_coarse[E1], 30) - 15; 
+// Infered from: (FFmpeg/{prevFiles/prev_19b8db_dbc50f_libavcodec#atrac9dec.c,revFiles/19b8db_dbc50f_libavcodec#atrac9dec.c}: calc_precision)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

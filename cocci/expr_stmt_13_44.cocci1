@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E0, E1, E3, E4;
+@@
+- E0 = proto_tree_add_item(E1, I2, E3, E4->cap_len - E3, NULL); 
++ E0 = proto_tree_add_item(E1, I2, E3, END_OF_FRAME, NULL); 
+// Infered from: (wireshark/{prevFiles/prev_f2246e_9d4c96_packet-isis-lsp.c,revFiles/f2246e_9d4c96_packet-isis-lsp.c}: isis_dissect_isis_lsp), (wireshark/{prevFiles/prev_f2246e_9d4c96_packet-isis-hello.c,revFiles/f2246e_9d4c96_packet-isis-hello.c}: isis_dissect_isis_hello)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

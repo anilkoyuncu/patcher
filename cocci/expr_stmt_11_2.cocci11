@@ -1,0 +1,35 @@
+@@
+expression E0, E1;
+typedef time_t;
+@@
+- localtime_r(&E0.tv_sec, &E1); 
++ localtime_r((const  time_t *)&E0.tv_sec, &E1); 
+// Infered from: (qemu/{prevFiles/prev_d7d9b5_b76da7_savevm.c,revFiles/d7d9b5_b76da7_savevm.c}: do_savevm)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 12 rules):
+// -- Edit Location --
+// Recall: 0.85, Precision: 0.85
+// -- Node Change --
+// Recall: 0.79, Precision: 0.77
+// -- General --
+// Functions fully changed: 9/15(60%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_97b5da_d88edb_ext#dom#documenttype.c: dom_documenttype_internal_subset_read
+*/
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_f0f1b4_8f7de4_apps#s_socket.c: init_server_long
+ - wireshark/prevFiles/prev_c3780c_494fe3_epan#dissectors#packet-socks.c: server_display_socks_v5
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_ef414c_c7a5dd_modules#printbackends#lpr#gtkprintbackendlpr.c: lpr_write
+ - gtk/prevFiles/prev_a0faf5_1b9fa9_gdk#win32#gdkselection-win32.c: _gdk_win32_selection_convert_to_dib
+ - gtk/prevFiles/prev_a0faf5_1b9fa9_gdk#win32#gdkselection-win32.c: _gdk_win32_display_convert_selection
+*/
+
+// ---------------------------------------------

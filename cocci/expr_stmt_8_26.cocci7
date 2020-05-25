@@ -1,0 +1,40 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5;
+typedef Error;
+@@
+  Error *I0 = NULL; 
+  ...
+- qmp_x_blockdev_remove_medium(E1, E2, E3, E4, E5); 
++ qmp_x_blockdev_remove_medium(E1, E2, E3, E4, &I0); 
+// Infered from: (qemu/{prevFiles/prev_24df38_49137b_blockdev.c,revFiles/24df38_49137b_blockdev.c}: qmp_blockdev_change_medium)
+// False positives: (qemu/revFiles/24df38_49137b_blockdev.c: qmp_eject)
+// Recall: 0.06, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.53, Precision: 0.82
+// -- Node Change --
+// Recall: 0.56, Precision: 0.83
+// -- General --
+// Functions fully changed: 9/19(47%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_93f7cb_a5a3d5_Zend#zend_execute.c: zend_binary_assign_op_obj_dim
+ - wireshark/prevFiles/prev_3bf6a1_035e40_epan#proto.c: proto_tree_add_item_ret_string_and_length
+ - cairo/prevFiles/prev_b80bcf_4465ff_src#cairo-xcb-surface-render.c: _cairo_xcb_surface_fixup_unbounded_boxes
+ - vlc/prevFiles/prev_670cfc_64f00c_src#network#poll.c: poll
+ - wireshark/prevFiles/prev_386c5b_833d31_file.c: cf_write_csv_packets
+ - qemu/prevFiles/prev_f0c9d6_2607b6_hw#i386#acpi-build.c: acpi_set_pci_info
+ - cairo/prevFiles/prev_12b1cb_e2dcbf_src#cairo-xml-surface.c: _cairo_xml_emit_type42_font
+ - wireshark/prevFiles/prev_eefd52_2c312b_epan#dissectors#packet-bpdu.c: dissect_bpdu_pvst_tlv
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_f777d6_5e6d45_epan#dissectors#packet-gsm_a_dtap.c: de_emerg_num_list
+ - qemu/prevFiles/prev_24df38_49137b_blockdev.c: qmp_eject
+*/
+
+// ---------------------------------------------

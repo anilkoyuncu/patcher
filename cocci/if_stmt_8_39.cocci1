@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (IS_ICELAKE(E0) && !intel_digital_port_connected(E1))  
++ if (INTEL_GEN(E0) >= 11 && !intel_digital_port_connected(E1))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_2dd24a_2131bc0_drivers#gpu#drm#i915#intel_hdmi.c,revFiles/2dd24a_2131bc0_drivers#gpu#drm#i915#intel_hdmi.c}: intel_hdmi_detect)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

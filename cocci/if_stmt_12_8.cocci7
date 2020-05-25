@@ -1,0 +1,7 @@
+@@
+@@
+- error_report("Another balloon device already registered"); 
+// Infered from: (qemu/{prevFiles/prev_46abb8_e5b3a2_balloon.c,revFiles/46abb8_e5b3a2_balloon.c}: qemu_add_balloon_handler)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

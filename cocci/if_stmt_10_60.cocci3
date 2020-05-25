@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if ((E0 & ~0x0080) < 32 && strchr("\x09\x0A\x0D\x85", E0) == NULL)  
++ if ((E0 & ~0x0080) < 32 && memchr("\x09\x0A\x0D\x85", E0, 4) == NULL)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_d843a2_b3cd36_src#text#strings.c,revFiles/d843a2_b3cd36_src#text#strings.c}: convert_xml_special_chars)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I1;
+expression E0, E2;
+@@
+- E0 = (struct I1 *)malloc(E2); 
++ E0 = (struct I1 *)calloc(1, E2); 
+// Infered from: (libarchive/{prevFiles/prev_420904_d873dd_libarchive#archive_read_support_format_rar.c,revFiles/420904_d873dd_libarchive#archive_read_support_format_rar.c}: make_table), (libarchive/{prevFiles/prev_243072_98afc9_libarchive#archive_read_support_compression_program.c,revFiles/243072_98afc9_libarchive#archive_read_support_compression_program.c}: program_bidder_init)
+// False positives: (libarchive/revFiles/420904_d873dd_libarchive#archive_read_support_format_rar.c: archive_read_support_format_rar), (libarchive/revFiles/dc467a_3aa253_libarchive#archive_write_disk.c: archive_write_disk_new)
+// Recall: 0.08, Precision: 0.60, Matching recall: 1.00
+
+// ---------------------------------------------

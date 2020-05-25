@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- g_return_if_fail(E0 == gdk_display_get_default()); 
++ g_return_if_fail(E0 == _gdk_display); 
+// Infered from: (gtk/{prevFiles/prev_a3bff7_c9add3_gdk#win32#gdkwindow-win32.c,revFiles/a3bff7_c9add3_gdk#win32#gdkwindow-win32.c}: _gdk_win32_display_create_window_impl)
+// False positives: (gtk/revFiles/a3bff7_c9add3_gdk#win32#gdkwindow-win32.c: gdk_display_warp_device)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

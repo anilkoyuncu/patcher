@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- E0->server = pixman_image_create_bits(VNC_SERVER_FB_FORMAT, vnc_width(  E0), vnc_height(E0), NULL, 0); 
++ width = vnc_width(E0); 
++ height = vnc_height(E0); 
++ E0->server = pixman_image_create_bits(VNC_SERVER_FB_FORMAT, width, height,  NULL, 0); 
++ memset(E0->guest.dirty, 0x00, sizeof(E0->guest.dirty)); 
++ vnc_set_area_dirty(); 
+// Infered from: (qemu/{prevFiles/prev_b69a55_e00da5_ui#vnc.c,revFiles/b69a55_e00da5_ui#vnc.c}: vnc_update_server_surface), (git/{prevFiles/prev_902b90_ca8b53_builtin#clean.c,revFiles/902b90_ca8b53_builtin#clean.c}: cmd_clean), (gstreamer/{prevFiles/prev_f50d80_721539_gst#gstbus.c,revFiles/f50d80_721539_gst#gstbus.c}: gst_bus_post)
+// Recall: 0.55, Precision: 1.00, Matching recall: 0.86
+
+// ---------------------------------------------

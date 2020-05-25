@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->index >= E1->sample_rate / E0->freq)  
++ if (E0->index >= E0->table_size)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_58bb9d_26876f_libavfilter#af_tremolo.c,revFiles/58bb9d_26876f_libavfilter#af_tremolo.c}: filter_frame)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

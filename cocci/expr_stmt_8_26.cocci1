@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6, E7, E8;
+@@
+- E0 = vdp_video_mixer_render(E1->vdp, E1->mixer, VDP_INVALID_HANDLE, NULL, E2,  MAX_PAST, E3, E4, MAX_FUTURE, E5, &E6, E7, &E8,  NULL, 0, NULL); 
++ E0 = vdp_video_mixer_render(E1->vdp, E1->mixer, VDP_INVALID_HANDLE, NULL, E2,  MAX_PAST, E3, E4, MAX_FUTURE, E5, &E6, E7, &E8,  &E8, 0, NULL); 
+// Infered from: (vlc/{prevFiles/prev_7df48e_92b9c3_modules#hw#vdpau#chroma.c,revFiles/7df48e_92b9c3_modules#hw#vdpau#chroma.c}: Render)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

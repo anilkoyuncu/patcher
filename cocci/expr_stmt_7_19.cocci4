@@ -1,0 +1,12 @@
+@@
+identifier I4;
+binary operator B2 = {- ,* ,>> };
+expression E0, E1, E3;
+@@
+- E0 = E1 B2 E3->I4; 
++ E0 = E1; 
+// Infered from: (FFmpeg/{prevFiles/prev_b912ef_d0429b_libavformat#swf.c,revFiles/b912ef_d0429b_libavformat#swf.c}: swf_read_packet), (FFmpeg/{prevFiles/prev_3b20ed_ed2e97_libavcodec#sgidec.c,revFiles/3b20ed_ed2e97_libavcodec#sgidec.c}: read_rle_sgi), (FFmpeg/{prevFiles/prev_480b13_ba605c_libavcodec#wavpack.c,revFiles/480b13_ba605c_libavcodec#wavpack.c}: wavpack_decode_block), (FFmpeg/{prevFiles/prev_480b13_ba605c_libavcodec#wavpack.c,revFiles/480b13_ba605c_libavcodec#wavpack.c}: wavpack_decode_block), (gtk/{prevFiles/prev_12b155_c468cd_gdk#broadway#gdkdevice-broadway.c,revFiles/12b155_c468cd_gdk#broadway#gdkdevice-broadway.c}: gdk_broadway_device_query_state), (gtk/{prevFiles/prev_12b155_c468cd_gdk#broadway#gdkdevice-broadway.c,revFiles/12b155_c468cd_gdk#broadway#gdkdevice-broadway.c}: gdk_broadway_device_query_state)
+// False positives: (FFmpeg/revFiles/480b13_ba605c_libavcodec#wavpack.c: wavpack_decode_block), (ompi/revFiles/91c857_23c2a3_ompi#mca#io#ompio#io_ompio.c: ompi_io_ompio_break_file_view), (ompi/revFiles/91c857_23c2a3_ompi#mca#io#ompio#io_ompio.c: ompi_io_ompio_set_explicit_offset), (ompi/revFiles/a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_get_packed_size), (ompi/revFiles/a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_get_unpacked_size), (ompi/revFiles/a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_pack), (ompi/revFiles/a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_pack_homogeneous), (ompi/revFiles/a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_pack_homogeneous_contig), (ompi/revFiles/a0542d_77460d_src#datatype#dt_pack.c: ompi_convertor_pack_homogeneous_with_memcpy)
+// Recall: 0.33, Precision: 0.33, Matching recall: 0.67
+
+// ---------------------------------------------

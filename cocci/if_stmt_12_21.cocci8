@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+typedef guint64;
+@@
+- if (ws_strtou64(format_text(E0, E1), NULL, &E2.secs))  
++ if (ws_strtou64(format_text(E0, E1), NULL, (guint64 *)&E2.secs))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_53c919_c5655d_epan#dissectors#packet-kismet.c,revFiles/53c919_c5655d_epan#dissectors#packet-kismet.c}: dissect_kismet)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

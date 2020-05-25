@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->i_length = E1.duration * 1000000 * E2->time_base.num / E2->time_base.den; 
++ E0->i_length = E1.duration * INT64_C(1000000) * E2->time_base.num / E2->time_base.den; 
+// Infered from: (vlc/{prevFiles/prev_8ac5cc_0361af_modules#demux#avformat#demux.c,revFiles/8ac5cc_0361af_modules#demux#avformat#demux.c}: Demux)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

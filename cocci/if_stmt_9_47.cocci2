@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((ZEND_NUM_ARGS() != 2) || (zend_get_parameters_ex(ht, 2, &E0, &E1) != SUCCESS))  
++ if ((ZEND_NUM_ARGS() != 2) || (zend_get_parameters_ex(2, &E0, &E1) != SUCCESS))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_dc70b6_b853cd_ext#ccvs#ccvs.c,revFiles/dc70b6_b853cd_ext#ccvs#ccvs.c}: PHP_FUNCTION)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

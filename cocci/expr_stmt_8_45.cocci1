@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+typedef gint32;
+@@
+- E0 = E1[E2].tv_usec - E1[E3].tv_usec; 
++ E0 = (gint32 )E1[E2].tv_usec - (gint32 )E1[E3].tv_usec; 
+// Infered from: (wireshark/{prevFiles/prev_f9da85_95785b_ui#gtk#mcast_stream.c,revFiles/f9da85_95785b_ui#gtk#mcast_stream.c}: buffusagecalc)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

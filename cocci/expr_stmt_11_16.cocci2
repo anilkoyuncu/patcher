@@ -1,0 +1,8 @@
+@@
+@@
+- zend_error(E_WARNING, "Wrong value for parameter 4 in call to %s()",  get_active_function_name()); 
++ zend_error(E_WARNING, "Wrong value for parameter 4 in call to %s()",  get_active_function_name(TSRMLS_C)); 
+// Infered from: (php-src/{prevFiles/prev_b5e46c_be39b3_ext#pcre#php_pcre.c,revFiles/b5e46c_be39b3_ext#pcre#php_pcre.c}: php_pcre_match)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

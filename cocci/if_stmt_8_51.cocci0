@@ -1,0 +1,13 @@
+@@
+expression E0;
+typedef uint64_t;
+@@
+- if ((E0 == (TARGET_PAGE_SIZE / sizeof(uint64_t ))))  
++ if (E0 == TARGET_PAGE_SIZE / sizeof(uint64_t ))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_197053_9edc19_hw#rdma#vmw#pvrdma_cmd.c,revFiles/197053_9edc19_hw#rdma#vmw#pvrdma_cmd.c}: pvrdma_map_to_pdir)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

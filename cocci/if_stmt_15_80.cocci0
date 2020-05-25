@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E3, E2;
+@@
+- E0 = sscanf(E1 + E2, "%4x", &E3); 
++ sscanf(E1 + E2, "%4x", &E3); 
+// Infered from: (wireshark/{prevFiles/prev_7424e3_0625d9_wiretap#iseries.c,revFiles/7424e3_0625d9_wiretap#iseries.c}: iseries_parse_packet), (wireshark/{prevFiles/prev_7424e3_0625d9_wiretap#iseries.c,revFiles/7424e3_0625d9_wiretap#iseries.c}: iseries_parse_packet)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

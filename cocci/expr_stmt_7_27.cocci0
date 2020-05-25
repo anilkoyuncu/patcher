@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1 < FF_ARRAY_ELEMS(dsd_source_comment) ? dsd_history_comment[E1] :"source_comment"; 
++ E0 = E1 < FF_ARRAY_ELEMS(dsd_source_comment) ? dsd_source_comment[E1] :"source_comment"; 
+// Infered from: (FFmpeg/{prevFiles/prev_592a85_256922_libavformat#iff.c,revFiles/592a85_256922_libavformat#iff.c}: iff_read_header)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- set_irq_handler(E0, handle_edge_irq); 
++ irq_set_handler(E0, handle_edge_irq); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-gemini#irq.c,revFiles/6845664a_25a566_arch#arm#mach-gemini#irq.c}: gemini_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-davinci#irq.c,revFiles/6845664a_25a566_arch#arm#mach-davinci#irq.c}: davinci_irq_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

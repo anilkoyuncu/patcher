@@ -1,0 +1,9 @@
+@@
+@@
+- return 1; 
++ return true; 
+// Infered from: (linux/{prevFiles/prev_871beb_a599806_mm#rmap.c,revFiles/871beb_a599806_mm#rmap.c}: invalid_mkclean_vma), (linux/{prevFiles/prev_b9c42a_08eff4_security#apparmor#lib.c,revFiles/b9c42a_08eff4_security#apparmor#lib.c}: aa_policy_init)
+// False positives: (linux/revFiles/871beb_a599806_mm#rmap.c: page_mapped_in_vma), (linux/revFiles/871beb_a599806_mm#rmap.c: page_referenced), (vlc/revFiles/66779d_c30434f_modules#demux#caf.c: Demux)
+// Recall: 0.29, Precision: 0.40, Matching recall: 0.40
+
+// ---------------------------------------------

@@ -1,0 +1,18 @@
+@@
+expression E0;
+@@
+- if (E0 & 1)  
++ if ((E0 & 1) == 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_493-D-10138857-10138859.c,revFiles/493-D-10138857-10138859.c}: main)
+// False positives: (qemu/revFiles/e13951_0bbac6_disas.c: target_disas)
+// Recall: 0.13, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

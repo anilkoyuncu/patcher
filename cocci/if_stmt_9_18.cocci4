@@ -1,0 +1,49 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((E0->num_frames == MAX_FRAMES_PER_PACKET) || (E1 && (E1 + E2) > E3))  
++ if ((E0->num_frames == MAX_FRAMES_PER_PACKET) || (E1 && (E1 + E2) > E0->max_payload_size))  
+  {
+  ...
+  }
+  ...
+- if (E2 < E3)  
++ if (E2 <= E3)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_d2ce53b_cc0241_libavformat#rtp_aac.c,revFiles/d2ce53b_cc0241_libavformat#rtp_aac.c}: ff_rtp_send_aac)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.32, Precision: 1.00
+// -- Node Change --
+// Recall: 0.35, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/19(31%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_aeb5b9_b7aacc_ssl#ssl_cert.c: ssl_cert_dup
+ - php-src/prevFiles/prev_66877f_500839_Zend#zend_builtin_functions.c: ZEND_FUNCTION
+ - ompi/prevFiles/prev_35f817_c0bcd1_opal#mca#pmix#pmix2x#pmix#src#mca#psensor#file#psensor_file.c: ft_destructor
+ - vlc/prevFiles/prev_3a9796_d0dd81_src#control#audio.c: libvlc_audio_set_track
+ - php-src/prevFiles/prev_3735b0_601407_Zend#zend_builtin_functions.c: ZEND_FUNCTION
+ - linux/prevFiles/prev_728385_4e1af3_drivers#media#video#davinci#vpif_display.c: vpif_get_std_info
+ - FFmpeg/prevFiles/prev_5b10c5_379d03_libavfilter#avf_showwaves.c: filter_frame
+ - vlc/prevFiles/prev_3a9796_d0dd81_src#control#video.c: libvlc_video_set_spu
+ - ompi/prevFiles/prev_35f817_c0bcd1_opal#mca#pmix#pmix2x#pmix#src#mca#psensor#heartbeat#psensor_heartbeat.c: ft_destructor
+ - linux/prevFiles/prev_fc8d71_55cd0e_drivers#ipack#devices#ipoctal.c: ipoctal_inst_slot
+ - qemu/prevFiles/prev_8dc0a5_e82dab_block#qcow2-cluster.c: qcow2_alloc_cluster_offset
+ - vlc/prevFiles/prev_ad8303_68a142_src#stream_output#stream_output.c: InitInstance
+ - linux/prevFiles/prev_a3d97c9_562bf4_drivers#staging#cpc-usb#cpc-usb_drv.c: cpcusb_probe
+*/
+
+// ---------------------------------------------

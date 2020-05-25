@@ -1,0 +1,9 @@
+@@
+@@
+- FREE_ZVAL(_prepped_callback); 
++ zval_ptr_dtor(&_prepped_callback); 
+// Infered from: (php-src/{prevFiles/prev_9a5ba8_c91c89_ext#readline#readline.c,revFiles/9a5ba8_c91c89_ext#readline#readline.c}: PHP_RSHUTDOWN_FUNCTION), (php-src/{prevFiles/prev_4907fa_96ab6a_ext#readline#readline.c,revFiles/4907fa_96ab6a_ext#readline#readline.c}: PHP_RSHUTDOWN_FUNCTION)
+// False positives: (php-src/revFiles/4907fa_96ab6a_ext#readline#readline.c: PHP_FUNCTION), (php-src/revFiles/9a5ba8_c91c89_ext#readline#readline.c: PHP_FUNCTION)
+// Recall: 0.07, Precision: 0.60, Matching recall: 1.00
+
+// ---------------------------------------------

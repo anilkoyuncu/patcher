@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 >= INT64_MIN || url_seek(E1->context, E0, SEEK_SET) < 0)  
++ if (E0 > INT64_MAX || url_seek(E1->context, E0, SEEK_SET) < 0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_68684a_e19388_modules#access#avio.c,revFiles/68684a_e19388_modules#access#avio.c}: Seek)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

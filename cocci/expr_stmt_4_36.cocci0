@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (E1 == NULL) && (E2->inputTranslation == TCL_TRANSLATE_LF) && (E2->inEofChar == NULL); 
++ E0 = (E1 == NULL) && (E2->inputTranslation == TCL_TRANSLATE_LF) && (E2->inEofChar == '\0'); 
+// Infered from: (tcl/{prevFiles/prev_b6212a_01eab1e_generic#tclIO.c,revFiles/b6212a_01eab1e_generic#tclIO.c}: DoReadChars)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

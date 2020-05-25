@@ -1,0 +1,31 @@
+@@
+identifier I0;
+typedef gsize;
+@@
+- for(gsize I0 = 0;I0 < G_N_ELEMENTS(interfaces);++I0)  
++ gsize I0; 
++ for(I0 = 0;I0 < G_N_ELEMENTS(interfaces);++I0)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_ed92c4_f64074_tests#testheightforwidth.c,revFiles/ed92c4_f64074_tests#testheightforwidth.c}: main_window_delete_cb)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.94, Precision: 1.00
+// -- General --
+// Functions fully changed: 18/22(81%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_e72f3d_c358a0_libavcodec#dnxhdenc.c: dnxhd_10bit_dct_quantize
+ - FFmpeg/prevFiles/prev_e72f3d_c358a0_libavcodec#dnxhdenc.c: dnxhd_mb_var_thread
+ - libarchive/prevFiles/prev_11f5b7_7c3148_libarchive#test#test_write_format_gnutar_filenames.c: DEFINE_TEST
+ - gstreamer/prevFiles/prev_8a1f05_ee1bbe_tests#check#gst#gstevent.c: GST_START_TEST
+*/
+
+// ---------------------------------------------

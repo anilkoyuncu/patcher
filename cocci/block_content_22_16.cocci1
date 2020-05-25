@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = abs(((E1 << 13) / E2) - ((int )8192)); 
+- if ((E1 < (int )8192) || (E2 < (int )8192) || (E0 > LARGEST_ALLOWED_RATIO_MISMATCH))  
++ E0 = abs(((E1 << 13) / E2) - 8192); 
++ if ((E1 < 8192) || (E2 < 8192) || (E0 > LARGEST_ALLOWED_RATIO_MISMATCH))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_bf5d030_f4fa0370_drivers#staging#media#atomisp#i2c#mt9m114.c,revFiles/bf5d030_f4fa0370_drivers#staging#media#atomisp#i2c#mt9m114.c}: distance), (linux/{prevFiles/prev_bf5d030_f4fa0370_drivers#staging#media#atomisp#i2c#ov2722.c,revFiles/bf5d030_f4fa0370_drivers#staging#media#atomisp#i2c#ov2722.c}: distance)
+// Recall: 0.80, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

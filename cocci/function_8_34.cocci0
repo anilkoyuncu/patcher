@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef int64_t;
+@@
+- int I0 = -EINVAL; 
++ int64_t I0 = -EINVAL; 
+// Infered from: (qemu/{prevFiles/prev_f1a7ff_fc2490_block#nfs.c,revFiles/f1a7ff_fc2490_block#nfs.c}: nfs_client_open)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

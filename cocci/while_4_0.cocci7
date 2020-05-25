@@ -1,0 +1,14 @@
+@@
+binary operator B1 = {< ,>= };
+expression E0, E2, E3, E4;
+@@
+- while (E0 B1 E2 && E3 < E4)  
++ while (E0 B1 E2 && E3 <= E4)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_614-A-17036012-17036054.c,revFiles/614-A-17036012-17036054.c}: main), (cairo/{prevFiles/prev_5f386b_d48f31_perf#cairo-stats.c,revFiles/5f386b_d48f31_perf#cairo-stats.c}: _cairo_stats_compute)
+// False positives: (cairo/revFiles/5f386b_d48f31_perf#cairo-stats.c: _cairo_stats_compute), (gstreamer/revFiles/04471c_5c7c485_gst#gstevent.c: gst_event_new_discontinuous)
+// Recall: 0.05, Precision: 0.62, Matching recall: 0.83
+
+// ---------------------------------------------

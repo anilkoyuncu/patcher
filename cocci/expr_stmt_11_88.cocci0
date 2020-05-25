@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = ldl_phys(E1->feat_offs); 
++ E0 = bswap32(ldl_phys(E1->feat_offs)); 
+// Infered from: (qemu/{prevFiles/prev_8f1675_7b3da9_hw#s390-virtio-bus.c,revFiles/8f1675_7b3da9_hw#s390-virtio-bus.c}: s390_virtio_device_update_status)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

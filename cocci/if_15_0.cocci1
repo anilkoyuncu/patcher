@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->cwp == env->nwindows - 1)  
++ if (E0->cwp == E0->nwindows - 1)  
+  {
+- memcpy32(E0->regbase, E0->regbase + env->nwindows * 16); 
++ memcpy32(E0->regbase, E0->regbase + E0->nwindows * 16); 
+  }
+// Infered from: (qemu/{prevFiles/prev_9fac3a_40f8e2_target-sparc#op_helper.c,revFiles/9fac3a_40f8e2_target-sparc#op_helper.c}: cpu_set_cwp)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+expression list E2;
+identifier I0;
+expression E1;
+typedef packet_info;
+@@
+  packet_info *I0 = &pi; 
+  ...
+- E1 = p_get_proto_data (E2); 
++ E1 = p_get_proto_data(I0->fd, proto_smtp); 
+// Infered from: (wireshark/{prevFiles/prev_296265_fe7540_packet-smtp.c,revFiles/296265_fe7540_packet-smtp.c}: dissect_smtp)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

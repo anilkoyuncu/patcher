@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (E0 && E0->index > 0)  
++ while (E0 && E0->idx > 0)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_2be382_32e785_epan#dissectors#packet-bthsp.c,revFiles/2be382_32e785_epan#dissectors#packet-bthsp.c}: dissect_bthsp), (wireshark/{prevFiles/prev_2be382_32e785_epan#dissectors#packet-bthsp.c,revFiles/2be382_32e785_epan#dissectors#packet-bthsp.c}: dissect_bthsp), (wireshark/{prevFiles/prev_2be382_32e785_epan#dissectors#packet-bthfp.c,revFiles/2be382_32e785_epan#dissectors#packet-bthfp.c}: dissect_bthfp), (wireshark/{prevFiles/prev_2be382_32e785_epan#dissectors#packet-bthfp.c,revFiles/2be382_32e785_epan#dissectors#packet-bthfp.c}: dissect_bthfp)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

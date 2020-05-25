@@ -1,0 +1,10 @@
+@@
+identifier I2, I7, I8 = {dof_iid_create_standard_string ,dof_oid_create_standard_string }, I9;
+expression E0, E1, E3, E4, E5, E6;
+@@
+- E0 = proto_tree_add_bytes_format_value(E1, I2, E3, E4, E5, E6->I7, "%s",  I8(E6->I9, E6->I7)); 
++ E0 = proto_tree_add_bytes_format_value(E1, I2, E3, 0, 0, E6->I7, "%s",  I8(E6->I9, E6->I7)); 
+// Infered from: (wireshark/{prevFiles/prev_b572b6_c762c5_epan#dissectors#packet-dof.c,revFiles/b572b6_c762c5_epan#dissectors#packet-dof.c}: oap_1_tree_add_alias), (wireshark/{prevFiles/prev_b572b6_c762c5_epan#dissectors#packet-dof.c,revFiles/b572b6_c762c5_epan#dissectors#packet-dof.c}: oap_1_tree_add_alias)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,35 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;E1[E0] && E0 < LINESIZE;E0++)  
++ for(E0 = 0;E0 < LINESIZE && E1[E0];E0++)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_a8002a_a0df200_tools#lemon#lemon.c,revFiles/a8002a_a0df200_tools#lemon#lemon.c}: tplt_xfer)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.23, Precision: 1.00
+// -- Node Change --
+// Recall: 0.38, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/13(23%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_012aef_ef1e1e_hw#sd#sdhci.c: sdhci_uninitfn
+ - qemu/prevFiles/prev_012aef_ef1e1e_hw#ppc#spapr_pci.c: spapr_pci_pre_save
+ - qemu/prevFiles/prev_012aef_ef1e1e_hw#usb#hcd-ehci-pci.c: usb_ehci_pci_exit
+ - wireshark/prevFiles/prev_a8002a_a0df200_tools#lemon#lemon.c: translate_code
+ - libarchive/prevFiles/prev_4736e4_429189_libarchive#archive_write_disk_posix.c: _archive_write_disk_free
+ - curl/prevFiles/prev_29c655_059b3a_lib#security.c: Curl_sec_end
+ - openssl/prevFiles/prev_7c96db_07b3ce_crypto#rsa#rsa_lib.c: RSA_set_method
+ - openssl/prevFiles/prev_7c96db_07b3ce_crypto#dsa#dsa_lib.c: DSA_set_method
+ - libarchive/prevFiles/prev_4736e4_429189_libarchive#archive_write_disk_posix.c: _archive_write_disk_finish_entry
+ - qemu/prevFiles/prev_012aef_ef1e1e_hw#ppc#spapr_pci.c: spapr_pci_post_load
+*/
+
+// ---------------------------------------------

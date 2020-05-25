@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef proto_item;
+@@
+- proto_item *I0 = NULL; 
++ proto_item *ti_top = NULL; 
+// Infered from: (wireshark/{prevFiles/prev_71fe13_7ca5ad_epan#dissectors#packet-rtsp.c,revFiles/71fe13_7ca5ad_epan#dissectors#packet-rtsp.c}: dissect_rtspmessage)
+// False positives: (wireshark/revFiles/7ca5ad_72deda_epan#dissectors#packet-rtsp.c: dissect_rtspmessage)
+// Recall: 0.05, Precision: 0.50, Matching recall: 0.09
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- INIT_PZVAL_COPY(E0, *E1); 
++ MAKE_COPY_ZVAL(E1, E0); 
+// Infered from: (php-src/{prevFiles/prev_76e83f7_1751d5_ext#standard#password.c,revFiles/76e83f7_1751d5_ext#standard#password.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_76e83f7_1751d5_ext#standard#password.c,revFiles/76e83f7_1751d5_ext#standard#password.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_76e83f7_1751d5_ext#standard#password.c,revFiles/76e83f7_1751d5_ext#standard#password.c}: PHP_FUNCTION)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

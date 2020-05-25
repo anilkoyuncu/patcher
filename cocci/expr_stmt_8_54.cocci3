@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = IAudioClient_Initialize(E1->client, AUDCLNT_SHAREMODE_SHARED, 0,  AOUT_MAX_PREPARE_TIME * 10, 0,  (E0 == S_OK) ? &E2.Format :E3, NULL); 
++ E0 = IAudioClient_Initialize(E1->client, AUDCLNT_SHAREMODE_SHARED, 0,  AOUT_MAX_PREPARE_TIME * 10, 0,  (E0 == S_OK) ? &E2.Format :E3, &GUID_VLC_AUD_OUT); 
+// Infered from: (vlc/{prevFiles/prev_fb6c84_de3ebb_modules#audio_output#wasapi.c,revFiles/fb6c84_de3ebb_modules#audio_output#wasapi.c}: Open)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

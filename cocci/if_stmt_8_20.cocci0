@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0[0] != (E1->version >> 8)) || (E0[1] != (E1->version & 0xff)))  
++ if ((E0[0] != (E1->client_version >> 8)) || (E0[1] != (E1->client_version & 0xff)))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_5bdae1_cb0369_ssl#s3_srvr.c,revFiles/5bdae1_cb0369_ssl#s3_srvr.c}: ssl3_get_client_key_exchange)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0.position = gst_collect_pads_clip_time(E1, E2, E0.start); 
++ E0.position = gst_collect_pads_clip_time(E1, E2, E0.start + E0.offset); 
+// Infered from: (gstreamer/{prevFiles/prev_888ab2_42d36b_libs#gst#base#gstcollectpads.c,revFiles/888ab2_42d36b_libs#gst#base#gstcollectpads.c}: gst_collect_pads_event_default)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

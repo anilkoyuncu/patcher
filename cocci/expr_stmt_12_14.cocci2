@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- object_property_set_link(OBJECT(E0), OBJECT(E0->vdev.conf.default_backend),  "rng", NULL); 
++ object_property_set_link(OBJECT(E0), OBJECT(E0->vdev.conf.rng), "rng", NULL); 
+// Infered from: (qemu/{prevFiles/prev_5b4564_afd599_hw#s390x#s390-virtio-bus.c,revFiles/5b4564_afd599_hw#s390x#s390-virtio-bus.c}: s390_virtio_rng_init), (qemu/{prevFiles/prev_5b4564_afd599_hw#virtio#virtio-pci.c,revFiles/5b4564_afd599_hw#virtio#virtio-pci.c}: virtio_rng_pci_init), (qemu/{prevFiles/prev_5b4564_afd599_hw#s390x#virtio-ccw.c,revFiles/5b4564_afd599_hw#s390x#virtio-ccw.c}: virtio_ccw_rng_init)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

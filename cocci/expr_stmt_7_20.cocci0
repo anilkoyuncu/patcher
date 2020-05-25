@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->ext_len = (E0->fname + E1) - E2; 
++ E0->ext_len = (E0->fname + E1) - E0->ext; 
+// Infered from: (php-src/{prevFiles/prev_0773c7_f134a9_ext#phar#tar.c,revFiles/0773c7_f134a9_ext#phar#tar.c}: phar_open_tarfile)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

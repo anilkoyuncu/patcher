@@ -1,0 +1,11 @@
+@@
+expression E0;
+typedef QDict;
+@@
+- qobject_to_qdict(E0) 
++ qobject_to(QDict , E0) 
+  ... when any
+// Infered from: (qemu/{prevFiles/prev_7dc847_1a56b1_util#qemu-config.c,revFiles/7dc847_1a56b1_util#qemu-config.c}: config_parse_qdict_section), (qemu/{prevFiles/prev_7dc847_1a56b1_monitor.c,revFiles/7dc847_1a56b1_monitor.c}: monitor_qapi_event_queue), (qemu/{prevFiles/prev_7dc847_1a56b1_monitor.c,revFiles/7dc847_1a56b1_monitor.c}: handle_qmp_command), (qemu/{prevFiles/prev_7dc847_1a56b1_monitor.c,revFiles/7dc847_1a56b1_monitor.c}: handle_qmp_command), (qemu/{prevFiles/prev_7dc847_1a56b1_monitor.c,revFiles/7dc847_1a56b1_monitor.c}: handle_qmp_command)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

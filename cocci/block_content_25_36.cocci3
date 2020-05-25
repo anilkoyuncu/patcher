@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- PyMem_FREE(E0); 
++ PyObject_FREE(E0); 
+// Infered from: (cpython/{prevFiles/prev_2c4e4f_65c05b_Parser#myreadline.c,revFiles/2c4e4f_65c05b_Parser#myreadline.c}: PyOS_StdioReadline)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.38, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - cpython/prevFiles/prev_08062d6_01b810_Parser#myreadline.c: PyOS_StdioReadline
+ - cpython/prevFiles/prev_2c4e4f_65c05b_Parser#myreadline.c: PyOS_StdioReadline
+*/
+
+// ---------------------------------------------

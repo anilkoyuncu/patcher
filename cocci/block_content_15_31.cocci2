@@ -1,0 +1,35 @@
+@@
+expression list E2;
+identifier I0;
+expression E1;
+typedef guint8;
+@@
+- guint8 I0; 
+  ...
+- if (E1)  
+- {
+- I0 = tvb_get_guint8 (E2); 
+- }
+// Infered from: (wireshark/{prevFiles/prev_dca895_dc1a9e_epan#dissectors#packet-mp2t.c,revFiles/dca895_dc1a9e_epan#dissectors#packet-mp2t.c}: dissect_tsp)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.56, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_248e49_8b796f_epan#dissectors#packet-dlm3.c: dissect_dlm3_msg
+ - wireshark/prevFiles/prev_dca895_dc1a9e_epan#dissectors#packet-mp2t.c: mp2t_fragment_handle
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_248e49_8b796f_epan#dissectors#packet-dlm3.c: dissect_dlm3
+*/
+
+// ---------------------------------------------

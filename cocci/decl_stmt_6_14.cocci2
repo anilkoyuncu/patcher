@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- char I0[XEN_HOST_PCI_RESSOURCE_BUFFER_SIZE]; 
++ char I0[XEN_HOST_PCI_RESOURCE_BUFFER_SIZE]; 
+// Infered from: (qemu/{prevFiles/prev_52a8e9_aade7b_hw#xen-host-pci-device.c,revFiles/52a8e9_aade7b_hw#xen-host-pci-device.c}: xen_host_pci_get_resource)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

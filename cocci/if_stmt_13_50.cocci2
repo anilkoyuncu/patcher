@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- if (unlikely(!E0->hv))  
++ if (unlikely(E0->pr || !E0->hv))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_1c7336_1c953b_target-ppc#translate.c,revFiles/1c7336_1c953b_target-ppc#translate.c}: gen_hrfid)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 0.60
+// -- Node Change --
+// Recall: 0.75, Precision: 0.60
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_1c7336_1c953b_target-ppc#translate.c: gen_tlbia
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_1c7336_1c953b_target-ppc#translate.c: gen_tlbie
+ - qemu/prevFiles/prev_1c7336_1c953b_target-ppc#translate.c: gen_tlbsync
+*/
+
+// ---------------------------------------------

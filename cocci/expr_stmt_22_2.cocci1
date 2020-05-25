@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- g_object_class_install_property(E0, PROP_INVISIBLE_CHAR_SET,  g_param_spec_boolean("invisible-char-set",  P_("Invisible char set"),  P_("Whether the invisible char has been set"),  FALSE,  GTK_PARAM_READWRITE)); 
++ g_object_class_install_property(E0, PROP_INVISIBLE_CHAR_SET,  g_param_spec_boolean("invisible-char-set",  P_("Invisible character set"),  P_("Whether the invisible character has been set"),  FALSE,  GTK_PARAM_READWRITE)); 
+// Infered from: (gtk/{prevFiles/prev_3eb197_fb48e0_gtk#gtkentry.c,revFiles/3eb197_fb48e0_gtk#gtkentry.c}: gtk_entry_class_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

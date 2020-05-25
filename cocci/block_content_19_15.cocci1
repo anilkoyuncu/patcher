@@ -1,0 +1,31 @@
+@@
+identifier I1;
+type T0;
+expression E4, E3, E2;
+@@
+- for(T0 I1 = E2;I1 < E3;E4)  
++ for(I1 = 0;I1 < E3;++I1)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_11f5b7_7c3148_libarchive#test#test_write_format_gnutar_filenames.c,revFiles/11f5b7_7c3148_libarchive#test#test_write_format_gnutar_filenames.c}: DEFINE_TEST), (libarchive/{prevFiles/prev_11f5b7_7c3148_libarchive#test#test_write_format_gnutar_filenames.c,revFiles/11f5b7_7c3148_libarchive#test#test_write_format_gnutar_filenames.c}: DEFINE_TEST), (libarchive/{prevFiles/prev_625021_7f8e47_libarchive#test#main.c,revFiles/625021_7f8e47_libarchive#test#main.c}: assertion_memory_filled_with)
+// False positives: (libarchive/revFiles/b00e6a_81d82d_libarchive#test#test_read_format_zip_high_compression.c: DEFINE_TEST)
+// Recall: 0.56, Precision: 0.83, Matching recall: 0.56
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - libarchive/prevFiles/prev_b00e6a_81d82d_libarchive#test#test_read_format_zip_high_compression.c: DEFINE_TEST
+ - libarchive/prevFiles/prev_625021_7f8e47_libarchive#test#main.c: assertion_memory_filled_with
+ - libarchive/prevFiles/prev_11f5b7_7c3148_libarchive#test#test_write_format_gnutar_filenames.c: DEFINE_TEST
+*/
+
+// ---------------------------------------------

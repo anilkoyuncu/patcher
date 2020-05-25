@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 1;E0 <= E1;E0++)  
++ for(E0 = 0;E0 < E1;E0++)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_ad0219_b2cb40_epan#dissectors#packet-fmp.c,revFiles/ad0219_b2cb40_epan#dissectors#packet-fmp.c}: dissect_fmp_extentListEx)
+// Recall: 0.60, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_bits_item(E0, hf_gsm_a_spare_nibble, E1, (E2 << 3) + E3 + 3,  1, ENC_BIG_ENDIAN); 
++ proto_tree_add_bits_item(E0, hf_gsm_a_spare_nibble, E1, (E2 << 3) + E3, 4,  ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_c82839_36ff50_epan#dissectors#packet-gsm_a_common.c,revFiles/c82839_36ff50_epan#dissectors#packet-gsm_a_common.c}: de_spare_nibble)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,24 @@
+@@
+expression E1, E0;
+@@
+- av_log(NULL, AV_LOG_ERROR, E0, E1); 
++ av_log(NULL, AV_LOG_ERROR, E0, (int )E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_6c4956_370e39_libavutil#tree.c,revFiles/6c4956_370e39_libavutil#tree.c}: main), (FFmpeg/{prevFiles/prev_6c4956_370e39_libavutil#tree.c,revFiles/6c4956_370e39_libavutil#tree.c}: main)
+// False positives: (FFmpeg/revFiles/6c4956_370e39_libavutil#tree.c: main)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_6c4956_370e39_libavutil#tree.c: main
+*/
+
+// ---------------------------------------------

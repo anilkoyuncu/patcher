@@ -1,0 +1,21 @@
+@@
+expression E0;
+@@
+- if (Z_IMMUTABLE_P (E0))  
+- {
+- zval_copy_ctor(E0); 
+- }
+// Infered from: (php-src/{prevFiles/prev_92c9f8_9c85aa_ext#spl#spl_array.c,revFiles/92c9f8_9c85aa_ext#spl#spl_array.c}: spl_array_set_array)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+
+// ---------------------------------------------

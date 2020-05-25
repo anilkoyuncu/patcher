@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- zend_set_hash_symbol(E0, E1, E2, 0, 1, Z_ARRVAL_P(PS(http_session_vars))); 
++ zend_set_hash_symbol(E0, E1, E2, PZVAL_IS_REF(E0), 1,  Z_ARRVAL_P(PS(http_session_vars))); 
+// Infered from: (php-src/{prevFiles/prev_22c334_0e82bb_ext#session#session.c,revFiles/22c334_0e82bb_ext#session#session.c}: php_set_session_var)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_ab4802_4684d5_main#main.c: php_module_shutdown
+*/
+
+// ---------------------------------------------

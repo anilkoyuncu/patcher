@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- msg_Info(E0, "closing %s (%d Kbytes dumped)", E1->psz_name,  E1->i_write / 1024); 
+// Infered from: (vlc/{prevFiles/prev_f22f4e_f9e122_modules#demux#demuxdump.c,revFiles/f22f4e_f9e122_modules#demux#demuxdump.c}: Desactivate)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

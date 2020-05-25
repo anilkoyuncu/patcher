@@ -1,0 +1,7 @@
+@@
+@@
+- orte_session_dir_finalize(ORTE_PROC_MY_NAME); 
+// Infered from: (ompi/{prevFiles/prev_a873f4_22cb8a_orte#mca#errmgr#base#errmgr_base_fns.c,revFiles/a873f4_22cb8a_orte#mca#errmgr#base#errmgr_base_fns.c}: orte_errmgr_base_abort)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

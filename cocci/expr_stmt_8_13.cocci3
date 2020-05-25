@@ -1,0 +1,60 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- msg_Dbg(E0, "requested %s var change: %s->%d", E1, E2, E3.i_int); 
+// Infered from: (vlc/{prevFiles/prev_1e8de6_3fc54c_modules#control#http#rpn.c,revFiles/1e8de6_3fc54c_modules#control#http#rpn.c}: EvaluateRPN)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.11, Precision: 1.00
+// -- Node Change --
+// Recall: 0.09, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/36(0%)
+
+/*
+Functions where the patch applied partially:
+ - gstreamer/prevFiles/prev_9092fb_74197d_gst#gstmemory.c: _default_mem_unmap
+ - vlc/prevFiles/prev_4a3838_00d43b_modules#demux#stl.c: Open
+ - php-src/prevFiles/prev_c9357f_598337_ext#standard#pack.c: PHP_FUNCTION
+ - vlc/prevFiles/prev_1e8de6_3fc54c_modules#control#http#rpn.c: EvaluateRPN
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_3c74d1_4a47b7_src#control#mediacontrol_core.c: mediacontrol_start
+ - git/prevFiles/prev_6e1c23_db5d66_builtin-unpack-objects.c: unpack_all
+ - git/prevFiles/prev_5ee5f5_60a2e3_vcs-svn#svndump.c: svndump_read
+ - qemu/prevFiles/prev_aba210_80047d_test-qmp-input-visitor.c: test_visitor_in_int
+ - git/prevFiles/prev_6e1c23_db5d66_index-pack.c: parse_pack_header
+ - gstreamer/prevFiles/prev_6ea74a_3a595d_gst#gstutils.c: gst_pad_peer_query_caps
+ - gstreamer/prevFiles/prev_178bdcc_2d4ddc_libs#gst#check#gstcheck.c: gst_check_element_push_buffer_list
+ - vlc/prevFiles/prev_d794dd_f2dcb7_modules#mux#asf.c: Open
+ - php-src/prevFiles/prev_3f3e340_781065_sapi#phpdbg#phpdbg_opcode.c: phpdbg_decode_op
+ - wireshark/prevFiles/prev_7e2a24_d963b3_epan#dissectors#packet-dlt.c: dissect_dlt_verbose_parameter_uint
+ - php-src/prevFiles/prev_d8c7d6_08bbd2_Zend#zend_operators.c: _convert_to_string
+ - git/prevFiles/prev_6e1c23_db5d66_index-pack.c: git_index_pack_config
+ - wireshark/prevFiles/prev_35569d_81fe5b_epan#dissectors#packet-geonw.c: dissect_sec_intx
+ - vlc/prevFiles/prev_f22f4e_f9e122_modules#access#ftp.c: Open
+ - wireshark/prevFiles/prev_04e660_254502_epan#dissectors#packet-nfs.c: dissect_nfs4_threshold_item_file
+ - vlc/prevFiles/prev_f22f4e_f9e122_src#audio_output#mixer.c: MixBuffer
+ - wireshark/prevFiles/prev_ab97c3_046cf4_epan#dissectors#packet-ieee80211.c: add_tagged_field
+ - FFmpeg/prevFiles/prev_18b138_db4918_libavutil#opt.c: opt_list
+ - qemu/prevFiles/prev_aba210_80047d_test-qmp-input-visitor.c: visitor_input_test_init
+ - wireshark/prevFiles/prev_7e2a24_d963b3_epan#dissectors#packet-dlt.c: dissect_dlt_verbose_parameter_int
+ - php-src/prevFiles/prev_3f3e340_781065_sapi#phpdbg#phpdbg_opcode.c: phpdbg_decode_opline
+ - vlc/prevFiles/prev_d305c3_c2861c_modules#demux#mp4#libmp4.c: MP4_ReadBox_tfhd
+ - vlc/prevFiles/prev_b694c2_6b0dd9_src#text#strings.c: str_format_meta
+ - vlc/prevFiles/prev_9719d3_dba282_modules#demux#mp4#libmp4.c: MP4_ReadBoxRestricted
+ - vlc/prevFiles/prev_22cd80_d838e5_modules#access#dvb#scan.c: ScanDvbCNextFast
+ - gstreamer/prevFiles/prev_178bdcc_2d4ddc_plugins#elements#gsttypefindelement.c: gst_type_find_element_setcaps
+ - gtk/prevFiles/prev_771978_fdc620_gtk#inspector#misc-info.c: update_info
+ - vlc/prevFiles/prev_4382fe_0fc1c5_modules#demux#avi#libavi.c: AVI_ChunkReadCommon
+ - gtk/prevFiles/prev_c1cddb_d8adf5_demos#testpixbuf-color.c: save_image_verify
+ - gstreamer/prevFiles/prev_393033_2c4d0a_gst#autoplug#spidertest.c: property_change_callback
+ - gstreamer/prevFiles/prev_0f64d4_6fae13_gst#gstregistry.c: scan_and_update_registry
+ - gtk/prevFiles/prev_7ed2cb_4b0378_demos#testpixbuf-color.c: save_image_verify
+*/
+
+// ---------------------------------------------

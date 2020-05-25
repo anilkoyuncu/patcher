@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- free(E0); 
++ g_free(E0); 
+// Infered from: (qemu/{prevFiles/prev_756f51_5b47b7_block#cloop.c,revFiles/756f51_5b47b7_block#cloop.c}: cloop_close), (qemu/{prevFiles/prev_756f51_5b47b7_block#cloop.c,revFiles/756f51_5b47b7_block#cloop.c}: cloop_close), (qemu/{prevFiles/prev_756f51_5b47b7_block#cloop.c,revFiles/756f51_5b47b7_block#cloop.c}: cloop_close), (qemu/{prevFiles/prev_ae878b_e58972_ui#vnc-auth-sasl.c,revFiles/ae878b_e58972_ui#vnc-auth-sasl.c}: vnc_sasl_client_cleanup), (qemu/{prevFiles/prev_ae878b_e58972_ui#vnc-auth-sasl.c,revFiles/ae878b_e58972_ui#vnc-auth-sasl.c}: start_auth_sasl), (qemu/{prevFiles/prev_ae878b_e58972_ui#vnc-auth-sasl.c,revFiles/ae878b_e58972_ui#vnc-auth-sasl.c}: start_auth_sasl), (qemu/{prevFiles/prev_ae878b_e58972_ui#vnc-auth-sasl.c,revFiles/ae878b_e58972_ui#vnc-auth-sasl.c}: start_auth_sasl)
+// False positives: (git/revFiles/95693d_35cda0_bundle.c: create_bundle), (qemu/revFiles/ae878b_e58972_ui#vnc-auth-sasl.c: protocol_client_auth_sasl_mechname), (qemu/revFiles/ae878b_e58972_ui#vnc-auth-sasl.c: vnc_sasl_client_cleanup)
+// Recall: 0.67, Precision: 0.60, Matching recall: 0.67
+
+// ---------------------------------------------

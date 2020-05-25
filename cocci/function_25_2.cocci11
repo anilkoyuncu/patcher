@@ -1,0 +1,36 @@
+@@
+@@
+- le_jobject = register_list_destructors(_php_java_destructor, NULL); 
++ le_jobject = register_list_destructors(_php_java_destructor, NULL, "java"); 
+// Infered from: (php-src/{prevFiles/prev_7b4983_a0cfab_ext#java#java.c,revFiles/7b4983_a0cfab_ext#java#java.c}: PHP_MINIT_FUNCTION), (php-src/{prevFiles/prev_7b4983_a0cfab_ext#rpc#java#java.c,revFiles/7b4983_a0cfab_ext#rpc#java#java.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 12 rules):
+// -- Edit Location --
+// Recall: 0.46, Precision: 1.00
+// -- Node Change --
+// Recall: 0.37, Precision: 1.00
+// -- General --
+// Functions fully changed: 13/28(46%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#mcal#php_mcal.c: cal_close_it
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#java#java.c: _php_java_destructor
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#sysvshm#sysvshm.c: php_release_sysvshm
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#rpc#com#COM.c: php_idispatch_destructor
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#icap#php_icap.c: cal_close_it
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#dbase#dbase.c: _close_dbase
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#curl#curl.c: _php_curl_close
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#zlib#zlib.c: phpi_destructor_gzclose
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#ftp#php_ftp.c: ftp_destructor_ftpbuf
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#db#db.c: php_dbm_close
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#dba#dba.c: dba_close
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#rpc#java#java.c: _php_java_destructor
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#aspell#aspell.c: php_aspell_close
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#sysvsem#sysvsem.c: release_sysvsem_sem
+ - php-src/prevFiles/prev_7b4983_a0cfab_ext#standard#dir.c: _dir_dtor
+*/
+
+// ---------------------------------------------

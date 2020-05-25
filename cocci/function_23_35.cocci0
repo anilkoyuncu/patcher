@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- write_image_header(E0); 
++ int ret = write_image_header(E0); 
++ if (ret < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_284b43_237ccd_libavformat#fitsenc.c,revFiles/284b43_237ccd_libavformat#fitsenc.c}: fits_write_packet)
+// Recall: 0.27, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

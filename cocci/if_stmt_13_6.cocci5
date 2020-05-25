@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->codec->channels <= 0)  
++ if (E0->codec->channels <= 0 || E0->codec->channels > 8)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_d5a357_06eef9_libavformat#svag.c,revFiles/d5a357_06eef9_libavformat#svag.c}: svag_read_header)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

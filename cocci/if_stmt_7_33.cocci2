@@ -1,0 +1,13 @@
+@@
+identifier I0 = {mca_base_param_find ,mca_base_param_lookup_string };
+expression list E1;
+@@
+- if (OPAL_SUCCESS != I0(E1))  
++ if (0 > I0(E1))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_c63c4d_499b90_opal#mca#base#mca_base_components_open.c,revFiles/c63c4d_499b90_opal#mca#base#mca_base_components_open.c}: parse_requested), (ompi/{prevFiles/prev_c63c4d_499b90_opal#mca#base#mca_base_components_open.c,revFiles/c63c4d_499b90_opal#mca#base#mca_base_components_open.c}: open_components)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

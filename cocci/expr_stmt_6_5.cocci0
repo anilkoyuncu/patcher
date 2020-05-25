@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[E1 + 3] = NULL; 
++ E0[E1 + 2] = NULL; 
+// Infered from: (apr/{prevFiles/prev_9272b8_bc53a8_threadproc#unix#proc.c,revFiles/9272b8_bc53a8_threadproc#unix#proc.c}: apr_create_process)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

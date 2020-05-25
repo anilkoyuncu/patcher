@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return gst_parse_bin_from_description_full(E0, E1, NULL, 0, E2); 
++ return gst_parse_bin_from_description_full(E0, E1, NULL, GST_PARSE_FLAG_NONE,  E2); 
+// Infered from: (gstreamer/{prevFiles/prev_b57683_c0749e_gst#gstutils.c,revFiles/b57683_c0749e_gst#gstutils.c}: gst_parse_bin_from_description)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = tvb_get_ntohs(E1, (E2 += 2)); 
++ E0 = tvb_get_ntohs(E1, E2); 
+// Infered from: (wireshark/{prevFiles/prev_5388b8_ab38454_epan#dissectors#packet-l2tp.c,revFiles/5388b8_ab38454_epan#dissectors#packet-l2tp.c}: dissect_l2tp_udp)
+// False positives: (wireshark/revFiles/5388b8_ab38454_epan#dissectors#packet-l2tp.c: dissect_l2tp_udp)
+// Recall: 0.17, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

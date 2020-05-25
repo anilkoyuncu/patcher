@@ -1,0 +1,10 @@
+@@
+identifier I5 = {fc_to_str ,fcwwn_to_str };
+expression E0, E1, E3, E6, E2, E4;
+@@
+- proto_tree_add_string(E0, E1, E2, E3, E4,  I5(tvb_get_string(wmem_packet_scope(), E2, E6, E4))); 
++ proto_tree_add_string(E0, E1, E2, E3, E4,  I5(tvb_get_string_enc(wmem_packet_scope(), E2, E6, E4,  ENC_ASCII))); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-fcdns.c,revFiles/971ffd_421d81_epan#dissectors#packet-fcdns.c}: dissect_fcdns_swils_entries), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-fc.c,revFiles/971ffd_421d81_epan#dissectors#packet-fc.c}: dissect_fc_helper)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

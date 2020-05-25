@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef QKeyCode;
+@@
+- QKeyCode I0 = qemu_input_key_number_to_qcode(E1->u.qcode.data); 
++ QKeyCode I0 = qemu_input_key_number_to_qcode(E1->u.number.data); 
+// Infered from: (qemu/{prevFiles/prev_237925_1d5b8d_ui#input.c,revFiles/237925_1d5b8d_ui#input.c}: qmp_input_send_event)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

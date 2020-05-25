@@ -1,0 +1,27 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef GtkRecentChooser;
+@@
+- GtkRecentChooser *I0 = E1->data; 
+- gtk_recent_chooser_unselect_uri(I0, E2); 
++ GtkRecentChooser *c = E1->data; 
++ gtk_recent_chooser_unselect_uri(c, E2); 
+// Infered from: (gtk/{prevFiles/prev_00236c_230325_gtk#deprecated#gtkrecentaction.c,revFiles/00236c_230325_gtk#deprecated#gtkrecentaction.c}: gtk_recent_action_unselect_uri)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.96, Precision: 1.00
+// -- General --
+// Functions fully changed: 9/10(90%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_c56146_f1d471_epan#dissectors#packet-mac-lte.c: dissect_rar
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- PyByteArray_Resize(E0, E1 + PyBytes_GET_SIZE(E2)); 
++ if (PyByteArray_Resize(E0, E1 + PyBytes_GET_SIZE(E2)) < 0)  
++ {
++ Py_DECREF(E2); 
++ goto  fail; 
++ }
+// Infered from: (cpython/{prevFiles/prev_cc024d_af8b7e_Modules#_io#iobase.c,revFiles/cc024d_af8b7e_Modules#_io#iobase.c}: iobase_readline)
+// Recall: 0.44, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.89, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+
+// ---------------------------------------------

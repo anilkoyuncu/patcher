@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef gulong;
+@@
+- wmem_map_insert(E0->itl, GUINT_TO_POINTER(E1), E2); 
++ wmem_map_insert(E0->itl, GUINT_TO_POINTER((gulong )E1), E2); 
+// Infered from: (wireshark/{prevFiles/prev_133d4d_dfb92d_epan#dissectors#packet-iscsi.c,revFiles/133d4d_dfb92d_epan#dissectors#packet-iscsi.c}: dissect_iscsi_pdu)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

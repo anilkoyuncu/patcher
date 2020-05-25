@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- OBD_FREE_LARGE(E0, E1); 
++ kvfree(E0); 
+// Infered from: (linux/{prevFiles/prev_fea2e68_337844_drivers#staging#lustre#lustre#obdclass#lustre_handles.c,revFiles/fea2e68_337844_drivers#staging#lustre#lustre#obdclass#lustre_handles.c}: class_handle_cleanup)
+// Recall: 0.15, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

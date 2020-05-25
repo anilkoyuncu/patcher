@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E1 >> E2->log2_chroma_h; 
++ E0 = -((-E1) >> E2->log2_chroma_h); 
+// Infered from: (FFmpeg/{prevFiles/prev_09ab88_5301a0_libavcodec#imgconvert.c,revFiles/09ab88_5301a0_libavcodec#imgconvert.c}: avpicture_layout)
+// False positives: (FFmpeg/revFiles/09ab88_5301a0_libavcodec#imgconvert.c: ff_fill_pointer)
+// Recall: 0.33, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

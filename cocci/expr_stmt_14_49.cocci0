@@ -1,0 +1,8 @@
+@@
+expression E1, E2, E0;
+@@
+- fprintf(stderr, E0, E1, E2); 
+// Infered from: (git/{prevFiles/prev_838ecf_f8117f_http.c,revFiles/838ecf_f8117f_http.c}: new_http_pack_request), (git/{prevFiles/prev_838ecf_f8117f_http.c,revFiles/838ecf_f8117f_http.c}: new_http_object_request)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

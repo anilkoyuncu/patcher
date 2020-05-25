@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0->fmt_in.video.i_frame_rate_base && E1->vui.i_num_units_in_tick > 0)  
++ if (!E0->fmt_in.video.i_frame_rate_base && E1->vui.i_num_units_in_tick > 0 && E1->vui.i_time_scale > 1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_7eea08_7f5bf5_modules#packetizer#h264.c,revFiles/7eea08_7f5bf5_modules#packetizer#h264.c}: ActivateSets)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

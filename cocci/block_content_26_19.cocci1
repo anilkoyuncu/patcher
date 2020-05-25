@@ -1,0 +1,20 @@
+@@
+expression E0, E1;
+typedef pixman_box32_t;
+@@
+- E0 = _cairo_malloc_ab(E1, sizeof(pixman_rectangle16_t)); 
++ E0 = _cairo_malloc_ab(E1, sizeof(pixman_box32_t )); 
+// Infered from: (cairo/{prevFiles/prev_c7027c_852e78_src#cairo-image-surface.c,revFiles/c7027c_852e78_src#cairo-image-surface.c}: _cairo_image_surface_fill_rectangles), (cairo/{prevFiles/prev_91a6fe_83259f_src#cairo-image-surface.c,revFiles/91a6fe_83259f_src#cairo-image-surface.c}: _cairo_image_surface_fill_rectangles)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

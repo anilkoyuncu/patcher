@@ -1,0 +1,18 @@
+@@
+identifier I0, I1, I2;
+expression E3;
+typedef field_info;
+typedef gint;
+typedef guint8;
+@@
+  void proto_tree_set_oid(field_info *I0, const  guint8 *I1, gint I2)  
+  {
+  ...
+- DISSECTOR_ASSERT(E3 != NULL); 
++ DISSECTOR_ASSERT(E3 != NULL || I2 == 0); 
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_f1ba7e_bd3d51_epan#proto.c,revFiles/f1ba7e_bd3d51_epan#proto.c}: proto_tree_set_oid)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

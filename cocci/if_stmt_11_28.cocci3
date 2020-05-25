@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 != INPUT_RATE_DEFAULT && (!E1->b_can_pace_control || !E1->b_out_pace_control))  
++ if (E0 != INPUT_RATE_DEFAULT && (!E1->b_can_pace_control || (E1->p_sout && !E1->b_out_pace_control)))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_af1086_246603_src#input#input.c,revFiles/af1086_246603_src#input#input.c}: Control)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

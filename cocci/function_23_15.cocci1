@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0->current_point.x = 0; 
+- E0->current_point.y = 0; 
+// Infered from: (cairo/{prevFiles/prev_c78c01_53f74e_src#cairo-path-data.c,revFiles/c78c01_53f74e_src#cairo-path-data.c}: _cpdc_close_path), (cairo/{prevFiles/prev_c78c01_53f74e_src#cairo-path-data.c,revFiles/c78c01_53f74e_src#cairo-path-data.c}: _cpdp_close_path)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

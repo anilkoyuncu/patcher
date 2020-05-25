@@ -1,0 +1,30 @@
+@@
+identifier I1;
+type T0;
+@@
+- T0 *I1; 
+- I1 = xcalloc(1, sizeof(*I1)); 
++ T0 *I1 = NULL; 
+// Infered from: (openssh-portable/{prevFiles/prev_a63cfa_e6b950_clientloop.c,revFiles/a63cfa_e6b950_clientloop.c}: client_input_hostkeys)
+// False positives: (openssh-portable/revFiles/a63cfa_e6b950_clientloop.c: client_input_hostkeys), (openssh-portable/revFiles/a63cfa_e6b950_clientloop.c: client_new_escape_filter_ctx)
+// Recall: 0.33, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.60
+// -- Node Change --
+// Recall: 1.00, Precision: 0.40
+// -- General --
+// Functions fully changed: 0/5(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_c72b8e_030648_crypto#srp#srp_lib.c: SRP_Calc_x
+ - openssl/prevFiles/prev_4162c7d_85d6b0_crypto#srp#srp_lib.c: SRP_Calc_x
+ - openssl/prevFiles/prev_c72b8e_030648_crypto#srp#srp_lib.c: srp_Calc_k
+ - openssh-portable/prevFiles/prev_a63cfa_e6b950_clientloop.c: client_input_hostkeys
+ - openssh-portable/prevFiles/prev_a63cfa_e6b950_clientloop.c: client_new_escape_filter_ctx
+*/
+
+// ---------------------------------------------

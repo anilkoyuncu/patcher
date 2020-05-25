@@ -1,0 +1,35 @@
+@@
+expression E0, E1;
+@@
+- if (of_get_property(E0, E1, NULL))  
++ if (of_property_read_bool(E0, E1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_519302_29b481_sound#soc#soc-core.c,revFiles/519302_29b481_sound#soc#soc-core.c}: snd_soc_of_parse_daifmt), (linux/{prevFiles/prev_74c269_712043_drivers#soc#fsl#qe#qe_tdm.c,revFiles/74c269_712043_drivers#soc#fsl#qe#qe_tdm.c}: ucc_of_parse_tdm), (linux/{prevFiles/prev_1fadfe9_74c269_arch#powerpc#sysdev#mpic.c,revFiles/1fadfe9_74c269_arch#powerpc#sysdev#mpic.c}: mpic_alloc), (linux/{prevFiles/prev_519302_29b481_sound#soc#sh#rcar#ssi.c,revFiles/519302_29b481_sound#soc#sh#rcar#ssi.c}: rsnd_ssi_probe), (linux/{prevFiles/prev_150d42_2f7649_drivers#mmc#host#sdhci-of-esdhc.c,revFiles/150d42_2f7649_drivers#mmc#host#sdhci-of-esdhc.c}: sdhci_esdhc_probe)
+// Recall: 0.45, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.90, Precision: 1.00
+// -- Node Change --
+// Recall: 0.82, Precision: 0.90
+// -- General --
+// Functions fully changed: 8/10(80%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_c9141a_291a4d_crypto#srp#srp_lib.c: SRP_Calc_client_key
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_cb2912_d0f1ea_sha1_file.c: link_alt_odb_entry
+*/
+
+// ---------------------------------------------

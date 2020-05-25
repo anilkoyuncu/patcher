@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->ext_object_type = E0->object_type; 
++ E0->ext_object_type = AOT_SBR; 
+// Infered from: (FFmpeg/{prevFiles/prev_702b73_58f48a_libavcodec#mpeg4audio.c,revFiles/702b73_58f48a_libavcodec#mpeg4audio.c}: ff_mpeg4audio_get_config)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

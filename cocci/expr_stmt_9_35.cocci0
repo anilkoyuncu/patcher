@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->version = E0->method->version; 
++ E0->session->ssl_version = E0->version = E0->method->version; 
+// Infered from: (openssl/{prevFiles/prev_7322ab_97cacc_ssl#s3_clnt.c,revFiles/7322ab_97cacc_ssl#s3_clnt.c}: ssl3_get_server_hello)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

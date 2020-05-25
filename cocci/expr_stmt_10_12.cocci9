@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = 2 * acos((E1[0] * E1[0] + E1[2] * E1[2] - E1[1] * E1[1]) / (2 * E1[  2] * E1[  1])); 
++ E0 = 2 * acos((E1[0] * E1[0] + E1[2] * E1[2] - E1[1] * E1[1]) / (2 * E1[  2] * E1[  0])); 
+// Infered from: (codeflaws/{prevFiles/prev_1-C-15203581-15203678.c,revFiles/1-C-15203581-15203678.c}: main)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

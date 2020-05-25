@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- init_get_bits(&E0, E1, E2); 
++ if ((ret = init_get_bits(&E0, E1, E2)) < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_73abc3_8888c7_libavcodec#aacdec.c,revFiles/73abc3_8888c7_libavcodec#aacdec.c}: decode_audio_specific_config)
+// False positives: (FFmpeg/revFiles/4484c7_1146bbc_libavcodec#alsdec.c: decode_frame), (FFmpeg/revFiles/4484c7_1146bbc_libavcodec#alsdec.c: read_specific_config), (FFmpeg/revFiles/73abc3_8888c7_libavcodec#aacdec.c: aac_decode_frame), (FFmpeg/revFiles/73abc3_8888c7_libavcodec#aacdec.c: latm_decode_frame), (FFmpeg/revFiles/dc6b99_8cc6e9_libavformat#movenc.c: mov_write_ac3_tag), (FFmpeg/revFiles/dc6b99_8cc6e9_libavformat#movenc.c: mov_write_dvc1_structs)
+// Recall: 0.26, Precision: 0.29, Matching recall: 0.55
+
+// ---------------------------------------------

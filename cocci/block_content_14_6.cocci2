@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+@@
+- int I0; 
++ int protocol_node; 
+  ...
+- I0 = tick_stat_node(E1, port_type_to_str(E2->ptype), E3, TRUE); 
++ protocol_node = tick_stat_node(E1, port_type_to_str(E2->ptype), E3, TRUE); 
+  ...
+- tick_stat_node(E1, E4, I0, TRUE); 
++ tick_stat_node(E1, E4, protocol_node, TRUE); 
+// Infered from: (wireshark/{prevFiles/prev_c033a0_bb7947_plugins#stats_tree#pinfo_stats_tree.c,revFiles/c033a0_bb7947_plugins#stats_tree#pinfo_stats_tree.c}: dsts_stats_tree_packet)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

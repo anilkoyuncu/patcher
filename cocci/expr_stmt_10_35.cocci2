@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- update_prelight(E0, -E0->priv->event_last_x, -E0->priv->event_last_y); 
++ update_prelight(E0, E0->priv->event_last_x, E0->priv->event_last_y); 
+// Infered from: (gtk/{prevFiles/prev_acb6f4_270dc0_gtk#gtktreeview.c,revFiles/acb6f4_270dc0_gtk#gtktreeview.c}: gtk_tree_view_size_allocate), (gtk/{prevFiles/prev_3e9dab_fa60b4_gtk#gtktreeview.c,revFiles/3e9dab_fa60b4_gtk#gtktreeview.c}: gtk_tree_view_size_allocate)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- permitted_adm_opens = xmalloc(sizeof(*permitted_adm_opens)); 
++ permitted_adm_opens = xcalloc(sizeof(*permitted_adm_opens), 1); 
+// Infered from: (openssh-portable/{prevFiles/prev_297060_63ebf0_channels.c,revFiles/297060_63ebf0_channels.c}: channel_disable_adm_local_opens)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

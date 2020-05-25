@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef uint8_t;
+@@
+- return c448_ed448_verify_prehash(E0, E1, E2, E3, E4) == C448_SUCCESS; 
++ return c448_ed448_verify_prehash(E0, E1, E2, E3, (uint8_t )E4) == C448_SUCCESS; 
+// Infered from: (openssl/{prevFiles/prev_0cdcda_dd03fd_crypto#ec#curve448#eddsa.c,revFiles/0cdcda_dd03fd_crypto#ec#curve448#eddsa.c}: ED448ph_verify)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

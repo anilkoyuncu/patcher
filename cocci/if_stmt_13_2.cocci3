@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (GDK_WINDOW_IS_MAPPED(E0))  
++ if (GDK_WINDOW_IS_MAPPED(E0) && GDK_WINDOW_TYPE(E0) != GDK_WINDOW_FOREIGN)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_64e7c7_c84c0e_gdk#gdkwindow.c,revFiles/64e7c7_c84c0e_gdk#gdkwindow.c}: show_all_visible_impls), (gtk/{prevFiles/prev_64e7c7_c84c0e_gdk#gdkwindow.c,revFiles/64e7c7_c84c0e_gdk#gdkwindow.c}: hide_all_visible_impls)
+// False positives: (gtk/revFiles/64e7c7_c84c0e_gdk#gdkwindow.c: gdk_window_hide), (gtk/revFiles/64e7c7_c84c0e_gdk#gdkwindow.c: gdk_window_set_composited), (gtk/revFiles/64e7c7_c84c0e_gdk#gdkwindow.c: gdk_window_shape_combine_region)
+// Recall: 0.15, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------

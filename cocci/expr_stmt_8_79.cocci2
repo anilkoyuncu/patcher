@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- gtk_clist_remove(E0->table, E0->num_endpoints - 1 - E1); 
++ gtk_clist_remove(E0->table, E0->num_endpoints - E1); 
+// Infered from: (wireshark/{prevFiles/prev_4f5d2d_fbcaaa_gtk#endpoint_talkers_table.c,revFiles/4f5d2d_fbcaaa_gtk#endpoint_talkers_table.c}: reset_ett_table_data)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

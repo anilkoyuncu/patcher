@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = min((long long )E1 / ((E2 + 1) / 2) * E3, 1000000); 
++ E0 = min((long long )E3 / ((E2 + 1) / 2) * E1, 1000000); 
+// Infered from: (codeflaws/{prevFiles/prev_89-A-495525-495528.c,revFiles/89-A-495525-495528.c}: main)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

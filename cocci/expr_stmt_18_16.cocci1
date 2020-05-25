@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "[%s %s] ", E0->action & CURL_POLL_IN ? "RECVING" :"",  E0->action & CURL_POLL_OUT ? "SENDING" :""); 
++ fprintf(stderr, "[%s %s] ", (E0->action & CURL_POLL_IN) ? "RECVING" :"",  (E0->action & CURL_POLL_OUT) ? "SENDING" :""); 
+// Infered from: (curl/{prevFiles/prev_6b3dde_5f8b9f_lib#multi.c,revFiles/6b3dde_5f8b9f_lib#multi.c}: Curl_multi_dump)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.75
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_6b3dde_5f8b9f_lib#asyn-ares.c: waitperform
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_6b3dde_5f8b9f_lib#easy.c: events_socket
+*/
+
+// ---------------------------------------------

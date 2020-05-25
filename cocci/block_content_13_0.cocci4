@@ -1,0 +1,8 @@
+@@
+@@
+- dissector_add("tcp.port", global_smtp_tcp_port, dissect_smtp); 
++ old_dissector_add("tcp.port", global_smtp_tcp_port, dissect_smtp); 
+// Infered from: (wireshark/{prevFiles/prev_296265_fe7540_packet-smtp.c,revFiles/296265_fe7540_packet-smtp.c}: proto_reg_handoff_smtp)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

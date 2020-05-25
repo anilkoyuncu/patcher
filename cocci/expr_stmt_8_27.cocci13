@@ -1,0 +1,9 @@
+@@
+expression E1, E2, E0;
+@@
+- memcpy(*E0, E1, E2); 
++ memcpy(*E0, E1, __MIN(E2, MLTI_BUF_MAX_SIZE)); 
+// Infered from: (vlc/{prevFiles/prev_19bd7f_3a57af_modules#access#rtsp#real.c,revFiles/19bd7f_3a57af_modules#access#rtsp#real.c}: select_mlti_data), (vlc/{prevFiles/prev_19bd7f_3a57af_modules#access#rtsp#real.c,revFiles/19bd7f_3a57af_modules#access#rtsp#real.c}: select_mlti_data)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

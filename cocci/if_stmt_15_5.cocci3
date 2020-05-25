@@ -1,0 +1,9 @@
+@@
+@@
+- gen_helper_vfp_uitod(cpu_F0d, cpu_F0s, cpu_env); 
++ gen_helper_vfp_sitod(cpu_F0d, cpu_F0s, cpu_env); 
+// Infered from: (qemu/{prevFiles/prev_66230e_9c9bb6_target-arm#translate.c,revFiles/66230e_9c9bb6_target-arm#translate.c}: gen_vfp_sito)
+// False positives: (qemu/revFiles/66230e_9c9bb6_target-arm#translate.c: gen_vfp_uito)
+// Recall: 0.03, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

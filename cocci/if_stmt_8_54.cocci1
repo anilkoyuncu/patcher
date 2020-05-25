@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->p_sys->p_win->owner_window)  
++ if (E0->p_sys->hparent)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_65b525_15f4bc_modules#video_output#directx#events.c,revFiles/65b525_15f4bc_modules#video_output#directx#events.c}: Control)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

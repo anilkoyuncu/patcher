@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef QXLCommandExt;
+typedef intptr_t;
+@@
+- QXLCommandExt *I0 = (void *)(E1.info->id); 
++ QXLCommandExt *I0 = (void *)(intptr_t )(E1.info->id); 
+// Infered from: (qemu/{prevFiles/prev_e8e23b_a09692_hw#display#qxl.c,revFiles/e8e23b_a09692_hw#display#qxl.c}: interface_release_resource)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

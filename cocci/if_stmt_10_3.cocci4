@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = av_find_stream_info(E1)) < 0)  
++ if ((E0 = avformat_find_stream_info(E1, NULL)) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_8af936_a54454_ffprobe.c,revFiles/8af936_a54454_ffprobe.c}: open_input_file)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

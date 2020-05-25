@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return XRenderFindFormat(E0, E1, &E2, 1); 
++ return XRenderFindFormat(E0, E1, &E2, 0); 
+// Infered from: (cairo/{prevFiles/prev_7658ec_446a3d_src#cairo-xlib-display.c,revFiles/7658ec_446a3d_src#cairo-xlib-display.c}: _cairo_xlib_display_get_xrender_format_for_pixman)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

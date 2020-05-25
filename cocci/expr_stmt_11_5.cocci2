@@ -1,0 +1,53 @@
+@@
+expression E0, E1;
+@@
+- av_log(E0, AV_LOG_VERBOSE,  "Snappy buffer bigger than uncompressed (%lu >= %lu bytes).\n",  E1->compressed_size, E1->uncompressed_size); 
+// Infered from: (FFmpeg/{prevFiles/prev_5a51ca_2b09a3_libavcodec#hapenc.c,revFiles/5a51ca_2b09a3_libavcodec#hapenc.c}: hap_compress_frame)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.14, Precision: 1.00
+// -- Node Change --
+// Recall: 0.06, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/29(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_5a51ca_2b09a3_libavcodec#hapenc.c: hap_compress_frame
+ - vlc/prevFiles/prev_4d4dc1_7d9158_modules#stream_filter#rar.c: Open
+ - vlc/prevFiles/prev_c35187_867456_modules#demux#avi#avi.c: Open
+ - vlc/prevFiles/prev_5274bd_0d1580_modules#demux#ts.c: CheckPCR
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_0bf9e3_c0a2a0_hw#usb-ohci.c: usb_ohci_init
+ - qemu/prevFiles/prev_8b4a89_085d81_hw#serial.c: serial_ioport_write
+ - qemu/prevFiles/prev_c5539c_41c234_hw#i2c#pm_smbus.c: smb_ioport_readb
+ - gstreamer/prevFiles/prev_febfab_d3a2ed_libs#gst#check#gstharness.c: gst_harness_create_buffer
+ - vlc/prevFiles/prev_c35187_867456_modules#demux#avi#libavi.c: AVI_ChunkRead_strf
+ - qemu/prevFiles/prev_145c7c_98609c_hw#ide#cmd646.c: bmdma_write
+ - qemu/prevFiles/prev_5016e2_710240_migration.c: migration_thread
+ - qemu/prevFiles/prev_145c7c_98609c_hw#ide#cmd646.c: bmdma_read
+ - qemu/prevFiles/prev_721da6_3ac216_hw#ide#cmd646.c: bmdma_write
+ - qemu/prevFiles/prev_c5539c_41c234_hw#i2c#pm_smbus.c: smb_ioport_writeb
+ - qemu/prevFiles/prev_c5539c_41c234_hw#isa#apm.c: apm_ioport_readb
+ - qemu/prevFiles/prev_bd418d_fe7f95_hw#multiboot.c: mb_add_mod
+ - qemu/prevFiles/prev_0bf9e3_c0a2a0_hw#usb-ohci.c: ohci_service_td
+ - vlc/prevFiles/prev_5274bd_0d1580_modules#demux#ts.c: GetLastPCR
+ - qemu/prevFiles/prev_f1b8ca_044b99_xen-all.c: xen_remove_from_physmap
+ - qemu/prevFiles/prev_bd418d_fe7f95_hw#multiboot.c: load_multiboot
+ - qemu/prevFiles/prev_8b4a89_085d81_hw#serial.c: serial_ioport_read
+ - qemu/prevFiles/prev_f1b8ca_044b99_xen-all.c: xen_add_to_physmap
+ - qemu/prevFiles/prev_0bf9e3_c0a2a0_block#qcow2-refcount.c: update_refcount
+ - qemu/prevFiles/prev_c5539c_41c234_hw#isa#apm.c: apm_ioport_writeb
+ - qemu/prevFiles/prev_721da6_3ac216_hw#ide#cmd646.c: bmdma_read
+ - qemu/prevFiles/prev_145c7c_98609c_hw#ide#via.c: bmdma_read
+ - qemu/prevFiles/prev_0bf9e3_c0a2a0_block#qcow2-refcount.c: alloc_clusters_noref
+ - qemu/prevFiles/prev_145c7c_98609c_hw#ide#via.c: bmdma_write
+ - FFmpeg/prevFiles/prev_8d9531_e9f400_libavformat#wav.c: wav_parse_bext_tag
+*/
+
+// ---------------------------------------------

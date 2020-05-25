@@ -1,0 +1,30 @@
+@@
+identifier I0;
+expression E1;
+typedef guint;
+@@
+- guint I0 = tvb_length(E1); 
++ guint I0 = tvb_reported_length(E1); 
+// Infered from: (wireshark/{prevFiles/prev_14b75d_a34b25_epan#dissectors#packet-etsi_card_app_toolkit.c,revFiles/14b75d_a34b25_epan#dissectors#packet-etsi_card_app_toolkit.c}: dissect_cat)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 1.00
+// -- Node Change --
+// Recall: 0.25, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_14b75d_a34b25_epan#dissectors#packet-etsi_card_app_toolkit.c: dissect_cat
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_e57477_94e577_libavcodec#raw.c: 
+ - wireshark/prevFiles/prev_14b75d_a34b25_epan#dissectors#packet-etsi_card_app_toolkit.c: 
+*/
+
+// ---------------------------------------------

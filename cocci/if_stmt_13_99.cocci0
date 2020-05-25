@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (url_exist(E0))  
++ if (avio_check(E0, AVIO_FLAG_READ) > 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_55815e_59d969_libavformat#img2.c,revFiles/55815e_59d969_libavformat#img2.c}: find_image_range), (FFmpeg/{prevFiles/prev_55815e_59d969_libavformat#img2.c,revFiles/55815e_59d969_libavformat#img2.c}: find_image_range)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

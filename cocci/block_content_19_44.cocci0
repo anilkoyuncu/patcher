@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- return _PyST_GetSymbol(E0->st_cur, E1); 
++ long ret = _PyST_GetSymbol(E0->st_cur, E1); 
++ Py_DECREF(E1); 
++ return ret; 
+// Infered from: (cpython/{prevFiles/prev_4901dc_52c1a6_Python#symtable.c,revFiles/4901dc_52c1a6_Python#symtable.c}: symtable_lookup)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

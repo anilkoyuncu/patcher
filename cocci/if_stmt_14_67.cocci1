@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 <  E1 ||  E2[E3 -  1] == 1)  
++ if (E0 <  E1)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_107-B-633264-633415.c,revFiles/107-B-633264-633415.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

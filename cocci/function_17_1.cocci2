@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (pl_priv(E0)->b_auto_preparse && (E1 & PLAYLIST_PREPARSE || (E1 & PLAYLIST_SPREPARSE && (  EMPTY_STR(  E2) || (  EMPTY_STR(  E3))))))  
++ if (pl_priv(E0)->b_auto_preparse && (EMPTY_STR(E2) || (EMPTY_STR(E3))))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_63efe9_ffce10_src#playlist#item.c,revFiles/63efe9_ffce10_src#playlist#item.c}: GoAndPreparse)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.09, Precision: 1.00
+// -- Node Change --
+// Recall: 0.04, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/34(8%)
+
+
+// ---------------------------------------------

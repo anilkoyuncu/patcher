@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0->fmt_out.video.i_frame_rate_base = E1->time_base.num; 
++ E0->fmt_out.video.i_frame_rate_base = E1->time_base.num * __MAX(E1->ticks_per_frame,  1); 
+// Infered from: (vlc/{prevFiles/prev_79d91b_050766_modules#codec#avcodec#video.c,revFiles/79d91b_050766_modules#codec#avcodec#video.c}: ffmpeg_NewPictBuf)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

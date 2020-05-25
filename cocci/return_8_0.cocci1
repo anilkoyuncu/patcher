@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- return strdup(E0->psz_eng_name); 
++ return strdup(E0->psz_iso639_1); 
+// Infered from: (vlc/{prevFiles/prev_79d33c_bc366f_src#input#es_out.c,revFiles/79d33c_bc366f_src#input#es_out.c}: LanguageGetCode), (vlc/{prevFiles/prev_ac8a52_79d33c_modules#access#dvdnav.c,revFiles/ac8a52_79d33c_modules#access#dvdnav.c}: DemuxGetLanguageCode)
+// False positives: (vlc/revFiles/79d33c_bc366f_src#input#es_out.c: LanguageGetName)
+// Recall: 0.67, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.75
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_79d33c_bc366f_src#input#es_out.c: LanguageGetName
+*/
+
+// ---------------------------------------------

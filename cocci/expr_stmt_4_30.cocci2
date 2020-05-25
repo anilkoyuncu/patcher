@@ -1,0 +1,38 @@
+@@
+identifier I0;
+expression E2, E1;
+typedef zval;
+@@
+- zval *I0; 
++ zval **I0; 
+  ...
+- if (E1)  
+- {
+  ...
+- }
+- if (E2)  
+- {
+  ...
+- }
+// Infered from: (php-src/{prevFiles/prev_104b4f_e5f6dc_ext#standard#browscap.c,revFiles/104b4f_e5f6dc_ext#standard#browscap.c}: browser_reg_compare)
+// False positives: (php-src/revFiles/104b4f_e5f6dc_ext#standard#browscap.c: browser_reg_compare), (php-src/revFiles/f2a598_0e91c5_ext#spl#spl_iterators.c: PHP_FUNCTION)
+// Recall: 0.20, Precision: 0.25, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.60
+// -- Node Change --
+// Recall: 0.60, Precision: 0.33
+// -- General --
+// Functions fully changed: 1/5(20%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_104b4f_e5f6dc_ext#standard#browscap.c: browser_reg_compare
+ - php-src/prevFiles/prev_104b4f_e5f6dc_ext#standard#browscap.c: PHP_FUNCTION
+ - FFmpeg/prevFiles/prev_c62821_079d1a_libavcodec#ra144.c: ff_int_to_int16
+ - php-src/prevFiles/prev_f2a598_0e91c5_ext#spl#spl_iterators.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

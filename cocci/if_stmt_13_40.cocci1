@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- BN_sub(E0, E1, E2); 
++ if (!BN_sub(E0, E1, E2))  
++ {
++ goto  err; 
++ }
+// Infered from: (openssl/{prevFiles/prev_776654_d65225_crypto#rsa#rsa_eay.c,revFiles/776654_d65225_crypto#rsa#rsa_eay.c}: RSA_eay_public_decrypt), (openssl/{prevFiles/prev_776654_d65225_crypto#dsa#dsa_ossl.c,revFiles/776654_d65225_crypto#dsa#dsa_ossl.c}: dsa_do_sign)
+// False positives: (openssl/revFiles/776654_d65225_crypto#rsa#rsa_eay.c: RSA_eay_private_encrypt)
+// Recall: 0.33, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

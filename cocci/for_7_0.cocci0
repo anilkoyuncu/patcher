@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- for(E0 = 0;E0 < sizeof(doserrors);E0++)  
++ for(E0 = 0;E0 < (int )sizeof(doserrors);E0++)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_97d9cd_bf6fc3_tar#bsdtar_windows.c,revFiles/97d9cd_bf6fc3_tar#bsdtar_windows.c}: __tar_dosmaperr)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

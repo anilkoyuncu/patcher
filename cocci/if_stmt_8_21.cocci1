@@ -1,0 +1,48 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 || E1 == E2)  
++ if (E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_070e5f_e1104a_convert.c,revFiles/070e5f_e1104a_convert.c}: apply_multi_file_filter), (codeflaws/{prevFiles/prev_110-A-18286939-18287093.c,revFiles/110-A-18286939-18287093.c}: main)
+// False positives: (git/revFiles/070e5f_e1104a_convert.c: crlf_to_git), (git/revFiles/175a49_4a92d1_builtin-merge-recursive.c: merge_file), (php-src/revFiles/2bcae5_9c1960_ext#mysqli#mysqli_api.c: PHP_FUNCTION), (php-src/revFiles/a55973_d19ecd_Zend#zend_compile.c: zend_compile_prop_decl), (php-src/revFiles/ce0884_d056f96_Zend#zend_execute.c: zend_assign_to_variable_reference)
+// Recall: 0.11, Precision: 0.31, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 0.38
+// -- Node Change --
+// Recall: 0.16, Precision: 0.40
+// -- General --
+// Functions fully changed: 3/17(17%)
+
+/*
+Functions where the patch did not apply:
+ - cairo/prevFiles/prev_479812_53d1a4_src#cairo-pdf-surface.c: _cairo_pdf_surface_analyze_operation
+ - php-src/prevFiles/prev_a55973_d19ecd_Zend#zend_compile.c: zend_get_call_op
+ - gstreamer/prevFiles/prev_9bc26c_0c513e_plugins#elements#gstinputselector.c: gst_selector_pad_chain
+ - git/prevFiles/prev_175a49_4a92d1_builtin-merge-recursive.c: remove_path
+ - git/prevFiles/prev_175a49_4a92d1_builtin-merge-recursive.c: remove_file
+ - codeflaws/prevFiles/prev_265-A-12333691-12333797.c: main
+ - gstreamer/prevFiles/prev_9bc26c_0c513e_plugins#elements#gstinputselector.c: gst_selector_pad_event
+ - git/prevFiles/prev_070e5f_e1104a_convert.c: start_multi_file_filter
+ - FFmpeg/prevFiles/prev_bb3212_c8a110_libavcodec#mpc8.c: mpc8_decode_frame
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_a55973_d19ecd_Zend#zend_compile.c: zend_compile_prop_decl
+ - php-src/prevFiles/prev_2bcae5_9c1960_ext#mysqli#mysqli_api.c: PHP_FUNCTION
+ - git/prevFiles/prev_175a49_4a92d1_builtin-merge-recursive.c: merge_file
+ - git/prevFiles/prev_070e5f_e1104a_convert.c: crlf_to_git
+ - php-src/prevFiles/prev_ce0884_d056f96_Zend#zend_execute.c: zend_assign_to_variable_reference
+*/
+
+// ---------------------------------------------

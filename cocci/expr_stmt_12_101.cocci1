@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- pcapng_debug3("pcapng_read_packet_block: encapsulation = %d (%s), pseudo header size = %d.",  E0.wtap_encap, wtap_encap_string(E0.wtap_encap),  pcap_get_phdr_size(E0.wtap_encap,  &E1->packet_header.pseudo_header)); 
++ pcapng_debug3("pcapng_read_packet_block: encapsulation = %d (%s), pseudo header size = %d.",  E0.wtap_encap, wtap_encap_string(E0.wtap_encap),  pcap_get_phdr_size(E0.wtap_encap,  &E1->packet_header->pseudo_header)); 
+// Infered from: (wireshark/{prevFiles/prev_25a8c5_f9da85_wiretap#pcapng.c,revFiles/25a8c5_f9da85_wiretap#pcapng.c}: pcapng_read_packet_block)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0, I1;
+typedef proto_tree;
+@@
+- proto_tree *I0 = proto_item_add_subtree(I1, ett_generic_rateinfo_class); 
++ proto_tree *I0 = proto_item_add_subtree(ti_local, ett_generic_rateinfo_class); 
+// Infered from: (wireshark/{prevFiles/prev_ceebcc_e78313_epan#dissectors#packet-aim-generic.c,revFiles/ceebcc_e78313_epan#dissectors#packet-aim-generic.c}: dissect_generic_rateinfo)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

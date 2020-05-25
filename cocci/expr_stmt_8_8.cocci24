@@ -1,0 +1,58 @@
+@@
+expression E0, E1;
+@@
+- if (E0 < 0)  
++ if (E0 <= 0)  
+  {
+- hw_error("qemu: could not load LPAR rtas '%s'\n", E1); 
++ error_report("Could not load LPAR firmware '%s'", E1); 
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_68fea5_a1a456_hw#ppc#spapr.c,revFiles/68fea5_a1a456_hw#ppc#spapr.c}: ppc_spapr_init)
+// False positives: (qemu/revFiles/68fea5_a1a456_hw#ppc#spapr.c: ppc_spapr_init)
+// Recall: 0.04, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 25 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.52, Precision: 0.93
+// -- General --
+// Functions fully changed: 20/44(45%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#core#machine.c: machine_numa_finish_init
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#arm#highbank.c: calxeda_init
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#i386#pc.c: pc_find_fdc0
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#i386#pc_q35.c: pc_q35_init
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#misc#aspeed_sdmc.c: ast2400_rambits
+ - qemu/prevFiles/prev_3dc6f8_97f403_target#i386#cpu.c: x86_cpu_realizefn
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#i386#pc_piix.c: pc_init1
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#arm#kzm.c: kzm_init
+ - qemu/prevFiles/prev_3dc6f8_97f403_target#i386#kvm.c: kvm_arch_set_tsc_khz
+ - qemu/prevFiles/prev_34f22f_477cea_net#dump.c: dump_receive_iov
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#i386#pc.c: pc_machine_set_max_ram_below_4g
+ - qemu/prevFiles/prev_3dc6f8_97f403_block#rbd.c: qemu_rbd_open
+ - qemu/prevFiles/prev_3dc6f8_97f403_block#iscsi.c: iscsi_open
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#arm#imx25_pdk.c: imx25_pdk_init
+ - vlc/prevFiles/prev_7e8f17_94348d_bin#winvlc.c: vlc_exception_filter
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#scsi#scsi-bus.c: scsi_bus_legacy_handle_cmdline
+ - qemu/prevFiles/prev_3dc6f8_97f403_block#backup.c: backup_job_create
+ - qemu/prevFiles/prev_3dc6f8_97f403_target#i386#kvm.c: kvm_arch_init_vcpu
+ - qemu/prevFiles/prev_3dc6f8_97f403_target#i386#cpu.c: x86_cpu_parse_featurestr
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#misc#aspeed_sdmc.c: ast2500_rambits
+ - vlc/prevFiles/prev_61529b_51c3ce_modules#access#dvb#access.c: SatelliteSetProgram
+ - qemu/prevFiles/prev_3dc6f8_97f403_target#s390x#kvm.c: kvm_s390_apply_cpu_model
+ - qemu/prevFiles/prev_3dc6f8_97f403_hw#i386#kvm#pci-assign.c: assigned_device_pci_cap_init
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_68fea5_a1a456_hw#ppc#spapr.c: ppc_spapr_init
+*/
+
+// ---------------------------------------------

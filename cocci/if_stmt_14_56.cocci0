@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- if ((E0 & (1 << 31)) == 0)  
+- {
+  ...
+- }
+// Infered from: (linux/{prevFiles/prev_557e361_9a3aeb_drivers#staging#comedi#drivers#dyna_pci10xx.c,revFiles/557e361_9a3aeb_drivers#staging#comedi#drivers#dyna_pci10xx.c}: dyna_pci10xx_ai_eoc), (linux/{prevFiles/prev_4f8f316_22d89c_drivers#staging#rts5208#rtsx_chip.c,revFiles/4f8f316_22d89c_drivers#staging#rts5208#rtsx_chip.c}: rtsx_write_register), (linux/{prevFiles/prev_4f8f316_22d89c_drivers#staging#rts5208#rtsx_chip.c,revFiles/4f8f316_22d89c_drivers#staging#rts5208#rtsx_chip.c}: rtsx_read_register)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

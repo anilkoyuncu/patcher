@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- proto_tree_add_bits_item(E0, hf_gsm_a_gm_acc_cap_struct_len, E1, E2, 7,  ENC_BIG_ENDIAN); 
++ proto_tree_add_bits_item(E0, hf_gsm_a_gm_acc_tech_type, E1, E2, 4,  ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_b737d7_3ef2fd_epan#dissectors#packet-gsm_a_gm.c,revFiles/b737d7_3ef2fd_epan#dissectors#packet-gsm_a_gm.c}: de_gmm_ms_radio_acc_cap)
+// False positives: (wireshark/revFiles/b737d7_3ef2fd_epan#dissectors#packet-gsm_a_gm.c: de_gmm_ms_radio_acc_cap)
+// Recall: 0.25, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

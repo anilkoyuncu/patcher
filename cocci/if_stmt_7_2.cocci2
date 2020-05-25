@@ -1,0 +1,226 @@
+@@
+expression E0;
+@@
+- if (E0 == false)  
++ if (!E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_4bb0142_38272d2_drivers#staging#rtl8192e#rtl819x_TSProc.c,revFiles/4bb0142_38272d2_drivers#staging#rtl8192e#rtl819x_TSProc.c}: GetTs), (linux/{prevFiles/prev_941add_2f9dcc4_drivers#staging#rtl8723bs#hal#HalHWImg8723B_BB.c,revFiles/941add_2f9dcc4_drivers#staging#rtl8723bs#hal#HalHWImg8723B_BB.c}: ODM_ReadAndConfig_MP_8723B_AGC_TAB), (linux/{prevFiles/prev_941add_2f9dcc4_drivers#staging#rtl8723bs#hal#HalHWImg8723B_BB.c,revFiles/941add_2f9dcc4_drivers#staging#rtl8723bs#hal#HalHWImg8723B_BB.c}: ODM_ReadAndConfig_MP_8723B_PHY_REG), (linux/{prevFiles/prev_a0886f_2a7089d_drivers#staging#rtl8192u#ieee80211#rtl819x_TSProc.c,revFiles/a0886f_2a7089d_drivers#staging#rtl8192u#ieee80211#rtl819x_TSProc.c}: GetTs), (linux/{prevFiles/prev_941add_2f9dcc4_drivers#staging#rtl8723bs#hal#HalHWImg8723B_RF.c,revFiles/941add_2f9dcc4_drivers#staging#rtl8723bs#hal#HalHWImg8723B_RF.c}: ODM_ReadAndConfig_MP_8723B_RadioA), (linux/{prevFiles/prev_941add_2f9dcc4_drivers#staging#rtl8723bs#hal#HalHWImg8723B_MAC.c,revFiles/941add_2f9dcc4_drivers#staging#rtl8723bs#hal#HalHWImg8723B_MAC.c}: ODM_ReadAndConfig_MP_8723B_MAC_REG)
+// False positives: (linux/revFiles/4bb0142_38272d2_drivers#staging#rtl8192e#rtl819x_TSProc.c: TsStartAddBaProcess), (linux/revFiles/a0886f_2a7089d_drivers#staging#rtl8192u#ieee80211#rtl819x_TSProc.c: TsStartAddBaProcess)
+// Recall: 0.06, Precision: 0.75, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.91, Precision: 0.33
+// -- Node Change --
+// Recall: 0.88, Precision: 0.28
+// -- General --
+// Functions fully changed: 69/262(26%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_88a849_00ffbd_libavformat#mpegts.c: mpegts_probe
+ - linux/prevFiles/prev_a0886f_2a7089d_drivers#staging#rtl8192u#ieee80211#rtl819x_TSProc.c: SearchAdmitTRStream
+ - linux/prevFiles/prev_1208f1_938db28_drivers#staging#vt6655#wpa.c: WPA_SearchRSN
+ - linux/prevFiles/prev_6633282_c671dfd_drivers#staging#uwb#rsv.c: uwb_rsv_handle_drp_avail_change
+ - linux/prevFiles/prev_6633282_c671dfd_drivers#staging#uwb#rsv.c: uwb_rsv_try_move
+ - linux/prevFiles/prev_1208f1_938db28_drivers#staging#vt6655#baseband.c: BBvCalculateParameter
+ - linux/prevFiles/prev_4bb0142_38272d2_drivers#staging#rtl8192e#rtl819x_TSProc.c: SearchAdmitTRStream
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_config.c: __sptlrpc_process_config
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_xmit.c: r8712_xmit_classifier
+ - linux/prevFiles/prev_c829be81_bb144d0_drivers#staging#lustre#lustre#mgc#mgc_request.c: config_log_end
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_obd.c: lov_recreate
+ - linux/prevFiles/prev_bbae61_1f70971_drivers#staging#media#atomisp#pci#atomisp2#css2400#sh_css_param_shading.c: sh_css_params_shading_id_table_generate
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_start_thread
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_service_free
+ - linux/prevFiles/prev_485640_c829be81_drivers#staging#lustre#lustre#obdclass#lprocfs_status.c: lprocfs_clear_stats
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_xmit.c: r8712_free_xmitbuf
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_destroy
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: ldlm_lock_change_resource
+ - linux/prevFiles/prev_9d877f_93275c_drivers#staging#gdm724x#gdm_lte.c: gdm_lte_receive_pkt
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_config.c: sptlrpc_parse_rule
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#nrs.c: nrs_policy_start_locked
+ - linux/prevFiles/prev_6c7c655_6fdb302_drivers#staging#lustre#lustre#fid#fid_request.c: seq_client_alloc_super
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: ldlm_run_ast_work
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_xmit.c: _free_xmit_priv
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_disconnect
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_get_info
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#nrs.c: nrs_policy_stop_primary
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_statfs_async
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_alloc_rqbd
+ - linux/prevFiles/prev_812f20_6c7c655_drivers#staging#lustre#lustre#fld#fld_request.c: fld_client_rpc
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_setattr_interpret
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_xmit.c: r8712_free_xmitframe_ex
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_write
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#client.c: ptlrpc_queue_wait
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_at_send_early_reply
+ - linux/prevFiles/prev_6633282_c671dfd_drivers#staging#uwb#rsv.c: uwb_rsv_setup
+ - linux/prevFiles/prev_c829be81_bb144d0_drivers#staging#lustre#lustre#mgc#mgc_request.c: mgc_apply_recover_logs
+ - linux/prevFiles/prev_c829be81_bb144d0_drivers#staging#lustre#lustre#mgc#mgc_request.c: mgc_process_recover_log
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_svcpt_health_check
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_dev.c: lov_emerg_alloc
+ - linux/prevFiles/prev_4bb0142_38272d2_drivers#staging#rtl8192e#rtl819x_TSProc.c: TsStartAddBaProcess
+ - FFmpeg/prevFiles/prev_88a849_00ffbd_libavformat#mpegts.c: ff_parse_mpeg2_descriptor
+ - linux/prevFiles/prev_53db33_85b45e_drivers#staging#media#zoran#zoran_driver.c: jpg_fbuffer_alloc
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: ldlm_lock_match
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_hr_init
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_pool.c: ldlm_pools_thread_stop
+ - linux/prevFiles/prev_c38ce3_812f20_drivers#staging#lustre#lustre#lclient#lcommon_cl.c: ccc_session_key_init
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_setattr_async_base
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_pool.c: lov_ost_pool_init
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_enqueue_base
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_open
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_io.c: lov_io_submit
+ - linux/prevFiles/prev_c829be81_bb144d0_drivers#staging#lustre#lustre#mgc#mgc_request.c: mgc_target_register
+ - linux/prevFiles/prev_6c7c655_6fdb302_drivers#staging#lustre#lustre#fid#fid_request.c: seq_client_rpc
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#nrs.c: nrs_policy_ctl
+ - linux/prevFiles/prev_9d877f_93275c_drivers#staging#gdm724x#gdm_lte.c: unregister_lte_device
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_pool.c: lov_find_pool
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_statfs
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_real_create
+ - linux/prevFiles/prev_485640_c829be81_drivers#staging#lustre#lustre#obdclass#class_obd.c: class_handle_ioctl
+ - linux/prevFiles/prev_a0886f_2a7089d_drivers#staging#rtl8192u#ieee80211#rtl819x_TSProc.c: TsStartAddBaProcess
+ - linux/prevFiles/prev_76e4290_94e677_drivers#staging#lustre#lustre#lmv#lmv_intent.c: lmv_intent_open
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: ldlm_lock_set_data
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_plain.c: plain_unpack_bsd
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_config.c: sptlrpc_parse_flavor
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_xmit.c: r8712_free_xmitframe
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_grow_req_bufs
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_dev.c: lov_device_fini
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_dev.c: osc_key_init
+ - linux/prevFiles/prev_485640_c829be81_drivers#staging#lustre#lustre#obdclass#lprocfs_status.c: lprocfs_counter_init
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#nrs.c: nrs_policy_unregister
+ - linux/prevFiles/prev_485640_c829be81_drivers#staging#lustre#lustre#obdclass#lprocfs_status.c: lprocfs_stats_collect
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_tiocmset
+ - linux/prevFiles/prev_53db33_85b45e_drivers#staging#media#zoran#zoran_driver.c: setup_window
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_statfs_interpret
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#nrs.c: nrs_svcpt_setup_locked
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#nrs.c: nrs_resource_get_safe
+ - vlc/prevFiles/prev_534232_9ce573_modules#access#vcd#cdrom.c: ioctl_GetTracksMap
+ - linux/prevFiles/prev_485640_c829be81_drivers#staging#lustre#lustre#obdclass#lprocfs_status.c: lprocfs_alloc_obd_stats
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_obd.c: lov_create
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_brw_prep_request
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_set_lock_data_with_check
+ - linux/prevFiles/prev_485640_c829be81_drivers#staging#lustre#lustre#obdclass#lprocfs_status.c: lprocfs_alloc_md_stats
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_chars_in_buffer
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#ptlrpcd.c: ptlrpcd_start
+ - linux/prevFiles/prev_c829be81_bb144d0_drivers#staging#lustre#lustre#mgc#mgc_request.c: mgc_enqueue
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_pool.c: ldlm_pools_count
+ - linux/prevFiles/prev_87e3db_9d877f_drivers#staging#gdm72xx#gdm_wimax.c: gdm_wimax_ioctl_set_data
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: check_write_rcs
+ - linux/prevFiles/prev_c829be81_bb144d0_drivers#staging#lustre#lustre#mgc#mgc_request.c: mgc_process_config
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_plain.c: plain_ctx_verify
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_pool.c: ldlm_pools_recalc
+ - linux/prevFiles/prev_61645cc_f705a2d_drivers#staging#rtl8192u#r8192U_core.c: rtl8192_usb_probe
+ - linux/prevFiles/prev_bbae61_1f70971_drivers#staging#media#atomisp#pci#atomisp2#css2400#sh_css_param_shading.c: ia_css_shading_table_alloc
+ - linux/prevFiles/prev_1208f1_938db28_drivers#staging#vt6655#wpa.c: WPAb_Is_RSN
+ - linux/prevFiles/prev_812f20_6c7c655_drivers#staging#lustre#lustre#fld#fld_cache.c: fld_cache_insert_nolock
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_sync_base
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#recv_linux.c: r8712_recv_indicatepkt
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#client.c: __ptlrpc_req_finished
+ - linux/prevFiles/prev_bbae61_1f70971_drivers#staging#media#atomisp#pci#atomisp2#css2400#sh_css_param_shading.c: prepare_shading_table
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_getattr
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_config.c: sptlrpc_rule_set_expand
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#nrs.c: nrs_resource_put_safe
+ - linux/prevFiles/prev_76e4290_94e677_drivers#staging#lustre#lustre#lmv#lmv_intent.c: lmv_intent_remote
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_service_part_init
+ - linux/prevFiles/prev_485640_c829be81_drivers#staging#lustre#lustre#obdclass#lprocfs_status.c: lprocfs_alloc_stats
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_pool.c: lov_pool_remove
+ - linux/prevFiles/prev_61645cc_f705a2d_drivers#staging#rtl8192u#ieee80211#ieee80211_rx.c: ieee80211_frag_cache_invalidate
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_sta_mgt.c: r8712_free_stainfo
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_set_termios
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_plain.c: plain_alloc_rs
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_ioctl
+ - linux/prevFiles/prev_485640_c829be81_drivers#staging#lustre#lustre#obdclass#class_obd.c: init_obdclass
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_throttle
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_obd.c: lov_statfs
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#nrs.c: nrs_policy_register
+ - linux/prevFiles/prev_485640_c829be81_drivers#staging#lustre#lustre#obdclass#lprocfs_status.c: lprocfs_find_named_value
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#client.c: ptlrpcd_alloc_work
+ - linux/prevFiles/prev_a0886f_2a7089d_drivers#staging#rtl8192u#ieee80211#rtl819x_TSProc.c: MakeTSEntry
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_obd.c: lov_iocontrol
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_service_unlink_rqbd
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_sta_mgt.c: r8712_get_stainfo
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_sync_interpret
+ - linux/prevFiles/prev_4c42d97_6e3f3bb_drivers#staging#nvec#nvec.c: nvec_write_async
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_unpackmd
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_tiocmget
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_dev.c: osc_session_init
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#ptlrpcd.c: ptlrpcd_check
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_xmit.c: r8712_update_attrib
+ - linux/prevFiles/prev_c829be81_bb144d0_drivers#staging#lustre#lustre#mgc#mgc_request.c: config_log_add
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_pool.c: lov_pool_del
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_get_serial_info
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#client.c: ptlrpc_request_alloc_internal
+ - linux/prevFiles/prev_bbae61_1f70971_drivers#staging#media#atomisp#pci#atomisp2#css2400#sh_css_param_shading.c: ia_css_shading_table_free
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: ldlm_lock_enqueue
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_plain.c: plain_create_sec
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_config.c: sptlrpc_conf_choose_flavor
+ - linux/prevFiles/prev_485640_c829be81_drivers#staging#lustre#lustre#obdclass#lprocfs_status.c: lprocfs_rd_import
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_unthrottle
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_server_handle_request
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_stop_hr_threads
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_pool.c: lov_pool_add
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_break
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#client.c: ptlrpc_prep_bulk_imp
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: ldlm_lock_new
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_service_health_check
+ - linux/prevFiles/prev_c829be81_bb144d0_drivers#staging#lustre#lustre#mgc#mgc_request.c: lprocfs_mgc_rd_ir_state
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#client.c: __ptlrpc_free_req
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_hr_fini
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_plain.c: plain_accept
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: ldlm_lock_convert
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#nrs.c: ptlrpc_nrs_policy_unregister
+ - linux/prevFiles/prev_76e4290_94e677_drivers#staging#lustre#lustre#lmv#lmv_intent.c: lmv_intent_lookup
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_obd.c: lov_init
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_setattr
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: ldlm_lock_dump_handle
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: _ldlm_lock_debug
+ - linux/prevFiles/prev_6e3f3bb_87e3db_drivers#staging#goldfish#goldfish_audio.c: goldfish_audio_probe
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_dev.c: lov_device_init
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_service_purge_all
+ - linux/prevFiles/prev_c38ce3_812f20_drivers#staging#lustre#lustre#lclient#lcommon_cl.c: ccc_key_init
+ - linux/prevFiles/prev_4bb0142_38272d2_drivers#staging#rtl8192e#rtl819x_TSProc.c: MakeTSEntry
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_set_info_async
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_io.c: _init_intf_hdl
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_punch_base
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_brw_fini_request
+ - vlc/prevFiles/prev_534232_9ce573_modules#access#vcd#cdrom.c: OpenVCDImage
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_change_port_settings
+ - linux/prevFiles/prev_61645cc_f705a2d_drivers#staging#rtl8192u#ieee80211#ieee80211_rx.c: ieee80211_read_qos_info_element
+ - vlc/prevFiles/prev_534232_9ce573_modules#access#vcd#cdrom.c: ioctl_Open
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_dev.c: lov_session_key_init
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_io.c: r8712_alloc_io_queue
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#sec_plain.c: plain_enlarge_reqbuf
+ - linux/prevFiles/prev_61645cc_f705a2d_drivers#staging#rtl8192u#ieee80211#ieee80211_rx.c: ieee80211_frag_cache_get
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#service.c: ptlrpc_register_service
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_send_cmd_write_baud_rate
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_getattr_async
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_resource_get_unused
+ - linux/prevFiles/prev_9155c92_bb106dc_drivers#staging#rtl8712#rtl871x_xmit.c: r8712_xmitframe_coalesce
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#nrs.c: nrs_request_enqueue
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_build_rpc
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: __ldlm_handle2lock
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_obd.c: lov_add_target
+ - linux/prevFiles/prev_87e3db_9d877f_drivers#staging#gdm72xx#gdm_wimax.c: gdm_wimax_header
+ - linux/prevFiles/prev_3408e9a_efeb257_drivers#staging#lustre#lustre#osc#osc_request.c: osc_packmd
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_obd.c: lov_set_info_async
+ - linux/prevFiles/prev_94e677_c38ce3_drivers#staging#lustre#lustre#ldlm#ldlm_lock.c: ldlm_lock_create
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_pool.c: lov_ost_pool_extend
+ - linux/prevFiles/prev_ce9d85_0f3083_drivers#usb#serial#mos7840.c: mos7840_write_room
+ - linux/prevFiles/prev_36a86f_76e4290_drivers#staging#lustre#lustre#lov#lov_obd.c: lov_fiemap
+ - linux/prevFiles/prev_597851_3408e9a_drivers#staging#lustre#lustre#ptlrpc#client.c: ptlrpc_expire_one_request
+ - linux/prevFiles/prev_28f5ca_4e7c85_drivers#staging#rtl8723au#hal#rtl8723a_hal_init.c: c2h_handler_8723a
+*/
+
+// ---------------------------------------------

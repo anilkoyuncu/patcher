@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1 & ~((0x03 << 5) | (0x1 << 7)); 
++ E0 = E1 & ~((0x03 << 5) | BIT(7)); 
+// Infered from: (linux/{prevFiles/prev_63bb38c_9dde47_drivers#staging#iio#cdc#ad7150.c,revFiles/63bb38c_9dde47_drivers#staging#iio#cdc#ad7150.c}: ad7150_write_event_config)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

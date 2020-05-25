@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(E0->dev, "%s(): setting als scale failed, err = %d\n", __func__, E1); 
++ dev_err(E0->dev, "setting als scale failed, err = %d\n", E1); 
+// Infered from: (linux/{prevFiles/prev_3daf9d_651cd1_drivers#staging#iio#light#isl29028.c,revFiles/3daf9d_651cd1_drivers#staging#iio#light#isl29028.c}: isl29028_chip_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

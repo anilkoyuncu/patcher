@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0 = 0xffffffffffffffff; 
++ E0 = G_GINT64_CONSTANT(0xffffffffffffffff); 
+// Infered from: (wireshark/{prevFiles/prev_5bbef7_7e572a_epan#dissectors#packet-per.c,revFiles/5bbef7_7e572a_epan#dissectors#packet-per.c}: dissect_per_integer64b)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

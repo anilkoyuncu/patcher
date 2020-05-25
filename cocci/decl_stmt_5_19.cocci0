@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef ws_ip;
+@@
+- const  ws_ip *I0 = (ws_ip *)E1; 
++ const  ws_ip *I0 = (const  ws_ip *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#hostlist_ip.c,revFiles/3ae2e5_8aebe1_ui#gtk#hostlist_ip.c}: ip_hostlist_packet), (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#conversations_ip.c,revFiles/3ae2e5_8aebe1_ui#gtk#conversations_ip.c}: ip_conversation_packet)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

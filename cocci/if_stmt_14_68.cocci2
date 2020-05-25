@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- assert(!E0->is_empty_fill); 
+- if (_cairo_path_fixed_is_rectilinear_fill(E0))  
++ assert(!_cairo_path_fixed_fill_is_empty(E0)); 
++ if (_cairo_path_fixed_fill_is_rectilinear(E0))  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_330b34_5b2ed2_src#drm#cairo-drm-i915-surface.c,revFiles/330b34_5b2ed2_src#drm#cairo-drm-i915-surface.c}: i915_surface_fill_with_alpha)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_3faa14_44fe77_cmdutils.c: show_codecs
+*/
+
+// ---------------------------------------------

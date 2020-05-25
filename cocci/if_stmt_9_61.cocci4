@@ -1,0 +1,37 @@
+@@
+type T0;
+identifier I1, I2;
+expression E3, E4, E5, E6;
+typedef int32_t;
+typedef uint8_t;
+@@
+- T0 *I1; 
+- size_t I2; 
++ uint8_t *I1; 
++ int32_t I2; 
+  ...
+- OPAL_MODEX_RECV_STRING(E3, E4, &E5->super.proc_name, (char **)&E6, &I2); 
++ OPAL_MODEX_RECV_STRING(E3, E4, &E5->super.proc_name, (uint8_t **)&E6, &I2); 
+// Infered from: (ompi/{prevFiles/prev_38c253c_0a9956_ompi#mca#mtl#mxm#mtl_mxm.c,revFiles/38c253c_0a9956_ompi#mca#mtl#mxm#mtl_mxm.c}: ompi_mtl_mxm_recv_ep_address)
+// Recall: 0.30, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.71, Precision: 1.00
+// -- Node Change --
+// Recall: 0.70, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_38c253c_0a9956_ompi#mca#mtl#mxm#mtl_mxm.c: ompi_mtl_mxm_recv_ep_address
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_eb46af_713e1e_modules#demux#avi#libavi.c: AVI_ChunkFind_
+ - vlc/prevFiles/prev_eb46af_713e1e_modules#demux#avi#libavi.c: AVI_ChunkCount_
+*/
+
+// ---------------------------------------------

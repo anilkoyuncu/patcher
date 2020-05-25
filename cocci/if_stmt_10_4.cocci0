@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!memcmp(E0->base, E1, E2))  
++ if (!strcmp(E0->base, E1))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_cb2912_d0f1ea_sha1_file.c,revFiles/cb2912_d0f1ea_sha1_file.c}: link_alt_odb_entry)
+// False positives: (git/revFiles/cb2912_d0f1ea_sha1_file.c: link_alt_odb_entry)
+// Recall: 0.09, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

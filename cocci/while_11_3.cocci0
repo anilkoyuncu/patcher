@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (avio_tell(E0) < E1)  
++ while (avio_tell(E0) < E1 && !avio_feof(E0))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_3dca5a_90b2f3_libavformat#wvdec.c,revFiles/3dca5a_90b2f3_libavformat#wvdec.c}: wv_read_block_header)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

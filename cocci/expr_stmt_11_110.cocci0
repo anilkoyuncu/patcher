@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = IDirect3DSurface9_LockRect(E1, &E2, NULL,  E3 & AV_HWFRAME_MAP_READ ? D3DLOCK_READONLY :D3DLOCK_DISCARD); 
++ if (!(E3 & AV_HWFRAME_MAP_WRITE))  
++ {
++ lock_flags |= D3DLOCK_READONLY; 
++ }
++ if (E3 & AV_HWFRAME_MAP_OVERWRITE)  
++ {
++ lock_flags |= D3DLOCK_DISCARD; 
++ }
++ E0 = IDirect3DSurface9_LockRect(E1, &E2, NULL, lock_flags); 
+// Infered from: (FFmpeg/{prevFiles/prev_9d7026_0d3176_libavutil#hwcontext_dxva2.c,revFiles/9d7026_0d3176_libavutil#hwcontext_dxva2.c}: dxva2_map_frame)
+// Recall: 0.55, Precision: 1.00, Matching recall: 0.86
+
+// ---------------------------------------------

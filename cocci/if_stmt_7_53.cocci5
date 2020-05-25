@@ -1,0 +1,9 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- swab(E0, &E1[8], I2 * 2); 
+// Infered from: (vlc/{prevFiles/prev_414f55_33d2c6_modules#audio_filter#converter#a52tospdif.c,revFiles/414f55_33d2c6_modules#audio_filter#converter#a52tospdif.c}: DoWork)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.03
+
+// ---------------------------------------------

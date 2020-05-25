@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- while ((E0 = getopt(E1, E2, "Ddhqe:i:l:m:no:u:s:S:t:T:a:4:6:")) != -1)  
++ while ((E0 = getopt(E1, E2, "aDdhqe:i:l:m:no:u:s:S:t:T:4:6:")) != -1)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_faad75_297d19_text2pcap.c,revFiles/faad75_297d19_text2pcap.c}: parse_options)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

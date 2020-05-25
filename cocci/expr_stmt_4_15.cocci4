@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->mmio32.pci_base = 0x80000000; 
++ E0->mmio32.pci_base = SPAPR_PCI_MMIO32_WIN_SIZE; 
+// Infered from: (qemu/{prevFiles/prev_b84541_f38a0b_tests#libqos#pci-spapr.c,revFiles/b84541_f38a0b_tests#libqos#pci-spapr.c}: qpci_init_spapr)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

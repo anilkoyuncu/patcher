@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (colo_compare_packet_payload(E0, E1, E0->header_size, E1->header_size,  E0->payload_size))  
++ if (!colo_compare_packet_payload(E0, E1, E0->header_size, E1->header_size,  E0->payload_size))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_1e907a_7788c3_net#colo-compare.c,revFiles/1e907a_7788c3_net#colo-compare.c}: colo_mark_tcp_pkt)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

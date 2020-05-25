@@ -1,0 +1,34 @@
+@@
+expression E0, E1;
+@@
+- put_bits(&E0->pb, 8, E1 & 0xff); 
++ put_bits(&E0->pb, 8, E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_65a24d_7a62e9_libavcodec#h263.c,revFiles/65a24d_7a62e9_libavcodec#h263.c}: h263_encode_block)
+// False positives: (FFmpeg/revFiles/65a24d_7a62e9_libavcodec#h263.c: ff_flv_encode_picture_header), (FFmpeg/revFiles/65a24d_7a62e9_libavcodec#h263.c: h263_encode_block), (FFmpeg/revFiles/65a24d_7a62e9_libavcodec#h263.c: h263_encode_picture_header)
+// Recall: 0.06, Precision: 0.25, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.10, Precision: 0.50
+// -- Node Change --
+// Recall: 0.22, Precision: 0.54
+// -- General --
+// Functions fully changed: 0/22(0%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_b3b3f6_8262aa_config.c: get_value
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_d2526d_0fe785_dumpcap.c: capture_loop_write_packet_cb
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_65a24d_7a62e9_libavcodec#h263.c: ff_flv_encode_picture_header
+ - FFmpeg/prevFiles/prev_65a24d_7a62e9_libavcodec#h263.c: h263_encode_picture_header
+ - FFmpeg/prevFiles/prev_65a24d_7a62e9_libavcodec#h263.c: h263_encode_block
+*/
+
+// ---------------------------------------------

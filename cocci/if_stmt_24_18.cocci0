@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2;
+@@
+- zend_symtable_find(E0, Z_STRVAL_P(E1), Z_STRLEN_P(E1) + 1, (void **)&E2); 
+// Infered from: (php-src/{prevFiles/prev_5128d5_81700b_ext#spl#spl_array.c,revFiles/5128d5_81700b_ext#spl#spl_array.c}: spl_array_get_dimension_ptr_ptr), (php-src/{prevFiles/prev_bb7a93_cf2db2_ext#spl#spl_array.c,revFiles/bb7a93_cf2db2_ext#spl#spl_array.c}: spl_array_get_dimension_ptr_ptr)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

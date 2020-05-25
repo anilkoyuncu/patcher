@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- memory_region_init_io(&E0->io_memory, NULL, &kvm_apic_io_ops, E0,  "kvm-apic-msi", APIC_SPACE_SIZE); 
++ memory_region_init_io(&E0->io_memory, OBJECT(E0), &kvm_apic_io_ops, E0,  "kvm-apic-msi", APIC_SPACE_SIZE); 
+// Infered from: (qemu/{prevFiles/prev_365aa1_1dfe32_hw#i386#kvm#apic.c,revFiles/365aa1_1dfe32_hw#i386#kvm#apic.c}: kvm_apic_realize)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- *E0 = ckalloc(E1); 
++ *E0 = Tcl_Alloc(E1); 
+// Infered from: (tcl/{prevFiles/prev_bf13e2_865809_unix#tclUnixSock.c,revFiles/bf13e2_865809_unix#tclUnixSock.c}: InitializeHostName), (tcl/{prevFiles/prev_bf13e2_865809_unix#tclUnixSock.c,revFiles/bf13e2_865809_unix#tclUnixSock.c}: InitializeHostName)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

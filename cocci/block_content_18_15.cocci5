@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- proto_tree_add_uint(E0, hf_sdlc_address, E1, 0, 1, I2); 
++ proto_tree_add_uint(E0, hf_sdlc_address, E1, 0, 1, addr); 
+// Infered from: (wireshark/{prevFiles/prev_37547c_fadae7_epan#dissectors#packet-sdlc.c,revFiles/37547c_fadae7_epan#dissectors#packet-sdlc.c}: dissect_sdlc)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

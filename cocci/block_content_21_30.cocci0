@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+typedef target_ulong;
+@@
+- target_ulong I0; 
++ target_ulong page_start; 
+  ...
+- I0 = (E1 & TARGET_PAGE_MASK) + TARGET_PAGE_SIZE; 
++ page_start = E1 & TARGET_PAGE_MASK; 
+// Infered from: (qemu/{prevFiles/prev_335722_e5cd69_target#riscv#translate.c,revFiles/335722_e5cd69_target#riscv#translate.c}: gen_intermediate_code), (qemu/{prevFiles/prev_6cd794_071bd2_target#mips#translate.c,revFiles/6cd794_071bd2_target#mips#translate.c}: gen_intermediate_code)
+// Recall: 0.67, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

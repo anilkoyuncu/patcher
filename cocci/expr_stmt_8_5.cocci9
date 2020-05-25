@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- using_stdin |= !strcmp(E0, "pipe:") || !strcmp(E0, "/dev/stdin"); 
++ using_stdin |= !strncmp(E0, "pipe:", 5) || !strcmp(E0, "/dev/stdin"); 
+// Infered from: (FFmpeg/{prevFiles/prev_b55120_cc044c_ffmpeg.c,revFiles/b55120_cc044c_ffmpeg.c}: opt_input_file)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

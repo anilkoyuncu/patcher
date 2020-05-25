@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- msg_Dbg(E0, "stts gives %d --> %d (sample number)", E1,  E2->data.p_stss->i_sample_number[E3 - 1]); 
++ msg_Dbg(E0, "stts gives %d --> %d (sample number)", E1,  E2->data.p_stss->i_sample_number[E3]); 
+// Infered from: (vlc/{prevFiles/prev_e6e6a0_ba0c79_modules#demux#mp4#mp4.c,revFiles/e6e6a0_ba0c79_modules#demux#mp4#mp4.c}: TrackTimeToSampleChunk)
+// False positives: (vlc/revFiles/e6e6a0_ba0c79_modules#demux#mp4#mp4.c: TrackTimeToSampleChunk)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

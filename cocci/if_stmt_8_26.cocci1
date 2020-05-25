@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 ==  E1 ||  E0 !=  E2)  
++ if (E0 !=  E2)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_d59335_83516d_epan#dissectors#packet-adb_service.c,revFiles/d59335_83516d_epan#dissectors#packet-adb_service.c}: dissect_adb_service)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2;
+@@
+- DPRINTF("ISD: %x@%x -> %x@%x, %x\n", E0->ISD_length, E0->ISD_start, E1, E2,  E0->ISD_handle); 
+// Infered from: (qemu/{prevFiles/prev_82f24f_3c0561_hw#gt64xxx.c,revFiles/82f24f_3c0561_hw#gt64xxx.c}: gt64120_isd_mapping)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_82f24f_3c0561_hw#gt64xxx.c: gt64120_isd_mapping
+ - gstreamer/prevFiles/prev_393033_2c4d0a_tests#lat.c: handoff_sink
+*/
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_c23f8e_423cce_opal#dss#dss_print.c: opal_dss_print_pstat
+*/
+
+// ---------------------------------------------

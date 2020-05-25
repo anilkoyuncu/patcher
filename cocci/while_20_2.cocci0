@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (jiffies - E0 < 2 * HZ / 100)  
++ while (time_before(jiffies, E0 + 2 * HZ / 100))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_ac0e4b7_d6f6341_drivers#char#ds1286.c,revFiles/ac0e4b7_d6f6341_drivers#char#ds1286.c}: ds1286_get_time)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gethostname(E0, MPI_MAX_PROCESSOR_NAME - 1); 
++ gethostname(E0, (MPI_MAX_PROCESSOR_NAME - 1)); 
+// Infered from: (ompi/{prevFiles/prev_332234_e1c64e_ompi#mpi#c#get_processor_name.c,revFiles/332234_e1c64e_ompi#mpi#c#get_processor_name.c}: MPI_Get_processor_name)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

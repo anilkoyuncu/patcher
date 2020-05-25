@@ -1,0 +1,35 @@
+@@
+expression E0, E1, E2;
+@@
+- send(E0, E1, E2, 0); 
++ if (send(E0, E1, E2, 0) < E2)  
++ {
++ av_log(NULL, AV_LOG_WARNING, "Could not send too-busy reply, send() failed\n"); 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_e79bc6a_8baa5b_ffserver.c,revFiles/e79bc6a_8baa5b_ffserver.c}: http_send_too_busy_reply)
+// False positives: (FFmpeg/revFiles/8baa5b_6d953a_ffserver.c: http_send_too_busy_reply)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.71, Precision: 0.71
+// -- Node Change --
+// Recall: 0.67, Precision: 0.58
+// -- General --
+// Functions fully changed: 3/9(33%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_eb19d8_ce739e_libavformat#cache.c: cache_seek
+ - FFmpeg/prevFiles/prev_df727d_e807a2_libavcodec#mlp_parser.c: mlp_parse
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_c8faa47_2fe4b6_libavformat#network.c: ff_listen_bind
+ - FFmpeg/prevFiles/prev_8baa5b_6d953a_ffserver.c: socket_open_listen
+ - FFmpeg/prevFiles/prev_c8faa47_2fe4b6_libavformat#network.c: ff_listen_connect
+ - FFmpeg/prevFiles/prev_8baa5b_6d953a_ffserver.c: http_send_too_busy_reply
+*/
+
+// ---------------------------------------------

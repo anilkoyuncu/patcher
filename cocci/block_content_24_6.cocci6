@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- print_caps(gst_static_caps_get(&E0->static_caps), "      "); 
++ print_caps(caps, "      "); 
++ gst_caps_unref(caps); 
+// Infered from: (gstreamer/{prevFiles/prev_a8acba_a405ae_tools#gst-inspect.c,revFiles/a8acba_a405ae_tools#gst-inspect.c}: print_pad_templates_info)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

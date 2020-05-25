@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->result = E1->result; 
++ COPY_NODE(E0->result, E1->result); 
+// Infered from: (php-src/{prevFiles/prev_0691e7_9af0c9_ext#opcache#Optimizer#block_pass.c,revFiles/0691e7_9af0c9_ext#opcache#Optimizer#block_pass.c}: zend_jmp_optimization)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

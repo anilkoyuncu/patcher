@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- if (!(E0 & (1 << 5)))  
+- {
+  ...
+- }
+// Infered from: (linux/{prevFiles/prev_9f3839_9361076_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_ccmp.c,revFiles/9f3839_9361076_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_ccmp.c}: ieee80211_ccmp_decrypt), (linux/{prevFiles/prev_37b299_9f3839_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_tkip.c,revFiles/37b299_9f3839_drivers#staging#rtl8192u#ieee80211#ieee80211_crypt_tkip.c}: ieee80211_tkip_decrypt)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

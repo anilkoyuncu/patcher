@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- color_to_pixel(E0, E1->pixman_format, E2); 
+- return TRUE; 
++ return color_to_pixel(E0, E1->pixman_format, E2); 
+// Infered from: (cairo/{prevFiles/prev_0c2faf_38a925_src#cairo-image-compositor.c,revFiles/0c2faf_38a925_src#cairo-image-compositor.c}: fill_reduces_to_source)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

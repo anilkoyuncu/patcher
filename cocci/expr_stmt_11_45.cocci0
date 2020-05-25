@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = ID3D11VideoDevice_CreateVideoProcessorInputView(E1->d3d_proc.d3dviddev,  E1->out[0].resource,  E1->d3d_proc.procEnumerator,  &E2, &E1->procInput[  E3]); 
++ E0 = ID3D11VideoDevice_CreateVideoProcessorInputView(E1->d3d_proc.d3dviddev,  E1->out[E3].resource,  E1->d3d_proc.procEnumerator,  &E2, &E1->procInput[  E3]); 
+// Infered from: (vlc/{prevFiles/prev_0a2332_929833_modules#hw#d3d11#d3d11_filters.c,revFiles/0a2332_929833_modules#hw#d3d11#d3d11_filters.c}: D3D11OpenAdjust)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

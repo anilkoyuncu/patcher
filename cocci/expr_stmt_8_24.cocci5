@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0[5].value = xstrndup(E1 + E2, E3 - E1 + E2); 
++ E0[5].value = xstrndup(E1 + E2, E3 - (E1 + E2)); 
+// Infered from: (git/{prevFiles/prev_4621af_c6e0ca_commit.c,revFiles/4621af_c6e0ca_commit.c}: fill_person)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

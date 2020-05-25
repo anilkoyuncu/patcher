@@ -1,0 +1,22 @@
+@@
+@@
+- snprintf(default_ssl_conf_filename, sizeof(default_ssl_conf_filename),  "%s/%s", X509_get_default_cert_area(), OPENSSL_CONF); 
++ snprintf(default_ssl_conf_filename, sizeof(default_ssl_conf_filename),  "%s/%s", X509_get_default_cert_area(), "openssl.cnf"); 
+// Infered from: (php-src/{prevFiles/prev_36fbe5_b6cc6a_ext#openssl#openssl.c,revFiles/36fbe5_b6cc6a_ext#openssl#openssl.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_56a821_716139_ext#standard#string.c: 
+*/
+
+// ---------------------------------------------

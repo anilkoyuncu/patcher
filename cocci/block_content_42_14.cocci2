@@ -1,0 +1,22 @@
+@@
+identifier I1, I2, I3;
+expression E0;
+@@
+- set_irq_chip(E0, &I1); 
+- set_irq_chained_handler(I2, I3); 
++ irq_set_chip(E0, &I1); 
++ irq_set_chained_handler(I2, I3); 
+// Infered from: (linux/{prevFiles/prev_e1f5ce81_fa680c7_arch#unicore32#kernel#irq.c,revFiles/e1f5ce81_fa680c7_arch#unicore32#kernel#irq.c}: init_IRQ), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-sa1100#irq.c,revFiles/6845664a_25a566_arch#arm#mach-sa1100#irq.c}: sa1100_init_irq)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

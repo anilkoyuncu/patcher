@@ -1,0 +1,27 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef int64_t;
+@@
+- int64_t I0 = E1->i_icy_meta - (E1->offset - E1->i_icy_offset) % E1->i_icy_meta; 
++ int I0 = E1->i_icy_meta - (E1->offset - E1->i_icy_offset) % E1->i_icy_meta; 
+  ...
+- if (E2 > I0)  
++ if (E2 > (size_t )I0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_268ffc_5bd22b_modules#access#http.c,revFiles/268ffc_5bd22b_modules#access#http.c}: Read)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

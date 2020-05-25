@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef gint;
+@@
+- E0 = bytes_view_byte_from_xy(BYTES_VIEW(E1), E2->x, E2->y); 
++ E0 = bytes_view_byte_from_xy(BYTES_VIEW(E1), (gint )E2->x, (gint )E2->y); 
+// Infered from: (wireshark/{prevFiles/prev_951fd5_1279b8_ui#gtk#packet_panes.c,revFiles/951fd5_1279b8_ui#gtk#packet_panes.c}: byte_view_select)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

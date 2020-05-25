@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- return write_loose_object(E0, E1, E2, E3, E4, E5); 
++ ret = write_loose_object(E0, E1, E2, E3, E4, E5); 
++ free(E3); 
++ return ret; 
+// Infered from: (git/{prevFiles/prev_1fb23e_721308_sha1_file.c,revFiles/1fb23e_721308_sha1_file.c}: force_object_loose)
+// False positives: (git/revFiles/1fb23e_721308_sha1_file.c: write_sha1_file)
+// Recall: 0.05, Precision: 0.50, Matching recall: 0.80
+
+// ---------------------------------------------

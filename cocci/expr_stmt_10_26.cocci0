@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E3, E2;
+@@
+- init_get_bits(&E0, E1 + E2, E3 - E2); 
++ init_get_bits(&E0, E1 + E2, (E3 - E2) * 8); 
+// Infered from: (FFmpeg/{prevFiles/prev_b59efc_ea5404_libavformat#movenc.c,revFiles/b59efc_ea5404_libavformat#movenc.c}: mov_write_ac3_tag), (FFmpeg/{prevFiles/prev_e5e0580_8362a0_libavformat#movenc.c,revFiles/e5e0580_8362a0_libavformat#movenc.c}: mov_write_ac3_tag), (FFmpeg/{prevFiles/prev_e5e0580_8362a0_libavcodec#rv34.c,revFiles/e5e0580_8362a0_libavcodec#rv34.c}: ff_rv34_decode_frame), (FFmpeg/{prevFiles/prev_b59efc_ea5404_libavcodec#rv34.c,revFiles/b59efc_ea5404_libavcodec#rv34.c}: ff_rv34_decode_frame)
+// Recall: 0.57, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

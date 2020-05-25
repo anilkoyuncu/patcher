@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->cur_channel = E1 * 2 + E2; 
++ E0->cur_channel = E1 + E2; 
+// Infered from: (FFmpeg/{prevFiles/prev_e41cd3_91f4a4_libavcodec#aacenc.c,revFiles/e41cd3_91f4a4_libavcodec#aacenc.c}: aac_encode_frame), (FFmpeg/{prevFiles/prev_8bbdd2_f4d0a6_libavcodec#aacenc.c,revFiles/8bbdd2_f4d0a6_libavcodec#aacenc.c}: aac_encode_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

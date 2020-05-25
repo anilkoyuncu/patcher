@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = strndup(E1->p_buffer, E1->i_buffer); 
++ E0 = strndup((const  char *)E1->p_buffer, E1->i_buffer); 
+// Infered from: (vlc/{prevFiles/prev_7f76dd_2729ff_modules#codec#subsdec.c,revFiles/7f76dd_2729ff_modules#codec#subsdec.c}: ParseText)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

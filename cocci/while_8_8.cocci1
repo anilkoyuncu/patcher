@@ -1,0 +1,44 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6, E7;
+@@
+- E0 = sscanf(E1, "%4u-%2u-%2uT%2u:%2u:%2u", &E2, &E3, &E4, &E5, &E6, &E7); 
++ E0 = sscanf(E1, "%4u-%2u-%2uT%2u:%2u:%2u%n", &E2, &E3, &E4, &E5, &E6, &E7,  &time_length); 
+  ...
+- if (E0 == 6)  
++ if (E0 == 6 && time_length == 19)  
+  {
+  ...
+- E1 += 19; 
++ E1 += time_length; 
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_1fcb32_ccf37e_wiretap#nettrace_3gpp_32_423.c,revFiles/1fcb32_ccf37e_wiretap#nettrace_3gpp_32_423.c}: nettrace_parse_begin_time)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.55
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.20, Precision: 1.00
+// -- Node Change --
+// Recall: 0.53, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/5(0%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_1fcb32_ccf37e_wiretap#nettrace_3gpp_32_423.c: nettrace_parse_begin_time
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_bfba71_2047d6_epan#dissectors#packet-http.c: dissect_http_message
+ - wireshark/prevFiles/prev_1fcb32_ccf37e_wiretap#nettrace_3gpp_32_423.c: create_temp_pcapng_file
+ - wireshark/prevFiles/prev_f296d3_a34db1_epan#dissectors#packet-icmp.c: dissect_extensions
+ - wireshark/prevFiles/prev_1551f0_93df6b_plugins#profinet#packet-pn.c: pn_fgets
+*/
+
+// ---------------------------------------------

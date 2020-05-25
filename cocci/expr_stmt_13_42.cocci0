@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- OBD_FREE(E0, sizeof(*E0)); 
++ kfree(E0); 
+// Infered from: (linux/{prevFiles/prev_97903a2_3746e6_drivers#staging#lustre#lustre#llite#namei.c,revFiles/97903a2_3746e6_drivers#staging#lustre#lustre#llite#namei.c}: ll_atomic_open), (linux/{prevFiles/prev_d72790_c9b429_drivers#staging#lustre#lustre#obdclass#lustre_peer.c,revFiles/d72790_c9b429_drivers#staging#lustre#lustre#obdclass#lustre_peer.c}: class_add_uuid), (linux/{prevFiles/prev_d72790_c9b429_drivers#staging#lustre#lustre#obdclass#lustre_peer.c,revFiles/d72790_c9b429_drivers#staging#lustre#lustre#obdclass#lustre_peer.c}: class_del_uuid)
+// Recall: 0.75, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

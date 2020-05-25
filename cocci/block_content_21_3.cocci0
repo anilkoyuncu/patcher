@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = getenv(INDEX_ENVIRONMENT); 
++ E0 = xstrdup_or_null(getenv(INDEX_ENVIRONMENT)); 
+// Infered from: (git/{prevFiles/prev_406bab_8aac69_builtin#commit.c,revFiles/406bab_8aac69_builtin#commit.c}: prepare_index)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

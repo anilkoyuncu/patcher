@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->rdesc = kmalloc(E1, GFP_KERNEL); 
++ E0->rdesc = kmemdup(E2, E1, GFP_KERNEL); 
+  ...
+- memcpy(E0->rdesc, E2, E1); 
+// Infered from: (linux/{prevFiles/prev_1721a23_81cd584_drivers#hid#hid-core.c,revFiles/1721a23_81cd584_drivers#hid#hid-core.c}: hid_parse_report)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

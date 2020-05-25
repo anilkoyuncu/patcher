@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef TeeSlave;
+@@
+- E0->bsfs = av_calloc(E1->nb_streams, sizeof(TeeSlave )); 
++ E0->bsfs = av_calloc(E1->nb_streams, sizeof(*E0->bsfs)); 
+// Infered from: (FFmpeg/{prevFiles/prev_a3c877_215a2d_libavformat#tee.c,revFiles/a3c877_215a2d_libavformat#tee.c}: open_slave)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

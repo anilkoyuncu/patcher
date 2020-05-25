@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef int32_t;
+typedef int64_t;
+@@
+- int64_t I0 = (int64_t )T0 * (int64_t )T1; 
++ int64_t I0 = (int64_t )(int32_t )T0 * (int64_t )(int32_t )T1; 
+// Infered from: (qemu/{prevFiles/prev_5bf06a_66029f_target-ppc#op_helper.c,revFiles/5bf06a_66029f_target-ppc#op_helper.c}: do_mullwo)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

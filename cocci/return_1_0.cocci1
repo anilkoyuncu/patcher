@@ -1,0 +1,10 @@
+@@
+expression E1, E0, E2;
+@@
+- return omap_badwidth_write16(E0, E1, E2); 
++ omap_badwidth_write16(E0, E1, E2); 
++ return; 
+// Infered from: (qemu/{prevFiles/prev_77a825_0289a4_hw#sd#omap_mmc.c,revFiles/77a825_0289a4_hw#sd#omap_mmc.c}: omap_mmc_write), (qemu/{prevFiles/prev_77a825_0289a4_hw#gpio#omap_gpio.c,revFiles/77a825_0289a4_hw#gpio#omap_gpio.c}: omap_gpio_write)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

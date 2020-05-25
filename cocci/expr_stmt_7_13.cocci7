@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0[E1 - 1] = E2[E1] << E3; 
++ E0[E1 - 1] = E2[E1 - 1] << E3; 
+// Infered from: (wireshark/{prevFiles/prev_02cba4_8e7403_epan#tvbuff.c,revFiles/02cba4_8e7403_epan#tvbuff.c}: tvb_new_octet_aligned)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

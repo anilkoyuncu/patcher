@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- if (E0->handler->protocol & PROTO_FAMILY_HTTP)  
++ if ((E0->handler->protocol & PROTO_FAMILY_HTTP) && !E0->bits.close)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_e5f0b1_1671d8_lib#url.c,revFiles/e5f0b1_1671d8_lib#url.c}: IsPipeliningPossible)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_d41ce0_04485c_ssl#d1_pkt.c: dtls1_process_record
+*/
+
+// ---------------------------------------------

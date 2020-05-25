@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0->output.offset -= E0->sasl.encodedRawLength; 
++ buffer_advance(&E0->output, E0->sasl.encodedRawLength); 
+// Infered from: (qemu/{prevFiles/prev_627ebe_13e1d0_ui#vnc-auth-sasl.c,revFiles/627ebe_13e1d0_ui#vnc-auth-sasl.c}: vnc_client_write_sasl)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

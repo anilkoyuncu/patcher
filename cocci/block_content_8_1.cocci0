@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef int32_t;
+typedef int64_t;
+@@
+- I0 &= -(int64_t )I0; 
++ I0 &= -(int32_t )I0; 
+// Infered from: (vlc/{prevFiles/prev_70160a_2bd216_src#video_output#video_output.c,revFiles/70160a_2bd216_src#video_output#video_output.c}: MaskToShift)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

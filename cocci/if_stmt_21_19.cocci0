@@ -1,0 +1,9 @@
+@@
+expression E2, E3, E0, E4, E1;
+@@
+- klv_encode_ber_length(E0, E1 + E2 + (16 * E3) + 12 * E4->store_user_comments); 
++ klv_encode_ber_length(E0,  E1 + E2 + (16 * E3) + 12LL * E4->store_user_comments); 
+// Infered from: (FFmpeg/{prevFiles/prev_537e90_e62586_libavformat#mxfenc.c,revFiles/537e90_e62586_libavformat#mxfenc.c}: mxf_write_package), (FFmpeg/{prevFiles/prev_537e90_e62586_libavformat#mxfenc.c,revFiles/537e90_e62586_libavformat#mxfenc.c}: mxf_write_package)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

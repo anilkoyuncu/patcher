@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef int64_t;
+@@
+- lafe_warnc(errno, "getpwuid(%d) failed", E0); 
++ lafe_warnc(errno, "getpwuid(%s) failed", cpio_i64toa((int64_t )E0)); 
+// Infered from: (libarchive/{prevFiles/prev_160411_27d571_cpio#cpio.c,revFiles/160411_27d571_cpio#cpio.c}: lookup_uname_helper), (libarchive/{prevFiles/prev_304944_4e1d1e_cpio#cpio.c,revFiles/304944_4e1d1e_cpio#cpio.c}: lookup_uname_helper)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

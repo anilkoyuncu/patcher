@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E1;
+typedef apr_atomic_t;
+@@
+  apr_atomic_t I0; 
+  ...
+- if (E1)  
++ if ((I0 = apr_atomic_read(&y)) != 27)  
+  {
+  ...
+  }
+// Infered from: (apr/{prevFiles/prev_88b9e0_214e9b_test#testatomic.c,revFiles/88b9e0_214e9b_test#testatomic.c}: check_basic_atomics)
+// False positives: (apr/revFiles/88b9e0_214e9b_test#testatomic.c: check_basic_atomics)
+// Recall: 0.03, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

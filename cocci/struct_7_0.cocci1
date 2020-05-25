@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = xcalloc(1, (sizeof(*E0) + E1)); 
++ E0 = xcalloc(1, sizeof(*E0) + E1 + 1); 
+// Infered from: (git/{prevFiles/prev_c3a700_a08595_builtin#reflog.c,revFiles/c3a700_a08595_builtin#reflog.c}: find_cfg_ent)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

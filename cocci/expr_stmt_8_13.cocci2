@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- msg_Dbg(E0, "Detected EBU STL : CCT=%d TTI=%d start=%8.8s %lld", E1, E2,  &E3[256], E4); 
+  ...
+- E5.i_extra = NULL; 
++ E5.i_extra = 0; 
+// Infered from: (vlc/{prevFiles/prev_4a3838_00d43b_modules#demux#stl.c,revFiles/4a3838_00d43b_modules#demux#stl.c}: Open)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

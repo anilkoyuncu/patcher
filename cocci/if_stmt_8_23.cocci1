@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (strcmp(module_get_name(E0->module, false), E1) == 0 || strcmp(module_get_name(  E0->module,  true), E1) == 0)  
++ if (E1 && (strcmp(module_get_name(E0->module, false), E1) == 0 || strcmp(  module_get_name(E0->module, true), E1) == 0))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_129b68_0feb49_src#input#demux.c,revFiles/129b68_0feb49_src#input#demux.c}: demux_filter_enable_disable)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

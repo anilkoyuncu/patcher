@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+typedef tmsize_t;
+@@
+- E0 = 1 << E1->td_bitspersample; 
++ E0 = ((tmsize_t )1) << E1->td_bitspersample; 
+// Infered from: (libtiff/{prevFiles/prev_9c57ea_8b57e5_libtiff#tif_aux.c,revFiles/9c57ea_8b57e5_libtiff#tif_aux.c}: TIFFDefaultTransferFunction)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_a780f48_91e57b_modules#codec#vorbis.c: Interleave
+ - vlc/prevFiles/prev_43e536_b4a029_src#text#strings.c: vlc_b64_encode_binary
+*/
+
+// ---------------------------------------------

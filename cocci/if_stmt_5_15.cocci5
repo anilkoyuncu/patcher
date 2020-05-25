@@ -1,0 +1,18 @@
+@@
+expression E0;
+@@
+- if (E0 != '\n')  
++ if (E0 != ' ')  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_664-A-17590501-17590517.c,revFiles/664-A-17590501-17590517.c}: main)
+// False positives: (codeflaws/revFiles/664-A-17590501-17590517.c: main)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

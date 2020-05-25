@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- diff_setup(detect_rename, diff_score_opt, reverse_diff,  (generate_patch ? -1 :line_termination), 0, 0); 
++ diff_setup(detect_rename, diff_score_opt, reverse_diff,  (generate_patch ? -1 :line_termination), NULL, 0); 
+  ...
+- E0 = read_object_with_reference(E1, "tree", &E2, 0); 
++ E0 = read_object_with_reference(E1, "tree", &E2, NULL); 
+// Infered from: (git/{prevFiles/prev_e99d59_7ca452_diff-cache.c,revFiles/e99d59_7ca452_diff-cache.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return (long )E0->max_time - E1; 
++ return (long )(E0->max_time - E1); 
+// Infered from: (curl/{prevFiles/prev_d47bd3_6882ae_lib#tftp.c,revFiles/d47bd3_6882ae_lib#tftp.c}: tftp_state_timeout)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

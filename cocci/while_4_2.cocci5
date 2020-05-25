@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (E0 - E1 > 0.000001)  
++ while (E0 - E1 > 0.00000001)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_42-A-654542-654544.c,revFiles/42-A-654542-654544.c}: main)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

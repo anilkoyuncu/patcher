@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!dcerpc_smb_fetch_pol(E0, &E1, NULL, NULL))  
++ if (!dcerpc_smb_fetch_pol(E0, &E1, NULL, NULL, NULL))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_c00038_c9edc3_packet-smb-sidsnooping.c,revFiles/c00038_c9edc3_packet-smb-sidsnooping.c}: samr_query_dispinfo)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

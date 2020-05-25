@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 &= (!strcasecmp(E1->param->name, nsapi_exclude_from_ini_entries[E2])); 
++ E0 &= (strcasecmp(E1->param->name, nsapi_exclude_from_ini_entries[E2]) != 0); 
+// Infered from: (php-src/{prevFiles/prev_e27602_4ea8f4_sapi#nsapi#nsapi.c,revFiles/e27602_4ea8f4_sapi#nsapi#nsapi.c}: nsapi_php_ini_entries)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

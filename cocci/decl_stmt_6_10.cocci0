@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef filter_chain_t;
+@@
+- filter_chain_t *I0 = malloc(sizeof(*I0) + strlen(E1)); 
++ filter_chain_t *I0 = malloc(sizeof(*I0) + strlen(E1) + 1); 
+// Infered from: (vlc/{prevFiles/prev_b46faf_1f5744_src#misc#filter_chain.c,revFiles/b46faf_1f5744_src#misc#filter_chain.c}: filter_chain_NewInner)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

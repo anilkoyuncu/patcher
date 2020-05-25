@@ -1,0 +1,13 @@
+@@
+type T0;
+identifier I1;
+@@
+- T0 *I1; 
++ T0 *I1 = NULL; 
+  ...
+- OPENSSL_free(I1); 
+// Infered from: (openssl/{prevFiles/prev_4162c7d_85d6b0_crypto#srp#srp_lib.c,revFiles/4162c7d_85d6b0_crypto#srp#srp_lib.c}: SRP_Calc_x), (openssl/{prevFiles/prev_c72b8e_030648_crypto#srp#srp_lib.c,revFiles/c72b8e_030648_crypto#srp#srp_lib.c}: srp_Calc_k)
+// False positives: (openssl/revFiles/4162c7d_85d6b0_crypto#srp#srp_lib.c: SRP_Calc_x), (openssl/revFiles/c72b8e_030648_crypto#srp#srp_lib.c: SRP_Calc_x), (openssl/revFiles/c72b8e_030648_crypto#srp#srp_lib.c: srp_Calc_k)
+// Recall: 0.67, Precision: 0.44, Matching recall: 1.00
+
+// ---------------------------------------------

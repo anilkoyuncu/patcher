@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->free_cluster_index - 1 > (INT64_MAX >> E0->cluster_bits))  
++ if (E0->free_cluster_index > 0 && E0->free_cluster_index - 1 > (INT64_MAX >> E0->cluster_bits))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_65f33b_43cbef_block#qcow2-refcount.c,revFiles/65f33b_43cbef_block#qcow2-refcount.c}: alloc_clusters_noref)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

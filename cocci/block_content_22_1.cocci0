@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- return zend_hash_add_ptr(&stream_filters_hash, E0, E1) ? SUCCESS :FAILURE; 
++ ret = zend_hash_add_ptr(&stream_filters_hash, E0, E1) ? SUCCESS :FAILURE; 
++ zend_string_release(E0); 
++ return ret; 
+// Infered from: (php-src/{prevFiles/prev_468fd7_e2589b_main#streams#filter.c,revFiles/468fd7_e2589b_main#streams#filter.c}: php_stream_filter_register_factory)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

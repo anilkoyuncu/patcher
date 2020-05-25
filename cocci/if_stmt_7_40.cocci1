@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 && E1 >= E2)  
++ if (E1 + E0 >= E2)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_24d069_663ba73_ext#standard#string.c,revFiles/24d069_663ba73_ext#standard#string.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/24d069_663ba73_ext#standard#string.c: PHP_FUNCTION)
+// Recall: 0.25, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_ba7791_96b8ff_src#ziplist.c: ziplistFind
+ - codeflaws/prevFiles/prev_342-A-11115345-11115428.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_24d069_663ba73_ext#standard#string.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

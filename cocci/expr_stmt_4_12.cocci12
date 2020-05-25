@@ -1,0 +1,11 @@
+@@
+expression E4, E0, E1, E2, E6;
+binary operator B3 = {+ ,* }, B5 = {- ,/ };
+@@
+- E0 = E1 * E2 B3 E4 B5 E6; 
++ E0 = E1 * E2 B3 (E4 B5 E6); 
+// Infered from: (nginx/{prevFiles/prev_9197a3_7b06d9_src#http#modules#ngx_http_slice_filter_module.c,revFiles/9197a3_7b06d9_src#http#modules#ngx_http_slice_filter_module.c}: ngx_http_slice_parse_content_range), (nginx/{prevFiles/prev_9197a3_7b06d9_src#http#modules#ngx_http_slice_filter_module.c,revFiles/9197a3_7b06d9_src#http#modules#ngx_http_slice_filter_module.c}: ngx_http_slice_parse_content_range), (nginx/{prevFiles/prev_9197a3_7b06d9_src#http#modules#ngx_http_slice_filter_module.c,revFiles/9197a3_7b06d9_src#http#modules#ngx_http_slice_filter_module.c}: ngx_http_slice_get_start), (vlc/{prevFiles/prev_1edaf5_2c0d24_modules#demux#wav#wav.c,revFiles/1edaf5_2c0d24_modules#demux#wav#wav.c}: PCM_GetFrame)
+// False positives: (FFmpeg/revFiles/423f5d_cdce9e_libavformat#mov.c: mov_build_index), (FFmpeg/revFiles/423f5d_cdce9e_libavformat#mov.c: mov_read_header), (FFmpeg/revFiles/8aa6d8_16ef48_libavformat#cafdec.c: read_desc_chunk), (FFmpeg/revFiles/8aa6d8_16ef48_libavformat#cafdec.c: read_header)
+// Recall: 0.14, Precision: 0.60, Matching recall: 1.00
+
+// ---------------------------------------------

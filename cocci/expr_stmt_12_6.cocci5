@@ -1,0 +1,10 @@
+@@
+expression E1, E0, E2, E3;
+@@
+- sprintf(E0, E1, E2, E3); 
++ snprintf(E0, sizeof(E0), E1, E2, E3); 
+// Infered from: (vlc/{prevFiles/prev_e60a90_353a81_modules#access#smb.c,revFiles/e60a90_353a81_modules#access#smb.c}: Win32AddConnection), (curl/{prevFiles/prev_0326b0_e23825_tests#unit#unit1604.c,revFiles/0326b0_e23825_tests#unit#unit1604.c}: getcurlcodestr), (php-src/{prevFiles/prev_869a90_ef8137_ext#standard#iptc.c,revFiles/869a90_ef8137_ext#standard#iptc.c}: PHP_FUNCTION)
+// False positives: (git/revFiles/5096d4_db85a8_http-push.c: add_remote_info_ref), (wireshark/revFiles/8bc95e_69dce2_file.c: print_packets)
+// Recall: 0.08, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

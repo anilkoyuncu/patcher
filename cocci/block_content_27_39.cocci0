@@ -1,0 +1,11 @@
+@@
+expression E3, E0, E1;
+binary operator B2 = {- ,/ };
+@@
+- E0 = E1 B2 E3; 
++ S = E1 B2 E3; 
+// Infered from: (FFmpeg/{prevFiles/prev_edf548_159323_libavformat#rtpdec_jpeg.c,revFiles/edf548_159323_libavformat#rtpdec_jpeg.c}: create_default_qtables), (FFmpeg/{prevFiles/prev_edf548_159323_libavformat#rtpdec_jpeg.c,revFiles/edf548_159323_libavformat#rtpdec_jpeg.c}: create_default_qtables), (FFmpeg/{prevFiles/prev_e3e6a2_72e136_libavformat#rtpdec_jpeg.c,revFiles/e3e6a2_72e136_libavformat#rtpdec_jpeg.c}: create_default_qtables), (FFmpeg/{prevFiles/prev_e3e6a2_72e136_libavformat#rtpdec_jpeg.c,revFiles/e3e6a2_72e136_libavformat#rtpdec_jpeg.c}: create_default_qtables)
+// False positives: (FFmpeg/revFiles/e3e6a2_72e136_libavformat#rtpdec_jpeg.c: create_default_qtables), (FFmpeg/revFiles/edf548_159323_libavformat#rtpdec_jpeg.c: create_default_qtables)
+// Recall: 0.43, Precision: 0.75, Matching recall: 0.43
+
+// ---------------------------------------------

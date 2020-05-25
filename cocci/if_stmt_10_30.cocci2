@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef guint32;
+@@
+- if (E0 > E1->len)  
++ if ((guint32 )E0 > (guint32 )E1->len)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_cb92dd_da8eba_gtk#graph_analysis.c,revFiles/cb92dd_da8eba_gtk#graph_analysis.c}: overwrite)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

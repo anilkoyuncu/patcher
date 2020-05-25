@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- return omap_badwidth_write32(E0, E1, E2); 
++ omap_badwidth_write32(E0, E1, E2); 
++ return; 
+// Infered from: (qemu/{prevFiles/prev_77a825_0289a4_hw#misc#omap_tap.c,revFiles/77a825_0289a4_hw#misc#omap_tap.c}: omap_tap_write), (qemu/{prevFiles/prev_77a825_0289a4_hw#misc#omap_l4.c,revFiles/77a825_0289a4_hw#misc#omap_l4.c}: omap_l4ta_write), (qemu/{prevFiles/prev_77a825_0289a4_hw#misc#omap_sdrc.c,revFiles/77a825_0289a4_hw#misc#omap_sdrc.c}: omap_sdrc_write), (qemu/{prevFiles/prev_77a825_0289a4_hw#misc#omap_gpmc.c,revFiles/77a825_0289a4_hw#misc#omap_gpmc.c}: omap_gpmc_write), (qemu/{prevFiles/prev_77a825_0289a4_hw#ssi#omap_spi.c,revFiles/77a825_0289a4_hw#ssi#omap_spi.c}: omap_mcspi_write)
+// Recall: 0.38, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

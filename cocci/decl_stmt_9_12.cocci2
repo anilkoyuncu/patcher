@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef uint32_t;
+typedef uint64_t;
+@@
+- uint32_t I0 = ram_size - (E1->actual << VIRTIO_BALLOON_PFN_SHIFT); 
++ uint64_t I0 = ram_size - ((uint64_t )E1->actual << VIRTIO_BALLOON_PFN_SHIFT); 
+// Infered from: (qemu/{prevFiles/prev_bd12ff_c96c84_hw#virtio-balloon.c,revFiles/bd12ff_c96c84_hw#virtio-balloon.c}: get_stats_qobject)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

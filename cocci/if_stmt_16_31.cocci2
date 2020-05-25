@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!strncmp(E0, "ACK ", 4))  
++ if (!prefixcmp(E0, "ACK "))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_cc44c7_cff030_connect.c,revFiles/cc44c7_cff030_connect.c}: get_ack)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

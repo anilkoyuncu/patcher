@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2;
+@@
+- free_any_clusters(E0, be64_to_cpu(E1[E2]), 1); 
++ free_any_clusters(E0, be64_to_cpu(E1[E2]) & ~QCOW_OFLAG_COPIED, 1); 
+// Infered from: (qemu/{prevFiles/prev_d4d698f_a6d655_block-qcow2.c,revFiles/d4d698f_a6d655_block-qcow2.c}: alloc_cluster_link_l2)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_d85e18_f80b38_libavfilter#vf_yadif.c: poll_frame
+ - FFmpeg/prevFiles/prev_679191_c4804f_libavfilter#vf_yadif.c: poll_frame
+*/
+
+// ---------------------------------------------

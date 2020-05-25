@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 && E1[E2] == GDK_Tab && E3[E2] == shiftKey)  
++ if (E0 && E1[E2] == GDK_KEY_Tab && E3[E2] == shiftKey)  
+  {
+- E1[E2] = GDK_ISO_Left_Tab; 
++ E1[E2] = GDK_KEY_ISO_Left_Tab; 
+  }
+// Infered from: (gtk/{prevFiles/prev_c3851d_718ccc_gdk#quartz#gdkkeys-quartz.c,revFiles/c3851d_718ccc_gdk#quartz#gdkkeys-quartz.c}: maybe_update_keymap)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

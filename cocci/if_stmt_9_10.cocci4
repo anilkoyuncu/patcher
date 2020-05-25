@@ -1,0 +1,20 @@
+@@
+identifier I0, I1, I2;
+expression E3;
+typedef cairo_path_buf_t;
+typedef cairo_point_t;
+@@
+  void _cairo_path_buf_add_points(cairo_path_buf_t *I0,  const  cairo_point_t *I1, int I2)  
+  {
+  ...
+- if (E3->num_points == 0)  
++ if (I2 == 0)  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_84d1ea_a1be14_src#cairo-path-fixed.c,revFiles/84d1ea_a1be14_src#cairo-path-fixed.c}: _cairo_path_buf_add_points)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,18 @@
+@@
+expression E0;
+@@
+- dev_set_drvdata(&E0->dev, NULL); 
+// Infered from: (linux/{prevFiles/prev_03fb02_6b5500_drivers#media#video#zr364xx.c,revFiles/03fb02_6b5500_drivers#media#video#zr364xx.c}: zr364xx_disconnect)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

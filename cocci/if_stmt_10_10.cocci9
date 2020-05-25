@@ -1,0 +1,13 @@
+@@
+binary operator B3 = {&& ,|| };
+expression E0, E4, E1, E2;
+@@
+- if (!strncmp(E0, E1, E2) B3 E4)  
++ if (!prefixcmp(E0, E1) B3 E4)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_cc44c7_cff030_wt-status.c,revFiles/cc44c7_cff030_wt-status.c}: git_status_config), (git/{prevFiles/prev_cc44c7_cff030_receive-pack.c,revFiles/cc44c7_cff030_receive-pack.c}: update)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

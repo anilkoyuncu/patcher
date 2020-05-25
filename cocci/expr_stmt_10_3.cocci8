@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- fprintf(stderr, "qemu: unknown parameter '%s' in '%s'\n", E0, E1); 
++ fprintf(stderr, "qemu: unknown parameter in '%s'\n", E1); 
+// Infered from: (qemu/{prevFiles/prev_8cf07d_7696d1_vl.c,revFiles/8cf07d_7696d1_vl.c}: drive_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

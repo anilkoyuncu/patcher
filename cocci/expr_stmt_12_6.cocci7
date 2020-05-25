@@ -1,0 +1,43 @@
+@@
+@@
+- die("oops"); 
++ die("BUG: invalid value for shared_repository"); 
+// Infered from: (git/{prevFiles/prev_5096d4_db85a8_builtin#init-db.c,revFiles/5096d4_db85a8_builtin#init-db.c}: init_db)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.90, Precision: 0.74
+// -- Node Change --
+// Recall: 0.82, Precision: 0.55
+// -- General --
+// Functions fully changed: 19/38(50%)
+
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_047242_313197_test-dump-cache-tree.c: dump_cache_tree
+ - curl/prevFiles/prev_0326b0_e23825_tests#unit#unit1604.c: getflagstr
+ - cpython/prevFiles/prev_d4c0a9c_5107b4_Python#compile.c: get_ref_type
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_5096d4_db85a8_http-push.c: xml_start_tag
+ - FFmpeg/prevFiles/prev_bd03af_ec1ef0_ffmpeg_opt.c: opt_preset
+ - git/prevFiles/prev_5096d4_db85a8_http-push.c: add_remote_info_ref
+ - wireshark/prevFiles/prev_8bc95e_69dce2_tethereal.c: file_open_error_message
+ - wireshark/prevFiles/prev_8bc95e_69dce2_file.c: print_packets
+ - git/prevFiles/prev_5096d4_db85a8_daemon.c: handle
+ - git/prevFiles/prev_5096d4_db85a8_builtin#init-db.c: create_default_files
+ - php-src/prevFiles/prev_8992aa_444682_ext#exif#exif.c: exif_get_sectionlist
+ - openssl/prevFiles/prev_60eba3_eee955_crypto#asn1#a_mbstr.c: ASN1_mbstring_ncopy
+ - wireshark/prevFiles/prev_8bc95e_69dce2_tethereal.c: capture
+ - qemu/prevFiles/prev_22ff51_2758aa_qemu-nbd.c: main
+ - wireshark/prevFiles/prev_8bc95e_69dce2_file.c: read_cap_file
+ - git/prevFiles/prev_5096d4_db85a8_http-push.c: main
+ - qemu/prevFiles/prev_eba2af_95ce32_linux-user#elfload.c: load_elf_binary
+ - git/prevFiles/prev_5096d4_db85a8_builtin#init-db.c: copy_templates
+ - git/prevFiles/prev_5096d4_db85a8_builtin#init-db.c: create_object_directory
+*/
+
+// ---------------------------------------------

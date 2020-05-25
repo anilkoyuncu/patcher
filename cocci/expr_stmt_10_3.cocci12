@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(E0->dev, "%s: Unable to register subdev %s\n", __func__,  E1->board_info->type); 
++ dev_err(E0->dev, "Unable to register subdev %s\n", E1->board_info->type); 
+// Infered from: (linux/{prevFiles/prev_8c6ccb_aed1c7_drivers#staging#media#omap4iss#iss.c,revFiles/8c6ccb_aed1c7_drivers#staging#media#omap4iss#iss.c}: iss_register_subdev_group)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

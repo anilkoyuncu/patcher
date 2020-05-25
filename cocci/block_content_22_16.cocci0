@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef u16;
+@@
+- E0 = ((((u16 )E1) << 8) | (u16 )E2); 
++ E0 = (E1 << 8) | E2; 
+// Infered from: (linux/{prevFiles/prev_bf5d030_f4fa0370_drivers#staging#media#atomisp#i2c#ov2722.c,revFiles/bf5d030_f4fa0370_drivers#staging#media#atomisp#i2c#ov2722.c}: ov2722_detect)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

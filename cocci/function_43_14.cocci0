@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- playlist_LockClear(E0); 
++ PL_LOCK; 
++ playlist_NodeDelete(E0, E0->p_root_category, VLC_TRUE, VLC_TRUE); 
++ playlist_NodeDelete(E0, E0->p_root_onelevel, VLC_TRUE, VLC_TRUE); 
++ PL_UNLOCK; 
+// Infered from: (vlc/{prevFiles/prev_fd7ce7_0f4a49_src#playlist#engine.c,revFiles/fd7ce7_0f4a49_src#playlist#engine.c}: playlist_Destroy)
+// Recall: 0.36, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

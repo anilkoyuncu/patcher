@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef time_t;
+typedef timediff_t;
+@@
+- time_t I0; 
++ timediff_t I0; 
+// Infered from: (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#openssl.c,revFiles/527461_96a3ab_lib#vtls#openssl.c}: ossl_connect_common), (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#schannel.c,revFiles/527461_96a3ab_lib#vtls#schannel.c}: schannel_connect_common), (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#schannel.c,revFiles/527461_96a3ab_lib#vtls#schannel.c}: schannel_send), (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#mesalink.c,revFiles/527461_96a3ab_lib#vtls#mesalink.c}: mesalink_connect_common)
+// Recall: 0.31, Precision: 1.00, Matching recall: 0.57
+
+// ---------------------------------------------

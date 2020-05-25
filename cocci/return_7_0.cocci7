@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- return Py_BuildValue("is#", E0->sa_family, E0->sa_data, sizeof(E0->sa_data)); 
++ return Py_BuildValue("iy#", E0->sa_family, E0->sa_data, sizeof(E0->sa_data)); 
+// Infered from: (cpython/{prevFiles/prev_9ce8e3_6ca130_Modules#socketmodule.c,revFiles/9ce8e3_6ca130_Modules#socketmodule.c}: makesockaddr)
+// False positives: (cpython/revFiles/f0cab1_ec0d6f_Modules#socketmodule.c: makesockaddr)
+// Recall: 0.03, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

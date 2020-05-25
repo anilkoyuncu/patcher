@@ -1,0 +1,10 @@
+@@
+type T1;
+expression E0, E2;
+@@
+- E0->byte_count = smb_swap16((T1 )E2 + 1); 
++ E0->byte_count = smb_swap16((T1 )(E2 + 1)); 
+// Infered from: (curl/{prevFiles/prev_56603e_89cce1_lib#smb.c,revFiles/56603e_89cce1_lib#smb.c}: smb_send_write)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

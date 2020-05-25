@@ -1,0 +1,12 @@
+@@
+identifier I0;
+typedef GMountOperation;
+typedef GtkMountOperation;
+@@
+- GtkMountOperation *I0; 
++ GMountOperation *I0; 
+// Infered from: (gtk/{prevFiles/prev_2accf2_67632a_gtk#gtkfilechooserdefault.c,revFiles/2accf2_67632a_gtk#gtkfilechooserdefault.c}: shortcuts_activate_volume)
+// False positives: (gtk/revFiles/2accf2_67632a_gtk#gtkfilechooserdefault.c: _gtk_file_chooser_label_for_file)
+// Recall: 0.03, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

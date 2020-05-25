@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- sysbus_create_simple("xlnx,ps7-usb", 0xE0003000, E0[75 - IRQ_OFFSET]); 
++ sysbus_create_simple("xlnx,ps7-usb", 0xE0003000, E0[76 - IRQ_OFFSET]); 
+// Infered from: (qemu/{prevFiles/prev_70ef6a_fb6d1b_hw#xilinx_zynq.c,revFiles/70ef6a_fb6d1b_hw#xilinx_zynq.c}: zynq_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

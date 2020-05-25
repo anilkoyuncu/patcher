@@ -1,0 +1,69 @@
+@@
+expression E0;
+@@
+- E0->set_background = gdk_mir_window_impl_set_background; 
+// Infered from: (gtk/{prevFiles/prev_3efbb7_82b2bf2_gdk#mir#gdkmirwindowimpl.c,revFiles/3efbb7_82b2bf2_gdk#mir#gdkmirwindowimpl.c}: gdk_mir_window_impl_class_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.11, Precision: 0.83
+// -- Node Change --
+// Recall: 0.12, Precision: 0.80
+// -- General --
+// Functions fully changed: 2/48(4%)
+
+/*
+Functions where the patch applied partially:
+ - gstreamer/prevFiles/prev_87f9d5_6ce3e6_test#mp1tomp1.c: main
+ - php-src/prevFiles/prev_13f8b2_afc673_sapi#apache#mod_php4.c: php_merge_dir
+ - php-src/prevFiles/prev_13f8b2_afc673_sapi#apache_hooks#mod_php4.c: php_merge_dir
+*/
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_fa0f83_96562f_crypto#bn#bn_nist.c: BN_nist_mod_521
+ - php-src/prevFiles/prev_7eeff1_0c9741_ext#mysqli#mysqli.c: mysqli_object_has_property
+ - php-src/prevFiles/prev_6640ad_c18f66_ext#session#session.c: php_session_destroy
+ - gstreamer/prevFiles/prev_7e6ea6_846ecd_gst#schedulers#gstoptimalscheduler.c: get_group
+ - tcl/prevFiles/prev_679f8f_37387d_generic#tclTimer.c: Tcl_AfterObjCmd
+ - wireshark/prevFiles/prev_8d0ea8_852e3f_gtk#color_dlg.c: colorize_dialog_new
+ - gtk/prevFiles/prev_d881ed_06091e_tests#testtitlebar.c: main
+ - FFmpeg/prevFiles/prev_afd7e4_039904_libavdevice#alsa-audio-dec.c: audio_read_header
+ - wireshark/prevFiles/prev_fbba44_11934c_epan#dissectors#packet-gtp.c: dissect_gtp_common
+ - php-src/prevFiles/prev_8339e8_4d738ad_ext#icap#php3_icap.c: php3_icap_list_alarms
+ - gtk/prevFiles/prev_3efbb7_82b2bf2_gdk#mir#gdkmirwindowimpl.c: gdk_mir_window_impl_ref_cairo_surface
+ - php-src/prevFiles/prev_13f8b2_afc673_sapi#apache#mod_php4.c: should_overwrite_per_dir_entry
+ - gstreamer/prevFiles/prev_87f9d5_6ce3e6_test#dvshow.c: main
+ - gstreamer/prevFiles/prev_87f9d5_6ce3e6_test#record.c: main
+ - php-src/prevFiles/prev_13f8b2_afc673_sapi#apache_hooks#mod_php4.c: should_overwrite_per_dir_entry
+ - php-src/prevFiles/prev_611226_07b90f_ext#standard#var.c: PHP_FUNCTION
+ - vlc/prevFiles/prev_c17e76_1fa9ce_modules#misc#notify#notify.c: ItemChange
+ - ompi/prevFiles/prev_483222_6c9de8_ompi#mca#coll#tuned#coll_tuned_allgatherv.c: ompi_coll_tuned_allgatherv_intra_bruck
+ - cpython/prevFiles/prev_ed8efd_ef092f_Objects#dictobject.c: _PyDictView_Intersect
+ - gtk/prevFiles/prev_2accf2_67632a_gtk#gtkfilechooserdefault.c: gtk_file_chooser_default_realize
+ - gtk/prevFiles/prev_4dfe2a_ab7507_gdk#win32#gdkdrop-win32.c: gdk_win32_drop_finish
+ - vlc/prevFiles/prev_b62b28_57b0e5_src#stream_output#stream_output.c: sout_stream_delete
+ - php-src/prevFiles/prev_8339e8_4d738ad_ext#icap#php3_icap.c: php3_icap_store_event
+ - vlc/prevFiles/prev_7c4a61_5002a5_modules#video_filter#yuvp.c: Open
+ - vlc/prevFiles/prev_8dcd94_92290c_src#libvlc-common.c: Usage
+ - gtk/prevFiles/prev_de894f_a829b2_gtk#gtkcssenumvalue.c: gtk_css_font_size_get_default_px
+ - gstreamer/prevFiles/prev_87f9d5_6ce3e6_test#mp1tomp1.c: mp2tomp1
+ - ompi/prevFiles/prev_93e493_3593fa_orte#mca#state#hnp#state_hnp.c: finalize
+ - vlc/prevFiles/prev_39599d_c61c53_modules#video_filter#croppadd.c: OpenFilter
+ - cpython/prevFiles/prev_3447be_1a21451_Modules#sha1module.c: PyInit__sha1
+ - cpython/prevFiles/prev_b59ab4_185a29_Python#compile.c: com_error
+ - curl/prevFiles/prev_71c945_17f48f_lib#telnet.c: check_telnet_options
+ - gtk/prevFiles/prev_4dfe2a_ab7507_gdk#win32#gdkevents-win32.c: _gdk_win32_do_emit_configure_event
+ - gtk/prevFiles/prev_65d90e_793d12_gtk#gtkfilechooserdefault.c: shortcuts_list_create
+ - wireshark/prevFiles/prev_2a1b17_ff03ea_epan#sigcomp_state_hdlr.c: udvm_state_free
+ - vlc/prevFiles/prev_c17e76_1fa9ce_modules#misc#notify#notify.c: Close
+ - ompi/prevFiles/prev_32ab6f_8c85ca_ompi#mca#osc#rdma#osc_rdma_active_target.c: ompi_osc_rdma_start
+ - FFmpeg/prevFiles/prev_afd7e4_039904_libavdevice#alsa-audio-dec.c: audio_read_packet
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_2accf2_67632a_gtk#gtkfilechooserdefault.c: _gtk_file_chooser_label_for_file
+*/
+
+// ---------------------------------------------

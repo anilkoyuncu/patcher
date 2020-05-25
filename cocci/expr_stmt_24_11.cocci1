@@ -1,0 +1,27 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef HRESULT;
+@@
+- HRESULT I0; 
+- I0 = IDirect3D9_GetAdapterIdentifier(E1, E2, 0, &E3); 
+- if (strstr(E3.Description, "PerfHUD") != 0)  
++ HRESULT I0 = IDirect3D9_GetAdapterIdentifier(E1, E2, 0, &E3); 
++ if (SUCCEEDED(I0) && strstr(E3.Description, "PerfHUD") != 0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_9356b6_f5e991_modules#video_output#msw#direct3d.c,revFiles/9356b6_f5e991_modules#video_output#msw#direct3d.c}: Direct3DOpen)
+// Recall: 0.56, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

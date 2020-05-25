@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0 || *E0 == NULL)  
++ if (E0 == NULL || *E0 == NULL)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_cc99bf_e44380_crypto#x509#x_x509.c,revFiles/cc99bf_e44380_crypto#x509#x_x509.c}: d2i_X509_AUX)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

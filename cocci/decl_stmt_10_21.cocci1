@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef aout_stream_sys_t;
+@@
+- aout_stream_sys_t *I0 = malloc(sizeof(*I0)); 
++ aout_stream_sys_t *I0 = calloc(1, sizeof(*I0)); 
+// Infered from: (vlc/{prevFiles/prev_5ef694_25ff84_modules#audio_output#directsound.c,revFiles/5ef694_25ff84_modules#audio_output#directsound.c}: StreamStart)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

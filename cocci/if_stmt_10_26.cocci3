@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (0 < (E0 = PHPWRITE(E1, MIN(E2 - E3, INT_MAX))))  
++ if (0 < (E0 = PHPWRITE(E1 + E3, MIN(E2 - E3, INT_MAX))))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_ac0700_46df06_main#streams#streams.c,revFiles/ac0700_46df06_main#streams#streams.c}: _php_stream_passthru)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

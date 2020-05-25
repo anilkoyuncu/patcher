@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef asdl_int_seq;
+typedef asdl_seq;
+@@
+- asdl_seq *I0 = NULL; 
++ asdl_int_seq *I0 = NULL; 
+  ...
+- I0 = (asdl_seq *)PyArena_Malloc(E1, E2); 
++ I0 = (asdl_int_seq *)PyArena_Malloc(E1, E2); 
+// Infered from: (cpython/{prevFiles/prev_f33dea_5d4cf5_Python#asdl.c,revFiles/f33dea_5d4cf5_Python#asdl.c}: asdl_int_seq_new)
+// False positives: (cpython/revFiles/f33dea_5d4cf5_Python#asdl.c: asdl_seq_new)
+// Recall: 0.12, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

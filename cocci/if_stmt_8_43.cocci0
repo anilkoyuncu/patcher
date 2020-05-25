@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > E1->frame_bits)  
++ if (!ret)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_78532b_79cf2c_libavcodec#dnxhdenc.c,revFiles/78532b_79cf2c_libavcodec#dnxhdenc.c}: dnxhd_encode_variance)
+// False positives: (FFmpeg/revFiles/78532b_79cf2c_libavcodec#dnxhdenc.c: dnxhd_encode_rdo), (FFmpeg/revFiles/78532b_79cf2c_libavcodec#dnxhdenc.c: dnxhd_find_qscale)
+// Recall: 0.17, Precision: 0.33, Matching recall: 0.25
+
+// ---------------------------------------------

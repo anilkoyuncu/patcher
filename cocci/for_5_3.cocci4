@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 < 0 || E0 >= guestfd_array->len)  
++ if (E0 <= 0 || E0 >= guestfd_array->len)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_21bf9b_af4ba4_target#arm#arm-semi.c,revFiles/21bf9b_af4ba4_target#arm#arm-semi.c}: do_get_guestfd)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

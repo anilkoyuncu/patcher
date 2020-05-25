@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = malloc(E1->packed_size); 
++ E0 = malloc(E1->packed_size + 1); 
+// Infered from: (libarchive/{prevFiles/prev_351053_238f57_libarchive#archive_read_support_format_rar.c,revFiles/351053_238f57_libarchive#archive_read_support_format_rar.c}: read_symlink_stored)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

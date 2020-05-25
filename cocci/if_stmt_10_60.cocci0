@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (strcmp(E0->name, "rxvt") == 0)  
++ if (strncmp(E0->name, "rxvt", 4) == 0)  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_051dcd_ef7c89_tty-term.c,revFiles/051dcd_ef7c89_tty-term.c}: tty_term_quirks)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

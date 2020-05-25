@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- memset(E0, 0, sizseof(*E0) * E1); 
++ memset(E0, 0, sizeof(*E0) * E1); 
+// Infered from: (openssl/{prevFiles/prev_88f4c6_cc01d2_crypto#ec#ecp_nistp521.c,revFiles/88f4c6_cc01d2_crypto#ec#ecp_nistp521.c}: ec_GFp_nistp521_points_mul)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

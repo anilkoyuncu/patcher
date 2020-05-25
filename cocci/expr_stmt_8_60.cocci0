@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1 * 1000000; 
++ E0 = E1 * I64C(1000000); 
+// Infered from: (vlc/{prevFiles/prev_d39765_7d23ab_modules#demux#playlist#m3u.c,revFiles/d39765_7d23ab_modules#demux#playlist#m3u.c}: Demux)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

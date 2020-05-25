@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return !prefixcmp(E0->string, E1); 
++ return starts_with(E0->string, E1); 
+// Infered from: (git/{prevFiles/prev_595565_956623_test-string-list.c,revFiles/595565_956623_test-string-list.c}: prefix_cb)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

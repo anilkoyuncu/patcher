@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- if (strncmp(E0, E1, E2))  
++ if (prefixcmp(E0, E1))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_cc44c7_cff030_help.c,revFiles/cc44c7_cff030_help.c}: list_commands), (git/{prevFiles/prev_cc44c7_cff030_builtin-fsck.c,revFiles/cc44c7_cff030_builtin-fsck.c}: fsck_head_link)
+// False positives: (git/revFiles/1968d7_599065_builtin-ls-tree.c: show_recursive), (git/revFiles/cc44c7_cff030_shell.c: main)
+// Recall: 0.08, Precision: 0.60, Matching recall: 1.00
+
+// ---------------------------------------------

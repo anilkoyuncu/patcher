@@ -1,0 +1,41 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  char *I0 = archive_entry_pathname(E1); 
+- if (I0 == NULL || I0[0] == '\0')  
++ if (archive_entry_pathname(E1) == NULL || archive_entry_pathname(E1)[  0] == '\0')  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_bbfb00_ff86dd_tar#read.c,revFiles/bbfb00_ff86dd_tar#read.c}: read_archive)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.49, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/18(38%)
+
+/*
+Functions where the patch applied partially:
+ - cpython/prevFiles/prev_114900_319c47_Parser#tokenizer.c: tok_nextc
+ - FFmpeg/prevFiles/prev_337953_2a30df0_libavfilter#libmpcodecs#vf_pp7.c: filter
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_4acdfe_66719c_epan#wslua#wslua_file.c: create_wth_priv
+ - FFmpeg/prevFiles/prev_7f4d2d8_e151e2_libavcodec#4xm.c: decode_p_block
+ - cpython/prevFiles/prev_114900_319c47_Parser#tokenizer.c: tok_new
+ - FFmpeg/prevFiles/prev_e37286_1e9be1_libavcodec#jpeg_ls.c: ls_decode_picture
+ - cairo/prevFiles/prev_37be18_3c9e5d_util#cairo-trace#trace.c: _emit_image
+ - wireshark/prevFiles/prev_4acdfe_66719c_epan#wslua#wslua_file.c: create_wdh_priv
+ - ompi/prevFiles/prev_dd9726_c360c8_src#runtime#ompi_rte_wait.c: ompi_rte_wait_signal_callback
+ - wireshark/prevFiles/prev_ab8f58_ddddf2_epan#dissectors#packet-image-gif.c: dissect_gif
+ - cpython/prevFiles/prev_e584cb_c6789d_Modules#_testcapimodule.c: MethodDescriptor_new
+*/
+
+// ---------------------------------------------

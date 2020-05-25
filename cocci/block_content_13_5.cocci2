@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- return E0 - E1; 
++ return (int )(E0 - E1); 
+// Infered from: (curl/{prevFiles/prev_bbefdf_06c96d_lib#cookie.c,revFiles/bbefdf_06c96d_lib#cookie.c}: cookie_sort)
+// False positives: (qemu/revFiles/29c6e6_59a041_hw#vfio#pci.c: vfio_std_cap_max_size)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

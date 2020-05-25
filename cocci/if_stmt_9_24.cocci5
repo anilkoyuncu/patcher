@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = cmd_find_client(E1, NULL)) != NULL)  
++ if ((E0 = cmd_find_client(E1, NULL, 1)) != NULL)  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_bb8457_3eae71_cmd-new-window.c,revFiles/bb8457_3eae71_cmd-new-window.c}: cmd_new_window_exec), (tmux/{prevFiles/prev_bb8457_3eae71_cmd-break-pane.c,revFiles/bb8457_3eae71_cmd-break-pane.c}: cmd_break_pane_exec)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

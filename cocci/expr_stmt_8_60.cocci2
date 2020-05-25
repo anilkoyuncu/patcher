@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- *E0 = gme_tell(E1->emu) * 1000; 
++ *E0 = gme_tell(E1->emu) * INT64_C(1000); 
+// Infered from: (vlc/{prevFiles/prev_de7205_fac9be_modules#demux#gme.c,revFiles/de7205_fac9be_modules#demux#gme.c}: Control)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- opt_output_file(audio_device); 
++ opt_output_file(audio_device ? audio_device :"/dev/dsp0"); 
+// Infered from: (FFmpeg/{prevFiles/prev_04bbd3_cfadad_ffmpeg.c,revFiles/04bbd3_cfadad_ffmpeg.c}: prepare_play)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

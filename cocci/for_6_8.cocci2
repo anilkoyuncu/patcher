@@ -1,0 +1,34 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 1;E0 <= E1;E0++)  
++ for(E0 = 1;E0 <= 100;E0++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_127-B-2043633-2043634.c,revFiles/127-B-2043633-2043634.c}: main)
+// False positives: (codeflaws/revFiles/505-B-11838805-11838927.c: main), (codeflaws/revFiles/585-B-15514693-15514749.c: main)
+// Recall: 0.29, Precision: 0.36, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.57, Precision: 1.00
+// -- Node Change --
+// Recall: 0.43, Precision: 0.46
+// -- General --
+// Functions fully changed: 2/7(28%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_127-B-3535130-3535278.c: main
+ - codeflaws/prevFiles/prev_515-B-10119571-10119596.c: main
+ - codeflaws/prevFiles/prev_139-A-14564975-14564980.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - codeflaws/prevFiles/prev_505-B-11838805-11838927.c: main
+ - codeflaws/prevFiles/prev_585-B-15514693-15514749.c: main
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- while (E0[E1])  
++ while (E0 && E0[E1])  
+  {
+  ...
+  }
+// Infered from: (apr/{prevFiles/prev_910542_48982c_threadproc#win32#proc.c,revFiles/910542_48982c_threadproc#win32#proc.c}: ap_create_process)
+// False positives: (apr/revFiles/910542_48982c_threadproc#win32#proc.c: ap_create_process)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

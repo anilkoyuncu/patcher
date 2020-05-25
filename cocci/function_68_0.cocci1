@@ -1,0 +1,28 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef Visitor;
+@@
+- Visitor *I0; 
+- E1->obj = qobject_from_json(E2); 
+- g_assert(E1->obj != NULL); 
+- E1->qiv = qmp_input_visitor_new(E1->obj); 
+- g_assert(E1->qiv != NULL); 
+- I0 = qmp_input_get_visitor(E1->qiv); 
+- g_assert(I0 != NULL); 
+- return I0; 
++ return visitor_input_test_init_internal(E1, E2, NULL); 
+// Infered from: (qemu/{prevFiles/prev_0920a1_cc9f60_tests#test-qmp-input-visitor.c,revFiles/0920a1_cc9f60_tests#test-qmp-input-visitor.c}: visitor_input_test_init_raw)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+
+// ---------------------------------------------

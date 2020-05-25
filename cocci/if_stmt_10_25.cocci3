@@ -1,0 +1,39 @@
+@@
+expression E0;
+@@
+- if (E0 < 0)  
++ if (Z_LVAL_PP(E0) < 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_5d8c35_0699d9_ext#imap#php_imap.c,revFiles/5d8c35_0699d9_ext#imap#php_imap.c}: php_imap_do_open), (php-src/{prevFiles/prev_11a133_864948_ext#imap#php_imap.c,revFiles/11a133_864948_ext#imap#php_imap.c}: php_imap_do_open), (php-src/{prevFiles/prev_08d56f_fcaa1c_ext#imap#php_imap.c,revFiles/08d56f_fcaa1c_ext#imap#php_imap.c}: php_imap_do_open)
+// False positives: (FFmpeg/revFiles/eaa91e_da5695_ffplay.c: read_thread), (FFmpeg/revFiles/eaa91e_da5695_ffplay.c: sdl_audio_callback), (FFmpeg/revFiles/eaa91e_da5695_ffplay.c: video_audio_display)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 0.67
+// -- Node Change --
+// Recall: 0.67, Precision: 0.67
+// -- General --
+// Functions fully changed: 6/11(54%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_146-B-1117802-1117804.c: main
+ - apr/prevFiles/prev_2877ae_ec5a19_test#ab_apr.c: read_connection
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_eaa91e_da5695_ffplay.c: sdl_audio_callback
+ - FFmpeg/prevFiles/prev_eaa91e_da5695_ffplay.c: read_thread
+ - FFmpeg/prevFiles/prev_eaa91e_da5695_ffplay.c: video_audio_display
+*/
+
+// ---------------------------------------------

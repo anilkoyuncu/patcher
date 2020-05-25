@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (*E0 > E1->i_data_peeked)  
++ while (*E0 >= E1->i_data_peeked)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_2952a4_c07d72_modules#demux#mjpeg.c,revFiles/2952a4_c07d72_modules#demux#mjpeg.c}: GetLine)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

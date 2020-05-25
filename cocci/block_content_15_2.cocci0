@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- msg_Err(E0, "out of memory"); 
+- return VLC_EGENERIC; 
++ return VLC_ENOMEM; 
+// Infered from: (vlc/{prevFiles/prev_172e22_42bb23_modules#packetizer#mpeg4audio.c,revFiles/172e22_42bb23_modules#packetizer#mpeg4audio.c}: OpenPacketizer), (vlc/{prevFiles/prev_b674da_7d1d56_modules#audio_filter#converter#a52tofloat32.c,revFiles/b674da_7d1d56_modules#audio_filter#converter#a52tofloat32.c}: OpenFilter), (vlc/{prevFiles/prev_172e22_42bb23_modules#packetizer#mpeg4video.c,revFiles/172e22_42bb23_modules#packetizer#mpeg4video.c}: Open), (vlc/{prevFiles/prev_b674da_7d1d56_modules#audio_filter#channel_mixer#dolby.c,revFiles/b674da_7d1d56_modules#audio_filter#channel_mixer#dolby.c}: Create), (vlc/{prevFiles/prev_ba6ca8_b52917_modules#codec#libmpeg2.c,revFiles/ba6ca8_b52917_modules#codec#libmpeg2.c}: OpenDecoder)
+// Recall: 0.94, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

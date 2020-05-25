@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- strcpy(E0.sun_path, (*E1[0])->value.str.val); 
++ strlcpy(E0.sun_path, (*E1[0])->value.str.val, sizeof(E0.sun_path)); 
+// Infered from: (php-src/{prevFiles/prev_b79db0_9d39ad_ext#standard#fsock.c,revFiles/b79db0_9d39ad_ext#standard#fsock.c}: php_fsockopen)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

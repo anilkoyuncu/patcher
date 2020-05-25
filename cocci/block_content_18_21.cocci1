@@ -1,0 +1,23 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef Error;
+@@
+- Error *I0 = NULL; 
+  ...
+- E1 = object_property_get_link(OBJECT(E2), "device", &I0); 
++ E1 = object_property_get_link(OBJECT(E2), "device", NULL); 
+// Infered from: (qemu/{prevFiles/prev_8a0f9b_9c7074_ui#gtk.c,revFiles/8a0f9b_9c7074_ui#gtk.c}: gd_vc_gfx_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

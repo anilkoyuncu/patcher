@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef gchar;
+@@
+- E0 = g_convert(E1, E2, E3, E4, NULL, NULL, NULL); 
++ E0 = g_convert((const  gchar *)E1, E2, E3, E4, NULL, NULL, NULL); 
+// Infered from: (gtk/{prevFiles/prev_a0faf5_1b9fa9_gdk#win32#gdkselection-win32.c,revFiles/a0faf5_1b9fa9_gdk#win32#gdkselection-win32.c}: gdk_text_property_to_text_list_for_display)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

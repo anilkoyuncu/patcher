@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (!wtap_seek_read(E0->wth, E0->file_off, E1, E2, E0->tvb.length, &E3, &E4))  
++ if (!wtap_seek_read(E0->wth, E0->file_off, E1, E2,  E0->tvb.length + E0->offset, &E3, &E4))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_94e8dd_b99a65_frame_tvbuff.c,revFiles/94e8dd_b99a65_frame_tvbuff.c}: frame_read)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

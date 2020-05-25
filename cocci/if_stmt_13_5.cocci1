@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->codec->codec_id == AV_CODEC_ID_NONE && E1 == STREAM_TYPE_PRIVATE_DATA)  
++ if ((E0->codec->codec_id == AV_CODEC_ID_NONE || E0->request_probe > 0) && E1 == STREAM_TYPE_PRIVATE_DATA)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_425075_b62738_libavformat#mpegts.c,revFiles/425075_b62738_libavformat#mpegts.c}: ff_parse_mpeg2_descriptor)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

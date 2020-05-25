@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- SG(request_info).content_length = (E0 ? atoi(E0) :0); 
++ SG(request_info).content_length = (E0 ? atol(E0) :0); 
+// Infered from: (php-src/{prevFiles/prev_d7d0d0_64978c_sapi#apache_hooks#mod_php5.c,revFiles/d7d0d0_64978c_sapi#apache_hooks#mod_php5.c}: init_request_info), (php-src/{prevFiles/prev_d7d0d0_64978c_sapi#apache2filter#sapi_apache2.c,revFiles/d7d0d0_64978c_sapi#apache2filter#sapi_apache2.c}: php_apache_request_ctor), (php-src/{prevFiles/prev_d7d0d0_64978c_sapi#apache2handler#sapi_apache2.c,revFiles/d7d0d0_64978c_sapi#apache2handler#sapi_apache2.c}: php_apache_request_ctor), (php-src/{prevFiles/prev_d7d0d0_64978c_sapi#apache#mod_php5.c,revFiles/d7d0d0_64978c_sapi#apache#mod_php5.c}: init_request_info)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

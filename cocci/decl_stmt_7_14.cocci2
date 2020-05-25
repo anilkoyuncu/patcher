@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef int64_t;
+@@
+- int I0 = (E1 - ((E2 - 2) << 16)) / (1 << 17); 
++ int I0 = (E1 - ((int64_t )(E2 - 2) << 16)) / (1 << 17); 
+// Infered from: (FFmpeg/{prevFiles/prev_3a177a_925c37_libswscale#utils.c,revFiles/3a177a_925c37_libswscale#utils.c}: initFilter)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

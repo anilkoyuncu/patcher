@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- SIGNAL_CONNECT(E0, "clicked", pixmap_save_cb, E1->pixmap); 
++ OBJECT_SET_DATA(E0, "pixmap", E1->pixmap); 
+// Infered from: (wireshark/{prevFiles/prev_edf727_8f8bce_gtk#io_stat.c,revFiles/edf727_8f8bce_gtk#io_stat.c}: configure_event)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

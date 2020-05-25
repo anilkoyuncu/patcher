@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef u_long;
+@@
+- TIFFError(E0->tif_name, "%u: Sample out of range, max %u", E1,  E2->td_samplesperpixel); 
++ TIFFError(E0->tif_name, "%lu: Sample out of range, max %lu", (u_long )E1,  (u_long )E2->td_samplesperpixel); 
+// Infered from: (libtiff/{prevFiles/prev_b84b0e_99f27d_libtiff#tif_strip.c,revFiles/b84b0e_99f27d_libtiff#tif_strip.c}: TIFFComputeStrip)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- return fdt_setprop(E0, E1, E2, E3, E4); 
++ return fdt_setprop(E0, E1, E2, E3, E4 + 1); 
+// Infered from: (qemu/{prevFiles/prev_fe93e3_d4ccd8_hw#ppc#spapr_ovec.c,revFiles/fe93e3_d4ccd8_hw#ppc#spapr_ovec.c}: spapr_ovec_populate_dt)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

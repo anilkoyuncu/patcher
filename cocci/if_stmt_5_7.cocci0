@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->fmt.i_codec == VLC_CODEC_OPUS && E0->i_previous_granulepos >= 0 && (  E1 = Ogg_OpusPacketDuration(E0, E2)) > 0)  
++ if (E0->fmt.i_codec == VLC_CODEC_OPUS && E0->i_previous_granulepos > 0 && (  E1 = Ogg_OpusPacketDuration(E0, E2)) > 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_e39d1a_ce9dac_modules#demux#ogg.c,revFiles/e39d1a_ce9dac_modules#demux#ogg.c}: Ogg_UpdatePCR)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- FF_ALLOCZ_OR_GOTO(E0->m.avctx, E0->mb_rc,  8160 * E0->m.avctx->qmax * sizeof(RCEntry), fail); 
++ FF_ALLOCZ_OR_GOTO(E0->m.avctx, E0->mb_rc,  8160 * (E0->m.avctx->qmax + 1) * sizeof(RCEntry), fail); 
+// Infered from: (FFmpeg/{prevFiles/prev_f1caaa_ee27b1_libavcodec#dnxhdenc.c,revFiles/f1caaa_ee27b1_libavcodec#dnxhdenc.c}: dnxhd_init_rc)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

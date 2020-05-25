@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (find_image_range(&E0, &E1, E2->path, E2->start_number - 1) < 0)  
++ if (find_image_range(&E0, &E1, E2->path, E2->start_number) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_a30e77_66747a_libavformat#img2dec.c,revFiles/a30e77_66747a_libavformat#img2dec.c}: read_header)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

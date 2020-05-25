@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- pstrcpy(obufp, (size_t )(obufp - obuf), E0); 
++ pstrcpy(obufp, sizeof(obuf) - (size_t )(obufp - obuf), E0); 
+// Infered from: (qemu/{prevFiles/prev_ac700b_62dd23_i386-dis.c,revFiles/ac700b_62dd23_i386-dis.c}: oappend)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

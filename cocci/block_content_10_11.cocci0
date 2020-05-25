@@ -1,0 +1,18 @@
+@@
+identifier I0, I2;
+expression E1;
+typedef sPAPREventLogEntry;
+iterator name QTAILQ_FOREACH;
+iterator name QTAILQ_FOREACH_SAFE;
+@@
+- sPAPREventLogEntry *I0 = NULL; 
+- QTAILQ_FOREACH (I0, &E1->I2, next)  
++ QTAILQ_FOREACH_SAFE (I0, &E1->I2, next, next_entry)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_d492a7_3b2fce_hw#ppc#spapr_events.c,revFiles/d492a7_3b2fce_hw#ppc#spapr_events.c}: spapr_clear_pending_events)
+// False positives: (qemu/revFiles/d492a7_3b2fce_hw#ppc#spapr_events.c: rtas_event_log_contains), (qemu/revFiles/d492a7_3b2fce_hw#ppc#spapr_events.c: rtas_event_log_dequeue)
+// Recall: 0.25, Precision: 0.33, Matching recall: 0.75
+
+// ---------------------------------------------

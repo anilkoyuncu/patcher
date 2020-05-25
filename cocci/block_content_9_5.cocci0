@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (!(E0 = nfs3svc_decode_fh(E0, &E1->fh)))  
++ E0 = nfs3svc_decode_fh(E0, &E1->fh); 
++ if (!E0)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_d40aa33_f35ea0_fs#nfsd#nfs3acl.c,revFiles/d40aa33_f35ea0_fs#nfsd#nfs3acl.c}: nfs3svc_decode_getaclargs), (linux/{prevFiles/prev_d40aa33_f35ea0_fs#nfsd#nfs3acl.c,revFiles/d40aa33_f35ea0_fs#nfsd#nfs3acl.c}: nfs3svc_decode_setaclargs)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

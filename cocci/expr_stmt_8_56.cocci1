@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef int64_t;
+@@
+- E0 = E1 ? E2->sample_rate * E2->channels * E1 :E2->bit_rate; 
++ E0 = E1 ? E2->sample_rate * (int64_t )E2->channels * E1 :E2->bit_rate; 
+// Infered from: (FFmpeg/{prevFiles/prev_15d14c_2de8bf_libavcodec#utils.c,revFiles/15d14c_2de8bf_libavcodec#utils.c}: get_bit_rate)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

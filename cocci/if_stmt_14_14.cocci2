@@ -1,0 +1,41 @@
+@@
+expression E0;
+@@
+- if (E0->argc == 0)  
++ if (E0->argc == 0 && (~E0->flags & SPAWN_RESPAWN))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_4e2cc0_02253d_spawn.c,revFiles/4e2cc0_02253d_spawn.c}: spawn_pane)
+// False positives: (redis/revFiles/e2c1f8_46a51c_src#networking.c: processInputBuffer)
+// Recall: 0.11, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 0.60
+// -- Node Change --
+// Recall: 0.33, Precision: 0.60
+// -- General --
+// Functions fully changed: 3/11(27%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_6b517a_5b74eb_libavcodec#utils.c: do_decode
+ - redis/prevFiles/prev_e2c1f8_46a51c_src#networking.c: addReplyErrorLength
+ - FFmpeg/prevFiles/prev_2b2719_00a7d8_libavcodec#h263.c: mpeg4_decode_block
+ - redis/prevFiles/prev_ce2e0c0_f8fd66_src#object.c: getMemoryOverheadData
+ - wireshark/prevFiles/prev_4253c7_6aa32c_ui#gtk#dfilter_expr_dlg.c: field_select_row_cb
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - redis/prevFiles/prev_e2c1f8_46a51c_src#networking.c: processInputBuffer
+ - FFmpeg/prevFiles/prev_2b2719_00a7d8_libavcodec#h263.c: decode_vop_header
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,21 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = g_malloc(E1 +  1); 
+- tvb_memcpy(E2, E0, E3, E1); 
+- E0[E1] = 0; 
++ E0 = tvb_get_string(E2, E3, E1); 
+// Infered from: (wireshark/{prevFiles/prev_857318_3353ca_packet-atalk.c,revFiles/857318_3353ca_packet-atalk.c}: dissect_pascal_string)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- error_report("Warning: global %s.%s has invalid class name", E0->driver,  E0->property); 
++ warn_report("global %s.%s has invalid class name", E0->driver, E0->property); 
+// Infered from: (qemu/{prevFiles/prev_3dc6f8_97f403_hw#core#qdev-properties.c,revFiles/3dc6f8_97f403_hw#core#qdev-properties.c}: qdev_prop_check_globals)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef QList;
+@@
+- g_assert(qobject_to_qlist(QOBJECT(E0)) == E0); 
++ g_assert(qobject_to(QList , QOBJECT(E0)) == E0); 
+// Infered from: (qemu/{prevFiles/prev_7dc847_1a56b1_tests#check-qlist.c,revFiles/7dc847_1a56b1_tests#check-qlist.c}: qobject_to_qlist_test)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

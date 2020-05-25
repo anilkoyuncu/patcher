@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1 - 1] = E2; 
++ E0[E1 - 2] = E2; 
+// Infered from: (git/{prevFiles/prev_af04b12_8c02ee_builtin-fmt-merge-msg.c,revFiles/af04b12_8c02ee_builtin-fmt-merge-msg.c}: handle_line), (vlc/{prevFiles/prev_18773d_afa6c9_src#misc#modules.c,revFiles/18773d_afa6c9_src#misc#modules.c}: AllocateAllPlugins)
+// False positives: (cairo/revFiles/20cdb9_219d46_src#cairo-path-fixed.c: _cairo_path_fixed_line_to), (cairo/revFiles/20cdb9_219d46_src#cairo-path-fixed.c: _cairo_path_fixed_move_to), (git/revFiles/af04b12_8c02ee_builtin-fmt-merge-msg.c: handle_line), (linux/revFiles/4101e9_13c3ab_drivers#isdn#hardware#mISDN#mISDNinfineon.c: inf_probe), (vlc/revFiles/981f85_abb027_modules#audio_filter#converter#dtstospdif.c: DoWork)
+// Recall: 0.05, Precision: 0.29, Matching recall: 0.67
+
+// ---------------------------------------------

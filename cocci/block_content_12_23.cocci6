@@ -1,0 +1,32 @@
+@@
+identifier I0;
+typedef php_size_t;
+typedef zend_uint;
+@@
+- zend_uint I0 = 0; 
+- phpdbg_notice("Registered Functions (%d)",  zend_hash_num_elements(&PHPDBG_G(registered))); 
++ php_size_t I0 = 0; 
++ phpdbg_notice("Registered Functions (%pd)",  zend_hash_num_elements(&PHPDBG_G(registered))); 
+// Infered from: (php-src/{prevFiles/prev_5ae8f6_713b69_sapi#phpdbg#phpdbg_help.c,revFiles/5ae8f6_713b69_sapi#phpdbg#phpdbg_help.c}: PHPDBG_HELP)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.86
+// -- Node Change --
+// Recall: 0.82, Precision: 0.90
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_fdc89e_7da2d9_hw#net#ne2000.c: ne2000_receive
+ - qemu/prevFiles/prev_b1d80d1_1a3266_hw#net#pcnet.c: pcnet_receive
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_bb87b6_b0f6e7_lib#multi.c: curl_multi_fdset
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- return type_error("can't multiply sequence to non-int"); 
++ return type_error("can't multiply sequence by non-int"); 
+// Infered from: (cpython/{prevFiles/prev_10c660_0e371f_Objects#abstract.c,revFiles/10c660_0e371f_Objects#abstract.c}: sequence_repeat)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

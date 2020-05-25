@@ -1,0 +1,12 @@
+@@
+expression E1, E3, E0, E2;
+@@
+- if (E0 || (E1 && E2 > E3->max_payload_size))  
++ if (E0 || (E3->num_frames && E2 > E3->max_payload_size))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_12b345_985639_libavformat#rtpenc_amr.c,revFiles/12b345_985639_libavformat#rtpenc_amr.c}: ff_rtp_send_amr), (FFmpeg/{prevFiles/prev_985639_990e4a_libavformat#rtpenc_aac.c,revFiles/985639_990e4a_libavformat#rtpenc_aac.c}: ff_rtp_send_aac)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

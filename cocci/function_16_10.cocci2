@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef ARIA_u128;
+@@
+- ARIA_u128 *I0 = E1->rd_key; 
++ ARIA_u128 *I0; 
+// Infered from: (openssl/{prevFiles/prev_390787_ccb766_crypto#aria#aria.c,revFiles/390787_ccb766_crypto#aria#aria.c}: aria_encrypt), (openssl/{prevFiles/prev_1c2ac2_198c42_crypto#aria#aria.c,revFiles/1c2ac2_198c42_crypto#aria#aria.c}: aria_set_encrypt_key)
+// False positives: (openssl/revFiles/1c2ac2_198c42_crypto#aria#aria.c: aria_encrypt)
+// Recall: 0.09, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------

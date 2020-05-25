@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef gint;
+@@
+- E0 = tvb_skip_wsp(E1, E2 + (strlen("VF") + 1), -1); 
++ E0 = tvb_skip_wsp(E1, (gint )(E2 + (strlen("VF") + 1)), -1); 
+// Infered from: (wireshark/{prevFiles/prev_8d7d5f_6dd6ed_epan#dissectors#packet-rtpproxy.c,revFiles/8d7d5f_6dd6ed_epan#dissectors#packet-rtpproxy.c}: dissect_rtpproxy)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

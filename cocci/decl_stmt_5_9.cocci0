@@ -1,0 +1,12 @@
+@@
+identifier I0;
+typedef GdkColor;
+typedef gpointer;
+@@
+- GdkColor *I0; 
++ gpointer I0; 
+// Infered from: (gtk/{prevFiles/prev_1a0267_ba9f53_gtk#gtksettings.c,revFiles/1a0267_ba9f53_gtk#gtksettings.c}: update_color_hash)
+// False positives: (gtk/revFiles/1a0267_ba9f53_gtk#gtksettings.c: add_color_to_hash)
+// Recall: 0.12, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

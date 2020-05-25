@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef bool;
+typedef zend_bool;
+@@
+- bool I0 = false; 
++ zend_bool I0 = 0; 
+// Infered from: (php-src/{prevFiles/prev_33fc7d_9b8d02_ext#standard#crypt_sha512.c,revFiles/33fc7d_9b8d02_ext#standard#crypt_sha512.c}: php_sha512_crypt_r), (php-src/{prevFiles/prev_33fc7d_9b8d02_ext#standard#crypt_sha256.c,revFiles/33fc7d_9b8d02_ext#standard#crypt_sha256.c}: php_sha256_crypt_r), (php-src/{prevFiles/prev_593648_41ead3_ext#standard#crypt_sha512.c,revFiles/593648_41ead3_ext#standard#crypt_sha512.c}: php_sha512_crypt_r), (php-src/{prevFiles/prev_593648_41ead3_ext#standard#crypt_sha256.c,revFiles/593648_41ead3_ext#standard#crypt_sha256.c}: php_sha256_crypt_r)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

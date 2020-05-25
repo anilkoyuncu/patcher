@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- void *I0 = addDeferredMultiBulkLength(E1); 
++ void *I0 = addReplyDeferredLen(E1); 
+  ...
+- setDeferredMultiBulkLength(E1, I0, E2); 
++ setDeferredArrayLen(E1, I0, E2); 
+// Infered from: (redis/{prevFiles/prev_9330bc_f07f3d_src#scripting.c,revFiles/9330bc_f07f3d_src#scripting.c}: luaReplyToRedisReply)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

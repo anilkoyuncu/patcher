@@ -1,0 +1,10 @@
+@@
+identifier I0 = {snd_soc_dapm_add_routes ,snd_soc_dapm_new_controls }, I2;
+expression E1;
+@@
+- I0(E1, ARRAY_AND_SIZE(I2)); 
++ I0(E1, I2, ARRAY_SIZE(I2)); 
+// Infered from: (linux/{prevFiles/prev_4edec9_0b4fa33_sound#soc#pxa#mioa701_wm9713.c,revFiles/4edec9_0b4fa33_sound#soc#pxa#mioa701_wm9713.c}: mioa701_wm9713_init), (linux/{prevFiles/prev_4edec9_0b4fa33_sound#soc#pxa#mioa701_wm9713.c,revFiles/4edec9_0b4fa33_sound#soc#pxa#mioa701_wm9713.c}: mioa701_wm9713_init)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

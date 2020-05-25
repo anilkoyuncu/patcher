@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1;
+@@
+- size_t I0 = E1 + FF_INPUT_BUFFER_PADDING_SIZE; 
++ size_t I0 = E1 + AV_INPUT_BUFFER_PADDING_SIZE; 
+// Infered from: (FFmpeg/{prevFiles/prev_e6debc_50e30d_tools#target_dec_fuzzer.c,revFiles/e6debc_50e30d_tools#target_dec_fuzzer.c}: FDBRealloc)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.78, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_38-C-171844-171946.c: main
+*/
+
+// ---------------------------------------------

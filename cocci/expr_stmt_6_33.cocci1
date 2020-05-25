@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0->last_mv[E1][E2][1] = E3 << 1; 
++ E0->last_mv[E1][E2][1] = 2 * E3; 
+// Infered from: (FFmpeg/{prevFiles/prev_1932f7_2e5605_libavcodec#mpeg12dec.c,revFiles/1932f7_2e5605_libavcodec#mpeg12dec.c}: mpeg_decode_mb)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef QNum;
+@@
+- g_assert(qobject_to_qnum(QOBJECT(E0)) == E0); 
++ g_assert(qobject_to(QNum , QOBJECT(E0)) == E0); 
+// Infered from: (qemu/{prevFiles/prev_7dc847_1a56b1_tests#check-qnum.c,revFiles/7dc847_1a56b1_tests#check-qnum.c}: qobject_to_qnum_test), (qemu/{prevFiles/prev_7dc847_1a56b1_tests#check-qnum.c,revFiles/7dc847_1a56b1_tests#check-qnum.c}: qobject_to_qnum_test)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

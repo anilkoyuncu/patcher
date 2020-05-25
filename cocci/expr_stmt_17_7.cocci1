@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef lam_communicator_t;
+@@
+- E0 = lam_comm_split(E1, E2, E3, E4); 
++ E0 = lam_comm_split((lam_communicator_t *)E1, E2, E3,  (lam_communicator_t **)E4); 
+// Infered from: (ompi/{prevFiles/prev_c6dcaa_693255_src#mpi#c#comm_split.c,revFiles/c6dcaa_693255_src#mpi#c#comm_split.c}: MPI_Comm_split)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

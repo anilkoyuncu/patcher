@@ -1,0 +1,19 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef php_curl;
+typedef zval;
+@@
+- zval **I0; 
+- for(I0 = (zval **)zend_llist_get_first_ex(&E1->easyh, &E2);I0;I0 = (zval **)zend_llist_get_next_ex(  &E1->easyh, &E2))  
++ zval *I0; 
++ for(I0 = (zval *)zend_llist_get_first_ex(&E1->easyh, &E2);I0;I0 = (zval *)zend_llist_get_next_ex(  &E1->easyh, &E2))  
+  {
+- ZEND_FETCH_RESOURCE(E3, php_curl *, I0, -1, le_curl_name, le_curl); 
++ ZEND_FETCH_RESOURCE(E3, php_curl *, &I0, -1, le_curl_name, le_curl); 
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_0974e2_0094b0_ext#curl#multi.c,revFiles/0974e2_0094b0_ext#curl#multi.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_da064c_0289ba_ext#curl#multi.c,revFiles/da064c_0289ba_ext#curl#multi.c}: PHP_FUNCTION)
+// Recall: 0.19, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------

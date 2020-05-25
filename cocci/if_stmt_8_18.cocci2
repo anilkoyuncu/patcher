@@ -1,0 +1,32 @@
+@@
+identifier I0, I1, I2, I3;
+expression E4;
+@@
+  void wt_status_print_other(struct wt_status *I0, struct string_list *I1,  const  char *I2, const  char *I3)  
+  {
+  ...
+- if (E4)  
++ if (!I1->nr)  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_128298_2381e3_wt-status.c,revFiles/128298_2381e3_wt-status.c}: wt_status_print_other)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_177503_585972_crypto#bio#b_addr.c: BIO_ADDR_make
+*/
+
+// ---------------------------------------------

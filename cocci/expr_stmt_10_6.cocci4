@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = decode_cce(E1, &E2, E1->che[TYPE_SCE][E3]); 
++ E0 = decode_cce(E1, &E2, E1->che[TYPE_CCE][E3]); 
+// Infered from: (FFmpeg/{prevFiles/prev_93b63b_f4fae4_libavcodec#aac.c,revFiles/93b63b_f4fae4_libavcodec#aac.c}: aac_decode_frame)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

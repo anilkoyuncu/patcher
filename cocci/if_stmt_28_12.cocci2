@@ -1,0 +1,22 @@
+@@
+expression E1, E3, E0, E2;
+@@
+- if ((E0 == E1) && (!compare_ether_addr(&(E2[0]), &(E3->abyAddr2[0]))))  
++ if ((E0 == E1) && ether_addr_equal(E2, E3->abyAddr2))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_832941_eed8897_drivers#staging#vt6655#wctl.c,revFiles/832941_eed8897_drivers#staging#vt6655#wctl.c}: WCTLbIsDuplicate), (linux/{prevFiles/prev_832941_eed8897_drivers#staging#vt6655#wctl.c,revFiles/832941_eed8897_drivers#staging#vt6655#wctl.c}: WCTLuSearchDFCB)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

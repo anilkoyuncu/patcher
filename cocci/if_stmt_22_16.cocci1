@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- tcg_out_brcond(E0, TCG_COND_EQ, E1[1], E1[3], E2[3], E3); 
++ tcg_out_brcond(E0, TCG_COND_NE, E1[1], E1[3], E2[3], E1[5]); 
+// Infered from: (qemu/{prevFiles/prev_bb210e_ac56dd_tcg#i386#tcg-target.c,revFiles/bb210e_ac56dd_tcg#i386#tcg-target.c}: tcg_out_brcond2)
+// False positives: (qemu/revFiles/bb210e_ac56dd_tcg#i386#tcg-target.c: tcg_out_brcond2)
+// Recall: 0.20, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 0.55
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_bb210e_ac56dd_tcg#x86_64#tcg-target.c: tcg_out_brcond
+ - qemu/prevFiles/prev_bb210e_ac56dd_tcg#i386#tcg-target.c: tcg_out_brcond2
+ - qemu/prevFiles/prev_bb210e_ac56dd_tcg#i386#tcg-target.c: tcg_out_brcond
+*/
+
+// ---------------------------------------------

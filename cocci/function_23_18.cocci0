@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E0, E1, E3, E4, E5;
+@@
+- E0 = tm2_read_stream(E1, I2 + E3, tm2_stream_order[E4], E5); 
++ E0 = tm2_read_stream(E1, E1->buffer + E3, tm2_stream_order[E4], E5); 
+// Infered from: (FFmpeg/{prevFiles/prev_e8b060_126b04_libavcodec#truemotion2.c,revFiles/e8b060_126b04_libavcodec#truemotion2.c}: decode_frame)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

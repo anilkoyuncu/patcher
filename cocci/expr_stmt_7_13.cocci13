@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0[E1] = (E2[E1] - E2[E3[E1]] + 2 + 1000000007LL + 1000000007LL) % 1000000007LL; 
++ E0[E1] = (E2[E1] - E2[E3[E1] - 1] + 2 + 1000000007LL + 1000000007LL) % 1000000007LL; 
+// Infered from: (codeflaws/{prevFiles/prev_407-B-6193611-6193619.c,revFiles/407-B-6193611-6193619.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

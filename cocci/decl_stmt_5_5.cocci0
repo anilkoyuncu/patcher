@@ -1,0 +1,11 @@
+@@
+type T0;
+identifier I1;
+@@
+- register T0 I1; 
++ register size_t I1; 
+// Infered from: (php-src/{prevFiles/prev_5b9f3a_99e236_ext#standard#quot_print.c,revFiles/5b9f3a_99e236_ext#standard#quot_print.c}: php_quot_print_decode)
+// False positives: (php-src/revFiles/5b9f3a_99e236_ext#standard#quot_print.c: php_quot_print_decode), (wireshark/revFiles/f934bc_df9a7a0_wsutil#wsgetopt.c: exchange)
+// Recall: 0.07, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------

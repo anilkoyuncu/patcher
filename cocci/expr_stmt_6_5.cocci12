@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->timer1 = E0->fifo[1] >> 1; 
++ E0->timer1 = E0->fifo[2] >> 1; 
+// Infered from: (qemu/{prevFiles/prev_e309de_10d315_hw#fdc.c,revFiles/e309de_10d315_hw#fdc.c}: fdctrl_write_data)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

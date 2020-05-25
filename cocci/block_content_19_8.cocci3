@@ -1,0 +1,29 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- E0 = kmalloc(E1, I2); 
++ E0 = kzalloc(E1, I2); 
+  ...
+- memset(E0, 0, E1); 
+// Infered from: (linux/{prevFiles/prev_12d0eb_f4a0e6_drivers#staging#brcm80211#brcmfmac#wl_iw.c,revFiles/12d0eb_f4a0e6_drivers#staging#brcm80211#brcmfmac#wl_iw.c}: wl_iw_get_aplist), (linux/{prevFiles/prev_12d0eb_f4a0e6_drivers#staging#brcm80211#brcmfmac#wl_iw.c,revFiles/12d0eb_f4a0e6_drivers#staging#brcm80211#brcmfmac#wl_iw.c}: wl_iw_attach), (linux/{prevFiles/prev_476c60_49afa55_drivers#net#vmxnet3#vmxnet3_drv.c,revFiles/476c60_49afa55_drivers#net#vmxnet3#vmxnet3_drv.c}: vmxnet3_rq_create), (linux/{prevFiles/prev_2bfefa4c_ecce2a_drivers#mtd#tests#mtd_speedtest.c,revFiles/2bfefa4c_ecce2a_drivers#mtd#tests#mtd_speedtest.c}: scan_for_bad_eraseblocks), (linux/{prevFiles/prev_2bfefa4c_ecce2a_drivers#mtd#tests#mtd_subpagetest.c,revFiles/2bfefa4c_ecce2a_drivers#mtd#tests#mtd_subpagetest.c}: scan_for_bad_eraseblocks), (linux/{prevFiles/prev_2bfefa4c_ecce2a_drivers#mtd#tests#mtd_pagetest.c,revFiles/2bfefa4c_ecce2a_drivers#mtd#tests#mtd_pagetest.c}: scan_for_bad_eraseblocks), (linux/{prevFiles/prev_a99e33_0fa96e_drivers#staging#sm750fb#sm750.c,revFiles/a99e33_0fa96e_drivers#staging#sm750fb#sm750.c}: lynxfb_setup), (linux/{prevFiles/prev_f8df39f_5ee283c_drivers#bluetooth#btmrvl_sdio.c,revFiles/f8df39f_5ee283c_drivers#bluetooth#btmrvl_sdio.c}: btmrvl_sdio_download_helper), (linux/{prevFiles/prev_f8df39f_5ee283c_drivers#bluetooth#btmrvl_sdio.c,revFiles/f8df39f_5ee283c_drivers#bluetooth#btmrvl_sdio.c}: btmrvl_sdio_download_fw_w_helper), (linux/{prevFiles/prev_12d0eb_f4a0e6_drivers#staging#brcm80211#brcmfmac#dhd_sdio.c,revFiles/12d0eb_f4a0e6_drivers#staging#brcm80211#brcmfmac#dhd_sdio.c}: dhdsdio_write_vars), (linux/{prevFiles/prev_12d0eb_f4a0e6_drivers#staging#brcm80211#brcmfmac#dhd_sdio.c,revFiles/12d0eb_f4a0e6_drivers#staging#brcm80211#brcmfmac#dhd_sdio.c}: dhdsdio_probe_attach)
+// False positives: (linux/revFiles/12d0eb_f4a0e6_drivers#staging#brcm80211#brcmfmac#wl_iw.c: wl_iw_get_scan), (linux/revFiles/2bfefa4c_ecce2a_drivers#mtd#tests#mtd_pagetest.c: crosstest)
+// Recall: 0.64, Precision: 0.88, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.88
+// -- Node Change --
+// Recall: 1.00, Precision: 0.88
+// -- General --
+// Functions fully changed: 21/24(87%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_12d0eb_f4a0e6_drivers#staging#brcm80211#brcmfmac#wl_iw.c: wl_iw_get_scan
+ - linux/prevFiles/prev_5f58df_3288ed6_drivers#net#ethernet#qlogic#qed#qed_cxt.c: qed_cxt_src_t2_alloc
+ - linux/prevFiles/prev_2bfefa4c_ecce2a_drivers#mtd#tests#mtd_pagetest.c: crosstest
+*/
+
+// ---------------------------------------------

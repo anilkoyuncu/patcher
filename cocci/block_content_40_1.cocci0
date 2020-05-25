@@ -1,0 +1,14 @@
+@@
+type T3;
+identifier I1;
+expression E4, E0, E2;
+@@
+- init_timer(&E0->I1); 
++ setup_timer(&E0->I1, E2, (T3 )E4); 
+  ...
+- E0->I1.data = (T3 )E4; 
+- E0->I1.function = E2; 
+// Infered from: (linux/{prevFiles/prev_121413_fea3cb0_drivers#net#ethernet#samsung#sxgbe#sxgbe_main.c,revFiles/121413_fea3cb0_drivers#net#ethernet#samsung#sxgbe#sxgbe_main.c}: sxgbe_tx_init_coalesce)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

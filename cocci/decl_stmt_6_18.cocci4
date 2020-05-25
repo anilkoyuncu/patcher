@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0 = (fid_flatten(E1) >> 32); 
++ E0 = fid_flatten(E1) >> 32; 
+// Infered from: (linux/{prevFiles/prev_159dc4_25ff6f_drivers#staging#lustre#lustre#lclient#lcommon_cl.c,revFiles/159dc4_25ff6f_drivers#staging#lustre#lustre#lclient#lcommon_cl.c}: cl_fid_build_gen)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 9/9(100%)
+
+
+// ---------------------------------------------

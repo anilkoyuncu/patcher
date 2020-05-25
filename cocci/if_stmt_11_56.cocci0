@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == Z_OK && E1->avail_in == 0 && E1->avail_out > 0)  
++ if (E0 == Z_OK && E1->avail_in == 0)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_e4a178_7b23ef_lib#content_encoding.c,revFiles/e4a178_7b23ef_lib#content_encoding.c}: inflate_stream)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- while ((E0 = getopt(E1, E2, "c:r:")) != -1)  
++ while ((E0 = getopt(E1, E2, "c:r:h")) != -1)  
+  {
+  ...
+  }
+// Infered from: (libtiff/{prevFiles/prev_a94d5b_c2d7ef_tools#ras2tiff.c,revFiles/a94d5b_c2d7ef_tools#ras2tiff.c}: main)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1].sockaddr = ngx_palloc(E2->pool, sizeof(struct sockaddr_in )); 
++ E0[E1].sockaddr = ngx_palloc(E2->pool, NGX_SOCKADDRLEN); 
+// Infered from: (nginx/{prevFiles/prev_23f904_11f4ad_src#core#ngx_connection.c,revFiles/23f904_11f4ad_src#core#ngx_connection.c}: ngx_set_inherited_sockets)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

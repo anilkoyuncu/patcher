@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (avio_tell(E0) + 4 < E1)  
++ while (avio_tell(E0) + 4 < E1 && !url_feof(E0))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_2116e4_5e5e69_libavformat#mxfdec.c,revFiles/2116e4_5e5e69_libavformat#mxfdec.c}: mxf_read_local_tags)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

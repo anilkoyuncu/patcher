@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return aprintf("%s:%d", E0, E1->localport); 
++ return aprintf("%s:%d", E0, E1->port); 
+// Infered from: (curl/{prevFiles/prev_582317_96eb9a_lib#conncache.c,revFiles/582317_96eb9a_lib#conncache.c}: hashkey)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

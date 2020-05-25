@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return E0->aio_nbytes; 
++ return 0; 
+// Infered from: (qemu/{prevFiles/prev_b608c8_0e7106_block#raw-posix.c,revFiles/b608c8_0e7106_block#raw-posix.c}: handle_aiocb_ioctl)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

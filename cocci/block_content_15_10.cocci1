@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- E0 = g_strdup_printf("Proto: %s", E1->name); 
++ E0 = ep_strdup_printf("Proto: %s", E1->name); 
+  ...
+- g_free(E0); 
+// Infered from: (wireshark/{prevFiles/prev_b72075_923b8a_epan#wslua#wslua_proto.c,revFiles/b72075_923b8a_epan#wslua#wslua_proto.c}: Proto_tostring)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

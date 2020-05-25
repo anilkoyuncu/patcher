@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef mtime_t;
+@@
+- mtime_t I0 = (E1 == ACTIONID_SUBDELAY_UP) ? 50000 :-50000; 
++ mtime_t I0 = (E1 == ACTIONID_AUDIODELAY_UP) ? 50000 :-50000; 
+// Infered from: (vlc/{prevFiles/prev_d03f37b_893432c_modules#control#hotkeys.c,revFiles/d03f37b_893432c_modules#control#hotkeys.c}: PutAction)
+// False positives: (vlc/revFiles/d03f37b_893432c_modules#control#hotkeys.c: PutAction)
+// Recall: 0.25, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

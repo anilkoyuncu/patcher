@@ -1,0 +1,15 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 < 6)  
++ if (E0 < 5)  
+  {
+- expert_add_info_format(E1, E2->item_tag_length, &ei_ieee80211_tag_length,  "Tag length %u too short, must be >= 6", E0); 
++ expert_add_info_format(E1, E2->item_tag_length, &ei_ieee80211_tag_length,  "Tag length %u too short, must be >= 5", E0); 
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_cde5483_aa02f5_epan#dissectors#packet-ieee80211.c,revFiles/cde5483_aa02f5_epan#dissectors#packet-ieee80211.c}: ieee80211_tag_tclas)
+// False positives: (wireshark/revFiles/cde5483_aa02f5_epan#dissectors#packet-ieee80211.c: ieee80211_tag_country_info)
+// Recall: 0.20, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

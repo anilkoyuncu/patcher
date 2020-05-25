@@ -1,0 +1,36 @@
+@@
+expression E0;
+@@
+- if (!E0)  
++ if (!E0)  
+  {
+- E0 = strdup(_("Undefined")); 
++ E0 = _("Undefined"); 
+  }
+// Infered from: (vlc/{prevFiles/prev_6f4778_a1bf96_src#playlist#tree.c,revFiles/6f4778_a1bf96_src#playlist#tree.c}: playlist_NodeCreate)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.91, Precision: 0.83
+// -- Node Change --
+// Recall: 0.85, Precision: 0.85
+// -- General --
+// Functions fully changed: 9/13(69%)
+
+/*
+Functions where the patch applied partially:
+ - cairo/prevFiles/prev_6662ee_8419c4_perf#cairo-perf-report.c: cairo_perf_report_load
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_6f4778_a1bf96_src#playlist#tree.c: playlist_NodeDelete
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_88b09a6_6654cf_drivers#net#ethernet#3com#3c59x.c: vortex_open
+ - linux/prevFiles/prev_88b09a6_6654cf_drivers#net#ethernet#3com#3c59x.c: boomerang_rx
+*/
+
+// ---------------------------------------------

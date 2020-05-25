@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1 & 0xc0; 
++ E0 = (E1 & 0xc0) >> 6; 
+// Infered from: (wireshark/{prevFiles/prev_7d36ae_d2229b_epan#dissectors#packet-nas_5gs.c,revFiles/7d36ae_d2229b_epan#dissectors#packet-nas_5gs.c}: de_nas_5gs_sm_mapped_eps_b_cont)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

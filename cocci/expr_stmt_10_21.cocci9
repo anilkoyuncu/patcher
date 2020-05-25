@@ -1,0 +1,8 @@
+@@
+@@
+- ExitProcess(1); 
++ TerminateProcess(GetCurrentProcess(), 1); 
+// Infered from: (openssl/{prevFiles/prev_925795_3409a5_ms#uplink.c,revFiles/925795_3409a5_ms#uplink.c}: unimplemented)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

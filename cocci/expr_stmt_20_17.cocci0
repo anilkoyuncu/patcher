@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0->rc_eq_eval = ff_parse(E1->avctx->rc_eq, E2, E3, E4, NULL, NULL, &E5); 
++ E0->rc_eq_eval = ff_parse(E1->avctx->rc_eq ? E1->avctx->rc_eq :"tex^qComp",  E2, E3, E4, NULL, NULL, &E5); 
+// Infered from: (FFmpeg/{prevFiles/prev_3cffbe_847d05_libavcodec#ratecontrol.c,revFiles/3cffbe_847d05_libavcodec#ratecontrol.c}: ff_rate_control_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;E0 < sizeof(E1);E0++)  
++ for(E0 = 0;E0 < (int )sizeof(E1);E0++)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_f920c5_05fc70_crypto#rc4#rc4test.c,revFiles/f920c5_05fc70_crypto#rc4#rc4test.c}: main), (openssl/{prevFiles/prev_f920c5_05fc70_crypto#rc4#rc4test.c,revFiles/f920c5_05fc70_crypto#rc4#rc4test.c}: main), (libarchive/{prevFiles/prev_97d9cd_bf6fc3_libarchive#archive_windows.c,revFiles/97d9cd_bf6fc3_libarchive#archive_windows.c}: __la_dosmaperr), (libarchive/{prevFiles/prev_97d9cd_bf6fc3_cpio#cpio_windows.c,revFiles/97d9cd_bf6fc3_cpio#cpio_windows.c}: cpio_dosmaperr)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

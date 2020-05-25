@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6, E7;
+@@
+- E0 = fragment_add_check(&ip_reassembly_table, E1, E2, E3,  E4->ip_p ^ E4->ip_id ^ E5 ^ E6, NULL,  (E4->ip_off & IP_OFFSET) * 8, E4->ip_len - E7,  E4->ip_off & IP_MF); 
++ E0 = fragment_add_check(&ip_reassembly_table, E1, E2, E3,  E4->ip_p ^ E4->ip_id ^ E5 ^ E6 ^ E3->vlan_id, NULL,  (E4->ip_off & IP_OFFSET) * 8, E4->ip_len - E7,  E4->ip_off & IP_MF); 
+// Infered from: (wireshark/{prevFiles/prev_40951b_dede3c_epan#dissectors#packet-ip.c,revFiles/40951b_dede3c_epan#dissectors#packet-ip.c}: dissect_ip_v4)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

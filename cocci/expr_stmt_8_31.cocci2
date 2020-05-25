@@ -1,0 +1,48 @@
+@@
+expression E0, E1;
+typedef GFunc;
+@@
+- E0->queue = g_queue_copy(E1->queue); 
+- g_queue_foreach(E0->queue, (GFunc )gst_object_ref, NULL); 
++ E0->queue = E1->queue; 
++ g_queue_foreach(&E0->queue, (GFunc )gst_object_ref, NULL); 
+// Infered from: (gstreamer/{prevFiles/prev_a38c8b_c2c977_gst#gstbin.c,revFiles/a38c8b_c2c977_gst#gstbin.c}: gst_bin_sort_iterator_copy)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.40
+// -- Node Change --
+// Recall: 1.00, Precision: 0.31
+// -- General --
+// Functions fully changed: 12/35(34%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_1a8fb1_61fb0b_builtin-rerere.c: do_plain_rerere
+ - wireshark/prevFiles/prev_45e9ef_1ae388_epan#filesystem.c: delete_directory
+ - git/prevFiles/prev_1a8fb1_61fb0b_builtin-rerere.c: read_rr
+ - wireshark/prevFiles/prev_45e9ef_1ae388_epan#filesystem.c: set_profile_name
+ - wireshark/prevFiles/prev_45e9ef_1ae388_epan#filesystem.c: init_plugin_dir
+ - gstreamer/prevFiles/prev_cc1fc8_c65bf4_plugins#indexers#gstfileindex.c: gst_file_index_add_id
+ - ompi/prevFiles/prev_13ea4e_53d83b_orte#tools#orterun#orterun.c: create_app
+ - wireshark/prevFiles/prev_45e9ef_1ae388_epan#filesystem.c: copy_persconffile_profile
+ - gstreamer/prevFiles/prev_a38c8b_c2c977_gst#gstbin.c: gst_bin_remove_func
+ - wireshark/prevFiles/prev_45e9ef_1ae388_epan#filesystem.c: rename_persconffile_profile
+ - wireshark/prevFiles/prev_45e9ef_1ae388_epan#filesystem.c: init_wspython_dir
+ - wireshark/prevFiles/prev_ca8dff_678be3_epan#oids.c: smi_mod_copy_cb
+ - wireshark/prevFiles/prev_45e9ef_1ae388_epan#filesystem.c: get_persconffile_dir
+ - wireshark/prevFiles/prev_45e9ef_1ae388_epan#filesystem.c: create_persconffile_profile
+ - php-src/prevFiles/prev_18e259_1e72f2_ext#standard#string.c: PHP_FUNCTION
+ - ompi/prevFiles/prev_13ea4e_53d83b_orte#tools#orterun#orterun.c: parse_locals
+ - wireshark/prevFiles/prev_ca8dff_678be3_epan#oids.c: add_oid
+ - php-src/prevFiles/prev_466870_428ef5_sapi#phpdbg#phpdbg_list.c: phpdbg_compile_file
+ - git/prevFiles/prev_650c44_3f2e22_git.c: save_env_before_alias
+ - wireshark/prevFiles/prev_45e9ef_1ae388_epan#filesystem.c: get_datafile_dir
+ - git/prevFiles/prev_1a8fb1_61fb0b_builtin-rerere.c: setup_rerere
+ - gstreamer/prevFiles/prev_a38c8b_c2c977_gst#gstbin.c: gst_bin_add_func
+ - wireshark/prevFiles/prev_45e9ef_1ae388_epan#filesystem.c: init_progfile_dir
+*/
+
+// ---------------------------------------------

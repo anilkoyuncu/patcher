@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- strncpy(E0->signature, KDUMP_SIGNATURE, strlen(KDUMP_SIGNATURE)); 
++ memcpy(E0->signature, KDUMP_SIGNATURE, SIG_LEN); 
+// Infered from: (qemu/{prevFiles/prev_84c868_01366e_dump.c,revFiles/84c868_01366e_dump.c}: create_header32), (qemu/{prevFiles/prev_84c868_01366e_dump.c,revFiles/84c868_01366e_dump.c}: create_header64)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

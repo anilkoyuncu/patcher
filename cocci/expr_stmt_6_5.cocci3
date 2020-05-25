@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0[1] = 2 * E0[1]; 
++ E0[1] = 2 * E0[0]; 
+// Infered from: (gtk/{prevFiles/prev_5c5390_99a162_gtk#gtkthemingengine.c,revFiles/5c5390_99a162_gtk#gtkthemingengine.c}: set_stroke_style)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

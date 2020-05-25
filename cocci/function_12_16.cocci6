@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- memset(E0, 0, PAGE_SIZE); 
+// Infered from: (linux/{prevFiles/prev_6ce1b87_d517ca_arch#arm#mm#mmu.c,revFiles/6ce1b87_d517ca_arch#arm#mm#mmu.c}: paging_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.42, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/12(33%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_55082c0_cfe9ee3_drivers#watchdog#stmp3xxx_rtc_wdt.c: stmp3xxx_wdt_probe
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_a5a0de_76c3ff_libavcodec#mpegvideo_enc.c: encode_frame
+ - linux/prevFiles/prev_acfa92_094610_drivers#s390#net#qeth_core_main.c: qeth_init_input_buffer
+ - linux/prevFiles/prev_b0fd0d_c062076_drivers#net#au1000_eth.c: mii_probe
+ - FFmpeg/prevFiles/prev_631fa0_6470ab_libavfilter#vf_paletteuse.c: load_apply_palette
+ - linux/prevFiles/prev_6ce1b87_d517ca_arch#arm#mm#mmu.c: devicemaps_init
+ - php-src/prevFiles/prev_ec3823_cc0c4e_ext#simplexml#simplexml.c: sxe_property_get_ptr
+*/
+
+// ---------------------------------------------

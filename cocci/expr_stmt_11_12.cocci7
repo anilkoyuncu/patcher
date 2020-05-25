@@ -1,0 +1,10 @@
+@@
+expression E1, E0;
+@@
+- memset(E0, 0, sizeof(E1)); 
++ memset(E0, 0, sizeof(E0)); 
+// Infered from: (qemu/{prevFiles/prev_9d989c_bfc766_target-mips#helper.c,revFiles/9d989c_bfc766_target-mips#helper.c}: mips_cpu_do_interrupt)
+// False positives: (git/revFiles/af86de_8e52dc_rerere.c: handle_file), (php-src/revFiles/f81498_ffaf8b_ext#mysqlnd#mysqlnd_ps.c: mysqlnd_stmt_execute_parse_response)
+// Recall: 0.03, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

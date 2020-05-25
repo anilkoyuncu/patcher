@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  struct _sctp_info *I0 = (struct _sctp_info *)E1; 
++ const  struct _sctp_info *I0 = (const  struct _sctp_info *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#conversations_sctp.c,revFiles/3ae2e5_8aebe1_ui#gtk#conversations_sctp.c}: sctp_conversation_packet), (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#hostlist_sctp.c,revFiles/3ae2e5_8aebe1_ui#gtk#hostlist_sctp.c}: sctp_hostlist_packet)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

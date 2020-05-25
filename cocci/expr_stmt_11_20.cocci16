@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "Couldn't create PCI host controller.\n"); 
++ error_report("Couldn't create PCI host controller"); 
+// Infered from: (qemu/{prevFiles/prev_6f76b8_0151ab_hw#ppc#prep.c,revFiles/6f76b8_0151ab_hw#ppc#prep.c}: ppc_prep_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

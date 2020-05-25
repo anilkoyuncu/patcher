@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0 < 0) || (E0 >= VHOST_MAX_NR_VIRTQUEUE))  
++ if (E0 < 0 || E0 >= VHOST_MAX_NR_VIRTQUEUE)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_8c36ed_0644fe_contrib#vhost-user-scsi#vhost-user-scsi.c,revFiles/8c36ed_0644fe_contrib#vhost-user-scsi#vhost-user-scsi.c}: vus_proc_req), (qemu/{prevFiles/prev_8c36ed_0644fe_contrib#vhost-user-scsi#vhost-user-scsi.c,revFiles/8c36ed_0644fe_contrib#vhost-user-scsi#vhost-user-scsi.c}: vus_queue_set_started)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = ((E1[1] << 1) & 0x1e) | ((E1[1] >> 7) & 0x01); 
++ E0 = ((E1[1] << 1) & 0x1e) | ((E1[2] >> 7) & 0x01); 
+// Infered from: (FFmpeg/{prevFiles/prev_e15824_604c4e_libavformat#rtpdec_h261.c,revFiles/e15824_604c4e_libavformat#rtpdec_h261.c}: ff_h261_handle_packet)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

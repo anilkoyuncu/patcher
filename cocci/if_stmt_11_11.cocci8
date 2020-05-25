@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->tempdirs)  
++ if (E0->tempdirs && E0->tempdirs->used)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (lighttpd1.4/{prevFiles/prev_c3f45a_fa8043_src#chunk.c,revFiles/c3f45a_fa8043_src#chunk.c}: chunkqueue_get_append_tempfile)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

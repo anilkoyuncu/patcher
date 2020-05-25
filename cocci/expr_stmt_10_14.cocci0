@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = dissect_nt_ace_object(E1, E0, E2, E3, E4); 
++ E0 = dissect_nt_ace_object(E1, E0, E2); 
+// Infered from: (wireshark/{prevFiles/prev_64cc1b_897361_epan#dissectors#packet-windows-common.c,revFiles/64cc1b_897361_epan#dissectors#packet-windows-common.c}: dissect_nt_v2_ace)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

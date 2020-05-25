@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef proto_item;
+@@
+- proto_item *I0 = proto_tree_add_text(E1, E2, E3, 35, "Rate Class 0x%02x", E4); 
++ proto_item *ti_local = proto_tree_add_text(E1, E2, E3, 35,  "Rate Class 0x%02x", E4); 
+// Infered from: (wireshark/{prevFiles/prev_ceebcc_e78313_epan#dissectors#packet-aim-generic.c,revFiles/ceebcc_e78313_epan#dissectors#packet-aim-generic.c}: dissect_generic_rateinfo)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

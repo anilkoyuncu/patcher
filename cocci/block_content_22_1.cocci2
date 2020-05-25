@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- return read_tree(E0, E1, stage); 
++ ret = read_tree(E0, E1, stage); 
++ free(E0); 
++ return ret; 
+// Infered from: (git/{prevFiles/prev_142424_c599ca_read-tree.c,revFiles/142424_c599ca_read-tree.c}: unpack_tree)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

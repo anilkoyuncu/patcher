@@ -1,0 +1,35 @@
+@@
+expression E0, E1;
+@@
+- *E0 = E1->array->size; 
++ *E0 = (int )E1->array->size; 
+// Infered from: (php-src/{prevFiles/prev_e888f3_8041bb_ext#spl#spl_fixedarray.c,revFiles/e888f3_8041bb_ext#spl#spl_fixedarray.c}: spl_fixedarray_object_get_gc)
+// False positives: (php-src/revFiles/e888f3_8041bb_ext#spl#spl_fixedarray.c: spl_fixedarray_object_count_elements)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.57
+// -- Node Change --
+// Recall: 0.50, Precision: 0.62
+// -- General --
+// Functions fully changed: 3/9(33%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_29c6e6_59a041_hw#vfio#pci.c: vfio_map_bar
+*/
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_bbefdf_06c96d_lib#cookie.c: Curl_cookie_getlist
+ - php-src/prevFiles/prev_e888f3_8041bb_ext#spl#spl_fixedarray.c: spl_fixedarray_object_get_properties
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_e888f3_8041bb_ext#spl#spl_fixedarray.c: spl_fixedarray_object_count_elements
+ - qemu/prevFiles/prev_29c6e6_59a041_hw#vfio#pci.c: vfio_std_cap_max_size
+ - vlc/prevFiles/prev_5763e8_61ed60_modules#mux#mp4.c: GetMoovBox
+*/
+
+// ---------------------------------------------

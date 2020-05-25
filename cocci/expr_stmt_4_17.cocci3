@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[E1] = DP_TRAIN_PRE_EMPHASIS_0 | DP_TRAIN_VOLTAGE_SWING_400; 
++ E0[E1] = DP_TRAIN_PRE_EMPH_LEVEL_0 | DP_TRAIN_VOLTAGE_SWING_LEVEL_0; 
+// Infered from: (linux/{prevFiles/prev_0ded92_0504cd_drivers#gpu#drm#exynos#exynos_dp_core.c,revFiles/0ded92_0504cd_drivers#gpu#drm#exynos#exynos_dp_core.c}: exynos_dp_link_start)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

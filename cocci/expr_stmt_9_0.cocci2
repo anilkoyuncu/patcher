@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- memset(E0->buf + NELLY_BUF_LEN + E1->frame_size, 0,  (NELLY_SAMPLES - E2->nb_samples) * sizeof(*E0->buf)); 
++ memset(E0->buf + NELLY_BUF_LEN + E2->nb_samples, 0,  (NELLY_SAMPLES - E2->nb_samples) * sizeof(*E0->buf)); 
+// Infered from: (FFmpeg/{prevFiles/prev_439c3d_ba24f1_libavcodec#nellymoserenc.c,revFiles/439c3d_ba24f1_libavcodec#nellymoserenc.c}: encode_frame), (FFmpeg/{prevFiles/prev_e8b1da_f36377_libavcodec#nellymoserenc.c,revFiles/e8b1da_f36377_libavcodec#nellymoserenc.c}: encode_frame)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

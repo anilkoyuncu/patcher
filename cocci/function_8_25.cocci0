@@ -1,0 +1,9 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = hash_obj(E1, refs_hash_size); 
+// Infered from: (git/{prevFiles/prev_5d44cd_f2e609_object-refs.c,revFiles/5d44cd_f2e609_object-refs.c}: lookup_object_refs)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------

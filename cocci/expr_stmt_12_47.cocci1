@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = zend_binary_strcmp(E1->arKey, E1->nKeyLength - 1, E2->arKey,  E2->nKeyLength - 1); 
++ E0 = zend_binary_strcmp(E1->arKey, E1->nKeyLength, E2->arKey, E2->nKeyLength); 
+// Infered from: (php-src/{prevFiles/prev_98e793_f21708_ext#phar#phar.c,revFiles/98e793_f21708_ext#phar#phar.c}: compare_dir_name)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

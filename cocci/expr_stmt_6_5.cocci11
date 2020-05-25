@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = E1->gain_table[11 + (E2 - E3)]; 
++ E0 = E1->gain_table[15 + (E2 - E3)]; 
+// Infered from: (FFmpeg/{prevFiles/prev_50001c_57750b_libavcodec#cook.c,revFiles/50001c_57750b_libavcodec#cook.c}: interpolate_float)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!(E0 = av_buffer_alloc(E1)))  
++ if (!(E0 = av_buffer_alloc(E1 + FF_INPUT_BUFFER_PADDING_SIZE)))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_fff295_aa36dc_libavformat#flac_picture.c,revFiles/fff295_aa36dc_libavformat#flac_picture.c}: ff_flac_parse_picture)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

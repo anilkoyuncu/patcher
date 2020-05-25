@@ -1,0 +1,12 @@
+@@
+identifier I1;
+type T0;
+expression list E2;
+@@
+- T0 *I1; 
+- I1 = PyArena_New (E2); 
++ T0 *I1 = PyArena_New (E2); 
+// Infered from: (cpython/{prevFiles/prev_93d69a_0149e3_Python#compile.c,revFiles/93d69a_0149e3_Python#compile.c}: PyNode_Compile)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

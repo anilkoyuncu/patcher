@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0 -= 2; 
++ E0 -= FFMIN(2, E0); 
+// Infered from: (FFmpeg/{prevFiles/prev_969e75_e5e422_libavcodec#mjpegdec.c,revFiles/969e75_e5e422_libavcodec#mjpegdec.c}: ff_mjpeg_find_marker)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

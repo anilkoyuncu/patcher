@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0; 
+- I0 = (get_bits(&E1->gb, 16) << 16) | get_bits(&E1->gb, 16); 
++ int I0 = get_bits_long(&E1->gb, 32); 
+// Infered from: (FFmpeg/{prevFiles/prev_b3c165_e2f402_libavcodec#msmpeg4.c,revFiles/b3c165_e2f402_libavcodec#msmpeg4.c}: msmpeg4_decode_picture_header)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

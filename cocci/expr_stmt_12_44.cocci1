@@ -1,0 +1,29 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+@@
+- E0 = get_errno(target_mmap(E1, E2, E3, E4, E5, E6)); 
++ E0 = get_errno(target_mmap(E1, E2, E3, E4, E5, E6 << TARGET_PAGE_BITS)); 
+// Infered from: (qemu/{prevFiles/prev_14ae3b_5a91de_linux-user#syscall.c,revFiles/14ae3b_5a91de_linux-user#syscall.c}: do_syscall)
+// False positives: (qemu/revFiles/14ae3b_5a91de_linux-user#syscall.c: do_brk), (qemu/revFiles/14ae3b_5a91de_linux-user#syscall.c: do_syscall)
+// Recall: 0.25, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.67
+// -- Node Change --
+// Recall: 0.50, Precision: 0.50
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_1f38a7_1cfe57_gtk#gtkwindow.c: gtk_window_class_init
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_14ae3b_5a91de_linux-user#syscall.c: do_brk
+ - qemu/prevFiles/prev_14ae3b_5a91de_linux-user#syscall.c: do_syscall
+*/
+
+// ---------------------------------------------

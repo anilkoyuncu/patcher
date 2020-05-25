@@ -1,0 +1,10 @@
+@@
+identifier I0 = {col_add_fstr ,g_snprintf }, I2, I3;
+expression E1, E5, E4;
+@@
+- I0(E1->I2, I3, E4, address_to_str(wmem_packet_scope(), &E5)); 
++ I0(E1->I2, I3, E4, ep_address_to_str(&E5)); 
+// Infered from: (wireshark/{prevFiles/prev_bd1953_9fbede_epan#addr_resolv.c,revFiles/bd1953_9fbede_epan#addr_resolv.c}: eth_addr_resolve), (wireshark/{prevFiles/prev_b0bc4d_14824e_epan#dissectors#packet-hpteam.c,revFiles/b0bc4d_14824e_epan#dissectors#packet-hpteam.c}: dissect_hpteam)
+// Recall: 0.19, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

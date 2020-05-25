@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- write_reg(E0, 0x01, 1 << 6); 
++ write_reg(E0, 0x01, BIT(6)); 
+// Infered from: (linux/{prevFiles/prev_46a49a_a3b3e8_drivers#staging#fbtft#fb_agm1264k-fl.c,revFiles/46a49a_a3b3e8_drivers#staging#fbtft#fb_agm1264k-fl.c}: write_vmem)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

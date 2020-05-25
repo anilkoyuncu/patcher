@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+typedef gint32;
+@@
+- display_signed_time(E0, REL_TIME_SECS_LEN, E1->secs, E1->nsecs, NSECS); 
++ display_signed_time(E0, REL_TIME_SECS_LEN, (gint32 )E1->secs, E1->nsecs,  NSECS); 
+// Infered from: (wireshark/{prevFiles/prev_3e3259_af10d3_epan#to_str.c,revFiles/3e3259_af10d3_epan#to_str.c}: rel_time_to_secs_str)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_3e3259_af10d3_epan#to_str.c: rel_time_to_str
+*/
+
+// ---------------------------------------------

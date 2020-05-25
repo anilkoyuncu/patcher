@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stdout, "%s %s\n\nReport bugs to %s\n", myglobals.basename, E0,  PACKAGE_BUGREPORT); 
++ fprintf(stdout, "%s %s\n\nReport bugs to %s\n", orte_basename, E0,  PACKAGE_BUGREPORT); 
+// Infered from: (ompi/{prevFiles/prev_f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c,revFiles/f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c}: main)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.07
+
+// ---------------------------------------------

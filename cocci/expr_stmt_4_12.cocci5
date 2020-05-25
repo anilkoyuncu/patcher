@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (E0 & 0x3f << 8) + *E1; 
++ E0 = ((E0 & 0x3f) << 8) + *E1; 
+// Infered from: (nginx/{prevFiles/prev_b3ac4f_b4407c_src#core#ngx_resolver.c,revFiles/b3ac4f_b4407c_src#core#ngx_resolver.c}: ngx_resolver_copy)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

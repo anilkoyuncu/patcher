@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef mpz_ptr;
+@@
+- ASSERT_NOCARRY(mpz_set_str(E0, E1, E2->base)); 
++ ASSERT_NOCARRY(mpz_set_str((mpz_ptr )E0, E1, E2->base)); 
+// Infered from: (gmp/{prevFiles/prev_45729d_d08a54_scanf#doscan.c,revFiles/45729d_d08a54_scanf#doscan.c}: gmpscan)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

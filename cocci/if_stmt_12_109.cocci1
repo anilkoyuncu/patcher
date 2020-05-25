@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == WM_SYSCOMMAND && (E1 == SC_SCREENSAVE || E1 == SC_MONITORPOWER))  
++ if (E0 == WM_SYSCOMMAND && ((E1 & 0xFFF0) == SC_SCREENSAVE || (E1 & 0xFFF0) == SC_MONITORPOWER))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_4a473a_d8e3b7_modules#video_output#wingdi.c,revFiles/4a473a_d8e3b7_modules#video_output#wingdi.c}: WndProc), (vlc/{prevFiles/prev_4a473a_d8e3b7_modules#video_output#directx#events.c,revFiles/4a473a_d8e3b7_modules#video_output#directx#events.c}: DirectXEventProc)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

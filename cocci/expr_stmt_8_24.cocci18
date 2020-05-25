@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- msg_Warn(E0, "scrambled state changed on pid %d (%d->%d)", E1->i_pid,  SCRAMBLED(*E1), E2); 
++ msg_Warn(E0, "scrambled state changed on pid %d (%d->%d)", E1->i_pid,  !!SCRAMBLED(*E1), E2); 
+// Infered from: (vlc/{prevFiles/prev_8ce77c_7fa3fa_modules#demux#mpeg#ts.c,revFiles/8ce77c_7fa3fa_modules#demux#mpeg#ts.c}: UpdateScrambledState)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

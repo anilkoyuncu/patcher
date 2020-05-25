@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef AudioData;
+@@
+- AudioData I0 = E1->out; 
++ AudioData I0 = E1->in; 
+// Infered from: (FFmpeg/{prevFiles/prev_b9df3f_53a374_libswresample#swresample.c,revFiles/b9df3f_53a374_libswresample#swresample.c}: swr_inject_silence)
+// False positives: (FFmpeg/revFiles/b9df3f_53a374_libswresample#swresample.c: swr_convert)
+// Recall: 0.02, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2;
+@@
+- WriteHeaders(E0, "GET %s HTTP/1.%d\r\n", E1, E2->i_version); 
+// Infered from: (vlc/{prevFiles/prev_75e2a6_1a3176_modules#access#http.c,revFiles/75e2a6_1a3176_modules#access#http.c}: Request)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.61, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_75e2a6_1a3176_modules#access#http.c: Request
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_b092ae_75e2a6_modules#access#mms#mmsh.c: OpenConnection
+*/
+
+// ---------------------------------------------

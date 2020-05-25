@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->p_sys->i_frames)  
++ if (E0->p_sys->i_frames == 1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_ee038b_ca59f1_modules#audio_filter#converter#dtstospdif.c,revFiles/ee038b_ca59f1_modules#audio_filter#converter#dtstospdif.c}: DoWork)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

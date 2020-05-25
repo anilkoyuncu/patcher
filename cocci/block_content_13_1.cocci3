@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = tvb_get_string(E1, E2, E3); 
++ E0 = ep_tvb_get_string(E1, E2, E3); 
+  ...
+- g_free(E0); 
+// Infered from: (wireshark/{prevFiles/prev_0d7a2a_7035a4_epan#dissectors#packet-sna.c,revFiles/0d7a2a_7035a4_epan#dissectors#packet-sna.c}: dissect_control_0e), (wireshark/{prevFiles/prev_df2d1d_0d7a2a_epan#dissectors#packet-dcerpc-nt.c,revFiles/df2d1d_0d7a2a_epan#dissectors#packet-dcerpc-nt.c}: cb_str_postprocess), (wireshark/{prevFiles/prev_df2d1d_0d7a2a_epan#dissectors#packet-ieee80211.c,revFiles/df2d1d_0d7a2a_epan#dissectors#packet-ieee80211.c}: add_tagged_field), (wireshark/{prevFiles/prev_0d7a2a_7035a4_epan#dissectors#packet-edonkey.c,revFiles/0d7a2a_7035a4_epan#dissectors#packet-edonkey.c}: edonkey_metatag_name_get_type), (wireshark/{prevFiles/prev_0d7a2a_7035a4_epan#dissectors#packet-smb.c,revFiles/0d7a2a_7035a4_epan#dissectors#packet-smb.c}: dissect_4_2_16_2)
+// False positives: (wireshark/revFiles/d47443_a69226_epan#dissectors#packet-dcp-etsi.c: dissect_dcp_etsi)
+// Recall: 0.27, Precision: 0.94, Matching recall: 0.94
+
+// ---------------------------------------------

@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+@@
+- _cairo_output_stream_printf(E0->final_stream,  "0 0 %f %f %f %f setcachedevice\n",  _cairo_fixed_to_double(E1->bbox.p1.x),  -_cairo_fixed_to_double(E1->bbox.p2.y),  _cairo_fixed_to_double(E1->bbox.p2.x),  -_cairo_fixed_to_double(E1->bbox.p1.y)); 
++ _cairo_output_stream_printf(E0->final_stream,  "0 0 %f %f %f %f setcachedevice\n",  _cairo_fixed_to_double(E1->bbox.p1.x),  _cairo_fixed_to_double(E1->bbox.p2.y),  _cairo_fixed_to_double(E1->bbox.p2.x),  _cairo_fixed_to_double(E1->bbox.p1.y)); 
+// Infered from: (cairo/{prevFiles/prev_78e8d3_97b0d8_src#cairo-ps-surface.c,revFiles/78e8d3_97b0d8_src#cairo-ps-surface.c}: _cairo_ps_surface_emit_bitmap_glyph_data)
+// False positives: (cairo/revFiles/78e8d3_97b0d8_src#cairo-ps-surface.c: _cairo_ps_surface_emit_outline_glyph_data)
+// Recall: 0.11, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.82
+// -- Node Change --
+// Recall: 1.00, Precision: 0.82
+// -- General --
+// Functions fully changed: 9/11(81%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_c39cb7_b2cb9e_src#cairo-surface-subsurface.c: _cairo_surface_subsurface_paint
+ - cairo/prevFiles/prev_78e8d3_97b0d8_src#cairo-ps-surface.c: _cairo_ps_surface_emit_outline_glyph_data
+*/
+
+// ---------------------------------------------

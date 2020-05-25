@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = E1;E0->next;E0 = E0->next)  
++ for(E0 = E1;E0 && E0->next;E0 = E0->next)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_ee9c00_a3cbe7_packet-tcp.c,revFiles/ee9c00_a3cbe7_packet-tcp.c}: tcp_analyze_sequence_number), (lighttpd1.4/{prevFiles/prev_bed377_d3b0eb_src#chunk.c,revFiles/bed377_d3b0eb_src#chunk.c}: chunkqueue_remove_empty_chunks)
+// False positives: (wireshark/revFiles/ee9c00_a3cbe7_packet-tcp.c: desegment_tcp), (wireshark/revFiles/ee9c00_a3cbe7_packet-tcp.c: tcp_analyze_sequence_number)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

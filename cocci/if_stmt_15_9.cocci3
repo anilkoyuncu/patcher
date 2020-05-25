@@ -1,0 +1,37 @@
+@@
+expression E0, E1;
+@@
+- if (E0 ==  E1)  
++ if (E0 ==  E1)  
+  {
+- ERRDRV("%s allocation failed", __func__); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_edff16_9a174a_drivers#staging#unisys#visorutil#memregion_direct.c,revFiles/edff16_9a174a_drivers#staging#unisys#visorutil#memregion_direct.c}: visor_memregion_create_overlapped)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.27, Precision: 1.00
+// -- Node Change --
+// Recall: 0.25, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/15(26%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_614-B-15428967-15428983.c: main
+ - codeflaws/prevFiles/prev_385-B-11063177-11063186.c: main
+ - codeflaws/prevFiles/prev_30-A-10349816-10349839.c: main
+ - codeflaws/prevFiles/prev_535-A-13831112-13831127.c: main
+ - ompi/prevFiles/prev_029ca2_271a24_src#mca#coll#basic#coll_basic_allgatherv.c: mca_coll_basic_allgatherv_inter
+ - codeflaws/prevFiles/prev_581-D-13272386-13273229.c: main
+ - ompi/prevFiles/prev_029ca2_271a24_src#mca#coll#basic#coll_basic_allgatherv.c: mca_coll_basic_allgatherv_intra
+ - codeflaws/prevFiles/prev_535-B-16455139-16455151.c: f
+ - codeflaws/prevFiles/prev_469-A-18026769-18026789.c: main
+ - codeflaws/prevFiles/prev_139-B-1027124-1027128.c: main
+ - codeflaws/prevFiles/prev_612-A-15846264-15846281.c: main
+*/
+
+// ---------------------------------------------

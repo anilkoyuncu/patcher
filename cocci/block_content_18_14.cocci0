@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- ParseUrls(E0, E1); 
++ if (ParseUrls(E0, E1))  
++ {
++ free(E1); 
++ goto  error; 
++ }
+// Infered from: (vlc/{prevFiles/prev_352188c_bb7add_modules#video_filter#rss.c,revFiles/352188c_bb7add_modules#video_filter#rss.c}: CreateFilter)
+// Recall: 0.44, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

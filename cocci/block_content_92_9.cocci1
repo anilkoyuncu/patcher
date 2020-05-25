@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- E0 = OMPI_SUCCESS; 
+- clean: 
+- return E0; 
++ return OMPI_SUCCESS; 
+// Infered from: (ompi/{prevFiles/prev_c08e23_8ba41a_ompi#mca#pml#bfo#pml_bfo.c,revFiles/c08e23_8ba41a_ompi#mca#pml#bfo#pml_bfo.c}: mca_pml_bfo_ft_event), (ompi/{prevFiles/prev_c08e23_8ba41a_ompi#mca#pml#ob1#pml_ob1.c,revFiles/c08e23_8ba41a_ompi#mca#pml#ob1#pml_ob1.c}: mca_pml_ob1_ft_event)
+// False positives: (ompi/revFiles/c08e23_8ba41a_ompi#mca#pml#bfo#pml_bfo.c: mca_pml_bfo_ft_event), (ompi/revFiles/c08e23_8ba41a_ompi#mca#pml#ob1#pml_ob1.c: mca_pml_ob1_ft_event)
+// Recall: 0.50, Precision: 0.75, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.86
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_c08e23_8ba41a_ompi#mca#pml#ob1#pml_ob1.c: mca_pml_ob1_ft_event
+ - ompi/prevFiles/prev_c08e23_8ba41a_ompi#mca#pml#bfo#pml_bfo.c: mca_pml_bfo_ft_event
+*/
+
+// ---------------------------------------------

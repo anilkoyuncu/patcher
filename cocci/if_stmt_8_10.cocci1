@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef PyTypeObject;
+@@
+- if (Py_TYPE(E0) == E1)  
++ if (Py_TYPE(E0) == (PyTypeObject *)E1)  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_de48d8_bf02e3_Objects#abstract.c,revFiles/de48d8_bf02e3_Objects#abstract.c}: PyObject_IsInstance)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

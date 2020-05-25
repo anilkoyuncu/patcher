@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (ORTE_MAPPING_SPAN & E0->map->mapping)  
++ if (ORTE_MAPPING_SPAN & ORTE_GET_MAPPING_DIRECTIVE(E0->map->mapping))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_fb650a_9a42b7_orte#mca#rmaps#round_robin#rmaps_rr_mappers.c,revFiles/fb650a_9a42b7_orte#mca#rmaps#round_robin#rmaps_rr_mappers.c}: orte_rmaps_rr_byobj)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- vlc_gc_incref(E0->p_ml_category); 
++ vlc_gc_incref(E0->p_ml_category->p_input); 
+// Infered from: (vlc/{prevFiles/prev_bf6537_9de3b0_src#playlist#engine.c,revFiles/bf6537_9de3b0_src#playlist#engine.c}: playlist_LastLoop)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

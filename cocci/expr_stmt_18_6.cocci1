@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- put_strz(E0, E1->rc_eq); 
++ put_strz(E0, E1->rc_eq ? E1->rc_eq :"tex^qComp"); 
+// Infered from: (FFmpeg/{prevFiles/prev_3cffbe_847d05_libavformat#ffmenc.c,revFiles/3cffbe_847d05_libavformat#ffmenc.c}: ffm_write_header)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_text(E0, E1, E2 + E3, 16, "RAND: %s",  tvb_bytes_to_ep_str(E1, E2, 16)); 
++ proto_tree_add_text(E0, E1, E2 + E3, 16, "RAND: %s",  tvb_bytes_to_ep_str(E1, E2 + E3, 16)); 
+// Infered from: (wireshark/{prevFiles/prev_953c3e_534047_epan#dissectors#packet-gtp.c,revFiles/953c3e_534047_epan#dissectors#packet-gtp.c}: decode_quintuplet)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

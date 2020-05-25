@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->orupper - E0->orlower >= screen_size_y(E1) / 2)  
++ if (E0->orlower - E0->orupper >= screen_size_y(E1) / 2)  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_54456d_0a404a_tty.c,revFiles/54456d_0a404a_tty.c}: tty_redraw_region), (tmux/{prevFiles/prev_164c2c_20e176_tty.c,revFiles/164c2c_20e176_tty.c}: tty_redraw_region)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  struct ncp_common_header *I0 = (struct ncp_common_header *)E1; 
++ const  struct ncp_common_header *I0 = (const  struct ncp_common_header *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#conversations_ncp.c,revFiles/3ae2e5_8aebe1_ui#gtk#conversations_ncp.c}: ncp_conversation_packet)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+@@
+- struct ext3_block_alloc_info *I0 = E1->i_block_alloc_info; 
++ struct ext3_block_alloc_info *I0; 
+// Infered from: (linux/{prevFiles/prev_461302_6e3d6ca0_fs#ext3#balloc.c,revFiles/461302_6e3d6ca0_fs#ext3#balloc.c}: ext3_init_block_alloc_info)
+// False positives: (linux/revFiles/461302_6e3d6ca0_fs#ext3#balloc.c: ext3_discard_reservation)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

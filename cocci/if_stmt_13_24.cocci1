@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (ftp_send_command(E0, E1, E2, &E3) == 213 && E3)  
++ if (ftp_send_command(E0, E1, E2, &E3) == 213 && E3 && strlen(E3) > 4)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_a142ff_894995_libavformat#ftp.c,revFiles/a142ff_894995_libavformat#ftp.c}: ftp_file_size)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_1dc395_8d630f_main#main.c: php_verror
+ - php-src/prevFiles/prev_ab0d5f_f46991_ext#gd#gd.c: _php_image_type
+*/
+
+// ---------------------------------------------

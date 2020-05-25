@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = strlen(E1) + E2 + 16; 
++ E0 = (int )strlen(E1) + E2 + 16; 
+// Infered from: (wireshark/{prevFiles/prev_1582e0_36e002_gtk#follow_udp.c,revFiles/1582e0_36e002_gtk#follow_udp.c}: follow_udp_stream_cb)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

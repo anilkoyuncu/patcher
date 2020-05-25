@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- return ff_init_vlc_sparse(E0, FFMIN(E1[E2].len, 10), E2 + 1, E3, sizeof(  *E3), sizeof(*E3), E4, sizeof(*E4), sizeof(  *E4), E5, sizeof(*E5), sizeof(*E5), 0); 
++ return ff_init_vlc_sparse(E0, FFMIN(E1[E2].len, 11), E2 + 1, E3, sizeof(  *E3), sizeof(*E3), E4, sizeof(*E4), sizeof(  *E4), E5, sizeof(*E5), sizeof(*E5), 0); 
+// Infered from: (FFmpeg/{prevFiles/prev_673716_4b6cb1_libavcodec#utvideodec.c,revFiles/673716_4b6cb1_libavcodec#utvideodec.c}: build_huff)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.75
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_79cd5d_c17dd5_libavcodec#utvideodec.c: build_huff
+*/
+
+// ---------------------------------------------

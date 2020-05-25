@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+@@
+  int I0 = E1 - E2; 
+  ...
+- E3[E4] = E4; 
++ E3[I0 - 1] = 0; 
+// Infered from: (cairo/{prevFiles/prev_bb4ab5_f35159_test#pdf-tagged-text.c,revFiles/bb4ab5_f35159_test#pdf-tagged-text.c}: layout_paragraph)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

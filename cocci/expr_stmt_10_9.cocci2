@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef gchar;
+@@
+- E0 = g_strdup((gchar *)E1); 
++ E0 = g_strdup(E1); 
+// Infered from: (wireshark/{prevFiles/prev_5c79cb_5dd7b7_ui#cli#tap-iostat.c,revFiles/5c79cb_5dd7b7_ui#cli#tap-iostat.c}: iostat_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

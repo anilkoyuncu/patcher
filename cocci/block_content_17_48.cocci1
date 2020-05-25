@@ -1,0 +1,26 @@
+@@
+identifier I0;
+expression E1;
+typedef ISC_STATUS;
+@@
+- ISC_STATUS *I0 = E1->isc_status; 
++ const  ISC_STATUS *I0 = E1->isc_status; 
+// Infered from: (php-src/{prevFiles/prev_6d7093_1157f8_ext#pdo_firebird#firebird_driver.c,revFiles/6d7093_1157f8_ext#pdo_firebird#firebird_driver.c}: pdo_firebird_fetch_error_func), (php-src/{prevFiles/prev_cc2035_a0bedd_ext#pdo_firebird#firebird_driver.c,revFiles/cc2035_a0bedd_ext#pdo_firebird#firebird_driver.c}: pdo_firebird_fetch_error_func)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_6d7093_1157f8_ext#pdo_firebird#firebird_driver.c: pdo_firebird_fetch_error_func
+ - php-src/prevFiles/prev_cc2035_a0bedd_ext#pdo_firebird#firebird_driver.c: pdo_firebird_fetch_error_func
+*/
+
+// ---------------------------------------------

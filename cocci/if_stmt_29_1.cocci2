@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- format_string(E0, E1, E2->next != NULL, false); 
++ format_string(E0, E1, E2->next != NULL, true); 
+// Infered from: (qemu/{prevFiles/prev_56fdfb_6ffa16_qapi#string-output-visitor.c,revFiles/56fdfb_6ffa16_qapi#string-output-visitor.c}: print_type_int)
+// False positives: (qemu/revFiles/56fdfb_6ffa16_qapi#string-output-visitor.c: print_type_int)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

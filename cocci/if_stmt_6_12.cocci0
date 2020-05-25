@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && E1 == 1)  
++ if (E0 && E1 == PANE_STATUS_TOP)  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_3a6d90_87ea14_layout.c,revFiles/3a6d90_87ea14_layout.c}: layout_fix_panes)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

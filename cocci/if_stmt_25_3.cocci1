@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->codec_tag == MKTAG('A', 'V', '1', 'x'))  
++ if (E0->codec_tag == MKTAG('A', 'V', '1', 'x') || E0->codec_tag == MKTAG(  'A', 'V', 'u', 'p'))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_36cbdc_48ff3f_libavcodec#rawdec.c,revFiles/36cbdc_48ff3f_libavcodec#rawdec.c}: raw_decode)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

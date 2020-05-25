@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (E1->ce_stat_data.sd_mtime.sec > 0 && verify_uptodate(E1,  &E2->unpack_opts) != 0); 
++ E0 = verify_uptodate(E1, &E2->unpack_opts) != 0; 
+// Infered from: (git/{prevFiles/prev_277292_a35edc_merge-recursive.c,revFiles/277292_a35edc_merge-recursive.c}: was_dirty)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

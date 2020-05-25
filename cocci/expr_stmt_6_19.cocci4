@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0->resample_first = RSC * E0->out.ch_count / E0->in.ch_count - RSC < E0->out_sample_rate / (  float )E0->in_sample_rate - 1.0; 
++ E0->resample_first = RSC * E0->out.ch_count / E0->used_ch_count - RSC < E0->out_sample_rate / (  float )E0->in_sample_rate - 1.0; 
+// Infered from: (FFmpeg/{prevFiles/prev_bce4da_a37c62_libswresample#swresample.c,revFiles/bce4da_a37c62_libswresample#swresample.c}: swr_init)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_0dfe44_1227d4_modules#demux#ts.c: PMTCallBack
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- ptvcursor_add(E0, hf_vicp_length, 4, FALSE); 
++ ptvcursor_add(E0, hf_vicp_length, 4, ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_3f5b02_ef7f56_epan#dissectors#packet-vicp.c,revFiles/3f5b02_ef7f56_epan#dissectors#packet-vicp.c}: dissect_vicp)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

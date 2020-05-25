@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = spprintf(&E1, 48, "%.*G", (int )EG(precision), Z_DVAL_PP(E2)); 
++ E0 = spprintf(&E1, 0, "%.*G", (int )EG(precision), Z_DVAL_PP(E2)); 
+// Infered from: (php-src/{prevFiles/prev_4ebc03_c803ef_ext#standard#http.c,revFiles/4ebc03_c803ef_ext#standard#http.c}: php_url_encode_hash_ex), (php-src/{prevFiles/prev_0c8555_c2f893_ext#standard#http.c,revFiles/0c8555_c2f893_ext#standard#http.c}: php_url_encode_hash_ex), (php-src/{prevFiles/prev_8a37504_38ac30_ext#standard#http.c,revFiles/8a37504_38ac30_ext#standard#http.c}: php_url_encode_hash_ex)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_8a37504_38ac30_ext#standard#http.c: php_url_encode_hash_ex
+ - php-src/prevFiles/prev_0c8555_c2f893_ext#standard#http.c: php_url_encode_hash_ex
+ - php-src/prevFiles/prev_4ebc03_c803ef_ext#standard#http.c: php_url_encode_hash_ex
+*/
+
+// ---------------------------------------------

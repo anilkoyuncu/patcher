@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = gst_pad_proxy_getcaps(E1); 
++ E0 = gst_caps_copy(gst_pad_get_pad_template_caps(E1)); 
+// Infered from: (gstreamer/{prevFiles/prev_aa9ba2_c0d585_libs#gst#base#gstbaseparse.c,revFiles/aa9ba2_c0d585_libs#gst#base#gstbaseparse.c}: gst_base_parse_sink_getcaps)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

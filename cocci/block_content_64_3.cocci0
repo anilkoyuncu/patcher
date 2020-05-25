@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- for(E0 = E1;E0 && E2.nelts < IOV_MAX && E3 < E4;E0 = E0->next)  
++ for(E0 = E1;E0 && E3 < E4;E0 = E0->next)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_578c02_96d73e_src#os#unix#ngx_freebsd_sendfile_chain.c,revFiles/578c02_96d73e_src#os#unix#ngx_freebsd_sendfile_chain.c}: ngx_freebsd_sendfile_chain), (nginx/{prevFiles/prev_578c02_96d73e_src#os#unix#ngx_darwin_sendfile_chain.c,revFiles/578c02_96d73e_src#os#unix#ngx_darwin_sendfile_chain.c}: ngx_darwin_sendfile_chain)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------

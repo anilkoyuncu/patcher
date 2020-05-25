@@ -1,0 +1,32 @@
+@@
+expression E0;
+@@
+- g_object_class_install_property(E0, ARG_DROP,  g_param_spec_boolean("drop",  "Drops all buffers if TRUE",  "If this property if TRUE, the element will drop all buffers, if its FALSE, it will let them through",  FALSE,  G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS)); 
+// Infered from: (gstreamer/{prevFiles/prev_80a766_f90bdd_plugins#elements#gstvalve.c,revFiles/80a766_f90bdd_plugins#elements#gstvalve.c}: gst_valve_class_init)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 0.67
+// -- General --
+// Functions fully changed: 0/5(0%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_e01378_268fbc_builtin#fetch.c: cmd_fetch
+ - gstreamer/prevFiles/prev_80a766_f90bdd_plugins#elements#gstvalve.c: gst_valve_class_init
+ - git/prevFiles/prev_e01378_268fbc_builtin#fetch.c: fetch_one_setup_partial
+*/
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_f9a339_0043e8_lib#url.c: ConnectionExists
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - libarchive/prevFiles/prev_5d8ad5_2d8a6c_tar#test#test_option_newer_than.c: DEFINE_TEST
+*/
+
+// ---------------------------------------------

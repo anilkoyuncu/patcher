@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef uint8_t;
+@@
+- E0->surface = qemu_create_displaysurface_from(80, 25, 0, 0, (uint8_t *)screen); 
++ E0->surface = qemu_create_displaysurface_from(640, 400, 0, 0,  (uint8_t *)screen); 
+// Infered from: (qemu/{prevFiles/prev_68f009_428c57_curses.c,revFiles/68f009_428c57_curses.c}: curses_display_init)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

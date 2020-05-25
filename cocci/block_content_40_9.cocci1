@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- screen_write_cursormove(E0, E1, E2 + E3); 
+// Infered from: (tmux/{prevFiles/prev_1ba5ce_f949107_clock.c,revFiles/1ba5ce_f949107_clock.c}: clock_draw), (tmux/{prevFiles/prev_fde3bd_1a5aba_clock.c,revFiles/fde3bd_1a5aba_clock.c}: clock_draw)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.14
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 0.56
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - tmux/prevFiles/prev_1ba5ce_f949107_clock.c: clock_draw
+ - tmux/prevFiles/prev_fde3bd_1a5aba_clock.c: clock_draw
+*/
+
+// ---------------------------------------------

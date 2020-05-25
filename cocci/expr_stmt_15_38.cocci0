@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->control = create_preference_check_button(E1, E0->ordinal, E2,  E0->description,  E0 > saved_val.boolval); 
++ E0->control = create_preference_check_button(E1, E0->ordinal, E2,  E0->description,  E0->saved_val.boolval); 
+// Infered from: (wireshark/{prevFiles/prev_94c5be_6d5ce0_gtk#prefs_dlg.c,revFiles/94c5be_6d5ce0_gtk#prefs_dlg.c}: pref_show)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

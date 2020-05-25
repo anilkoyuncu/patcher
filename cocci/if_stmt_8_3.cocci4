@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 % 70 != 69 && (E1 = sshbuf_put_u8(E2, '\n')) != 0)  
++ if ((E0 - 1) % 70 != 69 && (E1 = sshbuf_put_u8(E2, '\n')) != 0)  
+  {
+  ...
+  }
+// Infered from: (openssh-portable/{prevFiles/prev_ed46a0_a19202_sshbuf-misc.c,revFiles/ed46a0_a19202_sshbuf-misc.c}: sshbuf_dtob64)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

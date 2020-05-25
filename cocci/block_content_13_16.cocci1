@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef gchar;
+@@
+- const  gchar *I0; 
++ gchar *I0; 
+// Infered from: (wireshark/{prevFiles/prev_ac46b9_01e69d_ui#gtk#manual_addr_resolv.c,revFiles/ac46b9_01e69d_ui#gtk#manual_addr_resolv.c}: changed_cb)
+// False positives: (wireshark/revFiles/ac46b9_01e69d_ui#gtk#manual_addr_resolv.c: changed_cb)
+// Recall: 0.08, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------

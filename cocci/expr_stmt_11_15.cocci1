@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->c = E1 = XCBConnectBasic(); 
++ E0->c = E1 = XCBConnect(NULL, NULL); 
+// Infered from: (cairo/{prevFiles/prev_57a024_8c9da5_test#cairo-test.c,revFiles/57a024_8c9da5_test#cairo-test.c}: create_xcb_surface)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

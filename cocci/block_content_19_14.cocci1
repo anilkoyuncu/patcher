@@ -1,0 +1,19 @@
+@@
+identifier I0;
+@@
+- EVP_MD_CTX_init(I0); 
++ EVP_MD_CTX_reset(I0); 
+// Infered from: (openssl/{prevFiles/prev_bfb064_959ed5_ssl#record#ssl3_record.c,revFiles/bfb064_959ed5_ssl#record#ssl3_record.c}: n_ssl3_mac)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

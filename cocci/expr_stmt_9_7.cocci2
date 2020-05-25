@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- php_error_docref(NULL, E_WARNING, "Unable to find LOB descriptor #%d",  E0->descid); 
++ php_error_docref(NULL, E_WARNING, "Unable to find LOB descriptor #%d",  E0->descid->handle); 
+// Infered from: (php-src/{prevFiles/prev_dd0a80_2d5304_ext#oci8#oci8.c,revFiles/dd0a80_2d5304_ext#oci8#oci8.c}: php_oci_column_to_zval)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

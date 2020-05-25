@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E1 ? get_bits(&E2->gb, E1) :0; 
++ E0 = E1 ? get_bits_long(&E2->gb, E1) :0; 
+// Infered from: (FFmpeg/{prevFiles/prev_6a9931_f48fbf_libavcodec#wmalosslessdec.c,revFiles/6a9931_f48fbf_libavcodec#wmalosslessdec.c}: decode_channel_residues)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

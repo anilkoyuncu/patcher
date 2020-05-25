@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->psz_mux = strdup(E1); 
++ E0->psz_mux = strdup(E1 ? E1 :""); 
+// Infered from: (vlc/{prevFiles/prev_b89d3e_f7ec12_src#stream_output#stream_output.c,revFiles/b89d3e_f7ec12_src#stream_output#stream_output.c}: sout_MuxNew)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

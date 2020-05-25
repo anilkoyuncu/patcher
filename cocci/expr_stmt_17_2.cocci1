@@ -1,0 +1,20 @@
+@@
+expression E0;
+@@
+- gettimeofday(E0, 0); 
++ *E0 = tutil_tvnow(); 
+// Infered from: (curl/{prevFiles/prev_7c0cbc_076e1f_tests#libtest#lib582.c,revFiles/7c0cbc_076e1f_tests#libtest#lib582.c}: curlTimerCallback)
+// False positives: (curl/revFiles/7c0cbc_076e1f_tests#libtest#lib1501.c: test), (curl/revFiles/7c0cbc_076e1f_tests#libtest#lib582.c: getMicroSecondTimeout)
+// Recall: 0.62, Precision: 0.62, Matching recall: 0.62
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

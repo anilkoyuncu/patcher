@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && write_str_in_full(E1, "\n") != 1)  
++ if (E0 && write_str_in_full(E1, "\n") < 0)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_06f46f_68a423_config.c,revFiles/06f46f_68a423_config.c}: git_config_set_multivar_in_file_gently)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

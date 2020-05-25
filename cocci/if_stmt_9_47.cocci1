@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!AudioDeviceHasOutput(E0, E1[E2]))  
++ if (!AudioDeviceHasOutput(E1[E2]))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_09afc3_43075b_modules#audio_output#auhal.c,revFiles/09afc3_43075b_modules#audio_output#auhal.c}: Probe)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

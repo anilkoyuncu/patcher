@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef NetClientState;
+@@
+  NetClientState *I0; 
+  ...
+- qemu_chr_add_handlers(E1, NULL, NULL, net_vhost_user_event, (void *)E2); 
++ qemu_chr_add_handlers(E1, NULL, NULL, net_vhost_user_event, I0[0].name); 
+// Infered from: (qemu/{prevFiles/prev_c1bf353_f7df22_net#vhost-user.c,revFiles/c1bf353_f7df22_net#vhost-user.c}: net_vhost_user_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

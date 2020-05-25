@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- memcpy(E0 + E1 - 4, ".sub"); 
++ memcpy(E0 + E1 - 4, ".sub", 4); 
+// Infered from: (vlc/{prevFiles/prev_8e5b36_979e83_modules#demux#vobsub.c,revFiles/8e5b36_979e83_modules#demux#vobsub.c}: Open)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

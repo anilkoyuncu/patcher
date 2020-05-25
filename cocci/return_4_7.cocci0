@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return ((int *)E0 - (int *)E1); 
++ return (*(int *)E0 - *(int *)E1); 
+// Infered from: (codeflaws/{prevFiles/prev_135-A-3078210-3078230.c,revFiles/135-A-3078210-3078230.c}: cmp)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

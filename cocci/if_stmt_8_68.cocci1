@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 == SYS_CFG_SITE_MB && E1 < sizeof(E2->mb_clock))  
++ if (E0 == SYS_CFG_SITE_MB && E1 < ARRAY_SIZE(E2->mb_clock))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_ec1efa_d5001c_hw#misc#arm_sysctl.c,revFiles/ec1efa_d5001c_hw#misc#arm_sysctl.c}: vexpress_cfgctrl_read), (qemu/{prevFiles/prev_ec1efa_d5001c_hw#misc#arm_sysctl.c,revFiles/ec1efa_d5001c_hw#misc#arm_sysctl.c}: vexpress_cfgctrl_write)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

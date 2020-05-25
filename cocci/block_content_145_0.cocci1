@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = lrintf(E1->coded_frame->quality / (float )FF_QP2LAMBDA); 
++ int I0 = lrintf(q); 
+// Infered from: (FFmpeg/{prevFiles/prev_5da116_bbc572_ffmpeg.c,revFiles/5da116_bbc572_ffmpeg.c}: print_report), (FFmpeg/{prevFiles/prev_6b1c88_126539_ffmpeg.c,revFiles/6b1c88_126539_ffmpeg.c}: print_report)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.22
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_5da116_bbc572_ffmpeg.c: print_report
+ - FFmpeg/prevFiles/prev_6b1c88_126539_ffmpeg.c: print_report
+*/
+
+// ---------------------------------------------

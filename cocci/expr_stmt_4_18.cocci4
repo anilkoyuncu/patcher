@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = (E1 - E2) / (E3 + E4); 
++ E0 = 1.0 * (E1 - E2) / (E3 + E4); 
+// Infered from: (codeflaws/{prevFiles/prev_624-A-16617860-16617900.c,revFiles/624-A-16617860-16617900.c}: main)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

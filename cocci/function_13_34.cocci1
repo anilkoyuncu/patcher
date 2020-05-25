@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- file_seek(E0->fh, E1, SEEK_SET, E2); 
++ if (file_seek(E0->fh, E1, SEEK_SET, E2) == -1)  
++ {
++ return 0; 
++ }
+// Infered from: (wireshark/{prevFiles/prev_9e4910_735b61_wiretap#mpeg.c,revFiles/9e4910_735b61_wiretap#mpeg.c}: mpeg_resync)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

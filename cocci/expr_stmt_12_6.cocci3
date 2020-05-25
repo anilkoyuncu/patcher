@@ -1,0 +1,10 @@
+@@
+expression E1, E0;
+@@
+- strcpy(E0, E1); 
++ xsnprintf(E0, sizeof(E0), E1); 
+// Infered from: (git/{prevFiles/prev_5096d4_db85a8_daemon.c,revFiles/5096d4_db85a8_daemon.c}: ip2str), (git/{prevFiles/prev_5096d4_db85a8_builtin#unpack-file.c,revFiles/5096d4_db85a8_builtin#unpack-file.c}: create_temp_file), (git/{prevFiles/prev_5096d4_db85a8_connect.c,revFiles/5096d4_db85a8_connect.c}: ai_name), (git/{prevFiles/prev_5096d4_db85a8_builtin#gc.c,revFiles/5096d4_db85a8_builtin#gc.c}: lock_repo_for_gc)
+// False positives: (FFmpeg/revFiles/bd03af_ec1ef0_ffmpeg_opt.c: opt_preset), (cpython/revFiles/d4c0a9c_5107b4_Python#compile.c: com_addopname), (cpython/revFiles/d4c0a9c_5107b4_Python#compile.c: com_factor), (cpython/revFiles/d4c0a9c_5107b4_Python#compile.c: mangle), (git/revFiles/5096d4_db85a8_builtin#init-db.c: copy_templates), (git/revFiles/5096d4_db85a8_builtin#init-db.c: create_default_files), (git/revFiles/5096d4_db85a8_builtin#init-db.c: create_object_directory), (git/revFiles/5096d4_db85a8_http-push.c: main), (php-src/revFiles/6dca37_538d51_ext#snmp#snmp.c: php_snmp), (qemu/revFiles/d35215f_43dc2a_qemu-option.c: qemu_opts_from_qdict_1), (wireshark/revFiles/8bc95e_69dce2_tethereal.c: capture)
+// Recall: 0.15, Precision: 0.28, Matching recall: 0.69
+
+// ---------------------------------------------

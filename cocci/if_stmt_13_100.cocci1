@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!(E0 = avfilter_get_by_name("resample")))  
++ if (!(E0 = avfilter_get_by_name("aresample")))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_88d5cf_efdc89_libavfilter#avfiltergraph.c,revFiles/88d5cf_efdc89_libavfilter#avfiltergraph.c}: query_formats)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

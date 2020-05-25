@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = 1 + snprintf(E1 + 1, sizeof("0lambda_") + MAX_LENGTH_OF_LONG,  "lambda_%d", ++EG(lambda_count)); 
++ E0 = 1 + snprintf(E1 + 1, sizeof("lambda_") + MAX_LENGTH_OF_LONG,  "lambda_%d", ++EG(lambda_count)); 
+// Infered from: (php-src/{prevFiles/prev_6b5d5b_3726c5c_Zend#zend_builtin_functions.c,revFiles/6b5d5b_3726c5c_Zend#zend_builtin_functions.c}: ZEND_FUNCTION), (php-src/{prevFiles/prev_f8154b_bfdd53_Zend#zend_builtin_functions.c,revFiles/f8154b_bfdd53_Zend#zend_builtin_functions.c}: ZEND_FUNCTION), (php-src/{prevFiles/prev_baf2e8_e2e9691_Zend#zend_builtin_functions.c,revFiles/baf2e8_e2e9691_Zend#zend_builtin_functions.c}: ZEND_FUNCTION)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

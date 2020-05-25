@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- while (E0 <= E1 && E2 <= E3 && E4 == 0)  
++ while (E0 < E1 && E2 <= E3 && E4 == 0)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_404-C-11837655-11837677.c,revFiles/404-C-11837655-11837677.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1;
+typedef vout_display_sys_t;
+@@
+- vout_display_sys_t *I0 = E1->sys = vlc_obj_calloc(E1, 1,  sizeof(vout_display_sys_t )); 
++ vout_display_sys_t *I0 = E1->sys = vlc_obj_calloc(VLC_OBJECT(E1), 1,  sizeof(vout_display_sys_t )); 
+// Infered from: (vlc/{prevFiles/prev_b8a120_108878_modules#video_output#win32#direct3d11.c,revFiles/b8a120_108878_modules#video_output#win32#direct3d11.c}: Open)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_d6a7c4_14fb31_src#stream_output#sap.c: SDPGenerate
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+identifier I0;
+typedef zval;
+@@
+- zval **I0; 
+// Infered from: (php-src/{prevFiles/prev_22dff4_4919bc_ext#iconv#iconv.c,revFiles/22dff4_4919bc_ext#iconv#iconv.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_841952_7a954c_ext#iconv#iconv.c,revFiles/841952_7a954c_ext#iconv#iconv.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_474f6e_eb2659_ext#iconv#iconv.c,revFiles/474f6e_eb2659_ext#iconv#iconv.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

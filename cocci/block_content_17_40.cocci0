@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- zend_u_unmangle_property_name(E0, E1, E2 - 1, &E3, &E4); 
+- if (E3.v)  
++ int mangled = zend_u_unmangle_property_name(E0, E1, E2 - 1, &E3, &E4); 
++ if (E3.v && mangled == SUCCESS)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_f7600a_fc84aa_Zend#zend.c,revFiles/f7600a_fc84aa_Zend#zend.c}: print_hash)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

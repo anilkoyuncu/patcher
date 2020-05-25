@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- set_irq_chip_and_handler(E0, &hd64461_irq_chip, handle_level_irq); 
++ irq_set_chip_and_handler(E0, &hd64461_irq_chip, handle_level_irq); 
+// Infered from: (linux/{prevFiles/prev_fcb8918_a821b279_arch#sh#cchips#hd6446x#hd64461.c,revFiles/fcb8918_a821b279_arch#sh#cchips#hd6446x#hd64461.c}: setup_hd64461)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

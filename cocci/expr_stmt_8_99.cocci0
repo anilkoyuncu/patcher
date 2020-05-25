@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (struct sctp_init_chunk *)((void *)E1 + sizeof(struct sctphdr )); 
++ E0 = (void *)E1 + sizeof(struct sctphdr ); 
+// Infered from: (linux/{prevFiles/prev_ea1107_3c8def_net#sctp#input.c,revFiles/ea1107_3c8def_net#sctp#input.c}: sctp_err_lookup)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (-1 == getsockname(E0->fd, &(E1.plain), &E2))  
++ if (-1 == getsockname(E0->fd, (struct sockaddr *)&E1, &E2) || E2 > sizeof(E1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (lighttpd1.4/{prevFiles/prev_d7638b_49c74f_src#mod_scgi.c,revFiles/d7638b_49c74f_src#mod_scgi.c}: scgi_create_env), (lighttpd1.4/{prevFiles/prev_d7638b_49c74f_src#mod_fastcgi.c,revFiles/d7638b_49c74f_src#mod_fastcgi.c}: fcgi_create_env)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

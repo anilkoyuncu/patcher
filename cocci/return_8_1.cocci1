@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return gst_pad_collect_array(GST_SCHEDULER(E0), E1, E2); 
++ return gst_pad_collect_array(GST_ELEMENT_SCHED(E0), E1, E2); 
+// Infered from: (gstreamer/{prevFiles/prev_7bf7d8_727725_gst#gstpad.c,revFiles/7bf7d8_727725_gst#gstpad.c}: gst_pad_collectv)
+// Recall: 0.36, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

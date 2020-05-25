@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- execve(E0->app->app, E0->argv, E0->env); 
++ execve(E0->cmd, E0->argv, E0->env); 
+// Infered from: (ompi/{prevFiles/prev_16fc09_ee4ce1_orte#mca#odls#default#odls_default_module.c,revFiles/16fc09_ee4ce1_orte#mca#odls#default#odls_default_module.c}: do_child), (ompi/{prevFiles/prev_16fc09_ee4ce1_orte#mca#odls#alps#odls_alps_module.c,revFiles/16fc09_ee4ce1_orte#mca#odls#alps#odls_alps_module.c}: do_child)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

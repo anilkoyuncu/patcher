@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = EIO; 
++ E0 = -EIO; 
+// Infered from: (qemu/{prevFiles/prev_0f0b60_cb6d3c_block.c,revFiles/0f0b60_cb6d3c_block.c}: bdrv_aio_multiwrite), (qemu/{prevFiles/prev_0f0b60_cb6d3c_block.c,revFiles/0f0b60_cb6d3c_block.c}: bdrv_aio_multiwrite)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

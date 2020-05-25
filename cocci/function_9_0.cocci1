@@ -1,0 +1,12 @@
+@@
+identifier I0, I1;
+typedef GstPad;
+@@
+- GstPad *I0; 
+  ...
+- g_return_if_fail(I1 != NULL); 
++ g_return_val_if_fail(I1 != NULL, -1); 
+// Infered from: (gstreamer/{prevFiles/prev_87f9d5_6ce3e6_test#mp1tomp1.c,revFiles/87f9d5_6ce3e6_test#mp1tomp1.c}: main)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.30
+
+// ---------------------------------------------

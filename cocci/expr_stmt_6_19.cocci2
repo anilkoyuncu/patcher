@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->fp_status.flush_to_zero = 1; 
++ E0->fpcr_flush_to_zero = 1; 
+// Infered from: (qemu/{prevFiles/prev_712e7c_ea937d_target#alpha#helper.c,revFiles/712e7c_ea937d_target#alpha#helper.c}: cpu_alpha_store_fpcr)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

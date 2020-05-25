@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- lseek(E0, 8, SEEK_SET); 
++ if (lseek(E0, 8, SEEK_SET) < 0)  
++ {
++ return AVERROR(EIO); 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_378a5b_7fd651_ffserver.c,revFiles/378a5b_7fd651_ffserver.c}: ffm_write_write_index), (FFmpeg/{prevFiles/prev_71bc8c_378a5b_ffserver.c,revFiles/71bc8c_378a5b_ffserver.c}: ffm_read_write_index)
+// False positives: (FFmpeg/revFiles/378a5b_7fd651_ffserver.c: ffm_read_write_index)
+// Recall: 0.32, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

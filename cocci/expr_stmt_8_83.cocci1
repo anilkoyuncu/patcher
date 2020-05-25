@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = malloc(strlen(E1) + strlen(E2) + 16 + 7); 
+- sprintf(E0, "%s (%s@0x%p)", E1, E3->item_name(E4), E4); 
++ E0 = malloc(strlen(E1) + strlen(E2) + 18 + 5); 
++ sprintf(E0, "%s (%s@%p)", E1, E3->item_name(E4), E4); 
+// Infered from: (vlc/{prevFiles/prev_a9a998_7b29b3_modules#codec#ffmpeg#ffmpeg.c,revFiles/a9a998_7b29b3_modules#codec#ffmpeg#ffmpeg.c}: LibavcodecCallback)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

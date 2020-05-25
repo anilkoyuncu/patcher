@@ -1,0 +1,13 @@
+@@
+expression list E2;
+identifier I1 = {Curl_urldecode ,myssh_statemach_act }, I0;
+typedef CURLcode;
+@@
+- CURLcode I0 = CURLE_OK; 
+  ...
+- I0 = I1(E2); 
++ CURLcode I0 = I1(E2); 
+// Infered from: (curl/{prevFiles/prev_e23c52_04ac54_lib#ssh-libssh.c,revFiles/e23c52_04ac54_lib#ssh-libssh.c}: myssh_multi_statemach), (curl/{prevFiles/prev_e23c52_04ac54_lib#smb.c,revFiles/e23c52_04ac54_lib#smb.c}: smb_parse_url_path)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

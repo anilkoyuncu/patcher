@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((!d_mountpoint(E0) && !simple_empty(E0)) || (E0->d_inode && S_ISLNK(  E0->d_inode->i_mode)))  
++ if ((!d_mountpoint(E0) && !simple_empty(E0)) || (E0->d_inode && d_is_symlink(  E0)))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_e36cb0_2c616d_fs#autofs4#root.c,revFiles/e36cb0_2c616d_fs#autofs4#root.c}: autofs4_d_manage)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

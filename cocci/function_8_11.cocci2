@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- if (0 == strcmp(E0, "localhost"))  
++ if (strcmp(E0, "localhost") == 0)  
+  {
+- if (0 == ompi_list_get_size(E1) || (1 == ompi_list_get_size(E1) && localhost_found))  
+- {
+- localhost_found = true; 
++ E0 = orte_system_info.nodename; 
+  }
+- else
+- {
+- ORTE_ERROR_LOG(ORTE_ERR_VALUE_OUT_OF_BOUNDS); 
+- return ORTE_ERR_VALUE_OUT_OF_BOUNDS; 
+- }
+- }
+- else
+- {
+- if (localhost_found)  
+- {
+- ORTE_ERROR_LOG(ORTE_ERR_VALUE_OUT_OF_BOUNDS); 
+- return ORTE_ERR_VALUE_OUT_OF_BOUNDS; 
+- }
+- }
+// Infered from: (ompi/{prevFiles/prev_8b411a_465b54_src#mca#rds#hostfile#rds_hostfile.c,revFiles/8b411a_465b54_src#mca#rds#hostfile#rds_hostfile.c}: orte_rds_hostfile_parse_line)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->gb.buffer == E0->bitstream_buffer && E1 > 20)  
++ if (E0->gb.buffer == E0->bitstream_buffer && E1 > 7 && E0->xvid_build)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_24b207_6c5875_libavcodec#h263dec.c,revFiles/24b207_6c5875_libavcodec#h263dec.c}: ff_h263_decode_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

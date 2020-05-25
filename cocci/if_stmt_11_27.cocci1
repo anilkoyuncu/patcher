@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->iformat && E0->iformat->priv_class)  
++ if (E0->oformat->priv_class)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_4badb3_d32eed_libavformat#utils.c,revFiles/4badb3_d32eed_libavformat#utils.c}: av_write_trailer)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

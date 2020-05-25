@@ -1,0 +1,10 @@
+@@
+identifier I0, I1, I4;
+expression E2, E3;
+@@
+- struct I0 **I1 = tfind(E2, E3, I4); 
++ void **I1 = tfind(E2, E3, I4); 
+// Infered from: (vlc/{prevFiles/prev_922547_da572b_modules#services_discovery#pulse.c,revFiles/922547_da572b_modules#services_discovery#pulse.c}: RemoveSource), (vlc/{prevFiles/prev_45b0cc_e88dc9_src#misc#threads.c,revFiles/45b0cc_e88dc9_src#misc#threads.c}: vlc_lock_unmark), (vlc/{prevFiles/prev_5eb7ef_239be3_modules#services_discovery#xcb_apps.c,revFiles/5eb7ef_239be3_modules#services_discovery#xcb_apps.c}: UpdateApps)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

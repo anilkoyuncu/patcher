@@ -1,0 +1,41 @@
+@@
+expression list E1;
+expression E0;
+@@
+- *E0 = OMPI_INT_2_FINT(PMPI_Dist_graph_neighbors (E1)); 
+- if (OMPI_SUCCESS == OMPI_FINT_2_INT(*E0))  
++ c_ierr = PMPI_Dist_graph_neighbors (E1); 
++ if (NULL != E0)  
+  {
++ *E0 = OMPI_INT_2_FINT(c_ierr); 
++ }
++ if (OMPI_SUCCESS == c_ierr)  
++ {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_223e6c_020a59_ompi#mpi#fortran#mpif-h#dist_graph_neighbors_f.c,revFiles/223e6c_020a59_ompi#mpi#fortran#mpif-h#dist_graph_neighbors_f.c}: pompi_dist_graph_neighbors_f)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.86
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_223e6c_020a59_ompi#mpi#fortran#mpif-h#dist_graph_create_f.c: pompi_dist_graph_create_f
+ - ompi/prevFiles/prev_223e6c_020a59_ompi#mpi#fortran#mpif-h#dist_graph_neighbors_count_f.c: pompi_dist_graph_neighbors_count_f
+ - ompi/prevFiles/prev_223e6c_020a59_ompi#mpi#fortran#mpif-h#dist_graph_create_adjacent_f.c: pompi_dist_graph_create_adjacent_f
+ - ompi/prevFiles/prev_223e6c_020a59_ompi#mpi#fortran#mpif-h#dist_graph_neighbors_f.c: pompi_dist_graph_neighbors_f
+*/
+
+// ---------------------------------------------

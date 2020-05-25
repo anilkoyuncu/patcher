@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = ass_libav_log_level_map[E1]; 
++ int I0 = ass_libavfilter_log_level_map[E1]; 
+// Infered from: (FFmpeg/{prevFiles/prev_be4ffb_c83ed1_libavfilter#vf_ass.c,revFiles/be4ffb_c83ed1_libavfilter#vf_ass.c}: ass_log)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

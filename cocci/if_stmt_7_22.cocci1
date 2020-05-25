@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->pb && (E1 = avio_size(E0->pb)) > 0 && E0->duration != AV_NOPTS_VALUE)  
++ if (E0->pb && (E1 = avio_size(E0->pb)) > 0 && E0->duration > 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_635b2e_6085d6b_libavformat#utils.c,revFiles/635b2e_6085d6b_libavformat#utils.c}: update_stream_timings)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- while (isspace(E0[E1 - 1]))  
++ while (E1 && isspace(E0[E1 - 1]))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_908b1e_9219d7_main#SAPI.c,revFiles/908b1e_9219d7_main#SAPI.c}: sapi_header_op), (php-src/{prevFiles/prev_586739_4d7652_main#SAPI.c,revFiles/586739_4d7652_main#SAPI.c}: sapi_header_op)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.91
+// -- Node Change --
+// Recall: 1.00, Precision: 0.83
+// -- General --
+// Functions fully changed: 9/11(81%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - apr/prevFiles/prev_910542_48982c_threadproc#win32#proc.c: ap_create_process
+ - curl/prevFiles/prev_cf2051_3ce2a3_lib#imap.c: imap_atom
+*/
+
+// ---------------------------------------------

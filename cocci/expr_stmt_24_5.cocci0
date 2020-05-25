@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- isa_mmio_setup(&E0->isa, 0x40000); 
++ memory_region_init_alias(&E0->isa, OBJECT(E0), "sh_pci.isa", get_system_io(  ), 0, 0x40000); 
+// Infered from: (qemu/{prevFiles/prev_4759ab_0cd8ea_hw#sh4#sh_pci.c,revFiles/4759ab_0cd8ea_hw#sh4#sh_pci.c}: sh_pci_device_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

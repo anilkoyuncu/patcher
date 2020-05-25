@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0 = xstrdup(mkpath("%s/.git", E1)); 
++ E0 = mkpathdup("%s/.git", E1); 
+// Infered from: (git/{prevFiles/prev_4e2d09_d292bfa_builtin#clone.c,revFiles/4e2d09_d292bfa_builtin#clone.c}: cmd_clone)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

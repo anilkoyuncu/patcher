@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && E0->fb == E1)  
++ if (E0 && E0->primary->fb == E1)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#omapdrm#omap_fb.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#omapdrm#omap_fb.c}: omap_framebuffer_get_next_connector)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

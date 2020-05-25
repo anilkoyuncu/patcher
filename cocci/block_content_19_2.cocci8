@@ -1,0 +1,8 @@
+@@
+@@
+- opal_setenv("MXM_PML_SINGLE_THREAD", ompi_mpi_thread_multiple ? "n" :"y",  false, &environ); 
++ opal_setenv("MXM_MPI_SINGLE_THREAD", ompi_mpi_thread_multiple ? "n" :"y",  false, &environ); 
+// Infered from: (ompi/{prevFiles/prev_85580a_5ef063_ompi#mca#pml#yalla#pml_yalla.c,revFiles/85580a_5ef063_ompi#mca#pml#yalla#pml_yalla.c}: mca_pml_yalla_open)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0.bquant_offset = E1->b_quant_offset; 
++ E0.bquant_offset = 100 * E1->b_quant_offset; 
+// Infered from: (FFmpeg/{prevFiles/prev_0adba3_e70e7a_libavcodec#xvidff.c,revFiles/0adba3_e70e7a_libavcodec#xvidff.c}: ff_xvid_encode_init), (FFmpeg/{prevFiles/prev_0adba3_e70e7a_libavcodec#xvid_rc.c,revFiles/0adba3_e70e7a_libavcodec#xvid_rc.c}: ff_xvid_rate_estimate_qscale)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

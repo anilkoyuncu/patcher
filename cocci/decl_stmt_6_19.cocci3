@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef GstTypeFindProbability;
+@@
+- GstTypeFindProbability I0 = 0; 
++ GstTypeFindProbability I0 = GST_TYPE_FIND_NONE; 
+// Infered from: (gstreamer/{prevFiles/prev_d7d2be_1ec901_plugins#elements#gsttypefindelement.c,revFiles/d7d2be_1ec901_plugins#elements#gsttypefindelement.c}: gst_type_find_element_handle_event), (gstreamer/{prevFiles/prev_d7d2be_1ec901_plugins#elements#gsttypefindelement.c,revFiles/d7d2be_1ec901_plugins#elements#gsttypefindelement.c}: gst_type_find_element_activate)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

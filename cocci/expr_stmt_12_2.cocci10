@@ -1,0 +1,33 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- swr_convert(E0->swr, E1->data, E2, (void *)E3->data, E2); 
++ swr_convert(E0->swr, E1->extended_data, E2, (void *)E3->extended_data, E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_6c27ae_b9936e_libavfilter#af_pan.c,revFiles/6c27ae_b9936e_libavfilter#af_pan.c}: filter_frame)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.79, Precision: 0.92
+// -- Node Change --
+// Recall: 0.79, Precision: 0.92
+// -- General --
+// Functions fully changed: 10/15(66%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_849fe1_6068eb_modules#video_output#win32#direct3d9.c: GLConvUpdate
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_446982_4388b5_epan#dissectors#packet-netflow.c: dissect_v9_v10_pdu_data
+ - qemu/prevFiles/prev_ee5626_bd4a68_hw#usb#hcd-xhci.c: 
+ - libtiff/prevFiles/prev_3767aa_a2b390_libtiff#tif_luv.c: Luv24fromLuv48
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_849fe1_6068eb_modules#video_output#win32#direct3d9.c: Direct3D9CreateScene
+*/
+
+// ---------------------------------------------

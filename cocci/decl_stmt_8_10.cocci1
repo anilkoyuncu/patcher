@@ -1,0 +1,29 @@
+@@
+identifier I0, I1;
+typedef uint64_t;
+@@
+  void replay_advance_current_step(uint64_t I0)  
+  {
+  ...
+- int I1 = (int )(replay_get_current_step() - replay_state.current_step); 
++ int I1 = (int )(I0 - replay_state.current_step); 
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_245429_3c2d4c_replay#replay-internal.c,revFiles/245429_3c2d4c_replay#replay-internal.c}: replay_advance_current_step)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_5006b3_5748e4_crypto#rand#rand_lib.c: rand_cleanup_int
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = string_input_visitor_new (string_output_get_string (E1)); 
++ str = string_output_get_string(E1); 
++ E0 = string_input_visitor_new(str); 
+// Infered from: (qemu/{prevFiles/prev_976620_b0e901_qom#object.c,revFiles/976620_b0e901_qom#object.c}: object_property_get_enum), (qemu/{prevFiles/prev_976620_b0e901_qom#object.c,revFiles/976620_b0e901_qom#object.c}: object_property_get_uint16List)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------

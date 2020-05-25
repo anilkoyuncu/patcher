@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- dissect_id_infostring(E0, E1, E2 + Cmd_Argv_start(4), (char *)E3,  ett_quakeworld_connectionless_connect_infostring_key_value,  hf_quakeworld_connectionless_connect_infostring_key_value,  hf_quakeworld_connectionless_connect_infostring_key,  hf_quakeworld_connectionless_connect_infostring_value); 
++ dissect_id_infostring(E0, E1, E2 + Cmd_Argv_start(4), ep_strdup(E3),  ett_quakeworld_connectionless_connect_infostring_key_value,  hf_quakeworld_connectionless_connect_infostring_key_value,  hf_quakeworld_connectionless_connect_infostring_key,  hf_quakeworld_connectionless_connect_infostring_value); 
+// Infered from: (wireshark/{prevFiles/prev_308235_d35ba5_epan#dissectors#packet-quakeworld.c,revFiles/308235_d35ba5_epan#dissectors#packet-quakeworld.c}: dissect_quakeworld_ConnectionlessPacket)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

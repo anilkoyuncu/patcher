@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef extension_t;
+@@
+  extension_t *I0 = E1; 
+  ...
+- msg_Dbg(E2, "Extension thread ending..."); 
++ msg_Dbg(E2, "Extension thread end: '%s'", I0->psz_title); 
+// Infered from: (vlc/{prevFiles/prev_ef5d32_1f3bd0_modules#misc#lua#extension_thread.c,revFiles/ef5d32_1f3bd0_modules#misc#lua#extension_thread.c}: Run)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

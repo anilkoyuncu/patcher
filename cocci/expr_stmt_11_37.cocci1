@@ -1,0 +1,25 @@
+@@
+typedef GDestroyNotify;
+typedef GFunc;
+@@
+- g_list_foreach(messages, (GFunc )g_free, NULL); 
++ g_list_free_full(messages, (GDestroyNotify )g_free); 
+// Infered from: (gstreamer/{prevFiles/prev_78ab2b_485949_tests#check#gst#gsttracerrecord.c,revFiles/78ab2b_485949_tests#check#gst#gsttracerrecord.c}: cleanup), (gstreamer/{prevFiles/prev_bdc34b_78ab2b_tests#check#gst#gstinfo.c,revFiles/bdc34b_78ab2b_tests#check#gst#gstinfo.c}: GST_START_TEST)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.38, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch did not apply:
+ - gstreamer/prevFiles/prev_67e9d1_4bb5da_gst#gstinfo.c: _gst_debug_category_new
+ - wireshark/prevFiles/prev_35d960_067a67_epan#dfilter#drange.c: drange_node_free_wrapper
+*/
+
+// ---------------------------------------------

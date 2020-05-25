@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[E1] = _("Default"); 
++ E0[E1] = xstrdup(_("Default")); 
+// Infered from: (vlc/{prevFiles/prev_7b2088_3c44307_modules#audio_output#alsa.c,revFiles/7b2088_3c44307_modules#audio_output#alsa.c}: EnumDevices)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

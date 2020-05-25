@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef qemu_timeval;
+@@
+- struct timeval I0; 
++ qemu_timeval I0; 
+// Infered from: (qemu/{prevFiles/prev_d92620_f9487c_qemu-tool.c,revFiles/d92620_f9487c_qemu-tool.c}: qemu_get_clock)
+// False positives: (vlc/revFiles/076dc4_936ac4_src#misc#mtime.c: NTPtime64), (vlc/revFiles/076dc4_936ac4_src#misc#mtime.c: mdate), (vlc/revFiles/076dc4_936ac4_src#misc#mtime.c: msleep)
+// Recall: 0.07, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------

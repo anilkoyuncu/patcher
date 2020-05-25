@@ -1,0 +1,30 @@
+@@
+identifier I0;
+typedef socket_handle_t;
+@@
+- int I0; 
++ socket_handle_t I0; 
+  ...
+- if (I0 == -1)  
++ if (I0 == INVALID_SOCKET)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_c46ea0_ed6c96_sharkd_daemon.c,revFiles/c46ea0_ed6c96_sharkd_daemon.c}: sharkd_loop)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_c46ea0_ed6c96_sharkd_daemon.c: socket_init
+*/
+
+// ---------------------------------------------

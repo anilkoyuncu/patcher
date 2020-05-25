@@ -1,0 +1,30 @@
+@@
+identifier I0;
+expression E1;
+typedef time_t;
+@@
+- const  long I0 = Curl_timeleft(E1, NULL, TRUE); 
+- if (I0 < 0L)  
++ const  time_t I0 = Curl_timeleft(E1, NULL, TRUE); 
++ if (I0 < 0)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_a4ff8a_33cfcf_lib#vtls#nss.c,revFiles/a4ff8a_33cfcf_lib#vtls#nss.c}: nss_do_connect)
+// Recall: 0.36, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.91, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_a4ff8a_33cfcf_lib#vtls#nss.c: 
+*/
+
+// ---------------------------------------------

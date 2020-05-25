@@ -1,0 +1,10 @@
+@@
+type T1;
+expression E0;
+@@
+- E0 = ep_alloc0(sizeof(T1 )); 
++ E0 = se_alloc0(sizeof(T1 )); 
+// Infered from: (wireshark/{prevFiles/prev_017706_9ef15c_epan#dissectors#packet-k12.c,revFiles/017706_9ef15c_epan#dissectors#packet-k12.c}: dissect_k12), (wireshark/{prevFiles/prev_017706_9ef15c_epan#dissectors#packet-k12.c,revFiles/017706_9ef15c_epan#dissectors#packet-k12.c}: dissect_k12)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

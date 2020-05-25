@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "qemu: missing SecureDigital device\n"); 
++ error_report("missing SecureDigital device"); 
+// Infered from: (qemu/{prevFiles/prev_c0dbca_470bca_hw#arm#omap1.c,revFiles/c0dbca_470bca_hw#arm#omap1.c}: omap310_mpu_init), (qemu/{prevFiles/prev_c0dbca_470bca_hw#arm#omap2.c,revFiles/c0dbca_470bca_hw#arm#omap2.c}: omap2420_mpu_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

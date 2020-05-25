@@ -1,0 +1,33 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- char *I0 = (char *)tvb_get_string(E1, E2, 4); 
+- E2 += 4; 
++ char *I0 = (char *)tvb_get_ephemeral_string(E1, E2, 4); 
++ E2 += 4; 
+// Infered from: (wireshark/{prevFiles/prev_d47443_a69226_epan#dissectors#packet-dcp-etsi.c,revFiles/d47443_a69226_epan#dissectors#packet-dcp-etsi.c}: dissect_tpl)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 16/21(76%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_40ecad_e511f1_ext#intl#grapheme#grapheme_string.c: PHP_FUNCTION
+ - qemu/prevFiles/prev_64bf97_656282_ui#sdl2.c: handle_keydown
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_ee0d0b_3b730f_target-s390x#translate.c: op_ex
+ - tmux/prevFiles/prev_f81b3d_e44708_server-fn.c: server_kill_window
+ - tmux/prevFiles/prev_4feee1_19ea30_server-fn.c: server_kill_window
+*/
+
+// ---------------------------------------------

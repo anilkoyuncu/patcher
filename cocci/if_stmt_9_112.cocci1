@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 && E1->mcs[E2] <= MAX_MCS_VHT_INDEX && E1->nss[E2] <= MAX_VHT_NSS && ieee80211_vhtvalid[  E1->mcs[E2] - 1].valid[E3][E1->nss[E2]])  
++ if (E0 && E1->mcs[E2] <= MAX_MCS_VHT_INDEX && E1->nss[E2] <= MAX_VHT_NSS && ieee80211_vhtvalid[  E1->mcs[E2]].valid[E3][E1->nss[E2]])  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_52ab7b_cd1ddf_epan#dissectors#packet-ieee80211-radio.c,revFiles/52ab7b_cd1ddf_epan#dissectors#packet-ieee80211-radio.c}: dissect_wlan_radio_phdr)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

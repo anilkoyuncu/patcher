@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->sbac & SBAC_STATUS)  
++ if (!(E0->sbac & SBAC_STATUS))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_c2d6ee_88e94f_hw#scsi#esp-pci.c,revFiles/c2d6ee_88e94f_hw#scsi#esp-pci.c}: esp_pci_dma_read), (qemu/{prevFiles/prev_4809c6_2af9ab_target-arm#translate.c,revFiles/4809c6_2af9ab_target-arm#translate.c}: disas_thumb2_insn)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

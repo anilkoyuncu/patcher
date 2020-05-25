@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0->ucScalingLists3[E1][E2] = E3->sl[3][E1][E4]; 
++ E0->ucScalingLists3[E1][E2] = E3->sl[3][E1 * 3][E4]; 
+// Infered from: (FFmpeg/{prevFiles/prev_b7a0b3_d86008_libavcodec#dxva2_hevc.c,revFiles/b7a0b3_d86008_libavcodec#dxva2_hevc.c}: fill_scaling_lists), (FFmpeg/{prevFiles/prev_35818b_5c7206_libavcodec#dxva2_hevc.c,revFiles/35818b_5c7206_libavcodec#dxva2_hevc.c}: fill_scaling_lists)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

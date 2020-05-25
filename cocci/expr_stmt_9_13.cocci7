@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2, E3;
+typedef IOVBASE_TYPE;
+@@
+- usnic_convertor_pack_simple(E0,  (IOVBASE_TYPE *)(E1->sf_base.uf_src_seg[0].seg_addr.lval + E2),  *E3, E3); 
++ usnic_convertor_pack_simple(E0,  (IOVBASE_TYPE *)(intptr_t)(E1->sf_base.uf_src_seg[  0].seg_addr.lval + E2),  *E3, E3); 
+// Infered from: (ompi/{prevFiles/prev_34ae50_5259ab_ompi#mca#btl#usnic#btl_usnic_module.c,revFiles/34ae50_5259ab_ompi#mca#btl#usnic#btl_usnic_module.c}: prepare_src_small)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 13/13(100%)
+
+
+// ---------------------------------------------

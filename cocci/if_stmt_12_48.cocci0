@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 > 2) || (E1 > 8) || E1 < 4)  
++ if ((E0 > 2) || (E1 > 8) || E1 < 4 || E0 == 2 && E1 < 8)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_7d7a70_743947_libavformat#ipmovie.c,revFiles/7d7a70_743947_libavformat#ipmovie.c}: process_ipmovie_chunk)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

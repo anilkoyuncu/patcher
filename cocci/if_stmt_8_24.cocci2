@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!(E0 = Curl_base64_decode(E1, &E2)))  
++ E0 = Curl_base64_decode(E1, &E2); 
++ if (!E0)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_9c4ff4_46a006_lib#smtp.c,revFiles/9c4ff4_46a006_lib#smtp.c}: smtp_state_authcram_resp)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

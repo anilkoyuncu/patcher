@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2;
+@@
+- sopreprbuf(E0, E1, &E2); 
++ buf_len = sopreprbuf(E0, E1, &E2); 
++ assert(buf_len != 0); 
+// Infered from: (qemu/{prevFiles/prev_6fabae_afccfc_slirp#src#socket.c,revFiles/6fabae_afccfc_slirp#src#socket.c}: soread)
+// Recall: 0.23, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.22, Precision: 1.00
+// -- Node Change --
+// Recall: 0.38, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/9(11%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_6fabae_afccfc_slirp#src#socket.c: soread
+*/
+
+// ---------------------------------------------

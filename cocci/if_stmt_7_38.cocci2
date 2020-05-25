@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2;
+@@
+- gtk_tree_model_get_iter(E0, &E1, E2); 
+// Infered from: (gtk/{prevFiles/prev_8916ff_02892c_gtk#gtkiconview.c,revFiles/8916ff_02892c_gtk#gtkiconview.c}: gtk_icon_view_row_deleted)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

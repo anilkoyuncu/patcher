@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0[E1 + 1] != ' ')  
++ if (E0[E1 + 2] != ' ')  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_147-A-12915557-12915622.c,revFiles/147-A-12915557-12915622.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

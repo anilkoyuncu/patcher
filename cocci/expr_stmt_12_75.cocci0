@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = CreateFileMapping(E1, NULL, PAGE_EXECUTE_READ, 0, 0, 0); 
++ E0 = CreateFileMapping(E1, NULL, PAGE_READONLY, 0, 0, NULL); 
+// Infered from: (php-src/{prevFiles/prev_0966ca_ff2abc_phpdbg_list.c,revFiles/0966ca_ff2abc_phpdbg_list.c}: phpdbg_list_file)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

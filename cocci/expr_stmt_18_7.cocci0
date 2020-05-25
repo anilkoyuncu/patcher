@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- strcpy(E0.sun_path, E1->host->ptr); 
++ memcpy(E0.sun_path, E1->host->ptr, buffer_string_length(E1->host) + 1); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_72b133_1a1866_src#mod_proxy.c,revFiles/72b133_1a1866_src#mod_proxy.c}: proxy_establish_connection)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

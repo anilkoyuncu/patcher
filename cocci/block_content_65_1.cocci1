@@ -1,0 +1,31 @@
+@@
+identifier I0, I1, I2, I3, I4, I5, I6;
+@@
+  int mca_coll_tuned_alltoall_intra_dec_dynamic(void *I0, int I1,  struct ompi_datatype_t *I2,  void *I3, int I4,  struct ompi_datatype_t *I5,  struct ompi_communicator_t *I6)  
+  {
+  ...
+- return OMPI_ERR_NOT_IMPLEMENTED; 
++ if (mca_coll_tuned_alltoall_forced_choice)  
++ {
++ return mca_coll_tuned_alltoall_intra_do_forced(I0, I1, I2, I3, I4, I5, I6); 
++ }
++ else
++ {
++ return mca_coll_tuned_alltoall_intra_dec_fixed(I0, I1, I2, I3, I4, I5, I6); 
++ }
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_fe03e0_aa5b61_ompi#mca#coll#tuned#coll_tuned_alltoall_decision_dynamic.c,revFiles/fe03e0_aa5b61_ompi#mca#coll#tuned#coll_tuned_alltoall_decision_dynamic.c}: mca_coll_tuned_alltoall_intra_dec_dynamic)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

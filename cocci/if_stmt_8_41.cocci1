@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if ((*E0)->b_discontinuity)  
++ if ((*E0)->i_flags & BLOCK_FLAG_DISCONTINUITY)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_80602a_b03151_modules#packetizer#mpeg4audio.c,revFiles/80602a_b03151_modules#packetizer#mpeg4audio.c}: ADTSPacketizeBlock), (vlc/{prevFiles/prev_80602a_b03151_modules#packetizer#mpegvideo.c,revFiles/80602a_b03151_modules#packetizer#mpegvideo.c}: Packetize)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

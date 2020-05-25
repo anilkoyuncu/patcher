@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- spprintf(&E0, 0, "%s\r\nX-PHP-Originating-Script: %ld:%s\n", E1,  php_getuid(), E2); 
++ spprintf(&E0, 0, "X-PHP-Originating-Script: %ld:%s\r\n%s", php_getuid(  ), E2, E1); 
+// Infered from: (php-src/{prevFiles/prev_ca74bf_8990a9_ext#standard#mail.c,revFiles/ca74bf_8990a9_ext#standard#mail.c}: php_mail), (php-src/{prevFiles/prev_81e578_ef9c23_ext#standard#mail.c,revFiles/81e578_ef9c23_ext#standard#mail.c}: php_mail)
+// Recall: 0.31, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->st->codec->subtitle_header = av_malloc(E1->subtitle_header_size); 
++ E0->st->codec->subtitle_header = av_mallocz(E1->subtitle_header_size + 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_50b4db_c30f53_ffmpeg.c,revFiles/50b4db_c30f53_ffmpeg.c}: transcode_init)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

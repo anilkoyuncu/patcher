@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- frame_start(E0); 
++ if (frame_start(E0) < 0)  
++ {
++ return -1; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_0c7409_9ce5f3_libavcodec#svq3.c,revFiles/0c7409_9ce5f3_libavcodec#svq3.c}: svq3_decode_frame)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

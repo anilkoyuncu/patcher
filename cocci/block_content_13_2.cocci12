@@ -1,0 +1,10 @@
+@@
+identifier I1, I3;
+expression E0, E2, E4;
+@@
+- E0->I1 = filter_chain_New(E2, I3, &E4); 
++ E0->I1 = filter_chain_NewVideo(E2, I3, &E4); 
+// Infered from: (vlc/{prevFiles/prev_ae1920_20ab93_modules#stream_out#transcode#video.c,revFiles/ae1920_20ab93_modules#stream_out#transcode#video.c}: transcode_video_filter_init), (vlc/{prevFiles/prev_ae1920_20ab93_modules#stream_out#transcode#video.c,revFiles/ae1920_20ab93_modules#stream_out#transcode#video.c}: transcode_video_filter_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

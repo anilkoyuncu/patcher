@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- assert(E0 && E0->id && E0->txn); 
++ assert(E0 && E0->id); 
+// Infered from: (qemu/{prevFiles/prev_37aa19_ab9ba6_blockjob.c,revFiles/37aa19_ab9ba6_blockjob.c}: block_job_finalize)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

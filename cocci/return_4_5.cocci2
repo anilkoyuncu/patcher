@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return (E0->fdata->flags.passed_dfilter || E0->fdata->flags.passed_dfilter); 
++ return (E0->fdata->flags.passed_dfilter || E0->fdata->flags.ref_time); 
+// Infered from: (wireshark/{prevFiles/prev_abb629_2ae635_gtk#packet_list_store.c,revFiles/abb629_2ae635_gtk#packet_list_store.c}: packet_list_visible_record)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

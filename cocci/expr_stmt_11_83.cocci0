@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef guchar;
+@@
+- E0 = g_markup_escape_text(E1, E2); 
++ E0 = g_base64_encode((guchar *)E1, E2); 
+// Infered from: (gtk/{prevFiles/prev_e5f9bf_0be4d3_gtk#tools#gdkpixbufutils.c,revFiles/e5f9bf_0be4d3_gtk#tools#gdkpixbufutils.c}: load_symbolic_svg), (gtk/{prevFiles/prev_e5f9bf_0be4d3_gtk#gtkicontheme.c,revFiles/e5f9bf_0be4d3_gtk#gtkicontheme.c}: gtk_icon_info_load_symbolic_svg)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2;
+@@
+- printf(E0, E1, E2); 
+// Infered from: (codeflaws/{prevFiles/prev_186-A-18230196-18230218.c,revFiles/186-A-18230196-18230218.c}: main), (codeflaws/{prevFiles/prev_313-A-18022819-18022831.c,revFiles/313-A-18022819-18022831.c}: main), (codeflaws/{prevFiles/prev_385-B-6898992-6898998.c,revFiles/385-B-6898992-6898998.c}: main), (codeflaws/{prevFiles/prev_3-B-12486334-12486339.c,revFiles/3-B-12486334-12486339.c}: main), (codeflaws/{prevFiles/prev_448-B-17161698-17161735.c,revFiles/448-B-17161698-17161735.c}: main)
+// Recall: 0.62, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------

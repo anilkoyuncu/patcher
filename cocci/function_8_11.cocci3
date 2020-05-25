@@ -1,0 +1,15 @@
+@@
+expression E0, E1;
+typedef vout_sys_t;
+@@
+- E0->p_sys = E1 = malloc(sizeof(vout_sys_t )); 
++ E0->p_sys = E1 = calloc(1, sizeof(vout_sys_t )); 
+  ...
+- memset(E1, 0, sizeof(vout_sys_t )); 
+  ...
+- break; 
+// Infered from: (vlc/{prevFiles/prev_48aef0_1ece85a_modules#video_output#fb.c,revFiles/48aef0_1ece85a_modules#video_output#fb.c}: Create)
+// False positives: (vlc/revFiles/48aef0_1ece85a_modules#video_output#fb.c: Create)
+// Recall: 0.06, Precision: 0.80, Matching recall: 0.57
+
+// ---------------------------------------------

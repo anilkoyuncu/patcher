@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- col_append_fstr(E0->cinfo, COL_INFO, "%s ",  tvb_get_stringz(wmem_packet_scope(), E1, 0, NULL)); 
++ col_append_fstr(E0->cinfo, COL_INFO, "%s ",  tvb_get_stringz_enc(wmem_packet_scope(), E1, 0, NULL,  ENC_ASCII)); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-gsm_ipa.c,revFiles/971ffd_421d81_epan#dissectors#packet-gsm_ipa.c}: dissect_ipa)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

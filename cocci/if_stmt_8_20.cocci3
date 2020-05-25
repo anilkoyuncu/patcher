@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0.srcbus.addr % E0.srcbus.buswidth) || (E0.srcbus.addr % E0.srcbus.buswidth))  
++ if ((E0.srcbus.addr % E0.srcbus.buswidth) || (E0.dstbus.addr % E0.dstbus.buswidth))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_880db3_7bec78_drivers#dma#amba-pl08x.c,revFiles/880db3_7bec78_drivers#dma#amba-pl08x.c}: pl08x_fill_llis_for_desc)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

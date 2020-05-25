@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- wtap_dump_file_write(E0, E1, MAX_ERF_EHDR * E2, E3); 
++ if (!wtap_dump_file_write(E0, E1, MAX_ERF_EHDR * E2, E3))  
++ {
++ return FALSE; 
++ }
+// Infered from: (wireshark/{prevFiles/prev_415533_603d7b_wiretap#erf.c,revFiles/415533_603d7b_wiretap#erf.c}: erf_write_phdr)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

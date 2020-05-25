@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- g_free(E0->data); 
++ wmem_free(wmem_file_scope(), E0->data); 
+// Infered from: (wireshark/{prevFiles/prev_2db3db_3ba56ce_epan#dissectors#packet-umts_rlc.c,revFiles/2db3db_3ba56ce_epan#dissectors#packet-umts_rlc.c}: reassemble_data), (wireshark/{prevFiles/prev_2db3db_3ba56ce_epan#dissectors#packet-umts_mac.c,revFiles/2db3db_3ba56ce_epan#dissectors#packet-umts_mac.c}: mac_is_copy)
+// False positives: (wireshark/revFiles/2db3db_3ba56ce_epan#dissectors#packet-umts_rlc.c: rlc_frag_delete), (wireshark/revFiles/2db3db_3ba56ce_epan#dissectors#packet-umts_rlc.c: rlc_sdu_frags_delete)
+// Recall: 0.08, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- eth_random_addr(E0->dev_addr); 
+- E0->addr_assign_type |= NET_ADDR_RANDOM; 
++ eth_hw_addr_random(E0); 
+// Infered from: (linux/{prevFiles/prev_d68bb7e_9213bb8_drivers#net#ethernet#wiznet#w5100.c,revFiles/d68bb7e_9213bb8_drivers#net#ethernet#wiznet#w5100.c}: w5100_hw_probe), (linux/{prevFiles/prev_1f7c9a_d68bb7e_drivers#net#ethernet#wiznet#w5300.c,revFiles/1f7c9a_d68bb7e_drivers#net#ethernet#wiznet#w5300.c}: w5300_hw_probe)
+// Recall: 0.46, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

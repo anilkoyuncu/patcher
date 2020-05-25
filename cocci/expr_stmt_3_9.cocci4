@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- g_snprintf(E0, E1, "%0.0f.%02d", E2, E3); 
++ g_snprintf(E0, E1, "%0.0f.%01d", E2, E3); 
+// Infered from: (wireshark/{prevFiles/prev_f900d9_d0a970f_epan#to_str.c,revFiles/f900d9_d0a970f_epan#to_str.c}: display_epoch_time)
+// False positives: (wireshark/revFiles/f900d9_d0a970f_epan#to_str.c: display_epoch_time)
+// Recall: 0.17, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.83
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_f900d9_d0a970f_epan#to_str.c: decode_bits_in_field
+ - wireshark/prevFiles/prev_f900d9_d0a970f_epan#to_str.c: display_epoch_time
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+identifier I0 = {FREE_ZVAL ,av_free };
+expression E1;
+@@
+- I0(E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_3c2457_3eff98_libavcodec#avdct.c,revFiles/3c2457_3eff98_libavcodec#avdct.c}: avcodec_dct_init), (php-src/{prevFiles/prev_17dc89_a48b65_ext#pcre#php_pcre.c,revFiles/17dc89_a48b65_ext#pcre#php_pcre.c}: preg_do_repl_func)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

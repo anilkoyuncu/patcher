@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->fpr[E1] = ldfq_p(E2); 
++ E0->fpr[E1 - 32] = ldfq_p(E2); 
+// Infered from: (qemu/{prevFiles/prev_8d4acf_2cbd94_gdbstub.c,revFiles/8d4acf_2cbd94_gdbstub.c}: cpu_gdb_write_register)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- le_ftpbuf = register_list_destructors(ftp_destructor_ftpbuf, NULL); 
++ le_ftpbuf = register_list_destructors(ftp_destructor_ftpbuf, NULL, "ftp"); 
+// Infered from: (php-src/{prevFiles/prev_7b4983_a0cfab_ext#ftp#php_ftp.c,revFiles/7b4983_a0cfab_ext#ftp#php_ftp.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

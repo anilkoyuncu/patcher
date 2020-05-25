@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- RETVAL_STRINGL((char *)E0->buffer->content, E0->buffer->use); 
+// Infered from: (php-src/{prevFiles/prev_e7e608_8e2c90_ext#simplexml#simplexml.c,revFiles/e7e608_8e2c90_ext#simplexml#simplexml.c}: SXE_METHOD), (php-src/{prevFiles/prev_4ef793_01280f_ext#simplexml#simplexml.c,revFiles/4ef793_01280f_ext#simplexml#simplexml.c}: SXE_METHOD)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.08
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.15, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_4ef793_01280f_ext#simplexml#simplexml.c: SXE_METHOD
+ - php-src/prevFiles/prev_e7e608_8e2c90_ext#simplexml#simplexml.c: SXE_METHOD
+*/
+
+// ---------------------------------------------

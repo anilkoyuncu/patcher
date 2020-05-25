@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef jxta_tap_header;
+@@
+- const  jxta_tap_header *I0 = (jxta_tap_header *)E1; 
++ const  jxta_tap_header *I0 = (const  jxta_tap_header *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#hostlist_jxta.c,revFiles/3ae2e5_8aebe1_ui#gtk#hostlist_jxta.c}: jxta_hostlist_packet)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

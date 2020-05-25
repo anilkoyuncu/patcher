@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef GtkToolItemGroup;
+typedef GtkWidget;
+@@
+- GtkWidget *I0 = gtk_tool_palette_get_drop_group(E1, E2, E3); 
++ GtkToolItemGroup *I0 = gtk_tool_palette_get_drop_group(E1, E2, E3); 
++ GtkWidget *widget = GTK_WIDGET(I0); 
+// Infered from: (gtk/{prevFiles/prev_cf8b94_6b808a_gtk#gtktoolpalette.c,revFiles/cf8b94_6b808a_gtk#gtktoolpalette.c}: gtk_tool_palette_get_drop_item), (gtk/{prevFiles/prev_2a762b_ef3dc5_gtk#gtktoolpalette.c,revFiles/2a762b_ef3dc5_gtk#gtktoolpalette.c}: gtk_tool_palette_get_drop_item)
+// Recall: 0.60, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------

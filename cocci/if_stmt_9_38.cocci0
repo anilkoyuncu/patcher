@@ -1,0 +1,9 @@
+@@
+@@
+- goto  error; 
++ return VLC_EGENERIC; 
+// Infered from: (vlc/{prevFiles/prev_b528f5_19dc07_modules#stream_filter#httplive.c,revFiles/b528f5_19dc07_modules#stream_filter#httplive.c}: get_HTTPLivePlaylist)
+// False positives: (cpython/revFiles/19cb19_e807da8_Objects#listobject.c: list_fill), (vlc/revFiles/b528f5_19dc07_modules#stream_filter#httplive.c: get_HTTPLivePlaylist), (vlc/revFiles/e0c708_470ba2_src#audio_output#dec.c: DecNew)
+// Recall: 0.17, Precision: 0.33, Matching recall: 0.75
+
+// ---------------------------------------------

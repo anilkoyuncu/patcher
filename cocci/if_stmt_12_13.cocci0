@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!prefixcmp(E0, "::"))  
++ if (!prefixcmp(E0, "::"))  
+  {
+  ...
+- E1->foreign_vcs = E2; 
+  }
+// Infered from: (git/{prevFiles/prev_904981_dad0b3_transport.c,revFiles/904981_dad0b3_transport.c}: transport_get)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

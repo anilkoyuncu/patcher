@@ -1,0 +1,9 @@
+@@
+typedef NULL;
+@@
+- zend_hash_init(&php_libxml_exports, 0, NULL , NULL , 1); 
++ zend_hash_init(&php_libxml_exports, 0, NULL , php_libxml_exports_dtor, 1); 
+// Infered from: (php-src/{prevFiles/prev_61e9b0_050d7e_ext#libxml#libxml.c,revFiles/61e9b0_050d7e_ext#libxml#libxml.c}: php_libxml_initialize)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

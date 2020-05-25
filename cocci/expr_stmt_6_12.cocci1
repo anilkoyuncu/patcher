@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- snprintf(E0, E1, E2); 
++ strlcpy(E0, bad_path, E1); 
+// Infered from: (git/{prevFiles/prev_9db56f_989206_path.c,revFiles/9db56f_989206_path.c}: mksnpath), (git/{prevFiles/prev_9db56f_989206_path.c,revFiles/9db56f_989206_path.c}: git_vsnpath)
+// False positives: (FFmpeg/revFiles/862c1d_37a558_libavcodec#audioconvert.c: avcodec_get_channel_layout_string), (FFmpeg/revFiles/862c1d_37a558_libavcodec#audioconvert.c: avcodec_sample_fmt_string)
+// Recall: 0.28, Precision: 0.62, Matching recall: 0.83
+
+// ---------------------------------------------

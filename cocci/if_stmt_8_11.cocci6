@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0[0] >= '0' && E0[1] <= '9' && strstr(E0, " --> ") && sscanf(E0,  "%*d:%*2d:%*2d%*1[,.]%*3d --> %*d:%*2d:%*2d%*1[,.]%3d",  &E1) == 1)  
++ if (E0[0] >= '0' && E0[0] <= '9' && strstr(E0, " --> ") && sscanf(E0,  "%*d:%*2d:%*2d%*1[,.]%*3d --> %*d:%*2d:%*2d%*1[,.]%3d",  &E1) == 1)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_d161a2_9e9d73_libavformat#srtdec.c,revFiles/d161a2_9e9d73_libavformat#srtdec.c}: srt_probe)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- buffer_init(E0->buf, E0->tvb.length); 
++ buffer_init(E0->buf, E0->tvb.length + E0->offset); 
+// Infered from: (wireshark/{prevFiles/prev_94e8dd_b99a65_frame_tvbuff.c,revFiles/94e8dd_b99a65_frame_tvbuff.c}: frame_cache)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

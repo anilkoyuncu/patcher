@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->bits.httpproxy)  
++ if (E0->bits.httpproxy && E0->bits.proxy_user_passwd)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_a3c124_b93363_lib#http.c,revFiles/a3c124_b93363_lib#http.c}: Curl_http)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

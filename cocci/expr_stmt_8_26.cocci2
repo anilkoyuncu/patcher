@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef Error;
+@@
+  Error *I0 = NULL; 
+  ...
+- sdhci_common_realize(E1, E2); 
++ sdhci_common_realize(E1, &I0); 
+// Infered from: (qemu/{prevFiles/prev_544156_a75a52_hw#sd#sdhci.c,revFiles/544156_a75a52_hw#sd#sdhci.c}: sdhci_pci_realize), (qemu/{prevFiles/prev_544156_a75a52_hw#sd#sdhci.c,revFiles/544156_a75a52_hw#sd#sdhci.c}: sdhci_sysbus_realize)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

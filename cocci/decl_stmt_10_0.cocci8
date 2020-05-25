@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = watchdog_register_device(&E1->wdd); 
++ E0 = devm_watchdog_register_device(&E2->dev, &E1->wdd); 
+  ...
+- platform_set_drvdata(E2, E1); 
+// Infered from: (linux/{prevFiles/prev_7db163_9e14375_drivers#watchdog#aspeed_wdt.c,revFiles/7db163_9e14375_drivers#watchdog#aspeed_wdt.c}: aspeed_wdt_probe)
+// False positives: (linux/revFiles/81df6db_02189bb_drivers#watchdog#mpc8xxx_wdt.c: mpc8xxx_wdt_probe)
+// Recall: 0.01, Precision: 0.67, Matching recall: 0.80
+
+// ---------------------------------------------

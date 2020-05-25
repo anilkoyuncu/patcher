@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->rdpq_virt = pci_alloc_consistent(E1->pdev, E2, &E0->rdpq_phys); 
++ E0->rdpq_virt = pci_zalloc_consistent(E1->pdev, E2, &E0->rdpq_phys); 
+  ...
+- memset(E0->rdpq_virt, 0, E2); 
+// Infered from: (linux/{prevFiles/prev_3c6c12_6b1f837_drivers#scsi#megaraid#megaraid_sas_fusion.c,revFiles/3c6c12_6b1f837_drivers#scsi#megaraid#megaraid_sas_fusion.c}: megasas_alloc_rdpq_fusion)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- set_irq_chip(E0, &irq_type_hp_sim); 
++ irq_set_chip(E0, &irq_type_hp_sim); 
+// Infered from: (linux/{prevFiles/prev_53c909_e3d781_arch#ia64#hp#sim#hpsim_irq.c,revFiles/53c909_e3d781_arch#ia64#hp#sim#hpsim_irq.c}: hpsim_irq_init)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

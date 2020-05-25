@@ -1,0 +1,15 @@
+@@
+identifier I3;
+binary operator B1 = {&& ,|| };
+expression E2, E0;
+@@
+- if (E0 B1 E2->I3)  
++ if (E0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_f56dd3_b401eb_libavcodec#h263.c,revFiles/f56dd3_b401eb_libavcodec#h263.c}: mpeg4_decode_video_packet_header), (FFmpeg/{prevFiles/prev_c5b1c1_8a29b3_libavcodec#mpegvideo.c,revFiles/c5b1c1_8a29b3_libavcodec#mpegvideo.c}: MPV_common_init), (FFmpeg/{prevFiles/prev_c5b1c1_8a29b3_libavcodec#mpegvideo.c,revFiles/c5b1c1_8a29b3_libavcodec#mpegvideo.c}: MPV_decode_mb), (qemu/{prevFiles/prev_941987_dc881b_hmp.c,revFiles/941987_dc881b_hmp.c}: print_block_info)
+// False positives: (FFmpeg/revFiles/5eaeb4_712287_libavcodec#ivi_common.c: ff_ivi_decode_blocks), (FFmpeg/revFiles/72a52b_2efe09_libavcodec#h263.c: h263_decode_block), (FFmpeg/revFiles/72a52b_2efe09_libavcodec#h263.c: h263_decode_mb), (FFmpeg/revFiles/c5b1c1_8a29b3_libavcodec#mpegvideo.c: MPV_common_init), (FFmpeg/revFiles/c5b1c1_8a29b3_libavcodec#mpegvideo.c: MPV_decode_mb), (FFmpeg/revFiles/f56dd3_b401eb_libavcodec#h263.c: ff_h263_decode_mb), (FFmpeg/revFiles/f56dd3_b401eb_libavcodec#h263.c: h263_decode_block), (FFmpeg/revFiles/f56dd3_b401eb_libavcodec#h263.c: h263_encode_block), (FFmpeg/revFiles/f56dd3_b401eb_libavcodec#h263.c: h263_encode_mb), (php-src/revFiles/4cf174_65146c_main#streams.c: _php_stream_free), (php-src/revFiles/4cf174_65146c_main#streams.c: php_stream_notification_notify), (qemu/revFiles/941987_dc881b_hmp.c: hmp_info_vnc), (qemu/revFiles/941987_dc881b_hmp.c: print_block_info)
+// Recall: 0.48, Precision: 0.25, Matching recall: 0.92
+
+// ---------------------------------------------

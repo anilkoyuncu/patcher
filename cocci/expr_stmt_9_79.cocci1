@@ -1,0 +1,21 @@
+@@
+expression E0, E1;
+@@
+- ompi_set_group_rank(E0->c_local_group,  E0->c_local_group->grp_proc_pointers[E1]); 
+- E0->c_my_rank = E0->c_local_group->grp_my_rank; 
++ E0->c_local_group->grp_my_rank = E1; 
++ E0->c_my_rank = E1; 
+// Infered from: (ompi/{prevFiles/prev_b3d3552_586a9b_ompi#communicator#comm.c,revFiles/b3d3552_586a9b_ompi#communicator#comm.c}: ompi_comm_fill_rest)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

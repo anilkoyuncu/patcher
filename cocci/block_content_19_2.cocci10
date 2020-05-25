@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- msg_Err(E0,  "IDirectXVideoAccelerationService_CreateSurface %d failed (hr=0x%lX)",  E1 - 1, E2); 
++ msg_Err(E0,  "IDirectXVideoAccelerationService_CreateSurface %zu failed (hr=0x%lX)",  E1 - 1, E2); 
+// Infered from: (vlc/{prevFiles/prev_c8cd12_99c965_modules#codec#avcodec#dxva2.c,revFiles/c8cd12_99c965_modules#codec#avcodec#dxva2.c}: DxCreateVideoDecoder)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

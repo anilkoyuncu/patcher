@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+typedef block_t;
+@@
+- E0 = twolame_encode_flush_interleaved(E1->p_twolame, E1->p_out_buffer,  MAX_CODED_FRAME_SIZE); 
++ block_t *p_block; 
++ E0 = twolame_encode_flush(E1->p_twolame, E1->p_out_buffer,  MAX_CODED_FRAME_SIZE); 
+// Infered from: (vlc/{prevFiles/prev_1f73fd_34f743_modules#codec#twolame.c,revFiles/1f73fd_34f743_modules#codec#twolame.c}: Encode)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

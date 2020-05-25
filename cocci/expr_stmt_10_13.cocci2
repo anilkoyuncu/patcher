@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- httpd_MsgAdd(E0, "Server", "VLC Server"); 
++ httpd_MsgAdd(E0, "Server", "VLC/%s", VERSION); 
+// Infered from: (vlc/{prevFiles/prev_cdb6fa_affc7d_modules#misc#rtsp.c,revFiles/cdb6fa_affc7d_modules#misc#rtsp.c}: RtspCallback), (vlc/{prevFiles/prev_cdb6fa_affc7d_modules#misc#rtsp.c,revFiles/cdb6fa_affc7d_modules#misc#rtsp.c}: RtspCallbackES)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- env->mxccregs[3] = (env->mxccregs[0xa] & 0xffffffff00000000ULL) | E0; 
++ env->mxccregs[3] = (env->mxccregs[3] & 0xffffffff00000000ULL) | E0; 
+// Infered from: (qemu/{prevFiles/prev_9f4576_0df5bd_target-sparc#op_helper.c,revFiles/9f4576_0df5bd_target-sparc#op_helper.c}: helper_st_asi)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

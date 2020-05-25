@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (E0->pbuf < E0->ebuf && E0->bs > 0)  
++ while (E0->pbuf + E0->bs < E0->ebuf && E0->bs > 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_11cc20_96d049_libavcodec#lzw.c,revFiles/11cc20_96d049_libavcodec#lzw.c}: ff_lzw_decode_tail)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

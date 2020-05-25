@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- av_log(E0, AV_LOG_ERROR,  "Reference segmap (temp=%d,update=%d) enabled on size-change!\n",  E1->segmentation.temporal, E1->segmentation.update_map); 
+- return AVERROR_INVALIDDATA; 
++ av_log(E0, AV_LOG_WARNING,  "Reference segmap (temp=%d,update=%d) enabled on size-change!\n",  E1->segmentation.temporal, E1->segmentation.update_map); 
++ E1->segmentation.ignore_refmap = 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_e12188_d32d05_libavcodec#vp9.c,revFiles/e12188_d32d05_libavcodec#vp9.c}: decode_frame_header)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.69, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 1.00
+// -- General --
+// Functions fully changed: 10/16(62%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_e12188_d32d05_libavcodec#vp9.c: decode_frame_header
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_6d789f5_9b73fb_libavformat#flvdec.c: flv_read_packet
+ - vlc/prevFiles/prev_480e9c8_3c667b_modules#hw#d3d9#d3d9_filters.c: Filter
+ - vlc/prevFiles/prev_633113_e9e5fe_modules#video_chroma#d3d11_fmt.c: D3D11_CreateDevice
+*/
+
+// ---------------------------------------------

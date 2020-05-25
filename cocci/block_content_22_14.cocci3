@@ -1,0 +1,21 @@
+@@
+expression E0, E1;
+@@
+- E0 = vmalloc(E1); 
++ E0 = vzalloc(E1); 
+  ...
+- memset(E0, 0, E1); 
+// Infered from: (linux/{prevFiles/prev_72bca2_aa006d_drivers#net#ethernet#cavium#liquidio#octeon_device.c,revFiles/72bca2_aa006d_drivers#net#ethernet#cavium#liquidio#octeon_device.c}: octeon_allocate_device_mem), (linux/{prevFiles/prev_72bca2_aa006d_drivers#net#ethernet#cavium#liquidio#octeon_device.c,revFiles/72bca2_aa006d_drivers#net#ethernet#cavium#liquidio#octeon_device.c}: octeon_allocate_ioq_vector)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

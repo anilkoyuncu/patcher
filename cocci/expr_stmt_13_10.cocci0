@@ -1,0 +1,9 @@
+@@
+expression E2, E0, E1;
+typedef Tcl_WideUInt;
+@@
+- Tcl_SetObjResult(E0, Tcl_ObjPrintf(E1, (Tcl_WideUInt )STRING_SIZE(E2))); 
+// Infered from: (tcl/{prevFiles/prev_a0482f_20b06d_generic#tclStringObj.c,revFiles/a0482f_20b06d_generic#tclStringObj.c}: TclStringRepeat), (tcl/{prevFiles/prev_a0482f_20b06d_generic#tclStringObj.c,revFiles/a0482f_20b06d_generic#tclStringObj.c}: TclStringCatObjv), (tcl/{prevFiles/prev_a0482f_20b06d_generic#tclStringObj.c,revFiles/a0482f_20b06d_generic#tclStringObj.c}: TclStringCatObjv)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

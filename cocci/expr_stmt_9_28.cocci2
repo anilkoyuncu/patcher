@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- bitmap_clear(E0->dirty[E1 + E2], E3, VNC_DIRTY_WORDS * BITS_PER_LONG - E3); 
++ bitmap_clear(E0->dirty[E1 + E2], E3, VNC_DIRTY_BITS - E3); 
+// Infered from: (qemu/{prevFiles/prev_a0843a_6ed391_ui#vnc.c,revFiles/a0843a_6ed391_ui#vnc.c}: framebuffer_update_request)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.88, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_07f700_b40130_epan#dissectors#packet-6lowpan.c: dissect_6lowpan_6loRH
+*/
+
+// ---------------------------------------------

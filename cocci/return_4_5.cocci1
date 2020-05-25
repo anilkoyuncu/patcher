@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return E0->text; 
++ return E0->name; 
+// Infered from: (gtk/{prevFiles/prev_fd301e_4d0ca9_modules#printbackends#cups#gtkprintbackendcups.c,revFiles/fd301e_4d0ca9_modules#printbackends#cups#gtkprintbackendcups.c}: ppd_group_name)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

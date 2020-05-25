@@ -1,0 +1,34 @@
+@@
+identifier I0;
+expression E1;
+@@
+  struct pvrdma_cmd_query_qp_resp *I0 = &E1->query_qp_resp; 
+  ...
+- memset(E1, 0, sizeof(*E1)); 
++ memset(I0, 0, sizeof(*I0)); 
+// Infered from: (qemu/{prevFiles/prev_d151f5_a421c81_hw#rdma#vmw#pvrdma_cmd.c,revFiles/d151f5_a421c81_hw#rdma#vmw#pvrdma_cmd.c}: query_qp)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 0.50
+// -- Node Change --
+// Recall: 0.59, Precision: 0.38
+// -- General --
+// Functions fully changed: 3/9(33%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_d151f5_a421c81_hw#rdma#vmw#pvrdma_cmd.c: modify_qp
+ - vlc/prevFiles/prev_a52bbd_fe5df3_modules#access#dtv#linux.c: dvb_vset_props
+ - php-src/prevFiles/prev_a3899e_c55403_ext#spl#php_spl.c: PHP_FUNCTION
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_009beb_248a50_epan#dissectors#packet-coap.c: dissect_coap_opt_uri_path
+ - wireshark/prevFiles/prev_009beb_248a50_epan#dissectors#packet-coap.c: dissect_coap_opt_uri_host
+ - wireshark/prevFiles/prev_009beb_248a50_epan#dissectors#packet-coap.c: dissect_coap_opt_uri_port
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- sprintf(E0, "%5.1fH", (double )E1->time / (double )(3600)); 
++ snprintf(E0, sizeof(E0), "%5.1fH", (double )E1->time / (double )(3600)); 
+// Infered from: (ompi/{prevFiles/prev_1bacde_62385a_orte#tools#orte-top#orte-top.c,revFiles/1bacde_62385a_orte#tools#orte-top#orte-top.c}: print_ranks)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- palette_drop_group(GTK_TOOL_PALETTE(E0), I1, I2); 
++ palette_drop_group(GTK_TOOL_PALETTE(E0), GTK_TOOL_ITEM_GROUP(I1), I2); 
+// Infered from: (gtk/{prevFiles/prev_06eb74_8f125f_demos#gtk-demo#toolpalette.c,revFiles/06eb74_8f125f_demos#gtk-demo#toolpalette.c}: palette_drag_data_received), (gtk/{prevFiles/prev_546969_e31a6d_demos#gtk-demo#toolpalette.c,revFiles/546969_e31a6d_demos#gtk-demo#toolpalette.c}: palette_drag_data_received)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------

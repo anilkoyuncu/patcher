@@ -1,0 +1,12 @@
+@@
+expression E1, E0;
+@@
+- if (!drm_crtc_helper_set_mode(E0->crtc, &E1->saved_mode, E0->crtc->x,  E0->crtc->y, E0->crtc->fb))  
++ if (!drm_crtc_helper_set_mode(E0->crtc, &E1->saved_mode, E0->crtc->x,  E0->crtc->y, E0->crtc->primary->fb))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#mdfld_dsi_output.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#gma500#mdfld_dsi_output.c}: mdfld_dsi_connector_set_property), (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#cdv_intel_hdmi.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#gma500#cdv_intel_hdmi.c}: cdv_hdmi_set_property), (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#psb_intel_lvds.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#gma500#psb_intel_lvds.c}: psb_intel_lvds_set_property), (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#cdv_intel_lvds.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#gma500#cdv_intel_lvds.c}: cdv_intel_lvds_set_property)
+// Recall: 0.80, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

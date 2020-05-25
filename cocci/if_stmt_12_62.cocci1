@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- if (!E0->commit_cnt)  
++ if (!PMIX_PROC_IS_SERVER(E0) && !E0->commit_cnt)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_36a0c6_a2d141_opal#mca#pmix#pmix3x#pmix#src#server#pmix_server_get.c,revFiles/36a0c6_a2d141_opal#mca#pmix#pmix3x#pmix#src#server#pmix_server_get.c}: _satisfy_request)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_51b774_07d3c7_gdk#gdkwindow.c: gdk_window_end_implicit_paint
+ - gtk/prevFiles/prev_f96e51_1e6df1_gdk#gdkwindow.c: gdk_window_end_implicit_paint
+ - gtk/prevFiles/prev_f96e51_1e6df1_gdk#gdkwindow.c: gdk_window_flush_implicit_paint
+ - gtk/prevFiles/prev_51b774_07d3c7_gdk#gdkwindow.c: gdk_window_flush_implicit_paint
+*/
+
+// ---------------------------------------------

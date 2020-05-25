@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "qemu: could not load kernel '%s'\n", E0); 
++ error_report("could not load kernel '%s'", E0); 
+// Infered from: (qemu/{prevFiles/prev_0a094a_7f69a4_hw#lm32#lm32_boards.c,revFiles/0a094a_7f69a4_hw#lm32#lm32_boards.c}: lm32_evr_init), (qemu/{prevFiles/prev_0a094a_7f69a4_hw#lm32#lm32_boards.c,revFiles/0a094a_7f69a4_hw#lm32#lm32_boards.c}: lm32_uclinux_init), (qemu/{prevFiles/prev_0a094a_7f69a4_hw#lm32#milkymist.c,revFiles/0a094a_7f69a4_hw#lm32#milkymist.c}: milkymist_init), (qemu/{prevFiles/prev_2ecdc2_bd6e1d_hw#moxie#moxiesim.c,revFiles/2ecdc2_bd6e1d_hw#moxie#moxiesim.c}: load_kernel)
+// False positives: (qemu/revFiles/45876e_f90ea7_hw#m68k#an5206.c: an5206_init)
+// Recall: 0.11, Precision: 0.90, Matching recall: 0.50
+
+// ---------------------------------------------

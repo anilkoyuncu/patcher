@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- (E0 >= E1) ? E2 = E2 + 2 :E2++; 
++ (E0 > E1) ? E2 = E2 + 2 :E2++; 
+// Infered from: (codeflaws/{prevFiles/prev_677-A-18262663-18262671.c,revFiles/677-A-18262663-18262671.c}: main)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->que_attachments_req = 1; 
++ E0->queue_attachments_req = 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_491ca0_43adc6_ffplay.c,revFiles/491ca0_43adc6_ffplay.c}: stream_cycle_channel)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

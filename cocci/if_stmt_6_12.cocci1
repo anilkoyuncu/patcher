@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->factor < 65536)  
++ if (E0->factor < UINT16_MAX)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b04d1a_9026b2_libavfilter#vf_fade.c,revFiles/b04d1a_9026b2_libavfilter#vf_fade.c}: draw_slice), (FFmpeg/{prevFiles/prev_19d82c_1527e6_libavfilter#vf_fade.c,revFiles/19d82c_1527e6_libavfilter#vf_fade.c}: draw_slice)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

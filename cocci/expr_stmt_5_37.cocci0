@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->dissector = NULL; 
++ E0->dissector.new = NULL; 
+// Infered from: (wireshark/{prevFiles/prev_84f2fd_56b989_conversation.c,revFiles/84f2fd_56b989_conversation.c}: conversation_new)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

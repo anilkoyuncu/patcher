@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0.e_ident[0] != 0x7f || strncmp(&E0.e_ident[1], "ELF", 3) != 0)  
++ if (E0.e_ident[0] != 0x7f || strncmp((char *)&E0.e_ident[1], "ELF", 3) != 0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_fff2a0_a2547a_bsd-user#elfload.c,revFiles/fff2a0_a2547a_bsd-user#elfload.c}: load_elf_binary)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

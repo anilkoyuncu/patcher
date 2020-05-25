@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E1->flags & F_CONTENTRANGE ? 1 :0; 
++ E0 = (E1->flags & F_CONTENTRANGE) ? 1 :0; 
+  ...
+- test_setopt(E2, CURLOPT_FAILONERROR, E1->flags & F_FAIL ? 1 :0); 
++ test_setopt(E2, CURLOPT_FAILONERROR, (E1->flags & F_FAIL) ? 1 :0); 
+// Infered from: (curl/{prevFiles/prev_6b3dde_5f8b9f_tests#libtest#lib1156.c,revFiles/6b3dde_5f8b9f_tests#libtest#lib1156.c}: onetest)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

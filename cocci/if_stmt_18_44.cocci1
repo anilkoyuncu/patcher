@@ -1,0 +1,30 @@
+@@
+expression E0, E1;
+@@
+- if (!E0->header_sent || E1 == NGX_HTTP_REQUEST_TIME_OUT || E1 == NGX_HTTP_CLIENT_CLOSED_REQUEST || (  E0->pipe && E0->pipe->downstream_error))  
++ if (!E0->header_sent || E1 == NGX_HTTP_REQUEST_TIME_OUT || E1 == NGX_HTTP_CLIENT_CLOSED_REQUEST)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_3377c0_9b81d3_src#http#ngx_http_upstream.c,revFiles/3377c0_9b81d3_src#http#ngx_http_upstream.c}: ngx_http_upstream_finalize_request)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - nginx/prevFiles/prev_3377c0_9b81d3_src#http#ngx_http_upstream.c: ngx_http_upstream_finalize_request
+*/
+/*
+Functions where the patch did not apply:
+ - nginx/prevFiles/prev_2aa6d7_cf4879_src#http#ngx_http_upstream.c: ngx_http_upstream_finalize_request
+*/
+
+// ---------------------------------------------

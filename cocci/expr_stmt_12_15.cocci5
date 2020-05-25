@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- do_div(E0, 1 << 27); 
++ do_div(E0, BIT(27)); 
+// Infered from: (linux/{prevFiles/prev_6082ac_58ff7e_drivers#staging#iio#impedance-analyzer#ad5933.c,revFiles/6082ac_58ff7e_drivers#staging#iio#impedance-analyzer#ad5933.c}: ad5933_show_frequency)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.85
+// -- Node Change --
+// Recall: 1.00, Precision: 0.85
+// -- General --
+// Functions fully changed: 11/13(84%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_557e361_9a3aeb_drivers#staging#comedi#drivers#ni_mio_common.c: caldac_setup
+ - linux/prevFiles/prev_557e361_9a3aeb_drivers#staging#comedi#drivers#ni_mio_common.c: ni_ao_cmd_set_channels
+*/
+
+// ---------------------------------------------

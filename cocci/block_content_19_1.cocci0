@@ -1,0 +1,9 @@
+@@
+expression E1, E2, E0, E3;
+@@
+- memory_region_init_ram(E0, E1, E2, E3, &error_abort); 
++ memory_region_init_ram(E0, E1, E2, E3, &error_fatal); 
+// Infered from: (qemu/{prevFiles/prev_f8ed85_a29a37_hw#xtensa#xtfpga.c,revFiles/f8ed85_a29a37_hw#xtensa#xtfpga.c}: lx60_net_init), (qemu/{prevFiles/prev_f8ed85_a29a37_hw#xtensa#xtfpga.c,revFiles/f8ed85_a29a37_hw#xtensa#xtfpga.c}: lx_init), (qemu/{prevFiles/prev_f8ed85_a29a37_hw#xtensa#xtfpga.c,revFiles/f8ed85_a29a37_hw#xtensa#xtfpga.c}: lx_init), (qemu/{prevFiles/prev_f8ed85_a29a37_hw#arm#omap_sx1.c,revFiles/f8ed85_a29a37_hw#arm#omap_sx1.c}: sx1_init), (qemu/{prevFiles/prev_f8ed85_a29a37_hw#arm#omap_sx1.c,revFiles/f8ed85_a29a37_hw#arm#omap_sx1.c}: sx1_init)
+// Recall: 0.45, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

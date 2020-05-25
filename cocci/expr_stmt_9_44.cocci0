@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- xkb_state_update_mask(E0, E1, 0, 0, 0, 0, 0); 
++ xkb_state_update_mask(E0, E1 & ~0xff, 0, 0, 0, 0, 0); 
+// Infered from: (gtk/{prevFiles/prev_5ba8a2_97d27c_gdk#wayland#gdkkeys-wayland.c,revFiles/5ba8a2_97d27c_gdk#wayland#gdkkeys-wayland.c}: gdk_wayland_keymap_map_virtual_modifiers)
+// False positives: (gtk/revFiles/5ba8a2_97d27c_gdk#wayland#gdkkeys-wayland.c: gdk_wayland_keymap_add_virtual_modifiers)
+// Recall: 0.50, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

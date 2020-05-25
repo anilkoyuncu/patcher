@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = fifo_mux_init(E1, E2); 
++ E0 = fifo_mux_init(E1, E2, E1->filename); 
+// Infered from: (FFmpeg/{prevFiles/prev_5c9dcd_012620_libavformat#fifo.c,revFiles/5c9dcd_012620_libavformat#fifo.c}: fifo_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

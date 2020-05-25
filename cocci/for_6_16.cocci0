@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = opal_list_get_begin(&E1);E0 != opal_list_get_end(&E1);E0 = opal_list_get_next(  E0))  
++ for(E0 = opal_list_get_first(&E1);E0 != opal_list_get_end(&E1);E0 = opal_list_get_next(  E0))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_af9ccd_7b07db_orte#mca#ras#dash_host#ras_dash_host_module.c,revFiles/af9ccd_7b07db_orte#mca#ras#dash_host#ras_dash_host_module.c}: orte_ras_dash_host_allocate)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

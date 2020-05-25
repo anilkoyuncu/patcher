@@ -1,0 +1,15 @@
+@@
+identifier I6;
+expression E2, E3, E5, E0, E4;
+binary operator B1 = {& ,|| };
+@@
+- if (!(E0 B1 E2 || E3->flags & AV_PIX_FMT_FLAG_BITSTREAM || E4))  
++ if (!(E0 B1 E2 || E3->flags & AV_PIX_FMT_FLAG_BITSTREAM || E4) && (ret = ff_add_format(  &E5, I6)) < 0)  
+  {
+- ff_add_format(&E5, I6); 
++ return ret; 
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_6aaac2_8ededd_libavfilter#vf_hflip.c,revFiles/6aaac2_8ededd_libavfilter#vf_hflip.c}: query_formats), (FFmpeg/{prevFiles/prev_6aaac2_8ededd_libavfilter#vf_transpose.c,revFiles/6aaac2_8ededd_libavfilter#vf_transpose.c}: query_formats)
+// Recall: 0.19, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

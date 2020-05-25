@@ -1,0 +1,18 @@
+@@
+expression E0;
+typedef guint8;
+@@
+- if ((tvb_length(E0) >= 7) && (!tvb_memeql(E0, 0, "NTLMSSP", 7)))  
++ if ((tvb_length(E0) >= 7) && (!tvb_memeql(E0, 0, (guint8 *)"NTLMSSP", 7)))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_85a464_4b0b2c_epan#dissectors#packet-smb2.c,revFiles/85a464_4b0b2c_epan#dissectors#packet-smb2.c}: dissect_smb2_secblob)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+expression E0, E2, E1;
+@@
+- if (!zend_is_callable(E0, E1, &E2))  
++ if (!zend_is_callable(E0, 0, &E2))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_927016_cea4c8_ext#standard#basic_functions.c,revFiles/927016_cea4c8_ext#standard#basic_functions.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

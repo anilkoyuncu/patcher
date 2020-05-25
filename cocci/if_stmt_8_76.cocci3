@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((E0 == 0) || (E1 + E0 > (E2 - 4)))  
++ if ((E0 == 0) || (E1 + E0 > E2))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_45d298_30e199_epan#dissectors#packet-rsvp.c,revFiles/45d298_30e199_epan#dissectors#packet-rsvp.c}: dissect_rsvp_lsp_attributes)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.71
+// -- Node Change --
+// Recall: 1.00, Precision: 0.71
+// -- General --
+// Functions fully changed: 5/7(71%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_45d298_30e199_epan#dissectors#packet-rsvp.c: dissect_rsvp_3gpp_object
+ - linux/prevFiles/prev_5cbca95_1a366ab_drivers#staging#emxx_udc#emxx_udc.c: nbu2ss_ep_queue
+*/
+
+// ---------------------------------------------

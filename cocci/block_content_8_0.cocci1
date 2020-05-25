@@ -1,0 +1,39 @@
+@@
+identifier I1 = {act2000_set_msn ,i2o_bus_scan };
+expression list E2;
+expression E0;
+@@
+- if ((E0 = I1(E2)))  
++ E0 = I1(E2); 
++ if (E0)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_68f4b7_afbd19_drivers#staging#i2o#bus-osm.c,revFiles/68f4b7_afbd19_drivers#staging#i2o#bus-osm.c}: i2o_bus_store_scan), (linux/{prevFiles/prev_cd9ae9_1e5a82_drivers#staging#i4l#act2000#module.c,revFiles/cd9ae9_1e5a82_drivers#staging#i4l#act2000#module.c}: act2000_command)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.27, Precision: 1.00
+// -- Node Change --
+// Recall: 0.27, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/15(26%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_ae970e_4d8ce1_sound#pci#sis7019.c: sis_chip_create
+ - linux/prevFiles/prev_18f628_fe50c92_drivers#rapidio#devices#tsi721.c: tsi721_probe
+ - linux/prevFiles/prev_ab5766_38dbfb_drivers#infiniband#hw#amso1100#c2_rnic.c: c2_rnic_init
+ - linux/prevFiles/prev_152196_6561e8_drivers#staging#irda#drivers#irda-usb.c: irda_usb_change_speed_xbofs
+ - linux/prevFiles/prev_812b07_cd9d116_drivers#net#irda#sh_irda.c: sh_irda_probe
+ - linux/prevFiles/prev_52428d9_5b89602_drivers#net#ethernet#natsemi#natsemi.c: natsemi_probe1
+ - linux/prevFiles/prev_769f01_4fc3ecd_drivers#net#hamradio#6pack.c: sixpack_open
+ - linux/prevFiles/prev_2dfc96_148345_drivers#net#ethernet#qlogic#qlcnic#qlcnic_main.c: qlcnic_probe
+ - linux/prevFiles/prev_c24249_6a1e5f8_drivers#video#cg3.c: cg3_probe
+ - linux/prevFiles/prev_4df128_8c65ef_drivers#net#ethernet#sun#sungem.c: gem_init_one
+ - linux/prevFiles/prev_f776099_d29416_drivers#power#bq27x00_battery.c: bq27x00_battery_probe
+*/
+
+// ---------------------------------------------

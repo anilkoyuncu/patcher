@@ -1,0 +1,26 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = (E1 & SPAWN_FULLSIZE); 
+// Infered from: (tmux/{prevFiles/prev_1fd3b9_da31ed_layout.c,revFiles/1fd3b9_da31ed_layout.c}: layout_split_pane), (tmux/{prevFiles/prev_1c1ec8_f3fcf9_layout.c,revFiles/1c1ec8_f3fcf9_layout.c}: layout_split_pane)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.10
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.25, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - tmux/prevFiles/prev_1c1ec8_f3fcf9_layout.c: layout_split_pane
+ - tmux/prevFiles/prev_1fd3b9_da31ed_layout.c: layout_spread_cell
+ - tmux/prevFiles/prev_1c1ec8_f3fcf9_layout.c: layout_spread_cell
+ - tmux/prevFiles/prev_1fd3b9_da31ed_layout.c: layout_split_pane
+*/
+
+// ---------------------------------------------

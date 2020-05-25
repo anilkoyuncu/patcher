@@ -1,0 +1,39 @@
+@@
+binary operator B1 = {> ,>= };
+expression E0, E2;
+@@
+- while (E0 B1 E2)  
++ while (E0 B1 (int )E2)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_f920c5_05fc70_engines#e_cswift.c,revFiles/f920c5_05fc70_engines#e_cswift.c}: cswift_rand_bytes), (wireshark/{prevFiles/prev_6de396_038da8_packet-sip.c,revFiles/6de396_038da8_packet-sip.c}: dissect_sip)
+// False positives: (FFmpeg/revFiles/4f8608_94a4be_libavformat#http.c: http_listen), (FFmpeg/revFiles/85f91e_a142ff_libavformat#http.c: http_listen), (wireshark/revFiles/6de396_038da8_packet-sip.c: sip_get_msg_offset)
+// Recall: 0.18, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.55, Precision: 0.67
+// -- Node Change --
+// Recall: 0.55, Precision: 0.60
+// -- General --
+// Functions fully changed: 5/14(35%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_74e393_12dadc_crypto#engine#hw_cswift.c: cswift_rand_bytes
+ - wireshark/prevFiles/prev_6de396_038da8_capture.c: pipe_open_live
+ - wireshark/prevFiles/prev_6de396_038da8_capture.c: pipe_dispatch
+ - php-src/prevFiles/prev_fba6e5_824025_ext#mbstring#php_mbregex.c: PHP_FUNCTION
+ - wireshark/prevFiles/prev_9c8aba_ee8932_wiretap#iseries.c: iseries_open
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_85f91e_a142ff_libavformat#http.c: http_listen
+ - FFmpeg/prevFiles/prev_4f8608_94a4be_libavformat#http.c: process_line
+ - wireshark/prevFiles/prev_6de396_038da8_packet-sip.c: sip_get_msg_offset
+ - FFmpeg/prevFiles/prev_4f8608_94a4be_libavformat#http.c: http_listen
+*/
+
+// ---------------------------------------------

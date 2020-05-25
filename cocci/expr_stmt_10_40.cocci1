@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- g_return_val_if_fail(GTK_IS_STYLE_PROVIDER_PRIVATE(E0), FALSE); 
++ g_return_val_if_fail(E0 == NULL || GTK_IS_STYLE_PROVIDER_PRIVATE(E0), FALSE); 
+// Infered from: (gtk/{prevFiles/prev_a2bef8_1454ba_gtk#gtksymboliccolor.c,revFiles/a2bef8_1454ba_gtk#gtksymboliccolor.c}: _gtk_symbolic_color_resolve_full)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 0.45
+// -- Node Change --
+// Recall: 0.91, Precision: 0.42
+// -- General --
+// Functions fully changed: 4/12(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_4dc9b2_2b2e60_gtk#gtkstylecontext.c: gtk_style_context_remove_provider_for_screen
+ - gtk/prevFiles/prev_c7d73e_b837ef_gdk#gdkdevice.c: _gdk_device_set_associated_device
+ - gtk/prevFiles/prev_c7d73e_b837ef_gdk#gdkdevice.c: gdk_device_set_axis_use
+ - gtk/prevFiles/prev_c7d73e_b837ef_gdk#gdkdevice.c: gdk_device_get_state
+ - gtk/prevFiles/prev_c7d73e_b837ef_gdk#gdkdevice.c: gdk_device_set_key
+ - gtk/prevFiles/prev_c7d73e_b837ef_gdk#gdkdevice.c: gdk_device_set_source
+ - gtk/prevFiles/prev_4dc9b2_2b2e60_gtk#gtkstylecontext.c: gtk_style_context_add_provider_for_screen
+*/
+
+// ---------------------------------------------

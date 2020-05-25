@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- E0 = kmalloc(E1->u.wpa_ie.len, GFP_KERNEL); 
++ E0 = kmemdup(E1->u.wpa_ie.data, E1->u.wpa_ie.len, GFP_KERNEL); 
+  ...
+- memcpy(E0, E1->u.wpa_ie.data, E1->u.wpa_ie.len); 
+// Infered from: (linux/{prevFiles/prev_94002c_96fe9ee_drivers#staging#rtl8187se#ieee80211#ieee80211_softmac.c,revFiles/94002c_96fe9ee_drivers#staging#rtl8187se#ieee80211#ieee80211_softmac.c}: ieee80211_wpa_set_wpa_ie), (linux/{prevFiles/prev_94002c_96fe9ee_drivers#staging#rtl8192su#ieee80211#ieee80211_softmac.c,revFiles/94002c_96fe9ee_drivers#staging#rtl8192su#ieee80211#ieee80211_softmac.c}: ieee80211_wpa_set_wpa_ie), (linux/{prevFiles/prev_d931753_929fa2_drivers#staging#rtl8192e#rtllib_softmac.c,revFiles/d931753_929fa2_drivers#staging#rtl8192e#rtllib_softmac.c}: rtllib_wpa_set_wpa_ie), (linux/{prevFiles/prev_94002c_96fe9ee_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c,revFiles/94002c_96fe9ee_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c}: ieee80211_wpa_set_wpa_ie), (linux/{prevFiles/prev_94002c_96fe9ee_drivers#staging#rtl8192e#ieee80211#ieee80211_softmac.c,revFiles/94002c_96fe9ee_drivers#staging#rtl8192e#ieee80211#ieee80211_softmac.c}: ieee80211_wpa_set_wpa_ie)
+// Recall: 0.56, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

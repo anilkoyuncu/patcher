@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- double I0 = 2 * M_PI / E1; 
++ double I0 = 2 * 3.14159265358979323846 / E1; 
+// Infered from: (FFmpeg/{prevFiles/prev_11e146_bfde6e_libavcodec#cos_tablegen.c,revFiles/11e146_bfde6e_libavcodec#cos_tablegen.c}: main)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

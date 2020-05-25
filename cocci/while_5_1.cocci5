@@ -1,0 +1,28 @@
+@@
+expression E0;
+typedef orte_gpr_replica_callbacks_t;
+@@
+- while (NULL != (E0 = (orte_gpr_replica_callbacks_t *)ompi_list_remove_first(  &orte_gpr_replica.callbacks)))  
++ while (NULL != (E0 = (orte_gpr_replica_callbacks_t *)ompi_list_remove_last(  &orte_gpr_replica.callbacks)))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_092f14_98bf06_src#mca#gpr#replica#functional_layer#gpr_replica_messaging_fn.c,revFiles/092f14_98bf06_src#mca#gpr#replica#functional_layer#gpr_replica_messaging_fn.c}: orte_gpr_replica_process_callbacks)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.88
+// -- Node Change --
+// Recall: 0.92, Precision: 0.75
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - lighttpd2/prevFiles/prev_d498a9_0b5a67_src#common#memcached.c: cancel_all_requests
+ - lighttpd2/prevFiles/prev_d498a9_0b5a67_src#common#memcached.c: send_queue_clean
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+@@
+- EBX = 0; 
++ EBX = 8 << 8; 
+// Infered from: (qemu/{prevFiles/prev_1f3358_92510b_target-i386#helper.c,revFiles/1f3358_92510b_target-i386#helper.c}: helper_cpuid)
+// False positives: (qemu/revFiles/1f3358_92510b_target-i386#helper.c: helper_cpuid)
+// Recall: 0.50, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

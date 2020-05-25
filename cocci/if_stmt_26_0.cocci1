@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- if ((pci_set_dma_mask(E0, DMA_BIT_MASK(32)) < 0) || (pci_set_consistent_dma_mask(  E0, DMA_BIT_MASK(  32)) < 0))  
++ if ((dma_set_mask(&E0->dev, DMA_BIT_MASK(32)) < 0) || (dma_set_coherent_mask(  &E0->dev,  DMA_BIT_MASK(32)) < 0))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_412b97_304775_sound#pci#aw2#aw2-alsa.c,revFiles/412b97_304775_sound#pci#aw2#aw2-alsa.c}: snd_aw2_create)
+// False positives: (linux/revFiles/412b97_304775_sound#pci#ad1889.c: snd_ad1889_create), (linux/revFiles/412b97_304775_sound#pci#au88x0#au88x0.c: snd_vortex_create), (linux/revFiles/412b97_304775_sound#pci#ca0106#ca0106_main.c: snd_ca0106_create), (linux/revFiles/412b97_304775_sound#pci#cs5535audio#cs5535audio.c: snd_cs5535audio_create)
+// Recall: 0.17, Precision: 0.60, Matching recall: 0.60
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 18/18(100%)
+
+
+// ---------------------------------------------

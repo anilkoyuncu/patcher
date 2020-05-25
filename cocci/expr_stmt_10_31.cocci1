@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- libvlc_Quit(E0->p_libvlc); 
++ libvlc_Quit(E0->obj.libvlc); 
+// Infered from: (vlc/{prevFiles/prev_b74648_c24069_src#misc#update.c,revFiles/b74648_c24069_src#misc#update.c}: update_DownloadReal)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,21 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- memory_region_init_ram_nomigrate(&E0->local_mem_region, OBJECT(E1),  "sm501.local", get_local_mem_size(E0),  &error_fatal); 
+- vmstate_register_ram_global(&E0->I2); 
++ memory_region_init_ram(&E0->local_mem_region, OBJECT(E1), "sm501.local",  get_local_mem_size(E0), &error_fatal); 
+// Infered from: (qemu/{prevFiles/prev_4c4414_5fb203_hw#display#sm501.c,revFiles/4c4414_5fb203_hw#display#sm501.c}: sm501_init)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

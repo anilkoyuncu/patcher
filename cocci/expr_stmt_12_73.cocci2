@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- v4l2_err(&E0->v4l2_dev, "open failing with with ENODEV\n"); 
++ pr_err("open failing with with ENODEV\n"); 
+// Infered from: (linux/{prevFiles/prev_420206_5c331fc_drivers#media#video#hdpvr#hdpvr-video.c,revFiles/420206_5c331fc_drivers#media#video#hdpvr#hdpvr-video.c}: hdpvr_open)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

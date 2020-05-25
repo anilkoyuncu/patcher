@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- memcpy(&E0->cmbuf[E1], &E2, E3); 
++ stn_le_p(&E0->cmbuf[E1], E3, E2); 
+// Infered from: (qemu/{prevFiles/prev_71a86d_2067d3_hw#block#nvme.c,revFiles/71a86d_2067d3_hw#block#nvme.c}: nvme_cmb_write)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

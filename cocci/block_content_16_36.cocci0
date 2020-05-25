@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- set_irq_wake(E0, 1); 
++ irq_set_irq_wake(E0, 1); 
+// Infered from: (linux/{prevFiles/prev_fcb8918_a821b279_arch#sh#boards#mach-x3proto#gpio.c,revFiles/fcb8918_a821b279_arch#sh#boards#mach-x3proto#gpio.c}: x3proto_gpio_setup)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

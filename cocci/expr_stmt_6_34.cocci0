@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = strcasecmp(E1, (const  char *)E2) == 0; 
++ E0 = matches_wildcard_name(E1, (const  char *)E2); 
+// Infered from: (php-src/{prevFiles/prev_38e714_ea1d5d_ext#openssl#xp_ssl.c,revFiles/38e714_ea1d5d_ext#openssl#xp_ssl.c}: matches_san_list)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

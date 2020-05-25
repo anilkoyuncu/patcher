@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- SHA1_Update(&E0, E1.buf, E1.len + 1); 
++ SHA1_Update(&E0, E1.buf ? E1.buf :"", E1.len + 1); 
+// Infered from: (git/{prevFiles/prev_b4833a_1dffb8_builtin-rerere.c,revFiles/b4833a_1dffb8_builtin-rerere.c}: handle_file), (git/{prevFiles/prev_b4833a_1dffb8_builtin-rerere.c,revFiles/b4833a_1dffb8_builtin-rerere.c}: handle_file)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

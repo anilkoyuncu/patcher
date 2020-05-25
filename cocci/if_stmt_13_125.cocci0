@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 += (E1 << 8) + wp_log2_table[(E2 << (9 - E1)) & 0xff]; 
++ *E0 += (E1 << 8) + wp_log2_table[(E2 << (9 - E1)) & 0xff]; 
+// Infered from: (FFmpeg/{prevFiles/prev_e706fe_2b501b_libavcodec#wavpackenc.c,revFiles/e706fe_2b501b_libavcodec#wavpackenc.c}: log2sample)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E0 << 7 | E1 & 0x7f; 
++ E0 = (E0 << 7) | (E1 & 0x7f); 
+// Infered from: (php-src/{prevFiles/prev_172386_94be83_ext#gd#libgd#wbmp.c,revFiles/172386_94be83_ext#gd#libgd#wbmp.c}: getmbi)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

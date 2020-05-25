@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 < 90)  
++ if ((E0 + 15) < 90)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_673-A-18110803-18110815.c,revFiles/673-A-18110803-18110815.c}: main)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

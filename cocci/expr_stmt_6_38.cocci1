@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- E0.address = NULL; 
++ E0.address = (void *)mca_sshmem_base_start_address; 
+// Infered from: (ompi/{prevFiles/prev_c9b5b1_c63137_oshmem#mca#sshmem#ucx#sshmem_ucx_module.c,revFiles/c9b5b1_c63137_oshmem#mca#sshmem#ucx#sshmem_ucx_module.c}: segment_create)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 0.25
+// -- Node Change --
+// Recall: 0.67, Precision: 0.40
+// -- General --
+// Functions fully changed: 1/5(20%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_79b6f2_9b1786_target-i386#kvm.c: kvm_arch_init_vcpu
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_79b6f2_9b1786_target-i386#kvm.c: kvm_put_debugregs
+ - qemu/prevFiles/prev_79b6f2_9b1786_target-i386#kvm.c: kvm_put_vcpu_events
+ - qemu/prevFiles/prev_79b6f2_9b1786_target-i386#kvm.c: kvm_put_xcrs
+*/
+
+// ---------------------------------------------

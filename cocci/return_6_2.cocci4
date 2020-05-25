@@ -1,0 +1,29 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- proto_tree_add_string(E0, hf_gtp_apn, E1, E2, E3, E4); 
++ proto_tree_add_string(E0, hf_gtp_apn, E1, E2, E3, (char *)E4); 
+// Infered from: (wireshark/{prevFiles/prev_ab8f58_ddddf2_epan#dissectors#packet-gtp.c,revFiles/ab8f58_ddddf2_epan#dissectors#packet-gtp.c}: decode_apn)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.88, Precision: 0.88
+// -- Node Change --
+// Recall: 0.88, Precision: 0.70
+// -- General --
+// Functions fully changed: 5/9(55%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_df52e6_f487a0_Objects#genobject.c: gen_get_iter
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_c60fb3_a1f234_epan#geoip_db.c: geoip_db_lookup_ipv6
+ - wireshark/prevFiles/prev_c60fb3_a1f234_epan#geoip_db.c: geoip_db_lookup_ipv4
+ - wireshark/prevFiles/prev_c60fb3_a1f234_epan#geoip_db.c: db_val_to_utf_8
+*/
+
+// ---------------------------------------------

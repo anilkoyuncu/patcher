@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (E0->fmt_in.video.i_frame_rate_base > 0)  
++ if (E0->fmt_in.video.i_frame_rate_base && E0->fmt_in.video.i_frame_rate)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_944ccb_fe9ff8_modules#packetizer#h264.c,revFiles/944ccb_fe9ff8_modules#packetizer#h264.c}: Open)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

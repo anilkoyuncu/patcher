@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((E0->name_len == E1 && memcmp(E2, E0->name, E1) == 0) || (E0->alias && E0->alias == E3[  0]))  
++ if ((E0->name_len == E1 && memcmp(E2, E0->name, E1) == 0) || ((E1 == 1) && (  E0->alias && E0->alias == E3[  0])))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_0bc987_375c90_phpdbg_prompt.c,revFiles/0bc987_375c90_phpdbg_prompt.c}: phpdbg_do_cmd)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

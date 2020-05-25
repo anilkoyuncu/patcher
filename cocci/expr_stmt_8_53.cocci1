@@ -1,0 +1,11 @@
+@@
+type T2;
+expression E0, E1;
+typedef int64_t;
+@@
+- OPAL_OUTPUT_VERBOSE((50, ompi_mtl_base_framework.framework_output, "Mrecv %lu of length %d (0x%lx)\n", E0->opcount, (  int )E1, (T2 )E0)); 
++ OPAL_OUTPUT_VERBOSE((50, ompi_mtl_base_framework.framework_output, "Mrecv %lu of length %ld (0x%lx)\n", E0->opcount, (  int64_t )E1, (T2 )E0)); 
+// Infered from: (ompi/{prevFiles/prev_8a4616_18b75b_ompi#mca#mtl#portals4#mtl_portals4_recv.c,revFiles/8a4616_18b75b_ompi#mca#mtl#portals4#mtl_portals4_recv.c}: ompi_mtl_portals4_imrecv)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

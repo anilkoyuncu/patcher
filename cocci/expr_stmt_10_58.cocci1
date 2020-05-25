@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = E1->qsum / E1->qcount * E1->total_bits / E2; 
++ E0 = E1->qsum / E1->qcount * (E1->total_bits + 1) / (E2 + 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_ff3dfb_14ae07_libavcodec#mpegvideo.c,revFiles/ff3dfb_14ae07_libavcodec#mpegvideo.c}: rate_estimate_qscale)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

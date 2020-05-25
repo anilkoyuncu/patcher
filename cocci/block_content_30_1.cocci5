@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- fprintf(stderr, "%d %s, %ld bytes (0x%lx)\n", E0, E1, (long )E2, (long )E2); 
++ fprintf(stderr, "%d %s, %lu bytes (0x%lx)\n", E0, E1, E2, E2); 
+// Infered from: (curl/{prevFiles/prev_13505d_4c735b_docs#examples#http2-upload.c,revFiles/13505d_4c735b_docs#examples#http2-upload.c}: dump), (curl/{prevFiles/prev_13505d_4c735b_docs#examples#http2-download.c,revFiles/13505d_4c735b_docs#examples#http2-download.c}: dump)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

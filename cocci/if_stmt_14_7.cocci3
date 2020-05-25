@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->length == 0)  
++ if (sg_dma_len(E0) == 0)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_fdaf9c_cbb796c_drivers#dma#coh901318.c,revFiles/fdaf9c_cbb796c_drivers#dma#coh901318.c}: coh901318_prep_slave_sg)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

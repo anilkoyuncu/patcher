@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0 && E1 && filename_number_test(E1) >= 0)  
++ if (!E0 && E1 && filename_number_test(E1) >= 0 && guess_image_format(E1))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_94d883e_7481e9_libavformat#utils.c,revFiles/94d883e_7481e9_libavformat#utils.c}: guess_format)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

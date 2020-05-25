@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- g_menu_insert_item(E0, E1 - 1, E2); 
++ g_menu_insert_item(E0, 0, E2); 
+// Infered from: (gtk/{prevFiles/prev_37c9a9_987b56_tests#testmenubutton.c,revFiles/37c9a9_987b56_tests#testmenubutton.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

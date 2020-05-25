@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.tm_isdst = 0; 
++ E0.tm_isdst = -1; 
+// Infered from: (cpython/{prevFiles/prev_547eb4_f2f174_Modules#zipimport.c,revFiles/547eb4_f2f174_Modules#zipimport.c}: parse_dostime)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

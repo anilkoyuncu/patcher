@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- zend_list_addref(E0->rsrc_id); 
+// Infered from: (php-src/{prevFiles/prev_a55c12_073739_ext#standard#dir.c,revFiles/a55c12_073739_ext#standard#dir.c}: _php_do_opendir)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

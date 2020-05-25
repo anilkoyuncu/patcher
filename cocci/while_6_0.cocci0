@@ -1,0 +1,11 @@
+@@
+expression E1, E2, E3, E0;
+@@
+- while (E0 && E1 == '0' && (E2 + 1 < E3) && !ispunct(*(E2 + 1)))  
+- {
+  ...
+- }
+// Infered from: (php-src/{prevFiles/prev_b3de24_91315a_ext#standard#strnatcmp.c,revFiles/b3de24_91315a_ext#standard#strnatcmp.c}: strnatcmp_ex), (php-src/{prevFiles/prev_b3de24_91315a_ext#standard#strnatcmp.c,revFiles/b3de24_91315a_ext#standard#strnatcmp.c}: strnatcmp_ex), (php-src/{prevFiles/prev_5803d3_3758a5_ext#standard#strnatcmp.c,revFiles/5803d3_3758a5_ext#standard#strnatcmp.c}: strnatcmp_ex), (php-src/{prevFiles/prev_5803d3_3758a5_ext#standard#strnatcmp.c,revFiles/5803d3_3758a5_ext#standard#strnatcmp.c}: strnatcmp_ex)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

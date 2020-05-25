@@ -1,0 +1,8 @@
+@@
+@@
+- monitor_set_cpu(0); 
++ monitor_set_cpu(first_cpu->cpu_index); 
+// Infered from: (qemu/{prevFiles/prev_27a83f_58eb53_monitor.c,revFiles/27a83f_58eb53_monitor.c}: mon_get_cpu)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

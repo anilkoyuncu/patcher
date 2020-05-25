@@ -1,0 +1,9 @@
+@@
+expression E1, E0, E2;
+@@
+- E0 = set_tap_dfilter(E1, E2); 
++ E0 = set_tap_dfilter(&E1->hash, E2); 
+// Infered from: (wireshark/{prevFiles/prev_a1732d_9e7d69_ui#gtk#conversations_table.c,revFiles/a1732d_9e7d69_ui#gtk#conversations_table.c}: reset_ct_table_data), (wireshark/{prevFiles/prev_a1732d_9e7d69_ui#gtk#hostlist_table.c,revFiles/a1732d_9e7d69_ui#gtk#hostlist_table.c}: reset_host_table_data)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- build_srat(E0->table_data, E0->linker, &E1, E2); 
++ build_srat(E0->table_data, E0->linker, E2); 
+// Infered from: (qemu/{prevFiles/prev_dd0247_6c150f_hw#i386#acpi-build.c,revFiles/dd0247_6c150f_hw#i386#acpi-build.c}: acpi_build)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

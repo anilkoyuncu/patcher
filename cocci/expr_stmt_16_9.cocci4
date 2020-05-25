@@ -1,0 +1,22 @@
+@@
+identifier I0, I1, I2, I3, I4, I5, I6, I7, I8, I9;
+expression E10, E11, E12;
+typedef address;
+typedef epan_dissect_t;
+typedef gchar;
+typedef guint16;
+typedef guint32;
+typedef packet_info;
+typedef voip_calls_tapinfo_t;
+@@
+  void insert_to_graph_t38(voip_calls_tapinfo_t *I0, packet_info *I1,  epan_dissect_t *I2, const  gchar *I3,  const  gchar *I4, guint16 I5, address *I6,  address *I7, guint16 I8, guint32 I9)  
+  {
+  ...
+- set_fd_time(E10->session, packet_list_get_row_data(E11), E12); 
++ set_fd_time(E10->session, I1->fd, E12); 
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_8c46a7_0981a5_ui#voip_calls.c,revFiles/8c46a7_0981a5_ui#voip_calls.c}: insert_to_graph_t38)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

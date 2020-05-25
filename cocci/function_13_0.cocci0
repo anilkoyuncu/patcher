@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->stream_index = E1->main_streams[E1->pkt.stream_index]->index; 
++ E0->stream_index = st->index; 
+// Infered from: (FFmpeg/{prevFiles/prev_3d2f63_9a51cd_libavformat#hls.c,revFiles/3d2f63_9a51cd_libavformat#hls.c}: hls_read_packet)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------

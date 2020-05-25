@@ -1,0 +1,34 @@
+@@
+identifier I0, I1, I2, I3, I4, I5;
+expression E6;
+typedef NBDClientSession;
+typedef NBDReply;
+typedef NBDReplyChunkIter;
+typedef QEMUIOVector;
+typedef bool;
+typedef uint64_t;
+@@
+  bool nbd_reply_chunk_iter_receive(NBDClientSession *I0,  NBDReplyChunkIter *I1, uint64_t I2,  QEMUIOVector *I3, NBDReply *I4, void **I5)  
+  {
+  ...
+- if (nbd_reply_is_simple(&E6->reply) || E6->quit)  
++ if (nbd_reply_is_simple(I4) || E6->quit)  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_65e01d_b0e4b5_block#nbd-client.c,revFiles/65e01d_b0e4b5_block#nbd-client.c}: nbd_reply_chunk_iter_receive)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

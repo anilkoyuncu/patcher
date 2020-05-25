@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 &= TARGET_PAGE_MASK; 
++ E0 &= ~TARGET_PAGE_MASK & ~IO_MEM_ROMD; 
+// Infered from: (qemu/{prevFiles/prev_b5fe14_75f594_memory.c,revFiles/b5fe14_75f594_memory.c}: as_memory_range_add)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

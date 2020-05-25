@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (unlikely(E0->pr || !E0->hv))  
++ if (unlikely(E0->pr))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_1c7336_1c953b_target-ppc#translate.c,revFiles/1c7336_1c953b_target-ppc#translate.c}: gen_slbia)
+// False positives: (qemu/revFiles/1c7336_1c953b_target-ppc#translate.c: gen_tlbie), (qemu/revFiles/1c7336_1c953b_target-ppc#translate.c: gen_tlbsync)
+// Recall: 0.25, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef gchar;
+@@
+- gchar *I0 = (gchar *)ep_alloc(BUF_SIZE); 
++ gchar *I0 = (gchar *)wmem_alloc(wmem_packet_scope(), BUF_SIZE); 
+// Infered from: (wireshark/{prevFiles/prev_fe5238_a10254_epan#dissectors#packet-t30.c,revFiles/fe5238_a10254_epan#dissectors#packet-t30.c}: dissect_t30_partial_page_request)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

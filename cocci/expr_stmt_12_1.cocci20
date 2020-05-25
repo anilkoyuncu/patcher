@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_text(E0, E1, E2, E3, "IP Authentication: %.*s", E3,  tvb_get_string(wmem_packet_scope(), E1, E2, E3)); 
++ proto_tree_add_text(E0, E1, E2, E3, "IP Authentication: %.*s", E3,  tvb_get_string_enc(wmem_packet_scope(), E1, E2, E3,  ENC_ASCII)); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-isis-clv.c,revFiles/971ffd_421d81_epan#dissectors#packet-isis-clv.c}: isis_dissect_ip_authentication_clv)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- int I0 = TCL_EVAL_DIRECT; 
++ int I0 = TCL_EVAL_DIRECT | TCL_EVAL_GLOBAL; 
+// Infered from: (qemu/{prevFiles/prev_c53f4a_5a63bc_target-mips#translate.c,revFiles/c53f4a_5a63bc_target-mips#translate.c}: gen_compute_branch), (cpython/{prevFiles/prev_23fe2a_b98cb43_Modules#_tkinter.c,revFiles/23fe2a_b98cb43_Modules#_tkinter.c}: Tkapp_Call)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

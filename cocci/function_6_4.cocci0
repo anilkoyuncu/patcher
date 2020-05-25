@@ -1,0 +1,8 @@
+@@
+@@
+- result = (A[SA[k]] < B[SB[nb - m + 1]]); 
++ result = (SA[k] < SB[nb - m + 1]); 
+// Infered from: (codeflaws/{prevFiles/prev_572-A-18014147-18014159.c,revFiles/572-A-18014147-18014159.c}: compute), (FFmpeg/{prevFiles/prev_fafbc7_3a1fa4_libavcodec#mpegvideo.c,revFiles/fafbc7_3a1fa4_libavcodec#mpegvideo.c}: encode_mb)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

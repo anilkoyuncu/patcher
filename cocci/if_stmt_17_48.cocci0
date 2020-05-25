@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (unlikely(IS_ERR(E0)))  
++ if (unlikely(IS_ERR(E0->rtc_dev)))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_ba6c40_defb45_drivers#rtc#rtc-bfin.c,revFiles/ba6c40_defb45_drivers#rtc#rtc-bfin.c}: bfin_rtc_probe)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

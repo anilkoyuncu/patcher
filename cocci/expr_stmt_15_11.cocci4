@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- sprintf(E0->format_name, "ZIP %d.%d (%s)", E1 / 10, E1 % 10,  compression_name(E0->entry->compression)); 
++ snprintf(E0->format_name, sizeof(E0->format_name), "ZIP %d.%d (%s)", E1 / 10,  E1 % 10, compression_name(E0->entry->compression)); 
+// Infered from: (libarchive/{prevFiles/prev_ecc435_3bd373_libarchive#archive_read_support_format_zip.c,revFiles/ecc435_3bd373_libarchive#archive_read_support_format_zip.c}: zip_read_local_file_header)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

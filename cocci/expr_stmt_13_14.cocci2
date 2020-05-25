@@ -1,0 +1,33 @@
+@@
+identifier I0;
+typedef GtkRange;
+@@
+  void stop_scrolling(GtkRange *I0)  
+  {
+  ...
+- gtk_widget_queue_draw(widget); 
++ gtk_widget_queue_draw(GTK_WIDGET(I0)); 
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_bdd6e8_feefa2_gtk#gtkrange.c,revFiles/bdd6e8_feefa2_gtk#gtkrange.c}: stop_scrolling)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.75
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_182dd3_a46d4e_gtk#gtkwindow.c: popover_realize
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - redis/prevFiles/prev_fc92c6_f50dc3_utils#lru#lfu-simulation.c: main
+*/
+
+// ---------------------------------------------

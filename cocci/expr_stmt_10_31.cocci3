@@ -1,0 +1,27 @@
+@@
+type T1;
+expression E0, E2;
+@@
+- dprintf(E0, "%08llx-%08llx rw-p %08llx 00:00 0          [stack]\n",  (T1 )E2->info->stack_limit,  (T1 )(E2->stack_base + (TARGET_PAGE_SIZE - 1)) & TARGET_PAGE_MASK,  (T1 )0); 
++ dprintf(E0, "%08llx-%08llx rw-p %08llx 00:00 0          [stack]\n",  (T1 )E2->info->stack_limit,  (T1 )(E2->info->start_stack + (TARGET_PAGE_SIZE - 1)) & TARGET_PAGE_MASK,  (T1 )0); 
+// Infered from: (qemu/{prevFiles/prev_1bdd7c_229d33_linux-user#syscall.c,revFiles/1bdd7c_229d33_linux-user#syscall.c}: open_self_maps)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/8(50%)
+
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_f133d9_ff5095_oshmem#mca#sshmem#sysv#sshmem_sysv_module.c: segment_detach
+ - FFmpeg/prevFiles/prev_61fc1c_484d42_ffmpeg.c: do_video_out
+ - ompi/prevFiles/prev_90f449_890e3c_ompi#mca#pml#base#pml_base_select.c: mca_pml_base_select
+ - ompi/prevFiles/prev_f133d9_ff5095_oshmem#mca#sshmem#sysv#sshmem_sysv_module.c: segment_attach
+*/
+
+// ---------------------------------------------

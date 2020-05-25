@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (IS_ERR(E0->cookie))  
+- {
+- return PTR_ERR(E0->cookie); 
+- }
+- return 0; 
++ return PTR_ERR_OR_ZERO(E0->cookie); 
+// Infered from: (linux/{prevFiles/prev_a8ffa3_4fbd8d_drivers#dma#mic_x100_dma.c,revFiles/a8ffa3_4fbd8d_drivers#dma#mic_x100_dma.c}: mic_dma_setup_irq)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

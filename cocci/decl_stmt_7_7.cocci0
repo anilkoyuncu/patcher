@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0->pix_fmt = AV_PIX_FMT_GBRAP12; 
++ E0->pix_fmt = AV_PIX_FMT_GBRAP10; 
+// Infered from: (FFmpeg/{prevFiles/prev_f0e7b0_9d3069_libavcodec#sheervideo.c,revFiles/f0e7b0_9d3069_libavcodec#sheervideo.c}: decode_frame)
+// False positives: (FFmpeg/revFiles/c15642_0a9e78_libavcodec#sheervideo.c: decode_frame)
+// Recall: 0.03, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

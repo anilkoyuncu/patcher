@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->ue_dev != NULL && strcmp(E1->name, E0->ue_dattr.uda_devname) == 0)  
++ if (E0->ue_dev_ok && strcmp(E1->name, E0->ue_dattr.uda_devname) == 0)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_cbd99d_2e8ee0_opal#mca#common#libfabric#libfabric#prov#usnic#src#usdf_fabric.c,revFiles/cbd99d_2e8ee0_opal#mca#common#libfabric#libfabric#prov#usnic#src#usdf_fabric.c}: usdf_fabric_open)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

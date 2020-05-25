@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- set_irq_chained_handler(E0, cpm_cascade); 
++ irq_set_chained_handler(E0, cpm_cascade); 
+// Infered from: (linux/{prevFiles/prev_ec775d_7bfbc1f2_arch#powerpc#platforms#8xx#m8xx_setup.c,revFiles/ec775d_7bfbc1f2_arch#powerpc#platforms#8xx#m8xx_setup.c}: mpc8xx_pics_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

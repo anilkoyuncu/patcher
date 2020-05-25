@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = E1->cdev.dev; 
++ int I0; 
+// Infered from: (linux/{prevFiles/prev_b232a70_308b135_drivers#watchdog#watchdog_core.c,revFiles/b232a70_308b135_drivers#watchdog#watchdog_core.c}: watchdog_unregister_device)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

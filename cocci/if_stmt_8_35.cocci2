@@ -1,0 +1,40 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (E0 > 0 && E1 > 0 && E2 > 0 && E3 > 0 && strlen(E4) >= 5)  
++ if (E0 > 0 && E1 > 0 && E3 > 0 && strlen(E4) >= 5)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_411-A-9661639-9661654.c,revFiles/411-A-9661639-9661654.c}: main)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.23, Precision: 1.00
+// -- Node Change --
+// Recall: 0.29, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/13(23%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_6a02a7_c4107e_target#arm#helper.c: sve_zcr_len_for_el
+ - codeflaws/prevFiles/prev_361-B-5437008-5437011.c: main
+ - cpython/prevFiles/prev_4e751c_a6edfd_Objects#unicodeobject.c: PyUnicode_DecodeMBCS
+ - libarchive/prevFiles/prev_77d0d1_a11f15_libarchive#archive_write_set_format_xar.c: file_gen_utility_names
+ - libarchive/prevFiles/prev_77d0d1_a11f15_libarchive#archive_write_set_format_xar.c: 
+ - cairo/prevFiles/prev_c9c4b0_0f748d_src#cairo-pdf-operators.c: _cairo_pdf_operators_emit_glyph_string_with_positioning
+ - wireshark/prevFiles/prev_1e9bc6_0c0bd5_epan#dissectors#packet-mp2t.c: mp2t_process_fragmented_payload
+ - codeflaws/prevFiles/prev_194-D-1761507-1761527.c: go
+ - php-src/prevFiles/prev_30f9c4_57440c_ext#zlib#zlib_fopen_wrapper.c: php_gziop_read
+ - FFmpeg/prevFiles/prev_9bd305_db91e0_libavformat#mpeg.c: mpegps_read_packet
+*/
+
+// ---------------------------------------------

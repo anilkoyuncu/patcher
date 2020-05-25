@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- init_get_bits8(&E0, E1->gb.buffer,  FFMIN(bytestream2_get_bytes_left(&E1->gb), E2)); 
++ int ret = init_get_bits8(&E0, E1->gb.buffer,  FFMIN(bytestream2_get_bytes_left(&E1->gb), E2)); 
++ if (ret < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_c447ab_66a7bc_libavcodec#eatgq.c,revFiles/c447ab_66a7bc_libavcodec#eatgq.c}: tgq_decode_mb)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

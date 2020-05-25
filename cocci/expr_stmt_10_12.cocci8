@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- server.auto_aofrewrite_perc = atoi(E0[2]); 
++ server.auto_aofrewrite_perc = atoi(E0[1]); 
+// Infered from: (redis/{prevFiles/prev_4ff34b_50528f_src#config.c,revFiles/4ff34b_50528f_src#config.c}: loadServerConfig)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

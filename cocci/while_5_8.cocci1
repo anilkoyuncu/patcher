@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- while (E0 * E1->channels > 150000)  
++ while (E0 * E1->channels > WV_MAX_SAMPLES)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_ddad09_1b5ec6_libavcodec#wavpackenc.c,revFiles/ddad09_1b5ec6_libavcodec#wavpackenc.c}: wavpack_encode_init)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_ea0627_82f30a_src#playlist#tree.c: GetNextUncle
+ - codeflaws/prevFiles/prev_12-C-1919840-1919852.c: main
+ - codeflaws/prevFiles/prev_378-B-5559657-5560108.c: main
+*/
+
+// ---------------------------------------------

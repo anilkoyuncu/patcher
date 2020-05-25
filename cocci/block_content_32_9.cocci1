@@ -1,0 +1,20 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- return gtk_tool_item_group_get_drop_item(GTK_TOOL_ITEM_GROUP(I0),  E1 - I0->allocation.x,  E2 - I0->allocation.y); 
++ return gtk_tool_item_group_get_drop_item(I0, E1 - widget->allocation.x,  E2 - widget->allocation.y); 
+// Infered from: (gtk/{prevFiles/prev_cf8b94_6b808a_gtk#gtktoolpalette.c,revFiles/cf8b94_6b808a_gtk#gtktoolpalette.c}: gtk_tool_palette_get_drop_item), (gtk/{prevFiles/prev_2a762b_ef3dc5_gtk#gtktoolpalette.c,revFiles/2a762b_ef3dc5_gtk#gtktoolpalette.c}: gtk_tool_palette_get_drop_item)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

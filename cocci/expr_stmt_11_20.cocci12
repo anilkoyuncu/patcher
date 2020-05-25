@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "main-loop: WARNING: I/O thread spun for %d iterations\n",  MAX_MAIN_LOOP_SPIN); 
++ warn_report("I/O thread spun for %d iterations", MAX_MAIN_LOOP_SPIN); 
+// Infered from: (qemu/{prevFiles/prev_8297be_2ab4b1_util#main-loop.c,revFiles/8297be_2ab4b1_util#main-loop.c}: os_host_main_loop_wait)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

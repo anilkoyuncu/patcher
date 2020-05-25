@@ -1,0 +1,15 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0; 
+  ...
+- for(I0 = 0;I0 < E1->p_sys->i_announces;I0++)  
++ for(int I0 = 0;I0 < E1->p_sys->i_announces;I0++)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_7f68f9_b2e8e7_modules#services_discovery#sap.c,revFiles/7f68f9_b2e8e7_modules#services_discovery#sap.c}: ParseSAP)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

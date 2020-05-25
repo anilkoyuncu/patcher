@@ -1,0 +1,8 @@
+@@
+@@
+- return (ARCHIVE_EOF); 
++ return (0); 
+// Infered from: (libarchive/{prevFiles/prev_dd95a1_29362a_libarchive#test#test_write_format_zip_large.c,revFiles/dd95a1_29362a_libarchive#test#test_write_format_zip_large.c}: memory_read)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

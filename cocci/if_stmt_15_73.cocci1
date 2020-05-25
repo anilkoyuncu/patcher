@@ -1,0 +1,39 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- E0 = curl_slist_append(E0, ENGINE_get_id(E1)); 
+- if (E0 == NULL)  
++ I2 = curl_slist_append(E0, ENGINE_get_id(E1)); 
++ if (!I2)  
+  {
+- curl_slist_free_all(I2); 
++ curl_slist_free_all(E0); 
+  ...
+  }
+- else
+- {
+- if (I2 == NULL)  
+- {
+- I2 = E0; 
+- }
+- }
++ E0 = I2; 
+// Infered from: (curl/{prevFiles/prev_17f48f_b82bd0_lib#ssluse.c,revFiles/17f48f_b82bd0_lib#ssluse.c}: Curl_ossl_engines_list)
+// Recall: 0.32, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.39, Precision: 0.86
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_17f48f_b82bd0_lib#ssluse.c: Curl_ossl_engines_list
+*/
+
+// ---------------------------------------------

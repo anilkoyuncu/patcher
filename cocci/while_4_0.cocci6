@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (E0 >= GST_FORMAT_UNDEFINED && E1 < 8)  
++ while (E0 != GST_FORMAT_UNDEFINED && E1 < 8)  
+  {
+  ...
+  }
+// Infered from: (gstreamer/{prevFiles/prev_04471c_5c7c485_gst#gstevent.c,revFiles/04471c_5c7c485_gst#gstevent.c}: gst_event_new_discontinuous)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

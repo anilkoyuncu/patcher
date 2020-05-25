@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E5, E0, E1, E3, E4;
+@@
+- E0 = request_threaded_irq(E1->irq, NULL, I2, E3, E4, E5); 
++ E0 = request_threaded_irq(E1->irq, NULL, I2, E3 | IRQF_ONESHOT, E4, E5); 
+// Infered from: (linux/{prevFiles/prev_3d907c_b787f6_sound#soc#codecs#wm5100.c,revFiles/3d907c_b787f6_sound#soc#codecs#wm5100.c}: wm5100_i2c_probe), (linux/{prevFiles/prev_3d907c_b787f6_sound#soc#codecs#wm5100.c,revFiles/3d907c_b787f6_sound#soc#codecs#wm5100.c}: wm5100_i2c_probe), (linux/{prevFiles/prev_ed043a_b787f6_sound#soc#codecs#wm8996.c,revFiles/ed043a_b787f6_sound#soc#codecs#wm8996.c}: wm8996_probe), (linux/{prevFiles/prev_ed043a_b787f6_sound#soc#codecs#wm8996.c,revFiles/ed043a_b787f6_sound#soc#codecs#wm8996.c}: wm8996_probe)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

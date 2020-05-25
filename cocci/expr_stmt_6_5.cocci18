@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0[2 * E1 + 0] = E2[(E3[E1] >> 8) & 0xf]; 
++ E0[2 * E1 + 0] = E2[(E3[E1] >> 4) & 0xf]; 
+// Infered from: (vlc/{prevFiles/prev_ad917f_6cecc67_modules#stream_out#rtp.c,revFiles/ad917f_6cecc67_modules#stream_out#rtp.c}: sprintf_hexa)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

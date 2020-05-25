@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = GET_FIELD(E1, 2, 6); 
++ E0 = DFPREG(GET_FIELD(E1, 2, 6)); 
+// Infered from: (qemu/{prevFiles/prev_0387d9_fe33cc_target-sparc#translate.c,revFiles/0387d9_fe33cc_target-sparc#translate.c}: gen_ldf_asi), (qemu/{prevFiles/prev_0387d9_fe33cc_target-sparc#translate.c,revFiles/0387d9_fe33cc_target-sparc#translate.c}: gen_stf_asi)
+// False positives: (qemu/revFiles/0387d9_fe33cc_target-sparc#translate.c: disas_sparc_insn)
+// Recall: 0.12, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

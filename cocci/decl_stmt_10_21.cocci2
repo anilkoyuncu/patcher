@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1;
+@@
+- char *I0 = (char *)malloc(E1); 
++ char *I0 = (char *)calloc(E1, 1); 
+// Infered from: (apr/{prevFiles/prev_bc1b81_b7cf0a_test#testpipe.c,revFiles/bc1b81_b7cf0a_test#testpipe.c}: test_pipe_writefull)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_35b506_fcbf4a_target-ppc#translate.c: gen_wait
+*/
+
+// ---------------------------------------------

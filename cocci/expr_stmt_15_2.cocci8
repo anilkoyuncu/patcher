@@ -1,0 +1,30 @@
+@@
+@@
+- php_error(E_WARNING, "Bad arguments to implode()"); 
++ php_error(E_WARNING, "Bad arguments to %s()",  get_active_function_name(TSRMLS_C)); 
+// Infered from: (php-src/{prevFiles/prev_6f9c7b_1f9464_ext#standard#string.c,revFiles/6f9c7b_1f9464_ext#standard#string.c}: PHP_FUNCTION)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 0.75
+// -- Node Change --
+// Recall: 0.79, Precision: 0.79
+// -- General --
+// Functions fully changed: 9/15(60%)
+
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_ad7db6_14df4c_update-ref.c: main
+ - gstreamer/prevFiles/prev_36205e_01dfca_gst#gstghostpad.c: gst_proxy_pad_do_getcaps
+ - gstreamer/prevFiles/prev_7077d3_3c966d_gst#gstpad.c: gst_pad_push_event_unchecked
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_345afa_74167c_lib#media.c: libvlc_media_new_from_input_item
+ - vlc/prevFiles/prev_345afa_74167c_lib#media.c: libvlc_media_new_location
+ - vlc/prevFiles/prev_345afa_74167c_lib#media.c: libvlc_media_new_as_node
+*/
+
+// ---------------------------------------------

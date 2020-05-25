@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = floor(pow(3 * E1, 0.3333333)); 
++ E0 = floor(pow(3 * E1, 0.3333333333333333333)); 
+// Infered from: (codeflaws/{prevFiles/prev_599-D-16632122-16632169.c,revFiles/599-D-16632122-16632169.c}: main)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

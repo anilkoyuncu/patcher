@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->blockable)  
++ if (!mmu_notifier_range_blockable(E0))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_dfcd66_4a83bf_drivers#gpu#drm#i915#i915_gem_userptr.c,revFiles/dfcd66_4a83bf_drivers#gpu#drm#i915#i915_gem_userptr.c}: userptr_mn_invalidate_range_start)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

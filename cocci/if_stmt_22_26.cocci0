@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (E0 < E1->width * E1->height * 9LL / 8)  
++ if (E0 < FFALIGN(E1->width, 4) * FFALIGN(E1->height, 4) * 9LL / 8)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_76b6f4_9caa94_libavcodec#dxtory.c,revFiles/76b6f4_9caa94_libavcodec#dxtory.c}: dxtory_decode_v1_410)
+// False positives: (FFmpeg/revFiles/9caa94_a105f5_libavcodec#dxtory.c: dxtory_decode_v1_410)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

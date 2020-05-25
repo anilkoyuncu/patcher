@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->state_offset = E1 = E2; 
++ E0->state_offset = E1 = E2 + E0->region_size; 
+// Infered from: (ompi/{prevFiles/prev_63e744_f690fc_ompi#mca#osc#rdma#osc_rdma_component.c,revFiles/63e744_f690fc_ompi#mca#osc#rdma#osc_rdma_component.c}: allocate_state_shared)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.10
+
+// ---------------------------------------------

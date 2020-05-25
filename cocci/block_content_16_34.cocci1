@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = get_irq_chip(29); 
++ E0 = irq_get_chip(29); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-tegra#irq.c,revFiles/6845664a_25a566_arch#arm#mach-tegra#irq.c}: tegra_init_irq)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

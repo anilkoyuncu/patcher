@@ -1,0 +1,11 @@
+@@
+@@
+- if (octet_aligned = FALSE)  
++ if (!octet_aligned)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_54a2df_5b994e_epan#dissectors#packet-amr.c,revFiles/54a2df_5b994e_epan#dissectors#packet-amr.c}: dissect_amr)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

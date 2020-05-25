@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 < TAPA_TYPE_REQUEST || E0 > TAPA_TYPE_REPLY_NEW || E1 > 8 || E2 < 12 || E2 > 1472 || (  E0 == TAPA_TYPE_REQUEST && (E3 < TAPA_REQUEST_SERIAL || E3 > TAPA_REQUEST_MODEL)))  
++ if (E0 < TAPA_TYPE_REQUEST || E0 > TAPA_TYPE_REPLY_NEW || (E1 > 8 && E1 != 0x30) || E2 < 12 || E2 > 1472 || (  E0 == TAPA_TYPE_REQUEST && (E3 < TAPA_REQUEST_SERIAL || E3 > TAPA_REQUEST_MODEL)))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_c3a10d_dc6789_epan#dissectors#packet-tapa.c,revFiles/c3a10d_dc6789_epan#dissectors#packet-tapa.c}: test_tapa_discover)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

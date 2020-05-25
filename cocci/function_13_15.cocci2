@@ -1,0 +1,24 @@
+@@
+@@
+- gdk_threads_enter(); 
+  ...
+- gdk_threads_leave(); 
+// Infered from: (gstreamer/{prevFiles/prev_dbe262_e8ea96_gst#gst.c,revFiles/dbe262_e8ea96_gst#gst.c}: gst_main)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_16c6de_08029d_demos#bio#saccept.c: interrupt
+ - qemu/prevFiles/prev_9fd1a9_8fd19e_translate-all.c: tb_link_page
+*/
+
+// ---------------------------------------------

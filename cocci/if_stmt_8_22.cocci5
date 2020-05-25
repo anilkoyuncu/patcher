@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- if (E0->num_interfaces && type_is_ancestor(E1, type_interface))  
++ if (E0->class->interfaces && type_is_ancestor(E1, type_interface))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_00e2ce_3e407d_qom#object.c,revFiles/00e2ce_3e407d_qom#object.c}: object_class_dynamic_cast)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

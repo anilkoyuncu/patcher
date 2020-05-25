@@ -1,0 +1,8 @@
+@@
+@@
+- opal_event.fini(); 
++ opal_event.finalize(); 
+// Infered from: (ompi/{prevFiles/prev_c671ec_7394f6_opal#mca#crs#blcr#crs_blcr_module.c,revFiles/c671ec_7394f6_opal#mca#crs#blcr#crs_blcr_module.c}: opal_crs_blcr_restart)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

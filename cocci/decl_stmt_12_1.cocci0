@@ -1,0 +1,33 @@
+@@
+expression E0, E1, E2, E3;
+typedef MPI_Aint;
+typedef MPI_Datatype;
+@@
+- E0 = malloc(*E1 * sizeof(MPI_Datatype )); 
+- if (E0 == (MPI_Datatype *)NULL)  
++ E0 = malloc(*E1 * (sizeof(MPI_Datatype ) + sizeof(MPI_Aint ))); 
++ if (NULL == E0)  
+  {
+- *E2 = MPI_ERR_INTERN; 
+- return; 
+- }
+- E3 = malloc(*E1 * sizeof(MPI_Aint )); 
+- if (E3 == (MPI_Aint *)NULL)  
+- {
+- *E2 = MPI_ERR_INTERN; 
++ *E2 = OMPI_ERRHANDLER_INVOKE(MPI_COMM_WORLD, MPI_ERR_NO_MEM, FUNC_NAME); 
+  ...
+  }
++ E3 = (MPI_Aint *)E0 + *E1; 
+  ...
+- if (*E2 == MPI_SUCCESS)  
++ if (MPI_SUCCESS == *E2)  
+  {
+  ...
+  }
+  ...
+- free(E3); 
+// Infered from: (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_struct_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_struct_f.c}: mpi_type_struct_f)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

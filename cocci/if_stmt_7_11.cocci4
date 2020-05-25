@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (0 == ompi_rte_compare_name_fields(E0->super.proc_name, &E1->peer,  OMPI_RTE_CMP_ALL) && 0 == strcmp(  E1->sm_file.file_name, E2->file_name))  
++ if (0 == ompi_rte_compare_name_fields(OMPI_RTE_CMP_ALL, E0->super.proc_name,  &E1->peer) && 0 == strcmp(E1->sm_file.file_name,  E2->file_name))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_b95537_bbc3d1_ompi#mca#bcol#basesmuma#bcol_basesmuma_smcm.c,revFiles/b95537_bbc3d1_ompi#mca#bcol#basesmuma#bcol_basesmuma_smcm.c}: bcol_basesmuma_smcm_allgather_connection)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- mimesetstate(&E0->state,  E0->flags & MIME_BODY_ONLY ? MIMESTATE_BODY :MIMESTATE_CURLHEADERS,  E0->curlheaders); 
++ mimesetstate(&E0->state,  (E0->flags & MIME_BODY_ONLY) ? MIMESTATE_BODY :MIMESTATE_CURLHEADERS,  E0->curlheaders); 
+// Infered from: (curl/{prevFiles/prev_6b3dde_5f8b9f_lib#mime.c,revFiles/6b3dde_5f8b9f_lib#mime.c}: readback_part)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

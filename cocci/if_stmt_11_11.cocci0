@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->pipe)  
++ if (E0->pipe && E0->pipe->read_length)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_7a7650_c63b82_src#http#ngx_http_upstream.c,revFiles/7a7650_c63b82_src#http#ngx_http_upstream.c}: ngx_http_upstream_finalize_request)
+// False positives: (nginx/revFiles/ad0d2f_bd9eda_src#http#ngx_http_upstream.c: ngx_http_upstream_finalize_request)
+// Recall: 0.06, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

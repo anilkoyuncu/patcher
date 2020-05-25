@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef specific_config;
+@@
+- E0->config_storage = malloc(srv->config_context->used * sizeof(specific_config *)); 
++ E0->config_storage = calloc(1,  srv->config_context->used * sizeof(specific_config *)); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_simple_vhost.c,revFiles/bac921_2bc237_src#mod_simple_vhost.c}: SETDEFAULTS_FUNC)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

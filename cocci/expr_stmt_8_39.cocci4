@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->i_ttl == 0)  
++ if (E0->i_ttl == -1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_9e406b_c46a62_modules#stream_out#rtp.c,revFiles/9e406b_c46a62_modules#stream_out#rtp.c}: Open)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,32 @@
+@@
+expression E0, E2, E1;
+@@
+- if ((E0 >=  0) &&  (E0 <=  E1))  
++ if (E0 <=  E1)  
+  {
+- E2 = "Reserved for international use"; 
++ E2 = "Reserved for international use"; 
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_627013_8a637c_epan#dissectors#packet-gsm_a_bssmap.c,revFiles/627013_8a637c_epan#dissectors#packet-gsm_a_bssmap.c}: be_cause)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_1b27d7_37a05a_hw#ivshmem.c: ivshmem_io_writel
+*/
+
+// ---------------------------------------------

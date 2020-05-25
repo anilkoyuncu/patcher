@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (**E0 != '-' || !*E0[1])  
++ if (**E0 != '-' || !(*E0)[1])  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_abf840_27f3b6_ssl#ssl_conf.c,revFiles/abf840_27f3b6_ssl#ssl_conf.c}: ssl_conf_cmd_skip_prefix)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

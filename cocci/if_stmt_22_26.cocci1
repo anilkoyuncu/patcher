@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 < E1->width * E1->height * E2 / E3)  
++ if (E0 < FFALIGN(E1->width, E3) * FFALIGN(E1->height, E3) * E2 / E3)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_9caa94_a105f5_libavcodec#dxtory.c,revFiles/9caa94_a105f5_libavcodec#dxtory.c}: dxtory_decode_v1_420)
+// False positives: (FFmpeg/revFiles/76b6f4_9caa94_libavcodec#dxtory.c: dxtory_decode_v1_410), (FFmpeg/revFiles/9caa94_a105f5_libavcodec#dxtory.c: dxtory_decode_v1_410)
+// Recall: 0.75, Precision: 0.50, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_9caa94_a105f5_libavcodec#dxtory.c: dxtory_decode_v1_410
+*/
+
+// ---------------------------------------------

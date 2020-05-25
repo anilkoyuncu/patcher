@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- mnd_efree(E0->result); 
+// Infered from: (php-src/{prevFiles/prev_f365d0_a78adce_ext#mysqlnd#mysqlnd_ps.c,revFiles/f365d0_a78adce_ext#mysqlnd#mysqlnd_ps.c}: mysqlnd_stmt_prepare_read_eof)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.36, Precision: 1.00
+// -- Node Change --
+// Recall: 0.28, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/14(35%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_7360dc_a3bbec_modules#codec#avcodec#subtitle.c: InitSubtitleDec
+ - vlc/prevFiles/prev_90a65e_20990b_modules#codec#faad#decoder.c: InitThread
+ - vlc/prevFiles/prev_851369_c6ca37_modules#demux#playlist#asx.c: ASXToXML
+ - curl/prevFiles/prev_c5eabd_11219b_lib#curl_ntlm_msgs.c: Curl_ntlm_create_type1_message
+ - wireshark/prevFiles/prev_946366_da4210_gtk#voip_calls.c: RTP_packet_draw
+ - wireshark/prevFiles/prev_88dd7e_68c956_ui#tap_export_pdu.c: export_pdu_packet
+ - vlc/prevFiles/prev_1617e9_b31705_modules#misc#gnutls.c: OpenServer
+ - linux/prevFiles/prev_17fb761_7ed291_drivers#staging#vt6656#main_usb.c: device_alloc_bufs
+*/
+
+// ---------------------------------------------

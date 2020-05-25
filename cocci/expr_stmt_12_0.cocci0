@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- PyOS_snprintf(E0, sizeof(E0), "/mp%d-%d", getpid(), E1++); 
++ PyOS_snprintf(E0, sizeof(E0), "/mp%ld-%d", (long )getpid(), E1++); 
+// Infered from: (cpython/{prevFiles/prev_c7f4af_e194dd_Modules#_multiprocessing#semaphore.c,revFiles/c7f4af_e194dd_Modules#_multiprocessing#semaphore.c}: semlock_new), (cpython/{prevFiles/prev_8d4a93_2b4cb9_Modules#_multiprocessing#semaphore.c,revFiles/8d4a93_2b4cb9_Modules#_multiprocessing#semaphore.c}: semlock_new), (cpython/{prevFiles/prev_7e7a3a_277896_Modules#_multiprocessing#semaphore.c,revFiles/7e7a3a_277896_Modules#_multiprocessing#semaphore.c}: semlock_new)
+// Recall: 0.19, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

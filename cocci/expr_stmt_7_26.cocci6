@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2;
+typedef wchar_t;
+@@
+- wmemcpy(E0->s + E0->length, (wchar_t *)E1, E2); 
++ wmemcpy(E0->s + E0->length, (const  wchar_t *)E1, E2); 
+// Infered from: (libarchive/{prevFiles/prev_97d9cd_bf6fc3_libarchive#archive_string.c,revFiles/97d9cd_bf6fc3_libarchive#archive_string.c}: archive_wstring_append_from_mbs_in_codepage)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.71
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_f6c5cf_37c928_epan#dissectors#packet-sdp.c: dissect_sdp_session_attribute
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_a75210_2c103b_epan#dissectors#packet-hdcp.c: proto_register_hdcp
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_f6c5cf_37c928_epan#dissectors#packet-sdp.c: dissect_sdp_media_attribute
+*/
+
+// ---------------------------------------------

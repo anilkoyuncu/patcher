@@ -1,0 +1,15 @@
+@@
+expression E0, E2, E1;
+@@
+- if (E0)  
+- {
+- E1 += ff_id3v2_tag_len(E1); 
+- }
+- if (E2)  
+- {
+- return 0; 
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_6612d8_113685_libavformat#tta.c,revFiles/6612d8_113685_libavformat#tta.c}: tta_probe)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- tcg_out_st(E0, TCG_TYPE_PTR, E1, TCG_REG_ESP, 0); 
++ tcg_out_st(E0, TCG_TYPE_PTR, E1, TCG_REG_ESP, TCG_TARGET_CALL_STACK_OFFSET); 
+// Infered from: (qemu/{prevFiles/prev_0b9196_e00fcfe_tcg#i386#tcg-target.c,revFiles/0b9196_e00fcfe_tcg#i386#tcg-target.c}: tcg_out_qemu_st_slow_path)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

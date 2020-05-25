@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E3, E4, E5, E0, E1;
+@@
+- E0 = request_irq(E1, &I2, E3, E4->name, E5); 
++ E0 = request_irq(E1, I2, E3, E4->name, E5); 
+// Infered from: (linux/{prevFiles/prev_a0607f_2939e27_drivers#net#igb#igb_main.c,revFiles/a0607f_2939e27_drivers#net#igb#igb_main.c}: igb_request_msix), (linux/{prevFiles/prev_a0607f_2939e27_drivers#net#igb#igb_main.c,revFiles/a0607f_2939e27_drivers#net#igb#igb_main.c}: igb_request_msix), (linux/{prevFiles/prev_a0607f_2939e27_drivers#net#igb#igb_main.c,revFiles/a0607f_2939e27_drivers#net#igb#igb_main.c}: igb_request_irq), (linux/{prevFiles/prev_a0607f_2939e27_drivers#net#igb#igb_main.c,revFiles/a0607f_2939e27_drivers#net#igb#igb_main.c}: igb_request_irq)
+// Recall: 0.80, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

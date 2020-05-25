@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while ((1 << E0) < E1)  
++ while ((1U << E0) < E1)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_660a09_20d533_Zend#zend_hash.c,revFiles/660a09_20d533_Zend#zend_hash.c}: zend_hash_init)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

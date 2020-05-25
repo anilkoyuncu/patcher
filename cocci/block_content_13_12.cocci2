@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- list_del (E0); 
+- list_add_tail (E0, E1); 
++ list_move_tail(E0, E1); 
+// Infered from: (linux/{prevFiles/prev_027c52_49b5582_drivers#usb#host#fhci-sched.c,revFiles/027c52_49b5582_drivers#usb#host#fhci-sched.c}: move_head_to_tail)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

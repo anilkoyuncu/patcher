@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = (E1 * 3600 + E2 * 60 + E3) * 100 + E4; 
++ E0 = (E1 * 3600LL + E2 * 60LL + E3) * 100LL + E4; 
+// Infered from: (FFmpeg/{prevFiles/prev_1ea3c0_044c0e_libavformat#subviewerdec.c,revFiles/1ea3c0_044c0e_libavformat#subviewerdec.c}: read_ts), (FFmpeg/{prevFiles/prev_1ea3c0_044c0e_libavformat#subviewerdec.c,revFiles/1ea3c0_044c0e_libavformat#subviewerdec.c}: read_ts)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

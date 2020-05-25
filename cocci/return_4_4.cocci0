@@ -1,0 +1,8 @@
+@@
+@@
+- return S_IRUGO | S_IWUSR; 
++ return 0644; 
+// Infered from: (linux/{prevFiles/prev_e6ab6e_0f875ac_drivers#hwmon#lm75.c,revFiles/e6ab6e_0f875ac_drivers#hwmon#lm75.c}: lm75_is_visible)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

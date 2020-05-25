@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- BIO_puts(E0, E1); 
++ if (BIO_puts(E0, E1) < 0)  
++ {
++ goto  err; 
++ }
+// Infered from: (openssl/{prevFiles/prev_aa8dfb_e1ca9e_crypto#pem#pem_lib.c,revFiles/aa8dfb_e1ca9e_crypto#pem#pem_lib.c}: get_header_and_data)
+// False positives: (openssl/revFiles/344587_dc6c37_apps#speed.c: print_result)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

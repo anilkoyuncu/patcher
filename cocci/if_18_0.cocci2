@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- if (!E0->img_height || !E0->img_width)  
++ if (!E0->img_height || !E0->img_width || !E0->img_segment_size)  
+  {
+- av_log(E1, AV_LOG_ERROR,  "width or height is invalid and I cannot calculate them from other information\n"); 
++ av_log(E1, AV_LOG_ERROR,  "width or height or segment_size is invalid and I cannot calculate them from other information\n"); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e34ba4_5c7d86_libavformat#mtv.c,revFiles/e34ba4_5c7d86_libavformat#mtv.c}: mtv_read_header)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_793e70_6265ac_tshark.c: main
+*/
+
+// ---------------------------------------------

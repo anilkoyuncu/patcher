@@ -1,0 +1,8 @@
+@@
+@@
+- event_progress_counter = (event_num_mpi_users > 0) ? 1 :event_progress_counter_reset; 
++ event_progress_counter = (event_num_mpi_users > 0) ? 0 :event_progress_counter_reset; 
+// Infered from: (ompi/{prevFiles/prev_aab684_9cbcda_opal#runtime#opal_progress.c,revFiles/aab684_9cbcda_opal#runtime#opal_progress.c}: opal_progress)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

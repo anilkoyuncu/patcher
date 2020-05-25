@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0(E1[E2], E0))  
++ if (E0(E1[E2], &E0))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_23d59b_0fc877_test#util#opal_path_nfs.c,revFiles/23d59b_0fc877_test#util#opal_path_nfs.c}: get_mounts)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

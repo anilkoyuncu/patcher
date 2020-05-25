@@ -1,0 +1,29 @@
+@@
+expression E2, E0, E1;
+@@
+- if (E0->op1_type == IS_UNUSED && E1 && E2)  
+- {
+  ...
+- }
+// Infered from: (php-src/{prevFiles/prev_b867bd_556827_Zend#zend_compile.c,revFiles/b867bd_556827_Zend#zend_compile.c}: zend_compile_static_call)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.25, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_b867bd_556827_ext#opcache#Optimizer#optimize_func_calls.c: zend_optimize_func_calls
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_b867bd_556827_Zend#zend_compile.c: zend_compile_static_call
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- object_property_set_int(OBJECT(&E0->cpus), smp_cpus, "num-harts",  &error_abort); 
++ object_property_set_int(OBJECT(&E0->cpus), ms->smp.cpus, "num-harts",  &error_abort); 
+// Infered from: (qemu/{prevFiles/prev_c44731_fe6b63_hw#riscv#sifive_u.c,revFiles/c44731_fe6b63_hw#riscv#sifive_u.c}: riscv_sifive_u_soc_init), (qemu/{prevFiles/prev_c44731_fe6b63_hw#riscv#sifive_e.c,revFiles/c44731_fe6b63_hw#riscv#sifive_e.c}: riscv_sifive_e_soc_init)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

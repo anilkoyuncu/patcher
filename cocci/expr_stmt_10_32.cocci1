@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- PyObject_FREE (E0); 
++ PyObject_FREE(PyObject_AS_GC(E0)); 
+// Infered from: (cpython/{prevFiles/prev_467a67_5ff2ac_Objects#listobject.c,revFiles/467a67_5ff2ac_Objects#listobject.c}: PyList_New)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

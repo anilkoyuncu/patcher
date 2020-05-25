@@ -1,0 +1,10 @@
+@@
+identifier I0, I1;
+expression E2, E3;
+@@
+- I0 = setup_multiqueue(I1, E2, E3, 1); 
++ setup_multiqueue(I1, E2, E3, 1); 
+// Infered from: (gstreamer/{prevFiles/prev_0e9496_8ba64e_tests#check#elements#multiqueue.c,revFiles/0e9496_8ba64e_tests#check#elements#multiqueue.c}: GST_START_TEST), (gstreamer/{prevFiles/prev_0e9496_8ba64e_tests#check#elements#multiqueue.c,revFiles/0e9496_8ba64e_tests#check#elements#multiqueue.c}: GST_START_TEST)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

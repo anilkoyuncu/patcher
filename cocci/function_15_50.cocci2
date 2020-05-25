@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = create_dissector_handle(dissect_capwap_control, proto_capwap); 
++ E0 = new_create_dissector_handle(dissect_capwap_control, proto_capwap); 
+// Infered from: (wireshark/{prevFiles/prev_654f21_2fb7b4_epan#dissectors#packet-capwap.c,revFiles/654f21_2fb7b4_epan#dissectors#packet-capwap.c}: proto_reg_handoff_capwap)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

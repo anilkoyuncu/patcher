@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef u_widest_int;
+@@
+- if ((E0 <= ULONG_MAX && E1) || (E0 <= LONG_MAX && E0 >= LONG_MIN && !E1))  
++ if (((u_widest_int )E0 <= (u_widest_int )ULONG_MAX && E1) || (E0 <= LONG_MAX && E0 >= LONG_MIN && !E1))  
+  {
+  ...
+  }
+// Infered from: (apr/{prevFiles/prev_9bc946_995806_strings#apr_snprintf.c,revFiles/9bc946_995806_strings#apr_snprintf.c}: conv_10_quad)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

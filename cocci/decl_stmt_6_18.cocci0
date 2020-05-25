@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef oci_descriptor;
+@@
+- oci_descriptor *I0 = *((oci_descriptor **)E1); 
++ oci_descriptor *I0 = *(oci_descriptor **)E1; 
+// Infered from: (php-src/{prevFiles/prev_26332c_6e1516_ext#oci8#oci8.c,revFiles/26332c_6e1516_ext#oci8#oci8.c}: _oci_desc_flush_hash_dtor)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

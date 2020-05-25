@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0 && E1->pp.conn)  
++ if (!E0 && E1->pp.conn && E1->pp.conn->bits.protoconnstart)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_ce6151_86c64f_lib#imap.c,revFiles/ce6151_86c64f_lib#imap.c}: imap_disconnect)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

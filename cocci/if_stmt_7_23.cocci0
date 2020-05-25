@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 && ZEND_HASH_APPLY_PROTECTION(E0))  
+- {
+- ZEND_HASH_INC_APPLY_COUNT(E0); 
+- }
++ PHP_JSON_HASH_APPLY_PROTECTION_INC(E0); 
+  ...
+- if (php_json_encode(E1, E2, E3) == FAILURE && (E3 & PHP_JSON_PARTIAL_OUTPUT_ON_ERROR))  
++ if (php_json_encode(E1, E2, E3) == FAILURE && !(E3 & PHP_JSON_PARTIAL_OUTPUT_ON_ERROR))  
+  {
++ PHP_JSON_HASH_APPLY_PROTECTION_DEC(E0); 
+  ...
+  }
+- if (E0 && ZEND_HASH_APPLY_PROTECTION(E0))  
+- {
+- ZEND_HASH_DEC_APPLY_COUNT(E0); 
+- }
++ PHP_JSON_HASH_APPLY_PROTECTION_DEC(E0); 
+// Infered from: (php-src/{prevFiles/prev_df05db_12a8c3_ext#json#json_encoder.c,revFiles/df05db_12a8c3_ext#json#json_encoder.c}: php_json_encode_array)
+// Recall: 0.24, Precision: 1.00, Matching recall: 0.78
+
+// ---------------------------------------------

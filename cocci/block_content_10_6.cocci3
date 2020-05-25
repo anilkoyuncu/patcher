@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- long I0; 
++ int I0; 
+  ...
+- I0 = strtol(E1, &E2, 10); 
++ I0 = (int )strtol(E1, &E2, 10); 
+// Infered from: (wireshark/{prevFiles/prev_41a856_8fe2c2_mergecap.c,revFiles/41a856_8fe2c2_mergecap.c}: get_natural_int)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+expression E1, E0, E2, E3, E4, E5;
+@@
+- gtk_size_request_get_width(E0, E1, E2); 
+- gtk_size_request_get_height_for_width(E0, E3, E4, E5); 
++ GTK_SIZE_REQUEST_GET_IFACE(E0)->get_width(E0, E1, E2); 
++ GTK_SIZE_REQUEST_GET_IFACE(E0)->get_height_for_width(E0, E3, E4, E5); 
+// Infered from: (gtk/{prevFiles/prev_c29f0a_8960d6_gtk#gtkmenu.c,revFiles/c29f0a_8960d6_gtk#gtkmenu.c}: gtk_menu_get_height)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

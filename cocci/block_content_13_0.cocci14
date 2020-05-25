@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = ep_alloc(E1); 
++ E0 = se_alloc(E1); 
+// Infered from: (wireshark/{prevFiles/prev_a92bbb_e2c9d0_epan#dissectors#packet-bthci_acl.c,revFiles/a92bbb_e2c9d0_epan#dissectors#packet-bthci_acl.c}: dissect_bthci_acl), (wireshark/{prevFiles/prev_a92bbb_e2c9d0_epan#dissectors#packet-bthci_acl.c,revFiles/a92bbb_e2c9d0_epan#dissectors#packet-bthci_acl.c}: dissect_bthci_acl)
+// False positives: (wireshark/revFiles/a92bbb_e2c9d0_epan#dissectors#packet-bthci_acl.c: dissect_bthci_acl)
+// Recall: 0.05, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

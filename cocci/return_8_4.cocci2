@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return php_stream_free(E0,  (E1 | PHP_STREAM_FREE_CALL_DTOR) & ~PHP_STREAM_FREE_RSRC_DTOR); 
++ return php_stream_free(E0,  (E1 | PHP_STREAM_FREE_CALL_DTOR | PHP_STREAM_FREE_KEEP_RSRC) & ~PHP_STREAM_FREE_RSRC_DTOR); 
+// Infered from: (php-src/{prevFiles/prev_6fcc71_112eda7_main#streams#streams.c,revFiles/6fcc71_112eda7_main#streams#streams.c}: _php_stream_free)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

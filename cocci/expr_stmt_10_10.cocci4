@@ -1,0 +1,10 @@
+@@
+identifier I1 = {ROUNDED_DIV ,RSHIFT };
+expression E0, E2, E4, E3;
+@@
+- E0 = I1(E2 << E3, E4); 
++ E0 = I1(E2 * (1 << E3), E4); 
+// Infered from: (FFmpeg/{prevFiles/prev_3be27e_25d301_libavcodec#mpegvideo_enc.c,revFiles/3be27e_25d301_libavcodec#mpegvideo_enc.c}: ff_convert_matrix), (FFmpeg/{prevFiles/prev_6179dc_92188c8_libavcodec#mpeg4videodec.c,revFiles/6179dc_92188c8_libavcodec#mpeg4videodec.c}: get_amv)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

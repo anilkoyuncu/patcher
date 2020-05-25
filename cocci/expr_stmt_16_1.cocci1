@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = pixman_image_get_width(E1->guest.fb) * ((E2 + 7) / 8); 
++ E0 = pixman_image_get_width(E1->guest.fb) * (DIV_ROUND_UP(E2, 8)); 
+// Infered from: (qemu/{prevFiles/prev_659c90_78ee96_ui#vnc.c,revFiles/659c90_78ee96_ui#vnc.c}: vnc_refresh_server_surface)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

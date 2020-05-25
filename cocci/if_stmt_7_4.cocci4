@@ -1,0 +1,41 @@
+@@
+identifier I0;
+expression E1;
+@@
+- char *I0 = emalloc(E1 + 1); 
++ char *I0; 
++ if (E1 <= 0)  
++ {
++ return 0; 
++ }
++ I0 = emalloc(E1 + 1); 
+  ...
+- if (!E1)  
+- {
+- return 0; 
+- }
+// Infered from: (php-src/{prevFiles/prev_d0e2e6_ba2f82_ext#standard#string.c,revFiles/d0e2e6_ba2f82_ext#standard#string.c}: php_tag_find)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.47, Precision: 1.00
+// -- Node Change --
+// Recall: 0.52, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/15(46%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_5f9cba_425c30_libavfilter#libmpcodecs#vf_divtc.c: analyze
+ - openssl/prevFiles/prev_9920a5_bc8857_apps#s_server.c: wait_for_async
+ - qemu/prevFiles/prev_6a2331_133e70_hw#moxie#moxiesim.c: load_kernel
+ - FFmpeg/prevFiles/prev_b2a431_81eff6_doc#examples#decoding_encoding.c: audio_encode_example
+ - FFmpeg/prevFiles/prev_d8716e_07ffe9_libavformat#vividas.c: read_vblock
+ - FFmpeg/prevFiles/prev_bd8201_477ba8_libavformat#libopenmpt.c: read_header_openmpt
+ - libtiff/prevFiles/prev_045fa6_823a77_tools#fax2ps.c: printruns
+ - vlc/prevFiles/prev_2f04d3_2e6a04_src#input#input_ext-plugins.c: input_SplitBuffer
+*/
+
+// ---------------------------------------------

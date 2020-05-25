@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == DBDMA_CMDPTR_LO && (E1->regs[DBDMA_STATUS] & (RUN | ACTIVE)))  
++ if (E0 == DBDMA_CMDPTR_LO && (E1->regs[DBDMA_STATUS] & ACTIVE))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_7eaba8_58c0c3_hw#misc#macio#mac_dbdma.c,revFiles/7eaba8_58c0c3_hw#misc#macio#mac_dbdma.c}: dbdma_write)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef avs_block_type_t;
+@@
+- avs_block_type_t I0 = 0; 
++ avs_block_type_t I0 = AVS_NONE; 
+// Infered from: (FFmpeg/{prevFiles/prev_696c30_e3227b_libavformat#avs.c,revFiles/696c30_e3227b_libavformat#avs.c}: avs_read_packet)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

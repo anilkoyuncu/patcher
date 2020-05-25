@@ -1,0 +1,20 @@
+@@
+expression E0;
+typedef ngx_event_t;
+@@
+- ngx_memcpy(E0, event_list, sizeof(ngx_event_t *) * nevents); 
++ ngx_memcpy(E0, event_list, sizeof(struct pollfd ) * nevents); 
+// Infered from: (nginx/{prevFiles/prev_3dcad9_12645b_src#event#modules#ngx_poll_module.c,revFiles/3dcad9_12645b_src#event#modules#ngx_poll_module.c}: ngx_poll_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

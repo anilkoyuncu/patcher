@@ -1,0 +1,41 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef php_struct;
+typedef request_rec;
+@@
+  void php_apache_request_ctor(request_rec *I0, php_struct *I1)  
+  {
+  ...
+- E2 = (char *)apr_table_get(f->r->headers_in, "Content-Length"); 
++ E2 = (char *)apr_table_get(I0->headers_in, "Content-Length"); 
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_815fe8_816d15_sapi#apache2handler#sapi_apache2.c,revFiles/815fe8_816d15_sapi#apache2handler#sapi_apache2.c}: php_apache_request_ctor)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.78, Precision: 0.78
+// -- Node Change --
+// Recall: 0.69, Precision: 0.82
+// -- General --
+// Functions fully changed: 6/11(54%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_59477f_81852b6_drivers#gpu#drm#arm#malidp_planes.c: malidp_de_plane_check
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_c83dd2_96a06d_libavformat#rtpenc_mpegts.c: rtp_mpegts_write_header
+ - ompi/prevFiles/prev_7dabc7_55948f_ompi#mca#bml#r2#bml_r2.c: mca_bml_r2_add_procs
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_5bb50c_813cc7_libavformat#movenc.c: mov_write_tapt_tag
+ - FFmpeg/prevFiles/prev_fffdee_0300db_libavformat#movenc.c: mov_write_tapt_tag
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef track_t;
+@@
+- const  track_t I0 = E1->i_track + E2; 
++ const  track_t I0 = E1->i_first_track + E2; 
+// Infered from: (vlc/{prevFiles/prev_18e1ef_108fc2_modules#access#cdda#access.c,revFiles/18e1ef_108fc2_modules#access#cdda#access.c}: CDDAControl)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

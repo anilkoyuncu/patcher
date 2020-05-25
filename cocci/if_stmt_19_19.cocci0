@@ -1,0 +1,13 @@
+@@
+identifier I1;
+expression E0;
+@@
+- if (pci_get_word(E0->config + PCI_CLASS_DEVICE) == I1)  
++ if (pci_get_word(E0->config + PCI_CLASS_DEVICE) == I1 && strcmp(E0->name,  "xen-pci-passthrough") != 0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_bd4982_e744c0_hw#xen_platform.c,revFiles/bd4982_e744c0_hw#xen_platform.c}: unplug_nic), (qemu/{prevFiles/prev_bd4982_e744c0_hw#xen_platform.c,revFiles/bd4982_e744c0_hw#xen_platform.c}: unplug_disks)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

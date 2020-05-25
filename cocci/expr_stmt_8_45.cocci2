@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef int64_t;
+@@
+- E0 = (E1 + 1) * E2->lowdelay.bytes.num / E2->lowdelay.bytes.den - E1 * E2->lowdelay.bytes.num / E2->lowdelay.bytes.den; 
++ E0 = (E1 + 1) * (int64_t )E2->lowdelay.bytes.num / E2->lowdelay.bytes.den - E1 * (  int64_t )E2->lowdelay.bytes.num / E2->lowdelay.bytes.den; 
+// Infered from: (FFmpeg/{prevFiles/prev_7ecfe4_7494b4_libavcodec#diracdec.c,revFiles/7ecfe4_7494b4_libavcodec#diracdec.c}: decode_lowdelay)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->h_aliases = malloc((E1 + 1) * sizeof(char *)); 
++ E0->h_aliases = malloc((((size_t )E1) + 1) * sizeof(char *)); 
+// Infered from: (curl/{prevFiles/prev_4798f4_b38e28_ares#ares__get_hostent.c,revFiles/4798f4_b38e28_ares#ares__get_hostent.c}: ares__get_hostent)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

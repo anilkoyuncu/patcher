@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- return PyObject_CallFunction(PyExc_UnicodeTranslateError, "Ons", E0, E1, E2,  E3); 
++ return PyObject_CallFunction(PyExc_UnicodeTranslateError, "Onns", E0, E1, E2,  E3); 
+// Infered from: (cpython/{prevFiles/prev_d129ee_3253fb_Objects#exceptions.c,revFiles/d129ee_3253fb_Objects#exceptions.c}: _PyUnicodeTranslateError_Create), (cpython/{prevFiles/prev_69598d_511e22_Objects#exceptions.c,revFiles/69598d_511e22_Objects#exceptions.c}: _PyUnicodeTranslateError_Create)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

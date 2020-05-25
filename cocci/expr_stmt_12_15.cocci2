@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0->maxdata = (1 << E1) - 1; 
++ E0->maxdata = BIT(E1) - 1; 
+// Infered from: (linux/{prevFiles/prev_557e361_9a3aeb_drivers#staging#comedi#drivers#ni_daq_700.c,revFiles/557e361_9a3aeb_drivers#staging#comedi#drivers#ni_daq_700.c}: daq700_auto_attach), (linux/{prevFiles/prev_557e361_9a3aeb_drivers#staging#comedi#drivers#ni_mio_common.c,revFiles/557e361_9a3aeb_drivers#staging#comedi#drivers#ni_mio_common.c}: ni_E_init)
+// False positives: (linux/revFiles/557e361_9a3aeb_drivers#staging#comedi#drivers#ni_mio_common.c: caldac_setup)
+// Recall: 0.18, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

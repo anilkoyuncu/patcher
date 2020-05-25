@@ -1,0 +1,8 @@
+@@
+identifier I0;
+@@
+- sprintf(I0, "ISO-8859-1"); 
+// Infered from: (vlc/{prevFiles/prev_711b34_f22bfe_modules#codec#subsdec.c,revFiles/711b34_f22bfe_modules#codec#subsdec.c}: OpenDecoder)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.12
+
+// ---------------------------------------------

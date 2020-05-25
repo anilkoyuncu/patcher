@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 & CLIENTWRITE_HEADER) && E1->writeheader)  
++ if ((E0 & CLIENTWRITE_HEADER) && (E1->fwrite_header || E1->writeheader))  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_944f9a_5ab1a1_lib#sendf.c,revFiles/944f9a_5ab1a1_lib#sendf.c}: Curl_client_write)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- int I0 = 0; 
++ size_t I0 = 0; 
+// Infered from: (git/{prevFiles/prev_8a912b_292441_pkt-line.c,revFiles/8a912b_292441_pkt-line.c}: safe_read), (git/{prevFiles/prev_8a912b_292441_builtin-fetch--tool.c,revFiles/8a912b_292441_builtin-fetch--tool.c}: get_stdin)
+// False positives: (git/revFiles/8a912b_292441_builtin-fetch--tool.c: cmd_fetch__tool), (git/revFiles/8a912b_292441_builtin-fetch--tool.c: expand_refs_wildcard), (git/revFiles/8a912b_292441_builtin-fetch--tool.c: fetch_native_store), (git/revFiles/8a912b_292441_builtin-fetch--tool.c: pick_rref)
+// Recall: 0.50, Precision: 0.25, Matching recall: 0.50
+
+// ---------------------------------------------

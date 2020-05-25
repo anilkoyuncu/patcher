@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- gtk_snapshot_init(&E0, E1, gdk_drawing_context_get_clip(E2), "Render<%s>",  G_OBJECT_TYPE_NAME(E3)); 
++ clip = gdk_drawing_context_get_clip(E2); 
++ gtk_snapshot_init(&E0, E1, clip, "Render<%s>", G_OBJECT_TYPE_NAME(E3)); 
++ cairo_region_destroy(clip); 
+// Infered from: (gtk/{prevFiles/prev_3d5173_dd1cf1_gtk#gtkwidget.c,revFiles/3d5173_dd1cf1_gtk#gtkwidget.c}: gtk_widget_render)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/9(11%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_855fee_c2f661_gtk#tests#filtermodel.c: create_tree_store_set_values
+ - wireshark/prevFiles/prev_2009dc_03a888_extcap#randpktdump.c: main
+ - wireshark/prevFiles/prev_2009dc_03a888_extcap#sshdump.c: main
+ - gtk/prevFiles/prev_3d5173_dd1cf1_gtk#gtkwidget.c: gtk_widget_render
+ - wireshark/prevFiles/prev_2009dc_03a888_extcap#ciscodump.c: main
+ - gtk/prevFiles/prev_2df617_1f2ed3_gtk#gtkclipboard-wayland.c: gtk_clipboard_wayland_request_contents
+ - wireshark/prevFiles/prev_2009dc_03a888_extcap#udpdump.c: main
+ - qemu/prevFiles/prev_696b55_1a5512_backends#hostmem-file.c: file_backend_memory_alloc
+*/
+
+// ---------------------------------------------

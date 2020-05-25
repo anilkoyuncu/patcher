@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (compare_ether_addr(E0->addr3, E1->common.curbssid) || !E1->common.curaid)  
++ if (!ether_addr_equal(E0->addr3, E1->common.curbssid) || !E1->common.curaid)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_2e42e4_39f1d94_drivers#net#wireless#ath#carl9170#rx.c,revFiles/2e42e4_39f1d94_drivers#net#wireless#ath#carl9170#rx.c}: carl9170_ps_beacon)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

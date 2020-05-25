@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = spapr_build_fdt(E1, E2, E1->rtas_size); 
++ E0 = spapr_build_fdt(E1); 
+// Infered from: (qemu/{prevFiles/prev_df2692_ce6fc6_hw#ppc#spapr.c,revFiles/df2692_ce6fc6_hw#ppc#spapr.c}: spapr_machine_reset)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_df2692_ce6fc6_hw#ppc#spapr.c: spapr_build_fdt
+*/
+
+// ---------------------------------------------

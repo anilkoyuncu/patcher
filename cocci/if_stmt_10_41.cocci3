@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (fsck_walk(E0, mark_link, 0))  
++ if (fsck_walk(E0, mark_link, NULL))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_2af202_a49eb1_index-pack.c,revFiles/2af202_a49eb1_index-pack.c}: sha1_object)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

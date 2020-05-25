@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0 || E1.track != E0->blocks / E0->spt / 2 || E1.head != 2)  
++ if (E1.track != E0->blocks / E0->spt / 2 || E1.head != 2)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_8f4742_0a09f4_drivers#block#ataflop.c,revFiles/8f4742_0a09f4_drivers#block#ataflop.c}: fd_ioctl)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

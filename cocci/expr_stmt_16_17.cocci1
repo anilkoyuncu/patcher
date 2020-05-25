@@ -1,0 +1,17 @@
+@@
+type T0;
+identifier I1, I3, I5, I7;
+expression E2, E4, E6, E8;
+@@
+- T0 I1 = E2->bus_no; 
+- T0 I3 = 0xff; 
+  ...
+- pci_default_write_config(E4, I5, E6, 1); 
++ pci_default_write_config(E4, PCI_PRIMARY_BUS, pci_dev_bus_num(E4), 1); 
+  ...
+- pci_default_write_config(E4, I7, E8, 1); 
+// Infered from: (qemu/{prevFiles/prev_d30a75_80a7b7_hw#s390x#s390-pci-bus.c,revFiles/d30a75_80a7b7_hw#s390x#s390-pci-bus.c}: s390_pci_enumerate_bridge)
+// False positives: (qemu/revFiles/d30a75_80a7b7_hw#s390x#s390-pci-bus.c: s390_pci_enumerate_bridge)
+// Recall: 0.44, Precision: 0.80, Matching recall: 0.80
+
+// ---------------------------------------------

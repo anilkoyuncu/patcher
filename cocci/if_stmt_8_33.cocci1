@@ -1,0 +1,14 @@
+@@
+expression E6, E7, E0, E1, E2, E3, E4, E5;
+@@
+- E0 = XShapeGetRectangles(E1, E2, E3, &E4, &E5); 
+- if (E6 ||  E7)  
++ E0 = XShapeGetRectangles(E1, E2, E3, &E4, &E5); 
++ if (E7)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_266866_c62a1f_gdk#x11#gdkwindow-x11.c,revFiles/266866_c62a1f_gdk#x11#gdkwindow-x11.c}: _gdk_x11_xwindow_get_shape)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

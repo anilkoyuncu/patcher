@@ -1,0 +1,8 @@
+@@
+@@
+- return !slirp_vc || qemu_can_send_packet(slirp_vc); 
++ return qemu_can_send_packet(slirp_vc); 
+// Infered from: (qemu/{prevFiles/prev_d6cf84_d918f2_net.c,revFiles/d6cf84_d918f2_net.c}: slirp_can_output)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

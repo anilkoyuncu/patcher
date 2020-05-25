@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->info_or_local_file = mnd_pemalloc(E1 + 1, E2->persistent); 
++ E0->info_or_local_file = mnd_emalloc(E1 + 1); 
+// Infered from: (php-src/{prevFiles/prev_c2e668_138891_ext#mysqlnd#mysqlnd_wireprotocol.c,revFiles/c2e668_138891_ext#mysqlnd#mysqlnd_wireprotocol.c}: php_mysqlnd_rset_header_read), (php-src/{prevFiles/prev_4ac04d_4bb911_ext#mysqlnd#mysqlnd_wireprotocol.c,revFiles/4ac04d_4bb911_ext#mysqlnd#mysqlnd_wireprotocol.c}: php_mysqlnd_rset_header_read)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

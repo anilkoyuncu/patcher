@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = E1;;E0++)  
++ for(E0 = E1 + 1;;E0++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_146-B-1147707-1147719.c,revFiles/146-B-1147707-1147719.c}: main)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_252-A-9396191-9396194.c: main
+ - tmux/prevFiles/prev_bed815_297ebb_tty.c: tty_cmd_clearendofscreen
+ - tmux/prevFiles/prev_dcb85f_8fe9ec_tty.c: tty_cmd_clearendofscreen
+*/
+
+// ---------------------------------------------

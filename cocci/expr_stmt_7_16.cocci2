@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- _PHY_PathADDAOn8723B (E0, E1, E2, E3); 
++ _PHY_PathADDAOn8723B (E0, E1, E3); 
+// Infered from: (linux/{prevFiles/prev_5df204_91c458_drivers#staging#rtl8723bs#hal#HalPhyRf_8723B.c,revFiles/5df204_91c458_drivers#staging#rtl8723bs#hal#HalPhyRf_8723B.c}: phy_IQCalibrate_8723B)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

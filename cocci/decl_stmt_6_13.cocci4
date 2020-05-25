@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef bool;
+@@
+- bool I0 = (bool )E1->protocol & PROT_FTP; 
++ bool I0 = (bool )(E1->protocol & PROT_FTP); 
+// Infered from: (curl/{prevFiles/prev_bd7430_6e5acc_lib#url.c,revFiles/bd7430_6e5acc_lib#url.c}: parse_remote_port)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

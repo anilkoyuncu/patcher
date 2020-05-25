@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!_cairo_xcb_connection_acquire(E0->connection))  
++ if (0 && !_cairo_xcb_connection_acquire(E0->connection))  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_e0c0a6_0aa43e_src#cairo-xcb-screen.c,revFiles/e0c0a6_0aa43e_src#cairo-xcb-screen.c}: _cairo_xcb_screen_get_font_options)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

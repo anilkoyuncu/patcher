@@ -1,0 +1,13 @@
+@@
+expression E0;
+typedef time_t;
+@@
+- if (!Curl_meets_timecondition(E0, (time_t )E0->info.filetime))  
++ if (!Curl_meets_timecondition(E0, E0->info.filetime))  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_ddd31d_9409d0_lib#file.c,revFiles/ddd31d_9409d0_lib#file.c}: file_do)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

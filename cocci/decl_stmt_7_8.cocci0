@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- ssl_debug_printf("ssl_create_decoder can't find cipher %s\n",  ciphers[E0->enc - 0x30]); 
++ ssl_debug_printf("ssl_create_decoder can't find cipher %s\n",  ciphers[(E0->enc - 0x30) > 7 ? 7 :(E0->enc - 0x30)]); 
+// Infered from: (wireshark/{prevFiles/prev_6007c3_b1a1101_epan#dissectors#packet-ssl-utils.c,revFiles/6007c3_b1a1101_epan#dissectors#packet-ssl-utils.c}: ssl_create_decoder)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

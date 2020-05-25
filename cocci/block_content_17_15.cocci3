@@ -1,0 +1,27 @@
+@@
+identifier I0;
+typedef CURLcode;
+@@
+- CURLcode I0; 
+// Infered from: (curl/{prevFiles/prev_b06981_528b28_docs#examples#smooth-gtk-thread.c,revFiles/b06981_528b28_docs#examples#smooth-gtk-thread.c}: pull_one_url)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.64, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_b06981_528b28_docs#examples#smooth-gtk-thread.c: create_thread
+*/
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_835d35_29fd67_fips#aes#fips_gcmtest.c: xtstest
+*/
+
+// ---------------------------------------------

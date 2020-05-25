@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef DWORD;
+@@
+- DWORD I0; 
+- if (E1)  
+- {
+- return PyString_FromString(""); 
+- }
+- I0 = WideCharToMultiByte(CP_ACP, 0, E2, E3, NULL, 0, NULL, NULL); 
++ DWORD I0 = WideCharToMultiByte(CP_ACP, 0, E2, E3, NULL, 0, NULL, NULL); 
+// Infered from: (cpython/{prevFiles/prev_4e751c_a6edfd_Objects#unicodeobject.c,revFiles/4e751c_a6edfd_Objects#unicodeobject.c}: PyUnicode_EncodeMBCS)
+// Recall: 0.16, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

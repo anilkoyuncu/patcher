@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- while (E0 - E1 <= E2[E3 - 1])  
++ while (E0 - E1 < E2[E3 - 1])  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_4-B-18023796-18023809.c,revFiles/4-B-18023796-18023809.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

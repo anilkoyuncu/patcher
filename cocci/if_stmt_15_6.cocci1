@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- while (E0 < 2)  
++ while (E0 < 1)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_48d3b9_98ab24_ext#mbstring#php_mbregex.c,revFiles/48d3b9_98ab24_ext#mbstring#php_mbregex.c}: PHP_FUNCTION), (gstreamer/{prevFiles/prev_222587_3de939_tests#check#elements#multiqueue.c,revFiles/222587_3de939_tests#check#elements#multiqueue.c}: GST_START_TEST)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.14, Precision: 1.00
+// -- Node Change --
+// Recall: 0.10, Precision: 0.67
+// -- General --
+// Functions fully changed: 0/22(0%)
+
+/*
+Functions where the patch applied partially:
+ - gstreamer/prevFiles/prev_222587_3de939_tests#check#elements#multiqueue.c: GST_START_TEST
+ - git/prevFiles/prev_2a0925_7b0c99_revision.c: get_revision
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - nginx/prevFiles/prev_7e3041_6351d8_src#event#ngx_event_udp.c: ngx_event_recvmsg
+*/
+
+// ---------------------------------------------

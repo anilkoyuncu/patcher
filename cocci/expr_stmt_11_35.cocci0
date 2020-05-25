@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (E1 - E2->last_frame_time) / gtk_slowdown / E2->duration; 
++ E0 = (E1 - E2->last_frame_time) / gtk_slowdown / MAX(E2->duration, 1); 
+// Infered from: (gtk/{prevFiles/prev_b47ff72_6eead8_gtk#gtkprogresstracker.c,revFiles/b47ff72_6eead8_gtk#gtkprogresstracker.c}: gtk_progress_tracker_advance_frame)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

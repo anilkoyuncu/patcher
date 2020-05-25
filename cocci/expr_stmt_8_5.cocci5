@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef GtkOverlayChild;
+@@
+- E0 = g_slice_new0(GtkOverlayChild ); 
++ E0 = g_new0(GtkOverlayChild , 1); 
+// Infered from: (gtk/{prevFiles/prev_0bb1e1_53410ba_gtk#gtkoverlay.c,revFiles/0bb1e1_53410ba_gtk#gtkoverlay.c}: gtk_overlay_add_overlay)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

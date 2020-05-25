@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (ie_match_stat(E0, E1, &E2, 0))  
++ if (ie_match_stat(E0, E1, &E2, CE_MATCH_RACY_IS_DIRTY))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_7c4ea5_671c9b_preload-index.c,revFiles/7c4ea5_671c9b_preload-index.c}: preload_thread)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

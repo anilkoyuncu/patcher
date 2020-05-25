@@ -1,0 +1,12 @@
+@@
+identifier I1;
+expression list E2;
+type T0;
+typedef DisplayState;
+@@
+- T0 I1 = get_displaystate (E2); 
++ DisplayState *I1; 
+// Infered from: (qemu/{prevFiles/prev_092189_bd5ea5_hw#nseries.c,revFiles/092189_bd5ea5_hw#nseries.c}: n8x0_init)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

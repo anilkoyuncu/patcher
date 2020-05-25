@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "direntry 0x%x: ", (int )E0); 
++ fprintf(stderr, "direntry %p: ", E0); 
+// Infered from: (qemu/{prevFiles/prev_3e89cb_792b45_block#vvfat.c,revFiles/3e89cb_792b45_block#vvfat.c}: print_direntry)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

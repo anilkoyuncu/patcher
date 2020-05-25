@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- dev_info(&E0->dev, "Initialized\n"); 
++ dev_info(dev, "Initialized\n"); 
+// Infered from: (linux/{prevFiles/prev_570927d_6fef817e_drivers#watchdog#rt2880_wdt.c,revFiles/570927d_6fef817e_drivers#watchdog#rt2880_wdt.c}: rt288x_wdt_probe)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.14
+
+// ---------------------------------------------

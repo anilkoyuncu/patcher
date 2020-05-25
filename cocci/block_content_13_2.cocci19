@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- git_config_set_multivar(E0.buf, E1.buf, "^$", 0); 
++ git_config_set_multivar_or_die(E0.buf, E1.buf, "^$", 0); 
+// Infered from: (git/{prevFiles/prev_2ee35c_c397de_builtin#clone.c,revFiles/2ee35c_c397de_builtin#clone.c}: write_refspec_config)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 20 rules):
+// -- Edit Location --
+// Recall: 0.95, Precision: 0.90
+// -- Node Change --
+// Recall: 0.86, Precision: 0.87
+// -- General --
+// Functions fully changed: 18/22(81%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_1831e9_859d6f_modules#access#rtsp#real.c: real_setup_and_get_header
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_13be7d_2025d7_Modules#overlapped.c: ConnectPipe
+ - FFmpeg/prevFiles/prev_0a8ded_97d431_libavformat#oggparsetheora.c: theora_header
+ - cpython/prevFiles/prev_6150f3_ce911c_Modules#overlapped.c: ConnectPipe
+*/
+
+// ---------------------------------------------

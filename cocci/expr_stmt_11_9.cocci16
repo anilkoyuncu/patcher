@@ -1,0 +1,51 @@
+@@
+expression E0, E1;
+@@
+- if (E0->i_dts >= E1->i_pts_start)  
++ E1->i_pts = E0->i_dts; 
++ E0->i_pts += E1->i_time_offset; 
++ E0->i_dts += E1->i_time_offset; 
++ if (E0->i_dts >= E1->i_pts_start + E1->i_time_offset)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+- E1->i_pts = E0->i_dts; 
+// Infered from: (vlc/{prevFiles/prev_069f26_b1cea0_modules#demux#flac.c,revFiles/069f26_b1cea0_modules#demux#flac.c}: Demux)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 17 rules):
+// -- Edit Location --
+// Recall: 0.65, Precision: 0.89
+// -- Node Change --
+// Recall: 0.67, Precision: 0.89
+// -- General --
+// Functions fully changed: 15/28(53%)
+
+/*
+Functions where the patch applied partially:
+ - redis/prevFiles/prev_f6da15_b94742_src#redis-benchmark.c: createClient
+*/
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_f6da15_b94742_src#redis-benchmark.c: 
+ - FFmpeg/prevFiles/prev_a1d4d7_b0c7f5_libavformat#nut.c: nut_write_header
+ - FFmpeg/prevFiles/prev_43fd32_8f0d9b_libavcodec#targa.c: decode_frame
+ - vlc/prevFiles/prev_a29643_2f0387_src#video_output#vout_subpictures.c: SpuRenderText
+ - qemu/prevFiles/prev_6512e3_1c598a_util#main-loop.c: os_host_main_loop_wait
+ - gstreamer/prevFiles/prev_888ab2_42d36b_libs#gst#base#gstcollectpads.c: gst_collect_pads_clip_running_time
+ - vlc/prevFiles/prev_a29643_2f0387_src#video_output#vout_subpictures.c: SpuRenderRegion
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_72872d_c5c355_libswresample#swresample.c: swr_convert
+ - FFmpeg/prevFiles/prev_104dfa_707b21_libavcodec#mpegvideo.c: dct_unquantize_h263_inter_c
+ - FFmpeg/prevFiles/prev_72872d_c5c355_libswresample#swresample.c: resample
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,36 @@
+@@
+identifier I0;
+typedef zstr;
+@@
+- char *I0; 
++ zstr I0; 
+// Infered from: (php-src/{prevFiles/prev_3bc864_17b2f3_ext#com_dotnet#com_variant.c,revFiles/3bc864_17b2f3_ext#com_dotnet#com_variant.c}: safe_array_from_zval), (php-src/{prevFiles/prev_17b2f3_8ac639_ext#xmlrpc#xmlrpc-epi-php.c,revFiles/17b2f3_8ac639_ext#xmlrpc#xmlrpc-epi-php.c}: determine_vector_type)
+// False positives: (php-src/revFiles/17b2f3_8ac639_ext#xmlrpc#xmlrpc-epi-php.c: PHP_FUNCTION), (php-src/revFiles/17b2f3_8ac639_ext#xmlrpc#xmlrpc-epi-php.c: XMLRPC_to_PHP), (php-src/revFiles/638677_b462fc_main#php_sprintf.c: php_sprintf)
+// Recall: 0.31, Precision: 0.31, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 0.67
+// -- Node Change --
+// Recall: 0.69, Precision: 0.46
+// -- General --
+// Functions fully changed: 4/10(40%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_1a0267_ba9f53_gtk#gtksettings.c: update_color_hash
+*/
+/*
+Functions where the patch did not apply:
+ - gstreamer/prevFiles/prev_c00882_24f67f_gst#gstbin.c: gst_bin_get_by_name
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_1a0267_ba9f53_gtk#gtksettings.c: add_color_to_hash
+ - php-src/prevFiles/prev_17b2f3_8ac639_ext#xmlrpc#xmlrpc-epi-php.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_17b2f3_8ac639_ext#xmlrpc#xmlrpc-epi-php.c: XMLRPC_to_PHP
+ - php-src/prevFiles/prev_638677_b462fc_main#php_sprintf.c: php_sprintf
+*/
+
+// ---------------------------------------------

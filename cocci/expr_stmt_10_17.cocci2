@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = config_ChainCreate(&E1->psz_osdenc, &E1->p_osd_cfg, strdup("dvbsub")); 
++ E0 = config_ChainCreate(&E1->psz_osdenc, &E1->p_osd_cfg, "dvbsub"); 
+// Infered from: (vlc/{prevFiles/prev_9ae657_cc67f02_modules#stream_out#transcode#transcode.c,revFiles/9ae657_cc67f02_modules#stream_out#transcode#transcode.c}: Open)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

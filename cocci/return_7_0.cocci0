@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return nvenc_print_error(E0, E1, "Cannot initialize the decoder"); 
++ return nvenc_print_error(E0, E1, "InitializeEncoder failed"); 
+// Infered from: (FFmpeg/{prevFiles/prev_cbd84b_da2848_libavcodec#nvenc.c,revFiles/cbd84b_da2848_libavcodec#nvenc.c}: nvenc_setup_encoder)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

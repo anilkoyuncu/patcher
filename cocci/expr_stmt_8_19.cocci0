@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- av_free(E0->streams[E1]); 
++ av_freep(&E0->streams[E1]); 
+// Infered from: (FFmpeg/{prevFiles/prev_4533d2_18f770_libav#mov.c,revFiles/4533d2_18f770_libav#mov.c}: mov_read_close)
+// False positives: (FFmpeg/revFiles/4533d2_18f770_libav#mov.c: mov_read_header), (FFmpeg/revFiles/f41dd5_9ff18a_ffmpeg.c: main)
+// Recall: 0.02, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

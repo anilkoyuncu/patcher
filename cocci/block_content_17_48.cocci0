@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef ISC_STATUS;
+@@
+- ISC_STATUS *I0 = E1->isc_status; 
+- isc_interprete(E2, &I0); 
++ const  ISC_STATUS *I0 = E1->isc_status; 
++ fb_interpret(E2, sizeof(E2), &I0); 
+// Infered from: (php-src/{prevFiles/prev_6d7093_1157f8_ext#pdo_firebird#firebird_driver.c,revFiles/6d7093_1157f8_ext#pdo_firebird#firebird_driver.c}: pdo_firebird_handle_factory), (php-src/{prevFiles/prev_cc2035_a0bedd_ext#pdo_firebird#firebird_driver.c,revFiles/cc2035_a0bedd_ext#pdo_firebird#firebird_driver.c}: pdo_firebird_handle_factory)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

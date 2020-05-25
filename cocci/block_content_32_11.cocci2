@@ -1,0 +1,28 @@
+@@
+identifier I1, I3;
+expression E2, E0;
+@@
+- set_irq_chip(E0, &I1); 
+- set_irq_chip_data(E0, E2); 
+- set_irq_handler(E0, I3); 
++ irq_set_chip(E0, &I1); 
++ irq_set_chip_data(E0, E2); 
++ irq_set_handler(E0, I3); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-s3c64xx#irq-eint.c,revFiles/6845664a_25a566_arch#arm#mach-s3c64xx#irq-eint.c}: s3c64xx_init_irq_eint)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.43
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_6845664a_25a566_arch#arm#mach-msm#gpio.c: msm_init_gpio
+*/
+
+// ---------------------------------------------

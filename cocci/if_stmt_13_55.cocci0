@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+@@
+  void *I0 = unpack_sha1_file(E1, E2, E3, &E4); 
+  ...
+- munmap(E1, E2); 
++ free(I0); 
+// Infered from: (git/{prevFiles/prev_13019d_705acc_object.c,revFiles/13019d_705acc_object.c}: parse_object)
+// False positives: (git/revFiles/13019d_705acc_object.c: parse_object)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

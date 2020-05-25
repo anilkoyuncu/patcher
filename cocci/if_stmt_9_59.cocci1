@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (OPAL_UNLIKELY(OPAL_ERR_OUT_OF_RESOURCE != E0 || OPAL_ERR_TEMP_OUT_OF_RESOURCE != E0))  
++ if (OPAL_UNLIKELY(OPAL_ERR_OUT_OF_RESOURCE != E0 && OPAL_ERR_TEMP_OUT_OF_RESOURCE != E0))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_97c973_ce8e24_ompi#mca#osc#rdma#osc_rdma_accumulate.c,revFiles/97c973_ce8e24_ompi#mca#osc#rdma#osc_rdma_accumulate.c}: cas_rdma)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

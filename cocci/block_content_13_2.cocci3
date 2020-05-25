@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- set_irq_chip_data(E0, (void *)IS_HW_CLEARED); 
++ irq_set_chip_data(E0, (void *)IS_HW_CLEARED); 
+// Infered from: (linux/{prevFiles/prev_1919d6_6a03513_arch#tile#kernel#irq.c,revFiles/1919d6_6a03513_arch#tile#kernel#irq.c}: tile_irq_activate)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

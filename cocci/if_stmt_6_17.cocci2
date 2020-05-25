@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0 & EXP_PDU_TAG_ORIG_FNO_LEN) == EXP_PDU_TAG_ORIG_FNO_LEN)  
++ if ((E0 & EXP_PDU_TAG_ORIG_FNO_BIT) == EXP_PDU_TAG_ORIG_FNO_BIT)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_732380_eded0e_epan#exported_pdu.c,revFiles/732380_eded0e_epan#exported_pdu.c}: load_export_pdu_tags)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

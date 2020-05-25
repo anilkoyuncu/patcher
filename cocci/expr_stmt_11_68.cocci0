@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->slice_vertical_position = E1->mb_y; 
++ E0->slice_vertical_position = E1->mb_y >> (E1->picture_structure != PICT_FRAME); 
+// Infered from: (FFmpeg/{prevFiles/prev_58e103_9cb150_libavcodec#vaapi_mpeg2.c,revFiles/58e103_9cb150_libavcodec#vaapi_mpeg2.c}: vaapi_mpeg2_decode_slice)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

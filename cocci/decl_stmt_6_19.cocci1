@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef HashTable;
+@@
+- HashTable *I0 = 0; 
++ HashTable *I0 = NULL; 
+// Infered from: (php-src/{prevFiles/prev_2eab21_249d4c_ext#zlib#zlib.c,revFiles/2eab21_249d4c_ext#zlib#zlib.c}: PHP_FUNCTION)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

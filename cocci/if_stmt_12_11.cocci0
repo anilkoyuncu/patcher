@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->filename = g_strdup(E1[1]); 
++ E0->filename = g_strdup(E1[g_strv_length(E1) - 1]); 
+// Infered from: (vlc/{prevFiles/prev_6d6c54_9b587a_modules#mux#mpeg#ts.c,revFiles/6d6c54_9b587a_modules#mux#mpeg#ts.c}: Close), (wireshark/{prevFiles/prev_738c0a_5ecf33_gtk#export_object_smb.c,revFiles/738c0a_5ecf33_gtk#export_object_smb.c}: eo_smb_packet)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

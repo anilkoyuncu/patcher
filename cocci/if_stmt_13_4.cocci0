@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0->s_flags & MS_RDONLY) && !E1->fs_devices->seeding)  
++ if (sb_rdonly(E0) && !E1->fs_devices->seeding)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_bc98a4_94e92e_fs#btrfs#volumes.c,revFiles/bc98a4_94e92e_fs#btrfs#volumes.c}: btrfs_init_new_device)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

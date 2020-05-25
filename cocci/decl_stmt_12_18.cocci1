@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef int64_t;
+@@
+- int64_t I0 = (FFABS(((int64_t )E1 << 17) - E2)) << 13; 
++ int64_t I0 = (FFABS(((int64_t )E1 * (1 << 17)) - E2)) << 13; 
+// Infered from: (FFmpeg/{prevFiles/prev_fa7405_bd4c4c_libswscale#utils.c,revFiles/fa7405_bd4c4c_libswscale#utils.c}: initFilter)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_9037ee_fb9ba9_modules#hw#vdpau#avcodec.c: 
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef demux_t;
+typedef stream_t;
+@@
+- demux_t *I0 = (demux_t *)E1; 
++ stream_t *I0 = (stream_t *)E1; 
+// Infered from: (vlc/{prevFiles/prev_a499fb_e2ced4_modules#demux#playlist#sgimb.c,revFiles/a499fb_e2ced4_modules#demux#playlist#sgimb.c}: Close_SGIMB)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+@@
+- if (s[i] == 'a' && s[i + 1] == 't' && i + 1 != u - 1 && !k)  
+- {
+  ...
+- }
+// Infered from: (codeflaws/{prevFiles/prev_41-C-17917572-17917578.c,revFiles/41-C-17917572-17917578.c}: main)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

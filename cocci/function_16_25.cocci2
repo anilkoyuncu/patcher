@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- addReplyLongLong(E0, zzlLength(E1)); 
++ addReplyLongLong(E0, zsLength(E1)); 
+// Infered from: (redis/{prevFiles/prev_cc4c96_a669d5_src#t_zset.c,revFiles/cc4c96_a669d5_src#t_zset.c}: zcardCommand)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

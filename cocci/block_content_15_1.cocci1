@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- dm_free(E0); 
++ kfree(E0); 
+// Infered from: (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce80#dce80_compressor.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce80#dce80_compressor.c}: dce80_compressor_destroy), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#i2caux#dce80#i2caux_dce80.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#i2caux#dce80#i2caux_dce80.c}: destroy), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#gpio#hw_ddc.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#gpio#hw_ddc.c}: destroy), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#i2caux#diagnostics#i2caux_diag.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#i2caux#diagnostics#i2caux_diag.c}: destroy), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce110#dce110_compressor.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce110#dce110_compressor.c}: dce110_compressor_destroy), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#core#dc_link.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#core#dc_link.c}: link_destroy), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#gpio#hw_hpd.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#gpio#hw_hpd.c}: destroy), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#i2caux#dce110#i2caux_dce110.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#i2caux#dce110#i2caux_dce110.c}: destroy), (linux/{prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce112#dce112_compressor.c,revFiles/2004f4_82b400a_drivers#gpu#drm#amd#display#dc#dce112#dce112_compressor.c}: dce112_compressor_destroy)
+// Recall: 0.59, Precision: 1.00, Matching recall: 0.59
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.98, Precision: 1.00
+// -- General --
+// Functions fully changed: 28/29(96%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_2004f4_82b400a_drivers#gpu#drm#amd#display#dc#core#dc_link.c: link_create
+*/
+
+// ---------------------------------------------

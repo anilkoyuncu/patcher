@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef guint;
+@@
+- wmem_map_insert(dmp_long_id_hash_table, g_strdup(E0),  GUINT_TO_POINTER((guint )dmp.msg_id)); 
++ wmem_map_insert(dmp_long_id_hash_table, wmem_strdup(wmem_file_scope(), E0),  GUINT_TO_POINTER((guint )dmp.msg_id)); 
+// Infered from: (wireshark/{prevFiles/prev_2fecc9_2d8606_epan#dissectors#packet-dmp.c,revFiles/2fecc9_2d8606_epan#dissectors#packet-dmp.c}: dissect_mts_identifier), (wireshark/{prevFiles/prev_2fecc9_2d8606_epan#dissectors#packet-dmp.c,revFiles/2fecc9_2d8606_epan#dissectors#packet-dmp.c}: dissect_ipm_identifier)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

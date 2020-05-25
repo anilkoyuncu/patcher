@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->nor.flash_node = E1; 
++ spi_nor_set_flash_node(&E0->nor, E1); 
+// Infered from: (linux/{prevFiles/prev_9c7d78_637521_drivers#mtd#spi-nor#nxp-spifi.c,revFiles/9c7d78_637521_drivers#mtd#spi-nor#nxp-spifi.c}: nxp_spifi_setup_flash)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

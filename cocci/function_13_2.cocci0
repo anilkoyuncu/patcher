@@ -1,0 +1,11 @@
+@@
+@@
+- while (1)  
++ for(;;)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_1aa320_d17ce4_ares#ahost.c,revFiles/1aa320_d17ce4_ares#ahost.c}: main), (curl/{prevFiles/prev_094afb_1fddcb_tests#server#tftpd.c,revFiles/094afb_1fddcb_tests#server#tftpd.c}: synchnet), (curl/{prevFiles/prev_1aa320_d17ce4_ares#adig.c,revFiles/1aa320_d17ce4_ares#adig.c}: main), (curl/{prevFiles/prev_dc3e7d_1171bc_lib#gtls.c,revFiles/dc3e7d_1171bc_lib#gtls.c}: handshake), (curl/{prevFiles/prev_d1717e_e569ff_lib#connect.c,revFiles/d1717e_e569ff_lib#connect.c}: waitconnect), (curl/{prevFiles/prev_dc3e7d_1171bc_lib#hostares.c,revFiles/dc3e7d_1171bc_lib#hostares.c}: Curl_wait_for_resolv), (curl/{prevFiles/prev_d1717e_e569ff_lib#sendf.c,revFiles/d1717e_e569ff_lib#sendf.c}: Curl_sendf), (curl/{prevFiles/prev_1aa320_d17ce4_ares#ares__read_line.c,revFiles/1aa320_d17ce4_ares#ares__read_line.c}: ares__read_line), (curl/{prevFiles/prev_d1717e_e569ff_lib#ftp.c,revFiles/d1717e_e569ff_lib#ftp.c}: Curl_ftpsendf), (curl/{prevFiles/prev_1aa320_d17ce4_ares#acountry.c,revFiles/1aa320_d17ce4_ares#acountry.c}: wait_ares), (curl/{prevFiles/prev_dc3e7d_1171bc_lib#ssluse.c,revFiles/dc3e7d_1171bc_lib#ssluse.c}: hostmatch)
+// Recall: 0.45, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

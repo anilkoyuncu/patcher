@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- assert((E0->out_num > 0) && (E0->in_num > 0)); 
++ assert(E0->out_num > 0 && E0->in_num > 0); 
+// Infered from: (qemu/{prevFiles/prev_8c36ed_0644fe_contrib#vhost-user-scsi#vhost-user-scsi.c,revFiles/8c36ed_0644fe_contrib#vhost-user-scsi#vhost-user-scsi.c}: vus_proc_req)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

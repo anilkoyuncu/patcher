@@ -1,0 +1,12 @@
+@@
+identifier I1 = {se_alloc ,se_tree_lookup32 };
+expression list E2;
+expression E0;
+typedef hdcp_transaction_t;
+@@
+- E0 = I1(E2); 
++ E0 = (hdcp_transaction_t *)I1(E2); 
+// Infered from: (wireshark/{prevFiles/prev_a75210_2c103b_epan#dissectors#packet-hdcp.c,revFiles/a75210_2c103b_epan#dissectors#packet-hdcp.c}: dissect_hdcp), (wireshark/{prevFiles/prev_a75210_2c103b_epan#dissectors#packet-hdcp.c,revFiles/a75210_2c103b_epan#dissectors#packet-hdcp.c}: dissect_hdcp)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+identifier I0;
+expression E1;
+typedef CURLcode;
+@@
+- CURLcode I0 = CURLE_OK; 
+- I0 = (*E1->set.ssl.fsslctx)(E1, BACKEND->ctx, E1->set.ssl.fsslctxp); 
++ CURLcode I0 = (*E1->set.ssl.fsslctx)(E1, BACKEND->ctx, E1->set.ssl.fsslctxp); 
+// Infered from: (curl/{prevFiles/prev_e23c52_04ac54_lib#vtls#cyassl.c,revFiles/e23c52_04ac54_lib#vtls#cyassl.c}: cyassl_connect_step1)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- printf("%d\n", f[E0][E1][E2] + g[E0][E1][E3]); 
++ printf("%d\n", (f[E0][E1][E2] + g[E0][E1][E3]) % R); 
+// Infered from: (codeflaws/{prevFiles/prev_118-D-746182-746641.c,revFiles/118-D-746182-746641.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

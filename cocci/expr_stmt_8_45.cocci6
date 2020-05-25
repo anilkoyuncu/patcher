@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 -= (E1.tv_sec + E1.tv_usec / 1000000) - (E2.tv_sec + E2.tv_usec / 1000000); 
++ E0 -= (E1.tv_sec + (float )E1.tv_usec / 1000000) - (E2.tv_sec + (float )E2.tv_usec / 1000000); 
+// Infered from: (php-src/{prevFiles/prev_f26715_7949c4_ext#openssl#xp_ssl.c,revFiles/f26715_7949c4_ext#openssl#xp_ssl.c}: php_openssl_enable_crypto)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.70, Precision: 0.70
+// -- Node Change --
+// Recall: 0.68, Precision: 0.68
+// -- General --
+// Functions fully changed: 6/13(46%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_2e134c_5391d8_target-arm#op.c: op_mull_T0_T1
+ - codeflaws/prevFiles/prev_42-A-542240-542248.c: main
+ - vlc/prevFiles/prev_407705_aa3ced_modules#access#rist.c: send_nacks
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_487786_200a06_target-mips#dsp_helper.c: mipsdsp_mul_q15_q15
+ - qemu/prevFiles/prev_487786_200a06_target-mips#dsp_helper.c: mipsdsp_mul_q15_q15_overflowflag21
+ - qemu/prevFiles/prev_487786_200a06_target-mips#dsp_helper.c: mipsdsp_mul_q31_q31
+ - qemu/prevFiles/prev_487786_200a06_target-mips#dsp_helper.c: 
+*/
+
+// ---------------------------------------------

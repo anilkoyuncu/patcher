@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ara[E0[E1]] = 1; 
++ ara[E0[E1] - 97] = 1; 
+// Infered from: (codeflaws/{prevFiles/prev_544-A-15693252-15693377.c,revFiles/544-A-15693252-15693377.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

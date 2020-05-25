@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!graphene_rect_contains_point(gtk_css_boxes_get_padding_rect(&E0),  &GRAPHENE_POINT_INIT(E1, E2)))  
++ if (!gsk_rounded_rect_contains_point(gtk_css_boxes_get_padding_box(&E0),  &GRAPHENE_POINT_INIT(E1, E2)))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_9a1c69_884088_gtk#gtkwidget.c,revFiles/9a1c69_884088_gtk#gtkwidget.c}: gtk_widget_pick)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

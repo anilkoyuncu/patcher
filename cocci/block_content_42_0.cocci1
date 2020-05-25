@@ -1,0 +1,26 @@
+@@
+identifier I0, I4;
+expression E1, E2, E3;
+@@
+- I0 = platform_get_resource(E1, IORESOURCE_MEM, E2); 
+- E3->I4 = devm_ioremap_resource(&E1->dev, I0); 
++ E3->I4 = devm_platform_ioremap_resource(E1, E2); 
+// Infered from: (linux/{prevFiles/prev_4ca334_531fd2_drivers#net#ethernet#broadcom#genet#bcmgenet.c,revFiles/4ca334_531fd2_drivers#net#ethernet#broadcom#genet#bcmgenet.c}: bcmgenet_probe), (linux/{prevFiles/prev_09ef18_89576be_drivers#rtc#rtc-jz4740.c,revFiles/09ef18_89576be_drivers#rtc#rtc-jz4740.c}: jz4740_rtc_probe), (linux/{prevFiles/prev_0f0a6a2_24b822_drivers#watchdog#sprd_wdt.c,revFiles/0f0a6a2_24b822_drivers#watchdog#sprd_wdt.c}: sprd_wdt_probe), (linux/{prevFiles/prev_528e39b_88e478_drivers#iio#adc#exynos_adc.c,revFiles/528e39b_88e478_drivers#iio#adc#exynos_adc.c}: exynos_adc_probe), (linux/{prevFiles/prev_f9d67cd_5f9e83_drivers#clk#bcm#clk-bcm63xx-gate.c,revFiles/f9d67cd_5f9e83_drivers#clk#bcm#clk-bcm63xx-gate.c}: clk_bcm63xx_probe), (linux/{prevFiles/prev_09ef18_89576be_drivers#rtc#rtc-at91sam9.c,revFiles/09ef18_89576be_drivers#rtc#rtc-at91sam9.c}: at91_rtc_probe), (linux/{prevFiles/prev_0f0a6a2_24b822_drivers#watchdog#pic32-wdt.c,revFiles/0f0a6a2_24b822_drivers#watchdog#pic32-wdt.c}: pic32_wdt_drv_probe), (linux/{prevFiles/prev_afac22_e8ad78_drivers#iio#adc#vf610_adc.c,revFiles/afac22_e8ad78_drivers#iio#adc#vf610_adc.c}: vf610_adc_probe), (linux/{prevFiles/prev_6cd4e0_bd74b0_drivers#char#hw_random#tx4939-rng.c,revFiles/6cd4e0_bd74b0_drivers#char#hw_random#tx4939-rng.c}: tx4939_rng_probe), (linux/{prevFiles/prev_0f0a6a2_24b822_drivers#watchdog#pic32-dmt.c,revFiles/0f0a6a2_24b822_drivers#watchdog#pic32-dmt.c}: pic32_dmt_probe), (linux/{prevFiles/prev_e8d63b_7c7c31f_drivers#spi#spi-tegra20-sflash.c,revFiles/e8d63b_7c7c31f_drivers#spi#spi-tegra20-sflash.c}: tegra_sflash_probe), (linux/{prevFiles/prev_4f830a_b6df98_drivers#net#ethernet#freescale#fec_main.c,revFiles/4f830a_b6df98_drivers#net#ethernet#freescale#fec_main.c}: fec_probe), (linux/{prevFiles/prev_bf3484_084fae_drivers#spi#spi-ath79.c,revFiles/bf3484_084fae_drivers#spi#spi-ath79.c}: ath79_spi_probe), (linux/{prevFiles/prev_ad90ff_71200fc_drivers#misc#atmel_tclib.c,revFiles/ad90ff_71200fc_drivers#misc#atmel_tclib.c}: tc_probe), (linux/{prevFiles/prev_ebdd7be_89dd38_sound#soc#xtensa#xtfpga-i2s.c,revFiles/ebdd7be_89dd38_sound#soc#xtensa#xtfpga-i2s.c}: xtfpga_i2s_probe), (linux/{prevFiles/prev_56a5732_21ec86_drivers#clk#samsung#clk-s3c2410-dclk.c,revFiles/56a5732_21ec86_drivers#clk#samsung#clk-s3c2410-dclk.c}: s3c24xx_dclk_probe), (linux/{prevFiles/prev_e7705d2_6231280_drivers#usb#gadget#udc#pxa27x_udc.c,revFiles/e7705d2_6231280_drivers#usb#gadget#udc#pxa27x_udc.c}: pxa_udc_probe), (linux/{prevFiles/prev_1327bfe2_c9dbe6_sound#soc#mxs#mxs-saif.c,revFiles/1327bfe2_c9dbe6_sound#soc#mxs#mxs-saif.c}: mxs_saif_probe), (linux/{prevFiles/prev_89dd38_0fb46f_sound#soc#kirkwood#kirkwood-i2s.c,revFiles/89dd38_0fb46f_sound#soc#kirkwood#kirkwood-i2s.c}: kirkwood_i2s_dev_probe), (linux/{prevFiles/prev_e751032_f601a6_drivers#spi#spi-pic32-sqi.c,revFiles/e751032_f601a6_drivers#spi#spi-pic32-sqi.c}: pic32_sqi_probe), (linux/{prevFiles/prev_9fd7a05_3c60e9_drivers#usb#gadget#udc#pxa27x_udc.c,revFiles/9fd7a05_3c60e9_drivers#usb#gadget#udc#pxa27x_udc.c}: pxa_udc_probe), (linux/{prevFiles/prev_2969c5_29ec12e_drivers#iio#dac#vf610_dac.c,revFiles/2969c5_29ec12e_drivers#iio#dac#vf610_dac.c}: vf610_dac_probe), (linux/{prevFiles/prev_f595f03_fbf127_drivers#staging#clocking-wizard#clk-xlnx-clock-wizard.c,revFiles/f595f03_fbf127_drivers#staging#clocking-wizard#clk-xlnx-clock-wizard.c}: clk_wzrd_probe), (linux/{prevFiles/prev_0f0a6a2_24b822_drivers#watchdog#at91sam9_wdt.c,revFiles/0f0a6a2_24b822_drivers#watchdog#at91sam9_wdt.c}: at91wdt_probe), (linux/{prevFiles/prev_a755008_fa79f2_drivers#spi#spi-sirf.c,revFiles/a755008_fa79f2_drivers#spi#spi-sirf.c}: spi_sirfsoc_probe), (linux/{prevFiles/prev_291f4b_6551c8_drivers#net#dsa#b53#b53_srab.c,revFiles/291f4b_6551c8_drivers#net#dsa#b53#b53_srab.c}: b53_srab_mux_init), (linux/{prevFiles/prev_291f4b_6551c8_drivers#net#dsa#b53#b53_srab.c,revFiles/291f4b_6551c8_drivers#net#dsa#b53#b53_srab.c}: b53_srab_probe)
+// Recall: 0.75, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 126/128(98%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_80d5982_9fd7a05_drivers#usb#gadget#udc#pxa25x_udc.c: pxa25x_udc_probe
+ - linux/prevFiles/prev_6231280_60b646_drivers#usb#gadget#udc#pxa25x_udc.c: pxa25x_udc_probe
+*/
+
+// ---------------------------------------------

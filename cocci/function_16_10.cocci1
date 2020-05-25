@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef DynBuffer;
+@@
+- DynBuffer *I0 = E1->opaque; 
++ DynBuffer *I0; 
+// Infered from: (FFmpeg/{prevFiles/prev_7441d1_0fe690_libavformat#aviobuf.c,revFiles/7441d1_0fe690_libavformat#aviobuf.c}: avio_close_dyn_buf)
+// False positives: (FFmpeg/revFiles/7441d1_0fe690_libavformat#aviobuf.c: ffio_close_null_buf)
+// Recall: 0.04, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- error_report("warning: Unknown firmware file in legacy mode: %s", E0); 
++ warn_report("Unknown firmware file in legacy mode: %s", E0); 
+// Infered from: (qemu/{prevFiles/prev_3dc6f8_97f403_hw#nvram#fw_cfg.c,revFiles/3dc6f8_97f403_hw#nvram#fw_cfg.c}: get_fw_cfg_order)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

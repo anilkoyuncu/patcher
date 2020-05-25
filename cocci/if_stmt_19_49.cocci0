@@ -1,0 +1,21 @@
+@@
+expression E0, E1;
+@@
+- if (E0->overlay.p_video_es && E1 < 2 && E0->overlay.channels[E1] != VOUT_SPU_CHANNEL_INVALID)  
++ if (E0->overlay.p_video_es && E1 < 2 && (ssize_t )E0->overlay.channels[  E1] != VOUT_SPU_CHANNEL_INVALID)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+- assert(E0->overlay.channels[E1] == VOUT_SPU_CHANNEL_INVALID); 
++ assert((ssize_t )E0->overlay.channels[E1] == VOUT_SPU_CHANNEL_INVALID); 
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_edcece_b37b35_modules#access#bluray.c,revFiles/edcece_b37b35_modules#access#bluray.c}: bluray_esOutControl)
+// False positives: (vlc/revFiles/edcece_b37b35_modules#access#bluray.c: bluray_esOutControl)
+// Recall: 0.30, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

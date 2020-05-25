@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = xreallocarray(NULL, E1, sizeof*E0); 
++ E0 = xreallocarray(NULL, E1 + 1, sizeof*E0); 
+// Infered from: (tmux/{prevFiles/prev_8d1372_05d074_status.c,revFiles/8d1372_05d074_status.c}: status_prompt_paste), (tmux/{prevFiles/prev_580cd1_438253_status.c,revFiles/580cd1_438253_status.c}: status_prompt_paste)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

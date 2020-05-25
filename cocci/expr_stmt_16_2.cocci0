@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- pr_err("%s: %s DIV6 clock set to invalid parent %u\n", __func__,  __clk_get_name(E0->clk), E1); 
++ pr_err("%s: %s DIV6 clock set to invalid parent %u\n", __func__,  clk_hw_get_name(E0), E1); 
+// Infered from: (linux/{prevFiles/prev_836ee0_e7df6f6_drivers#clk#shmobile#clk-div6.c,revFiles/836ee0_e7df6f6_drivers#clk#shmobile#clk-div6.c}: cpg_div6_clock_get_parent)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

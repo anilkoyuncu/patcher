@@ -1,0 +1,8 @@
+@@
+@@
+- printf("A32=OPEN-FAILED-%d\n", errno); 
++ printf("A32=OPEN-FAILED-%d", errno); 
+// Infered from: (FFmpeg/{prevFiles/prev_d9cb1e_88e0e2_tools#ffadler.c,revFiles/d9cb1e_88e0e2_tools#ffadler.c}: check)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

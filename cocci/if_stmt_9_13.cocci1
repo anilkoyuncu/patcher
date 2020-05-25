@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((E0 & CMS_STREAM) || CMS_final(E1, E2, E0))  
++ if ((E0 & CMS_STREAM) || CMS_final(E1, E2, NULL, E0))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_c02b6b_3b28bc_crypto#cms#cms_smime.c,revFiles/c02b6b_3b28bc_crypto#cms#cms_smime.c}: CMS_compress)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

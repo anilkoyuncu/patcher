@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->client_exit)  
++ if (E0->client_exit > 0)  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_7be152_d0fa48_cmd-queue.c,revFiles/7be152_d0fa48_cmd-queue.c}: cmdq_continue)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,35 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((E0 = getdefaultproj(E1->pw_name, &E2, &E3, sizeof(E3))) > 0)  
++ if ((E0 = getdefaultproj(E1->pw_name, &E2, &E3, sizeof(E3))) != NULL)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (openssh-portable/{prevFiles/prev_b4e96b_1c4ef0_openbsd-compat#port-solaris.c,revFiles/b4e96b_1c4ef0_openbsd-compat#port-solaris.c}: solaris_set_default_project)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.58, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/12(58%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_01c0d5_91b48c_ext#mbstring#php_mbregex.c: PHP_FUNCTION
+ - nginx/prevFiles/prev_6a2ea3_f57b24_src#http#ngx_http_upstream.c: ngx_http_upstream_server
+ - tcl/prevFiles/prev_5bf945_84ceef_generic#tclMain.c: NewNativeObj
+ - wireshark/prevFiles/prev_8e6050_ae0f13_epan#dissectors#packet-ipsec.c: filter_address_match
+ - linux/prevFiles/prev_0f17380_5e442e_drivers#bus#arm-cci.c: cci_pmu_cpu_notifier
+*/
+
+// ---------------------------------------------

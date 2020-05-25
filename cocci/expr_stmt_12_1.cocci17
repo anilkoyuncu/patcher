@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gst_element_class_add_pad_template(E0, gst_spider_src_template_factory()); 
++ gst_element_class_add_pad_template(E0,  GST_PAD_TEMPLATE_GET(spider_src_factory)); 
+// Infered from: (gstreamer/{prevFiles/prev_55aa16_d2499c_gst#autoplug#gstspider.c,revFiles/55aa16_d2499c_gst#autoplug#gstspider.c}: gst_spider_class_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

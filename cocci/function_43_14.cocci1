@@ -1,0 +1,18 @@
+@@
+expression E0;
+@@
+- E0->stream.i_method = INPUT_METHOD_DVD; 
+// Infered from: (vlc/{prevFiles/prev_0e8b68_5467d3_src#input#input.c,revFiles/0e8b68_5467d3_src#input#input.c}: InitThread)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.43, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+
+// ---------------------------------------------

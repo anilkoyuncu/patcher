@@ -1,0 +1,11 @@
+@@
+@@
+- if (listenToPort(server.port, server.ipfd, &server.ipfd_count) == REDIS_ERR)  
++ if (server.port != 0 && listenToPort(server.port, server.ipfd,  &server.ipfd_count) == REDIS_ERR)  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_7e9433_94e8c9_src#redis.c,revFiles/7e9433_94e8c9_src#redis.c}: initServer)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E1, E2, E0;
+@@
+- E0 = crc64(E1, E2); 
++ E0 = crc64(0, E1, E2); 
+// Infered from: (redis/{prevFiles/prev_467386_736b7c_src#cluster.c,revFiles/467386_736b7c_src#cluster.c}: createDumpPayload), (redis/{prevFiles/prev_467386_736b7c_src#cluster.c,revFiles/467386_736b7c_src#cluster.c}: verifyDumpPayload)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

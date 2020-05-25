@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = qemu_find_file(QEMU_FILE_TYPE_BIOS, "slof.bin"); 
++ E0 = qemu_find_file(QEMU_FILE_TYPE_BIOS, FW_FILE_NAME); 
+// Infered from: (qemu/{prevFiles/prev_687220_827200_hw#spapr.c,revFiles/687220_827200_hw#spapr.c}: ppc_spapr_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

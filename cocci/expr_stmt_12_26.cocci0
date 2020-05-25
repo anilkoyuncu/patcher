@@ -1,0 +1,10 @@
+@@
+expression E1, E0;
+typedef mca_pml_csum_match_hdr_t;
+@@
+- E0.hdr_csum = opal_csum16(E1, sizeof(mca_pml_csum_match_hdr_t )); 
++ E0.hdr_csum = opal_csum16(E1, OMPI_PML_CSUM_MATCH_HDR_LEN); 
+// Infered from: (ompi/{prevFiles/prev_221447_9fd834_ompi#mca#pml#csum#pml_csum_sendreq.c,revFiles/221447_9fd834_ompi#mca#pml#csum#pml_csum_sendreq.c}: mca_pml_csum_send_request_start_copy), (ompi/{prevFiles/prev_221447_9fd834_ompi#mca#pml#csum#pml_csum_sendreq.c,revFiles/221447_9fd834_ompi#mca#pml#csum#pml_csum_sendreq.c}: mca_pml_csum_send_request_start_prepare)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

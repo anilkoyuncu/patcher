@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- archive_clear_error(E0); 
++ archive_clear_error(&E0->archive); 
+// Infered from: (libarchive/{prevFiles/prev_3c2969_818104_libarchive#archive_write.c,revFiles/3c2969_818104_libarchive#archive_write.c}: archive_write_set_format_options), (libarchive/{prevFiles/prev_3c2969_818104_libarchive#archive_write.c,revFiles/3c2969_818104_libarchive#archive_write.c}: archive_write_set_compressor_options)
+// False positives: (libarchive/revFiles/3c2969_818104_libarchive#archive_write.c: _archive_write_data), (libarchive/revFiles/3c2969_818104_libarchive#archive_write.c: _archive_write_header), (libarchive/revFiles/3c2969_818104_libarchive#archive_write.c: archive_write_open)
+// Recall: 0.25, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------

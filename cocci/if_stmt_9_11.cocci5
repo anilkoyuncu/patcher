@@ -1,0 +1,14 @@
+@@
+type T0;
+expression E1;
+@@
+- if (overflow2(sizeof(T0 *), E1))  
++ if (overflow2(sizeof(T0 ), E1))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_c60cda_e3b889_ext#gd#libgd#gd.c,revFiles/c60cda_e3b889_ext#gd#libgd#gd.c}: gdImageCreate)
+// False positives: (php-src/revFiles/c60cda_e3b889_ext#gd#libgd#gd.c: gdImageCreate), (php-src/revFiles/c60cda_e3b889_ext#gd#libgd#gd.c: gdImageCreateTrueColor)
+// Recall: 0.04, Precision: 0.62, Matching recall: 0.83
+
+// ---------------------------------------------

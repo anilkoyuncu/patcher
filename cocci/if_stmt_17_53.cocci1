@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (!E0->first_packet && E0->version != TLS1_3_VERSION && E1 != E0->version)  
++ if (!E0->first_packet && !SSL_IS_TLS13(E0) && E1 != E0->version)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_657a43_86ff6c_ssl#record#ssl3_record.c,revFiles/657a43_86ff6c_ssl#record#ssl3_record.c}: ssl3_get_record)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

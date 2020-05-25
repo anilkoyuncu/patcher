@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->scope)  
++ if (E0->scope && (E0->scope->ce_flags & ZEND_ACC_LINKED))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_488789_5e4c6d_ext#opcache#Optimizer#zend_inference.c,revFiles/488789_5e4c6d_ext#opcache#Optimizer#zend_inference.c}: zend_fetch_static_prop_info)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

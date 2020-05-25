@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 && E0->i_length > 1)  
++ if (E0 && E0->i_length > 1 && E0->p_data[0] == 0x06)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_2db5eb_0f43bb_modules#demux#mpeg#ts_psi.c,revFiles/2db5eb_0f43bb_modules#demux#mpeg#ts_psi.c}: SetupAudioExtendedDescriptors)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

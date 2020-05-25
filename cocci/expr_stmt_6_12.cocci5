@@ -1,0 +1,29 @@
+@@
+expression E0, E1;
+@@
+- gtk_box_pack_end(GTK_BOX(gtk_dialog_get_action_area(E0)), E1->select_button,  FALSE, TRUE, 0); 
++ gtk_dialog_add_action_widget(E0, E1->select_button, GTK_RESPONSE_OK); 
+// Infered from: (gtk/{prevFiles/prev_2bc313_f2cc52_gtk#gtkcolorchooserdialog.c,revFiles/2bc313_f2cc52_gtk#gtkcolorchooserdialog.c}: gtk_color_chooser_dialog_init)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.89, Precision: 0.73
+// -- Node Change --
+// Recall: 0.94, Precision: 0.74
+// -- General --
+// Functions fully changed: 8/12(66%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_2bc313_f2cc52_gtk#gtkcolorchooserdialog.c: selected_cb
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - tcl/prevFiles/prev_d9096d_fc1064_generic#tclCompCmds.c: TclCompileDictMergeCmd
+ - FFmpeg/prevFiles/prev_862c1d_37a558_libavcodec#audioconvert.c: avcodec_sample_fmt_string
+ - tcl/prevFiles/prev_d9096d_fc1064_generic#tclCompCmds.c: CompileDictEachCmd
+*/
+
+// ---------------------------------------------

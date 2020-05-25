@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->segment_count <= E1->nb_frames ? E1->frames[E1->segment_count] :INT_MAX; 
++ E0 = E1->segment_count < E1->nb_frames ? E1->frames[E1->segment_count] :INT_MAX; 
+// Infered from: (FFmpeg/{prevFiles/prev_58e040_354698_libavformat#segment.c,revFiles/58e040_354698_libavformat#segment.c}: seg_write_packet)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

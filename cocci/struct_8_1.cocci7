@@ -1,0 +1,40 @@
+@@
+expression E0, E1, E2;
+@@
+- if (0 == strcmp(myglobals.basename, "mpirun"))  
++ if (0 == strcmp(orte_basename, "mpirun"))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+  ...
+- E0 = opal_show_help_string("help-orterun.txt", "orterun:usage", false,  myglobals.basename, E1, OPAL_VERSION,  myglobals.basename, E2, PACKAGE_BUGREPORT); 
++ E0 = opal_show_help_string("help-orterun.txt", "orterun:usage", false,  orte_basename, E1, OPAL_VERSION, orte_basename,  E2, PACKAGE_BUGREPORT); 
+// Infered from: (ompi/{prevFiles/prev_f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c,revFiles/f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c}: main)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.15
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.87, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c: main
+*/
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_92ab45_7b14c6_gtk#inspector#logs.c: 
+ - gtk/prevFiles/prev_92ab45_7b14c6_gtk#inspector#logs.c: flag_toggled
+ - ompi/prevFiles/prev_f872e9_ef6cf5_orte#tools#orte-dvm#orte-dvm.c: 
+*/
+
+// ---------------------------------------------

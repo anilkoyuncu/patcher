@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->contrast = av_clipf(av_expr_eval(E0->contrast_pexpr, E0->var_values, E0),  -2.0, 2.0); 
++ E0->contrast = av_clipf(av_expr_eval(E0->contrast_pexpr, E0->var_values, E0),  -1000.0, 1000.0); 
+// Infered from: (FFmpeg/{prevFiles/prev_c4dfb7_51925d_libavfilter#vf_eq.c,revFiles/c4dfb7_51925d_libavfilter#vf_eq.c}: set_contrast)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

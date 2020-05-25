@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- E0->optrom_buffer = vmalloc(E0->optrom_region_size); 
++ E0->optrom_buffer = vzalloc(E0->optrom_region_size); 
+  ...
+- memset(E0->optrom_buffer, 0, E0->optrom_region_size); 
+// Infered from: (linux/{prevFiles/prev_055831_d103adb_drivers#scsi#qla2xxx#qla_bsg.c,revFiles/055831_d103adb_drivers#scsi#qla2xxx#qla_bsg.c}: qla2x00_optrom_setup)
+// False positives: (linux/revFiles/055831_d103adb_drivers#scsi#qla2xxx#qla_attr.c: qla2x00_sysfs_write_optrom_ctl)
+// Recall: 0.04, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

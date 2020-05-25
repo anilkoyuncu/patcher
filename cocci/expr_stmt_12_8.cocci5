@@ -1,0 +1,30 @@
+@@
+@@
+- zend_copy_constants(EG(zend_constants), global_constants_table); 
++ zend_copy_constants(EG(zend_constants), &global_main_class.constants_table); 
+// Infered from: (php-src/{prevFiles/prev_71126a_aa0708_Zend#zend.c,revFiles/71126a_aa0708_Zend#zend.c}: zend_post_startup)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.73, Precision: 0.73
+// -- Node Change --
+// Recall: 0.67, Precision: 0.73
+// -- General --
+// Functions fully changed: 8/14(57%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_ded677_c881e2_hw#acpi_piix4.c: acpi_load_old
+ - libarchive/prevFiles/prev_18c0aa_e3b237_libarchive#archive_write_set_format_zip.c: archive_write_zip_options
+ - FFmpeg/prevFiles/prev_e9dc92_3f9257_libavformat#asfdec.c: ff_asf_parse_packet
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - libarchive/prevFiles/prev_3c2969_818104_libarchive#archive_write.c: _archive_write_data
+ - libarchive/prevFiles/prev_3c2969_818104_libarchive#archive_write.c: _archive_write_header
+ - libarchive/prevFiles/prev_3c2969_818104_libarchive#archive_write.c: archive_write_open
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,38 @@
+@@
+expression E1, E2, E0;
+@@
+- Curl_addrinfo_callback(E0, E1, E2); 
++ Curl_addrinfo4_callback(E0, E1, E2); 
+// Infered from: (curl/{prevFiles/prev_1daa25_560c25_lib#hostthre.c,revFiles/1daa25_560c25_lib#hostthre.c}: gethostbyname_thread), (curl/{prevFiles/prev_1daa25_560c25_lib#hostthre.c,revFiles/1daa25_560c25_lib#hostthre.c}: gethostbyname_thread)
+// False positives: (curl/revFiles/1daa25_560c25_lib#hostthre.c: getaddrinfo_thread)
+// Recall: 0.09, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.15, Precision: 0.67
+// -- Node Change --
+// Recall: 0.13, Precision: 0.60
+// -- General --
+// Functions fully changed: 2/14(14%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_1daa25_560c25_lib#hostthre.c: Curl_getaddrinfo
+ - git/prevFiles/prev_b9003c_a64dd3_combine-diff.c: show_patch_diff
+ - git/prevFiles/prev_e70c6b_c55f3f_combine-diff.c: show_patch_diff
+ - git/prevFiles/prev_e70c6b_c55f3f_combine-diff.c: show_combined_diff
+ - git/prevFiles/prev_af61c6_343d35_sha1_name.c: get_short_sha1
+ - git/prevFiles/prev_af61c6_343d35_sha1_name.c: get_sha1_1
+ - FFmpeg/prevFiles/prev_4d67ff_9676b9_libavutil#opt.c: set_string_number
+ - FFmpeg/prevFiles/prev_4d67ff_9676b9_libavutil#opt.c: av_opt_set
+ - git/prevFiles/prev_b9003c_a64dd3_combine-diff.c: show_combined_diff
+ - qemu/prevFiles/prev_f3a967_47dbd1_cpu-exec.c: cpu_signal_handler
+ - FFmpeg/prevFiles/prev_4d67ff_9676b9_libavutil#opt.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_1daa25_560c25_lib#hostthre.c: getaddrinfo_thread
+*/
+
+// ---------------------------------------------

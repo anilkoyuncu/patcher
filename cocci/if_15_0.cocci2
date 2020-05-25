@@ -1,0 +1,22 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef AVCodecContext;
+@@
+  int decode_init(AVCodecContext *I0)  
+  {
+  ...
+- if (E1)  
++ if (I0->channels > 2)  
+  {
+- av_log(E2->avctx, AV_LOG_ERROR, "too many channels: %d\n", E2->channels); 
++ av_log(E2->avctx, AV_LOG_ERROR, "too many channels: %d\n", I0->channels); 
+  ...
+  }
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_136901_73b3b5_libavcodec#binkaudio.c,revFiles/136901_73b3b5_libavcodec#binkaudio.c}: decode_init), (FFmpeg/{prevFiles/prev_9806fb_d06497_libavcodec#binkaudio.c,revFiles/9806fb_d06497_libavcodec#binkaudio.c}: decode_init)
+// False positives: (FFmpeg/revFiles/136901_73b3b5_libavcodec#binkaudio.c: decode_init), (FFmpeg/revFiles/9806fb_d06497_libavcodec#binkaudio.c: decode_init)
+// Recall: 0.12, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

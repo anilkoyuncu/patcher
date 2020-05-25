@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0.top = _gtk_css_value_get_int(_gtk_theming_engine_peek_property(E1,  GTK_CSS_PROPERTY_OUTLINE_WIDTH)); 
++ E0.top = round(_gtk_css_number_value_get(_gtk_theming_engine_peek_property(  E1, GTK_CSS_PROPERTY_OUTLINE_WIDTH),  100)); 
+// Infered from: (gtk/{prevFiles/prev_883c87_ba7141_gtk#gtkthemingengine.c,revFiles/883c87_ba7141_gtk#gtkthemingengine.c}: render_frame_internal)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

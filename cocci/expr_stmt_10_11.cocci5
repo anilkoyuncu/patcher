@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E4;
+binary operator B3 = {>> ,& };
+@@
+- E0 = av_clip(E0 + E1[E2 B3 E4], -127, 128); 
++ E0 = av_clip(E0 + E1[E2 B3 E4], -128, 127); 
+// Infered from: (FFmpeg/{prevFiles/prev_6eed92_72f10d_libavcodec#8svx.c,revFiles/6eed92_72f10d_libavcodec#8svx.c}: delta_decode), (FFmpeg/{prevFiles/prev_6eed92_72f10d_libavcodec#8svx.c,revFiles/6eed92_72f10d_libavcodec#8svx.c}: delta_decode)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

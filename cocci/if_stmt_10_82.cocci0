@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!object_dynamic_cast(OBJECT(E0), "spapr-vty"))  
++ if (!object_dynamic_cast(OBJECT(E0), TYPE_VIO_SPAPR_VTY_DEVICE))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_e27593_0f888b_hw#char#spapr_vty.c,revFiles/e27593_0f888b_hw#char#spapr_vty.c}: spapr_vty_get_default)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

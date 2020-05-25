@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (E0->info.caps & FE_CAN_CLEAN_SETUP)  
++ if (E0->info.caps & FE_CAN_RECOVER)  
+  {
+- msg_Dbg(E1, "  clean setup"); 
++ msg_Dbg(E1, "  card can recover from a cable unplug"); 
+  }
+// Infered from: (vlc/{prevFiles/prev_d52373_1ed643_modules#access#dvb#linux_dvb.c,revFiles/d52373_1ed643_modules#access#dvb#linux_dvb.c}: FrontendInfo)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

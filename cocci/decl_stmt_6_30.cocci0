@@ -1,0 +1,8 @@
+@@
+@@
+- usage(show_diff_usage); 
++ usage(diff_files_usage); 
+// Infered from: (git/{prevFiles/prev_177103_899670_diff-files.c,revFiles/177103_899670_diff-files.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

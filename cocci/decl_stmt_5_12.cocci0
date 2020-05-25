@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- char I0[16]; 
++ char I0[16] = ""; 
+// Infered from: (curl/{prevFiles/prev_c48b99_89390f_lib#url.c,revFiles/c48b99_89390f_lib#url.c}: parseurlandfillconn)
+// False positives: (curl/revFiles/b0e742_7296fc_lib#url.c: parseurlandfillconn), (tmux/revFiles/1b5a8a_f4aefb_style.c: style_tostring)
+// Recall: 0.05, Precision: 0.33, Matching recall: 0.33
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0->id = E1->pid; 
++ E1->st->id = E1->pid; 
+// Infered from: (FFmpeg/{prevFiles/prev_463c8d_d9d492_libavformat#mpegts.c,revFiles/463c8d_d9d492_libavformat#mpegts.c}: pmt_cb)
+// False positives: (FFmpeg/revFiles/463c8d_d9d492_libavformat#mpegts.c: mpegts_set_stream_info), (FFmpeg/revFiles/463c8d_d9d492_libavformat#mpegts.c: pmt_cb)
+// Recall: 0.07, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

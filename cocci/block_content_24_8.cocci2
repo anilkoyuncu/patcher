@@ -1,0 +1,29 @@
+@@
+identifier I0;
+typedef timediff_t;
+@@
+- long I0; 
++ timediff_t I0; 
+// Infered from: (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#polarssl.c,revFiles/527461_96a3ab_lib#vtls#polarssl.c}: polarssl_connect_common), (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#sectransp.c,revFiles/527461_96a3ab_lib#vtls#sectransp.c}: sectransp_connect_common), (curl/{prevFiles/prev_527461_96a3ab_lib#vtls#mbedtls.c,revFiles/527461_96a3ab_lib#vtls#mbedtls.c}: mbed_connect_common)
+// False positives: (curl/revFiles/527461_96a3ab_lib#vtls#openssl.c: ossl_connect_step2), (curl/revFiles/527461_96a3ab_lib#vtls#openssl.c: servercert), (curl/revFiles/527461_96a3ab_lib#vtls#openssl.c: set_ssl_version_min_max), (curl/revFiles/527461_96a3ab_lib#vtls#sectransp.c: set_ssl_version_min_max), (curl/revFiles/527461_96a3ab_lib#vtls#sectransp.c: verify_cert)
+// Recall: 0.23, Precision: 0.33, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.58
+// -- Node Change --
+// Recall: 1.00, Precision: 0.68
+// -- General --
+// Functions fully changed: 7/12(58%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_527461_96a3ab_lib#vtls#sectransp.c: set_ssl_version_min_max
+ - curl/prevFiles/prev_527461_96a3ab_lib#vtls#openssl.c: servercert
+ - curl/prevFiles/prev_527461_96a3ab_lib#vtls#sectransp.c: verify_cert
+ - curl/prevFiles/prev_527461_96a3ab_lib#vtls#openssl.c: set_ssl_version_min_max
+ - curl/prevFiles/prev_527461_96a3ab_lib#vtls#openssl.c: ossl_connect_step2
+*/
+
+// ---------------------------------------------

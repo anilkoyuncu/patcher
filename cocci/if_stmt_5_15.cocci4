@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 == 'c')  
++ if (E0 == 'C')  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_629-A-16440544-16440622.c,revFiles/629-A-16440544-16440622.c}: main)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

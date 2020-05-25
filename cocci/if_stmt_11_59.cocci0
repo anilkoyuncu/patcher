@@ -1,0 +1,13 @@
+@@
+identifier I0 = {asprintf ,sscanf };
+expression list E1;
+expression E2;
+@@
+- if (I0(E1) != E2)  
+- {
+  ...
+- }
+// Infered from: (wireshark/{prevFiles/prev_2dd96f_cc43ff_wiretap#daintree-sna.c,revFiles/2dd96f_cc43ff_wiretap#daintree-sna.c}: daintree_sna_seek_read), (vlc/{prevFiles/prev_d13717_d2dbed_modules#gui#ncurses.c,revFiles/d13717_d2dbed_modules#gui#ncurses.c}: IsFile)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

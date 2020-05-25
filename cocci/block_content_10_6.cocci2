@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef WSOCK2_EVENT;
+@@
+- I0 = GetProcAddress(E1, "WSACreateEvent"); 
++ I0 = (WSOCK2_EVENT )GetProcAddress(E1, "WSACreateEvent"); 
+// Infered from: (curl/{prevFiles/prev_ab4cf9_967979_lib#telnet.c,revFiles/ab4cf9_967979_lib#telnet.c}: telnet_do)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- uat_window_delete_event_cb(NULL, NULL, E0->rep->window); 
++ uat_window_delete_event_cb(NULL, NULL, E0); 
+// Infered from: (wireshark/{prevFiles/prev_be6116_c5ab16_gtk#uat_gui.c,revFiles/be6116_c5ab16_gtk#uat_gui.c}: uat_apply_cb)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

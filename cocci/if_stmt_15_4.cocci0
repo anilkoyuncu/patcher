@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (getLongLongFromObject(E0, &E1) != REDIS_OK || E1 < 0 || E1 > REDIS_CLUSTER_SLOTS)  
++ if (getLongLongFromObject(E0, &E1) != REDIS_OK || E1 < 0 || E1 >= REDIS_CLUSTER_SLOTS)  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_25ddef_fb659c_src#cluster.c,revFiles/25ddef_fb659c_src#cluster.c}: getSlotOrReply)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

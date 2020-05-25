@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- strncat(E0, E1, sizeof(E0) - strlen(E0)); 
++ strncat(E0, E1, sizeof(E0) - strlen(E0) - 1); 
+// Infered from: (libarchive/{prevFiles/prev_a875bd_592332_cpio#test#test_format_newc.c,revFiles/a875bd_592332_cpio#test#test_format_newc.c}: DEFINE_TEST), (libarchive/{prevFiles/prev_a875bd_592332_cpio#test#test_format_newc.c,revFiles/a875bd_592332_cpio#test#test_format_newc.c}: DEFINE_TEST)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->framerate.num)  
++ if (!E0->framerate.num && E0->st->codec->ticks_per_frame > 1)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_ba31e5_901f4b_ffmpeg_filter.c,revFiles/ba31e5_901f4b_ffmpeg_filter.c}: configure_input_video_filter)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

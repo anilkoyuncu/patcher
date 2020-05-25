@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- return mpz_divexact(E0, E1, E2); 
++ mpz_divexact(E0, E1, E2); 
++ return; 
+// Infered from: (gmp/{prevFiles/prev_595ccc_c11303_mpz#dive_ui.c,revFiles/595ccc_c11303_mpz#dive_ui.c}: mpz_divexact_ui)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

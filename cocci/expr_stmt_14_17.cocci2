@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = COMP_get_name(E1); 
++ E0 = OBJ_nid2sn(COMP_get_type(E1)); 
+// Infered from: (cpython/{prevFiles/prev_281e5f_f4a738_Modules#_ssl.c,revFiles/281e5f_f4a738_Modules#_ssl.c}: _ssl__SSLSocket_compression_impl)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

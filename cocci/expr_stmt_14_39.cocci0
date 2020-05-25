@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->type = E1->bmAttributes & USB_ENDPOINT_XFERTYPE_MASK; 
++ E0->type = usb_endpoint_type(E1); 
+// Infered from: (linux/{prevFiles/prev_96bcd0_af7e0c5_drivers#usb#musb#musb_host.c,revFiles/96bcd0_af7e0c5_drivers#usb#musb#musb_host.c}: musb_urb_enqueue)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (av_image_check_size(E0->width, E0->height, 0, E0))  
++ if (E0->height <= 0 || av_image_check_size(E0->width, E0->height, 0, E0))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_0257ac_703050_libavcodec#pnm.c,revFiles/0257ac_703050_libavcodec#pnm.c}: ff_pnm_decode_header)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

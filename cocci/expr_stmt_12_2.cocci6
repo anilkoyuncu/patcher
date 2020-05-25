@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- DPRINTF("xhci: slot %d has no device\n", E0->slotid); 
++ DPRINTF("xhci: slot %d has no device\n", E0->epctx->slotid); 
+// Infered from: (qemu/{prevFiles/prev_ee5626_bd4a68_hw#usb#hcd-xhci.c,revFiles/ee5626_bd4a68_hw#usb#hcd-xhci.c}: xhci_setup_packet)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

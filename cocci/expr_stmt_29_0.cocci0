@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- sprintf(E0, "RDONLY=%d", (E1->s_flags & MS_RDONLY) ? 1 :0); 
++ sprintf(E0, "RDONLY=%d", sb_rdonly(E1)); 
+// Infered from: (linux/{prevFiles/prev_bc98a4_94e92e_fs#gfs2#ops_fstype.c,revFiles/bc98a4_94e92e_fs#gfs2#ops_fstype.c}: gfs2_online_uevent), (linux/{prevFiles/prev_bc98a4_94e92e_fs#gfs2#sys.c,revFiles/bc98a4_94e92e_fs#gfs2#sys.c}: gfs2_sys_fs_add)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

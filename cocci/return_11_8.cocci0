@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return hashmap_get_from_hash(&names, sha1hash(E0->hash), E0->hash); 
++ return hashmap_get_from_hash(&names, sha1hash(E0->hash), E0); 
+// Infered from: (git/{prevFiles/prev_6d79e5_a6a95c_builtin#describe.c,revFiles/6d79e5_a6a95c_builtin#describe.c}: find_commit_name)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

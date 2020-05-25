@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0 = i40evf_asq_send_command(E1, (struct i40e_aq_desc *)&E2, E3, E4, E5); 
++ E0 = i40evf_asq_send_command(E1, &E2, E3, E4, E5); 
+// Infered from: (linux/{prevFiles/prev_b58f2f_e3e3bf_drivers#net#ethernet#intel#i40evf#i40e_common.c,revFiles/b58f2f_e3e3bf_drivers#net#ethernet#intel#i40evf#i40e_common.c}: i40e_aq_send_msg_to_pf)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

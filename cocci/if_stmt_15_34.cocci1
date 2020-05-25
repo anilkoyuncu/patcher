@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- if (pci_set_dma_mask(E0, DMA_BIT_MASK(32)) < 0)  
++ if (dma_set_mask(&E0->dev, DMA_BIT_MASK(32)) < 0)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_412b97_304775_sound#pci#pcxhr#pcxhr.c,revFiles/412b97_304775_sound#pci#pcxhr#pcxhr.c}: pcxhr_probe), (linux/{prevFiles/prev_412b97_304775_sound#pci#mixart#mixart.c,revFiles/412b97_304775_sound#pci#mixart#mixart.c}: snd_mixart_probe)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_c54c719_9a1e75e_drivers#ata#pata_cs5520.c: cs5520_init_one
+*/
+
+// ---------------------------------------------

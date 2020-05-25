@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gen_wsr_lend(E0, LEND, E1); 
++ gen_helper_wsr_lend(E1); 
+// Infered from: (qemu/{prevFiles/prev_b18b37_f91837_target-xtensa#translate.c,revFiles/b18b37_f91837_target-xtensa#translate.c}: disas_xtensa_insn)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,15 @@
+@@
+expression E0, E1;
+@@
+- E0 = (char *)PyMem_Realloc(E0, E1 * sizeof(char )); 
+- if (E0 == NULL)  
++ new_buf = (char *)PyMem_Realloc(E0, E1 * sizeof(char )); 
++ if (new_buf == NULL)  
+  {
+  ...
+  }
++ E0 = new_buf; 
+// Infered from: (cpython/{prevFiles/prev_4ebd46_0bcd61_Objects#bytesobject.c,revFiles/4ebd46_0bcd61_Objects#bytesobject.c}: bytes_extend)
+// Recall: 0.36, Precision: 1.00, Matching recall: 0.71
+
+// ---------------------------------------------

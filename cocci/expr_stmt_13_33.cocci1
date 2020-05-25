@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- sapi_add_header(E0, E1, 0); 
++ sapi_add_header(E0, strlen(E0), 0); 
+// Infered from: (php-src/{prevFiles/prev_a982eb_124fe3_ext#session#session.c,revFiles/a982eb_124fe3_ext#session#session.c}: _php_session_send_cookie)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_fc0e5d_cced6a_epan#dissectors#packet-dcerpc.c: dissect_ndr_cvstring
+ - wireshark/prevFiles/prev_fc0e5d_cced6a_epan#dissectors#packet-dcerpc.c: dissect_ndr_vstring
+*/
+
+// ---------------------------------------------

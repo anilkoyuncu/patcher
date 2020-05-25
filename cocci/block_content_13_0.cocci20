@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- event_del(E0); 
++ event_del_i(E0); 
+// Infered from: (ompi/{prevFiles/prev_3a7ede_24de93_opal#event#rtsig.c,revFiles/3a7ede_24de93_opal#event#rtsig.c}: rtsig_dispatch)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

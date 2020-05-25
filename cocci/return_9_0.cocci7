@@ -1,0 +1,26 @@
+@@
+identifier I6;
+expression E0, E1, E2, E3, E4, E5;
+typedef int64_t;
+@@
+- return rbd_start_aio(E0, E1 << BDRV_SECTOR_BITS, E2, E3 << BDRV_SECTOR_BITS,  E4, E5, I6); 
++ return rbd_start_aio(E0, E1 << BDRV_SECTOR_BITS, E2,  (int64_t )E3 << BDRV_SECTOR_BITS, E4, E5, I6); 
+// Infered from: (qemu/{prevFiles/prev_e948f6_3c0ed2_block#rbd.c,revFiles/e948f6_3c0ed2_block#rbd.c}: qemu_rbd_aio_readv), (qemu/{prevFiles/prev_e948f6_3c0ed2_block#rbd.c,revFiles/e948f6_3c0ed2_block#rbd.c}: qemu_rbd_aio_writev)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.94
+// -- Node Change --
+// Recall: 0.97, Precision: 0.91
+// -- General --
+// Functions fully changed: 15/17(88%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_7066dd_c2670a_Objects#listobject.c: listcount
+ - wireshark/prevFiles/prev_717ca5_71f867_epan#dissectors#packet-ipv6.c: ipv6_value
+*/
+
+// ---------------------------------------------

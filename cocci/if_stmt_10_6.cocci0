@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0 || !E0->p_sys->surface)  
++ if (!E0 || !E0->p_sys || !E0->p_sys->surface)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_02daf5_3f27e0_modules#hw#d3d9#d3d9_filters.c,revFiles/02daf5_3f27e0_modules#hw#d3d9#d3d9_filters.c}: Filter)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

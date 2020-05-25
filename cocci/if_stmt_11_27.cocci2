@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->table = av_malloc_array(E1->sample_rate / E0->freq, sizeof(*E0->table)); 
++ E0->table_size = E1->sample_rate / E0->freq; 
++ E0->table = av_malloc_array(E0->table_size, sizeof(*E0->table)); 
+  ...
+- for(E2 = 0;E2 < E1->sample_rate / E0->freq;E2++)  
++ for(E2 = 0;E2 < E0->table_size;E2++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_58bb9d_26876f_libavfilter#af_tremolo.c,revFiles/58bb9d_26876f_libavfilter#af_tremolo.c}: config_input)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.90, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+
+// ---------------------------------------------

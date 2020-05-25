@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0->next_pts = E1->pts = (E2 + E3->sample_rate / 2) / E3->sample_rate; 
++ E0->next_pts = E1->pts = ROUNDED_DIV(E2, E3->sample_rate); 
+// Infered from: (FFmpeg/{prevFiles/prev_4b5a12_386fc6_libavfilter#af_aresample.c,revFiles/4b5a12_386fc6_libavfilter#af_aresample.c}: filter_samples)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

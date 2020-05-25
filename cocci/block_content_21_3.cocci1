@@ -1,0 +1,10 @@
+@@
+expression list E1;
+expression E0;
+@@
+- E0 = setlocale (E1); 
++ E0 = g_strdup(setlocale(LC_NUMERIC, NULL)); 
+// Infered from: (wireshark/{prevFiles/prev_0272b9_3db115_ui#gtk#hostlist_table.c,revFiles/0272b9_3db115_ui#gtk#hostlist_table.c}: copy_as_csv_cb), (wireshark/{prevFiles/prev_0272b9_3db115_ui#gtk#mcast_stream_dlg.c,revFiles/0272b9_3db115_ui#gtk#mcast_stream_dlg.c}: add_to_list_store), (wireshark/{prevFiles/prev_0272b9_3db115_ui#gtk#gui_utils.c,revFiles/0272b9_3db115_ui#gtk#gui_utils.c}: float_data_func), (wireshark/{prevFiles/prev_0272b9_3db115_ui#gtk#iax2_analysis.c,revFiles/0272b9_3db115_ui#gtk#iax2_analysis.c}: iax2_float_data_func), (wireshark/{prevFiles/prev_0272b9_3db115_ui#cli#tap-rtp.c,revFiles/0272b9_3db115_ui#cli#tap-rtp.c}: rtp_streams_stat_draw), (wireshark/{prevFiles/prev_0272b9_3db115_ui#gtk#rtp_stream_dlg.c,revFiles/0272b9_3db115_ui#gtk#rtp_stream_dlg.c}: add_to_list_store)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

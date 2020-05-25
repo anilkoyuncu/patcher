@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  int I0 = bs_read(&E1, 4); 
++ bs_skip(&E1, 4); 
+// Infered from: (vlc/{prevFiles/prev_31fef8_f901bb_modules#packetizer#mlp.c,revFiles/31fef8_f901bb_modules#packetizer#mlp.c}: MlpParse)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

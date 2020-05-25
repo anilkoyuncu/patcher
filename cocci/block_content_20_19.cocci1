@@ -1,0 +1,21 @@
+@@
+expression E0, E1;
+@@
+- E0 = kmalloc(E1->u.wpa_ie.len, GFP_KERNEL); 
++ E0 = kmemdup(E1->u.wpa_ie.data, E1->u.wpa_ie.len, GFP_KERNEL); 
+  ...
+- memcpy(E0, E1->u.wpa_ie.data, E1->u.wpa_ie.len); 
+// Infered from: (linux/{prevFiles/prev_94002c_96fe9ee_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c,revFiles/94002c_96fe9ee_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c}: ieee80211_wpa_set_wpa_ie)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

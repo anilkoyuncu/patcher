@@ -1,0 +1,14 @@
+@@
+identifier I3;
+expression E1, E0, E2;
+@@
+- set_irq_chip(E0, E1); 
+- set_irq_chip_data(E0, E2); 
+- set_irq_handler(E0, I3); 
++ irq_set_chip(E0, E1); 
++ irq_set_chip_data(E0, E2); 
++ irq_set_handler(E0, I3); 
+// Infered from: (linux/{prevFiles/prev_d5bb122_c22435a3_drivers#mfd#htc-egpio.c,revFiles/d5bb122_c22435a3_drivers#mfd#htc-egpio.c}: egpio_probe)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

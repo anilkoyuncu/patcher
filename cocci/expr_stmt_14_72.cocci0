@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->regs[0] = do_syscall(E0, E1, E0->regs[0], E0->regs[1], E0->regs[2],  E0->regs[3], E0->regs[4], 0); 
++ E0->regs[0] = do_syscall(E0, E1, E0->regs[0], E0->regs[1], E0->regs[2],  E0->regs[3], E0->regs[4], E0->regs[5]); 
+// Infered from: (qemu/{prevFiles/prev_e1a284_e06e52_linux-user#main.c,revFiles/e1a284_e06e52_linux-user#main.c}: cpu_loop)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

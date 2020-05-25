@@ -1,0 +1,12 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- set_irq_chip_data(E0, E1); 
+- set_irq_chained_handler(E0, I2); 
++ irq_set_chip_data(E0, E1); 
++ irq_set_chained_handler(E0, I2); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-at91#gpio.c,revFiles/6845664a_25a566_arch#arm#mach-at91#gpio.c}: at91_gpio_irq_setup)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

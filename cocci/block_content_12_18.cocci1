@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- long I0 = 0; 
++ size_t I0 = 0; 
+// Infered from: (php-src/{prevFiles/prev_ddaae1_e70dce_ext#standard#dns_win32.c,revFiles/ddaae1_e70dce_ext#standard#dns_win32.c}: php_parserr)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

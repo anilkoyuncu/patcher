@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef intptr_t;
+@@
+- memcpy(((char *)E0->sf_base.uf_src_seg[0].seg_addr.lval + E0->sf_base.uf_src_seg[  0].seg_len),  E0->sf_base.uf_src_seg[1].seg_addr.pval,  E0->sf_base.uf_src_seg[1].seg_len); 
++ memcpy(((char *)(intptr_t )E0->sf_base.uf_src_seg[0].seg_addr.lval + E0->sf_base.uf_src_seg[  0].seg_len),  E0->sf_base.uf_src_seg[1].seg_addr.pval,  E0->sf_base.uf_src_seg[1].seg_len); 
+// Infered from: (ompi/{prevFiles/prev_34ae50_5259ab_ompi#mca#btl#usnic#btl_usnic_module.c,revFiles/34ae50_5259ab_ompi#mca#btl#usnic#btl_usnic_module.c}: usnic_send), (ompi/{prevFiles/prev_34ae50_5259ab_ompi#mca#btl#usnic#btl_usnic_send.c,revFiles/34ae50_5259ab_ompi#mca#btl#usnic#btl_usnic_send.c}: ompi_btl_usnic_finish_put_or_send)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

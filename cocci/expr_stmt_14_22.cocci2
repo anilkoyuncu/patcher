@@ -1,0 +1,22 @@
+@@
+@@
+- php_url_scanner_add_var(PS(session_name), strlen(PS(session_name)), PS(  id), strlen(PS(id)), 0); 
++ php_url_scanner_add_var(); 
+// Infered from: (php-src/{prevFiles/prev_8193ca7_9712a4_ext#session#session.c,revFiles/8193ca7_9712a4_ext#session#session.c}: php_session_start)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_8193ca7_9712a4_ext#session#session.c: php_session_start
+*/
+
+// ---------------------------------------------

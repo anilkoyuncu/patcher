@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && E1 >= E0)  
++ if (E0 && E1 > 0 && E1 >= E0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b3f461_02a3e3_ffmpeg.c,revFiles/b3f461_02a3e3_ffmpeg.c}: print_final_stats)
+// False positives: (redis/revFiles/dce7ce_ed5cc7_src#networking.c: checkClientOutputBufferLimits)
+// Recall: 0.08, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

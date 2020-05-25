@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = php_stream_copy_to_stream_ex(E1, E2, PHP_STREAM_COPY_ALL, NULL); 
++ int retval = php_stream_copy_to_stream_ex(E1, E2, PHP_STREAM_COPY_ALL, NULL); 
+// Infered from: (php-src/{prevFiles/prev_93fd1b_b2c450_main#streams#cast.c,revFiles/93fd1b_b2c450_main#streams#cast.c}: _php_stream_cast), (php-src/{prevFiles/prev_c33795_9acdcd_main#streams#cast.c,revFiles/c33795_9acdcd_main#streams#cast.c}: _php_stream_cast)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

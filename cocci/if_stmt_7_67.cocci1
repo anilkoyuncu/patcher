@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->x >= E1->width)  
++ if (E0->x > E1->width - FONT_WIDTH)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_602161_e91fd7_libavcodec#ansi.c,revFiles/602161_e91fd7_libavcodec#ansi.c}: draw_char)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

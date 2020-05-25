@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (IS_ICELAKE(E0))  
++ if (INTEL_GEN(E0) >= 11)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_2dd24a_2131bc0_drivers#gpu#drm#i915#i915_perf.c,revFiles/2dd24a_2131bc0_drivers#gpu#drm#i915#i915_perf.c}: i915_perf_register), (linux/{prevFiles/prev_2dd24a_2131bc0_drivers#gpu#drm#i915#intel_color.c,revFiles/2dd24a_2131bc0_drivers#gpu#drm#i915#intel_color.c}: intel_color_init), (linux/{prevFiles/prev_2dd24a_2131bc0_drivers#gpu#drm#i915#intel_dpll_mgr.c,revFiles/2dd24a_2131bc0_drivers#gpu#drm#i915#intel_dpll_mgr.c}: intel_shared_dpll_init), (linux/{prevFiles/prev_2dd24a_2131bc0_drivers#gpu#drm#i915#intel_mocs.c,revFiles/2dd24a_2131bc0_drivers#gpu#drm#i915#intel_mocs.c}: get_mocs_settings)
+// Recall: 0.57, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

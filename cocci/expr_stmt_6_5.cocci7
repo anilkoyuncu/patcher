@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0[21] = '\0'; 
++ E0[20] = '\0'; 
+// Infered from: (wireshark/{prevFiles/prev_800a02_5b78bb_epan#dissectors#packet-nvme.c,revFiles/800a02_5b78bb_epan#dissectors#packet-nvme.c}: dissect_nvme_identify_ctrl_resp)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

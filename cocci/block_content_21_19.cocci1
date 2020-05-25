@@ -1,0 +1,21 @@
+@@
+expression E0, E2, E3, E1;
+typedef gchar;
+typedef gint;
+@@
+- E0 = (gchar *)tvb_get_stringz(wmem_packet_scope(), E1, E2, (gint *)&E3); 
++ E0 = (gchar *)tvb_get_stringz_enc(wmem_packet_scope(), E1, E2, (gint *)&E3,  ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-wsp.c,revFiles/971ffd_421d81_epan#dissectors#packet-wsp.c}: add_headers), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-wsp.c,revFiles/971ffd_421d81_epan#dissectors#packet-wsp.c}: add_headers)
+// Recall: 0.30, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

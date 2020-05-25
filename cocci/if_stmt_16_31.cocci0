@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (log_all_ref_updates && (!strncmp(E0, "refs/heads/", 11) || !strncmp(  E0, "refs/remotes/", 13) || !strcmp(E0, "HEAD")))  
++ if (log_all_ref_updates && (!prefixcmp(E0, "refs/heads/") || !prefixcmp(  E0, "refs/remotes/") || !strcmp(E0, "HEAD")))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_cc44c7_cff030_refs.c,revFiles/cc44c7_cff030_refs.c}: log_ref_write)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

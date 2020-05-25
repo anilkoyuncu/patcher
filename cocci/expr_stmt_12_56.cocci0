@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- assert(E0->type == 0 || E0->type == FF_BUFFER_TYPE_SHARED); 
++ assert(E0->f.type == 0 || E0->f.type == FF_BUFFER_TYPE_SHARED); 
+// Infered from: (FFmpeg/{prevFiles/prev_95a06e_35a685_libavcodec#mpegvideo.c,revFiles/95a06e_35a685_libavcodec#mpegvideo.c}: ff_alloc_picture)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

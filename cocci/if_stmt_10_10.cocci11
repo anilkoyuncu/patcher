@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!strncmp(E0, E1, E2))  
++ if (!prefixcmp(E0, E1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_cc44c7_cff030_help.c,revFiles/cc44c7_cff030_help.c}: show_man_page), (git/{prevFiles/prev_cc44c7_cff030_wt-status.c,revFiles/cc44c7_cff030_wt-status.c}: wt_status_print), (git/{prevFiles/prev_cc44c7_cff030_builtin-describe.c,revFiles/cc44c7_cff030_builtin-describe.c}: get_name)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

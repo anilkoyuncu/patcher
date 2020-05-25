@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 == EG(argument_stack).elements)  
++ if ((E0 - 1) == EG(argument_stack).elements)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_2310ac_4f47f3_Zend#zend_builtin_functions.c,revFiles/2310ac_4f47f3_Zend#zend_builtin_functions.c}: ZEND_FUNCTION), (php-src/{prevFiles/prev_2310ac_4f47f3_Zend#zend_builtin_functions.c,revFiles/2310ac_4f47f3_Zend#zend_builtin_functions.c}: zend_fetch_debug_backtrace)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

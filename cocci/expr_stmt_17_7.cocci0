@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+typedef lam_communicator_t;
+typedef lam_group_t;
+@@
+- E0 = lam_comm_group(E1, E2); 
++ E0 = lam_comm_group((lam_communicator_t *)E1, (lam_group_t **)E2); 
+// Infered from: (ompi/{prevFiles/prev_c6dcaa_693255_src#mpi#c#comm_group.c,revFiles/c6dcaa_693255_src#mpi#c#comm_group.c}: MPI_Comm_group)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

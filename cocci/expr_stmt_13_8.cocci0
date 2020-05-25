@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->data[E1] += E2->x >> E2->hsub; 
++ E0->data[E1] += ((E2->x * E2->bpp) >> 3) >> E2->hsub; 
+// Infered from: (FFmpeg/{prevFiles/prev_ac74df_5f36d9_libavfilter#vf_crop.c,revFiles/ac74df_5f36d9_libavfilter#vf_crop.c}: start_frame)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

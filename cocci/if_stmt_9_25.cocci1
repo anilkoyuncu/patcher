@@ -1,0 +1,30 @@
+@@
+@@
+- goto  no_realpath; 
++ return 1; 
+// Infered from: (php-src/{prevFiles/prev_c06626_4106eee_TSRM#tsrm_virtual_cwd.c,revFiles/c06626_4106eee_TSRM#tsrm_virtual_cwd.c}: virtual_file_ex)
+// False positives: (php-src/revFiles/c06626_4106eee_TSRM#tsrm_virtual_cwd.c: virtual_file_ex)
+// Recall: 0.20, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 0.50
+// -- General --
+// Functions fully changed: 0/5(0%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_952abb_711a16_crypto#rsa#rsa_sp800_56b_gen.c: rsa_fips186_4_gen_prob_primes
+ - openssl/prevFiles/prev_cc0690_5105ba_crypto#ocsp#ocsp_ext.c: ocsp_add1_nonce
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_c06626_4106eee_TSRM#tsrm_virtual_cwd.c: virtual_file_ex
+ - openssl/prevFiles/prev_d813f9_c5f2b5_ssl#t1_lib.c: tls1_check_chain
+ - openssl/prevFiles/prev_63eb10_158e52_crypto#asn1#asn1_par.c: asn1_parse2
+*/
+
+// ---------------------------------------------

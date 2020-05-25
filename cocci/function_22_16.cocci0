@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- free(E0->psz_html); 
+- E1 = NULL; 
+// Infered from: (vlc/{prevFiles/prev_e3204e_ba04cf_modules#misc#quartztext.c,revFiles/e3204e_ba04cf_modules#misc#quartztext.c}: RenderHtml), (vlc/{prevFiles/prev_e3204e_ba04cf_modules#misc#freetype.c,revFiles/e3204e_ba04cf_modules#misc#freetype.c}: RenderHtml)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

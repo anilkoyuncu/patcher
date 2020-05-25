@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef proto_item;
+@@
+- proto_item *I0 = proto_tree_add_text(E1, E2, E3, -1,  "Can't dissect LTE MAC frame because no per-frame info was attached!"); 
+- PROTO_ITEM_SET_GENERATED(I0); 
++ proto_item *tii = proto_tree_add_text(E1, E2, E3, -1,  "Can't dissect LTE MAC frame because no per-frame info was attached!"); 
++ PROTO_ITEM_SET_GENERATED(tii); 
+// Infered from: (wireshark/{prevFiles/prev_c56146_f1d471_epan#dissectors#packet-mac-lte.c,revFiles/c56146_f1d471_epan#dissectors#packet-mac-lte.c}: dissect_mac_lte)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

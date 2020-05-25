@@ -1,0 +1,11 @@
+@@
+expression E0, E2, E1;
+@@
+- E0 = dma_alloc_coherent(&E1->pdev->dev, sizeof(*E0), &E2, GFP_KERNEL); 
++ E0 = dma_zalloc_coherent(&E1->pdev->dev, sizeof(*E0), &E2, GFP_KERNEL); 
+  ...
+- memset(E0, 0, sizeof(*E0)); 
+// Infered from: (linux/{prevFiles/prev_055831_d103adb_drivers#scsi#qla2xxx#qla_bsg.c,revFiles/055831_d103adb_drivers#scsi#qla2xxx#qla_bsg.c}: qla2x00_get_priv_stats), (linux/{prevFiles/prev_d103adb_bef4e68_drivers#scsi#qla4xxx#ql4_nx.c,revFiles/d103adb_bef4e68_drivers#scsi#qla4xxx#ql4_nx.c}: qla4_8xxx_get_sys_info), (linux/{prevFiles/prev_055831_d103adb_drivers#scsi#qla2xxx#qla_attr.c,revFiles/055831_d103adb_drivers#scsi#qla2xxx#qla_attr.c}: qla2x00_get_fc_host_stats), (linux/{prevFiles/prev_d103adb_bef4e68_drivers#scsi#qla4xxx#ql4_init.c,revFiles/d103adb_bef4e68_drivers#scsi#qla4xxx#ql4_init.c}: qla4xxx_get_sys_info)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

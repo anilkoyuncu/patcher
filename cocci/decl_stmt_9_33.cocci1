@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef mtime_t;
+@@
+- const  mtime_t I0 = E1->p_input->i_pts_delay + E2 + E1->i_buffering_extra_stream; 
++ const  mtime_t I0 = E1->p_input->i_pts_delay + E2 + E1->i_buffering_extra_stream - E1->i_buffering_extra_initial; 
+// Infered from: (vlc/{prevFiles/prev_63d2ae_4bd735_src#input#es_out.c,revFiles/63d2ae_4bd735_src#input#es_out.c}: EsOutDecodersStopBuffering)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

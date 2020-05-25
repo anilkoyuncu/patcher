@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return luaL_error(E0, "Usage: vlc.io.opendir(name)"); 
++ return luaL_error(E0, "Usage: vlc.io.readdir(name)"); 
+// Infered from: (vlc/{prevFiles/prev_36f95c_6e8e69_modules#lua#libs#io.c,revFiles/36f95c_6e8e69_modules#lua#libs#io.c}: vlclua_io_readdir)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

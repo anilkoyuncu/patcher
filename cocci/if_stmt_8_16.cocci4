@@ -1,0 +1,31 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0[E1][E2] || (E3 != 'L' && E0[E1 + 1][E2]) || (E3 != 'R' && E0[E1 - 1][  E2]) || (E3 != 'U' && E0[  E1][E2 + 1]) || (  E3 != 'D' && E0[E2][E2 - 1]))  
++ if (E0[E1][E2] || (E3 != 'L' && E0[E1 + 1][E2]) || (E3 != 'R' && E0[E1 - 1][  E2]) || (E3 != 'U' && E0[  E1][E2 + 1]) || (  E3 != 'D' && E0[E1][E2 - 1]))  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_8-B-37890-37891.c,revFiles/8-B-37890-37891.c}: main)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.45, Precision: 1.00
+// -- Node Change --
+// Recall: 0.45, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/11(45%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_214-B-4068083-4068178.c: main
+ - codeflaws/prevFiles/prev_296-A-16405147-16405246.c: main
+ - codeflaws/prevFiles/prev_357-B-4849399-4849435.c: main
+ - codeflaws/prevFiles/prev_572-A-17030186-17030202.c: main
+ - vlc/prevFiles/prev_69fcb4_7cc182_src#misc#hashtables.c: vlc_HashLookup
+ - wireshark/prevFiles/prev_c9d983_a584ea_file.c: cf_print_packets
+*/
+
+// ---------------------------------------------

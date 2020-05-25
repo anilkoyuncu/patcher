@@ -1,0 +1,20 @@
+@@
+identifier I0, I1, I2, I3, I4, I5;
+expression E6;
+typedef bool;
+typedef mca_oob_ud_msg_t;
+typedef mca_oob_ud_peer_t;
+typedef mca_oob_ud_qp_t;
+typedef mca_oob_ud_req_t;
+@@
+  int mca_oob_ud_msg_get(struct mca_oob_ud_port_t *I0, mca_oob_ud_req_t *I1,  mca_oob_ud_qp_t *I2, mca_oob_ud_peer_t *I3, bool I4,  mca_oob_ud_msg_t **I5)  
+  {
+  ...
+- mca_oob_ud_fill_sge(&(*E6)->sge, (*E6)->hdr, 2048, (*E6)->mr->lkey); 
++ mca_oob_ud_fill_sge(&(*E6)->sge, (*E6)->hdr, I0->mtu, (*E6)->mr->lkey); 
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_625c80_7a94a52_orte#mca#oob#ud#oob_ud_req.c,revFiles/625c80_7a94a52_orte#mca#oob#ud#oob_ud_req.c}: mca_oob_ud_msg_get)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((long )E0 > E1)  
++ if (E0 > E1)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_45a560_a7bbbb_src#tool_paramhlp.c,revFiles/45a560_a7bbbb_src#tool_paramhlp.c}: str2double)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

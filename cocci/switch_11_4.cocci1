@@ -1,0 +1,33 @@
+@@
+identifier I1;
+expression E0, E2;
+typedef int64_t;
+@@
+- if (E0->double_pts == AV_NOPTS_VALUE)  
+- {
+- E0->I1 = E2; 
+- }
++ int64_t pts = E0->input_views[0]->pts; 
+// Infered from: (FFmpeg/{prevFiles/prev_ef466a_d52342_libavfilter#vf_framepack.c,revFiles/ef466a_d52342_libavfilter#vf_framepack.c}: try_push_frame)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.14, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/7(14%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_ef466a_d52342_libavfilter#vf_framepack.c: config_output
+ - qemu/prevFiles/prev_999fa4_358664_target-ppc#helper.c: mmu40x_get_physical_address
+ - FFmpeg/prevFiles/prev_ef466a_d52342_libavfilter#vf_framepack.c: 
+ - FFmpeg/prevFiles/prev_d0c3be_35fb81_libavformat#rtp.c: rtp_parse_packet
+ - qemu/prevFiles/prev_cb539f_aaaec6_target#mips#translate.c: gen_mtc0
+ - qemu/prevFiles/prev_cb539f_aaaec6_target#mips#translate.c: gen_dmtc0
+*/
+
+// ---------------------------------------------

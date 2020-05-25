@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return (E0 - E1) / (E0 + E1); 
++ return (E0 - E1) / (E0 + E1 + 0.01); 
+// Infered from: (FFmpeg/{prevFiles/prev_1d0817_2adfb1_libavcodec#amrwbdec.c,revFiles/1d0817_2adfb1_libavcodec#amrwbdec.c}: voice_factor)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

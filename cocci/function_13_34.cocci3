@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- init_get_bits8(&E0, E1->buf + 3, E1->buf_size - 3); 
++ if (init_get_bits8(&E0, E1->buf + 3, E1->buf_size - 3) < 0)  
++ {
++ return 0; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_bd7030_32f539_libavformat#swfdec.c,revFiles/bd7030_32f539_libavformat#swfdec.c}: swf_probe)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

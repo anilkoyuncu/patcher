@@ -1,0 +1,132 @@
+@@
+expression E0;
+@@
+- sysbus_mmio_map(E0, 0, GIC_BASE_ADDR); 
++ sysbus_mmio_map(E0, 0, MPCORE_PERIPHBASE); 
+// Infered from: (qemu/{prevFiles/prev_e2cdde_c25771_hw#arm#highbank.c,revFiles/e2cdde_c25771_hw#arm#highbank.c}: calxeda_init)
+// Recall: 0.00, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.01, Precision: 1.00
+// -- Node Change --
+// Recall: 0.01, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/138(1%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_015764_ea0a7e_hw#heathrow_pic.c: 
+ - qemu/prevFiles/prev_3d260c_bda816_hw#arm#bcm2836.c: 
+ - FFmpeg/prevFiles/prev_c0bce3_3dfe34_libavcodec#dump_extradata_bsf.c: 
+ - FFmpeg/prevFiles/prev_18e700_f0c0ae_libavcodec#adpcm.c: 
+ - vlc/prevFiles/prev_e9315c_43a486_test#libvlc#events.c: test_events
+ - qemu/prevFiles/prev_921f80_66aab8_hw#ppc#prep.c: 
+ - cairo/prevFiles/prev_2de9fc_c04bd4_boilerplate#cairo-boilerplate-glx.c: _cairo_boilerplate_gl_create_surface
+ - FFmpeg/prevFiles/prev_180bf9_53c844_libavcodec#mpegaudiodec.c: 
+ - FFmpeg/prevFiles/prev_8b4714_646d66_libavformat#img2_alias_pix.c: brender_read_probe
+ - qemu/prevFiles/prev_0a28bf_38841d_block#vdi.c: 
+ - FFmpeg/prevFiles/prev_da7548_6fae8c_libavcodec#libvorbis.c: 
+ - FFmpeg/prevFiles/prev_afd091_00a265_libavformat#mxfdec.c: mxf_read_packet_old
+ - FFmpeg/prevFiles/prev_5784b6_7eb104_libswscale#swscale.c: 
+ - php-src/prevFiles/prev_8a1556_a8ca99_sapi#apache2filter#sapi_apache2.c: 
+ - php-src/prevFiles/prev_9891ad_1064f9_ext#standard#php_fopen_wrapper.c: php_stream_output_flush
+ - php-src/prevFiles/prev_5b4a15_6a6289_ext#standard#php_fopen_wrapper.c: php_stream_output_flush
+ - qemu/prevFiles/prev_e2cdde_c25771_hw#arm#highbank.c: hb_write_secondary
+ - FFmpeg/prevFiles/prev_bf18ab_f32b81_libavcodec#libvorbisenc.c: 
+ - vlc/prevFiles/prev_3c9680_3c70e9_modules#video_output#win32#direct3d11.c: Direct3D11Open
+ - qemu/prevFiles/prev_f75ca6_f8c3db_hw#vfio#pci.c: 
+ - cairo/prevFiles/prev_413705_d81907_src#cairo-glitz-surface.c: 
+ - FFmpeg/prevFiles/prev_bf18ab_f32b81_libavcodec#libopenjpegenc.c: 
+ - FFmpeg/prevFiles/prev_7581ad_0e239b_libavcodec#libvo-aacenc.c: 
+ - FFmpeg/prevFiles/prev_2e230c_f137d5_libavformat#au.c: 
+ - FFmpeg/prevFiles/prev_8b4714_646d66_libavformat#img2_brender_pix.c: aliaspix_read_probe
+ - FFmpeg/prevFiles/prev_13b77a_c0bce3_libavdevice#android_camera.c: 
+ - ompi/prevFiles/prev_aa1d7b_3597a0_opal#mca#pmix#cray#pmix_cray.c: 
+ - php-src/prevFiles/prev_211206_f6aa8f_ext#pdo_sqlite#sqlite_driver.c: 
+ - FFmpeg/prevFiles/prev_bf18ab_f32b81_libavcodec#libx264.c: 
+ - cpython/prevFiles/prev_0b7d02_e149fa_Objects#floatobject.c: float_pow
+ - qemu/prevFiles/prev_f875f0_b27350_target#i386#whpx-all.c: 
+ - FFmpeg/prevFiles/prev_6182e0_6752aa_libavfilter#vf_aspect.c: 
+ - FFmpeg/prevFiles/prev_2e230c_f137d5_libavformat#au.c: au_read_packet
+ - wireshark/prevFiles/prev_d913f4_69ba6c_epan#ftypes#ftype-ipv4.c: cmp_bytes_bitwise_and
+ - linux/prevFiles/prev_524605_a084ab_drivers#net#ethernet#chelsio#cxgb4#cxgb4_debugfs.c: blocked_fl_open
+ - ompi/prevFiles/prev_aa1d7b_3597a0_opal#mca#pmix#cray#pmix_cray.c: cray_fence_nb
+ - qemu/prevFiles/prev_a1f9a9_1a391e_hw#timer#arm_mptimer.c: arm_mptimer_init_with_bh
+ - qemu/prevFiles/prev_995668_0a28bf_block#vhdx.c: 
+ - qemu/prevFiles/prev_9397a7_3e300f_hw#misc#macio#macio.c: 
+ - FFmpeg/prevFiles/prev_7581ad_0e239b_libavcodec#aacenc.c: 
+ - FFmpeg/prevFiles/prev_facc48_139f3a_libavcodec#libvo-amrwbenc.c: 
+ - cairo/prevFiles/prev_22ab0e_672354_src#cairo-paginated-surface.c: 
+ - FFmpeg/prevFiles/prev_a7e7ab_9549f2_libavcodec#mpeg2_metadata_bsf.c: 
+ - linux/prevFiles/prev_50d60c6_7e43f3_drivers#net#wireless#ath#wcn36xx#debug.c: wcn36xx_debugfs_open
+ - FFmpeg/prevFiles/prev_4c6836_e3453f_libavcodec#nvenc_h264.c: 
+ - vlc/prevFiles/prev_8eed8a_08a7b8_src#misc#fourcc.c: 
+ - php-src/prevFiles/prev_bf6827_173530_ext#mbstring#libmbfl#filters#mbfilter_sjis_mobile.c: 
+ - FFmpeg/prevFiles/prev_e55612_986d2f_libavfilter#asrc_aevalsrc.c: query_formats
+ - linux/prevFiles/prev_d66d7a_7b4f2d3_drivers#ntb#ntb_transport.c: debugfs_open
+ - linux/prevFiles/prev_50d60c6_7e43f3_drivers#net#wireless#ath#wcn36xx#debug.c: 
+ - FFmpeg/prevFiles/prev_8b4714_646d66_libavformat#img2_alias_pix.c: 
+ - cpython/prevFiles/prev_0cf832_132aca_Modules#_statisticsmodule.c: 
+ - qemu/prevFiles/prev_2e3df9_f88222_disas#riscv.c: 
+ - qemu/prevFiles/prev_33b4f85_eab158_disas#riscv.c: 
+ - FFmpeg/prevFiles/prev_bf18ab_f32b81_libavcodec#libxavs.c: 
+ - FFmpeg/prevFiles/prev_8f57cc_79e5a5_libavformat#raw.c: 
+ - FFmpeg/prevFiles/prev_180bf9_53c844_libavcodec#mpegaudiodec_float.c: 
+ - FFmpeg/prevFiles/prev_2dc22a_9a894c_libavformat#ffmdec.c: 
+ - php-src/prevFiles/prev_a56ea0_30daa9_ext#mbstring#mbfilter.c: 
+ - FFmpeg/prevFiles/prev_bf18ab_f32b81_libavcodec#libspeexenc.c: 
+ - qemu/prevFiles/prev_38841d_b647d6_block#qcow2.c: 
+ - php-src/prevFiles/prev_2d2ed1_f6072e3_ext#pdo_pgsql#pgsql_driver.c: 
+ - cairo/prevFiles/prev_2d483e_cb5edb_src#test-paginated-surface.c: 
+ - qemu/prevFiles/prev_f875f0_b27350_target#i386#whpx-all.c: whpx_emu_memio_callback
+ - qemu/prevFiles/prev_6618f9_3d4028_hw#sga.c: 
+ - vlc/prevFiles/prev_d83bc6_209985_modules#audio_output#file.c: 
+ - qemu/prevFiles/prev_6618f9_3d4028_hw#sga.c: isa_cirrus_vga_initfn
+ - linux/prevFiles/prev_e6a1a0_7cbefa_drivers#media#video#tvaudio.c: 
+ - FFmpeg/prevFiles/prev_ed9683_d4fd3f_libavfilter#vf_blend.c: 
+ - linux/prevFiles/prev_d94621_9c0a50_drivers#scsi#fnic#fnic_debugfs.c: 
+ - wireshark/prevFiles/prev_aba0e8_a4dad7_extcap.c: extcap_load_interface_list
+ - FFmpeg/prevFiles/prev_c0bce3_3dfe34_libavcodec#hapqa_extract_bsf.c: 
+ - php-src/prevFiles/prev_a3e3fa_e765e9a_ext#ffi#ffi.c: 
+ - cairo/prevFiles/prev_2d74ea_58f79a_src#cairo-image-surface.c: 
+ - cairo/prevFiles/prev_22ab0e_672354_src#cairo-ps-surface.c: 
+ - FFmpeg/prevFiles/prev_5d95f3_360ceb_libavcodec#mpeg12dec.c: 
+ - FFmpeg/prevFiles/prev_0a9efe_be8d81_libavcodec#mlp_parser.c: 
+ - php-src/prevFiles/prev_c2cfc1_d4fbb3_ext#pdo_dblib#dblib_stmt.c: 
+ - FFmpeg/prevFiles/prev_e51017_f0b26b_libavcodec#libzvbi-teletextdec.c: 
+ - linux/prevFiles/prev_524605_a084ab_drivers#net#ethernet#chelsio#cxgb4#cxgb4_debugfs.c: 
+ - FFmpeg/prevFiles/prev_8b4714_646d66_libavformat#img2_brender_pix.c: 
+ - FFmpeg/prevFiles/prev_d7efaf_4abffb_libavfilter#vf_hqx.c: query_formats
+ - FFmpeg/prevFiles/prev_9549f2_9a6e4c_libavcodec#h265_metadata_bsf.c: 
+ - cpython/prevFiles/prev_0b7d02_e149fa_Objects#floatobject.c: 
+ - FFmpeg/prevFiles/prev_bf18ab_f32b81_libavcodec#libvo-amrwbenc.c: 
+ - vlc/prevFiles/prev_d83bc6_209985_modules#audio_output#file.c: Start
+ - FFmpeg/prevFiles/prev_879096_d7a496_libavcodec#mlp_parser.c: 
+ - wireshark/prevFiles/prev_d913f4_69ba6c_epan#ftypes#ftype-ipv4.c: ftype_register_ipv4
+ - FFmpeg/prevFiles/prev_c0bce3_3dfe34_libavcodec#mediacodec_wrapper.c: 
+ - FFmpeg/prevFiles/prev_9a6e4c_1ef4af_libavcodec#h264_metadata_bsf.c: 
+ - FFmpeg/prevFiles/prev_01042d_2beac7_libavcodec#pictordec.c: 
+ - qemu/prevFiles/prev_2f2b0c_39c36a_hw#s390x#s390-skeys.c: 
+ - qemu/prevFiles/prev_15c875_4e02cd_audio#dsoundaudio.c: 
+ - cairo/prevFiles/prev_fcdfda_2c8598_src#cairo-quartz-surface.c: 
+ - curl/prevFiles/prev_982a89_0b9fad_lib#vtls#cyassl.c: 
+ - FFmpeg/prevFiles/prev_f359be_d9be6e_libavfilter#vsrc_testsrc.c: 
+ - cpython/prevFiles/prev_c2fb6c_42a3de_Modules#functionalmodule.c: 
+ - qemu/prevFiles/prev_68d1e1_997505_hw#msix.c: 
+ - linux/prevFiles/prev_d94621_9c0a50_drivers#scsi#fnic#fnic_debugfs.c: fnic_trace_ctrl_open
+ - qemu/prevFiles/prev_53a19a3_d217d2_usb-bsd.c: 
+ - php-src/prevFiles/prev_5b4a15_6a6289_ext#standard#php_fopen_wrapper.c: 
+ - FFmpeg/prevFiles/prev_bf18ab_f32b81_libavcodec#libopencore-amr.c: 
+ - FFmpeg/prevFiles/prev_bf18ab_f32b81_libavcodec#libopenjpegdec.c: 
+ - FFmpeg/prevFiles/prev_3674a5_4d59d0_libavformat#uncodedframecrcenc.c: 
+ - vlc/prevFiles/prev_8c7622_ffce37_modules#audio_output#auhal.c: AudioDeviceSupportsDigital
+ - php-src/prevFiles/prev_9891ad_1064f9_ext#standard#php_fopen_wrapper.c: 
+ - FFmpeg/prevFiles/prev_afd091_00a265_libavformat#mxfdec.c: 
+ - FFmpeg/prevFiles/prev_e51017_f0b26b_libavcodec#s302menc.c: 
+ - qemu/prevFiles/prev_a1f9a9_1a391e_hw#timer#arm_mptimer.c: 
+ - linux/prevFiles/prev_d66d7a_7b4f2d3_drivers#ntb#ntb_transport.c: 
+*/
+
+// ---------------------------------------------

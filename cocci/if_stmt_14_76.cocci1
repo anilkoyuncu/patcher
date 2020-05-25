@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- extract_min_max(E0, E1, E2, E3); 
++ if (!extract_min_max(E0, E1, E2, E3))  
++ {
++ return 0; 
++ }
+// Infered from: (openssl/{prevFiles/prev_dfefe7_bcc317_crypto#x509v3#v3_addr.c,revFiles/dfefe7_bcc317_crypto#x509v3#v3_addr.c}: IPAddressOrRanges_canonize)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_0e039a_c21869_apps#req.c: add_attribute_object
+ - openssl/prevFiles/prev_0e039a_c21869_apps#req.c: add_DN_object
+*/
+
+// ---------------------------------------------

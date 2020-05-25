@@ -1,0 +1,12 @@
+@@
+identifier I0;
+@@
+- int I0 = _SUCCESS; 
+  ...
+- return I0; 
++ return _SUCCESS; 
+// Infered from: (linux/{prevFiles/prev_038b70_35a007_drivers#staging#rtl8723au#core#rtw_mlme_ext.c,revFiles/038b70_35a007_drivers#staging#rtl8723au#core#rtw_mlme_ext.c}: init_mlme_ext_priv23a), (linux/{prevFiles/prev_f3dbf6_c3fb33_drivers#staging#rtl8723bs#core#rtw_recv.c,revFiles/f3dbf6_c3fb33_drivers#staging#rtl8723bs#core#rtw_recv.c}: amsdu_to_msdu), (linux/{prevFiles/prev_35a007_147e45d_drivers#staging#rtl8723au#os_dep#os_intfs.c,revFiles/35a007_147e45d_drivers#staging#rtl8723au#os_dep#os_intfs.c}: loadparam), (linux/{prevFiles/prev_35a007_147e45d_drivers#staging#rtl8723au#os_dep#os_intfs.c,revFiles/35a007_147e45d_drivers#staging#rtl8723au#os_dep#os_intfs.c}: rtw_init_default_value), (linux/{prevFiles/prev_8ffca9_8a5e7b_drivers#staging#rtl8712#rtl8712_recv.c,revFiles/8ffca9_8a5e7b_drivers#staging#rtl8712#rtl8712_recv.c}: r8712_init_recvbuf), (linux/{prevFiles/prev_8ffca9_8a5e7b_drivers#staging#rtl8712#rtl8712_recv.c,revFiles/8ffca9_8a5e7b_drivers#staging#rtl8712#rtl8712_recv.c}: amsdu_to_msdu)
+// False positives: (linux/revFiles/35a007_147e45d_drivers#staging#rtl8723au#os_dep#os_intfs.c: _rtw_drv_register_netdev), (linux/revFiles/35a007_147e45d_drivers#staging#rtl8723au#os_dep#os_intfs.c: rtw_drv_register_netdev), (linux/revFiles/35a007_147e45d_drivers#staging#rtl8723au#os_dep#os_intfs.c: rtw_init_drv_sw23a), (linux/revFiles/8ffca9_8a5e7b_drivers#staging#rtl8712#rtl8712_recv.c: r8712_init_recv_priv), (linux/revFiles/8ffca9_8a5e7b_drivers#staging#rtl8712#rtl8712_recv.c: recv_func), (linux/revFiles/f3dbf6_c3fb33_drivers#staging#rtl8723bs#core#rtw_recv.c: process_recv_indicatepkts), (linux/revFiles/f3dbf6_c3fb33_drivers#staging#rtl8723bs#core#rtw_recv.c: recv_func_posthandle), (linux/revFiles/f3dbf6_c3fb33_drivers#staging#rtl8723bs#core#rtw_recv.c: recv_func_prehandle)
+// Recall: 0.67, Precision: 0.42, Matching recall: 1.00
+
+// ---------------------------------------------

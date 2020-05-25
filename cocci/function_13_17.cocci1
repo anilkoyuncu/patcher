@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- file_gets(E0, VMS_LINE_LENGTH, E1); 
++ if (!file_gets(E0, VMS_LINE_LENGTH, E1))  
++ {
++ return FALSE; 
++ }
+// Infered from: (wireshark/{prevFiles/prev_51af73_e76dd3_wiretap#vms.c,revFiles/51af73_e76dd3_wiretap#vms.c}: parse_vms_hex_dump)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

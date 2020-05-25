@@ -1,0 +1,10 @@
+@@
+identifier I3;
+expression E0, E1, E2;
+@@
+- E0->display.audio_codec_enable(E1, E2, I3); 
++ E0->display.audio_codec_enable(E1, E2, adjusted_mode); 
+// Infered from: (linux/{prevFiles/prev_124abe0_286940_drivers#gpu#drm#i915#intel_audio.c,revFiles/124abe0_286940_drivers#gpu#drm#i915#intel_audio.c}: intel_audio_codec_enable)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

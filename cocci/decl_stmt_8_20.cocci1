@@ -1,0 +1,29 @@
+@@
+identifier I0;
+expression E1;
+typedef guint64;
+@@
+- guint64 I0 = E1 == UINT64_MAX ? E1 :E1 + 1; 
++ guint64 I0 = E1 == G_MAXUINT64 ? E1 :E1 + 1; 
+// Infered from: (wireshark/{prevFiles/prev_dd8789_b446ab_epan#dissectors#packet-quic.c,revFiles/dd8789_b446ab_epan#dissectors#packet-quic.c}: quic_pkt_adjust_pkt_num)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_23d69b_f2eca8_libavcodec#hevc_refs.c: ff_hevc_output_frame
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_d03f37b_893432c_modules#control#hotkeys.c: PutAction
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- UPDATE_SSA_TYPE(MAY_BE_STRING, E0[E1].result_def); 
++ UPDATE_SSA_TYPE(MAY_BE_STRING | MAY_BE_RC1 | MAY_BE_RCN, E0[E1].result_def); 
+// Infered from: (php-src/{prevFiles/prev_ee26c1_799b52_ext#opcache#Optimizer#zend_inference.c,revFiles/ee26c1_799b52_ext#opcache#Optimizer#zend_inference.c}: zend_update_type_info)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

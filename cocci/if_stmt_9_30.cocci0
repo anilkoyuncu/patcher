@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (ieee80211_vhtvalid[E0].valid[E1][E2] == FALSE)  
++ if (ieee80211_vhtvalid[E0].valid[E1][E2 - 1] == FALSE)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_924d1e_1ef601_epan#dissectors#packet-ieee80211-radiotap.c,revFiles/924d1e_1ef601_epan#dissectors#packet-ieee80211-radiotap.c}: dissect_radiotap)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- __put_user(E0->regwptr[E1 + WREG_O0], &E2->ss.ins[E1]); 
++ __put_user(E0->regwptr[E1 + WREG_I0], &E2->ss.ins[E1]); 
+// Infered from: (qemu/{prevFiles/prev_9c226a_8d9c72_linux-user#sparc#signal.c,revFiles/9c226a_8d9c72_linux-user#sparc#signal.c}: setup_frame)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return E0 != NULL ? CURLE_OK :CURLE_FAILED_INIT; 
++ return *E0 != NULL ? CURLE_OK :CURLE_FAILED_INIT; 
+// Infered from: (curl/{prevFiles/prev_793ac8_c2791c_lib#security.c,revFiles/793ac8_c2791c_lib#security.c}: choose_mech)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

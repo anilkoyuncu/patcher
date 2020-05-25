@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->is_mpeg2 = (ENABLE_MPEG2VOB_MUXER && E1->oformat == &mpeg2vob_muxer || ENABLE_MPEG2DVD_MUXER && E1->oformat == &mpeg2dvd_muxer || ENABLE_MPEG2SVCD_MUXER && E1->oformat == &mpeg2svcd_muxer); 
++ E0->is_mpeg2 = ((ENABLE_MPEG2VOB_MUXER && E1->oformat == &mpeg2vob_muxer) || (  ENABLE_MPEG2DVD_MUXER && E1->oformat == &mpeg2dvd_muxer) || (  ENABLE_MPEG2SVCD_MUXER && E1->oformat == &mpeg2svcd_muxer)); 
+// Infered from: (FFmpeg/{prevFiles/prev_87be0d_3dc761_libavformat#mpegenc.c,revFiles/87be0d_3dc761_libavformat#mpegenc.c}: mpeg_mux_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

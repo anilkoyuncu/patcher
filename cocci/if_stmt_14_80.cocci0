@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0[E1].data[0] !=  '$')  
++ if (E0[E1].len < 2 || E0[E1].data[0] != '$')  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_ba2900_b34309_src#http#modules#perl#ngx_http_perl_module.c,revFiles/ba2900_b34309_src#http#modules#perl#ngx_http_perl_module.c}: ngx_http_perl_set), (nginx/{prevFiles/prev_ba2900_b34309_src#http#modules#ngx_http_limit_conn_module.c,revFiles/ba2900_b34309_src#http#modules#ngx_http_limit_conn_module.c}: ngx_http_limit_zone), (nginx/{prevFiles/prev_ba2900_b34309_src#http#modules#ngx_http_rewrite_module.c,revFiles/ba2900_b34309_src#http#modules#ngx_http_rewrite_module.c}: ngx_http_rewrite_set)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

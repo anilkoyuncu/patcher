@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 & 0x1f == NAL_IDR_SLICE || (E0 >> 5) & 0x3 == 0)  
++ if ((E0 & 0x1f) == NAL_IDR_SLICE || ((E0 >> 5) & 0x3) == 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_19f538_f825d4_libavcodec#h264_parser.c,revFiles/19f538_f825d4_libavcodec#h264_parser.c}: parse_nal_units), (FFmpeg/{prevFiles/prev_9c0fe4_62533e_libavcodec#h264_parser.c,revFiles/9c0fe4_62533e_libavcodec#h264_parser.c}: parse_nal_units)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

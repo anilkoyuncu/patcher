@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (find_segment_by_filename(E0->segments, E1) || find_segment_by_filename(  E0->old_segments, E2->filename))  
++ if (find_segment_by_filename(E0->segments, E1) || find_segment_by_filename(  E0->old_segments, E1))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_8c9c43fc_72d610_libavformat#hlsenc.c,revFiles/8c9c43fc_72d610_libavformat#hlsenc.c}: hls_append_segment)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

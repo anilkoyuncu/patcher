@@ -1,0 +1,33 @@
+@@
+expression E0;
+@@
+- if (!E0->f_flags & O_NONBLOCK)  
++ if (!(E0->f_flags & O_NONBLOCK))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_4de840_f0ad07_drivers#usb#usb-skeleton.c,revFiles/4de840_f0ad07_drivers#usb#usb-skeleton.c}: skel_write)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 1.00
+// -- Node Change --
+// Recall: 0.62, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_7a9424_960d10_ext#standard#http_fopen_wrapper.c: php_stream_url_wrap_http_ex
+ - php-src/prevFiles/prev_e6ba28_c3677c_Zend#zend_execute_API.c: zend_assign_to_variable_reference
+ - linux/prevFiles/prev_4de840_f0ad07_drivers#usb#usb-skeleton.c: skel_read
+*/
+
+// ---------------------------------------------

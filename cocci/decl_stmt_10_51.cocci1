@@ -1,0 +1,25 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- char I2[((E0 > E1) ? E0 :E1) + sizeof("/ssl/private")]; 
++ char I2[((E0 > E1) ? E0 :E1) + sizeof("/ca-certificates.crt")]; 
+// Infered from: (vlc/{prevFiles/prev_0e960e_b03064_modules#misc#gnutls.c,revFiles/0e960e_b03064_modules#misc#gnutls.c}: OpenClient)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_0e960e_b03064_modules#misc#gnutls.c: OpenClient
+ - vlc/prevFiles/prev_a69be9_5e3d57_src#misc#unicode.c: LocaleInit
+*/
+
+// ---------------------------------------------

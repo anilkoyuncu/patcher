@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0->pts = av_rescale_q(E1->pts, E2->fs.time_base, E3->time_base); 
++ E0->pts = av_rescale_q(E2->fs.pts, E2->fs.time_base, E3->time_base); 
+// Infered from: (FFmpeg/{prevFiles/prev_5486d7_a73b23_libavfilter#dualinput.c,revFiles/5486d7_a73b23_libavfilter#dualinput.c}: process_frame), (FFmpeg/{prevFiles/prev_077bf9_8788dd67_libavfilter#vf_displace.c,revFiles/077bf9_8788dd67_libavfilter#vf_displace.c}: process_frame), (FFmpeg/{prevFiles/prev_be822e_077bf9_libavfilter#vf_remap.c,revFiles/be822e_077bf9_libavfilter#vf_remap.c}: process_frame)
+// Recall: 0.23, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

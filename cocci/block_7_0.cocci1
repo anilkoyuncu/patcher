@@ -1,0 +1,7 @@
+@@
+@@
+- php_header(); 
+// Infered from: (php-src/{prevFiles/prev_8499b4_5ca813_ext#cpdf#cpdf.c,revFiles/8499b4_5ca813_ext#cpdf#cpdf.c}: PHP_FUNCTION)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

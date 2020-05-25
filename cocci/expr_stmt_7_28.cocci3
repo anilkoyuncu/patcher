@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.no_progress = !isatty(1); 
++ E0.no_progress = E0.quiet || !isatty(1); 
+// Infered from: (git/{prevFiles/prev_fe8aa1_5209ac_transport.c,revFiles/fe8aa1_5209ac_transport.c}: fetch_refs_via_pack)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

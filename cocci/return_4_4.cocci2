@@ -1,0 +1,8 @@
+@@
+@@
+- return AVPROBE_SCORE_MAX - 1; 
++ return 50 - 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_b24cf8_a32072d_libav#raw.c,revFiles/b24cf8_a32072d_libav#raw.c}: mpegvideo_probe)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+@@
+- I0 = proto_tree_add_uint_format(E1, hf_mysql_refresh, E2, E3, 1, E4,  "Refresh Bitmap: 0x%02X ", E4); 
++ tff = proto_tree_add_uint_format(E1, hf_mysql_refresh, E2, E3, 1, E4,  "Refresh Bitmap: 0x%02X ", E4); 
+// Infered from: (wireshark/{prevFiles/prev_c56146_f1d471_epan#dissectors#packet-mysql.c,revFiles/c56146_f1d471_epan#dissectors#packet-mysql.c}: mysql_dissect_request)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

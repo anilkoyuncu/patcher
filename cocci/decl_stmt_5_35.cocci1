@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- int I0 = E1 + E2 + E3; 
++ int I0 = E1 + E2 - E3; 
+// Infered from: (FFmpeg/{prevFiles/prev_f4f40c_772c73_libavdevice#xcbgrab.c,revFiles/f4f40c_772c73_libavdevice#xcbgrab.c}: xcbgrab_reposition)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

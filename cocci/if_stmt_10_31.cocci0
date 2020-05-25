@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((aeWait(E0, AE_WRITABLE, E1 * 1000) & AE_WRITABLE) == 0)  
++ if ((aeWait(E0, AE_WRITABLE, E1) & AE_WRITABLE) == 0)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_5c53cd_cb856e_sapi#apache2filter#apache_config.c,revFiles/5c53cd_cb856e_sapi#apache2filter#apache_config.c}: apply_config), (redis/{prevFiles/prev_149b52_e23d28_src#cluster.c,revFiles/149b52_e23d28_src#cluster.c}: migrateGetSocket)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

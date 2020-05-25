@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef guint32;
+@@
+- guint32 I0; 
++ guint32 sectime; 
+  ...
+- I0 = tvb_get_ntohl(E1, E2); 
+- if (0 == I0)  
++ sectime = tvb_get_ntohl(E1, E2); 
++ if (0 == sectime)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_de4c6f_55669f_epan#dissectors#packet-egd.c,revFiles/de4c6f_55669f_epan#dissectors#packet-egd.c}: dissect_egd)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

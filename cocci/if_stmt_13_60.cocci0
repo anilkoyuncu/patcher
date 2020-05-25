@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!isprint(E0[E1]))  
++ if (!isprint((int )(E0[E1])))  
+  {
+  ...
+  }
+// Infered from: (cmake/{prevFiles/prev_05e162_589cf3_Source#CursesDialog#form#frm_driver.c,revFiles/05e162_589cf3_Source#CursesDialog#form#frm_driver.c}: set_field_buffer)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

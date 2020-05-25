@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = queue_command(E0, E1, E2 ? E2 - E1 :E3 - E2); 
++ E0 = queue_command(E0, E1, E2 ? E2 - E1 :E3 - E1); 
+// Infered from: (git/{prevFiles/prev_f2214de_6f5ef4_builtin#receive-pack.c,revFiles/f2214de_6f5ef4_builtin#receive-pack.c}: queue_commands_from_cert)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

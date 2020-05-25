@@ -1,0 +1,16 @@
+@@
+identifier I1 = {nfs3svc_decode_fh ,strdup };
+expression list E2;
+expression E0;
+@@
+- if (!(E0 = I1(E2)))  
++ E0 = I1(E2); 
++ if (!E0)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_88f585_051485_lib#curl_sasl.c,revFiles/88f585_051485_lib#curl_sasl.c}: Curl_sasl_continue), (linux/{prevFiles/prev_d40aa33_f35ea0_fs#nfsd#nfs3acl.c,revFiles/d40aa33_f35ea0_fs#nfsd#nfs3acl.c}: nfs3svc_decode_getaclargs), (linux/{prevFiles/prev_d40aa33_f35ea0_fs#nfsd#nfs3acl.c,revFiles/d40aa33_f35ea0_fs#nfsd#nfs3acl.c}: nfs3svc_decode_setaclargs), (curl/{prevFiles/prev_c142e7_4ff2fb_lib#curl_sasl.c,revFiles/c142e7_4ff2fb_lib#curl_sasl.c}: Curl_sasl_continue)
+// False positives: (curl/revFiles/88f585_051485_lib#curl_sasl.c: Curl_sasl_continue)
+// Recall: 0.60, Precision: 0.80, Matching recall: 1.00
+
+// ---------------------------------------------

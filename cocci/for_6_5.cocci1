@@ -1,0 +1,28 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = 2, E1 = E2;E0 <= E2;E0++)  
++ for(E0 = 2, E1 = E2;E0 * E0 <= E2;E0++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_588-B-14559572-14559603.c,revFiles/588-B-14559572-14559603.c}: main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_a0b27d_62f9ac_src#db.c: xreadGetKeys
+ - codeflaws/prevFiles/prev_121-B-1990392-1990419.c: main
+ - codeflaws/prevFiles/prev_443-B-6991415-6991443.c: main
+*/
+
+// ---------------------------------------------

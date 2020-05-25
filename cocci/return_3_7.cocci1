@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return (E0->env.pmsav7.drbar[E1] & 0x1f) | (E1 & 0xf); 
++ return (E0->env.pmsav7.drbar[E1] & ~0x1f) | (E1 & 0xf); 
+// Infered from: (qemu/{prevFiles/prev_2b75ef_96a8b9_hw#intc#armv7m_nvic.c,revFiles/2b75ef_96a8b9_hw#intc#armv7m_nvic.c}: nvic_readl)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

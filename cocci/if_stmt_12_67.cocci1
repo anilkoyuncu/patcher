@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!memcmp(E0, "\x1\x10\0\0\0\0\0\0", 8))  
++ if (!memcmp(E0, "\x1\x10", 2))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_f09bbb_67cdfc_libavformat#ac3dec.c,revFiles/f09bbb_67cdfc_libavformat#ac3dec.c}: ac3_eac3_probe)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

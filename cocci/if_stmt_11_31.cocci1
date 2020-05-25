@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if ((*E0->name || E0->cursor_open) && isc_dsql_free_statement(H->isc_status,  &E0->stmt,  DSQL_close))  
++ if ((*E0->name || E0->cursor_open) && isc_dsql_free_statement(E0->H->isc_status,  &E0->stmt,  DSQL_close))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_204d70_3e0680_ext#pdo_firebird#firebird_statement.c,revFiles/204d70_3e0680_ext#pdo_firebird#firebird_statement.c}: firebird_stmt_cursor_closer)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

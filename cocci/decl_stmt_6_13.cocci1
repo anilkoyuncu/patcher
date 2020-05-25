@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- long long I0 = !((E1 - E2) % E3 - 1 == 0); 
++ long long I0 = !((E1 - E2) % (E3 - 1) == 0); 
+// Infered from: (codeflaws/{prevFiles/prev_348-A-6911268-6911271.c,revFiles/348-A-6911268-6911271.c}: main)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

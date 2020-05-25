@@ -1,0 +1,27 @@
+@@
+identifier I0;
+expression E1;
+typedef ess_category_attributes_t;
+typedef uat_t;
+@@
+- uat_t *I0 = uat_new("ESS Category Attributes",  sizeof(ess_category_attributes_t ),  "ess_category_attributes", TRUE,  (void **)&ess_category_attributes,  &num_ess_category_attributes, UAT_CAT_PORTS,  "ChEssCategoryAttributes", ess_copy_cb, NULL,  ess_free_cb, NULL, E1); 
++ uat_t *I0 = uat_new("ESS Category Attributes",  sizeof(ess_category_attributes_t ),  "ess_category_attributes", TRUE,  (void *)&ess_category_attributes,  &num_ess_category_attributes, UAT_CAT_PORTS,  "ChEssCategoryAttributes", ess_copy_cb, NULL,  ess_free_cb, NULL, E1); 
+// Infered from: (wireshark/{prevFiles/prev_ae400a_2f5ebda_epan#dissectors#packet-ess.c,revFiles/ae400a_2f5ebda_epan#dissectors#packet-ess.c}: proto_register_ess)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch did not apply:
+ - tmux/prevFiles/prev_c5fefd_862b89_job.c: 
+ - tmux/prevFiles/prev_6ac334_f1dd95_job.c: 
+*/
+
+// ---------------------------------------------

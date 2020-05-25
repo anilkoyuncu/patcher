@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = E1->data[6] & 0x7; 
++ int I0 = E1->data[5] & 0x7; 
+// Infered from: (FFmpeg/{prevFiles/prev_836132_a4c8e0_libavformat#spdifenc.c,revFiles/836132_a4c8e0_libavformat#spdifenc.c}: spdif_header_ac3)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

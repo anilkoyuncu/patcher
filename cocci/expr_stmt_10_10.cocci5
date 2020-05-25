@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E4, E5, E3;
+@@
+- E0->segmentation.feat[E1].lflvl[E2][E3] = av_clip_uintp2(E4 + ((E0->lf_delta.ref[  E2] + E0->lf_delta.mode[  E3]) << E5),  6); 
++ E0->segmentation.feat[E1].lflvl[E2][E3] = av_clip_uintp2(E4 + ((E0->lf_delta.ref[  E2] + E0->lf_delta.mode[  E3]) * (  1 << E5)),  6); 
+// Infered from: (FFmpeg/{prevFiles/prev_27191b_b7cb8b_libavcodec#vp9.c,revFiles/27191b_b7cb8b_libavcodec#vp9.c}: decode_frame_header), (FFmpeg/{prevFiles/prev_27191b_b7cb8b_libavcodec#vp9.c,revFiles/27191b_b7cb8b_libavcodec#vp9.c}: decode_frame_header)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

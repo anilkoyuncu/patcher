@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1] = ((int )sqrt(E2[E1 + 1])) >> 8; 
++ E0[E1] = ((int )sqrt(E2[E1])) >> 8; 
+// Infered from: (vlc/{prevFiles/prev_3d90c1_af5aec_modules#visualization#visual#effects.c,revFiles/3d90c1_af5aec_modules#visualization#visual#effects.c}: spectrum_Run), (vlc/{prevFiles/prev_3d90c1_af5aec_modules#visualization#visual#effects.c,revFiles/3d90c1_af5aec_modules#visualization#visual#effects.c}: spectrometer_Run)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

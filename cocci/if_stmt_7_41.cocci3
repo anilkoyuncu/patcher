@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (E0 >= E1)  
++ if (E0 > E1 - 2)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_20d414_42b6d5_src#http#ngx_http_spdy.c,revFiles/20d414_42b6d5_src#http#ngx_http_spdy.c}: ngx_http_spdy_alloc_large_header_buffer), (qemu/{prevFiles/prev_813962_5d4009_hw#lm4549.c,revFiles/813962_5d4009_hw#lm4549.c}: lm4549_write_samples)
+// False positives: (codeflaws/revFiles/417-C-6546859-6546862.c: main), (nginx/revFiles/20d414_42b6d5_src#http#ngx_http_spdy.c: ngx_http_spdy_run_request), (nginx/revFiles/20d414_42b6d5_src#http#ngx_http_spdy.c: ngx_http_spdy_state_syn_stream)
+// Recall: 0.36, Precision: 0.42, Matching recall: 0.83
+
+// ---------------------------------------------

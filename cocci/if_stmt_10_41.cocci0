@@ -1,0 +1,13 @@
+@@
+expression E0;
+typedef NULL;
+@@
+- if (!CryptAcquireContext(&E0, NULL , NULL , PROV_RSA_FULL, 0))  
++ if (!CryptAcquireContext(&E0, NULL , NULL , PROV_RSA_FULL,  CRYPT_VERIFYCONTEXT))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_74bc65_b69136_ext#mcrypt#mcrypt.c,revFiles/74bc65_b69136_ext#mcrypt#mcrypt.c}: php_mcrypt_iv)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

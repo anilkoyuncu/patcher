@@ -1,0 +1,38 @@
+@@
+expression E0;
+@@
+- if (irq && request_irq(irq, &ltpc_interrupt, 0, "ltpc", E0) >= 0)  
++ if (irq && request_irq(irq, ltpc_interrupt, 0, "ltpc", E0) >= 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_a0607f_2939e27_drivers#net#appletalk#ltpc.c,revFiles/a0607f_2939e27_drivers#net#appletalk#ltpc.c}: ltpc_probe)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 13 rules):
+// -- Edit Location --
+// Recall: 0.95, Precision: 1.00
+// -- Node Change --
+// Recall: 0.93, Precision: 0.97
+// -- General --
+// Functions fully changed: 52/57(91%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_a0607f_2939e27_drivers#net#tehuti.c: bdx_hw_start
+ - linux/prevFiles/prev_0b1221_761ed4_drivers#tty#serial#vt8500_serial.c: 
+ - linux/prevFiles/prev_a0607f_2939e27_drivers#net#irda#au1k_ir.c: au1k_irda_start
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_c60cda_e3b889_ext#gd#libgd#gd.c: gdImageCreate
+ - php-src/prevFiles/prev_c60cda_e3b889_ext#gd#libgd#gd.c: gdImageCreateTrueColor
+*/
+
+// ---------------------------------------------

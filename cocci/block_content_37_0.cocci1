@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (IS_ERR(E0->kthread))  
+- {
+- return PTR_ERR(E0->kthread); 
+- }
+- return 0; 
++ return PTR_RET(E0->kthread); 
+// Infered from: (linux/{prevFiles/prev_7d0ee46_c2668c_drivers#staging#media#solo6x10#v4l2.c,revFiles/7d0ee46_c2668c_drivers#staging#media#solo6x10#v4l2.c}: solo_start_thread)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

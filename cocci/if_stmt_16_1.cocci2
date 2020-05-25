@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- assert(!(E0->avctx->flags & CODEC_FLAG_EMU_EDGE)); 
+// Infered from: (FFmpeg/{prevFiles/prev_8fa973_d83026_libavcodec#snow.c,revFiles/8fa973_d83026_libavcodec#snow.c}: halfpel_interpol), (FFmpeg/{prevFiles/prev_441693_c881df_libavcodec#snow.c,revFiles/441693_c881df_libavcodec#snow.c}: halfpel_interpol)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 0.71
+// -- Node Change --
+// Recall: 0.57, Precision: 0.67
+// -- General --
+// Functions fully changed: 5/10(50%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_3ea0d9_154cee_libavcodec#utils.c: ff_get_format
+ - redis/prevFiles/prev_2f4240_94030f_src#scripting.c: luaRedisGenericCommand
+ - redis/prevFiles/prev_de914e_ada206_src#server.c: call
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_8fa973_d83026_libavcodec#snow.c: common_end
+ - FFmpeg/prevFiles/prev_441693_c881df_libavcodec#snow.c: common_end
+*/
+
+// ---------------------------------------------

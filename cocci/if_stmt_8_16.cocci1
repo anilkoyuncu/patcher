@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0[E1] > E0[E2 + 1])  
++ if (E0[E2] > E0[E2 + 1])  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_405-A-15637019-15637032.c,revFiles/405-A-15637019-15637032.c}: main)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

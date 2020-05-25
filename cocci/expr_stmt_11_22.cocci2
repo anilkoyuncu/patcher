@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- E0 = malloc(E1 * 2 + 1); 
++ E0 = malloc(((size_t )E1) * 2 + 1); 
+// Infered from: (curl/{prevFiles/prev_4798f4_b38e28_lib#dict.c,revFiles/4798f4_b38e28_lib#dict.c}: unescape_word)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

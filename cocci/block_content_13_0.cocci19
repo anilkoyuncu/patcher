@@ -1,0 +1,15 @@
+@@
+expression E0, E1;
+@@
+- if (!(E0->ev_events & EV_PERSIST))  
++ if (!(E0->ev_events & EV_PERSIST))  
+  {
+- event_del(E0); 
++ event_del_i(E0); 
+  }
+- event_active(E0, E1, 1); 
++ event_active_i(E0, E1, 1); 
+// Infered from: (ompi/{prevFiles/prev_3a7ede_24de93_opal#event#rtsig.c,revFiles/3a7ede_24de93_opal#event#rtsig.c}: activate)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

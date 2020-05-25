@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->name[E1 - 1] == '.')  
++ if (E1 && (E0->name[E1 - 1] == '.'))  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_0583e8_b5f947_lib#url.c,revFiles/0583e8_b5f947_lib#url.c}: fix_hostname)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- le_mcal = register_list_destructors(cal_close_it, NULL); 
++ le_mcal = register_list_destructors(cal_close_it, NULL, "mcal"); 
+// Infered from: (php-src/{prevFiles/prev_7b4983_a0cfab_ext#mcal#php_mcal.c,revFiles/7b4983_a0cfab_ext#mcal#php_mcal.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

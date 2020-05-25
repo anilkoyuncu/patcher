@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- g_source_set_name(E0, "GTK+ CUPS backend"); 
++ g_source_set_name(&E0->source, "GTK+ CUPS backend"); 
+// Infered from: (gtk/{prevFiles/prev_c90ba0_90cd0f_modules#printbackends#cups#gtkprintbackendcups.c,revFiles/c90ba0_90cd0f_modules#printbackends#cups#gtkprintbackendcups.c}: cups_request_execute)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

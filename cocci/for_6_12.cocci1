@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- for(E0 = 31;E0 < 32;E0--)  
++ for(E0 = 31;E0 > 0;E0--)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_291-C-12020290-12020359.c,revFiles/291-C-12020290-12020359.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

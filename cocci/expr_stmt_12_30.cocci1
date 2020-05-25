@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = _Py_HashPointer(E1->m_ml->ml_meth); 
++ E0 = _Py_HashPointer((void *)(E1->m_ml->ml_meth)); 
+// Infered from: (cpython/{prevFiles/prev_9a15c2_64529c_Objects#methodobject.c,revFiles/9a15c2_64529c_Objects#methodobject.c}: meth_hash)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

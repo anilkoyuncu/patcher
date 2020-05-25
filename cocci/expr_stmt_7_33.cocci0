@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- *E0 = (void *)E1->socket; 
++ *(int *)E0 = E1->socket; 
+// Infered from: (php-src/{prevFiles/prev_16e705_b66957_main#streams#xp_socket.c,revFiles/16e705_b66957_main#streams#xp_socket.c}: php_sockop_cast)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

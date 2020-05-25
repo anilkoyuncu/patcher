@@ -1,0 +1,33 @@
+@@
+expression E0;
+@@
+- if (OPAL_UNLIKELY(OMPI_SUCCESS == E0))  
++ if (OPAL_UNLIKELY(OMPI_SUCCESS != E0))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_a31bfb_9df795_ompi#mca#osc#rdma#osc_rdma_data_move.c,revFiles/a31bfb_9df795_ompi#mca#osc#rdma#osc_rdma_data_move.c}: ompi_osc_gacc_long_start)
+// False positives: (ompi/revFiles/97c973_ce8e24_ompi#mca#osc#rdma#osc_rdma_accumulate.c: cas_rdma), (ompi/revFiles/97c973_ce8e24_ompi#mca#osc#rdma#osc_rdma_accumulate.c: ompi_osc_rdma_gacc_contig)
+// Recall: 0.20, Precision: 0.33, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 0.75
+// -- Node Change --
+// Recall: 0.60, Precision: 0.60
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_223bb3_54bfce_modules#meta_engine#folder.c: FindMeta
+ - gtk/prevFiles/prev_59bc9e_0f88b6_gdk#x11#gdkdisplay-x11.c: delete_outdated_error_traps
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_97c973_ce8e24_ompi#mca#osc#rdma#osc_rdma_accumulate.c: cas_rdma
+ - ompi/prevFiles/prev_97c973_ce8e24_ompi#mca#osc#rdma#osc_rdma_accumulate.c: ompi_osc_rdma_gacc_contig
+*/
+
+// ---------------------------------------------

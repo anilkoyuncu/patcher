@@ -1,0 +1,10 @@
+@@
+expression E1, E0;
+typedef uint8_t;
+@@
+- E0 = bytestream_get_be16(&E1); 
++ E0 = bytestream_get_be16((const  uint8_t **)&E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_6fc892_370bb8_libavcodec#libvorbisdec.c,revFiles/6fc892_370bb8_libavcodec#libvorbisdec.c}: oggvorbis_decode_init), (FFmpeg/{prevFiles/prev_bd2613_106790_libavcodec#rangecoder.c,revFiles/bd2613_106790_libavcodec#rangecoder.c}: ff_init_range_decoder)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

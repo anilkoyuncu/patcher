@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef gchar;
+@@
+- if (!E0->save_func(E0->buffer, E1, E0->error, E0->user_data))  
++ if (!E0->save_func((gchar *)E0->buffer, E1, E0->error, E0->user_data))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_8e945e_852d4f_gdk-pixbuf#io-jpeg.c,revFiles/8e945e_852d4f_gdk-pixbuf#io-jpeg.c}: to_callback_do_write)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+identifier I0, I4;
+expression E1, E2, E3;
+typedef uint8_t;
+@@
+- uint8_t *I0 = E1->top_borders[E2][E3->mb_x - 1]; 
+- uint8_t *I4 = E1->top_borders[E2][E3->mb_x]; 
++ uint8_t *I0; 
++ uint8_t *I4; 
+// Infered from: (FFmpeg/{prevFiles/prev_1e4f1c_9104cd_libavcodec#h264.c,revFiles/1e4f1c_9104cd_libavcodec#h264.c}: xchg_mb_border)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

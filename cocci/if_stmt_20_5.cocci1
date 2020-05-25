@@ -1,0 +1,31 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 != E1 && E0 != E2 && E0 != E3 && E1 != E2 && E1 != E3 && E2 != E3 && E0 > 0 && E1 > 0 && E2 > 0 && E3 > 0)  
++ if (E0 != E1 && E0 != E2 && E0 != E3 && E1 != E2 && E1 != E3 && E2 != E3 && E0 > 0 && E1 > 0 && E2 > 0 && E3 > 0 && E0 < 10 && E1 < 10 && E2 < 10 && E3 < 10)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_143-A-18229204-18229291.c,revFiles/143-A-18229204-18229291.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_c0f0be_2c8572_libswscale#swscale-test.c: fileTest
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->info[E0->i_count].psz_value = strdup(E1); 
++ E0->info[E0->i_count].psz_value = strdup(E1 ? E1 :"(null)"); 
+// Infered from: (vlc/{prevFiles/prev_af3dd2_21c3df_modules#misc#httpd.c,revFiles/af3dd2_21c3df_modules#misc#httpd.c}: httpd_info_add_ss)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- qemu_put_be64s(E0, &E1->tmr_overflow_time); 
++ qemu_put_be64(E0, E1->tmr_overflow_time); 
+// Infered from: (qemu/{prevFiles/prev_bee8d6_b99dc0_hw#acpi.c,revFiles/bee8d6_b99dc0_hw#acpi.c}: pm_save)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

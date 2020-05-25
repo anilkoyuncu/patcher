@@ -1,0 +1,12 @@
+@@
+@@
+- for(j = 1;j <= x;j++)  
++ for(j = 1;j <= 199;j++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_585-B-15514693-15514749.c,revFiles/585-B-15514693-15514749.c}: main)
+// False positives: (codeflaws/revFiles/585-B-15514693-15514749.c: main)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

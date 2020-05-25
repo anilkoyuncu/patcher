@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E3, E1, E2;
+@@
+- char *I0 = (char *)tvb_get_string(wmem_packet_scope(), E1, E2, E3); 
++ char *I0 = (char *)tvb_get_string_enc(wmem_packet_scope(), E1, E2, E3,  ENC_ASCII); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-catapult-dct2000.c,revFiles/971ffd_421d81_epan#dissectors#packet-catapult-dct2000.c}: dissect_tty_lines), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-catapult-dct2000.c,revFiles/971ffd_421d81_epan#dissectors#packet-catapult-dct2000.c}: dissect_catapult_dct2000)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

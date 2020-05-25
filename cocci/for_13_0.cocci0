@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E3, E1, E2;
+@@
+- I0 = E1->format->options(E1, E2, E3); 
++ I0 = format->options(E1, E2, E3); 
+// Infered from: (libarchive/{prevFiles/prev_ef1caa_59b1e9_libarchive#archive_read.c,revFiles/ef1caa_59b1e9_libarchive#archive_read.c}: archive_read_set_format_options), (libarchive/{prevFiles/prev_ef1caa_59b1e9_libarchive#archive_read.c,revFiles/ef1caa_59b1e9_libarchive#archive_read.c}: archive_read_set_format_options)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

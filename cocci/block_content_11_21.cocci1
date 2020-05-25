@@ -1,0 +1,29 @@
+@@
+identifier I0;
+expression E1;
+typedef int16_t;
+@@
+- short *I0; 
++ int16_t *I0; 
+  ...
+- I0 = E1->frame.data[0]; 
++ I0 = (int16_t *)E1->frame.data[0]; 
+// Infered from: (FFmpeg/{prevFiles/prev_89cd95_ae03b2_libavcodec#sonic.c,revFiles/89cd95_ae03b2_libavcodec#sonic.c}: sonic_decode_frame)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.75
+// -- Node Change --
+// Recall: 1.00, Precision: 0.50
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_96abc0_62abdd_epan#dissectors#packet-c15ch.c: dissect_c15ch_clli
+ - wireshark/prevFiles/prev_96abc0_62abdd_epan#dissectors#packet-c15ch.c: dissect_c15ch_nitnxlate
+*/
+
+// ---------------------------------------------

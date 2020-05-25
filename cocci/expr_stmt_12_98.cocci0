@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0->pending_task = NULL; 
++ g_clear_object(&E0->pending_task); 
+// Infered from: (gtk/{prevFiles/prev_1ce960_d7a5dc_gdk#x11#gdkselectioninputstream-x11.c,revFiles/1ce960_d7a5dc_gdk#x11#gdkselectioninputstream-x11.c}: gdk_x11_selection_input_stream_flush)
+// False positives: (gtk/revFiles/1ce960_d7a5dc_gdk#x11#gdkselectioninputstream-x11.c: gdk_x11_selection_input_stream_xevent)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

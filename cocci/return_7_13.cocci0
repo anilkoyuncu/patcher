@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return gst_caps_to_string(E0); 
++ return gst_string_take_and_wrap(gst_caps_to_string(E0)); 
+// Infered from: (gstreamer/{prevFiles/prev_007c0e_3892e4_gst#gstvalue.c,revFiles/007c0e_3892e4_gst#gstvalue.c}: gst_value_serialize_caps)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- bitwise_not_function(&E0->u.constant, &E1->u.constant); 
++ bitwise_not_function(); 
+// Infered from: (php-src/{prevFiles/prev_974f40_668fc2_Zend#zend_compile.c,revFiles/974f40_668fc2_Zend#zend_compile.c}: zend_do_fold_binary_op)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_0116a7_ad18bd_ext#standard#info.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_2f04af_79330d_ext#posix#posix.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

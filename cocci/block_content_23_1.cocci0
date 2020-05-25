@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = kmalloc(E1, GFP_KERNEL); 
++ E0 = kmemdup(E2, E1, GFP_KERNEL); 
+  ...
+- memcpy(E0, E2, E1); 
+// Infered from: (linux/{prevFiles/prev_42f9de_0a147c_drivers#staging#media#go7007#go7007-driver.c,revFiles/42f9de_0a147c_drivers#staging#media#go7007#go7007-driver.c}: go7007_load_encoder), (linux/{prevFiles/prev_7803c7a_63b870_arch#arm#plat-s3c24xx#dma.c,revFiles/7803c7a_63b870_arch#arm#plat-s3c24xx#dma.c}: s3c24xx_dma_init_map), (linux/{prevFiles/prev_67114fe_009673b_fs#nfsd#nfs4xdr.c,revFiles/67114fe_009673b_fs#nfsd#nfs4xdr.c}: savemem), (linux/{prevFiles/prev_175c04_08d18f_drivers#net#usb#pegasus.c,revFiles/175c04_08d18f_drivers#net#usb#pegasus.c}: set_registers), (linux/{prevFiles/prev_175c04_08d18f_drivers#net#usb#pegasus.c,revFiles/175c04_08d18f_drivers#net#usb#pegasus.c}: set_register), (linux/{prevFiles/prev_2643c47_d662b8_drivers#staging#csr#drv.c,revFiles/2643c47_d662b8_drivers#staging#csr#drv.c}: unifi_write)
+// False positives: (linux/revFiles/7803c7a_63b870_arch#arm#plat-s3c24xx#dma.c: s3c24xx_dma_order_set)
+// Recall: 0.67, Precision: 0.86, Matching recall: 1.00
+
+// ---------------------------------------------

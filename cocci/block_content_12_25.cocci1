@@ -1,0 +1,27 @@
+@@
+identifier I0, I3;
+expression E1, E2, E4;
+@@
+- int I0 = xread(E1, E2 + I3, E4); 
++ ssize_t I0 = xread(E1, E2 + I3, E4); 
+// Infered from: (git/{prevFiles/prev_8a912b_292441_pkt-line.c,revFiles/8a912b_292441_pkt-line.c}: safe_read), (git/{prevFiles/prev_8a912b_292441_builtin-fetch--tool.c,revFiles/8a912b_292441_builtin-fetch--tool.c}: get_stdin)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.33
+// -- Node Change --
+// Recall: 1.00, Precision: 0.40
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_8a912b_292441_builtin-fetch--tool.c: expand_refs_wildcard
+ - git/prevFiles/prev_8a912b_292441_builtin-fetch--tool.c: cmd_fetch__tool
+ - git/prevFiles/prev_8a912b_292441_builtin-fetch--tool.c: pick_rref
+ - git/prevFiles/prev_8a912b_292441_builtin-fetch--tool.c: fetch_native_store
+*/
+
+// ---------------------------------------------

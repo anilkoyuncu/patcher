@@ -1,0 +1,34 @@
+@@
+expression E0;
+@@
+- if (php_module_startup(E0, &php_roxen_module) == FAILURE)  
++ if (php_module_startup(E0, &php_roxen_module, 1) == FAILURE)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_8315a5_097055_sapi#roxen#roxen.c,revFiles/8315a5_097055_sapi#roxen#roxen.c}: php_roxen_startup)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.82, Precision: 1.00
+// -- Node Change --
+// Recall: 0.56, Precision: 1.00
+// -- General --
+// Functions fully changed: 18/22(81%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_b8bec4_53510b_hw#dataplane#virtio-blk.c: virtio_blk_data_plane_stop
+ - cpython/prevFiles/prev_288e97_49ef6d_Modules#_tkinter.c: _flatten1
+ - FFmpeg/prevFiles/prev_946ecd_4e5049_libavcodec#smacker.c: smacker_decode_bigtree
+ - FFmpeg/prevFiles/prev_0ccddb_cd4663_libavcodec#smacker.c: smacker_decode_bigtree
+*/
+
+// ---------------------------------------------

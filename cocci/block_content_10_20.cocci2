@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- read(E0, &E1, sizeof(E1)); 
+// Infered from: (wireshark/{prevFiles/prev_841e3a_623861_randpkt.c,revFiles/841e3a_623861_randpkt.c}: seed)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

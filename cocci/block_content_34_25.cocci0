@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- vfprintf(logfile, E0, E1); 
++ vfprintf(logfile, E0, ap2); 
+// Infered from: (qemu/{prevFiles/prev_493ae1_497ad6_exec.c,revFiles/493ae1_497ad6_exec.c}: cpu_abort)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

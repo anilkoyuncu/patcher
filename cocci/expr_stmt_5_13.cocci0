@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef int64_t;
+@@
+- *E0 = (int64_t )*E0 * (int64_t )(8192 * 8192 / E1->stepsize) >> 13 - NMSEDEC_FRACBITS; 
++ *E0 = (int64_t )*E0 * (int64_t )(16384 * 65536 / E1->stepsize) >> 14 - NMSEDEC_FRACBITS; 
+// Infered from: (FFmpeg/{prevFiles/prev_243cc3_1b5cb6_libavcodec#j2kenc.c,revFiles/243cc3_1b5cb6_libavcodec#j2kenc.c}: encode_tile)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

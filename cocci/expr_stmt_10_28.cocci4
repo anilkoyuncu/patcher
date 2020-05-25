@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- snprintf(E0, E1, E2, E3, E4->count, E4->drops); 
++ snprintf(E0, E1, E2, E3, E4->drops); 
+// Infered from: (wireshark/{prevFiles/prev_36607d_0758da_file.c,revFiles/36607d_0758da_file.c}: load_cap_file)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.70, Precision: 0.78
+// -- Node Change --
+// Recall: 0.36, Precision: 0.50
+// -- General --
+// Functions fully changed: 5/12(41%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_c5687c_65c9ae_modules#demux#mpeg#es.c: ID3Parse
+ - nginx/prevFiles/prev_5d3f84_644a43_src#http#ngx_http_spdy.c: ngx_http_spdy_state_data
+ - gtk/prevFiles/prev_84513d_b94012_gtk#gtkfilechooserdefault.c: error_selecting_folder_over_existing_file_dialog
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_73ad35_229e33_libavformat#avidec.c: avi_read_header
+ - gtk/prevFiles/prev_84513d_b94012_gtk#gtkfilechooserdefault.c: _gtk_file_chooser_label_for_file
+ - FFmpeg/prevFiles/prev_5782e0_954e2b_libavcodec#jpeg2000dec.c: get_siz
+ - FFmpeg/prevFiles/prev_5782e0_954e2b_libavcodec#jpeg2000dec.c: get_cox
+*/
+
+// ---------------------------------------------

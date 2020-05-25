@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!prefixcmp(E0, "--"))  
++ if (starts_with(E0, "--"))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_595565_956623_builtin#merge-recursive.c,revFiles/595565_956623_builtin#merge-recursive.c}: cmd_merge_recursive)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

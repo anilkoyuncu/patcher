@@ -1,0 +1,26 @@
+@@
+expression E0;
+@@
+- E0.type = gst_type_int_range; 
++ E0.type = gst_type_fourcc; 
+// Infered from: (gstreamer/{prevFiles/prev_b121bf_63079b_gst#gstvalue.c,revFiles/b121bf_63079b_gst#gstvalue.c}: _gst_value_initialize)
+// False positives: (gstreamer/revFiles/b121bf_63079b_gst#gstvalue.c: _gst_value_initialize)
+// Recall: 0.33, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.43
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_59f718_75f22e_linux-user#main.c: cpu_loop
+ - qemu/prevFiles/prev_59f718_75f22e_linux-user#main.c: arm_kernel_cmpxchg64_helper
+ - gstreamer/prevFiles/prev_b121bf_63079b_gst#gstvalue.c: _gst_value_initialize
+*/
+
+// ---------------------------------------------

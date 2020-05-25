@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef int64_t;
+@@
+- return (E0 != NULL && E0->st_dev == E1->current_filesystem->dev && E0->st_dev != E2->st_dev); 
++ return (E0 != NULL && (int64_t )E0->st_dev == E1->current_filesystem->dev && E0->st_dev != E2->st_dev); 
+// Infered from: (libarchive/{prevFiles/prev_01580b_c477ed_libarchive#archive_read_disk_posix.c,revFiles/01580b_c477ed_libarchive#archive_read_disk_posix.c}: tree_current_is_symblic_link_target), (libarchive/{prevFiles/prev_d2d75e_82d66e_libarchive#archive_read_disk_posix.c,revFiles/d2d75e_82d66e_libarchive#archive_read_disk_posix.c}: tree_current_is_symblic_link_target)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

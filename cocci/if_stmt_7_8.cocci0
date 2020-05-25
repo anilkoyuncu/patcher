@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->sock_fd < 0)  
++ if (E0->sock_fd == INVALID_SOCKET)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_8e6050_ae0f13_epan#dissectors#packet-ipsec.c,revFiles/8e6050_ae0f13_epan#dissectors#packet-ipsec.c}: filter_address_match), (cpython/{prevFiles/prev_0cec87_48e3f98_Modules#socketmodule.c,revFiles/0cec87_48e3f98_Modules#socketmodule.c}: internal_select)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

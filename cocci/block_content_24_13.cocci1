@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- OBD_ALLOC(E0, sizeof(*E0)); 
+- if (E0 == NULL)  
++ E0 = kzalloc(sizeof(*E0), GFP_NOFS); 
++ if (!E0)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_496a51_cdbcd33_drivers#staging#lustre#lustre#llite#llite_close.c,revFiles/496a51_cdbcd33_drivers#staging#lustre#lustre#llite#llite_close.c}: ll_close_thread_start)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0->current_picture_ptr->key_frame = (E1->nal_unit_type == NAL_IDR_SLICE); 
++ E0->current_picture_ptr->key_frame |= (E1->nal_unit_type == NAL_IDR_SLICE); 
+// Infered from: (FFmpeg/{prevFiles/prev_3a22d7_f57e2a_libavcodec#h264.c,revFiles/3a22d7_f57e2a_libavcodec#h264.c}: decode_nal_units)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.06, Precision: 1.00
+// -- Node Change --
+// Recall: 0.12, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/36(2%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_3d2f63_9a51cd_libavformat#hls.c: hls_read_packet
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == 0 && E1 && E1->codec_tag == AV_RL32("dvsd") && E1->width == 720 && E1->height == 576)  
++ if (E0 == 0 && E1 && E1->codec_tag == AV_RL32("dvsd") && E1->coded_width == 720 && E1->coded_height == 576)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_feda26_535eed_libavcodec#dvdata.c,revFiles/feda26_535eed_libavcodec#dvdata.c}: avpriv_dv_frame_profile2)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

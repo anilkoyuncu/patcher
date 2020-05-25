@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6, E7;
+@@
+- E0 = swr_resample(E1, E2->ch[E3], E4->ch[E3], E5, E6, E7,  E3 + 1 == E2->ch_count); 
++ E0 = swr_resample(E1, (short *)E2->ch[E3], (const  short *)E4->ch[E3], E5,  E6, E7, E3 + 1 == E2->ch_count); 
+// Infered from: (FFmpeg/{prevFiles/prev_03e56a_e64597_libswresample#resample2.c,revFiles/03e56a_e64597_libswresample#resample2.c}: swr_multiple_resample)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

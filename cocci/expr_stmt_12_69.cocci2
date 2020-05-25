@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = bytes_to_hexstr_punct(E1->hexaddr, E2, sizeof(E1->hexaddr), ':'); 
++ E0 = bytes_to_hexstr_punct(E1->hexaddr, E2, sizeof(E1->addr), ':'); 
+// Infered from: (wireshark/{prevFiles/prev_9fe950_a99cc2_epan#addr_resolv.c,revFiles/9fe950_a99cc2_epan#addr_resolv.c}: manuf_hash_new_entry)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

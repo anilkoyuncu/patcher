@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- drive_init(E0, E1->use_scsi); 
++ if (!drive_init(E0, E1->use_scsi))  
++ {
++ qemu_opts_del(E0); 
++ }
+// Infered from: (qemu/{prevFiles/prev_654598_3528a3_hw#pc_sysfw.c,revFiles/654598_3528a3_hw#pc_sysfw.c}: pc_fw_add_pflash_drv)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

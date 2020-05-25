@@ -1,0 +1,24 @@
+@@
+expression E0, E2, E1;
+@@
+- E0 = E1; 
+  ...
+- *E2 = E0 >> 6; 
+// Infered from: (FFmpeg/{prevFiles/prev_0ab10f_6e90d9_libavfilter#af_earwax.c,revFiles/0ab10f_6e90d9_libavfilter#af_earwax.c}: scalarproduct)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_0ab10f_6e90d9_libavfilter#af_earwax.c: scalarproduct
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 - E1 >= 2)  
++ if (E1 - E0 >= 2)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_467-A-17984686-17984706.c,revFiles/467-A-17984686-17984706.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

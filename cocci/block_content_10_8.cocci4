@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- short I0; 
+- I0 = E1(E2); 
++ E1(E2); 
+// Infered from: (tcl/{prevFiles/prev_728d0a_f8d231_macosx#tclMacOSXBundle.c,revFiles/728d0a_f8d231_macosx#tclMacOSXBundle.c}: Tcl_MacOSXOpenVersionedBundleResources)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

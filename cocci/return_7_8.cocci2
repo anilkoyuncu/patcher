@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- return posix_error_with_filename(&E0); 
++ return posix_error_with_filename(E0); 
+// Infered from: (cpython/{prevFiles/prev_54c8dc_28a5f4_Modules#posixmodule.c,revFiles/54c8dc_28a5f4_Modules#posixmodule.c}: posix_listdir)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

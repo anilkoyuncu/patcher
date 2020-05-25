@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->start_seq_num == E1->start_seq_num && TID_CHECK(E0->control,  E1->control) && ether_addr_equal(  E0->ra, E1->ta) && ether_addr_equal(E0->ta, E1->ra))  
++ if (E0->start_seq_num == E1->start_seq_num && TID_CHECK(E0->control,  E1->control) && ether_addr_equal_64bits(  E0->ra, E1->ta) && ether_addr_equal_64bits(E0->ta, E1->ra))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_1283ac1_631c527_drivers#net#wireless#ath#carl9170#rx.c,revFiles/1283ac1_631c527_drivers#net#wireless#ath#carl9170#rx.c}: carl9170_ba_check)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

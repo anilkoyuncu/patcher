@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  struct ip6_hdr *I0 = (struct ip6_hdr *)E1; 
++ const  struct ip6_hdr *I0 = (const  struct ip6_hdr *)E1; 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#hostlist_ipv6.c,revFiles/3ae2e5_8aebe1_ui#gtk#hostlist_ipv6.c}: ipv6_hostlist_packet), (wireshark/{prevFiles/prev_3ae2e5_8aebe1_ui#gtk#conversations_ipv6.c,revFiles/3ae2e5_8aebe1_ui#gtk#conversations_ipv6.c}: ipv6_conversation_packet)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

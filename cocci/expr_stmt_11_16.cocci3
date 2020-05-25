@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- Py_SETREF(E0, PyObject_CallFunctionObjArgs(E1, E0)); 
++ Py_SETREF(E0, PyObject_CallFunctionObjArgs(E1, E0, NULL)); 
+// Infered from: (cpython/{prevFiles/prev_5787ef_25885d_Objects#floatobject.c,revFiles/5787ef_25885d_Objects#floatobject.c}: float_fromhex)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.71, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/7(71%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_59177b_f3013b_gdk#directfb#gdkwindow-directfb.c: _gdk_windowing_window_at_pointer
+ - php-src/prevFiles/prev_63a30f_a91a56_ext#date#php_date.c: guess_timezone
+*/
+
+// ---------------------------------------------

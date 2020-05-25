@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > 0)  
+- {
+- g_source_remove(E1.extcap_child_watch); 
+- E0 = 0; 
+- }
+// Infered from: (wireshark/{prevFiles/prev_3f43b1_eefcbc_extcap.c,revFiles/3f43b1_eefcbc_extcap.c}: extcap_cleanup)
+// Recall: 0.38, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.88, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+identifier I2, I3, I6, I9;
+expression E0, E4, E5, E7, E8, E1;
+typedef mca_base_component_t;
+typedef mca_base_module_t;
+@@
+- if (OPAL_SUCCESS != (E0 = mca_base_select(E1, I2, &I3,  (mca_base_module_t **)&E4,  (mca_base_component_t **)&E5)))  
++ if (OPAL_SUCCESS != mca_base_select(E1, I2, &I3, (mca_base_module_t **)&E4,  (mca_base_component_t **)&E5))  
+  {
+  ...
+  }
+  ...
+- if (I6 != E7())  
++ if (I6 != (E0 = E7()))  
+  {
+- E8 = I9; 
++ E8 = E0; 
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_1de50b_e8c8d0c_orte#mca#routed#base#routed_base_components.c,revFiles/1de50b_e8c8d0c_orte#mca#routed#base#routed_base_components.c}: orte_routed_base_select)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

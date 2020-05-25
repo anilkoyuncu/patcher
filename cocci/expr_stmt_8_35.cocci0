@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- curl_easy_setopt(E0, CURLOPT_COOKIELIST, NULL); 
++ curl_easy_setopt(E0, CURLOPT_COOKIELIST, "ALL"); 
+// Infered from: (curl/{prevFiles/prev_9da9d0_ec3f26_docs#examples#cookie_interface.c,revFiles/9da9d0_ec3f26_docs#examples#cookie_interface.c}: main)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

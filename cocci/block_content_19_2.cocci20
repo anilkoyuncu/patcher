@@ -1,0 +1,29 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- ngx_log_debug4(NGX_LOG_DEBUG_HTTP, E0->request->connection->log, 0,  "gzip alloc: n:%ud s:%ud a:%ud p:%p", E1, E2, E3, E4); 
++ ngx_log_debug4(NGX_LOG_DEBUG_HTTP, E0->request->connection->log, 0,  "gzip alloc: n:%ud s:%ud a:%ui p:%p", E1, E2, E3, E4); 
+// Infered from: (nginx/{prevFiles/prev_00ef9f_53fec2_src#http#modules#ngx_http_gzip_filter_module.c,revFiles/00ef9f_53fec2_src#http#modules#ngx_http_gzip_filter_module.c}: ngx_http_gzip_filter_alloc)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 21 rules):
+// -- Edit Location --
+// Recall: 0.85, Precision: 1.00
+// -- Node Change --
+// Recall: 0.81, Precision: 1.00
+// -- General --
+// Functions fully changed: 9/13(69%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_eafc03_9ab564_modules#demux#avi#avi.c: Open
+ - qemu/prevFiles/prev_3b2648_a97e45_vl.c: machine_parse
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_fce1650_1b325c_libavdevice#v4l2.c: device_open
+ - vlc/prevFiles/prev_c8cd12_99c965_modules#codec#avcodec#d3d11va.c: DxCreateDecoderSurfaces
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = fopen(E1->filename, E2); 
++ E0 = E1->filename ? fopen(E1->filename, E2) :NULL; 
+// Infered from: (qemu/{prevFiles/prev_b74384_6b2fef_hw#nvram#ds1225y.c,revFiles/b74384_6b2fef_hw#nvram#ds1225y.c}: nvram_post_load), (qemu/{prevFiles/prev_b74384_6b2fef_hw#nvram#ds1225y.c,revFiles/b74384_6b2fef_hw#nvram#ds1225y.c}: nvram_sysbus_initfn)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

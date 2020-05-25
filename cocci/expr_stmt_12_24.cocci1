@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- E0->intra_ac_vlc_length = E0->inter_ac_vlc_length = uni_mpeg1_ac_vlc_len; 
++ E0->intra_ac_vlc_length = E0->inter_ac_vlc_length = E0->intra_ac_vlc_last_length = E0->inter_ac_vlc_last_length = uni_mpeg1_ac_vlc_len; 
+// Infered from: (FFmpeg/{prevFiles/prev_e5021f_802540_libavcodec#mpeg12.c,revFiles/e5021f_802540_libavcodec#mpeg12.c}: ff_mpeg1_encode_init)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.17, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_bbbb2f_e32664_hw#slavio_serial.c: sunkbd_event
+ - qemu/prevFiles/prev_bbbb2f_e32664_hw#slavio_serial.c: 
+*/
+
+// ---------------------------------------------

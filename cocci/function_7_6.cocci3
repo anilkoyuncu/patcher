@@ -1,0 +1,42 @@
+@@
+@@
+- gtk_tree_set_view_mode(GTK_TREE(tree_view), TRUE); 
++ gtk_tree_set_view_mode(GTK_TREE(tree_view), GTK_TREE_VIEW_ITEM); 
+// Infered from: (wireshark/{prevFiles/prev_77e429_8f0acf_ethereal.c,revFiles/77e429_8f0acf_ethereal.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.18, Precision: 1.00
+// -- Node Change --
+// Recall: 0.20, Precision: 0.83
+// -- General --
+// Functions fully changed: 3/22(13%)
+
+/*
+Functions where the patch did not apply:
+ - tcl/prevFiles/prev_82dad1_47f47e_generic#tclLoadNone.c: TclpLoadMemory
+ - FFmpeg/prevFiles/prev_2ef460_c55806_ffplay.c: stream_seek
+ - qemu/prevFiles/prev_e4d543_30aa5c_tcg#sparc#tcg-target.c: tcg_out_ld
+ - wireshark/prevFiles/prev_975482_637490_gtk#rtp_analysis.c: expose_event
+ - php-src/prevFiles/prev_ec3649_714e40_sapi#isapi#php5isapi.c: sapi_isapi_header_handler
+ - vlc/prevFiles/prev_52f7db_652051_modules#audio_output#winstore.c: aout_stream_Start
+ - qemu/prevFiles/prev_8e7250_27cdad_nbd.c: nbd_init
+ - gstreamer/prevFiles/prev_7691a8_a47e5c_gst#gstinfo.c: gst_debug_set_threshold_from_string
+ - qemu/prevFiles/prev_f18be9_9781e0_hw#ide.c: ide_dma_restart_cb
+ - gstreamer/prevFiles/prev_86e0f4_f30e87_gst#gstmemory.c: _default_mem_map
+ - gstreamer/prevFiles/prev_f2bbbd_ba354f_libs#gst#controller#gsttimedvaluecontrolsource.c: gst_control_point_find
+ - wireshark/prevFiles/prev_77e429_8f0acf_ethereal.c: tree_view_cb
+ - gtk/prevFiles/prev_59177b_f3013b_gdk#directfb#gdkwindow-directfb.c: _gdk_windowing_window_at_pointer
+ - gtk/prevFiles/prev_10862a_7253a5_gtk#gtkprintoperation.c: gtk_print_operation_done
+ - php-src/prevFiles/prev_878080_f7373d_sapi#isapi#php5isapi.c: sapi_isapi_header_handler
+ - openssl/prevFiles/prev_16c6de_08029d_demos#bio#saccept.c: interrupt
+ - qemu/prevFiles/prev_e4d543_30aa5c_tcg#sparc#tcg-target.c: tcg_out_st
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_2ef460_c55806_ffplay.c: event_loop
+*/
+
+// ---------------------------------------------

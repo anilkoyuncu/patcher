@@ -1,0 +1,8 @@
+@@
+@@
+- return_value->value.lval = 2147483647; 
++ return_value->value.lval = MT_RAND_MAX; 
+// Infered from: (php-src/{prevFiles/prev_449089_f9cdcc_ext#standard#rand.c,revFiles/449089_f9cdcc_ext#standard#rand.c}: PHP_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

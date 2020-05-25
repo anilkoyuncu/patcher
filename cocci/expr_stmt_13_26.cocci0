@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = dev_get_drvdata(&E1->dev); 
++ E0 = usb_get_intfdata(E1); 
+// Infered from: (linux/{prevFiles/prev_f4e9749_42a6e6_sound#usb#usx2y#us122l.c,revFiles/f4e9749_42a6e6_sound#usb#usx2y#us122l.c}: snd_us122l_suspend), (linux/{prevFiles/prev_f4e9749_42a6e6_sound#usb#usx2y#us122l.c,revFiles/f4e9749_42a6e6_sound#usb#usx2y#us122l.c}: snd_us122l_resume)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

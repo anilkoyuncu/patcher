@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- EVP_SignUpdate(&E0, &(E1[4]), E2); 
++ EVP_SignUpdate(&E0, &(E1[DTLS1_HM_HEADER_LENGTH]), E2); 
+// Infered from: (openssl/{prevFiles/prev_fe0e30_32cf5b_ssl#d1_srvr.c,revFiles/fe0e30_32cf5b_ssl#d1_srvr.c}: dtls1_send_server_key_exchange)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

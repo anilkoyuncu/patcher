@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2;
+@@
+- g_signal_emit(E0, css_provider_signals[PARSING_ERROR], 0, E1->section, E2); 
++ g_signal_emit(E0, css_provider_signals[PARSING_ERROR], 0,  E1 != NULL ? E1->section :NULL, E2); 
+// Infered from: (gtk/{prevFiles/prev_d462f8_9b967a_gtk#gtkcssprovider.c,revFiles/d462f8_9b967a_gtk#gtkcssprovider.c}: gtk_css_provider_emit_error)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_6d2475_b13903_packet-smb.c: dissect_4_3_4_6
+ - wireshark/prevFiles/prev_f003ad_5ba1ad_ui#gtk#capture_if_details_dlg_win32.c: capture_if_details_general
+*/
+
+// ---------------------------------------------

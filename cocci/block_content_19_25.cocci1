@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1;
+typedef my_ulonglong;
+@@
+- I0 = mysql_stmt_affected_rows(E1->stmt); 
+- if (I0 == (my_ulonglong )-1)  
++ I0 = (long )mysql_stmt_affected_rows(E1->stmt); 
++ if (I0 == (long )-1)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_b3e899_f1fd86_ext#mysqli#mysqli_prop.c,revFiles/b3e899_f1fd86_ext#mysqli#mysqli_prop.c}: stmt_affected_rows_read), (php-src/{prevFiles/prev_f02ebe_31a1db_ext#mysqli#mysqli_prop.c,revFiles/f02ebe_31a1db_ext#mysqli#mysqli_prop.c}: stmt_affected_rows_read)
+// Recall: 0.27, Precision: 1.00, Matching recall: 0.57
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+expression list E1;
+identifier I0;
+@@
+- int I0 = CURLE_OK; 
+  ...
+- I0 = curl_global_init (E1); 
++ int I0 = curl_global_init(CURL_GLOBAL_ALL); 
+// Infered from: (curl/{prevFiles/prev_e23c52_04ac54_docs#examples#ftp-wildcard.c,revFiles/e23c52_04ac54_docs#examples#ftp-wildcard.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

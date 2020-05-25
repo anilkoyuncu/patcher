@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+typedef NULL;
+@@
+- return zend_u_hash_add(&php_libxml_exports, IS_UNICODE, E0,  E1->name_length + 1, &E2, sizeof(E2), NULL ); 
++ ret = zend_u_hash_add(&php_libxml_exports, IS_UNICODE, E0,  E1->name_length + 1, &E2, sizeof(E2), NULL ); 
++ free(E0); 
++ return ret; 
+// Infered from: (php-src/{prevFiles/prev_fc0349_0ed538_ext#libxml#libxml.c,revFiles/fc0349_0ed538_ext#libxml#libxml.c}: php_libxml_register_export)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+@@
+- zend_list_addref(Z_RESVAL_PP(I0)); 
+- add_assoc_resource(return_value, "handle", Z_RESVAL_PP(I0)); 
++ zend_list_addref(Z_RESVAL_P(I0)); 
++ add_assoc_resource(return_value, "handle", Z_RESVAL_P(I0)); 
+// Infered from: (php-src/{prevFiles/prev_0974e2_0094b0_ext#curl#multi.c,revFiles/0974e2_0094b0_ext#curl#multi.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_da064c_0289ba_ext#curl#multi.c,revFiles/da064c_0289ba_ext#curl#multi.c}: PHP_FUNCTION)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

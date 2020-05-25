@@ -1,0 +1,11 @@
+@@
+identifier I3;
+expression E1, E0;
+binary operator B2 = {& ,| };
+@@
+- E0 = E1 B2 ~I3; 
++ E0 = E1; 
+// Infered from: (vlc/{prevFiles/prev_733612_796689_modules#audio_output#auhal.c,revFiles/733612_796689_modules#audio_output#auhal.c}: SwitchAudioDevice), (php-src/{prevFiles/prev_caf904_0b8ea2_Zend#zend_builtin_functions.c,revFiles/caf904_0b8ea2_Zend#zend_builtin_functions.c}: ZEND_FUNCTION)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

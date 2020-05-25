@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!zend_is_true(return_value))  
+- {
+- ZVAL_FALSE(E0); 
+- return; 
+- }
+// Infered from: (php-src/{prevFiles/prev_fe84a2_830f09_ext#rpc#com#com_wrapper.c,revFiles/fe84a2_830f09_ext#rpc#com#com_wrapper.c}: php_COM_call_function_handler), (php-src/{prevFiles/prev_fe84a2_830f09_ext#com#COM.c,revFiles/fe84a2_830f09_ext#com#COM.c}: php_COM_call_function_handler)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.21
+
+// ---------------------------------------------

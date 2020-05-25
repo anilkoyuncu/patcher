@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- proto_tree_add_text(E0, E1, 38, 8, "Time Zone: DST: %c, Offset: %s",  tvb_get_guint8(E1, 40), E2); 
++ proto_tree_add_text(E0, E1, 38, 8, "Time Zone: DST: %c, Offset: %s",  tvb_get_guint8(E1, 38), E2); 
+// Infered from: (wireshark/{prevFiles/prev_a1a33fb_dab003_epan#dissectors#packet-radius_packetcable.c,revFiles/a1a33fb_dab003_epan#dissectors#packet-radius_packetcable.c}: dissect_packetcable_em_hdr)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

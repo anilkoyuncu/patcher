@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = output_picture2(E1, E2, E3, E4->pos); 
++ E0 = output_picture2(E1, E2, E3, E4.pos); 
+// Infered from: (FFmpeg/{prevFiles/prev_fca625_917d2b_ffplay.c,revFiles/fca625_917d2b_ffplay.c}: video_thread)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

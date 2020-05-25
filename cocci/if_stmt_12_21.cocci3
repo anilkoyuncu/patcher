@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2;
+typedef socklen_t;
+@@
+- if (getsockopt(E0, SOL_SOCKET, SO_TYPE, (char *)&E1, &E2) < 0)  
++ if (getsockopt(E0, SOL_SOCKET, SO_TYPE, (char *)&E1, (socklen_t *)&E2) < 0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_69b349_96b8f1_vl.c,revFiles/69b349_96b8f1_vl.c}: net_socket_fd_init)
+// False positives: (qemu/revFiles/69b349_96b8f1_vl.c: drive_init)
+// Recall: 0.07, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

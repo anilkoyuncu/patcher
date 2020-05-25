@@ -1,0 +1,8 @@
+@@
+identifier I0 = {g_assert_cmpint ,opal_show_help_finalize };
+@@
+- I0(); 
+// Infered from: (qemu/{prevFiles/prev_03a36f_d60478_hw#virtio-rng.c,revFiles/03a36f_d60478_hw#virtio-rng.c}: virtio_rng_init), (ompi/{prevFiles/prev_69d136_e0e924_ompi#mca#rte#pmix#rte_pmix_module.c,revFiles/69d136_e0e924_ompi#mca#rte#pmix#rte_pmix_module.c}: ompi_rte_init)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

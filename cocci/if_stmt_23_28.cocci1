@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = PBGetFInfo((ParmBlkPtr) & E1, FALSE); 
++ E0 = PBGetFInfoSync((ParmBlkPtr) & E1); 
+// Infered from: (cpython/{prevFiles/prev_9e1be9_1aec32_Mac#Compat#macstat.c,revFiles/9e1be9_1aec32_Mac#Compat#macstat.c}: macstat)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

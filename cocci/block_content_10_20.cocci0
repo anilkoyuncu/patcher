@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- write(I0, E1, E2); 
++ ssize_t unused; 
++ unused = write(I0, E1, E2); 
+// Infered from: (git/{prevFiles/prev_90ff12_e923ea_run-command.c,revFiles/90ff12_e923ea_run-command.c}: notify_parent), (git/{prevFiles/prev_90ff12_e923ea_run-command.c,revFiles/90ff12_e923ea_run-command.c}: die_child)
+// Recall: 0.45, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

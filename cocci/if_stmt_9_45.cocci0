@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- if (CONFIG_RTPDEC && E0->transport == RTSP_TRANSPORT_RTP)  
+- {
+  ...
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_f8a13c_96cd6f_libavformat#rtsp.c,revFiles/f8a13c_96cd6f_libavformat#rtsp.c}: ff_rtsp_open_transport_ctx), (FFmpeg/{prevFiles/prev_df3795_bdf761_libavformat#rtsp.c,revFiles/df3795_bdf761_libavformat#rtsp.c}: ff_rtsp_open_transport_ctx)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

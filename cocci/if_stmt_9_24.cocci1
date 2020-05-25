@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((E0 = smacker_decode_bigtree(E1, &E2, &E3)) < 0)  
++ if ((E0 = smacker_decode_bigtree(E1, &E2, &E3, 0)) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_0ccddb_cd4663_libavcodec#smacker.c,revFiles/0ccddb_cd4663_libavcodec#smacker.c}: smacker_decode_header_tree)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

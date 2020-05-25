@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 * 8LL < E1->mb_height2 * E1->mb_width2 * 13LL)  
++ if (E0 * 8LL < E1->mb_height * E1->mb_width * 13LL)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_adb485_8b3e58_libavcodec#asvdec.c,revFiles/adb485_8b3e58_libavcodec#asvdec.c}: decode_frame)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

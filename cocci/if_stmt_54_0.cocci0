@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- ZVAL_FALSE(E0); 
++ ZVAL_NULL(E0); 
+// Infered from: (php-src/{prevFiles/prev_3110a5_65af93_ext#com#conversion.c,revFiles/3110a5_65af93_ext#com#conversion.c}: php_variant_to_pval), (php-src/{prevFiles/prev_3110a5_65af93_ext#rpc#com#conversion.c,revFiles/3110a5_65af93_ext#rpc#com#conversion.c}: php_variant_to_pval)
+// False positives: (php-src/revFiles/3110a5_65af93_ext#com#conversion.c: php_pval_to_variant), (php-src/revFiles/3110a5_65af93_ext#rpc#com#conversion.c: php_pval_to_variant)
+// Recall: 0.25, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

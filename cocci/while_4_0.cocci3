@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- while (E0[E1] == E0[E1 + 1] && E2 <= 5)  
++ while (E0[E1] == E0[E1 + 1] && E2 < 5)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_137-A-11590458-11590515.c,revFiles/137-A-11590458-11590515.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

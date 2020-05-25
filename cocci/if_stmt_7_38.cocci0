@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2;
+@@
+- strftime(E0, sizeof(E0), E1, &E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_6153aa_ace916_libavcodec#jacosubdec.c,revFiles/6153aa_ace916_libavcodec#jacosubdec.c}: insert_datetime)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef GLsizeiptr;
+@@
+- GLsizeiptr I0 = E1->p[E2].i_visible_lines * E1->p[E2].i_visible_pitch; 
++ GLsizeiptr I0 = E1->p[E2].i_lines * E1->p[E2].i_pitch; 
+// Infered from: (vlc/{prevFiles/prev_a16e72_1927fd_modules#video_output#opengl#converters.c,revFiles/a16e72_1927fd_modules#video_output#opengl#converters.c}: tc_pbo_update)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

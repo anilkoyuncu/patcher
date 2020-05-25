@@ -1,0 +1,13 @@
+@@
+expression E0;
+typedef gchar;
+@@
+- while ((E0 = ex_opt_get_next("lua_script")))  
++ while ((E0 = (gchar *)ex_opt_get_next("lua_script")))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_1e65f5_7ffc01_epan#wslua#init_wslua.c,revFiles/1e65f5_7ffc01_epan#wslua#init_wslua.c}: wslua_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

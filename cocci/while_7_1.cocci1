@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (E0 == ompi_list_get_size(&mca_iof_base.iof_endpoints))  
++ while (E0 > 0 && E0 == ompi_list_get_size(&mca_iof_base.iof_endpoints))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_0d2784_4bd953_src#mca#iof#base#iof_base_flush.c,revFiles/0d2784_4bd953_src#mca#iof#base#iof_base_flush.c}: mca_iof_base_flush)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

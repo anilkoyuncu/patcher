@@ -1,0 +1,12 @@
+@@
+identifier I0 = {av_bprintf ,snprintf };
+type T4;
+expression E1, E2, E3, E8, E5, E10, E6, E7;
+binary operator B9 = {* ,% };
+@@
+- I0(E1, E2, E3, (T4 )E5, E6, E7, (T4 )E8 B9 E10); 
++ I0(E1, E2, E3, (T4 )E5, E6, E7, (T4 )(E8 B9 E10)); 
+// Infered from: (FFmpeg/{prevFiles/prev_ae9f2e6_40eb25_libavfilter#vf_drawtext.c,revFiles/ae9f2e6_40eb25_libavfilter#vf_drawtext.c}: func_pts), (qemu/{prevFiles/prev_bcd249_77bec6_cmd.c,revFiles/bcd249_77bec6_cmd.c}: timestr)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,84 @@
+@@
+expression E0;
+@@
+- E0.source = "/"; 
++ E0.source = strdup("/"); 
+// Infered from: (qemu/{prevFiles/prev_eb68a3_61cfc4_tools#virtiofsd#passthrough_ll.c,revFiles/eb68a3_61cfc4_tools#virtiofsd#passthrough_ll.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.05, Precision: 1.00
+// -- Node Change --
+// Recall: 0.05, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/63(3%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_eb68a3_61cfc4_tools#virtiofsd#passthrough_ll.c: main
+*/
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_40f4b1f_8d0430_drivers#iio#accel#hid-sensor-accel-3d.c: hid_accel_3d_probe
+ - FFmpeg/prevFiles/prev_5d62d0_705b21_libavformat#udp.c: udp_open
+ - ompi/prevFiles/prev_c57317_edcf25_ompi#mca#btl#base#btl_base_open.c: 
+ - wireshark/prevFiles/prev_8df372_efb832_epan#to_str.c: 
+ - linux/prevFiles/prev_96e4f5_2ea659_drivers#regulator#palmas-regulator.c: palmas_dt_to_pdata
+ - linux/prevFiles/prev_22d96f_0588d8_drivers#crypto#atmel-sha.c: atmel_sha_remove
+ - git/prevFiles/prev_58aa3d_3e66e4_compat#mingw.c: do_stat_internal
+ - gtk/prevFiles/prev_2cd4ff_1d46876_gtk#gtkcssprovider.c: 
+ - php-src/prevFiles/prev_d2d538_162a77_ext#bz2#bz2.c: 
+ - gtk/prevFiles/prev_1796e2_266866_tests#testgtk.c: pattern_set_bg
+ - cpython/prevFiles/prev_7937d9_822b87_Modules#_ssl.c: _get_peer_alt_names
+ - vlc/prevFiles/prev_3d23a7_1e9a94_modules#access_output#file.c: Open
+ - wireshark/prevFiles/prev_02dff2_2fba8c_epan#dissectors#packet-usb.c: 
+ - linux/prevFiles/prev_6d8d556_890f65_drivers#platform#x86#msi-wmi.c: msi_wmi_notify
+ - linux/prevFiles/prev_0ae6ee_a86d8d6_drivers#video#fbdev#da8xx-fb.c: fb_probe
+ - curl/prevFiles/prev_2bd1d7_3b3554_lib#ssh.c: Curl_ssh_connect
+ - linux/prevFiles/prev_512f9e_ddac9c_drivers#irqchip#irq-gic-realview.c: realview_gic_of_init
+ - linux/prevFiles/prev_6c51a52_a63be50_drivers#mtd#maps#physmap_of_gemini.c: of_flash_probe_gemini
+ - php-src/prevFiles/prev_92963d_1f3b6e_ext#bz2#bz2.c: 
+ - php-src/prevFiles/prev_81df62_06b5f1_ext#mbstring#mbstring.c: 
+ - vlc/prevFiles/prev_fefeb5_4b531b_src#modules#modules.c: 
+ - openssl/prevFiles/prev_b597aa_4aecfd_crypto#ec#ec_lib.c: 
+ - wireshark/prevFiles/prev_28a7a7_cd95e1_plugins#epan#opcua#opcua.c: 
+ - linux/prevFiles/prev_a463182_c94d4ed_drivers#power#supply#axp20x_usb_power.c: axp20x_usb_power_probe
+ - linux/prevFiles/prev_e9d5d4_13c931_drivers#block#drbd#drbd_nl.c: check_net_options
+ - gtk/prevFiles/prev_de3cfa_4e9f4f_gtk#gtkmodelmenu.c: gtk_model_menu_binding_append_item
+ - linux/prevFiles/prev_47f124_22d96f_drivers#crypto#atmel-tdes.c: atmel_tdes_remove
+ - wireshark/prevFiles/prev_71209c_3f0e50_epan#dissectors#packet-diameter.c: 
+ - wireshark/prevFiles/prev_a2b19b_1e65f5_color_filters.c: color_filters_write
+ - php-src/prevFiles/prev_684118_dac0b6_ext#mbstring#php_mbregex.c: 
+ - vlc/prevFiles/prev_e858da_0615d8_modules#codec#subsdec.c: ParseText
+ - linux/prevFiles/prev_0588d8_b2e870_drivers#crypto#omap-sham.c: omap_sham_remove
+ - linux/prevFiles/prev_1ce5b2_47f124_drivers#crypto#img-hash.c: img_hash_remove
+ - linux/prevFiles/prev_50db2c_bc4b2a5_drivers#iio#orientation#hid-sensor-rotation.c: hid_dev_rot_probe
+ - vlc/prevFiles/prev_5f23d5_193b74_modules#access#archive#access.c: AccessOpen
+ - linux/prevFiles/prev_0953075_45f80a_drivers#mfd#max8925-i2c.c: max8925_probe
+ - linux/prevFiles/prev_ab8d53_90cc62_drivers#mtd#maps#physmap_of_versatile.c: ap_flash_init
+ - vlc/prevFiles/prev_680d94_9f5cb4_loader#driver.c: 
+ - linux/prevFiles/prev_cea9c8_cf8984_drivers#ata#sata_gemini.c: gemini_sata_probe
+ - vlc/prevFiles/prev_ae4679_9a0de9_src#misc#objects.c: vlc_object_find_name
+ - openssl/prevFiles/prev_ed371b_3a4a88_ssl#tls13_enc.c: tls13_hkdf_expand
+ - php-src/prevFiles/prev_7dd430_ace93a_ext#pdo#pdo_stmt.c: 
+ - libarchive/prevFiles/prev_194b1d_ae0298_libarchive#archive_read_disk_posix.c: setup_current_filesystem
+ - FFmpeg/prevFiles/prev_e81e0b_8d756c_libavformat#cache.c: cache_open
+ - linux/prevFiles/prev_4aafe9_c8108c_drivers#clk#mmp#clk.c: mmp_clk_init
+ - linux/prevFiles/prev_cd0223c_6d8d556_drivers#platform#x86#ibm_rtl.c: ibm_rtl_write
+ - gtk/prevFiles/prev_e79d58_1f0310_gdk#x11#gdkselectionoutputstream-x11.c: 
+ - linux/prevFiles/prev_a63be50_5dc17f_drivers#mtd#chips#cfi_cmdset_0020.c: cfi_staa_writev
+ - gstreamer/prevFiles/prev_d06c7d_4ebe1c_gst#gst.c: 
+ - wireshark/prevFiles/prev_252ade_43cb27_epan#dissectors#packet-zbee-nwk.c: 
+ - linux/prevFiles/prev_82faef_512f9e_drivers#irqchip#irq-mips-cpu.c: mips_cpu_intc_map
+ - curl/prevFiles/prev_3b4ee0_c092b0_lib#curl_gssapi.c: 
+ - linux/prevFiles/prev_acc80c3_82faef_drivers#irqchip#irq-digicolor.c: digicolor_of_init
+ - cpython/prevFiles/prev_b32a7ed_285cf0_Modules#_tracemalloc.c: hashtable_hash_traceback
+ - qemu/prevFiles/prev_eb68a3_61cfc4_tools#virtiofsd#passthrough_ll.c: 
+ - vlc/prevFiles/prev_4d8192_d21ca5_src#misc#unicode.c: utf8_scandir
+ - vlc/prevFiles/prev_8ea322_928c9f_modules#services_discovery#udev.c: disc_get_name
+ - git/prevFiles/prev_d92f1d_be65e7_builtin-diff.c: stuff_change
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 1;E0 <= E1;E0++)  
++ for(E0 = 0;E0 < E1;E0++)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_ad0219_b2cb40_epan#dissectors#packet-dmp.c,revFiles/ad0219_b2cb40_epan#dissectors#packet-dmp.c}: dissect_dmp_envelope), (wireshark/{prevFiles/prev_ad0219_b2cb40_epan#dissectors#packet-spice.c,revFiles/ad0219_b2cb40_epan#dissectors#packet-spice.c}: dissect_spice_main_server), (codeflaws/{prevFiles/prev_373-C-11400075-11400086.c,revFiles/373-C-11400075-11400086.c}: main), (codeflaws/{prevFiles/prev_228-A-17396874-17396905.c,revFiles/228-A-17396874-17396905.c}: main), (wireshark/{prevFiles/prev_fa9484_6c56ad_epan#dissectors#packet-sctp.c,revFiles/fa9484_6c56ad_epan#dissectors#packet-sctp.c}: dissect_sack_chunk), (codeflaws/{prevFiles/prev_46-B-3882481-3882490.c,revFiles/46-B-3882481-3882490.c}: main), (wireshark/{prevFiles/prev_f15488_6f112a_epan#dissectors#packet-icmpv6.c,revFiles/f15488_6f112a_epan#dissectors#packet-icmpv6.c}: dissect_icmpv6), (wireshark/{prevFiles/prev_ad0219_b2cb40_epan#dissectors#packet-mongo.c,revFiles/ad0219_b2cb40_epan#dissectors#packet-mongo.c}: dissect_mongo_reply), (wireshark/{prevFiles/prev_ad0219_b2cb40_epan#dissectors#packet-dua.c,revFiles/ad0219_b2cb40_epan#dissectors#packet-dua.c}: dissect_integer_range_interface_identifier_parameter), (codeflaws/{prevFiles/prev_6-B-14639350-14639420.c,revFiles/6-B-14639350-14639420.c}: main), (wireshark/{prevFiles/prev_ad0219_b2cb40_epan#dissectors#packet-icmpv6.c,revFiles/ad0219_b2cb40_epan#dissectors#packet-icmpv6.c}: dissect_mldrv2), (wireshark/{prevFiles/prev_ad0219_b2cb40_epan#dissectors#packet-fmp.c,revFiles/ad0219_b2cb40_epan#dissectors#packet-fmp.c}: dissect_fmp_extentListEx)
+// False positives: (codeflaws/revFiles/110-B-1946038-1946080.c: main), (codeflaws/revFiles/426-B-6497124-6497197.c: main), (codeflaws/revFiles/6-B-14639350-14639420.c: main), (wireshark/revFiles/f15488_6f112a_epan#dissectors#packet-icmpv6.c: dissect_mldrv2), (wireshark/revFiles/fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_incoming_ssn_reset_request_parameter), (wireshark/revFiles/fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_missing_mandatory_parameters_cause), (wireshark/revFiles/fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_nr_sack_chunk), (wireshark/revFiles/fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_outgoing_ssn_reset_request_parameter), (wireshark/revFiles/fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_sack_chunk), (wireshark/revFiles/fa9484_6c56ad_epan#dissectors#packet-sctp.c: dissect_supported_address_types_parameter)
+// Recall: 0.70, Precision: 0.52, Matching recall: 0.88
+
+// ---------------------------------------------

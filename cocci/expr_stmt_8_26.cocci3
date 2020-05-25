@@ -1,0 +1,14 @@
+@@
+@@
+- if (vlc_thread_create(p_gtk_main, "gtk_main", GtkMain,  VLC_THREAD_PRIORITY_LOW, true))  
++ if (vlc_thread_create(p_gtk_main, "gtk_main", GtkMain,  VLC_THREAD_PRIORITY_LOW))  
+  {
+  ...
+- vlc_mutex_unlock(lock); 
++ vlc_mutex_unlock(&gtk_lock); 
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_c85283_2f0c83_modules#misc#gtk_main.c,revFiles/c85283_2f0c83_modules#misc#gtk_main.c}: Open)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

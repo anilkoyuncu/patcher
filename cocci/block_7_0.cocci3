@@ -1,0 +1,26 @@
+@@
+@@
+- pdo_odbc_fini_error_table(); 
+// Infered from: (php-src/{prevFiles/prev_166ca2_cb6605_ext#pdo_odbc#pdo_odbc.c,revFiles/166ca2_cb6605_ext#pdo_odbc#pdo_odbc.c}: PHP_MSHUTDOWN_FUNCTION)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/10(40%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_4b5527_1beb9b_ext#session#session.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_c12aa4_f207b3_ext#standard#array.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_4a60ee_941757_ext#session#session.c: php_rinit_session_globals
+ - php-src/prevFiles/prev_c12aa4_f207b3_ext#standard#string.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_c12aa4_f207b3_ext#session#session.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_c12aa4_f207b3_ext#standard#browscap.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

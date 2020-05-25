@@ -1,0 +1,11 @@
+@@
+type T2;
+expression E0, E1, E3;
+typedef CK_ULONG;
+@@
+- PK11_SETATTRS(E0, E1, CKA_LABEL, (T2 *)E3, strlen(E3) + 1); 
++ PK11_SETATTRS(E0, E1, CKA_LABEL, (T2 *)E3, (CK_ULONG )strlen(E3) + 1); 
+// Infered from: (curl/{prevFiles/prev_a4ff8a_33cfcf_lib#vtls#nss.c,revFiles/a4ff8a_33cfcf_lib#vtls#nss.c}: nss_create_object)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

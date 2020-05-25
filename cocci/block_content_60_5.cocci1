@@ -1,0 +1,30 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = kmalloc(E1.output_buffer_length, GFP_KERNEL); 
+- if (E0 == NULL)  
++ E0 = memdup_user(E2 + sizeof(struct smb_query_info ), E1.output_buffer_length); 
++ if (IS_ERR(E0))  
+  {
+- return -ENOMEM; 
++ return PTR_ERR(E0); 
+  }
+- if (copy_from_user(E0, E2 + sizeof(struct smb_query_info ),  E1.output_buffer_length))  
+- {
+- E3 = -EFAULT; 
+- ...
+- }
+// Infered from: (linux/{prevFiles/prev_cfaa11_acd4680_fs#cifs#smb2ops.c,revFiles/cfaa11_acd4680_fs#cifs#smb2ops.c}: smb2_ioctl_query_info)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

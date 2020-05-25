@@ -1,0 +1,9 @@
+@@
+expression E3, E0, E1, E2, E4;
+@@
+- proto_tree_add_text(E0, E1, E2, E3, E4,  tvb_get_string(wmem_packet_scope(), E1, E2, E3)); 
++ proto_tree_add_text(E0, E1, E2, E3, E4,  tvb_get_string_enc(wmem_packet_scope(), E1, E2, E3,  ENC_ASCII)); 
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-q933.c,revFiles/971ffd_421d81_epan#dissectors#packet-q933.c}: dissect_q933_cause_ie), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-zbee-nwk-gp.c,revFiles/971ffd_421d81_epan#dissectors#packet-zbee-nwk-gp.c}: dissect_zbee_nwk_gp_cmd_commissioning), (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-zbee-nwk-gp.c,revFiles/971ffd_421d81_epan#dissectors#packet-zbee-nwk-gp.c}: dissect_zbee_nwk_gp_cmd_commissioning_reply)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

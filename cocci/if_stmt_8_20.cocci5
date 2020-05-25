@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->node_slots_max && E0->node_slots_max >= E0->node_slots_inuse)  
++ if (E0->node_slots_max && E0->node_slots_inuse >= E0->node_slots_max)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_744e92_61f55f_src#mca#ras#base#ras_base_alloc.c,revFiles/744e92_61f55f_src#mca#ras#base#ras_base_alloc.c}: orte_ras_base_allocate_nodes)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

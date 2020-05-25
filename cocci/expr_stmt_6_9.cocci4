@@ -1,0 +1,30 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 += E1 + (E2 - E3); 
++ E0 += E2 - E3; 
+// Infered from: (FFmpeg/{prevFiles/prev_4606a0_676ef50_ffplay.c,revFiles/4606a0_676ef50_ffplay.c}: blend_subrect), (FFmpeg/{prevFiles/prev_4606a0_676ef50_ffplay.c,revFiles/4606a0_676ef50_ffplay.c}: blend_subrect)
+// False positives: (FFmpeg/revFiles/4606a0_676ef50_ffplay.c: blend_subrect)
+// Recall: 0.16, Precision: 0.43, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 0.86
+// -- Node Change --
+// Recall: 0.68, Precision: 0.62
+// -- General --
+// Functions fully changed: 5/9(55%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_d5f175_eafedf_gtk#deprecated#gtkhandlebox.c: gtk_handle_box_realize
+ - codeflaws/prevFiles/prev_55-A-8695146-8695698.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_d000b21_5a8378_gtk#gtkrange.c: gtk_range_compute_slider_position
+ - FFmpeg/prevFiles/prev_4606a0_676ef50_ffplay.c: blend_subrect
+*/
+
+// ---------------------------------------------

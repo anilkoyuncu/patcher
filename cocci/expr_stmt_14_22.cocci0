@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = _php_math_zvaltobase(&E1, Z_LVAL_PP(E2)); 
++ E0 = _php_math_zvaltobase(); 
+// Infered from: (php-src/{prevFiles/prev_67689b_fb6bcd_ext#standard#math.c,revFiles/67689b_fb6bcd_ext#standard#math.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

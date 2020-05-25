@@ -1,0 +1,33 @@
+@@
+typedef PyDictKeysObject;
+@@
+- return new_dict(new_keys_object(PyDict_MINSIZE_COMBINED), NULL); 
++ PyDictKeysObject *keys = new_keys_object(PyDict_MINSIZE_COMBINED); 
++ if (keys == NULL)  
++ {
++ return NULL; 
++ }
++ return new_dict(keys, NULL); 
+// Infered from: (cpython/{prevFiles/prev_c9b7f5_5d1866_Objects#dictobject.c,revFiles/c9b7f5_5d1866_Objects#dictobject.c}: PyDict_New)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.21, Precision: 1.00
+// -- Node Change --
+// Recall: 0.49, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/19(10%)
+
+/*
+Functions where the patch applied partially:
+ - cpython/prevFiles/prev_77b8b6_bea3fb_Python#getargs.c: convertsimple
+ - qemu/prevFiles/prev_c1bf353_f7df22_net#vhost-user.c: net_vhost_user_init
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_c40957_0e88f4_qemu-char.c: tcp_chr_recv
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = g_utf8_prev_char(&E1[ITEM_LABEL_LENGTH]); 
++ E0 = g_utf8_prev_char(&E1[ITEM_LABEL_LENGTH - 1]); 
+// Infered from: (wireshark/{prevFiles/prev_4b6224_a5e341_epan#proto.c,revFiles/4b6224_a5e341_epan#proto.c}: label_mark_truncated)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

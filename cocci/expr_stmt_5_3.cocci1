@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+@@
+- E0 = E0 << E1; 
++ E0 <<= E1; 
+// Infered from: (linux/{prevFiles/prev_0c8e4d_302727_drivers#staging#lustre#lustre#libcfs#debug.c,revFiles/0c8e4d_302727_drivers#staging#lustre#lustre#libcfs#debug.c}: libcfs_debug_init), (linux/{prevFiles/prev_8e80fe1_10a864_drivers#staging#media#davinci_vpfe#dm365_ipipeif.c,revFiles/8e80fe1_10a864_drivers#staging#media#davinci_vpfe#dm365_ipipeif.c}: ipipeif_hw_setup), (linux/{prevFiles/prev_09c99f_8e80fe1_drivers#staging#lustre#lustre#lov#lov_obd.c,revFiles/09c99f_8e80fe1_drivers#staging#lustre#lustre#lov#lov_obd.c}: lov_add_target), (linux/{prevFiles/prev_302727_09c99f_drivers#staging#lustre#lustre#lmv#lmv_obd.c,revFiles/302727_09c99f_drivers#staging#lustre#lustre#lmv#lmv_obd.c}: lmv_add_target), (linux/{prevFiles/prev_bc5b74_cb329d8_drivers#staging#rtl8712#rtl871x_eeprom.c,revFiles/bc5b74_cb329d8_drivers#staging#rtl8712#rtl871x_eeprom.c}: shift_in_bits), (linux/{prevFiles/prev_410c94_1525ecf_drivers#staging#emxx_udc#emxx_udc.c,revFiles/410c94_1525ecf_drivers#staging#emxx_udc#emxx_udc.c}: std_req_set_address)
+// False positives: (linux/revFiles/10a864_74ff879_drivers#staging#rtl8188eu#core#rtw_security.c: mix_column), (linux/revFiles/cb329d8_6bd700_drivers#staging#rtl8712#rtl871x_security.c: mix_column)
+// Recall: 0.22, Precision: 0.60, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.92
+// -- Node Change --
+// Recall: 1.00, Precision: 0.87
+// -- General --
+// Functions fully changed: 23/25(92%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_cb329d8_6bd700_drivers#staging#rtl8712#rtl871x_security.c: mix_column
+ - linux/prevFiles/prev_10a864_74ff879_drivers#staging#rtl8188eu#core#rtw_security.c: mix_column
+*/
+
+// ---------------------------------------------

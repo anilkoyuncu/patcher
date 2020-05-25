@@ -1,0 +1,16 @@
+@@
+expression E0, E1;
+@@
+- if (E0)  
+- {
+- ...
+- }
+- else
+- {
+- ...
+- msg_Err(E1, "this is a bug!"); 
+- }
+// Infered from: (vlc/{prevFiles/prev_60d798_f174df0_src#video_output#video_output.c,revFiles/60d798_f174df0_src#video_output#video_output.c}: InitThread)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.38
+
+// ---------------------------------------------

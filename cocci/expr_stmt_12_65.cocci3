@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- col_add_str(E0->cinfo, COL_INFO, match_strval(E1, gdsdb_opcode)); 
++ col_add_str(E0->cinfo, COL_INFO,  val_to_str(E1, gdsdb_opcode, "Unknown opcode %u")); 
+// Infered from: (wireshark/{prevFiles/prev_e78cce_49495d_epan#dissectors#packet-gdsdb.c,revFiles/e78cce_49495d_epan#dissectors#packet-gdsdb.c}: dissect_gdsdb)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 1.00
+// -- Node Change --
+// Recall: 0.42, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch applied partially:
+ - gstreamer/prevFiles/prev_194424_1d9413_gst#elements#gstmd5sink.c: gst_md5sink_get_property
+ - gstreamer/prevFiles/prev_194424_1d9413_plugins#elements#gstmd5sink.c: gst_md5sink_get_property
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_e78cce_49495d_epan#dissectors#packet-gdsdb.c: gdsdb_receive
+*/
+
+// ---------------------------------------------

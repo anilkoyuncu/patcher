@@ -1,0 +1,13 @@
+@@
+identifier I0 = {Curl_store_ip_addr ,curlx_strequal };
+expression list E1;
+binary operator B2 = {!= ,|| };
+expression E3;
+typedef bool;
+@@
+- return I0(E1) B2 E3; 
++ return (bool )(I0(E1) B2 E3); 
+// Infered from: (curl/{prevFiles/prev_bbefdf_06c96d_src#main.c,revFiles/bbefdf_06c96d_src#main.c}: stdin_upload), (curl/{prevFiles/prev_2ef72f_eae27d_lib#connect.c,revFiles/2ef72f_eae27d_lib#connect.c}: trynextip)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

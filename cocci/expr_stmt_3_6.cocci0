@@ -1,0 +1,10 @@
+@@
+type T1;
+expression E0, E2;
+@@
+- E0->start = E0->p = (T1 *)E2; 
++ E0->start = E0->p = (const  T1 *)E2; 
+// Infered from: (libarchive/{prevFiles/prev_24eb64_38b7a3_libarchive#test#read_open_memory.c,revFiles/24eb64_38b7a3_libarchive#test#read_open_memory.c}: read_open_memory_internal)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

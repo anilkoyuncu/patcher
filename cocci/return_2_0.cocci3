@@ -1,0 +1,39 @@
+@@
+expression E0;
+@@
+- return do_for_each_ref(get_refs_directory(), E0); 
++ return 0; 
+// Infered from: (git/{prevFiles/prev_2f34ba_41cb74_refs.c,revFiles/2f34ba_41cb74_refs.c}: head_ref)
+// False positives: (git/revFiles/2f34ba_41cb74_refs.c: for_each_ref)
+// Recall: 0.06, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.54, Precision: 0.78
+// -- Node Change --
+// Recall: 0.45, Precision: 0.78
+// -- General --
+// Functions fully changed: 5/15(33%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_6ad3b2b_4acbbc_ext#yaz#php_yaz.c: send_sort_present
+ - git/prevFiles/prev_2f34ba_41cb74_refs.c: head_ref
+*/
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_86d14e_192a6b_base85.c: decode_85
+ - wireshark/prevFiles/prev_28ba56_183b91_epan#wslua#wslua_listener.c: Listener_new
+ - php-src/prevFiles/prev_48d249_296529_Zend#zend_execute.c: zend_isset_isempty_prop_obj_handler
+ - wireshark/prevFiles/prev_d7f890_8a9e49_epan#emem.c: se_tree_lookup32_array
+ - FFmpeg/prevFiles/prev_f913ee_09c274_libavcodec#vp6.c: vp6_build_huff_tree
+ - php-src/prevFiles/prev_48d249_296529_Zend#zend_execute.c: zend_isset_isempty_dim_obj_handler
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_6ad3b2b_4acbbc_ext#yaz#php_yaz.c: handle_apdu
+ - git/prevFiles/prev_2f34ba_41cb74_refs.c: for_each_ref
+*/
+
+// ---------------------------------------------

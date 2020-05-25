@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- zend_hash_index_find(E0, E1, (void **)&E2); 
+// Infered from: (php-src/{prevFiles/prev_5128d5_81700b_ext#spl#spl_array.c,revFiles/5128d5_81700b_ext#spl#spl_array.c}: spl_array_get_dimension_ptr_ptr), (php-src/{prevFiles/prev_bb7a93_cf2db2_ext#spl#spl_array.c,revFiles/bb7a93_cf2db2_ext#spl#spl_array.c}: spl_array_get_dimension_ptr_ptr)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_5128d5_81700b_ext#spl#spl_array.c: spl_array_get_dimension_ptr_ptr
+ - php-src/prevFiles/prev_bb7a93_cf2db2_ext#spl#spl_array.c: spl_array_get_dimension_ptr_ptr
+*/
+
+// ---------------------------------------------

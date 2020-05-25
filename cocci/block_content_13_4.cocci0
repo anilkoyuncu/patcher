@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- RETURN_STRING(E0); 
++ RETVAL_STRING(E0); 
++ efree(E0); 
+// Infered from: (php-src/{prevFiles/prev_bdb7a5_2a3c08_ext#mbstring#mbstring.c,revFiles/bdb7a5_2a3c08_ext#mbstring#mbstring.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_95320f_4b6eb9_ext#standard#streamsfuncs.c,revFiles/95320f_4b6eb9_ext#standard#streamsfuncs.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_4e9f2c_6374fc_ext#standard#uniqid.c,revFiles/4e9f2c_6374fc_ext#standard#uniqid.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/bdb7a5_2a3c08_ext#mbstring#mbstring.c: PHP_FUNCTION), (php-src/revFiles/f21eb5_915a8a2_ext#standard#string.c: PHP_FUNCTION), (php-src/revFiles/f85344_c1ec21_ext#standard#file.c: PHP_FUNCTION)
+// Recall: 0.30, Precision: 0.27, Matching recall: 1.00
+
+// ---------------------------------------------

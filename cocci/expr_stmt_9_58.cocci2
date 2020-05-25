@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = tvb_get_ephemeral_faked_unicode(E1, E2 + 4, E3, 1); 
++ E0 = tvb_get_ephemeral_unicode_string(E1, E2 + 4, E3, ENC_LITTLE_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_d7a1840_051d46_epan#dissectors#packet-dtpt.c,revFiles/d7a1840_051d46_epan#dissectors#packet-dtpt.c}: dissect_dtpt_wstring)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+
+// ---------------------------------------------

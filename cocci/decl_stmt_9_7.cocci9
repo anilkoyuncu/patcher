@@ -1,0 +1,33 @@
+@@
+identifier I0;
+expression E1;
+typedef uint32_t;
+@@
+- uint32_t I0 = RGBA(E1, E1, E1, 255); 
++ uint32_t I0 = RGBA(E1, E1, E1, 255U); 
+// Infered from: (FFmpeg/{prevFiles/prev_ec7f04_c3361b_libavcodec#texturedsp.c,revFiles/ec7f04_c3361b_libavcodec#texturedsp.c}: rgtc_block_internal)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 0.80
+// -- Node Change --
+// Recall: 0.86, Precision: 0.75
+// -- General --
+// Functions fully changed: 11/17(64%)
+
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_47dfe3_646a35_ompi#datatype#ompi_datatype_module.c: 
+ - vlc/prevFiles/prev_d087a5_7655b6_src#network#httpd.c: httpdLoop
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - lighttpd1.4/prevFiles/prev_c74bdf_26c44e_src#mod_magnet.c: magnet_cgi_set
+ - lighttpd1.4/prevFiles/prev_c74bdf_26c44e_src#mod_magnet.c: magnet_status_get
+ - qemu/prevFiles/prev_31e6a7_4a9462_hw#vfio#pci-quirks.c: vfio_rtl8168_quirk_address_read
+ - lighttpd1.4/prevFiles/prev_c74bdf_26c44e_src#mod_magnet.c: magnet_status_set
+*/
+
+// ---------------------------------------------

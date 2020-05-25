@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef GAsyncQueue;
+@@
+- GAsyncQueue *I0; 
+  ...
+- I0 = E1; 
+// Infered from: (lighttpd2/{prevFiles/prev_952a28_1dfc96_src#main#log.c,revFiles/952a28_1dfc96_src#main#log.c}: log_thread)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

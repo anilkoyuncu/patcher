@@ -1,0 +1,28 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = E1->segmentation.enabled && !E1->segmentation.update_map && E1->frames[  REF_FRAME_SEGMAP].segmentation_map; 
++ int I0 = E1->frames[REF_FRAME_SEGMAP].segmentation_map && !(E1->segmentation.enabled && (  E1->segmentation.update_map || E1->keyframe || E1->intraonly)); 
+// Infered from: (FFmpeg/{prevFiles/prev_eaff36_8d25a1_libavcodec#vp9.c,revFiles/eaff36_8d25a1_libavcodec#vp9.c}: vp9_decode_frame)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.02, Precision: 1.00
+// -- Node Change --
+// Recall: 0.04, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/81(2%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_b4b024_2f3a3a_libavfilter#vf_stereo3d.c: config_output
+ - wireshark/prevFiles/prev_97cf08_61d252_tap-expert.c: 
+ - wireshark/prevFiles/prev_fb77ff_86d7ed_epan#dissectors#packet-bssgp.c: decode_mobile_identity
+ - FFmpeg/prevFiles/prev_12f7c0_047872_libavcodec#alac.c: alac_set_info
+ - FFmpeg/prevFiles/prev_4b35be_fdca97_libavcodec#utils.c: avcodec_decode_subtitle2
+*/
+
+// ---------------------------------------------

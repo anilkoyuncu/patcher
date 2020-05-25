@@ -1,0 +1,10 @@
+@@
+expression list E1;
+identifier I0;
+@@
+- char *I0 = g_malloc (E1); 
++ char *I0; 
+// Infered from: (wireshark/{prevFiles/prev_69cc7f_d140e8_gtk#main.c,revFiles/69cc7f_d140e8_gtk#main.c}: match_selected_cb)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

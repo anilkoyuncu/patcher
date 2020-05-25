@@ -1,0 +1,12 @@
+@@
+expression E1, E0;
+@@
+- if (MPI_SUCCESS == *E0 && OMPI_ERRHANDLER_TYPE_PREDEFINED != E1->eh_mpi_object_type)  
++ if (MPI_SUCCESS == OMPI_FINT_2_INT(*E0) && OMPI_ERRHANDLER_TYPE_PREDEFINED != E1->eh_mpi_object_type)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_548531_05fcb9_src#mpi#f77#comm_set_errhandler_f.c,revFiles/548531_05fcb9_src#mpi#f77#comm_set_errhandler_f.c}: mpi_comm_set_errhandler_f), (ompi/{prevFiles/prev_548531_05fcb9_src#mpi#f77#win_set_errhandler_f.c,revFiles/548531_05fcb9_src#mpi#f77#win_set_errhandler_f.c}: mpi_win_set_errhandler_f), (ompi/{prevFiles/prev_548531_05fcb9_src#mpi#f77#file_set_errhandler_f.c,revFiles/548531_05fcb9_src#mpi#f77#file_set_errhandler_f.c}: mpi_file_set_errhandler_f), (ompi/{prevFiles/prev_548531_05fcb9_src#mpi#f77#errhandler_set_f.c,revFiles/548531_05fcb9_src#mpi#f77#errhandler_set_f.c}: mpi_errhandler_set_f)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

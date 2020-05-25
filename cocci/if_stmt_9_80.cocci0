@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->need_update && E0->ioc != NULL)  
++ if (E0->need_update && !E0->disconnecting)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_5a693e_f1ef557_ui#vnc.c,revFiles/5a693e_f1ef557_ui#vnc.c}: vnc_update_client)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+@@
+- for(int I0 = 1024;I0 < (int )E1;I0 += 1024)  
++ for(I0 = 1024;I0 < (int )E1;I0 += 1024)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_b00e6a_81d82d_libarchive#test#test_read_format_zip_high_compression.c,revFiles/b00e6a_81d82d_libarchive#test#test_read_format_zip_high_compression.c}: DEFINE_TEST)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

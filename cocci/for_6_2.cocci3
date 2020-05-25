@@ -1,0 +1,46 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = E1 + 1;E0 < E2 - 1;++E0)  
++ for(E0 = E1 + 1;E0 < E2;++E0)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_550-C-11606934-11606950.c,revFiles/550-C-11606934-11606950.c}: main)
+// False positives: (codeflaws/revFiles/550-C-11606934-11606950.c: main)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.20, Precision: 1.00
+// -- Node Change --
+// Recall: 0.20, Precision: 0.80
+// -- General --
+// Functions fully changed: 3/20(15%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_37b55d_8eb29f_hw#tpm#tpm_tis.c: tpm_tis_mmio_write
+ - qemu/prevFiles/prev_2ba828_6bdf86_exec.c: file_ram_alloc
+ - codeflaws/prevFiles/prev_96-A-18215059-18215073.c: main
+ - codeflaws/prevFiles/prev_197-B-3726950-3726956.c: reducing
+ - codeflaws/prevFiles/prev_386-B-5861676-5861691.c: main
+ - codeflaws/prevFiles/prev_544-A-11416061-11416077.c: main
+ - codeflaws/prevFiles/prev_18-C-14290168-14290189.c: main
+ - codeflaws/prevFiles/prev_500-A-18160029-18160094.c: main
+ - codeflaws/prevFiles/prev_214-A-15386379-15386411.c: main
+ - tcl/prevFiles/prev_446f3c_6abf16_libtommath#bn_fast_s_mp_mul_digs.c: fast_s_mp_mul_digs
+ - codeflaws/prevFiles/prev_482-A-8674442-8674488.c: main
+ - codeflaws/prevFiles/prev_41-B-656585-656586.c: main
+ - codeflaws/prevFiles/prev_556-B-13638253-13638828.c: main
+ - codeflaws/prevFiles/prev_426-B-6613323-6613350.c: main
+ - codeflaws/prevFiles/prev_299-A-14347069-14347114.c: main
+ - codeflaws/prevFiles/prev_177-B1-13511622-13511662.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - codeflaws/prevFiles/prev_550-C-11606934-11606950.c: main
+*/
+
+// ---------------------------------------------

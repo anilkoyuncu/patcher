@@ -1,0 +1,29 @@
+@@
+identifier I0;
+@@
+- char I0[NETBIOS_NAME_LEN]; 
++ char I0[NBNAME_BUF_LEN]; 
+// Infered from: (wireshark/{prevFiles/prev_2c456a_252d55_packet-nbns.c,revFiles/2c456a_252d55_packet-nbns.c}: get_nbns_name)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.42, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/12(41%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_796cea_89c7d8_libavcodec#vp6.c: vp6_build_huff_tree
+ - ompi/prevFiles/prev_941f2c_bb6ee6_oshmem#runtime#oshmem_shmem_abort.c: oshmem_shmem_abort
+ - vlc/prevFiles/prev_e3fe59_a8f976_modules#mux#mp4#libmp4mux.c: GetHvcCTag
+ - ompi/prevFiles/prev_332234_e1c64e_ompi#runtime#ompi_mpi_abort.c: ompi_mpi_abort
+ - openssl/prevFiles/prev_e7a689_1c9c24_apps#rehash.c: handle_symlink
+ - codeflaws/prevFiles/prev_415-A-6738070-6739444.c: main
+ - openssl/prevFiles/prev_e7a689_1c9c24_apps#rehash.c: do_dir
+*/
+
+// ---------------------------------------------

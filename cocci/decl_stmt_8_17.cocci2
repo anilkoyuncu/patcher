@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef guint32;
+@@
+- guint32 I0 = E1->th_seq; 
++ guint32 I0; 
+// Infered from: (wireshark/{prevFiles/prev_782191_ad52a3_epan#dissectors#packet-tcp.c,revFiles/782191_ad52a3_epan#dissectors#packet-tcp.c}: mptcp_analysis_dsn_lookup)
+// False positives: (wireshark/revFiles/782191_ad52a3_epan#dissectors#packet-tcp.c: dissect_tcp)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

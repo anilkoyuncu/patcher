@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef u16;
+@@
+- u16 *I0 = E1->id; 
++ u16 *I0; 
+// Infered from: (linux/{prevFiles/prev_9ecab6_3d44cc3_drivers#ide#sc1200.c,revFiles/9ecab6_3d44cc3_drivers#ide#sc1200.c}: sc1200_udma_filter), (linux/{prevFiles/prev_9ecab6_3d44cc3_drivers#ide#cs5530.c,revFiles/9ecab6_3d44cc3_drivers#ide#cs5530.c}: cs5530_udma_filter)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

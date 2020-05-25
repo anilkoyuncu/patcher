@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (*E0 == '-' || *E0 == '_' || g_ascii_isalpha(*E0))  
++ while (*E0 == '-' || *E0 == '_' || g_ascii_isalnum(*E0))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_3100b7_bdacdfb_gtk#gtkcssprovider.c,revFiles/3100b7_bdacdfb_gtk#gtkcssprovider.c}: symbolic_color_parse_str)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

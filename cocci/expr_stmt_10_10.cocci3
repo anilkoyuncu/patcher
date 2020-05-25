@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- *E0 = estrndup(E1 + 2, E2 + E3 - E1); 
++ *E0 = estrndup(E1 + 2, E2 + E3 - (E1 + 2)); 
+// Infered from: (php-src/{prevFiles/prev_9c3719_edbb13_phpdbg_utils.c,revFiles/9c3719_edbb13_phpdbg_utils.c}: phpdbg_is_class_method)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef mtime_t;
+@@
+- E0->i_update = E1.i_int; 
++ E0->i_update = (mtime_t )(E1.i_int * 1000); 
+// Infered from: (vlc/{prevFiles/prev_ad2ce2_4b1fd5_modules#video_filter#osdmenu.c,revFiles/ad2ce2_4b1fd5_modules#video_filter#osdmenu.c}: OSDMenuCallback)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

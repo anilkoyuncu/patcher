@@ -1,0 +1,8 @@
+@@
+@@
+- _php_mb_regex_ereg_replace_exec(INTERNAL_FUNCTION_PARAM_PASSTHRU, 0); 
++ _php_mb_regex_ereg_replace_exec(INTERNAL_FUNCTION_PARAM_PASSTHRU,  MBSTRG(regex_default_options)); 
+// Infered from: (php-src/{prevFiles/prev_ce5df6_da4516_ext#mbstring#php_mbregex.c,revFiles/ce5df6_da4516_ext#mbstring#php_mbregex.c}: PHP_FUNCTION)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

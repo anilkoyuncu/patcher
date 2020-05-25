@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- qht_remove(&tb_ctx.htable, E0, E1); 
++ if (!qht_remove(&tb_ctx.htable, E0, E1))  
++ {
++ return; 
++ }
+// Infered from: (qemu/{prevFiles/prev_cc6894_1c2adb_accel#tcg#translate-all.c,revFiles/cc6894_1c2adb_accel#tcg#translate-all.c}: tb_phys_invalidate)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0->lineno = strtol(E1, E2 + E3, 10); 
++ E0->lineno = strtol(E1, NULL, 10); 
+// Infered from: (git/{prevFiles/prev_9e8481_87a56c_diff.c,revFiles/9e8481_87a56c_diff.c}: checkdiff_consume)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

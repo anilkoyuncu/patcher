@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while ((tvb_reported_length_remaining(E0, E1) > 0) && (tvb_get_guint8(E0, E1)) || (  tvb_get_guint8(E0, E1 + 1)))  
++ while ((tvb_reported_length_remaining(E0, E1) > 0) && (tvb_get_guint8(  E0, E1) || tvb_get_guint8(  E0, E1 + 1)))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_9fa5d5_936260_epan#dissectors#packet-ber.c,revFiles/9fa5d5_936260_epan#dissectors#packet-ber.c}: get_ber_length)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

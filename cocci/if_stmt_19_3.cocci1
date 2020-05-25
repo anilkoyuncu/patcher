@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 < 0)  
++ if (E0 < 0)  
+  {
+- dev_err(&E1->dev, E2); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_565d454_d6d5df_drivers#iommu#ipmmu-vmsa.c,revFiles/565d454_d6d5df_drivers#iommu#ipmmu-vmsa.c}: ipmmu_probe), (linux/{prevFiles/prev_21777b_0e04b2ff_drivers#mtd#nand#raw#mxic_nand.c,revFiles/21777b_0e04b2ff_drivers#mtd#nand#raw#mxic_nand.c}: mxic_nfc_probe), (linux/{prevFiles/prev_29d9640b_21777b_drivers#mtd#nand#raw#cadence-nand-controller.c,revFiles/29d9640b_21777b_drivers#mtd#nand#raw#cadence-nand-controller.c}: cadence_nand_dt_probe)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.92, Precision: 1.00
+// -- Node Change --
+// Recall: 0.92, Precision: 1.00
+// -- General --
+// Functions fully changed: 11/12(91%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_1ec119_ab2a7a_drivers#staging#media#imx#imx6-mipi-csi2.c: csi2_probe
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- for(;scanf("%d", &E0);R += 1 + i++ * ~-E0)  
++ for(;scanf("%d", &E0) + 1;R += 1 + i++ * ~-E0)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_103-A-18288288-18288294.c,revFiles/103-A-18288288-18288294.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

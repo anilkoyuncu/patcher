@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- SHA3_clearstate(E0->hash_state); 
++ SHA3_dealloc(E0); 
+// Infered from: (cpython/{prevFiles/prev_c018f5_23c5bb_Modules#_sha3#sha3module.c,revFiles/c018f5_23c5bb_Modules#_sha3#sha3module.c}: SHA3_factory)
+// False positives: (cpython/revFiles/c018f5_23c5bb_Modules#_sha3#sha3module.c: SHA3_dealloc)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.86
+// -- Node Change --
+// Recall: 1.00, Precision: 0.88
+// -- General --
+// Functions fully changed: 6/7(85%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_c018f5_23c5bb_Modules#_sha3#sha3module.c: SHA3_dealloc
+*/
+
+// ---------------------------------------------

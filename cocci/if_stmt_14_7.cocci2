@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (php3_ini.safe_mode && (!php_checkuid(E0->value.str.val, NULL, 3)))  
++ if (PG(safe_mode) && (!php_checkuid(E0->value.str.val, NULL, 3)))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_cd2929a_3d3d23_ext#posix#posix.c,revFiles/cd2929a_3d3d23_ext#posix#posix.c}: PHP_FUNCTION)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

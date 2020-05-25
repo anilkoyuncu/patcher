@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->nal_unit_type == NAL_IDR_SLICE || E0->recovery_frame == E0->frame_num)  
++ if (E0->nal_unit_type == NAL_IDR_SLICE || (E0->recovery_frame == E0->frame_num && E0->nal_ref_idc))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_566d64_4efd3e_libavcodec#h264.c,revFiles/566d64_4efd3e_libavcodec#h264.c}: decode_nal_units)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

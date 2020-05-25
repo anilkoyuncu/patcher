@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- while (E0 > 0 && (E1[E0 - 2] == '\r' || E1[E0 - 2] == '\n'))  
++ while (E0 >= 2 && (E1[E0 - 2] == '\r' || E1[E0 - 2] == '\n'))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_ee16b3_1369d5_src#input#stream.c,revFiles/ee16b3_1369d5_src#input#stream.c}: stream_ReadLine)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- bswap32s(&E0); 
++ tswap32s(&E0); 
+// Infered from: (qemu/{prevFiles/prev_49be80_8df1cd_target-sparc#op_helper.c,revFiles/49be80_8df1cd_target-sparc#op_helper.c}: helper_ld_asi), (qemu/{prevFiles/prev_49be80_8df1cd_target-sparc#op_helper.c,revFiles/49be80_8df1cd_target-sparc#op_helper.c}: helper_st_asi), (qemu/{prevFiles/prev_49be80_8df1cd_target-sparc#op_helper.c,revFiles/49be80_8df1cd_target-sparc#op_helper.c}: helper_st_asi)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

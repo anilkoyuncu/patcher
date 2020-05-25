@@ -1,0 +1,7 @@
+@@
+@@
+- ERRDRV("allocation failed: (status=0)\n"); 
+// Infered from: (linux/{prevFiles/prev_edff16_9a174a_drivers#staging#unisys#visorchannel#visorchannel_funcs.c,revFiles/edff16_9a174a_drivers#staging#unisys#visorchannel#visorchannel_funcs.c}: visorchannel_create_guts)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

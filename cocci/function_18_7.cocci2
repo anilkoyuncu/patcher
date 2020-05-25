@@ -1,0 +1,12 @@
+@@
+expression E2, E0, E1;
+@@
+- ff_put_wav_header(E0, E1->enc, E2); 
++ if ((ret = ff_put_wav_header(E0, E1->enc, E2)) < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_dc6b99_8cc6e9_libavformat#movenc.c,revFiles/dc6b99_8cc6e9_libavformat#movenc.c}: mov_write_ms_tag), (FFmpeg/{prevFiles/prev_dc6b99_8cc6e9_libavformat#movenc.c,revFiles/dc6b99_8cc6e9_libavformat#movenc.c}: mov_write_wfex_tag)
+// Recall: 0.26, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

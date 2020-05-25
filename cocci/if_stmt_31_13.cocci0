@@ -1,0 +1,9 @@
+@@
+expression E2, E0, E1;
+@@
+- phpdbg_error("list", E0, E1, E2->name); 
++ phpdbg_error("list", E0, E1, ZSTR_VAL(E2->name)); 
+// Infered from: (php-src/{prevFiles/prev_c359ca_b795ce_sapi#phpdbg#phpdbg_list.c,revFiles/c359ca_b795ce_sapi#phpdbg#phpdbg_list.c}: PHPDBG_LIST), (php-src/{prevFiles/prev_c359ca_b795ce_sapi#phpdbg#phpdbg_list.c,revFiles/c359ca_b795ce_sapi#phpdbg#phpdbg_list.c}: PHPDBG_LIST)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- msg_Dbg(E0->p_stream, "update filter: %s", E1); 
++ msg_Dbg(E0->p_stream, "update filter: '%s'", E1 ? E1 :""); 
+// Infered from: (vlc/{prevFiles/prev_865d5a_d9313c_modules#stream_out#mosaic_bridge.c,revFiles/865d5a_d9313c_modules#stream_out#mosaic_bridge.c}: video_update_format_decoder)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = (E1 - E2) / (E2 - E3 - E4); 
++ E0 = (E1 - E2) / (E3 - E2 - E4); 
+// Infered from: (gtk/{prevFiles/prev_fd20e4_94093f_gtk#gtkrange.c,revFiles/fd20e4_94093f_gtk#gtkrange.c}: gtk_range_allocate_trough)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

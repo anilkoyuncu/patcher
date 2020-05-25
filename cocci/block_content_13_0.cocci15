@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- E0 = get_irq_desc_chip(E1); 
++ E0 = irq_desc_get_chip(E1); 
+// Infered from: (linux/{prevFiles/prev_ec775d_7bfbc1f2_arch#powerpc#platforms#8xx#m8xx_setup.c,revFiles/ec775d_7bfbc1f2_arch#powerpc#platforms#8xx#m8xx_setup.c}: cpm_cascade), (linux/{prevFiles/prev_ec775d_7bfbc1f2_arch#powerpc#platforms#8xx#m8xx_setup.c,revFiles/ec775d_7bfbc1f2_arch#powerpc#platforms#8xx#m8xx_setup.c}: cpm_cascade)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

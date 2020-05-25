@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- serial_mm_init(E0, MPC8544_SERIAL1_REGS_BASE, 0, E1[12 + 26], 399193,  serial_hds[0], DEVICE_BIG_ENDIAN); 
++ serial_mm_init(E0, MPC8544_SERIAL1_REGS_BASE, 0, E1[12 + 26], 399193,  serial_hds[1], DEVICE_BIG_ENDIAN); 
+// Infered from: (qemu/{prevFiles/prev_59de4f_e598a9_hw#ppc#e500.c,revFiles/59de4f_e598a9_hw#ppc#e500.c}: ppce500_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

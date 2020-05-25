@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- ssl_debug_printf("ssl_find_cipher: dummy without gnutls. num %d cs %p\n", E0,  cs); 
++ ssl_debug_printf("ssl_find_cipher: dummy without gnutls. num %d\n", E0); 
+// Infered from: (wireshark/{prevFiles/prev_7a9ab6_4d925d_epan#dissectors#packet-ssl-utils.c,revFiles/7a9ab6_4d925d_epan#dissectors#packet-ssl-utils.c}: ssl_find_cipher)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

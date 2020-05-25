@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!CONN_INUSE(E0) && !E0->data && !E0->bits.close)  
++ if (!CONN_INUSE(E0) && !E0->data && !E0->bits.close && !E0->bits.connect_only)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_1d5c42_2c0362_lib#conncache.c,revFiles/1d5c42_2c0362_lib#conncache.c}: Curl_conncache_extract_oldest)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

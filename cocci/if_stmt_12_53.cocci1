@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->field_mode && E0->second_field)  
++ if (E0->field_mode && !(E0->second_field ^ E0->tff))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_012b31_031365_libavcodec#vc1dec.c,revFiles/012b31_031365_libavcodec#vc1dec.c}: init_block_index), (FFmpeg/{prevFiles/prev_6c9d28_a0fbc2_libavcodec#vc1dec.c,revFiles/6c9d28_a0fbc2_libavcodec#vc1dec.c}: init_block_index)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

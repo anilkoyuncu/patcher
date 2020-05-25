@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- E0->frame_timer = (double )av_gettime() / 1000000.0; 
+// Infered from: (cpython/{prevFiles/prev_f5bc41_485dbd_Modules#_ctypes#libffi#src#prep_cif.c,revFiles/f5bc41_485dbd_Modules#_ctypes#libffi#src#prep_cif.c}: struct_on_stack), (FFmpeg/{prevFiles/prev_b25453_cedac8_ffplay.c,revFiles/b25453_cedac8_ffplay.c}: stream_component_open)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = 0, E1 = E2;*E1;E0++, E1++)  
++ for(E0 = 1, E1 = E2;*E1;E0++, E1++)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_64982f_75118b_show-diff.c,revFiles/64982f_75118b_show-diff.c}: sq_expand)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

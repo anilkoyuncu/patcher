@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- g_warning("unsusbcribe: already deleted: '%s'?", E0); 
++ g_warning("unsusbcribe: not subscribed"); 
+// Infered from: (wireshark/{prevFiles/prev_bc04ba_82908e_plugins#mate#mate_util.c,revFiles/bc04ba_82908e_plugins#mate#mate_util.c}: scs_unsubscribe)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

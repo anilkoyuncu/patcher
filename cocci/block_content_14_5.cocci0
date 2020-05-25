@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->i_nb_streams)  
+- {
+- ...
+- }
++ TAB_CLEAN(E0->i_nb_streams, E0->pp_streams); 
+// Infered from: (vlc/{prevFiles/prev_9cef5b_272e0c_modules#mux#mp4#mp4.c,revFiles/9cef5b_272e0c_modules#mux#mp4#mp4.c}: Close)
+// False positives: (vlc/revFiles/9cef5b_272e0c_modules#mux#mp4#mp4.c: BuildMoov)
+// Recall: 0.05, Precision: 0.30, Matching recall: 1.00
+
+// ---------------------------------------------

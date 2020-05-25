@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef GtkTreeView;
+@@
+  void gtk_tree_view_ensure_background(GtkTreeView *I0)  
+  {
+  ...
+- E1 = gtk_widget_get_style_context (E2); 
++ E1 = gtk_widget_get_style_context(GTK_WIDGET(I0)); 
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_2c065d_9986b2_gtk#gtktreeview.c,revFiles/2c065d_9986b2_gtk#gtktreeview.c}: gtk_tree_view_ensure_background)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

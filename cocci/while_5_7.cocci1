@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while ((E0 = bdrv_dirty_iter_next(E1) * BDRV_SECTOR_SIZE) >= 0)  
++ while ((E0 = bdrv_dirty_iter_next(E1)) >= 0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_f79818_715a74_block#backup.c,revFiles/f79818_715a74_block#backup.c}: backup_run_incremental)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

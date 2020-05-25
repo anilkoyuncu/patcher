@@ -1,0 +1,9 @@
+@@
+expression E1, E0, E2;
+@@
+- qemu_iovec_concat_iov(&E0, &E1, 1, 0, E2.block_offset); 
++ qemu_iovec_concat_iov(&E0, &E1, 1, 0, E1.iov_len); 
+// Infered from: (qemu/{prevFiles/prev_d1a126_8eedfb_block#vhdx.c,revFiles/d1a126_8eedfb_block#vhdx.c}: vhdx_co_writev), (qemu/{prevFiles/prev_d1a126_8eedfb_block#vhdx.c,revFiles/d1a126_8eedfb_block#vhdx.c}: vhdx_co_writev)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

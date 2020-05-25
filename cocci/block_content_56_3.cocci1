@@ -1,0 +1,28 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (!E0 || (E0->type != V_ASN1_SEQUENCE) || !(E1 = d2i_PBE2PARAM (NULL, &E2,  E3)))  
++ if (!(E1 = d2i_PBE2PARAM(NULL, &E2, E3)))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_c755c5_5c8e91_crypto#evp#p5_crpt2.c,revFiles/c755c5_5c8e91_crypto#evp#p5_crpt2.c}: PKCS5_v2_PBE_keyivgen)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - openssl/prevFiles/prev_c755c5_5c8e91_crypto#evp#p5_crpt.c: PKCS5_PBE_keyivgen
+ - openssl/prevFiles/prev_c755c5_5c8e91_crypto#evp#p5_crpt2.c: PKCS5_v2_PBE_keyivgen
+ - openssl/prevFiles/prev_c755c5_5c8e91_crypto#pkcs12#p12_crpt.c: PKCS12_PBE_keyivgen
+*/
+
+// ---------------------------------------------

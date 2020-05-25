@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->i_dts = E0->i_pts = date_Increment(&E1->pts, E2); 
++ E0->i_dts = E0->i_pts = VLC_TS_0 + date_Get(&E1->pts); 
+// Infered from: (vlc/{prevFiles/prev_88f65a_02ea19_modules#demux#cdg.c,revFiles/88f65a_02ea19_modules#demux#cdg.c}: Demux), (vlc/{prevFiles/prev_f587ea_b4d741_modules#demux#voc.c,revFiles/f587ea_b4d741_modules#demux#voc.c}: Demux), (vlc/{prevFiles/prev_5a0c17_f587ea_modules#demux#wav.c,revFiles/5a0c17_f587ea_modules#demux#wav.c}: Demux), (vlc/{prevFiles/prev_a6a7af_5a0c17_modules#demux#xa.c,revFiles/a6a7af_5a0c17_modules#demux#xa.c}: Demux)
+// Recall: 0.57, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- qlist_append(E0, qint_from_int(E1)); 
++ qlist_append_int(E0, E1); 
+// Infered from: (qemu/{prevFiles/prev_46f5ac_a92c21_tests#check-qlist.c,revFiles/46f5ac_a92c21_tests#check-qlist.c}: qlist_destroy_test), (qemu/{prevFiles/prev_46f5ac_a92c21_tests#check-qlist.c,revFiles/46f5ac_a92c21_tests#check-qlist.c}: qlist_iter_test)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

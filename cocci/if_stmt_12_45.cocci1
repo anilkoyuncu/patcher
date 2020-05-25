@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((E0 = (long )php_memnstr(&E1[E2 + 1], "?=", 2, E1 + E3)))  
++ if ((E0 = (long )php_memnstr(&E1[E2 + 3], "?=", 2, E1 + E3)))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_fe22dc_33f8ab_ext#imap#php_imap.c,revFiles/fe22dc_33f8ab_ext#imap#php_imap.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

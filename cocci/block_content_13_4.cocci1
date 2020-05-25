@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- memory_region_allocate_system_memory(E0, NULL, E1, BIOS_SIZE); 
++ memory_region_init_ram(E0, NULL, E1, BIOS_SIZE); 
++ vmstate_register_ram_global(E0); 
+// Infered from: (qemu/{prevFiles/prev_e206ad4_358589_hw#ppc#mac_newworld.c,revFiles/e206ad4_358589_hw#ppc#mac_newworld.c}: ppc_core99_init), (qemu/{prevFiles/prev_e206ad4_358589_hw#ppc#mac_oldworld.c,revFiles/e206ad4_358589_hw#ppc#mac_oldworld.c}: ppc_heathrow_init)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

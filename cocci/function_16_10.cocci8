@@ -1,0 +1,47 @@
+@@
+identifier I0;
+expression E1;
+typedef u32;
+@@
+- u32 I0 = E1->i2o_dev->lct_data.tid; 
++ u32 I0; 
+// Infered from: (linux/{prevFiles/prev_d23670_95cc7b_drivers#message#i2o#i2o_block.c,revFiles/d23670_95cc7b_drivers#message#i2o#i2o_block.c}: i2o_block_transfer)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.73, Precision: 0.85
+// -- Node Change --
+// Recall: 0.49, Precision: 0.85
+// -- General --
+// Functions fully changed: 0/17(0%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_6b81be_d7ef485d_drivers#media#video#em28xx#em28xx-video.c: em28xx_copy_vbi
+ - linux/prevFiles/prev_9ecab6_3d44cc3_drivers#ide#sc1200.c: sc1200_udma_filter
+ - linux/prevFiles/prev_b232a70_308b135_drivers#watchdog#watchdog_core.c: watchdog_unregister_device
+ - FFmpeg/prevFiles/prev_7441d1_0fe690_libavformat#aviobuf.c: avio_close_dyn_buf
+ - linux/prevFiles/prev_9ecab6_3d44cc3_drivers#ide#cs5530.c: cs5530_udma_filter
+ - linux/prevFiles/prev_d23670_95cc7b_drivers#message#i2o#i2o_block.c: i2o_block_transfer
+ - openssl/prevFiles/prev_1c2ac2_198c42_crypto#aria#aria.c: aria_set_encrypt_key
+ - wireshark/prevFiles/prev_c47503_432e12_conditions.c: cnd_delete
+ - wireshark/prevFiles/prev_a75058_f6f690_epan#dissectors#packet-smb.c: dissect_smb_fid
+ - openssl/prevFiles/prev_390787_ccb766_crypto#aria#aria.c: aria_encrypt
+ - linux/prevFiles/prev_f3d8b2e_6c614a_net#bridge#netfilter#ebtables.c: ebt_dev_check
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_4f4f69_d09a6f_crypto#cipher-builtin.c: qcrypto_cipher_free
+ - gtk/prevFiles/prev_9dde11_3a91d3_gtk#gtkfixed.c: gtk_fixed_put
+ - gtk/prevFiles/prev_b0ea45_4fee1a_gtk#gtkgrid.c: gtk_grid_insert_row
+ - gtk/prevFiles/prev_b0ea45_4fee1a_gtk#gtkgrid.c: gtk_grid_insert_column
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_7441d1_0fe690_libavformat#aviobuf.c: ffio_close_null_buf
+ - openssl/prevFiles/prev_1c2ac2_198c42_crypto#aria#aria.c: aria_encrypt
+*/
+
+// ---------------------------------------------

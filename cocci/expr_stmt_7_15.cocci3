@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = gethostbyname_r(E1, &E2, E3, 8192, 0, &E4); 
++ E0 = gethostbyname_r(E1, &E2, E3, 8192, &E4); 
+// Infered from: (curl/{prevFiles/prev_a9c97f_1a85c8_CMake#CurlTests.c,revFiles/a9c97f_1a85c8_CMake#CurlTests.c}: main), (cmake/{prevFiles/prev_3f2f1a_91e8d3_Utilities#cmcurl#CMake#CurlTests.c,revFiles/3f2f1a_91e8d3_Utilities#cmcurl#CMake#CurlTests.c}: main)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

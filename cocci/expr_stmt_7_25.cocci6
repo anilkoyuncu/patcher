@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- *E0 = E1->cnext; 
++ *E0 = NULL; 
+// Infered from: (linux/{prevFiles/prev_7074e5_d51f17ea_fs#ubifs#orphan.c,revFiles/7074e5_d51f17ea_fs#ubifs#orphan.c}: ubifs_orphan_start_commit), (linux/{prevFiles/prev_7074e5_d51f17ea_fs#ubifs#orphan.c,revFiles/7074e5_d51f17ea_fs#ubifs#orphan.c}: consolidate)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.88, Precision: 0.78
+// -- Node Change --
+// Recall: 0.89, Precision: 0.80
+// -- General --
+// Functions fully changed: 7/10(70%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_358-A-14050431-14050437.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_fb6a00_42956b_src#drm#cairo-drm-i915-shader.c: i915_shader_acquire_surface
+ - cairo/prevFiles/prev_fb6a00_42956b_src#drm#cairo-drm-i915-shader.c: i915_shader_setup_dst
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (test_and_set_bit(E0, &vt8500_ports_in_use))  
++ if (test_and_set_bit(E0, vt8500_ports_in_use))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_0b1221_761ed4_drivers#tty#serial#vt8500_serial.c,revFiles/0b1221_761ed4_drivers#tty#serial#vt8500_serial.c}: vt8500_serial_probe)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

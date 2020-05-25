@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- pred_weight_table (E0, E1); 
++ int ret = pred_weight_table(E0, E1); 
++ if (ret < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_2c8745_35a5d9_libavcodec#hevcdec.c,revFiles/2c8745_35a5d9_libavcodec#hevcdec.c}: hls_slice_header)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_2c8745_35a5d9_libavcodec#hevcdec.c: pred_weight_table
+*/
+
+// ---------------------------------------------

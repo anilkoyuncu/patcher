@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- OPAL_OUTPUT_VERBOSE((5, orte_ras_base_framework.framework_output, "%s ras:base:node_insert node %s", ORTE_NAME_PRINT(  ORTE_PROC_MY_NAME), (NULL == E0->name) ? "NULL" :E0->name)); 
++ OPAL_OUTPUT_VERBOSE((5, orte_ras_base_framework.framework_output, "%s ras:base:node_insert node %s slots %d", ORTE_NAME_PRINT(  ORTE_PROC_MY_NAME), (NULL == E0->name) ? "NULL" :E0->name, E0->slots)); 
+// Infered from: (ompi/{prevFiles/prev_3f2b3c_871f4e_orte#mca#ras#base#ras_base_node.c,revFiles/3f2b3c_871f4e_orte#mca#ras#base#ras_base_node.c}: orte_ras_base_node_insert)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

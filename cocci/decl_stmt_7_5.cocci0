@@ -1,0 +1,10 @@
+@@
+identifier I0, I1, I4;
+expression E2, E3;
+@@
+- struct I0 **I1 = tsearch(E2, E3, I4); 
++ void **I1 = tsearch(E2, E3, I4); 
+// Infered from: (vlc/{prevFiles/prev_922547_da572b_modules#services_discovery#pulse.c,revFiles/922547_da572b_modules#services_discovery#pulse.c}: AddSource), (vlc/{prevFiles/prev_239be3_922547_modules#services_discovery#udev.c,revFiles/239be3_922547_modules#services_discovery#udev.c}: AddDevice), (vlc/{prevFiles/prev_45b0cc_e88dc9_src#misc#threads.c,revFiles/45b0cc_e88dc9_src#misc#threads.c}: vlc_lock_mark), (vlc/{prevFiles/prev_30bbe76_5eb7ef_modules#video_output#xcb#keysym.c,revFiles/30bbe76_5eb7ef_modules#video_output#xcb#keysym.c}: parse)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

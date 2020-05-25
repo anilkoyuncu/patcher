@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+@@
+- E0 = loader_exec(E1, filename, E2, E3, E4, E5, &E6); 
++ E0 = loader_exec(E1, exec_path, E2, E3, E4, E5, &E6); 
+// Infered from: (qemu/{prevFiles/prev_9d3019_89ea03_linux-user#main.c,revFiles/9d3019_89ea03_linux-user#main.c}: main)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

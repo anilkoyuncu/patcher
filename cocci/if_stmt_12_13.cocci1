@@ -1,0 +1,40 @@
+@@
+identifier I0;
+expression E1;
+typedef sout_instance_t;
+@@
+  void SoutKeep(sout_instance_t *I0)  
+  {
+  ...
+- if (!E1)  
+- {
+- return; 
+- }
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_a8712a_497087_src#input#input.c,revFiles/a8712a_497087_src#input#input.c}: SoutKeep)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 1.00
+// -- Node Change --
+// Recall: 0.27, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/6(0%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_a8712a_497087_src#input#input.c: SoutKeep
+ - git/prevFiles/prev_904981_dad0b3_transport.c: transport_get
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_a8712a_497087_src#input#input.c: Destructor
+ - gstreamer/prevFiles/prev_9076d5_19e5a5_libs#gst#base#gstbasesink.c: gst_base_sink_flush_start
+ - gstreamer/prevFiles/prev_c6b0d4_6082b0_plugins#elements#gstmultiqueue.c: gst_single_queue_flush
+ - gstreamer/prevFiles/prev_c6b0d4_6082b0_plugins#elements#gstmultiqueue.c: 
+*/
+
+// ---------------------------------------------

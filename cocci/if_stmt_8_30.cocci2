@@ -1,0 +1,40 @@
+@@
+expression E0, E1;
+@@
+- if (E0 = E1->free)  
++ if ((E0 = E1->free) != NULL)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (apr/{prevFiles/prev_71a586_35780b_tables#apr_hash.c,revFiles/71a586_35780b_tables#apr_hash.c}: find_entry)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 0.75
+// -- Node Change --
+// Recall: 0.33, Precision: 0.75
+// -- General --
+// Functions fully changed: 3/10(30%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_2c00b3_a2ca9e_libavcodec#avpacket.c: av_packet_unpack_dictionary
+ - qemu/prevFiles/prev_dd5b0d_feeee5_blockdev.c: drive_init
+ - FFmpeg/prevFiles/prev_12eb2f_e70144_libavcodec#dxa.c: decode_frame
+ - vlc/prevFiles/prev_90b1a9_e677a7_modules#misc#rtsp.c: RtspCallbackES
+ - php-src/prevFiles/prev_c38d18_fe99e3_ext#gettext#gettext.c: PHP_NAMED_FUNCTION
+ - vlc/prevFiles/prev_90b1a9_e677a7_modules#misc#rtsp.c: RtspCallback
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_9149e9_196cfc_libavcodec#apedec.c: ape_unpack_mono
+*/
+
+// ---------------------------------------------

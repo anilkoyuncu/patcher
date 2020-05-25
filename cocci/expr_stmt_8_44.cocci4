@@ -1,0 +1,8 @@
+@@
+@@
+- PCI_CONFIG_16(PCI_STATUS,  PCI_STATUS_REC_MASTER_ABORT | PCI_STATUS_SIG_TARGET_ABORT); 
++ PCI_CONFIG_16(PCI_STATUS, PCI_STATUS_DEVSEL_MEDIUM | PCI_STATUS_FAST_BACK); 
+// Infered from: (qemu/{prevFiles/prev_617024_72ff25_hw#eepro100.c,revFiles/617024_72ff25_hw#eepro100.c}: pci_reset)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

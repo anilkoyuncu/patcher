@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return vlc_uri_component_validate(E0, ""); 
++ return vlc_uri_component_validate(E0, ":"); 
+// Infered from: (vlc/{prevFiles/prev_f6c052_d3676b_src#text#url.c,revFiles/f6c052_d3676b_src#text#url.c}: vlc_uri_host_validate)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

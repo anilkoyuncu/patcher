@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = devm_request_irq(&E1->dev, E2, sama5d4_wdt_irq_handler,  IRQF_SHARED | IRQF_IRQPOLL | IRQF_NO_SUSPEND, E1->name,  E1); 
++ E0 = devm_request_irq(dev, E2, sama5d4_wdt_irq_handler,  IRQF_SHARED | IRQF_IRQPOLL | IRQF_NO_SUSPEND, E1->name,  E1); 
+// Infered from: (linux/{prevFiles/prev_dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c,revFiles/dcc3ce0_2361ac5_drivers#watchdog#sama5d4_wdt.c}: sama5d4_wdt_probe)
+// Recall: 0.00, Precision: 1.00, Matching recall: 0.09
+
+// ---------------------------------------------

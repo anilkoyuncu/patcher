@@ -1,0 +1,25 @@
+@@
+identifier I2, I3, I4;
+expression E0, E1;
+@@
+- E0 = (E1 == I2) ? I3 :I4; 
++ E0 = (E1 == I2) ? I4 :I3; 
+// Infered from: (ompi/{prevFiles/prev_61d62b_f3e9a7_ompi#mca#mtl#ofi#mtl_ofi_component.c,revFiles/61d62b_f3e9a7_ompi#mca#mtl#ofi#mtl_ofi_component.c}: ompi_mtl_ofi_component_init)
+// False positives: (FFmpeg/revFiles/19e72e_af55a9_libavcodec#sunrast.c: sunrast_decode_frame)
+// Recall: 0.75, Precision: 0.50, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.50
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_19e72e_af55a9_libavcodec#sunrast.c: sunrast_decode_frame
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,29 @@
+@@
+expression E1, E0;
+@@
+- ZVAL_COPY(E0, E1); 
++ ZVAL_COPY_VALUE(E0, E1); 
+// Infered from: (php-src/{prevFiles/prev_a811b5_2524ab_ext#xmlrpc#xmlrpc-epi-php.c,revFiles/a811b5_2524ab_ext#xmlrpc#xmlrpc-epi-php.c}: get_zval_xmlrpc_type), (php-src/{prevFiles/prev_a811b5_2524ab_ext#xmlrpc#xmlrpc-epi-php.c,revFiles/a811b5_2524ab_ext#xmlrpc#xmlrpc-epi-php.c}: get_zval_xmlrpc_type)
+// False positives: (php-src/revFiles/a811b5_2524ab_ext#xmlrpc#xmlrpc-epi-php.c: PHP_FUNCTION), (php-src/revFiles/a811b5_2524ab_ext#xmlrpc#xmlrpc-epi-php.c: PHP_to_XMLRPC_worker), (php-src/revFiles/ad4fa8_abf6a0_ext#wddx#wddx.c: php_wddx_deserialize_ex)
+// Recall: 0.29, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.56
+// -- Node Change --
+// Recall: 0.86, Precision: 0.43
+// -- General --
+// Functions fully changed: 3/9(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_a811b5_2524ab_ext#xmlrpc#xmlrpc-epi-php.c: PHP_to_XMLRPC_worker
+ - vlc/prevFiles/prev_dbb3a9_7f04d5_modules#services_discovery#mtp.c: Run
+ - php-src/prevFiles/prev_ad4fa8_abf6a0_ext#wddx#wddx.c: php_wddx_deserialize_ex
+ - php-src/prevFiles/prev_a811b5_2524ab_ext#xmlrpc#xmlrpc-epi-php.c: PHP_FUNCTION
+ - php-src/prevFiles/prev_ad4fa8_abf6a0_ext#wddx#wddx.c: php_wddx_serialize_object
+ - php-src/prevFiles/prev_ad4fa8_abf6a0_ext#wddx#wddx.c: php_wddx_add_var
+*/
+
+// ---------------------------------------------

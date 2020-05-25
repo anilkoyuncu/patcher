@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- int I0[18][18]; 
++ int I0[20][20]; 
+// Infered from: (codeflaws/{prevFiles/prev_50-A-17963690-17963710.c,revFiles/50-A-17963690-17963710.c}: main)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

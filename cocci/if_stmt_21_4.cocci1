@@ -1,0 +1,26 @@
+@@
+expression E0, E1;
+@@
+- if (E0 !=  E1)  
+- {
+- TXT_DB_free(E0); 
+- }
+// Infered from: (openssl/{prevFiles/prev_67b6f1_a4ff39_apps#apps.c,revFiles/67b6f1_a4ff39_apps#apps.c}: load_index)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_ae8d9d4_2c773f_ui#gtk#font_utils.c: user_font_apply
+ - openssl/prevFiles/prev_67b6f1_a4ff39_crypto#dsa#dsa_ossl.c: dsa_sign_setup
+*/
+
+// ---------------------------------------------

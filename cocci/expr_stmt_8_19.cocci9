@@ -1,0 +1,54 @@
+@@
+expression E0, E1;
+@@
+- insert_inout(E0, E1); 
++ append_inout(E0, &E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_7af99a_2e2152_libavfilter#graphparser.c,revFiles/7af99a_2e2152_libavfilter#graphparser.c}: link_filter_inouts)
+// False positives: (FFmpeg/revFiles/7af99a_2e2152_libavfilter#graphparser.c: link_filter_inouts), (FFmpeg/revFiles/7af99a_2e2152_libavfilter#graphparser.c: parse_outputs)
+// Recall: 0.02, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.59, Precision: 0.69
+// -- Node Change --
+// Recall: 0.54, Precision: 0.59
+// -- General --
+// Functions fully changed: 13/43(30%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_b29cd6_54c137_modules#printbackends#cups#gtkprintbackendcups.c: gtk_print_backend_cups_finalize
+ - FFmpeg/prevFiles/prev_e644db_601ca8_libavcodec#libxvidff.c: xvid_encode_close
+ - FFmpeg/prevFiles/prev_c8d0d8_c1ad93_libavformat#crypto.c: crypto_open
+ - vlc/prevFiles/prev_15c1b3_fbd415_modules#codec#avcodec#encoder.c: CloseEncoder
+ - gtk/prevFiles/prev_ac4da7_5ced23_gtk#gtkprintunixdialog.c: set_cell_sensitivity_func
+ - gtk/prevFiles/prev_dea309_f1e4ef_demos#gtk-demo#language-names.c: languages_variant_init
+ - FFmpeg/prevFiles/prev_a71bcd_dbaba5_libavformat#crypto.c: crypto_open
+ - FFmpeg/prevFiles/prev_f41dd5_9ff18a_ffmpeg.c: do_audio_out
+ - FFmpeg/prevFiles/prev_0c1d66_885a9d_avconv_vaapi.c: vaapi_build_decoder_config
+ - php-src/prevFiles/prev_242ddb_bf16a5_ext#standard#array.c: php_array_walk
+ - FFmpeg/prevFiles/prev_0bd040_144ce3_libavcodec#elsdec.c: ff_els_decoder_uninit
+ - FFmpeg/prevFiles/prev_59a35f_0e9c01_tests#api#api-h264-slice-test.c: decode
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_e1c789_006286_libavcodec#vp9.c: vp9_decode_frame
+ - php-src/prevFiles/prev_9a5ba8_c91c89_ext#readline#readline.c: PHP_FUNCTION
+ - FFmpeg/prevFiles/prev_f41dd5_9ff18a_ffmpeg.c: main
+ - FFmpeg/prevFiles/prev_e1c789_006286_libavcodec#vp9.c: vp9_decode_flush
+ - FFmpeg/prevFiles/prev_7af99a_2e2152_libavfilter#graphparser.c: link_filter_inouts
+ - FFmpeg/prevFiles/prev_0c1d66_885a9d_avconv_vaapi.c: vaapi_retrieve_data
+ - FFmpeg/prevFiles/prev_e1c789_006286_libavcodec#vp9.c: vp9_decode_free
+ - FFmpeg/prevFiles/prev_42a2ed_6dfda3_tools#target_dec_fuzzer.c: LLVMFuzzerTestOneInput
+ - FFmpeg/prevFiles/prev_4533d2_18f770_libav#mov.c: mov_read_header
+ - FFmpeg/prevFiles/prev_4213fc_e55e09_libavcodec#svq1dec.c: svq1_decode_frame
+ - linux/prevFiles/prev_59a2f7_5f6c477a_arch#sh#kernel#cpufreq.c: sh_cpufreq_target
+ - php-src/prevFiles/prev_4907fa_96ab6a_ext#readline#readline.c: PHP_FUNCTION
+ - linux/prevFiles/prev_21dbeb_86e475_arch#powerpc#kernel#smp.c: smp_cpus_done
+ - linux/prevFiles/prev_ed1bbd_8b108c_arch#mips#kernel#cpufreq#loongson2_cpufreq.c: loongson2_cpufreq_target
+ - FFmpeg/prevFiles/prev_7af99a_2e2152_libavfilter#graphparser.c: parse_outputs
+ - FFmpeg/prevFiles/prev_4213fc_e55e09_libavcodec#svq1dec.c: svq1_flush
+*/
+
+// ---------------------------------------------

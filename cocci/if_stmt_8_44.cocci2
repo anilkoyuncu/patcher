@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (dictAdd(E0->ptr, E1->argv[2], E1->argv[3]) == DICT_OK)  
++ if (dictReplace(E0->ptr, E1->argv[2], E1->argv[3]))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_2069d0_b1d9c9_redis.c,revFiles/2069d0_b1d9c9_redis.c}: hsetCommand)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- set_irq_wake(gpio_chip[E0].bank->id, E1); 
++ irq_set_irq_wake(gpio_chip[E0].bank->id, E1); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-at91#gpio.c,revFiles/6845664a_25a566_arch#arm#mach-at91#gpio.c}: gpio_irq_set_wake)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 17/17(100%)
+
+
+// ---------------------------------------------

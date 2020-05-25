@@ -1,0 +1,18 @@
+@@
+@@
+- save_commit_buffer = revs.verbose_header; 
++ save_commit_buffer = revs.verbose_header || revs.header_filter || revs.message_filter; 
+// Infered from: (git/{prevFiles/prev_f69895_bd95fc_builtin-rev-list.c,revFiles/f69895_bd95fc_builtin-rev-list.c}: cmd_rev_list)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

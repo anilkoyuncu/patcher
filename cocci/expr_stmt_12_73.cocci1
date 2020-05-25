@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- dev_info(&E0->dev, "%s: i2c client is NULL. Device not accessible.\n",  __func__); 
++ pr_info("%s: i2c client is NULL. Device not accessible.\n", __func__); 
+// Infered from: (linux/{prevFiles/prev_67fe94_f2f083b_drivers#char#tpm#tpm_i2c_stm_st33.c,revFiles/67fe94_f2f083b_drivers#char#tpm#tpm_i2c_stm_st33.c}: tpm_stm_i2c_probe)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

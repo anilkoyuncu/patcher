@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- E0 = mmap((void *)mca_sshmem_base_start_address, E1, PROT_READ | PROT_WRITE,  MAP_SHARED | MAP_ANONYMOUS | MAP_FIXED, 0, 0); 
++ E0 = mmap((void *)mca_sshmem_base_start_address, E1, PROT_READ | PROT_WRITE,  MAP_SHARED | MAP_ANONYMOUS | MAP_FIXED, -1, 0); 
+// Infered from: (ompi/{prevFiles/prev_9314e9_f7df96_oshmem#mca#sshmem#mmap#sshmem_mmap_module.c,revFiles/9314e9_f7df96_oshmem#mca#sshmem#mmap#sshmem_mmap_module.c}: segment_create), (ompi/{prevFiles/prev_9314e9_f7df96_oshmem#mca#sshmem#mmap#sshmem_mmap_module.c,revFiles/9314e9_f7df96_oshmem#mca#sshmem#mmap#sshmem_mmap_module.c}: segment_attach)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- gtk_window_move(GTK_WINDOW(E0), -100, -100); 
++ gtk_window_move(GTK_WINDOW(E0), -99, -99); 
+// Infered from: (gtk/{prevFiles/prev_02e915_4bb90a_gtk#gtkdnd.c,revFiles/02e915_4bb90a_gtk#gtkdnd.c}: gtk_drag_get_ipc_widget_for_screen)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.70, Precision: 1.00
+// -- Node Change --
+// Recall: 0.73, Precision: 0.89
+// -- General --
+// Functions fully changed: 6/10(60%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_043b2b_5e5c6b_gtk#main_welcome.c: welcome_new
+ - FFmpeg/prevFiles/prev_c4dfb7_51925d_libavfilter#vf_eq.c: check_values
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_062e78_c7b160_test#get-path-extents.c: draw
+*/
+
+// ---------------------------------------------

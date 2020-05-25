@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (NULL == hwloc_get_obj_by_type(E0, HWLOC_OBJ_CORE, 0))  
++ if (opal_hwloc_use_hwthreads_as_cpus || (NULL == hwloc_get_obj_by_type(  E0, HWLOC_OBJ_CORE, 0)))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_6d1495_53185e_opal#mca#hwloc#base#hwloc_base_util.c,revFiles/6d1495_53185e_opal#mca#hwloc#base#hwloc_base_util.c}: opal_hwloc_base_get_pu)
+// False positives: (ompi/revFiles/6d1495_53185e_opal#mca#hwloc#base#hwloc_base_util.c: socket_core_to_cpu_set)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

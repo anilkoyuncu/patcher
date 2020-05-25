@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+typedef mpf_ptr;
+@@
+- ASSERT_NOCARRY(mpf_set_str(E0, E1, 10)); 
++ ASSERT_NOCARRY(mpf_set_str((mpf_ptr )E0, E1, 10)); 
+// Infered from: (gmp/{prevFiles/prev_45729d_d08a54_scanf#doscan.c,revFiles/45729d_d08a54_scanf#doscan.c}: gmpscan)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.88, Precision: 1.00
+// -- Node Change --
+// Recall: 0.91, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/8(87%)
+
+/*
+Functions where the patch did not apply:
+ - gmp/prevFiles/prev_45729d_d08a54_scanf#doscan.c: 
+*/
+
+// ---------------------------------------------

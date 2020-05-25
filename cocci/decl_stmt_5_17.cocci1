@@ -1,0 +1,11 @@
+@@
+identifier I0, I1;
+@@
+- static char *I0 = NULL; 
+- static char *I1 = NULL; 
++ char *I0 = NULL; 
++ char *I1 = NULL; 
+// Infered from: (php-src/{prevFiles/prev_da2f58_418f97_main#main.c,revFiles/da2f58_418f97_main#main.c}: get_safe_charset_hint)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

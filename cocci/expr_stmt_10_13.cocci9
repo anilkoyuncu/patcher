@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- sprintf(E0, "%s/%s", E1, Z_STRVAL_P(E2)); 
++ sprintf(E0, "%s%c%s", E1, DEFAULT_SLASH, Z_STRVAL_P(E2)); 
+// Infered from: (php-src/{prevFiles/prev_90792b_9d0c4b_ext#standard#dl.c,revFiles/90792b_9d0c4b_ext#standard#dl.c}: php_dl)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

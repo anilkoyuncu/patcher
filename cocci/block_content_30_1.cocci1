@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- fprintf(stderr, "%s, %ld bytes (0x%lx)\n", E0, (long )E1, (long )E1); 
++ fprintf(stderr, "%s, %lu bytes (0x%lx)\n", E0, E1, E1); 
+// Infered from: (curl/{prevFiles/prev_13505d_4c735b_docs#examples#http2-serverpush.c,revFiles/13505d_4c735b_docs#examples#http2-serverpush.c}: dump)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

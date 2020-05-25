@@ -1,0 +1,21 @@
+@@
+@@
+- if (FAILED(CoInitializeEx(NULL, COINIT_APARTMENTTHREADED)))  
++ if (FAILED(CoInitializeEx(NULL, COINIT_MULTITHREADED)))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_6e8d17_7502a0_modules#codec#dmo#dmo.c,revFiles/6e8d17_7502a0_modules#codec#dmo#dmo.c}: DecOpen), (vlc/{prevFiles/prev_6e8d17_7502a0_modules#codec#dmo#dmo.c,revFiles/6e8d17_7502a0_modules#codec#dmo#dmo.c}: EncOpen)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

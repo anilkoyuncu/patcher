@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = av_tree_find(E1->syncpoints, &E2, (void *)ff_nut_sp_pos_cmp, NULL); 
+// Infered from: (FFmpeg/{prevFiles/prev_fcbdd6_3b50db_libavformat#nutenc.c,revFiles/fcbdd6_3b50db_libavformat#nutenc.c}: nut_write_packet)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_fcbdd6_3b50db_libavformat#nutenc.c: nut_write_packet
+ - FFmpeg/prevFiles/prev_fcbdd6_3b50db_libavformat#nut.c: ff_nut_add_sp
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->username = E1[E2].optval; 
++ E0->username = pestrdup(E1[E2].optval, E0->is_persistent); 
+// Infered from: (php-src/{prevFiles/prev_645b03_f5dfea_ext#pdo_firebird#firebird_driver.c,revFiles/645b03_f5dfea_ext#pdo_firebird#firebird_driver.c}: pdo_firebird_handle_factory), (php-src/{prevFiles/prev_645b03_f5dfea_ext#pdo_dblib#dblib_driver.c,revFiles/645b03_f5dfea_ext#pdo_dblib#dblib_driver.c}: pdo_dblib_handle_factory), (php-src/{prevFiles/prev_645b03_f5dfea_ext#pdo_oci#oci_driver.c,revFiles/645b03_f5dfea_ext#pdo_oci#oci_driver.c}: pdo_oci_handle_factory)
+// Recall: 0.38, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

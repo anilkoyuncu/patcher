@@ -1,0 +1,10 @@
+@@
+identifier I0, I1, I2, I3;
+@@
+- I0 = setup_queue2(I1, I2, I3); 
++ setup_queue2(I1, I2, I3); 
+// Infered from: (gstreamer/{prevFiles/prev_0e9496_8ba64e_tests#check#elements#queue2.c,revFiles/0e9496_8ba64e_tests#check#elements#queue2.c}: GST_START_TEST)
+// False positives: (gstreamer/revFiles/0e9496_8ba64e_tests#check#elements#queue2.c: GST_START_TEST), (gstreamer/revFiles/0e9496_8ba64e_tests#check#elements#queue2.c: do_test_simple_shutdown_while_running)
+// Recall: 0.12, Precision: 0.33, Matching recall: 0.50
+
+// ---------------------------------------------

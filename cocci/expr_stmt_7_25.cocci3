@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->region.p_segments = ParseSubtitles(&E0->region.inner_align, E1); 
++ E0->region.p_segments = ParseSubtitles(&E0->region.align, E1); 
+// Infered from: (vlc/{prevFiles/prev_4efe1f_95d43f_modules#codec#subsdec.c,revFiles/4efe1f_95d43f_modules#codec#subsdec.c}: ParseText)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

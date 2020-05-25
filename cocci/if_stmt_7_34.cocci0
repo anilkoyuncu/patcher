@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->subs[E1].duration == -1 && E1 < E0->nb_subs - 1)  
++ if (E0->subs[E1].duration < 0 && E1 < E0->nb_subs - 1)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_a0ec4a_57787f_libavformat#subtitles.c,revFiles/a0ec4a_57787f_libavformat#subtitles.c}: ff_subtitles_queue_finalize)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

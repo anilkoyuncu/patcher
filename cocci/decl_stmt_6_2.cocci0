@@ -1,0 +1,16 @@
+@@
+typedef int64_t;
+@@
+- return cpu_get_real_ticks() + cpu_ticks_offset; 
++ int64_t ticks; 
++ ticks = cpu_get_real_ticks(); 
++ if (cpu_ticks_prev > ticks)  
++ {
++ cpu_ticks_offset += cpu_ticks_prev - ticks; 
++ }
++ cpu_ticks_prev = ticks; 
++ return ticks + cpu_ticks_offset; 
+// Infered from: (qemu/{prevFiles/prev_eade0f_07de1e_vl.c,revFiles/eade0f_07de1e_vl.c}: cpu_get_ticks)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

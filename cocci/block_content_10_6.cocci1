@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5;
+typedef uint64_t;
+@@
+- I0 = E1 + E2 + E3 + E4 + E5; 
++ I0 = (uint64_t )E1 + E2 + E3 + E4 + E5; 
+// Infered from: (qemu/{prevFiles/prev_a08aaf_8cdcf3_hw#virtio#virtio-crypto.c,revFiles/a08aaf_8cdcf3_hw#virtio#virtio-crypto.c}: virtio_crypto_sym_op_helper)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

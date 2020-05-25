@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 && E0->enabled)  
++ if (E0 && E0->state->enable)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_83d6573_98e1bd4_drivers#gpu#drm#i915#intel_lvds.c,revFiles/83d6573_98e1bd4_drivers#gpu#drm#i915#intel_lvds.c}: intel_lvds_set_property)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

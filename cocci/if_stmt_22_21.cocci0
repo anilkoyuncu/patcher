@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- SEPERATE_ZVAL(E0); 
++ SEPARATE_ZVAL(E0); 
+// Infered from: (php-src/{prevFiles/prev_068be1_c8ef63_ext#xslt#sablot.c,revFiles/068be1_c8ef63_ext#xslt#sablot.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_068be1_c8ef63_ext#xslt#sablot.c,revFiles/068be1_c8ef63_ext#xslt#sablot.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_068be1_c8ef63_ext#xslt#sablot.c,revFiles/068be1_c8ef63_ext#xslt#sablot.c}: PHP_FUNCTION)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

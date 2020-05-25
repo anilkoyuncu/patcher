@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- seq_printf(E0, "MST Source Port %c\n", port_name(E1->base.port)); 
++ seq_printf(E0, "MST Source Port [ENCODER:%d:%s]\n", E1->base.base.base.id,  E1->base.base.name); 
+// Infered from: (linux/{prevFiles/prev_66a990_75427b_drivers#gpu#drm#i915#i915_debugfs.c,revFiles/66a990_75427b_drivers#gpu#drm#i915#i915_debugfs.c}: i915_dp_mst_info)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

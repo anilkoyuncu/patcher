@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- if (Z_REFCOUNTED_P (E0))  
+- {
+- Z_DELREF_P(E0); 
+- }
+// Infered from: (php-src/{prevFiles/prev_9d6cce_3810b4_Zend#zend_object_handlers.c,revFiles/9d6cce_3810b4_Zend#zend_object_handlers.c}: zend_std_call_getter)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

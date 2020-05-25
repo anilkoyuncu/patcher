@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- assert(E0->p_clock); 
++ if (!E0->p_clock)  
++ {
++ return INPUT_RATE_DEFAULT; 
++ }
+// Infered from: (vlc/{prevFiles/prev_a3b364_5bce8e_src#input#decoder.c,revFiles/a3b364_5bce8e_src#input#decoder.c}: decoder_GetDisplayRate)
+// False positives: (vlc/revFiles/a3b364_5bce8e_src#input#decoder.c: decoder_GetDisplayDate)
+// Recall: 0.42, Precision: 0.83, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_7871c5_ae2b55_capture-wpcap.c: pcap_open
+ - wireshark/prevFiles/prev_7871c5_ae2b55_capture-wpcap.c: pcap_open_live
+*/
+
+// ---------------------------------------------

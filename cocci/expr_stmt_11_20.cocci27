@@ -1,0 +1,37 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "%s: Bad chipselect %i\n", __func__, E0); 
++ error_report("%s: Bad chipselect %i", __func__, E0); 
+// Infered from: (qemu/{prevFiles/prev_c0dbca_470bca_hw#arm#omap1.c,revFiles/c0dbca_470bca_hw#arm#omap1.c}: omap_uwire_attach)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 28 rules):
+// -- Edit Location --
+// Recall: 0.84, Precision: 1.00
+// -- Node Change --
+// Recall: 0.82, Precision: 0.96
+// -- General --
+// Functions fully changed: 23/32(71%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_c0dbca_470bca_hw#arm#mainstone.c: mainstone_common_init
+ - qemu/prevFiles/prev_c0dbca_470bca_hw#arm#z2.c: z2_init
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_0151ab_fe2d93_hw#pci#pci.c: pci_register_bar
+ - qemu/prevFiles/prev_493d89_47d17c_exec.c: qemu_ram_remap
+ - qemu/prevFiles/prev_8297be_2ab4b1_ui#keymaps.c: add_keysym
+ - qemu/prevFiles/prev_0151ab_fe2d93_hw#pci-host#bonito.c: bonito_sbridge_pciaddr
+ - qemu/prevFiles/prev_4fee24_bf937a_hw#ipmi#ipmi_bmc_extern.c: ipmi_bmc_extern_handle_command
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_45876e_f90ea7_hw#m68k#an5206.c: an5206_init
+ - qemu/prevFiles/prev_8297be_2ab4b1_hw#mips#mips_r4k.c: mips_r4k_init
+*/
+
+// ---------------------------------------------

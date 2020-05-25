@@ -1,0 +1,8 @@
+@@
+@@
+- CG(literal_type) = IS_STRING; 
++ CG(literal_type) = ZEND_STR_TYPE; 
+// Infered from: (php-src/{prevFiles/prev_63df66_c5808d_Zend#zend.c,revFiles/63df66_c5808d_Zend#zend.c}: compiler_globals_ctor)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

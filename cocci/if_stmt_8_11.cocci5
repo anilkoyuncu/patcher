@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 == 1 && E1 == 0 && E2[5] & 0x07)  
++ if (E0 == 1 && E1 == 0 && E2[4] & 0x07)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e2f021_f3f5eb_libavcodec#dvdata.c,revFiles/e2f021_f3f5eb_libavcodec#dvdata.c}: ff_dv_frame_profile)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

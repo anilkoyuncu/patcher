@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (orte_get_attribute(&E0->attributes, ORTE_JOB_FAILURE_TIMER_EVENT,  (void **)E1, OPAL_PTR))  
++ if (orte_get_attribute(&E0->attributes, ORTE_JOB_FAILURE_TIMER_EVENT,  (void **)&E1, OPAL_PTR))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_742c0d_7df500_orte#mca#plm#base#plm_base_launch_support.c,revFiles/742c0d_7df500_orte#mca#plm#base#plm_base_launch_support.c}: timer_cb), (ompi/{prevFiles/prev_742c0d_7df500_orte#mca#plm#base#plm_base_launch_support.c,revFiles/742c0d_7df500_orte#mca#plm#base#plm_base_launch_support.c}: orte_plm_base_post_launch)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

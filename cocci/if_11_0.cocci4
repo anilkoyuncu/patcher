@@ -1,0 +1,14 @@
+@@
+expression E1, E0;
+@@
+- if (E0->max_filesystem_id > E0->allocated_filesytem)  
++ if (E0->max_filesystem_id > E0->allocated_filesystem)  
+  {
+  ...
+- E0->allocated_filesytem = E1; 
++ E0->allocated_filesystem = E1; 
+  }
+// Infered from: (libarchive/{prevFiles/prev_458281_64082b_libarchive#archive_read_disk_windows.c,revFiles/458281_64082b_libarchive#archive_read_disk_windows.c}: update_current_filesystem), (libarchive/{prevFiles/prev_458281_64082b_libarchive#archive_read_disk_posix.c,revFiles/458281_64082b_libarchive#archive_read_disk_posix.c}: update_current_filesystem)
+// Recall: 0.16, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

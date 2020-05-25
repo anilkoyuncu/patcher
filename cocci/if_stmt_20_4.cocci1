@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (cairo_test_is_target_enabled(&E0, "ps"))  
++ if (cairo_test_is_target_enabled(&E0, "ps2") || cairo_test_is_target_enabled(  &E0, "ps3"))  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_cca1fc_39e4a0_test#fallback-resolution.c,revFiles/cca1fc_39e4a0_test#fallback-resolution.c}: main), (cairo/{prevFiles/prev_cca1fc_39e4a0_test#create-for-stream.c,revFiles/cca1fc_39e4a0_test#create-for-stream.c}: main), (cairo/{prevFiles/prev_cca1fc_39e4a0_test#multi-page.c,revFiles/cca1fc_39e4a0_test#multi-page.c}: main)
+// Recall: 0.60, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

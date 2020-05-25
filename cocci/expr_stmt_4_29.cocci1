@@ -1,0 +1,33 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = E1->mb_x * 2 * E2 + (E3 >> (E4 + 1)); 
++ E0 = E1->mb_x * E2 + (E3 >> (E4 + 1)); 
+// Infered from: (FFmpeg/{prevFiles/prev_c25a8d_a565c7_libavcodec#mpegvideo.c,revFiles/c25a8d_a565c7_libavcodec#mpegvideo.c}: mpeg_motion_lowres)
+// False positives: (FFmpeg/revFiles/c25a8d_a565c7_libavcodec#mpegvideo.c: mpeg_motion_lowres)
+// Recall: 0.12, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.25, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/8(12%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_5b323e_bbc85f_modules#video_filter#marq.c: MarqueeCallback
+ - vlc/prevFiles/prev_34a5ca_33a939_modules#video_filter#rss.c: CreateFilter
+ - codeflaws/prevFiles/prev_11-A-12698258-12698286.c: main
+ - qemu/prevFiles/prev_9bebf9_aa752a_target-s390x#misc_helper.c: runtime_exception
+ - qemu/prevFiles/prev_afd4a6_b78c2b_hw#pxa2xx.c: pxa2xx_pm_write
+ - vlc/prevFiles/prev_5b323e_bbc85f_modules#video_filter#marq.c: CreateFilter
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_c25a8d_a565c7_libavcodec#mpegvideo.c: mpeg_motion_lowres
+*/
+
+// ---------------------------------------------

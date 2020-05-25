@@ -1,0 +1,33 @@
+@@
+expression E0, E1;
+@@
+- if ((SSL_version(E0) == DTLS1_VERSION) && DTLSv1_get_timeout(E0, &E1))  
++ if (SSL_is_dtls(E0) && DTLSv1_get_timeout(E0, &E1))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+  ...
+- if ((SSL_version(E0) == DTLS1_VERSION) && DTLSv1_handle_timeout(E0) > 0)  
++ if ((SSL_is_dtls(E0)) && DTLSv1_handle_timeout(E0) > 0)  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_6f6da2_f20404_apps#s_server.c,revFiles/6f6da2_f20404_apps#s_server.c}: sv_body)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

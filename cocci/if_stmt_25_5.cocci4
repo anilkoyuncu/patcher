@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+typedef gint32;
+@@
+- E0 = libpcap_write_enhanced_packet_block(libpcap_write_to_file,  global_ld.pdh, NULL, E1->ts.tv_sec,  E1->ts.tv_usec, E1->caplen, E1->len,  E2->interface_id, E3, E4, 0,  &global_ld.bytes_written, &E5); 
++ E0 = libpcap_write_enhanced_packet_block(libpcap_write_to_file,  global_ld.pdh, NULL, E1->ts.tv_sec,  (gint32 )E1->ts.tv_usec, E1->caplen,  E1->len, E2->interface_id, E3, E4,  0, &global_ld.bytes_written, &E5); 
+// Infered from: (wireshark/{prevFiles/prev_a1abe1_36f3b7_dumpcap.c,revFiles/a1abe1_36f3b7_dumpcap.c}: capture_loop_write_packet_cb)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

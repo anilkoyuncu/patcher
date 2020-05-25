@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = memrchr(E1, '/', E2 - E1); 
++ E0 = memrchr(E1, '/', (size_t )(E2 - E1)); 
+// Infered from: (curl/{prevFiles/prev_5b11e3_7d22ce_lib#cookie.c,revFiles/5b11e3_7d22ce_lib#cookie.c}: Curl_cookie_add)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.25, Precision: 1.00
+// -- Node Change --
+// Recall: 0.22, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/8(12%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_5b11e3_7d22ce_lib#cookie.c: Curl_cookie_add
+*/
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_47594b_0d635a_lib#transfer.c: Curl_readwrite
+ - wireshark/prevFiles/prev_411249_2e562e_epan#dissectors#packet-rtcp.c: calculate_roundtrip_delay
+ - curl/prevFiles/prev_cdbbb7_2bf4d9_lib#multi.c: curl_multi_remove_handle
+ - curl/prevFiles/prev_048bfe_a13710_lib#ftp.c: ftp_nb_type
+ - wireshark/prevFiles/prev_db963e_799479_epan#dissectors#packet-arp.c: check_for_storm_count
+ - FFmpeg/prevFiles/prev_667927_ef511d_libavformat#avio.c: avio_enum_protocols
+*/
+
+// ---------------------------------------------

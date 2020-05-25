@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- E0 = ((E1 - E0) ^ E1) >> (sizeof(size_t ) * 8 - 1); 
++ E0 = ((E1 - E0) & ~E1) >> (sizeof(size_t ) * 8 - 1); 
+// Infered from: (openssl/{prevFiles/prev_76f572_b47f11_crypto#modes#ctr128.c,revFiles/76f572_b47f11_crypto#modes#ctr128.c}: ctr128_inc_aligned)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch did not apply:
+ - apr/prevFiles/prev_daf950_cc733f_network_io#unix#sockopt.c: soblock
+ - vlc/prevFiles/prev_b95f6c_10acc1_modules#codec#cc.c: Decode
+*/
+
+// ---------------------------------------------

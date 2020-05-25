@@ -1,0 +1,9 @@
+@@
+expression E1, E2, E0;
+@@
+- E0 = devm_ioremap(E1, E2->start, E2->end - E2->start + 1); 
++ E0 = devm_ioremap(E1, E2->start, resource_size(E2)); 
+// Infered from: (linux/{prevFiles/prev_041b5e_f90f61_drivers#ata#sata_mv.c,revFiles/041b5e_f90f61_drivers#ata#sata_mv.c}: mv_platform_probe), (linux/{prevFiles/prev_d75444_c9492b_drivers#soc#fsl#qbman#bman_ccsr.c,revFiles/d75444_c9492b_drivers#soc#fsl#qbman#bman_ccsr.c}: fsl_bman_probe), (linux/{prevFiles/prev_45b4c85_4042a14_drivers#rtc#rtc-gemini.c,revFiles/45b4c85_4042a14_drivers#rtc#rtc-gemini.c}: gemini_rtc_probe)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

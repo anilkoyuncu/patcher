@@ -1,0 +1,13 @@
+@@
+expression E1, E0;
+@@
+- if (!E0)  
++ if (!E0)  
+  {
+- dev_err(&E1->dev, "out of memory\n"); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-gc0310.c,revFiles/309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-gc0310.c}: gc0310_probe), (linux/{prevFiles/prev_309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-ov2680.c,revFiles/309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-ov2680.c}: ov2680_probe), (linux/{prevFiles/prev_309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-mt9m114.c,revFiles/309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-mt9m114.c}: mt9m114_probe), (linux/{prevFiles/prev_309167_eab638_drivers#staging#media#atomisp#i2c#ov5693#atomisp-ov5693.c,revFiles/309167_eab638_drivers#staging#media#atomisp#i2c#ov5693#atomisp-ov5693.c}: ov5693_probe), (linux/{prevFiles/prev_309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-ov2722.c,revFiles/309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-ov2722.c}: ov2722_probe), (linux/{prevFiles/prev_309167_eab638_drivers#staging#media#atomisp#platform#intel-mid#atomisp_gmin_platform.c,revFiles/309167_eab638_drivers#staging#media#atomisp#platform#intel-mid#atomisp_gmin_platform.c}: camera_sensor_csi), (linux/{prevFiles/prev_309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-gc2235.c,revFiles/309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-gc2235.c}: gc2235_probe), (linux/{prevFiles/prev_309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-lm3554.c,revFiles/309167_eab638_drivers#staging#media#atomisp#i2c#atomisp-lm3554.c}: lm3554_probe)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- snprintf(E0, E1, channel_layout_map[E2].name); 
++ av_strlcpy(E0, channel_layout_map[E2].name, E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_862c1d_37a558_libavcodec#audioconvert.c,revFiles/862c1d_37a558_libavcodec#audioconvert.c}: avcodec_get_channel_layout_string)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

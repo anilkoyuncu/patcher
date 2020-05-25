@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- sprintf (E0, ""); 
+// Infered from: (vlc/{prevFiles/prev_1e4db9_d9d80e_src#stream_output#profiles.c,revFiles/1e4db9_d9d80e_src#stream_output#profiles.c}: ChainToPsz)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

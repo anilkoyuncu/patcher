@@ -1,0 +1,26 @@
+@@
+expression E0, E1;
+@@
+- if (asprintf(&E0, _("Audio CD - Track %i"), (E1 + 1)) == -1)  
++ if (asprintf(&E0, _("Audio CD - Track %02i"), (E1 + 1)) == -1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_f60496_f6081e_modules#access#cdda.c,revFiles/f60496_f6081e_modules#access#cdda.c}: GetTracks)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_4e1819_4460ad_test#property_test.c: test_property_string
+*/
+
+// ---------------------------------------------

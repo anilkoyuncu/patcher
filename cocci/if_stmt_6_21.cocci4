@@ -1,0 +1,41 @@
+@@
+expression E0;
+@@
+- if (E0->flags & AVIO_FLAG_WRITE)  
++ if (!(E0->flags & AVIO_FLAG_READ))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_a7ea5e_f9a6cf_libavformat#udp.c,revFiles/a7ea5e_f9a6cf_libavformat#udp.c}: udp_open)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 0.65, Precision: 0.59
+// -- General --
+// Functions fully changed: 1/9(11%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_7faae9_041099_backends#hostmem-file.c: file_backend_memory_alloc
+ - FFmpeg/prevFiles/prev_a7ea5e_f9a6cf_libavformat#udp.c: udp_open
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_ab6381_3f4868_device-hotplug.c: add_init_drive
+ - qemu/prevFiles/prev_0722eb_800742_qdev-monitor.c: qdev_device_help
+ - qemu/prevFiles/prev_7faae9_041099_backends#hostmem-file.c: file_memory_backend_set_align
+ - FFmpeg/prevFiles/prev_fd51ff_7fa705_libavfilter#graphparser.c: avfilter_parse_graph
+ - qemu/prevFiles/prev_0722eb_800742_qdev-monitor.c: qdev_device_add
+ - qemu/prevFiles/prev_0722eb_800742_qdev-monitor.c: set_property
+*/
+
+// ---------------------------------------------

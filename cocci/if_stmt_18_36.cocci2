@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- es_out_Control(E0->out, ES_OUT_GET_EMPTY); 
+// Infered from: (vlc/{prevFiles/prev_ec4878_01a977_modules#access#bluray.c,revFiles/ec4878_01a977_modules#access#bluray.c}: blurayHandleEvent)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_e6db98_2ea9a9_modules#hw#vdpau#chroma.c: VideoImport
+ - wireshark/prevFiles/prev_adb289_12ff12_epan#dissectors#packet-flip.c: 
+*/
+
+// ---------------------------------------------

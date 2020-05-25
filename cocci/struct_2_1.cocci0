@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- struct m86k_sim_stat *I0; 
++ struct m68k_sim_stat *I0; 
+// Infered from: (qemu/{prevFiles/prev_e0c8a7_b0cd71_linux-user#m68k-sim.c,revFiles/e0c8a7_b0cd71_linux-user#m68k-sim.c}: do_m68k_simcall)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->module = vlc_module_load(E0, "decoder device", E1, true,  decoder_device_Open, &E0->device, E2); 
++ E0->module = vlc_module_load(&E0->device, "decoder device", E1, true,  decoder_device_Open, &E0->device, E2); 
+// Infered from: (vlc/{prevFiles/prev_baade4_e3270f_src#input#decoder_helpers.c,revFiles/baade4_e3270f_src#input#decoder_helpers.c}: vlc_decoder_device_Create)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,24 @@
+@@
+expression E0;
+typedef plugin_config;
+@@
+- E0 = malloc(sizeof(plugin_config )); 
++ E0 = calloc(1, sizeof(plugin_config )); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_access.c,revFiles/bac921_2bc237_src#mod_access.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_rewrite.c,revFiles/bac921_2bc237_src#mod_rewrite.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_setenv.c,revFiles/bac921_2bc237_src#mod_setenv.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_expire.c,revFiles/bac921_2bc237_src#mod_expire.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_userdir.c,revFiles/bac921_2bc237_src#mod_userdir.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_ssi.c,revFiles/bac921_2bc237_src#mod_ssi.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_redirect.c,revFiles/bac921_2bc237_src#mod_redirect.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_alias.c,revFiles/bac921_2bc237_src#mod_alias.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_usertrack.c,revFiles/bac921_2bc237_src#mod_usertrack.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_status.c,revFiles/bac921_2bc237_src#mod_status.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_mysql_vhost.c,revFiles/bac921_2bc237_src#mod_mysql_vhost.c}: SERVER_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_skeleton.c,revFiles/bac921_2bc237_src#mod_skeleton.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_cgi.c,revFiles/bac921_2bc237_src#mod_cgi.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_secure_download.c,revFiles/bac921_2bc237_src#mod_secure_download.c}: SETDEFAULTS_FUNC), (lighttpd1.4/{prevFiles/prev_bac921_2bc237_src#mod_rrdtool.c,revFiles/bac921_2bc237_src#mod_rrdtool.c}: SETDEFAULTS_FUNC)
+// Recall: 0.47, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.97, Precision: 1.00
+// -- General --
+// Functions fully changed: 15/16(93%)
+
+/*
+Functions where the patch applied partially:
+ - lighttpd1.4/prevFiles/prev_bac921_2bc237_src#mod_auth.c: SETDEFAULTS_FUNC
+*/
+
+// ---------------------------------------------

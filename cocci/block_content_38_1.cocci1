@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1, E4, E2, E3;
+@@
+- I0 = platform_get_resource(E1, IORESOURCE_MEM, E2); 
+- E3 = devm_ioremap_resource(E4, I0); 
++ E3 = devm_platform_ioremap_resource(E1, E2); 
+// Infered from: (linux/{prevFiles/prev_80a501_e1444e_drivers#staging#media#imx#imx7-mipi-csis.c,revFiles/80a501_e1444e_drivers#staging#media#imx#imx7-mipi-csis.c}: mipi_csis_probe), (linux/{prevFiles/prev_0f0a6a2_24b822_drivers#watchdog#s3c2410_wdt.c,revFiles/0f0a6a2_24b822_drivers#watchdog#s3c2410_wdt.c}: s3c2410wdt_probe), (linux/{prevFiles/prev_7ce5ee_0b27555_drivers#scsi#ufs#ufs-hisi.c,revFiles/7ce5ee_0b27555_drivers#scsi#ufs#ufs-hisi.c}: ufs_hisi_get_resource), (linux/{prevFiles/prev_b6df98_1a1ba7_drivers#net#ethernet#ezchip#nps_enet.c,revFiles/b6df98_1a1ba7_drivers#net#ethernet#ezchip#nps_enet.c}: nps_enet_probe), (linux/{prevFiles/prev_0f0a6a2_24b822_drivers#watchdog#zx2967_wdt.c,revFiles/0f0a6a2_24b822_drivers#watchdog#zx2967_wdt.c}: zx2967_wdt_probe), (linux/{prevFiles/prev_0f0a6a2_24b822_drivers#watchdog#davinci_wdt.c,revFiles/0f0a6a2_24b822_drivers#watchdog#davinci_wdt.c}: davinci_wdt_probe), (linux/{prevFiles/prev_f449aa3_46e55d_drivers#iio#adc#ingenic-adc.c,revFiles/f449aa3_46e55d_drivers#iio#adc#ingenic-adc.c}: ingenic_adc_probe)
+// Recall: 0.75, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.99, Precision: 1.00
+// -- General --
+// Functions fully changed: 44/45(97%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_3b961b_bd0abf_drivers#infiniband#hw#hns#hns_roce_hw_v1.c: hns_roce_get_cfg
+*/
+
+// ---------------------------------------------

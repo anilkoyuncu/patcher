@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return (E0 << 1) ^ (E0 >> 7); 
++ return (E0 * 2) ^ (E0 >> 7); 
+// Infered from: (FFmpeg/{prevFiles/prev_ddb2dd_c5d2fa_libavcodec#lagarith.c,revFiles/ddb2dd_c5d2fa_libavcodec#lagarith.c}: lag_calc_zero_run)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

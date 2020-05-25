@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef guint;
+@@
+- guint I0; 
++ guint gpio_edgex; 
+  ...
+- I0 = (tvb_get_guint8(E1, E2) & 0x01); 
+- if (I0 == 0x00)  
++ gpio_edgex = (tvb_get_guint8(E1, E2) & 0x01); 
++ if (gpio_edgex == 0x00)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_33af75_d897f4_epan#dissectors#packet-hilscher.c,revFiles/33af75_d897f4_epan#dissectors#packet-hilscher.c}: dissect_hilscher_netanalyzer)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

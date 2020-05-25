@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- dialog_ProgressSet(E0->p_dialog, E1, 100 * E2); 
++ dialog_ProgressSet(E0->p_dialog, E1, E2); 
+// Infered from: (vlc/{prevFiles/prev_47512c_f2d57a_modules#access#dvb#scan.c,revFiles/47512c_f2d57a_modules#access#dvb#scan.c}: scan_Next)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

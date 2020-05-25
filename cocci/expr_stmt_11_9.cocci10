@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- gtk_render_background(E0, E1, -E2->xoffset, -E2->yoffset,  MAX(SCREEN_WIDTH(E3), E2->width),  MAX(SCREEN_HEIGHT(E3), E2->height)); 
++ gtk_render_background(E0, E1, -E2->xoffset, -E2->yoffset - E2->top_border,  MAX(SCREEN_WIDTH(E3), E2->width),  MAX(SCREEN_HEIGHT(E3), E2->height)); 
+// Infered from: (gtk/{prevFiles/prev_d7bc0f_914f7b_gtk#gtktextview.c,revFiles/d7bc0f_914f7b_gtk#gtktextview.c}: draw_text)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

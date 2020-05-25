@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- sprintf(E0, "%d", E1.linktype); 
+// Infered from: (wireshark/{prevFiles/prev_4faa0e_13fd96_capture_sync.c,revFiles/4faa0e_13fd96_capture_sync.c}: sync_pipe_do_capture)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

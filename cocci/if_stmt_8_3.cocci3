@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if ((CURLE_OK == E0) && E1)  
++ if ((CURLE_OK == E0) && (E1 > 0))  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_9583b4_8219bc_docs#examples#ftpgetinfo.c,revFiles/9583b4_8219bc_docs#examples#ftpgetinfo.c}: main)
+// False positives: (curl/revFiles/9583b4_8219bc_docs#examples#ftpgetinfo.c: main)
+// Recall: 0.03, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

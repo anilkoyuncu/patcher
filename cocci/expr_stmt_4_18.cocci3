@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 += NGX_HTTP_V2_INT_OCTETS + E1->headers_out.content_type.len; 
++ E0 += 1 + NGX_HTTP_V2_INT_OCTETS + E1->headers_out.content_type.len; 
+// Infered from: (nginx/{prevFiles/prev_70c29f_f93aa4_src#http#v2#ngx_http_v2_filter_module.c,revFiles/70c29f_f93aa4_src#http#v2#ngx_http_v2_filter_module.c}: ngx_http_v2_header_filter)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

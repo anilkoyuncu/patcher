@@ -1,0 +1,20 @@
+@@
+expression E0, E2, E1;
+typedef uint32_t;
+@@
+- E0->count[E1] += E2 * 8; 
++ E0->count[E1] += (uint32_t )(E2 * 8); 
+// Infered from: (php-src/{prevFiles/prev_596fbf_f73c01_ext#hash#hash_snefru.c,revFiles/596fbf_f73c01_ext#hash#hash_snefru.c}: PHP_SNEFRUUpdate), (php-src/{prevFiles/prev_596fbf_f73c01_ext#hash#hash_gost.c,revFiles/596fbf_f73c01_ext#hash#hash_gost.c}: PHP_GOSTUpdate)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

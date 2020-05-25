@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- memmove(&E0->glyph_indices[E1], &E0->glyph_indices[E1 + 1],  (E0->glyph_count - E1) * sizeof(E0->glyph_indices)); 
++ memmove(&E0->glyph_indices[E1], &E0->glyph_indices[E1 + 1],  (E0->glyph_count - E1) * sizeof(E0->glyph_indices[0])); 
+// Infered from: (cairo/{prevFiles/prev_537ffa_4dd4d9_src#cairo-xlib-surface.c,revFiles/537ffa_4dd4d9_src#cairo-xlib-surface.c}: _cairo_xlib_surface_add_glyph)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

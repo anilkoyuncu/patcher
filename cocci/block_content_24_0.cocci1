@@ -1,0 +1,26 @@
+@@
+identifier I1 = {apds9960_set_powermode ,clk_set_rate ,gen8_emit_pipe_control ,i2o_iop_enable ,iio_device_register ,iosf_mbi_read ,max77693_set_charge_input_threshold_volt ,of_property_read_u32 ,pci_write_config_byte ,regmap_update_bits ,snd_soc_dai_set_tdm_slot ,spmi_vreg_update_bits ,subdev_8255_init ,xfs_bmbt_update ,xfs_inobt_update };
+expression list E2;
+expression E0;
+@@
+- E0 = I1(E2); 
+- if (E0)  
+- {
+- return E0; 
+- }
+- return 0; 
++ return I1(E2); 
+// Infered from: (linux/{prevFiles/prev_5b40b3_8f961c0_drivers#power#max77693_charger.c,revFiles/5b40b3_8f961c0_drivers#power#max77693_charger.c}: max77693_reg_init), (linux/{prevFiles/prev_d41bd9_b3261d7_drivers#clk#qcom#clk-pll.c,revFiles/d41bd9_b3261d7_drivers#clk#qcom#clk-pll.c}: clk_pll_enable), (linux/{prevFiles/prev_9267135_b46913_drivers#net#phy#dp83867.c,revFiles/9267135_b46913_drivers#net#phy#dp83867.c}: dp83867_of_init), (linux/{prevFiles/prev_c11a25f_32d391_arch#x86#platform#intel-quark#imr.c,revFiles/c11a25f_32d391_arch#x86#platform#intel-quark#imr.c}: imr_read), (linux/{prevFiles/prev_0f9a7f_d0657fe_sound#soc#fsl#imx-mc13783.c,revFiles/0f9a7f_d0657fe_sound#soc#fsl#imx-mc13783.c}: imx_mc13783_hifi_hw_params), (linux/{prevFiles/prev_b72091f_d2a5e3_fs#xfs#libxfs#xfs_ialloc.c,revFiles/b72091f_d2a5e3_fs#xfs#libxfs#xfs_ialloc.c}: xfs_dialloc_ag_update_inobt), (linux/{prevFiles/prev_ebe5c5_36736cc_drivers#iio#light#apds9960.c,revFiles/ebe5c5_36736cc_drivers#iio#light#apds9960.c}: apds9960_chip_init), (linux/{prevFiles/prev_6e0b3f8_6ea255_drivers#gpu#drm#i915#intel_ringbuffer.c,revFiles/6e0b3f8_6ea255_drivers#gpu#drm#i915#intel_ringbuffer.c}: gen8_render_ring_flush), (linux/{prevFiles/prev_9aed06_64289a_drivers#staging#comedi#drivers#daqboard2000.c,revFiles/9aed06_64289a_drivers#staging#comedi#drivers#daqboard2000.c}: daqboard2000_auto_attach), (linux/{prevFiles/prev_41d98f5_3ede1b_drivers#staging#i2o#iop.c,revFiles/41d98f5_3ede1b_drivers#staging#i2o#iop.c}: i2o_iop_online), (linux/{prevFiles/prev_da29461_5db485_drivers#staging#iio#meter#ade7759.c,revFiles/da29461_5db485_drivers#staging#iio#meter#ade7759.c}: ade7759_probe), (linux/{prevFiles/prev_da29461_5db485_drivers#staging#iio#meter#ade7753.c,revFiles/da29461_5db485_drivers#staging#iio#meter#ade7753.c}: ade7753_probe), (linux/{prevFiles/prev_758204_f0cbd78_drivers#mmc#host#sdhci-pci-core.c,revFiles/758204_f0cbd78_drivers#mmc#host#sdhci-pci-core.c}: jmicron_pmos), (linux/{prevFiles/prev_c8d8ff_389818_sound#soc#zte#zx296702-spdif.c,revFiles/c8d8ff_389818_sound#soc#zte#zx296702-spdif.c}: zx_spdif_hw_params), (linux/{prevFiles/prev_da29461_5db485_drivers#staging#iio#meter#ade7754.c,revFiles/da29461_5db485_drivers#staging#iio#meter#ade7754.c}: ade7754_probe), (linux/{prevFiles/prev_d254aa_830047_fs#xfs#libxfs#xfs_bmap.c,revFiles/d254aa_830047_fs#xfs#libxfs#xfs_bmap.c}: xfs_bmse_shift_one), (linux/{prevFiles/prev_0f94bf_e92a404_drivers#regulator#qcom_spmi-regulator.c,revFiles/0f94bf_e92a404_drivers#regulator#qcom_spmi-regulator.c}: spmi_regulator_ult_lo_smps_set_voltage)
+// Recall: 0.94, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 18/18(100%)
+
+
+// ---------------------------------------------

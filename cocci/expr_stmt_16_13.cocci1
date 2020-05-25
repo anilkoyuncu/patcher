@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = xrealloc(E0, E1 + 1); 
++ E0 = xrealloc(E0, st_add(E1, 1)); 
+// Infered from: (git/{prevFiles/prev_50a6c8_96ffc0_dir.c,revFiles/50a6c8_96ffc0_dir.c}: add_excludes)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

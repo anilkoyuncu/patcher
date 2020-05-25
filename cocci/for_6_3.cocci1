@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;E0 < E1->mb_height * E1->mb_width;E0++)  
++ for(E0 = 0;E0 < E1->mb_height * E1->mb_stride;E0++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_169bc4_e9f36c_libavcodec#mpegvideo.c,revFiles/169bc4_e9f36c_libavcodec#mpegvideo.c}: MPV_encode_picture)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+typedef PyObject;
+@@
+- assert(E0->ob_type->tp_weaklistoffset + sizeof(PyObject *) <= E0->ob_type->tp_basicsize); 
+- E1 = (PyObject **)((void *)E0 + E0->ob_type->tp_weaklistoffset); 
++ assert(E0->ob_type->tp_weaklistoffset + sizeof(PyObject *) <= (size_t )(  E0->ob_type->tp_basicsize)); 
++ E1 = (PyObject **)((char *)E0 + E0->ob_type->tp_weaklistoffset); 
+// Infered from: (cpython/{prevFiles/prev_3747a0_ad47da_Objects#typeobject.c,revFiles/3747a0_ad47da_Objects#typeobject.c}: subtype_getweakref)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

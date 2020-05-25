@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (E0 == CAIRO_STATUS_SUCCESS)  
+- {
+- _cairo_path_fixed_approximate_stroke_extents(E1, E2, E3, &E4); 
+- }
+- else
+- {
+  ...
+- }
+// Infered from: (cairo/{prevFiles/prev_bb4055_d37464_src#cairo-analysis-surface.c,revFiles/bb4055_d37464_src#cairo-analysis-surface.c}: _cairo_analysis_surface_stroke), (cairo/{prevFiles/prev_b8347e_cfff4f_src#cairo-analysis-surface.c,revFiles/b8347e_cfff4f_src#cairo-analysis-surface.c}: _cairo_analysis_surface_stroke)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

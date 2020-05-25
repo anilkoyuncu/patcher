@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- logprintf(" (length %d)\n", E0 == NULL ? 0 :(int )strlen(E0)); 
++ logprintf(" (length %d)\n", q == NULL ? -1 :(int )strlen(q)); 
+// Infered from: (libarchive/{prevFiles/prev_539985_15e709_tar#test#main.c,revFiles/539985_15e709_tar#test#main.c}: strdump)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

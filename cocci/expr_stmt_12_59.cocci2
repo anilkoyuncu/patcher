@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+@@
+- E0->transform_fields.bits.frame_level_transform_type = E1->ttfrm; 
++ E0->transform_fields.bits.frame_level_transform_type = vc1_get_TTFRM(  E1); 
+// Infered from: (FFmpeg/{prevFiles/prev_53efb7_c2ed91_libavcodec#vaapi_vc1.c,revFiles/53efb7_c2ed91_libavcodec#vaapi_vc1.c}: vaapi_vc1_start_frame), (FFmpeg/{prevFiles/prev_825dd1_955113_libavcodec#vaapi_vc1.c,revFiles/825dd1_955113_libavcodec#vaapi_vc1.c}: vaapi_vc1_start_frame)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.36, Precision: 1.00
+// -- Node Change --
+// Recall: 0.14, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/11(36%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_938795_9160cf_gdk#directfb#gdkwindow-directfb.c: _gdk_window_impl_new
+ - wireshark/prevFiles/prev_8d6b72_e88397_proto_hier_stats.c: find_stat_node
+ - gtk/prevFiles/prev_e06edf_cb184b_gdk#directfb#gdkwindow-directfb.c: _gdk_window_impl_new
+*/
+
+// ---------------------------------------------

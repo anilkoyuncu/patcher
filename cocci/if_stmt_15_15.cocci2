@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->headers_out.status != NGX_HTTP_OK || E0 != E0->main)  
++ if (E0->headers_out.status != NGX_HTTP_OK || E0 != E0->main || E0->headers_out.content_type.data == NULL)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_2c32b5_fe9a06_src#http#modules#ngx_http_addition_filter_module.c,revFiles/2c32b5_fe9a06_src#http#modules#ngx_http_addition_filter_module.c}: ngx_http_addition_header_filter)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

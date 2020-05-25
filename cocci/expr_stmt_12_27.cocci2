@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = sdslen(E1->ptr); 
++ E0 = stringObjectLen(E1); 
+// Infered from: (redis/{prevFiles/prev_0ace1e_4e54b8_src#t_hash.c,revFiles/0ace1e_4e54b8_src#t_hash.c}: hashTypeGetValueLength)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

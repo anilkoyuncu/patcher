@@ -1,0 +1,30 @@
+@@
+identifier I0, I1;
+expression E2, E3, E4;
+typedef MYSQLND_MEMORY_POOL_CHUNK;
+typedef zval;
+@@
+- I0 = I1; 
+  ...
+- E2->row_buffers = mnd_pemalloc(10 * sizeof(MYSQLND_MEMORY_POOL_CHUNK *), E3); 
+  ...
+- E2->data = mnd_pecalloc(E2->row_count * E4->field_count, sizeof(zval *), E3); 
+// Infered from: (php-src/{prevFiles/prev_7d4c51_877d5f_ext#mysqlnd#mysqlnd_result.c,revFiles/7d4c51_877d5f_ext#mysqlnd#mysqlnd_result.c}: mysqlnd_store_result_fetch_data), (php-src/{prevFiles/prev_0b77134_1ee42c_ext#mysqlnd#mysqlnd_result.c,revFiles/0b77134_1ee42c_ext#mysqlnd#mysqlnd_result.c}: mysqlnd_store_result_fetch_data)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.19
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_7d4c51_877d5f_ext#mysqlnd#mysqlnd_result.c: mysqlnd_store_result_fetch_data
+ - php-src/prevFiles/prev_0b77134_1ee42c_ext#mysqlnd#mysqlnd_result.c: mysqlnd_store_result_fetch_data
+*/
+
+// ---------------------------------------------

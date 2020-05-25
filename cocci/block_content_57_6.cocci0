@@ -1,0 +1,15 @@
+@@
+expression E0, E1;
+@@
+- if (object_class_by_name(E0) == NULL)  
++ oc = cpu_class_by_name(TYPE_UNICORE32_CPU, E0); 
++ if (oc == NULL)  
+  {
+  ...
+  }
+- E1 = UNICORE32_CPU(object_new(E0)); 
++ E1 = UNICORE32_CPU(object_new(object_class_get_name(oc))); 
+// Infered from: (qemu/{prevFiles/prev_d89e12_bd039c_target-unicore32#helper.c,revFiles/d89e12_bd039c_target-unicore32#helper.c}: uc32_cpu_init)
+// Recall: 0.42, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------

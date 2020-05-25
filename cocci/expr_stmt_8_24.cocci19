@@ -1,0 +1,24 @@
+@@
+type T2;
+expression E0, E1, E3;
+@@
+- snprintf(E0, E1, "0.%04u sec", (T2 )E3 * 10000); 
++ snprintf(E0, E1, "0.%04u sec", (T2 )(E3 * 10000)); 
+// Infered from: (qemu/{prevFiles/prev_bcd249_77bec6_cmd.c,revFiles/bcd249_77bec6_cmd.c}: timestr)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 20 rules):
+// -- Edit Location --
+// Recall: 0.98, Precision: 1.00
+// -- Node Change --
+// Recall: 0.98, Precision: 1.00
+// -- General --
+// Functions fully changed: 48/49(97%)
+
+/*
+Functions where the patch did not apply:
+ - libtiff/prevFiles/prev_2b14fd_024b2f_libtiff#tif_dirread.c: TIFFReadDirEntryDataAndRealloc
+*/
+
+// ---------------------------------------------

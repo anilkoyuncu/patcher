@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (php_module_startup(E0, NULL) == FAILURE || zend_startup_module(&apache_module_entry) == FAILURE)  
++ if (php_module_startup(E0) == FAILURE || zend_startup_module(&apache_module_entry) == FAILURE)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_c5da38_ea46f7_sapi#apache#mod_php4.c,revFiles/c5da38_ea46f7_sapi#apache#mod_php4.c}: php_apache_startup)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

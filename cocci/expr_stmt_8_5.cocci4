@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef MPI_File;
+@@
+- E0 = (MPI_File )ADIOI_Malloc(E1); 
++ E0 = (MPI_File )ADIOI_Calloc(E1, 1); 
+// Infered from: (ompi/{prevFiles/prev_c88626_770bf30_ompi#mca#io#romio#romio#mpi-io#glue#openmpi#mpio_file.c,revFiles/c88626_770bf30_ompi#mca#io#romio#romio#mpi-io#glue#openmpi#mpio_file.c}: MPIO_File_create)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

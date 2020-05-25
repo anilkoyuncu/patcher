@@ -1,0 +1,10 @@
+@@
+expression E1, E2, E0;
+typedef int64_t;
+@@
+- av_reduce(&E0.num, &E0.den, E1->width * E2->sample_aspect_ratio.num,  E1->height * E2->sample_aspect_ratio.den, 1024 * 1024); 
++ av_reduce(&E0.num, &E0.den,  E1->width * (int64_t )E2->sample_aspect_ratio.num,  E1->height * (int64_t )E2->sample_aspect_ratio.den, 1024 * 1024); 
+// Infered from: (FFmpeg/{prevFiles/prev_d1bdaf_733511_libavformat#dump.c,revFiles/d1bdaf_733511_libavformat#dump.c}: dump_stream_format), (FFmpeg/{prevFiles/prev_4f03be_13696c_libavcodec#utils.c,revFiles/4f03be_13696c_libavcodec#utils.c}: avcodec_string)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

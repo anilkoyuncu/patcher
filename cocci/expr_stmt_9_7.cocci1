@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->p_blend = filter_NewBlend(VLC_OBJECT(E1), &E1->fmt_in); 
++ E0->p_blend = filter_NewBlend(VLC_OBJECT(E1), &E1->fmt_in.video); 
+// Infered from: (vlc/{prevFiles/prev_2ec478_05f47b_modules#video_filter#logo.c,revFiles/2ec478_05f47b_modules#video_filter#logo.c}: OpenCommon)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

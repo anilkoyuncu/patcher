@@ -1,0 +1,27 @@
+@@
+expression E0, E3, E1, E2;
+@@
+- E0 = dma_alloc_coherent(&E1->dev, E2, &E3, GFP_KERNEL); 
++ E0 = dma_zalloc_coherent(&E1->dev, E2, &E3, GFP_KERNEL); 
+  ...
+- memset(E0, 0, E2); 
+// Infered from: (linux/{prevFiles/prev_055831_d103adb_drivers#scsi#qla2xxx#qla_bsg.c,revFiles/055831_d103adb_drivers#scsi#qla2xxx#qla_bsg.c}: qla2x00_get_priv_stats), (linux/{prevFiles/prev_d103adb_bef4e68_drivers#scsi#qla4xxx#ql4_os.c,revFiles/d103adb_bef4e68_drivers#scsi#qla4xxx#ql4_os.c}: qla4xxx_iface_set_param), (linux/{prevFiles/prev_d103adb_bef4e68_drivers#scsi#qla4xxx#ql4_os.c,revFiles/d103adb_bef4e68_drivers#scsi#qla4xxx#ql4_os.c}: qla4xxx_mem_alloc), (linux/{prevFiles/prev_d78756_f48fca_drivers#infiniband#hw#ocrdma#ocrdma_stats.c,revFiles/d78756_f48fca_drivers#infiniband#hw#ocrdma#ocrdma_stats.c}: ocrdma_alloc_stats_resources)
+// False positives: (linux/revFiles/bde70f_055831_drivers#scsi#bfa#bfad.c: bfad_hal_mem_alloc), (linux/revFiles/d103adb_bef4e68_drivers#scsi#qla4xxx#ql4_os.c: qla4xxx_sysfs_ddb_logout_sid)
+// Recall: 0.44, Precision: 0.67, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.90
+// -- Node Change --
+// Recall: 1.00, Precision: 0.82
+// -- General --
+// Functions fully changed: 8/10(80%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_d103adb_bef4e68_drivers#scsi#qla4xxx#ql4_os.c: qla4xxx_sysfs_ddb_logout_sid
+ - linux/prevFiles/prev_bde70f_055831_drivers#scsi#bfa#bfad.c: bfad_hal_mem_alloc
+*/
+
+// ---------------------------------------------

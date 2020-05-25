@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- parse_numa_node(E0, &E1, NULL); 
++ parse_numa_node(E0, &E1, &error_abort); 
+// Infered from: (qemu/{prevFiles/prev_a22528_8c42db_numa.c,revFiles/a22528_8c42db_numa.c}: numa_complete_configuration)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.73, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 7/11(63%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_360e60_0169c5_exec.c: address_space_translate_internal
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_360e60_0169c5_exec.c: address_space_translate
+ - qemu/prevFiles/prev_a22528_8c42db_numa.c: parse_numa_node
+*/
+
+// ---------------------------------------------

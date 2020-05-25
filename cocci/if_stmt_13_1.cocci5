@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->p_input = input_CreateThreadExtended(E1, E0->p_item, E2,  E0->p_input_resource); 
++ E0->p_input = input_CreateThreadExtended(E1->p_libvlc, E0->p_item, E2,  E0->p_input_resource); 
+// Infered from: (vlc/{prevFiles/prev_1924363_9312c3_src#input#vlm.c,revFiles/1924363_9312c3_src#input#vlm.c}: vlm_ControlMediaInstanceStart)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

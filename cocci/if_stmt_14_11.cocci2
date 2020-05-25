@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->bit_depth_luma > 14U || E0->bit_depth_chroma > 14U)  
++ if (E0->bit_depth_luma > 14U || E0->bit_depth_chroma > 14U || E0->bit_depth_luma != E0->bit_depth_chroma)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_bdeb61_59015c_libavcodec#h264_ps.c,revFiles/bdeb61_59015c_libavcodec#h264_ps.c}: ff_h264_decode_seq_parameter_set)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

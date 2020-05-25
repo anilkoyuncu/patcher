@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- failf(E0, "Failed writing body (%d != %d)", (int )E1, (int )E2); 
++ failf(E0, "Failed writing body (%zu != %zu)", E1, E2); 
+// Infered from: (curl/{prevFiles/prev_7aef17_f47b84_lib#sendf.c,revFiles/7aef17_f47b84_lib#sendf.c}: Curl_client_write)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- clk_disable_unprepare(E0->clk); 
+// Infered from: (linux/{prevFiles/prev_69656d_dcbb61_drivers#watchdog#bcm7038_wdt.c,revFiles/69656d_dcbb61_drivers#watchdog#bcm7038_wdt.c}: bcm7038_wdt_probe)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.11
+
+// ---------------------------------------------

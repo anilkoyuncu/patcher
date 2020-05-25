@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- SG(request_info).content_length = (E0 ? atol(E0) :0); 
++ SG(request_info).content_length = (E0 ? ZEND_ATOL(E0) :0); 
+// Infered from: (php-src/{prevFiles/prev_b5406e_e3b3e6_sapi#apache2handler#sapi_apache2.c,revFiles/b5406e_e3b3e6_sapi#apache2handler#sapi_apache2.c}: php_apache_request_ctor)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

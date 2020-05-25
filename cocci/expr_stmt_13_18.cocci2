@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- snprintf(E0, sizeof(E0), "%s (%d)",  (E1 == SANITIZE_ERR_OK ? "SANITIZE_ERR_OK" :E1 == SANITIZE_ERR_BAD_ARGUMENT ? "SANITIZE_ERR_BAD_ARGUMENT" :E1 == SANITIZE_ERR_INVALID_PATH ? "SANITIZE_ERR_INVALID_PATH" :E1 == SANITIZE_ERR_OUT_OF_MEMORY ? "SANITIZE_ERR_OUT_OF_MEMORY" :"unexpected error code - add name"),  E1); 
++ snprintf(E0, 256, "%s (%d)",  (E1 == SANITIZE_ERR_OK ? "SANITIZE_ERR_OK" :E1 == SANITIZE_ERR_BAD_ARGUMENT ? "SANITIZE_ERR_BAD_ARGUMENT" :E1 == SANITIZE_ERR_INVALID_PATH ? "SANITIZE_ERR_INVALID_PATH" :E1 == SANITIZE_ERR_OUT_OF_MEMORY ? "SANITIZE_ERR_OUT_OF_MEMORY" :"unexpected error code - add name"),  E1); 
+// Infered from: (curl/{prevFiles/prev_d4d87d_0326b0_tests#unit#unit1604.c,revFiles/d4d87d_0326b0_tests#unit#unit1604.c}: getcurlcodestr)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

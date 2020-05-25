@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->parsed_status == libvlc_media_parsed_status_skipped)  
++ if (E0->parsed_status != libvlc_media_parsed_status_done)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_f37171_1a9efd_lib#media.c,revFiles/f37171_1a9efd_lib#media.c}: send_parsed_changed)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

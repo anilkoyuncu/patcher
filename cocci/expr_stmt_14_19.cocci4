@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- msg_rc(vlc_ngettext("Playlist has only %lu element",  "Playlist has only %lu elements", E0),  E0); 
++ msg_rc(vlc_ngettext("Playlist has only %zu element",  "Playlist has only %zu elements", E0),  E0); 
+// Infered from: (vlc/{prevFiles/prev_318a21_69504ee_modules#control#oldrc.c,revFiles/318a21_69504ee_modules#control#oldrc.c}: Playlist)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_318a21_69504ee_modules#control#oldrc.c: Input
+*/
+
+// ---------------------------------------------

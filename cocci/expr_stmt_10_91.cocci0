@@ -1,0 +1,11 @@
+@@
+assignment operator A1;
+expression E0, E2;
+@@
+- E0 A1 1 << E2; 
++ E0 A1 BIT(E2); 
+// Infered from: (linux/{prevFiles/prev_e52d8d0d_3e2e9c_drivers#staging#rtl8723bs#core#rtw_mlme_ext.c,revFiles/e52d8d0d_3e2e9c_drivers#staging#rtl8723bs#core#rtw_mlme_ext.c}: OnAction_back), (linux/{prevFiles/prev_f422920_6995a65_drivers#staging#media#davinci_vpfe#dm365_isif.c,revFiles/f422920_6995a65_drivers#staging#media#davinci_vpfe#dm365_isif.c}: isif_config_dfc), (linux/{prevFiles/prev_f422920_6995a65_drivers#staging#media#davinci_vpfe#dm365_isif.c,revFiles/f422920_6995a65_drivers#staging#media#davinci_vpfe#dm365_isif.c}: isif_config_dfc), (linux/{prevFiles/prev_f422920_6995a65_drivers#staging#media#davinci_vpfe#dm365_isif.c,revFiles/f422920_6995a65_drivers#staging#media#davinci_vpfe#dm365_isif.c}: isif_config_raw)
+// False positives: (linux/revFiles/f422920_6995a65_drivers#staging#media#davinci_vpfe#dm365_isif.c: vpfe_isif_init)
+// Recall: 0.57, Precision: 0.80, Matching recall: 0.57
+
+// ---------------------------------------------

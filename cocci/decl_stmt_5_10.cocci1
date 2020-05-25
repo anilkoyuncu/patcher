@@ -1,0 +1,12 @@
+@@
+type T0;
+identifier I1;
+typedef uintmax_t;
+@@
+- T0 I1 = ULONG_MAX; 
++ uintmax_t I1 = ULONG_MAX; 
+// Infered from: (git/{prevFiles/prev_6777a5_c4001d_fast-import.c,revFiles/6777a5_c4001d_fast-import.c}: unload_one_branch)
+// False positives: (git/revFiles/c32f74_5be507_builtin-apply.c: )
+// Recall: 0.02, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

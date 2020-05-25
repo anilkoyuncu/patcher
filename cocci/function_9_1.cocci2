@@ -1,0 +1,15 @@
+@@
+expression E4, E5, E0, E1, E2, E3;
+@@
+- add_pixmap_directory(E0); 
+- add_pixmap_directory(E1); 
+- add_pixmap_directory(E2); 
+- add_pixmap_directory(E3); 
++ add_pixmap_directory(config_GetDataDir()); 
+  ...
+- ReadDirectory(E4, E5, "."); 
++ ReadDirectory(E4, E5, (char *)"."); 
+// Infered from: (vlc/{prevFiles/prev_5dfbd0_d171dd_modules#gui#pda#pda.c,revFiles/5dfbd0_d171dd_modules#gui#pda#pda.c}: Run)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

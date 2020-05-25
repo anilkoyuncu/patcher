@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->num_new_daemons < orte_num_allocated_nodes)  
++ if ((E0->num_new_daemons < orte_num_allocated_nodes) || (orte_num_allocated_nodes == 0))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_8ded59_3263f7_orte#mca#plm#alps#plm_alps_module.c,revFiles/8ded59_3263f7_orte#mca#plm#alps#plm_alps_module.c}: launch_daemons)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

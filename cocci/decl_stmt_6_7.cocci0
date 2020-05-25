@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- size_t I0 = E1->last_frame->linesize[0] * E2 + E3 * E1->last_frame_fctl.x_offset; 
++ size_t I0 = E1->prev_frame->linesize[0] * E2 + E3 * E1->last_frame_fctl.x_offset; 
+// Infered from: (vlc/{prevFiles/prev_18e1ef_108fc2_modules#access#cdda#access.c,revFiles/18e1ef_108fc2_modules#access#cdda#access.c}: CDDAOpen), (FFmpeg/{prevFiles/prev_8f4c3e_7ec9c5_libavcodec#pngenc.c,revFiles/8f4c3e_7ec9c5_libavcodec#pngenc.c}: encode_apng), (FFmpeg/{prevFiles/prev_85b745_32d023_libavcodec#hevc_parser.c,revFiles/85b745_32d023_libavcodec#hevc_parser.c}: parse_nal_units)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

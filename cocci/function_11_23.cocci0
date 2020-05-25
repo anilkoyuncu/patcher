@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- decode_str(E0, E1, 0, &E2, &E3); 
++ if (decode_str(E0, E1, 0, &E2, &E3) < 0)  
++ {
++ return; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_6241e8a_2d8f88_libavformat#id3v2.c,revFiles/6241e8a_2d8f88_libavformat#id3v2.c}: read_chapter)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

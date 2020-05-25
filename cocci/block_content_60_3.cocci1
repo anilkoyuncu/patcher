@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0->m[E1][E2] += E3->m[E1][E4] * E5->m[E4][E2]; 
++ t += E3->m[E1][E4] * E5->m[E4][E2]; 
+// Infered from: (cairo/{prevFiles/prev_ba6c49_91f096_src#xrtransform.c,revFiles/ba6c49_91f096_src#xrtransform.c}: XrTransformMultiply), (cairo/{prevFiles/prev_ba6c49_91f096_xrtransform.c,revFiles/ba6c49_91f096_xrtransform.c}: XrTransformMultiply)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.22
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - cairo/prevFiles/prev_ba6c49_91f096_xrtransform.c: XrTransformMultiply
+ - cairo/prevFiles/prev_ba6c49_91f096_src#xrtransform.c: XrTransformMultiply
+*/
+
+// ---------------------------------------------

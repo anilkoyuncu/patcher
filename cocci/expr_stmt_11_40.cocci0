@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- zend_alter_ini_entry(E0->key, E0->key_length + 1, E0->value,  E0->value_length, E0->type,  data->htaccess ? PHP_INI_STAGE_HTACCESS :PHP_INI_STAGE_ACTIVATE); 
++ zend_alter_ini_entry(E0->key, E0->key_length + 1, E0->value,  E0->value_length, E0->type,  E0->htaccess ? PHP_INI_STAGE_HTACCESS :PHP_INI_STAGE_ACTIVATE); 
+// Infered from: (php-src/{prevFiles/prev_83e732_cd32b4_sapi#apache#mod_php5.c,revFiles/83e732_cd32b4_sapi#apache#mod_php5.c}: php_apache_alter_ini_entries), (php-src/{prevFiles/prev_b219df_a433f8_sapi#apache#mod_php.c,revFiles/b219df_a433f8_sapi#apache#mod_php.c}: php_apache_alter_ini_entries)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (tvb_get_letohl(E0, 0) != LNET_PROTO_IB_MAGIC)  
++ if (tvb_captured_length(E0) < 4 || tvb_get_letohl(E0, 0) != LNET_PROTO_IB_MAGIC)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_34cbff_e8aa57_epan#dissectors#packet-lnet.c,revFiles/34cbff_e8aa57_epan#dissectors#packet-lnet.c}: dissect_lnet_ib_heur)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+
+// ---------------------------------------------

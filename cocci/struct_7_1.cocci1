@@ -1,0 +1,24 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = var_InheritInteger(E1->p_libvlc, E2); 
+// Infered from: (vlc/{prevFiles/prev_ca6f33_62720e_src#network#httpd.c,revFiles/ca6f33_62720e_src#network#httpd.c}: httpd_HostCreate)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.20, Precision: 1.00
+// -- Node Change --
+// Recall: 0.13, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/10(0%)
+
+/*
+Functions where the patch applied partially:
+ - libarchive/prevFiles/prev_87772e_7365d2_libarchive#archive_read_support_compression_compress.c: getbits
+ - vlc/prevFiles/prev_ca6f33_62720e_src#network#httpd.c: httpd_HostCreate
+*/
+
+// ---------------------------------------------

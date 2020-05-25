@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (!assert((E0 = malloc(E1)) != NULL))  
++ assert((E0 = malloc(E1)) != NULL); 
++ if (E0 == NULL)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_a875bd_592332_libarchive#test#test_read_format_cpio_afio.c,revFiles/a875bd_592332_libarchive#test#test_read_format_cpio_afio.c}: DEFINE_TEST)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

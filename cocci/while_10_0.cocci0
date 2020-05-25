@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (!E0[E1])  
++ while (E0[E1])  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_5266ed_528f1c_bindings#python#vlc_mediadescriptor.c,revFiles/5266ed_528f1c_bindings#python#vlc_mediadescriptor.c}: vlcMediaDescriptor_get_meta)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

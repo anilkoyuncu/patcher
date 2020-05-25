@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+typedef guint8;
+typedef gulong;
+@@
+- gulong *I0; 
+- I0 = (gulong *)p_get_proto_data(E1->pool, E1, proto_btobex,  PROTO_DATA_BTOBEX_PROFILE); 
++ guint8 *I0; 
++ I0 = (guint8 *)p_get_proto_data(E1->pool, E1, proto_btobex,  PROTO_DATA_BTOBEX_PROFILE); 
+// Infered from: (wireshark/{prevFiles/prev_8906e9_b4dea54_epan#dissectors#packet-btobex.c,revFiles/8906e9_b4dea54_epan#dissectors#packet-btobex.c}: btobex_profile_prompt), (wireshark/{prevFiles/prev_8906e9_b4dea54_epan#dissectors#packet-btobex.c,revFiles/8906e9_b4dea54_epan#dissectors#packet-btobex.c}: btobex_profile_value)
+// Recall: 0.24, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

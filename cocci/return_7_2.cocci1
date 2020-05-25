@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return open(E0->lockfile, O_RDWR | O_CREAT | O_EXCL, 0600); 
++ return open(E0->lockfile, O_RDWR | O_CREAT | O_EXCL, 0666); 
+// Infered from: (git/{prevFiles/prev_f8d839_1fea62_index.c,revFiles/f8d839_1fea62_index.c}: hold_index_file_for_update)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

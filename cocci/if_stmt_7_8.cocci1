@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (avio_read(E0->pb, E1, E2) < 0)  
++ if (avio_read(E0->pb, E1, E2) != E2)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_8e90c7_55fa89_libavformat#iff.c,revFiles/8e90c7_55fa89_libavformat#iff.c}: get_metadata)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- strlcpy(E0->db_date, E1, 8); 
++ strlcpy(E0->db_date, E1, 9); 
+// Infered from: (php-src/{prevFiles/prev_26c027_b21fe2_ext#dbase#dbf_head.c,revFiles/26c027_b21fe2_ext#dbase#dbf_head.c}: put_dbf_info)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

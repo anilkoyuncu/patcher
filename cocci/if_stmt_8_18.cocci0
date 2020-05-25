@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->mixer.mixer.i_rate == E1->input.i_rate)  
++ if (E0->mixer_format.i_rate == E1->input.i_rate)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_ebfb9a_d29ead_modules#audio_filter#resampler#trivial.c,revFiles/ebfb9a_d29ead_modules#audio_filter#resampler#trivial.c}: DoWork)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- path_combine(E0, sizeof(E0), E1, E2); 
++ path_combine(E0, PATH_MAX, E1, E2); 
+// Infered from: (qemu/{prevFiles/prev_a7be17_5d8044_block#vmdk.c,revFiles/a7be17_5d8044_block#vmdk.c}: vmdk_parse_extents)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

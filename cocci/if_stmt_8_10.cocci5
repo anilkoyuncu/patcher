@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (E0->easy_handle == E1)  
++ if (E0->easy_handle == (struct SessionHandle *)E1)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_481629_6587ff_lib#multi.c,revFiles/481629_6587ff_lib#multi.c}: curl_multi_remove_handle), (curl/{prevFiles/prev_15e3df_a1de93_lib#multi.c,revFiles/15e3df_a1de93_lib#multi.c}: curl_multi_add_handle)
+// False positives: (curl/revFiles/15e3df_a1de93_lib#multi.c: curl_multi_remove_handle)
+// Recall: 0.10, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,33 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0->ac97_res_port = request_mem_region(E1->start, E1->end - E1->start + 1,  E2->name); 
++ E0->ac97_res_port = request_mem_region(E1->start, resource_size(E1), E2->name); 
+  ...
+- E3 = ioremap(E1->start, E1->end - E1->start + 1); 
++ E3 = ioremap(E1->start, resource_size(E1)); 
+// Infered from: (linux/{prevFiles/prev_82285f_a58bdb_sound#mips#au1x00.c,revFiles/82285f_a58bdb_sound#mips#au1x00.c}: au1000_ac97_probe)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.95, Precision: 1.00
+// -- Node Change --
+// Recall: 0.81, Precision: 1.00
+// -- General --
+// Functions fully changed: 17/22(77%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_72398e4_666cbe3_drivers#input#touchscreen#w90p910_ts.c: w90x900ts_probe
+ - linux/prevFiles/prev_86855b_6055fa_drivers#hwmon#vt1211.c: vt1211_probe
+ - linux/prevFiles/prev_72398e4_666cbe3_drivers#input#touchscreen#atmel_tsadcc.c: atmel_tsadcc_probe
+ - linux/prevFiles/prev_86855b_6055fa_drivers#hwmon#pc87427.c: pc87427_probe
+*/
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_45b4c85_4042a14_drivers#rtc#rtc-gemini.c: 
+*/
+
+// ---------------------------------------------

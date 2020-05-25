@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- _trace_printf("s%ld //%s %d %d similar-image %% s%ld\n", _get_surface_id(  E0), _format_to_string(E1), E2, E3, E4->token); 
++ _trace_printf("//%s %d %d similar-image %% s%ld\n", _format_to_string(  E1), E2, E3, E4->token); 
+// Infered from: (cairo/{prevFiles/prev_cca8b1_ebd23a_util#cairo-trace#trace.c,revFiles/cca8b1_ebd23a_util#cairo-trace#trace.c}: cairo_surface_create_similar_image)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - openssh-portable/prevFiles/prev_416287_7aab10_monitor_wrap.c: mm_skey_query
+ - openssh-portable/prevFiles/prev_416287_7aab10_monitor_wrap.c: mm_skey_respond
+*/
+
+// ---------------------------------------------

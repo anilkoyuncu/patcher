@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- GET_REGL(E0->gregs[E1 - 8]); 
++ GET_REGL(E0->gregs[E1]); 
+// Infered from: (qemu/{prevFiles/prev_e192a4_ae0184_gdbstub.c,revFiles/e192a4_ae0184_gdbstub.c}: cpu_gdb_read_register)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

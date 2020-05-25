@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- Py_DECREF(*E0); 
+// Infered from: (cpython/{prevFiles/prev_19b55f_a2e268_Python#errors.c,revFiles/19b55f_a2e268_Python#errors.c}: PyErr_NormalizeException)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

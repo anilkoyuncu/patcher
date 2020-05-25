@@ -1,0 +1,8 @@
+@@
+@@
+- GST_LOG("event is flush"); 
++ GST_LOG("event triggers a flush"); 
+// Infered from: (gstreamer/{prevFiles/prev_56e7e5_ccd846_gst#schedulers#gstoptimalscheduler.c,revFiles/56e7e5_ccd846_gst#schedulers#gstoptimalscheduler.c}: gst_opt_scheduler_event_wrapper)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

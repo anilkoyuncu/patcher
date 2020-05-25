@@ -1,0 +1,11 @@
+@@
+identifier I2;
+expression E0, E1;
+typedef uint64_t;
+@@
+- av_frac_init(&E0->next_pts, 0, 0, E1->pts_num * E0->st->codec.I2); 
++ av_frac_init(&E0->next_pts, 0, 0, (uint64_t )E1->pts_num * E0->st->codec.I2); 
+// Infered from: (FFmpeg/{prevFiles/prev_fd0f45_3f4185_ffmpeg.c,revFiles/fd0f45_3f4185_ffmpeg.c}: av_encode), (FFmpeg/{prevFiles/prev_fd0f45_3f4185_ffmpeg.c,revFiles/fd0f45_3f4185_ffmpeg.c}: av_encode)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

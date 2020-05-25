@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef DWORD;
+@@
+- const  size_t I0 = CURL_BUFSIZE(E1->set.buffer_size); 
++ const  DWORD I0 = (DWORD )CURL_BUFSIZE(E1->set.buffer_size); 
+// Infered from: (curl/{prevFiles/prev_d8a3aa_8611d9_lib#telnet.c,revFiles/d8a3aa_8611d9_lib#telnet.c}: telnet_do)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

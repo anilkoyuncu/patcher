@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- if (E0[E1] == '\0')  
++ if (E0[E1] == '\0' || E0[E1] == '/')  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_21-A-2037554-2037565.c,revFiles/21-A-2037554-2037565.c}: main)
+// False positives: (codeflaws/revFiles/21-A-2037554-2037565.c: main)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.88
+// -- General --
+// Functions fully changed: 6/7(85%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - codeflaws/prevFiles/prev_21-A-2037554-2037565.c: main
+*/
+
+// ---------------------------------------------

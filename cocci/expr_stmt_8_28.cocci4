@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- fwtty_dbg(E0, "CRTSCTS: %d\n", (C_CRTSCTS(E1) != 0)); 
++ fwtty_dbg(E0, "CRTSCTS: %d\n", C_CRTSCTS(E1) != 0); 
+// Infered from: (linux/{prevFiles/prev_975da3_717842_drivers#staging#fwserial#fwserial.c,revFiles/975da3_717842_drivers#staging#fwserial#fwserial.c}: fwtty_unthrottle)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 10/10(100%)
+
+
+// ---------------------------------------------

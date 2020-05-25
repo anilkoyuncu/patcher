@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- printf("%d ", E0 = E1 + 1 / 36); 
++ printf("%d ", E0 = (E1 + 1) / 36); 
+// Infered from: (codeflaws/{prevFiles/prev_125-A-917277-917278.c,revFiles/125-A-917277-917278.c}: main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

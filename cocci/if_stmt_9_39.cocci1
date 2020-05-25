@@ -1,0 +1,43 @@
+@@
+identifier I0;
+expression E1;
+typedef PyThreadState;
+@@
+- PyThreadState *I0; 
+  ...
+- PyEval_AcquireThread (E1); 
++ save_tstate = PyThreadState_Swap(NULL); 
++ PyEval_RestoreThread(I0); 
+  ...
+- PyEval_ReleaseThread (E1); 
++ PyEval_SaveThread(); 
++ PyThreadState_Swap(save_tstate); 
+// Infered from: (cpython/{prevFiles/prev_a59406_04d5c5_Modules#_tkinter.c,revFiles/a59406_04d5c5_Modules#_tkinter.c}: EventHook)
+// Recall: 0.41, Precision: 1.00, Matching recall: 0.88
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.20, Precision: 1.00
+// -- Node Change --
+// Recall: 0.47, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/10(10%)
+
+/*
+Functions where the patch applied partially:
+ - cpython/prevFiles/prev_a59406_04d5c5_Modules#_tkinter.c: EventHook
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_b39b61_cffad4_exec.c: flatview_access_valid
+ - tmux/prevFiles/prev_b26523_8fb796_input.c: input_osc_52
+ - vlc/prevFiles/prev_f5cbe6_d83ebc_src#misc#linux_specific.c: system_Init
+ - ompi/prevFiles/prev_3e2c51_eafdfb_ompi#mca#btl#tcp#btl_tcp_component.c: mca_btl_tcp_component_accept
+ - cpython/prevFiles/prev_a59406_04d5c5_Modules#_tkinter.c: init_tkinter
+ - php-src/prevFiles/prev_050f94_11c47d_ext#dba#dba.c: PHP_FUNCTION
+ - vlc/prevFiles/prev_92871b_d4fc12_src#libvlc-common.c: 
+ - vlc/prevFiles/prev_92871b_d4fc12_src#libvlc-common.c: libvlc_InternalDestroy
+*/
+
+// ---------------------------------------------

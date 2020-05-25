@@ -1,0 +1,10 @@
+@@
+identifier I0, I2;
+expression E1;
+@@
+- I0 = php_dirname(E1, I2); 
++ php_dirname(E1, I2); 
+// Infered from: (php-src/{prevFiles/prev_7a9424_960d10_ext#standard#link.c,revFiles/7a9424_960d10_ext#standard#link.c}: PHP_FUNCTION)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->sd > 0)  
++ if (E0->sd >= 0)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_170734_6f4506_orte#mca#oob#usock#oob_usock_connection.c,revFiles/170734_6f4506_orte#mca#oob#usock#oob_usock_connection.c}: usock_peer_create_socket)
+// False positives: (ompi/revFiles/170734_6f4506_orte#mca#oob#usock#oob_usock_connection.c: mca_oob_usock_peer_recv_connect_ack)
+// Recall: 0.03, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

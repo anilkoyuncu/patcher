@@ -1,0 +1,37 @@
+@@
+identifier I0;
+expression E2, E1, E3;
+@@
+- int I0 = (E1 >> 4) & 0xff; 
+- if (E2)  
++ int minor_ver = (E1 >> 4) & 0xff; 
++ if (minor_ver > 26)  
+  {
+- E3[1] = (char )((I0 - 1) % 26 + 'a' + 1); 
++ E3[1] = (char )((minor_ver - 1) % 26 + 'a' + 1); 
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_bdfc75_da2362_lib#vtls#openssl.c,revFiles/bdfc75_da2362_lib#vtls#openssl.c}: Curl_ossl_version)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.60
+// -- Node Change --
+// Recall: 1.00, Precision: 0.60
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_5e5348_f1cc49_libavcodec#msmpeg4.c: ff_msmpeg4_decode_init
+ - FFmpeg/prevFiles/prev_5e5348_f1cc49_libavcodec#msmpeg4.c: ff_msmpeg4_encode_init
+*/
+
+// ---------------------------------------------

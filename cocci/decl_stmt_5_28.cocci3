@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef uint64_t;
+@@
+- const  uint64_t I0 = -(E1 | -TARGET_PAGE_MASK); 
++ const  uint64_t I0 = -(E1 | TARGET_PAGE_MASK); 
+// Infered from: (qemu/{prevFiles/prev_467501_9e5bef_target#s390x#mem_helper.c,revFiles/467501_9e5bef_target#s390x#mem_helper.c}: probe_write_access)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

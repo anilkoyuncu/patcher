@@ -1,0 +1,32 @@
+@@
+expression E1, E0, E2;
+@@
+- if (E0 > E1->nfds)  
++ if (E0 >= E1->nfds)  
+  {
+  ...
+- while (E2 < E0)  
++ while (E2 <= E0)  
+  {
+  ...
+  }
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_e71827_94be1e_opal#event#epoll.c,revFiles/e71827_94be1e_opal#event#epoll.c}: epoll_recalc), (ompi/{prevFiles/prev_e71827_94be1e_opal#event#devpoll.c,revFiles/e71827_94be1e_opal#event#devpoll.c}: devpoll_recalc)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_b6c31d_a673a5_epan#dissectors#packet-rtcp.c: dissect_rtcp_app_mcpt
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,36 @@
+@@
+expression E0;
+@@
+- if (E0->maximized || E0->maximize_initially || E0->fullscreen || E0->fullscreen_initially)  
++ if (E0->maximized || E0->fullscreen)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_5cea77_8001b2_gtk#gtkwindow.c,revFiles/5cea77_8001b2_gtk#gtkwindow.c}: get_shadow_width), (gtk/{prevFiles/prev_8b695cc_de2ea1_gtk#gtkwindow.c,revFiles/8b695cc_de2ea1_gtk#gtkwindow.c}: get_shadow_width)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.20, Precision: 1.00
+// -- Node Change --
+// Recall: 0.19, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/15(20%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_be894f_cc35a4_hw#i386#kvm#i8254.c: kvm_pit_class_init
+ - gtk/prevFiles/prev_5cea77_8001b2_gtk#gtkwindow.c: gtk_window_map
+ - curl/prevFiles/prev_35fae2_52a4d6_lib#smb.c: smb_setup
+ - gtk/prevFiles/prev_e375b5_57d1e6_gtk#a11y#gtklinkbuttonaccessible.c: _gtk_link_button_accessible_link_class_init
+ - gtk/prevFiles/prev_8b695cc_de2ea1_gtk#gtkwindow.c: gtk_window_map
+ - gtk/prevFiles/prev_4c9db1_5e55bf_gtk#gtkscrolledwindow.c: gtk_scrolled_window_class_init
+ - gtk/prevFiles/prev_e375b5_57d1e6_gtk#a11y#gtklinkbuttonaccessible.c: gtk_link_button_accessible_link_get_start_index
+ - ompi/prevFiles/prev_0a57cc_62f161_opal#datatype#opal_datatype_resize.c: opal_datatype_resize
+ - gtk/prevFiles/prev_4c9db1_5e55bf_gtk#gtkscrolledwindow.c: 
+ - gtk/prevFiles/prev_4c9db1_5e55bf_gtk#gtkscrolledwindow.c: _gtk_scrolled_window_update_background
+ - ompi/prevFiles/prev_679dc9_62f161_opal#datatype#opal_datatype_resize.c: opal_datatype_resize
+*/
+
+// ---------------------------------------------

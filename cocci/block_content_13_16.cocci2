@@ -1,0 +1,42 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- const  char *I0 = g_strdup_printf("%s-tests/%s", E1, E2); 
++ char *I0 = g_strdup_printf("%s-tests/%s", E1, E2); 
+// Infered from: (qemu/{prevFiles/prev_944b96_fcfd1b_tests#test-qgraph.c,revFiles/944b96_fcfd1b_tests#test-qgraph.c}: check_test)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.78, Precision: 0.58
+// -- Node Change --
+// Recall: 0.54, Precision: 0.54
+// -- General --
+// Functions fully changed: 0/14(0%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_6e05a1_293811_hw#arm#virt.c: create_flash
+ - qemu/prevFiles/prev_890241_e5dc1a_tests#migration-test.c: migrate_check_parameter
+ - vlc/prevFiles/prev_cf0153_cc352b_modules#misc#lua#intf.c: Open_LuaIntf
+ - qemu/prevFiles/prev_944b96_fcfd1b_tests#test-qgraph.c: check_test
+ - qemu/prevFiles/prev_a2cb92_dc885f_block#sheepdog.c: sd_co_create_opts
+ - qemu/prevFiles/prev_6e05a1_293811_hw#arm#vexpress.c: vexpress_common_init
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_ac46b9_01e69d_ui#gtk#manual_addr_resolv.c: man_addr_resolv_ok
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_890241_e5dc1a_tests#migration-test.c: wait_command
+ - vlc/prevFiles/prev_cf0153_cc352b_modules#misc#lua#intf.c: GetModuleName
+ - wireshark/prevFiles/prev_ac46b9_01e69d_ui#gtk#manual_addr_resolv.c: changed_cb
+ - qemu/prevFiles/prev_890241_e5dc1a_tests#migration-test.c: test_migrate_start
+ - qemu/prevFiles/prev_890241_e5dc1a_tests#migration-test.c: wait_for_migration_complete
+ - qemu/prevFiles/prev_890241_e5dc1a_tests#migration-test.c: 
+*/
+
+// ---------------------------------------------

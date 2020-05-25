@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((strcmp(E0->to_identity, E1->to_identity) == 0) && (memcmp(&E2->guid,  &guid_allzero,  GUID_LEN) == 0))  
++ if ((strcmp(E0->to_identity, E1->to_identity) == 0) && (memcmp(E2->guid,  &guid_allzero,  GUID_LEN) == 0))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_1ec868_244f2f_ui#voip_calls.c,revFiles/1ec868_244f2f_ui#voip_calls.c}: q931_calls_packet)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- ZVAL_COPY_VALUE(&E0, &E1[1 + E2]); 
+- SEPARATE_ZVAL(&E0); 
++ ZVAL_DUP(&E0, &E1[1 + E2]); 
+// Infered from: (php-src/{prevFiles/prev_479b82_0b37b9_ext#standard#formatted_print.c,revFiles/479b82_0b37b9_ext#standard#formatted_print.c}: php_formatted_print)
+// Recall: 0.38, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

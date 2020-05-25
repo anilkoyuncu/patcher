@@ -1,0 +1,53 @@
+@@
+identifier I3;
+binary operator B1 = {&& ,|| };
+expression E0, E2;
+@@
+- if (E0 B1 E2->I3)  
++ if (E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_5eaeb4_712287_libavcodec#ivi_common.c,revFiles/5eaeb4_712287_libavcodec#ivi_common.c}: ff_ivi_decode_blocks), (qemu/{prevFiles/prev_d4c8fc_12d3a0_hw#isa#isa-superio.c,revFiles/d4c8fc_12d3a0_hw#isa#isa-superio.c}: isa_superio_realize), (qemu/{prevFiles/prev_d4c8fc_12d3a0_hw#isa#isa-superio.c,revFiles/d4c8fc_12d3a0_hw#isa#isa-superio.c}: isa_superio_realize), (gstreamer/{prevFiles/prev_cfdb97_c0bfb1_plugins#elements#gstqueue.c,revFiles/cfdb97_c0bfb1_plugins#elements#gstqueue.c}: update_time_level)
+// False positives: (FFmpeg/revFiles/72a52b_2efe09_libavcodec#h263.c: h263_decode_block), (FFmpeg/revFiles/c5b1c1_8a29b3_libavcodec#mpegvideo.c: MPV_decode_mb), (FFmpeg/revFiles/c5b1c1_8a29b3_libavcodec#mpegvideo.c: dct_unquantize_h263_c), (FFmpeg/revFiles/f56dd3_b401eb_libavcodec#h263.c: ff_mpeg4_decode_picture_header), (FFmpeg/revFiles/f56dd3_b401eb_libavcodec#h263.c: h263_decode_block)
+// Recall: 0.26, Precision: 0.38, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.82, Precision: 0.45
+// -- Node Change --
+// Recall: 0.78, Precision: 0.30
+// -- General --
+// Functions fully changed: 5/22(22%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_25f268_7ff1b0_modules#stream_out#delay.c: Send
+ - FFmpeg/prevFiles/prev_f56dd3_b401eb_libavcodec#h263.c: decode_vop_header
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_c5b1c1_8a29b3_libavcodec#mpegvideo.c: MPV_decode_mb
+ - FFmpeg/prevFiles/prev_f56dd3_b401eb_libavcodec#h263.c: ff_mpeg4_decode_picture_header
+ - qemu/prevFiles/prev_941987_dc881b_hmp.c: hmp_info_vnc
+ - FFmpeg/prevFiles/prev_72a52b_2efe09_libavcodec#h263.c: h263_decode_block
+ - FFmpeg/prevFiles/prev_f56dd3_b401eb_libavcodec#h263.c: h263_decode_block
+ - qemu/prevFiles/prev_941987_dc881b_hmp.c: print_block_info
+ - FFmpeg/prevFiles/prev_5eaeb4_712287_libavcodec#ivi_common.c: ff_ivi_decode_blocks
+ - FFmpeg/prevFiles/prev_f56dd3_b401eb_libavcodec#h263.c: ff_h263_decode_mb
+ - FFmpeg/prevFiles/prev_72a52b_2efe09_libavcodec#h263.c: h263_decode_mb
+ - FFmpeg/prevFiles/prev_c5b1c1_8a29b3_libavcodec#mpegvideo.c: dct_unquantize_h263_c
+ - php-src/prevFiles/prev_4cf174_65146c_main#streams.c: php_stream_notification_notify
+ - FFmpeg/prevFiles/prev_f56dd3_b401eb_libavcodec#h263.c: h263_encode_block
+ - php-src/prevFiles/prev_4cf174_65146c_main#streams.c: _php_stream_free
+ - FFmpeg/prevFiles/prev_f56dd3_b401eb_libavcodec#h263.c: h263_encode_mb
+ - FFmpeg/prevFiles/prev_c5b1c1_8a29b3_libavcodec#mpegvideo.c: MPV_common_init
+*/
+
+// ---------------------------------------------

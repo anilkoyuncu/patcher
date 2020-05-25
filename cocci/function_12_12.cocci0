@@ -1,0 +1,13 @@
+@@
+expression E0;
+typedef HuffCode;
+@@
+- init_vlc(&E0->vlc, E0->max_codes_bits, E0->codes_count, &E0->codes[0].size,  sizeof(HuffCode ), 1, &E0->codes[0].code, sizeof(HuffCode ), 4, 0); 
++ if (init_vlc(&E0->vlc, E0->max_codes_bits, E0->codes_count,  &E0->codes[0].size, sizeof(HuffCode ), 1, &E0->codes[0].code,  sizeof(HuffCode ), 4, 0))  
++ {
++ goto  end; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_69a0bc_d97efd_libavcodec#motionpixels.c,revFiles/69a0bc_d97efd_libavcodec#motionpixels.c}: mp_decode_frame), (FFmpeg/{prevFiles/prev_824f98f_b10ba1_libavcodec#motionpixels.c,revFiles/824f98f_b10ba1_libavcodec#motionpixels.c}: mp_decode_frame)
+// Recall: 0.35, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

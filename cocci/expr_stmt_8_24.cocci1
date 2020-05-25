@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- RETURN_BOOL(E0 == SUCCESS && !((*E1)->ce_flags & (ZEND_ACC_INTERFACE | ZEND_ACC_TRAIT) > ZEND_ACC_EXPLICIT_ABSTRACT_CLASS)); 
++ RETURN_BOOL(E0 == SUCCESS && !(((*E1)->ce_flags & (ZEND_ACC_INTERFACE | ZEND_ACC_TRAIT)) > ZEND_ACC_EXPLICIT_ABSTRACT_CLASS)); 
+// Infered from: (php-src/{prevFiles/prev_68e5e2_468d13_Zend#zend_builtin_functions.c,revFiles/68e5e2_468d13_Zend#zend_builtin_functions.c}: ZEND_FUNCTION), (php-src/{prevFiles/prev_06f18d_28461a_Zend#zend_builtin_functions.c,revFiles/06f18d_28461a_Zend#zend_builtin_functions.c}: ZEND_FUNCTION)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

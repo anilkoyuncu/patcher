@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0[0] == '\\' && E0[0] == 'n')  
++ if (E0[0] == '\\' && E0[1] == 'n')  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_bb0106_7e6fdd_modules#codec#subsdec.c,revFiles/bb0106_7e6fdd_modules#codec#subsdec.c}: ParseSSAString)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+identifier I0;
+typedef gint;
+@@
+- gint I0; 
++ gint I0 = 10000; 
++ gint step = 100; 
+  ...
+- I0 = 10000; 
+// Infered from: (gstreamer/{prevFiles/prev_2b51cb_4f9dad_tests#old#testsuite#cleanup#cleanup2.c,revFiles/2b51cb_4f9dad_tests#old#testsuite#cleanup#cleanup2.c}: main), (gstreamer/{prevFiles/prev_2b51cb_4f9dad_testsuite#cleanup#cleanup2.c,revFiles/2b51cb_4f9dad_testsuite#cleanup#cleanup2.c}: main)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.44
+
+// ---------------------------------------------

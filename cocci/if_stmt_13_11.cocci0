@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->avctx->hwaccel && E0->avctx->hwaccel->decode_slice || !E0->cur_pic.f || E0->cur_pic.field_picture || E0->avctx->profile == FF_PROFILE_MPEG4_SIMPLE_STUDIO)  
++ if (E0->avctx->hwaccel && E0->avctx->hwaccel->decode_slice || !E0->cur_pic.f || E0->cur_pic.field_picture)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_bd27a9_3b10bb_libavcodec#error_resilience.c,revFiles/bd27a9_3b10bb_libavcodec#error_resilience.c}: er_supported)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

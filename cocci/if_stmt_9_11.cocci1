@@ -1,0 +1,13 @@
+@@
+identifier I0 = {create_persconffile_profile ,ngx_strcmp };
+expression E1, E2, E3;
+@@
+- if (I0(E1, &E2) == E3)  
++ if (I0(E1, E2) == E3)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_03941b_714c8c_epan#filesystem.c,revFiles/03941b_714c8c_epan#filesystem.c}: create_persconffile_profile), (nginx/{prevFiles/prev_526fd6_e1133c_src#http#modules#ngx_http_xslt_filter_module.c,revFiles/526fd6_e1133c_src#http#modules#ngx_http_xslt_filter_module.c}: ngx_http_xslt_entities), (nginx/{prevFiles/prev_526fd6_e1133c_src#http#modules#ngx_http_xslt_filter_module.c,revFiles/526fd6_e1133c_src#http#modules#ngx_http_xslt_filter_module.c}: ngx_http_xslt_stylesheet)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,28 @@
+@@
+expression E0, E1, E2;
+@@
+- col_add_str(E0->cinfo, COL_INFO, format_text(E1, E2)); 
++ col_add_fstr(E0->cinfo, COL_INFO, "%s ", format_text(E1, E2)); 
+// Infered from: (wireshark/{prevFiles/prev_0bb7de_71d81e_epan#dissectors#packet-http.c,revFiles/0bb7de_71d81e_epan#dissectors#packet-http.c}: dissect_http_message)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.70, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/10(60%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_1e2ae5_9aeb1d_gtk#wlan_stat_dlg.c: csv_handle
+*/
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_71-A-18212928-18212976.c: main
+ - wireshark/prevFiles/prev_1e2ae5_9aeb1d_gtk#wlan_stat_dlg.c: wlan_copy_as_csv
+*/
+
+// ---------------------------------------------

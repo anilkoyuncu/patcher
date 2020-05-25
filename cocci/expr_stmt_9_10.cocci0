@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- avio_wb32(E0, E1->enc->height << 16); 
++ avio_wb32(E0, E1->height << 16); 
+// Infered from: (FFmpeg/{prevFiles/prev_fffdee_0300db_libavformat#movenc.c,revFiles/fffdee_0300db_libavformat#movenc.c}: mov_write_tkhd_tag), (FFmpeg/{prevFiles/prev_5bb50c_813cc7_libavformat#movenc.c,revFiles/5bb50c_813cc7_libavformat#movenc.c}: mov_write_tkhd_tag)
+// False positives: (FFmpeg/revFiles/5bb50c_813cc7_libavformat#movenc.c: mov_write_tapt_tag), (FFmpeg/revFiles/fffdee_0300db_libavformat#movenc.c: mov_write_tapt_tag)
+// Recall: 0.15, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

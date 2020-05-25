@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (*well_known_sids[E0].name)  
++ while (well_known_sids[E0].name)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_14d908_61d99f_epan#dissectors#packet-windows-common.c,revFiles/14d908_61d99f_epan#dissectors#packet-windows-common.c}: match_wkwn_sids)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

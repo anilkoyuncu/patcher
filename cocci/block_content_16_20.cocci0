@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- qdict_put(E0, "driver", qstring_from_str("qcow")); 
++ qdict_put(E0, "write-target.driver", qstring_from_str("qcow")); 
+// Infered from: (qemu/{prevFiles/prev_c4b48b_0c204c_block#vvfat.c,revFiles/c4b48b_0c204c_block#vvfat.c}: enable_write_target)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

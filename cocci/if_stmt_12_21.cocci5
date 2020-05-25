@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->vf.info->vf_open(&E0->vf, E1) <= 0)  
++ if (E0->vf.info->vf_open(&E0->vf, (char *)E1) <= 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_458afd_33f15a_libavfilter#vf_mp.c,revFiles/458afd_33f15a_libavfilter#vf_mp.c}: init)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- restore_context_upper(E0, E1, &E2, &E0->gpr_a[11]); 
++ restore_context_lower(E0, E1, &E0->gpr_a[11], &E2); 
+// Infered from: (qemu/{prevFiles/prev_bc72f8_4959d6_target-tricore#op_helper.c,revFiles/bc72f8_4959d6_target-tricore#op_helper.c}: helper_rslcx)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- E0->maxiter = 1024; 
++ E0->maxiter = 256; 
+// Infered from: (FFmpeg/{prevFiles/prev_0e5b05_ef4f40_libavfilter#vsrc_mandelbrot.c,revFiles/0e5b05_ef4f40_libavfilter#vsrc_mandelbrot.c}: init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_0e5b05_ef4f40_libavfilter#vsrc_mandelbrot.c: draw_mandelbrot
+*/
+
+// ---------------------------------------------

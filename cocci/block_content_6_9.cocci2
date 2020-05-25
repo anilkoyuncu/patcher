@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- url_seek(E0, E1, E2); 
+- return 0; 
++ return url_seek(E0, E1, E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_53e2f9_ebb177_libavformat#aviobuf.c,revFiles/53e2f9_ebb177_libavformat#aviobuf.c}: url_seek_packet)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- gtk_widget_set_tooltip_text(E0->button, E1); 
++ gtk_widget_set_tooltip_text(gtk_tree_view_column_get_widget(E0), E1); 
+  ...
+- g_signal_connect(E0->button, "button_press_event",  G_CALLBACK(new_packet_list_column_button_pressed_cb), E0); 
++ g_signal_connect(gtk_tree_view_column_get_widget(E0), "button_press_event",  G_CALLBACK(new_packet_list_column_button_pressed_cb), E0); 
+// Infered from: (wireshark/{prevFiles/prev_6d20f4_916644_gtk#new_packet_list.c,revFiles/6d20f4_916644_gtk#new_packet_list.c}: create_view_and_model)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

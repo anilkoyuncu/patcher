@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- convert_to_long_ex(E0); 
+- PS(cookie_lifetime) = Z_LVAL_PP(E0); 
++ convert_to_string_ex(E0); 
++ zend_alter_ini_entry("session.cookie_lifetime",  sizeof("session.cookie_lifetime"), Z_STRVAL_PP(E0),  Z_STRLEN_PP(E0), PHP_INI_USER, PHP_INI_STAGE_RUNTIME); 
+// Infered from: (php-src/{prevFiles/prev_254c8d_9d1097_ext#session#session.c,revFiles/254c8d_9d1097_ext#session#session.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- OBD_FREE(E0, E1); 
++ kfree(E0); 
+// Infered from: (linux/{prevFiles/prev_d72790_c9b429_drivers#staging#lustre#lustre#obdclass#capa.c,revFiles/d72790_c9b429_drivers#staging#lustre#lustre#obdclass#capa.c}: cleanup_capa_hash)
+// False positives: (linux/revFiles/496a51_cdbcd33_drivers#staging#lustre#lustre#llite#lloop.c: lloop_exit), (linux/revFiles/496a51_cdbcd33_drivers#staging#lustre#lustre#llite#lloop.c: lloop_init), (linux/revFiles/496a51_cdbcd33_drivers#staging#lustre#lustre#llite#namei.c: ll_atomic_open)
+// Recall: 0.23, Precision: 0.38, Matching recall: 0.38
+
+// ---------------------------------------------

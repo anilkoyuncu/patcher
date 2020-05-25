@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = (E1[1] >> 4) & 0x0f; 
++ E0 = (E1[2] >> 2) & 0x1f; 
+// Infered from: (FFmpeg/{prevFiles/prev_e15824_604c4e_libavformat#rtpdec_h261.c,revFiles/e15824_604c4e_libavformat#rtpdec_h261.c}: ff_h261_handle_packet)
+// False positives: (FFmpeg/revFiles/e15824_604c4e_libavformat#rtpdec_h261.c: ff_h261_handle_packet), (qemu/revFiles/e309de_10d315_hw#fdc.c: fdctrl_write_data)
+// Recall: 0.02, Precision: 0.33, Matching recall: 0.33
+
+// ---------------------------------------------

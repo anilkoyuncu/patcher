@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (h[E0] < E1)  
++ if (h[E0] < E1 || hh[E0])  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_388-A-10430828-10430842.c,revFiles/388-A-10430828-10430842.c}: main)
+// False positives: (codeflaws/revFiles/388-A-10430828-10430842.c: ekle)
+// Recall: 0.15, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

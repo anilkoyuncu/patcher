@@ -1,0 +1,8 @@
+@@
+@@
+- init_vlc(&mbincr_vlc, 9, 34, &mbAddrIncrTable[0][1], 2, 1,  &mbAddrIncrTable[0][0], 2, 1); 
++ init_vlc(&mbincr_vlc, 9, 35, &mbAddrIncrTable[0][1], 2, 1,  &mbAddrIncrTable[0][0], 2, 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_b9ecd1_186f8a_libavcodec#mpeg12.c,revFiles/b9ecd1_186f8a_libavcodec#mpeg12.c}: mpeg1_init_vlc)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- stream_Read(E0->s, NULL, E1); 
++ if (stream_Read(E0->s, NULL, E1) != E1)  
++ {
++ msg_Warn(E0, "cannot skip data, EOF ?"); 
++ return 0; 
++ }
+// Infered from: (vlc/{prevFiles/prev_ccb812_1a2a41_modules#demux#asf#asf.c,revFiles/ccb812_1a2a41_modules#demux#asf#asf.c}: DemuxPacket)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

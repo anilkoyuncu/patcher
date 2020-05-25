@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+@@
+- if (E0->fb)  
++ if (E0->primary->fb)  
+  {
+- E1 = to_psb_fb(E0->fb)->gtt; 
++ E1 = to_psb_fb(E0->primary->fb)->gtt; 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#gma_display.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#gma500#gma_display.c}: gma_crtc_disable), (gtk/{prevFiles/prev_531d0d_ebf9b9_gtk#gtkmenushell.c,revFiles/531d0d_ebf9b9_gtk#gtkmenushell.c}: gtk_real_menu_shell_cycle_focus)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

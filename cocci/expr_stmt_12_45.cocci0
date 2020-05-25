@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- g_object_class_install_property(E0, PROP_FONT_NAME,  g_param_spec_string("font-name",  P_("Font name"),  P_("The name of the selected font"),  P_("Sans 12"),  GTK_PARAM_READWRITE)); 
++ g_object_class_install_property(E0, PROP_FONT_NAME,  g_param_spec_string("font-name",  P_("Font name"),  P_("The name of the selected font"),  _("Sans 12"),  GTK_PARAM_READWRITE)); 
+// Infered from: (gtk/{prevFiles/prev_43312b_724d3b_gtk#gtkfontbutton.c,revFiles/43312b_724d3b_gtk#gtkfontbutton.c}: gtk_font_button_class_init)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

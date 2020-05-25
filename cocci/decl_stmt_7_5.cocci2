@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef zend_stat_t;
+@@
+- struct stat I0; 
++ zend_stat_t I0; 
+// Infered from: (php-src/{prevFiles/prev_4518564_34f536_ext#gd#gd.c,revFiles/4518564_34f536_ext#gd#gd.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_4518564_34f536_ext#session#mod_files.c,revFiles/4518564_34f536_ext#session#mod_files.c}: ps_files_open)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

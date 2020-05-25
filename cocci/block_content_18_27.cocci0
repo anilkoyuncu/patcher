@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- fprintf(E0, "%04.4lx: ", (long )E1); 
++ fprintf(E0, "%4.4lx: ", (long )E1); 
+// Infered from: (curl/{prevFiles/prev_9583b4_8219bc_docs#examples#debug.c,revFiles/9583b4_8219bc_docs#examples#debug.c}: dump)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

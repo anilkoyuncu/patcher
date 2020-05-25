@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+@@
+- if (E0 <= SDN_OFFSET)  
++ if (E0 <= JEWISH_SDN_OFFSET)  
+  {
+  ...
+  }
+- E1 = E0 - SDN_OFFSET; 
++ E1 = E0 - JEWISH_SDN_OFFSET; 
+// Infered from: (php-src/{prevFiles/prev_4a2f03_86469a_ext#calendar#jewish.c,revFiles/4a2f03_86469a_ext#calendar#jewish.c}: SdnToJewish)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

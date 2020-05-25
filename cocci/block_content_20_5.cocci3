@@ -1,0 +1,31 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef proto_item;
+@@
+- proto_item *I0; 
+  ...
+- proto_tree_add_uint_hidden(E1, hf_trmac_sv, E2, E3 + 1, 1,  tvb_get_guint8(E2, E3 + 1)); 
++ hidden_item = proto_tree_add_uint(E1, hf_trmac_sv, E2, E3 + 1, 1,  tvb_get_guint8(E2, E3 + 1)); 
++ PROTO_ITEM_SET_HIDDEN(hidden_item); 
+// Infered from: (wireshark/{prevFiles/prev_b42aec_b3aa52_epan#dissectors#packet-trmac.c,revFiles/b42aec_b3aa52_epan#dissectors#packet-trmac.c}: sv_text)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.82, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_b3aa52_558c1b_epan#dissectors#packet-pktc.c: dissect_pktc_list_of_ciphersuites
+ - wireshark/prevFiles/prev_b42aec_b3aa52_epan#dissectors#packet-trmac.c: sv_text
+ - wireshark/prevFiles/prev_b3aa52_558c1b_epan#dissectors#packet-pktc.c: dissect_pktc
+ - wireshark/prevFiles/prev_2e0c18_5f4f0d_epan#dissectors#packet-bssap.c: dissect_bssap
+*/
+
+// ---------------------------------------------

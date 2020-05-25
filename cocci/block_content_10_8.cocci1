@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+@@
+- int I0; 
+  ...
+- I0 = call_dissector(spnego_krb5_wrap_handle,  tvb_new_subset_remaining(E1, E2), E3, E4); 
++ call_dissector(spnego_krb5_wrap_handle, tvb_new_subset_remaining(E1, E2), E3,  E4); 
+// Infered from: (wireshark/{prevFiles/prev_5b9cc2_602883_epan#dissectors#packet-rpc.c,revFiles/5b9cc2_602883_epan#dissectors#packet-rpc.c}: dissect_rpc_authgss_priv_data)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

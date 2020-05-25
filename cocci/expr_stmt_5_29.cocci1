@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->bus->config_writew(E0->bus, E0->devfn, E1, E2); 
++ E0->bus->config_writel(E0->bus, E0->devfn, E1, E2); 
+// Infered from: (qemu/{prevFiles/prev_ad489e_9bb931_tests#libqos#pci.c,revFiles/ad489e_9bb931_tests#libqos#pci.c}: qpci_config_writel)
+// False positives: (qemu/revFiles/ad489e_9bb931_tests#libqos#pci.c: qpci_config_writew)
+// Recall: 0.25, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

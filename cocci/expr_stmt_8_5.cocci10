@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef gdIOCtx;
+@@
+- E0 = emalloc(sizeof(gdIOCtx )); 
++ E0 = ecalloc(1, sizeof(gdIOCtx )); 
+// Infered from: (php-src/{prevFiles/prev_e56fe7_42d53f_ext#gd#gd_ctx.c,revFiles/e56fe7_42d53f_ext#gd#gd_ctx.c}: _php_image_output_ctx), (php-src/{prevFiles/prev_e56fe7_42d53f_ext#gd#gd_ctx.c,revFiles/e56fe7_42d53f_ext#gd#gd_ctx.c}: _php_image_output_ctx)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

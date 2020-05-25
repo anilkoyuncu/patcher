@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > 0)  
+- {
+- E1 = 0; 
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_d459d8_ae7a4a_libavformat#oggdec.c,revFiles/d459d8_ae7a4a_libavformat#oggdec.c}: ogg_packet), (FFmpeg/{prevFiles/prev_0a9402_e3759c_libavformat#oggdec.c,revFiles/0a9402_e3759c_libavformat#oggdec.c}: ogg_packet)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

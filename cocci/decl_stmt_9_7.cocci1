@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- struct client *I0 = cmd_find_client(E1, NULL, 0); 
++ struct client *I0 = cmd_find_client(E1, NULL, 1); 
+// Infered from: (tmux/{prevFiles/prev_785ce6_ea295a_cmd-rename-window.c,revFiles/785ce6_ea295a_cmd-rename-window.c}: cmd_rename_window_exec), (tmux/{prevFiles/prev_194e9f_26792b_cmd-rename-window.c,revFiles/194e9f_26792b_cmd-rename-window.c}: cmd_rename_window_exec)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- git_config_set_multivar(E0.buf, E1.buf, "^$", 0); 
++ git_config_set_multivar_or_die(E0.buf, E1.buf, "^$", 0); 
+// Infered from: (git/{prevFiles/prev_2ee35c_c397de_builtin#clone.c,revFiles/2ee35c_c397de_builtin#clone.c}: write_refspec_config)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

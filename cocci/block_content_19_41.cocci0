@@ -1,0 +1,9 @@
+@@
+expression E4, E2, E5, E3, E0, E1;
+@@
+- E0 += abs(E1 - AV_RN16(E2->data[E3] + E4 + E5 * 2)); 
++ E0 += abs(E1 - (int )AV_RN16(E2->data[E3] + E4 + E5 * 2)); 
+// Infered from: (FFmpeg/{prevFiles/prev_32601f_83db1e_libavfilter#vf_signalstats.c,revFiles/32601f_83db1e_libavfilter#vf_signalstats.c}: filter_frame16), (FFmpeg/{prevFiles/prev_32601f_83db1e_libavfilter#vf_signalstats.c,revFiles/32601f_83db1e_libavfilter#vf_signalstats.c}: filter_frame16), (FFmpeg/{prevFiles/prev_32601f_83db1e_libavfilter#vf_signalstats.c,revFiles/32601f_83db1e_libavfilter#vf_signalstats.c}: filter_frame16)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

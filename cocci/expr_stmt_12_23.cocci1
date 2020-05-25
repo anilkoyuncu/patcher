@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- if (E0)  
++ if (E0)  
+  {
+- setExpire(E1->db, E1->argv[1], time(NULL) + E0); 
++ setExpire(E1->db, E1->argv[1], mstime() + E0); 
+  }
+// Infered from: (redis/{prevFiles/prev_70d848_a149ce_src#cluster.c,revFiles/70d848_a149ce_src#cluster.c}: restoreCommand)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

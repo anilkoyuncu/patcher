@@ -1,0 +1,11 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- E0 = E1->I2; 
++ E0 = GST_PAD_PEER(E1->sinkpad); 
+// Infered from: (gstreamer/{prevFiles/prev_d0f97d_84c67b_gst#gstqueue.c,revFiles/d0f97d_84c67b_gst#gstqueue.c}: gst_queue_getcaps), (gstreamer/{prevFiles/prev_d0f97d_84c67b_plugins#elements#gstqueue.c,revFiles/d0f97d_84c67b_plugins#elements#gstqueue.c}: gst_queue_getcaps)
+// False positives: (gstreamer/revFiles/d0f97d_84c67b_gst#gstqueue.c: gst_queue_chain), (gstreamer/revFiles/d0f97d_84c67b_gst#gstqueue.c: gst_queue_get), (gstreamer/revFiles/d0f97d_84c67b_gst#gstqueue.c: gst_queue_getcaps), (gstreamer/revFiles/d0f97d_84c67b_gst#gstqueue.c: gst_queue_link), (gstreamer/revFiles/d0f97d_84c67b_plugins#elements#gstqueue.c: gst_queue_chain), (gstreamer/revFiles/d0f97d_84c67b_plugins#elements#gstqueue.c: gst_queue_get), (gstreamer/revFiles/d0f97d_84c67b_plugins#elements#gstqueue.c: gst_queue_getcaps), (gstreamer/revFiles/d0f97d_84c67b_plugins#elements#gstqueue.c: gst_queue_link)
+// Recall: 0.38, Precision: 0.27, Matching recall: 0.38
+
+// ---------------------------------------------

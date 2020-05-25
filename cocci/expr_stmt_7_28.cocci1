@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->num_x_slices = 16; 
++ E0->num_x_slices = (E0->mb_width + 15) >> 4; 
+// Infered from: (FFmpeg/{prevFiles/prev_e878ec_33d412_libavcodec#aic.c,revFiles/e878ec_33d412_libavcodec#aic.c}: aic_decode_init)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

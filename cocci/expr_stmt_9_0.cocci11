@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2;
+typedef uint32_t;
+@@
+- decode_ham_plane32((uint32_t *)E0, E1->ham_buf, E1->ham_palbuf, E2->width); 
++ decode_ham_plane32((uint32_t *)E0, E1->ham_buf, E1->ham_palbuf, E1->planesize); 
+// Infered from: (FFmpeg/{prevFiles/prev_dda713_b98659_libavcodec#iff.c,revFiles/dda713_b98659_libavcodec#iff.c}: decode_frame_ilbm), (FFmpeg/{prevFiles/prev_dda713_b98659_libavcodec#iff.c,revFiles/dda713_b98659_libavcodec#iff.c}: decode_frame_byterun1)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 12 rules):
+// -- Edit Location --
+// Recall: 0.78, Precision: 0.93
+// -- Node Change --
+// Recall: 0.80, Precision: 0.84
+// -- General --
+// Functions fully changed: 13/19(68%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_95556e_00e818_libavformat#movenc.c: handle_eac3
+ - apr/prevFiles/prev_5bcc3f_80ae7b_locks#win32#thread_cond.c: thread_cond_timedwait
+ - FFmpeg/prevFiles/prev_8637af_f7de52_libavcodec#libgsm.c: libgsm_decode_init
+ - FFmpeg/prevFiles/prev_ccba8a_6f520c_libavcodec#avrndec.c: decode_frame
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_c5e1a7_c50b99_orte#mca#grpcomm#base#grpcomm_base_xcast.c: orte_grpcomm_base_xcast_recv
+ - vlc/prevFiles/prev_291e63_d3b5af_modules#stream_out#transcode.c: transcode_audio_new
+*/
+
+// ---------------------------------------------

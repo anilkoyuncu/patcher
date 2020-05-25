@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && !gtk_widget_get_mapped(E1->scrollbar))  
++ if (E0)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_307719_ac4660_gtk#gtkscrolledwindow.c,revFiles/307719_ac4660_gtk#gtkscrolledwindow.c}: indicator_set_fade)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

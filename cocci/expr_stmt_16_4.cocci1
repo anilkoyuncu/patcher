@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0.ctlx.block_ts = get_block_ts(E1->length, E2->width, E3->dma->block_size); 
++ E0.ctlx.block_ts = get_block_ts(sg_dma_len(E1), E2->width,  E3->dma->block_size); 
+// Infered from: (linux/{prevFiles/prev_fdaf9c_cbb796c_drivers#dma#intel_mid_dma.c,revFiles/fdaf9c_cbb796c_drivers#dma#intel_mid_dma.c}: midc_lli_fill_sg)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+type T1;
+expression E0, E2;
+@@
+- if (sizeof(E0) / sizeof(E0[0]) < (T1 )E2)  
++ if ((sizeof(E0) / sizeof(E0[0])) > (T1 )E2)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_99ab06_d00fe8_modules#codec#avcodec#audio.c,revFiles/99ab06_d00fe8_modules#codec#avcodec#audio.c}: GetVlcAudioFormat)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

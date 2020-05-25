@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->feed_streams[E1] == E2.stream_index)  
++ if (E0->stream->feed_streams[E1] == E2.stream_index)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_a5ba4c_e175b5_ffserver.c,revFiles/a5ba4c_e175b5_ffserver.c}: http_prepare_data)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

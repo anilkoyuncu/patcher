@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->tpncp_data_field_name = g_strdup(E1); 
++ E0->tpncp_data_field_name = g_strdup_printf("tpncp.%s", E1); 
+// Infered from: (wireshark/{prevFiles/prev_907c87_5d068a_epan#dissectors#packet-tpncp.c,revFiles/907c87_5d068a_epan#dissectors#packet-tpncp.c}: init_tpncp_data_fields_info)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

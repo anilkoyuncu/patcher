@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- zend_accel_error(ACCEL_LOG_ERROR, "Can't kill %d after 20 tries!", E0->l_pid); 
++ zend_accel_error(ACCEL_LOG_WARNING, "Can't kill %d after 10 tries!",  E0->l_pid); 
+// Infered from: (php-src/{prevFiles/prev_b512f4_be77ce_ext#opcache#ZendAccelerator.c,revFiles/b512f4_be77ce_ext#opcache#ZendAccelerator.c}: kill_all_lockers), (php-src/{prevFiles/prev_0045d1_b92cb6_ext#opcache#ZendAccelerator.c,revFiles/0045d1_b92cb6_ext#opcache#ZendAccelerator.c}: kill_all_lockers)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I1;
+expression E0, E2;
+@@
+- list_del(&E0->I1); 
+- list_add_tail(&E0->I1, E2); 
++ list_move_tail(&E0->I1, E2); 
+// Infered from: (linux/{prevFiles/prev_ec32816_2bc275e_fs#ubifs#shrinker.c,revFiles/ec32816_2bc275e_fs#ubifs#shrinker.c}: shrink_tnc_trees), (linux/{prevFiles/prev_ec32816_2bc275e_fs#ubifs#shrinker.c,revFiles/ec32816_2bc275e_fs#ubifs#shrinker.c}: kick_a_thread), (linux/{prevFiles/prev_4e2662_96c9ea_fs#nfs#blocklayout#extents.c,revFiles/4e2662_96c9ea_fs#nfs#blocklayout#extents.c}: encode_pnfs_block_layoutupdate), (linux/{prevFiles/prev_7933aa_2c9693_drivers#net#ethernet#broadcom#bnx2x#bnx2x_sp.c,revFiles/7933aa_2c9693_drivers#net#ethernet#broadcom#bnx2x#bnx2x_sp.c}: bnx2x_exe_queue_step), (linux/{prevFiles/prev_1fbc9f_ab640d_drivers#s390#crypto#zcrypt_api.c,revFiles/1fbc9f_ab640d_drivers#s390#crypto#zcrypt_api.c}: __zcrypt_decrease_preference), (linux/{prevFiles/prev_aa2d0b_5de2234_drivers#dma#ioat_dma.c,revFiles/aa2d0b_5de2234_drivers#dma#ioat_dma.c}: ioat_dma_memcpy_cleanup), (linux/{prevFiles/prev_211174e_497409_drivers#isdn#mISDN#timerdev.c,revFiles/211174e_497409_drivers#isdn#mISDN#timerdev.c}: dev_expire_timer), (linux/{prevFiles/prev_2636ff_012a12_drivers#video#vermilion#vermilion.c,revFiles/2636ff_012a12_drivers#video#vermilion#vermilion.c}: vmlfb_unregister_subsys), (linux/{prevFiles/prev_6eebf2d_3b5909d_arch#arm#mach-msm#dma.c,revFiles/6eebf2d_3b5909d_arch#arm#mach-msm#dma.c}: msm_datamover_irq_handler), (linux/{prevFiles/prev_c9a312_e68f284_drivers#staging#et131x#et1310_rx.c,revFiles/c9a312_e68f284_drivers#staging#et131x#et1310_rx.c}: et131x_reset_recv), (linux/{prevFiles/prev_bf11eef_06cda5_drivers#target#sbp#sbp_target.c,revFiles/bf11eef_06cda5_drivers#target#sbp#sbp_target.c}: session_reconnect_expired), (linux/{prevFiles/prev_e5d2cb4_094e74_drivers#staging#gdm72xx#gdm_usb.c,revFiles/e5d2cb4_094e74_drivers#staging#gdm72xx#gdm_usb.c}: get_rx_struct), (linux/{prevFiles/prev_2cc44e_5e97fa_drivers#dma#tegra20-apb-dma.c,revFiles/2cc44e_5e97fa_drivers#dma#tegra20-apb-dma.c}: tegra_dma_abort_all), (linux/{prevFiles/prev_2cc44e_5e97fa_drivers#dma#tegra20-apb-dma.c,revFiles/2cc44e_5e97fa_drivers#dma#tegra20-apb-dma.c}: handle_cont_sngl_cycle_dma_done)
+// Recall: 0.70, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

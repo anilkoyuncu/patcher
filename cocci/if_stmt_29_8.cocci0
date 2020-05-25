@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->chunk_length = AV_RL32(&E0->pc.state); 
++ E0->chunk_length = E0->pc.state; 
+// Infered from: (FFmpeg/{prevFiles/prev_b3189a_d8fd18_libavcodec#png_parser.c,revFiles/b3189a_d8fd18_libavcodec#png_parser.c}: png_parse), (FFmpeg/{prevFiles/prev_3d42ad_16db88_libavcodec#png_parser.c,revFiles/3d42ad_16db88_libavcodec#png_parser.c}: png_parse)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

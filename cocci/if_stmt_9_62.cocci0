@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (0 > E0 || ompi_comm_size(E1) < E0)  
++ if ((0 > E0) || (ompi_comm_size(E1) <= E0))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_b8a35f_97515c_src#mpi#c#comm_spawn_multiple.c,revFiles/b8a35f_97515c_src#mpi#c#comm_spawn_multiple.c}: MPI_Comm_spawn_multiple), (ompi/{prevFiles/prev_b8a35f_97515c_src#mpi#c#comm_accept.c,revFiles/b8a35f_97515c_src#mpi#c#comm_accept.c}: MPI_Comm_accept), (ompi/{prevFiles/prev_b8a35f_97515c_src#mpi#c#comm_spawn.c,revFiles/b8a35f_97515c_src#mpi#c#comm_spawn.c}: MPI_Comm_spawn)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

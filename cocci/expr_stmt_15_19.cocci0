@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->bits_per_coded_sample = avio_rb16(E1); 
++ E0->bits_per_coded_sample = avio_rb16(E1) / FFMAX(E0->channels, 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_b9b97c_a366be_libavformat#aiffdec.c,revFiles/b9b97c_a366be_libavformat#aiffdec.c}: get_aiff_header)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

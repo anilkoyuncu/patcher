@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- add_item_to_tree(E0, E1 + 6, 1, "Function Code: %s (%d)",  match_strval(E2.function, ncp2222_func)); 
++ add_item_to_tree(E0, E1 + 6, 1, "Function Code: %s (%d)",  match_strval(E2.function, ncp2222_func), E2.function); 
+// Infered from: (wireshark/{prevFiles/prev_4dc16c_dd4f06_packet-ncp.c,revFiles/4dc16c_dd4f06_packet-ncp.c}: dissect_ncp)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

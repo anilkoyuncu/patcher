@@ -1,0 +1,16 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = E1[0] | (E1[1] << 8); 
++ i_syncword = E1[0] | (E1[1] << 8); 
++ i_crc1 = E1[2] | (E1[3] << 8); 
++ i_fscod = (E1[4] >> 6) & 0x3; 
++ i_frmsizecod = E1[4] & 0x3f; 
++ i_bsid = (E1[5] >> 3) & 0x1f; 
++ i_bsmod = E1[5] & 0x7; 
++ i_frame_size = frmsizecod_tbl[i_frmsizecod].frm_size[i_fscod]; 
+// Infered from: (vlc/{prevFiles/prev_414f55_33d2c6_modules#audio_filter#converter#a52tospdif.c,revFiles/414f55_33d2c6_modules#audio_filter#converter#a52tospdif.c}: DoWork)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.22
+
+// ---------------------------------------------

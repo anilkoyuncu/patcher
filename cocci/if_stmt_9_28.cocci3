@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0 = getenv("HOME")) == NULL)  
++ if ((E0 = getenv("HOME")) == NULL || *E0 == '\0')  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_1a41a3_1527ed_cmd-string.c,revFiles/1a41a3_1527ed_cmd-string.c}: cmd_string_expand_tilde), (tmux/{prevFiles/prev_9b9d26_58688c_cmd-string.c,revFiles/9b9d26_58688c_cmd-string.c}: cmd_string_expand_tilde)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

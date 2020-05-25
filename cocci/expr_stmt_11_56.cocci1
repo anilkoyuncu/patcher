@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- OBD_ALLOC(E0, E1); 
++ E0 = kzalloc(E1, GFP_NOFS); 
+// Infered from: (linux/{prevFiles/prev_496a51_cdbcd33_drivers#staging#lustre#lustre#llite#namei.c,revFiles/496a51_cdbcd33_drivers#staging#lustre#lustre#llite#namei.c}: ll_atomic_open), (linux/{prevFiles/prev_d72790_c9b429_drivers#staging#lustre#lustre#obdclass#capa.c,revFiles/d72790_c9b429_drivers#staging#lustre#lustre#obdclass#capa.c}: init_capa_hash)
+// Recall: 0.31, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

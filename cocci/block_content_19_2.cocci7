@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- php_error_docref(NULL, E_WARNING,  "IV passed is only %d bytes long, cipher expects an IV of precisely %d bytes, padding with \\0",  *E0, E1); 
++ php_error_docref(NULL, E_WARNING,  "IV passed is only %zd bytes long, cipher expects an IV of precisely %zd bytes, padding with \\0",  *E0, E1); 
+// Infered from: (php-src/{prevFiles/prev_c9357f_598337_ext#openssl#openssl.c,revFiles/c9357f_598337_ext#openssl#openssl.c}: php_openssl_validate_iv)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

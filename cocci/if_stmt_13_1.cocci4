@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (zend_alter_ini_entry(E0, E1, E2->value, E2->value_len, E2->status,  E2->htaccess ? PHP_INI_STAGE_HTACCESS :PHP_INI_STAGE_ACTIVATE) == FAILURE)  
++ if (zend_alter_ini_entry(E0.s, E1, E2->value, E2->value_len, E2->status,  E2->htaccess ? PHP_INI_STAGE_HTACCESS :PHP_INI_STAGE_ACTIVATE) == FAILURE)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_f4e24b_5b47df1_sapi#apache2filter#apache_config.c,revFiles/f4e24b_5b47df1_sapi#apache2filter#apache_config.c}: apply_config), (php-src/{prevFiles/prev_5b47df1_ebd857_sapi#apache2handler#apache_config.c,revFiles/5b47df1_ebd857_sapi#apache2handler#apache_config.c}: apply_config)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

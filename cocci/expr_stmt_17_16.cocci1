@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- E0->avctx->pix_fmt = AV_PIX_FMT_ABGR; 
++ E0->avctx->pix_fmt = E0->bits <= 8 ? AV_PIX_FMT_ABGR :AV_PIX_FMT_RGBA64; 
+// Infered from: (FFmpeg/{prevFiles/prev_7fb2622_1e4e0b_libavcodec#mjpegdec.c,revFiles/7fb2622_1e4e0b_libavcodec#mjpegdec.c}: ff_mjpeg_decode_sof)
+// False positives: (FFmpeg/revFiles/b4a5fc_069010_libavcodec#mjpegdec.c: ff_mjpeg_decode_sof)
+// Recall: 0.17, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_b4a5fc_069010_libavcodec#mjpegdec.c: ff_mjpeg_decode_sof
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2;
+typedef uint32_t;
+@@
+- *(uint32_t *)(E0 + 4 * E1) = *(uint32_t *)(copy_dst + 12); 
+- *(uint32_t *)(E0 + 4 * E1 + E2->linesize) = *(uint32_t *)(copy_dst + 20); 
+- *(uint32_t *)(E0 + 4 * E1 + E2->linesize * 2) = *(uint32_t *)(copy_dst + 28); 
+- *(uint32_t *)(E0 + 4 * E1 + E2->linesize * 3) = *(uint32_t *)(copy_dst + 36); 
++ AV_COPY32(E0 + 4 * E1, copy_dst + 12); 
++ AV_COPY32(E0 + 4 * E1 + E2->linesize, copy_dst + 20); 
++ AV_COPY32(E0 + 4 * E1 + E2->linesize * 2, copy_dst + 28); 
++ AV_COPY32(E0 + 4 * E1 + E2->linesize * 3, copy_dst + 36); 
+// Infered from: (FFmpeg/{prevFiles/prev_6642a1_b351ba_libavcodec#vp8.c,revFiles/6642a1_b351ba_libavcodec#vp8.c}: intra_predict), (FFmpeg/{prevFiles/prev_9d4bdc_f81c7a_libavcodec#vp8.c,revFiles/9d4bdc_f81c7a_libavcodec#vp8.c}: intra_predict)
+// Recall: 0.67, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

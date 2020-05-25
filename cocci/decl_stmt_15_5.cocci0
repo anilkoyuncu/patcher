@@ -1,0 +1,15 @@
+@@
+identifier I0;
+expression E2, E3, E1;
+@@
+  struct device *I0 = &E1->dev; 
+  ...
+- E2 = watchdog_register_device(E3); 
++ watchdog_stop_on_reboot(E3); 
++ watchdog_stop_on_unregister(E3); 
++ E2 = devm_watchdog_register_device(I0, E3); 
+// Infered from: (linux/{prevFiles/prev_69656d_dcbb61_drivers#watchdog#bcm7038_wdt.c,revFiles/69656d_dcbb61_drivers#watchdog#bcm7038_wdt.c}: bcm7038_wdt_probe), (linux/{prevFiles/prev_4689ba9_b7b6ad_drivers#watchdog#kempld_wdt.c,revFiles/4689ba9_b7b6ad_drivers#watchdog#kempld_wdt.c}: kempld_wdt_probe)
+// False positives: (linux/revFiles/dd36f6c_d3d77b5_drivers#watchdog#digicolor_wdt.c: dc_wdt_probe), (linux/revFiles/f7daaa8_01022e3_drivers#watchdog#sbsa_gwdt.c: sbsa_gwdt_probe)
+// Recall: 0.09, Precision: 0.88, Matching recall: 0.36
+
+// ---------------------------------------------

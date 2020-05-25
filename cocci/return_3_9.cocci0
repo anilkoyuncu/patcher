@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return &lookup_hash_entry(E0, E1)->ptr; 
++ return lookup_hash_entry(E0, E1)->ptr; 
+// Infered from: (git/{prevFiles/prev_9ea098_0ca15e_hash.c,revFiles/9ea098_0ca15e_hash.c}: lookup_hash)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

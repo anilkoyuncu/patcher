@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef gboolean;
+@@
+- gboolean I0; 
+- I0 = call_dissector(E1, E2, E3, E4); 
++ call_dissector(E1, E2, E3, E4); 
+// Infered from: (wireshark/{prevFiles/prev_d2269c_dfdeeb_epan#dissectors#packet-skinny.c,revFiles/d2269c_dfdeeb_epan#dissectors#packet-skinny.c}: dissect_skinny_xml)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

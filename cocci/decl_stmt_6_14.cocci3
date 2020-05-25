@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- char I0[MAXHOSTNAMELEN]; 
++ char I0[OPAL_MAXHOSTNAMELEN]; 
+// Infered from: (ompi/{prevFiles/prev_332234_e1c64e_ompi#runtime#ompi_mpi_finalize.c,revFiles/332234_e1c64e_ompi#runtime#ompi_mpi_finalize.c}: ompi_mpi_finalize)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

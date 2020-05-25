@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (HASH_KEY_IS_STRING != zend_hash_get_current_key_ex(E0, &E1, &E2, &E3, 0,  NULL))  
++ if (HASH_KEY_NON_EXISTENT == zend_hash_get_current_key_ex(E0, &E1, &E2, &E3,  0, NULL))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_1ddf72_f98ab1_ext#phar#dirstream.c,revFiles/1ddf72_f98ab1_ext#phar#dirstream.c}: phar_make_dirstream)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

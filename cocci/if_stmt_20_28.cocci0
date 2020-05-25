@@ -1,0 +1,11 @@
+@@
+identifier I1, I4;
+expression E0, E2;
+binary operator B3 = {+ ,- };
+@@
+- E0.I1 = E2 B3 I4; 
++ E0.I1 = E2 B3 check_width; 
+// Infered from: (gtk/{prevFiles/prev_c0683d_f7236b_gtk#gtkcheckbutton.c,revFiles/c0683d_f7236b_gtk#gtkcheckbutton.c}: gtk_check_button_allocate), (gtk/{prevFiles/prev_c0683d_f7236b_gtk#gtkcheckbutton.c,revFiles/c0683d_f7236b_gtk#gtkcheckbutton.c}: gtk_check_button_allocate), (gtk/{prevFiles/prev_c0683d_f7236b_gtk#gtkcheckbutton.c,revFiles/c0683d_f7236b_gtk#gtkcheckbutton.c}: gtk_check_button_allocate)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.27
+
+// ---------------------------------------------

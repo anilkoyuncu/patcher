@@ -1,0 +1,26 @@
+@@
+identifier I0;
+expression E1;
+typedef uint8_t;
+@@
+- uint8_t *I0; 
+  ...
+- I0 = E1; 
+// Infered from: (qemu/{prevFiles/prev_8e4faf_d2bd52_hw#usb-ehci.c,revFiles/8e4faf_d2bd52_hw#usb-ehci.c}: ehci_reset)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_8e4faf_d2bd52_hw#usb-ehci.c: ehci_process_itd
+*/
+
+// ---------------------------------------------

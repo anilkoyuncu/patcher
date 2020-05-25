@@ -1,0 +1,11 @@
+@@
+identifier I0 = {ASN1_GENERALIZEDTIME_adj ,fprintf ,msg_Warn };
+expression E2, E1, E3, E5, E6;
+binary operator B4 = {- ,/ };
+@@
+- I0(E1, E2, E3 B4 E5, E6); 
++ I0(E1, E2, (int )(E3 B4 E5), E6); 
+// Infered from: (vlc/{prevFiles/prev_568b73_029c7a_src#misc#http_auth.c,revFiles/568b73_029c7a_src#misc#http_auth.c}: http_auth_ParseWwwAuthenticateHeader), (openssl/{prevFiles/prev_477391_8764e8_crypto#x509v3#v3_scts.c,revFiles/477391_8764e8_crypto#x509v3#v3_scts.c}: timestamp_print), (qemu/{prevFiles/prev_366c1b8_a993ba_translate-i386.c,revFiles/366c1b8_a993ba_translate-i386.c}: dump_ops), (cairo/{prevFiles/prev_a06af4_58963a_test#cairo-test.c,revFiles/a06af4_58963a_test#cairo-test.c}: cairo_test_expecting)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

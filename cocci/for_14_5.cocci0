@@ -1,0 +1,14 @@
+@@
+identifier I2, I5;
+expression E1, E0, E3, E4;
+typedef BYTE;
+@@
+- for(E0 = 0;(E0 < E1->I2) && (E3 < sizeof(E4->I5) / sizeof(BYTE ));E0++)  
++ for(E0 = 0;(E0 < E1->I2) && (E3 < ARRAY_SIZE(E4->I5));E0++)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_b330f60_487db4_drivers#staging#vt6656#wpa.c,revFiles/b330f60_487db4_drivers#staging#vt6656#wpa.c}: WPA_ParseRSN), (linux/{prevFiles/prev_b330f60_487db4_drivers#staging#vt6656#wpa.c,revFiles/b330f60_487db4_drivers#staging#vt6656#wpa.c}: WPA_ParseRSN)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

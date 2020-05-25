@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+@@
+- E0->hwaccel_picture_private = av_mallocz(E1->avctx->hwaccel->priv_data_size); 
+- if (!E0->hwaccel_picture_private)  
++ E0->hwaccel_priv_buf = av_buffer_allocz(E1->avctx->hwaccel->priv_data_size); 
++ if (!E0->hwaccel_priv_buf)  
+  {
+  ...
+  }
++ E0->hwaccel_picture_private = E0->hwaccel_priv_buf->data; 
+// Infered from: (FFmpeg/{prevFiles/prev_4e70d6_1516bf_libavcodec#mpegvideo.c,revFiles/4e70d6_1516bf_libavcodec#mpegvideo.c}: alloc_frame_buffer)
+// Recall: 0.62, Precision: 1.00, Matching recall: 0.62
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/1(100%)
+
+
+// ---------------------------------------------

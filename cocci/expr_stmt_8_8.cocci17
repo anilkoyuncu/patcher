@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- error_report("WARNING: too many vcpu trace events; dropping '%s'",  E0[E1]->name); 
++ warn_report("too many vcpu trace events; dropping '%s'", E0[E1]->name); 
+// Infered from: (qemu/{prevFiles/prev_55d527_9e5d2c_trace#control.c,revFiles/55d527_9e5d2c_trace#control.c}: trace_event_register_group)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return (E0 < 0) ? 0 :E0; 
++ return (size_t )((E0 < 0) ? 0 :E0); 
+// Infered from: (php-src/{prevFiles/prev_ede6ec_9b7d25_ext#zlib#zlib_fopen_wrapper.c,revFiles/ede6ec_9b7d25_ext#zlib#zlib_fopen_wrapper.c}: php_gziop_read), (php-src/{prevFiles/prev_ede6ec_9b7d25_ext#zlib#zlib_fopen_wrapper.c,revFiles/ede6ec_9b7d25_ext#zlib#zlib_fopen_wrapper.c}: php_gziop_write)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

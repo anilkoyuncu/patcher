@@ -1,0 +1,11 @@
+@@
+expression E0;
+typedef int32_t;
+typedef int64_t;
+@@
+- E0 = (int32_t )T0 * (int32_t )T1; 
++ E0 = (int64_t )T0 * (int64_t )T1; 
+// Infered from: (qemu/{prevFiles/prev_2e134c_5391d8_target-arm#op.c,revFiles/2e134c_5391d8_target-arm#op.c}: op_imull_T0_T1)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

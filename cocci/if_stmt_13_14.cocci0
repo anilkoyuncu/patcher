@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 && (E1.den != 1001 || E2 != 30))  
++ if (E0 && E2 != 30)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_ed14b7_c5f4ab_libavcodec#timecode.c,revFiles/ed14b7_c5f4ab_libavcodec#timecode.c}: avpriv_check_timecode_rate)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

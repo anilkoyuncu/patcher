@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = proto_tree_add_item(E1, hf_imf_message_text, E2, E3, -1, ENC_NA); 
++ E0 = proto_tree_add_item(E1, hf_imf_message_text, E2, E3,  tvb_reported_length_remaining(E2, E3), ENC_NA); 
+// Infered from: (wireshark/{prevFiles/prev_bf8819_a1cee1_epan#dissectors#packet-imf.c,revFiles/bf8819_a1cee1_epan#dissectors#packet-imf.c}: dissect_imf)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

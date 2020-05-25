@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- av_log(E0, AV_LOG_ERROR, "getaddrinfo(%s, %s): %s\n", E1 ? E1 :"unknown",  E2 ? E2 :"unknown", gai_strerror(E3)); 
++ av_log(E0, AV_LOG_ERROR, "getaddrinfo(%s, %s): %s\n", E1 ? E1 :"unknown", E2,  gai_strerror(E3)); 
+// Infered from: (FFmpeg/{prevFiles/prev_8b05a7_1f8c0e_libavformat#udp.c,revFiles/8b05a7_1f8c0e_libavformat#udp.c}: udp_resolve_host)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_94c3db_f5b0d9_qapi#qapi-visit-core.c: input_type_enum
+*/
+
+// ---------------------------------------------

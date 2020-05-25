@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- printf("%ld.%ld[%d]", E0->key.tv_sec, E0->key.tv_usec, E1); 
+// Infered from: (curl/{prevFiles/prev_d4e9b1_ec0665_lib#splay.c,revFiles/d4e9b1_ec0665_lib#splay.c}: Curl_splayprint)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

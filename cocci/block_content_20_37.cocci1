@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+  char *I0 = NULL; 
+  ...
+- return vlc_path2uri (E1, E2); 
++ char *psz_uri = vlc_path2uri(E1, NULL); 
++ free(I0); 
++ return psz_uri; 
+// Infered from: (vlc/{prevFiles/prev_e3b894_d598ad_src#input#input.c,revFiles/e3b894_d598ad_src#input#input.c}: input_SubtitleFile2Uri)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

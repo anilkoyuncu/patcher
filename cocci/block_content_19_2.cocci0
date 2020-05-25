@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- msg_Warn(E0,  "track[%d] fixed with rate=%d scale=%d (BeOS MediaKit generated)",  E1, E2->i_rate, E2->i_scale); 
++ msg_Warn(E0,  "track[%u] fixed with rate=%u scale=%u (BeOS MediaKit generated)",  E1, E2->i_rate, E2->i_scale); 
+// Infered from: (vlc/{prevFiles/prev_eafc03_9ab564_modules#demux#avi#avi.c,revFiles/eafc03_9ab564_modules#demux#avi#avi.c}: Open)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

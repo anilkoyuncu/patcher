@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->avctx->pix_fmt = AV_PIX_FMT_BGR24; 
++ E0->avctx->pix_fmt = E0->bits <= 8 ? AV_PIX_FMT_BGR24 :AV_PIX_FMT_BGR48; 
+// Infered from: (FFmpeg/{prevFiles/prev_b4a5fc_069010_libavcodec#mjpegdec.c,revFiles/b4a5fc_069010_libavcodec#mjpegdec.c}: ff_mjpeg_decode_sof)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- RETURN_BOOL(mpz_probab_prime_p(*E0, E1)); 
++ RETURN_LONG(mpz_probab_prime_p(*E0, E1)); 
+// Infered from: (php-src/{prevFiles/prev_596c3b_cc9d7f_ext#gmp#gmp.c,revFiles/596c3b_cc9d7f_ext#gmp#gmp.c}: ZEND_FUNCTION)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

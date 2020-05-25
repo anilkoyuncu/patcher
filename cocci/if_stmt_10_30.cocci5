@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef int64_t;
+@@
+- if (E0->dev == E1->st_dev && E0->ino == E1->st_ino)  
++ if (E0->dev == (int64_t )E1->st_dev && E0->ino == (int64_t )E1->st_ino)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_01580b_c477ed_libarchive#archive_read_disk_posix.c,revFiles/01580b_c477ed_libarchive#archive_read_disk_posix.c}: tree_target_is_same_as_parent), (libarchive/{prevFiles/prev_d2d75e_82d66e_libarchive#archive_read_disk_posix.c,revFiles/d2d75e_82d66e_libarchive#archive_read_disk_posix.c}: tree_target_is_same_as_parent)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

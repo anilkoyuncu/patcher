@@ -1,0 +1,18 @@
+@@
+@@
+- APR_SUCCESS; 
++ return APR_SUCCESS; 
+// Infered from: (apr/{prevFiles/prev_bf4566_ab8371_file_io#win32#open.c,revFiles/bf4566_ab8371_file_io#win32#open.c}: ap_eof)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

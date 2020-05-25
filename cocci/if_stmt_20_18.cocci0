@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (!strcmp(E0->iformat->name, "mp3"))  
++ if (!strcmp(E0->iformat->name, "mp3") || !strcmp(E0->iformat->name, "aac"))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_cada99_a12a61_libavformat#utils.c,revFiles/cada99_a12a61_libavformat#utils.c}: avformat_open_input)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

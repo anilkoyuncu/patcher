@@ -1,0 +1,20 @@
+@@
+identifier I3;
+expression E0, E1, E2;
+@@
+- E0 = E1[E2->I3] * 127; 
++ E0 = (1.0 + E1[E2->I3]) * 127; 
+// Infered from: (vlc/{prevFiles/prev_e61ba5_618b77_modules#visualization#visual#effects.c,revFiles/e61ba5_618b77_modules#visualization#visual#effects.c}: scope_Run), (vlc/{prevFiles/prev_e61ba5_618b77_modules#visualization#visual#effects.c,revFiles/e61ba5_618b77_modules#visualization#visual#effects.c}: scope_Run)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

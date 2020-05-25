@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (!E0->cycle_time)  
++ if (E0->count == 1)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_853759_494065_libavformat#timefilter.c,revFiles/853759_494065_libavformat#timefilter.c}: ff_timefilter_update)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

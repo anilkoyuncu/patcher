@@ -1,0 +1,26 @@
+@@
+identifier I1;
+expression E0, E2;
+@@
+- if (E0->i_type == ITEM_TYPE_STREAM)  
+- {
+- E0->I1 = E2; 
+- }
+// Infered from: (vlc/{prevFiles/prev_f7d37f_03d645_src#input#item.c,revFiles/f7d37f_03d645_src#input#item.c}: input_item_NewWithTypeExt)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.08, Precision: 1.00
+// -- Node Change --
+// Recall: 0.13, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/26(3%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_f7d37f_03d645_src#input#item.c: input_item_NewWithTypeExt
+*/
+
+// ---------------------------------------------

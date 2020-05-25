@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- (E0 = E1) ? printf("Tie") :printf("Radewoosh"); 
++ (E0 == E1) ? printf("Tie") :printf("Radewoosh"); 
+// Infered from: (codeflaws/{prevFiles/prev_658-A-17925090-17925109.c,revFiles/658-A-17925090-17925109.c}: main)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.90, Precision: 1.00
+// -- Node Change --
+// Recall: 0.91, Precision: 1.00
+// -- General --
+// Functions fully changed: 9/10(90%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_5ea8f7_10db40_libavcodec#libx264.c: 
+*/
+
+// ---------------------------------------------

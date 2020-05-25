@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0 || strstr(E1, "Up"))  
++ if (!E0 || (E1 && strstr(E1, "Up")))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_bde402_065593_extcap#androiddump.c,revFiles/bde402_065593_extcap#androiddump.c}: add_tcpdump_interfaces)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

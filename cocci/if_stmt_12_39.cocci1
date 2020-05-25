@@ -1,0 +1,27 @@
+@@
+@@
+- if (stage == PHP_INI_STAGE_STARTUP || stage == PHP_INI_STAGE_SHUTDOWN)  
++ if (stage == PHP_INI_STAGE_STARTUP || stage == PHP_INI_STAGE_SHUTDOWN || stage == PHP_INI_STAGE_ACTIVATE || stage == PHP_INI_STAGE_DEACTIVATE)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_53237e_d8750a_main#fopen_wrappers.c,revFiles/53237e_d8750a_main#fopen_wrappers.c}: ZEND_INI_MH)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.40, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_325-A-4061814-4061951.c: main
+ - codeflaws/prevFiles/prev_257-A-5818000-5818012.c: main
+ - FFmpeg/prevFiles/prev_8cda27_b3eb4f_libavcodec#imgconvert.c: avcodec_find_best_pix_fmt_of_2
+*/
+
+// ---------------------------------------------

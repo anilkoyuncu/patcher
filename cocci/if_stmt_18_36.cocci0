@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- col_clear(E0->cinfo, COL_INFO); 
+// Infered from: (wireshark/{prevFiles/prev_adb289_12ff12_epan#dissectors#packet-flip.c,revFiles/adb289_12ff12_epan#dissectors#packet-flip.c}: dissect_flip_chksum_hdr), (wireshark/{prevFiles/prev_adb289_12ff12_epan#dissectors#packet-flip.c,revFiles/adb289_12ff12_epan#dissectors#packet-flip.c}: dissect_flip), (wireshark/{prevFiles/prev_adb289_12ff12_epan#dissectors#packet-flip.c,revFiles/adb289_12ff12_epan#dissectors#packet-flip.c}: dissect_flip), (wireshark/{prevFiles/prev_adb289_12ff12_epan#dissectors#packet-flip.c,revFiles/adb289_12ff12_epan#dissectors#packet-flip.c}: dissect_flip), (wireshark/{prevFiles/prev_adb289_12ff12_epan#dissectors#packet-flip.c,revFiles/adb289_12ff12_epan#dissectors#packet-flip.c}: dissect_flip), (wireshark/{prevFiles/prev_adb289_12ff12_epan#dissectors#packet-flip.c,revFiles/adb289_12ff12_epan#dissectors#packet-flip.c}: dissect_flip)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

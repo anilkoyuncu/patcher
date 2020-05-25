@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (INLINE_SSE2(E0) && (E0 & AV_CPU_FLAG_SSE2SLOW))  
++ if (HAVE_SSE2_INLINE && E0 & (AV_CPU_FLAG_SSE2 | AV_CPU_FLAG_SSE2SLOW))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_7fb758_c19130_libavcodec#x86#lpc.c,revFiles/7fb758_c19130_libavcodec#x86#lpc.c}: ff_lpc_init_x86)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

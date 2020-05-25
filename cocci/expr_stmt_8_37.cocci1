@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- test_decode(E0, E0); 
++ test_decode(E0, NULL); 
+// Infered from: (vlc/{prevFiles/prev_cb6e4c_d6e4d5_src#test#url.c,revFiles/cb6e4c_d6e4d5_src#test#url.c}: main), (vlc/{prevFiles/prev_cb6e4c_d6e4d5_src#test#url.c,revFiles/cb6e4c_d6e4d5_src#test#url.c}: main)
+// False positives: (vlc/revFiles/cb6e4c_d6e4d5_src#test#url.c: main)
+// Recall: 0.10, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------

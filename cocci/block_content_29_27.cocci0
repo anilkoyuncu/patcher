@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 -= E1 * 8; 
++ E0 -= E1; 
+// Infered from: (wireshark/{prevFiles/prev_8552f0_e67292_epan#dissectors#packet-mpeg-pes.c,revFiles/8552f0_e67292_epan#dissectors#packet-mpeg-pes.c}: dissect_mpeg_pes), (wireshark/{prevFiles/prev_8552f0_e67292_asn1#mpeg-pes#packet-mpeg-pes-template.c,revFiles/8552f0_e67292_asn1#mpeg-pes#packet-mpeg-pes-template.c}: dissect_mpeg_pes)
+// Recall: 0.67, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

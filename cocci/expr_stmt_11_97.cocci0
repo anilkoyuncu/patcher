@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->vsmt = 8; 
++ E0->vsmt = MAX(8, smp_threads); 
+// Infered from: (qemu/{prevFiles/prev_4ad64c_ae14d8_hw#ppc#spapr.c,revFiles/4ad64c_ae14d8_hw#ppc#spapr.c}: spapr_set_vsmt_mode)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

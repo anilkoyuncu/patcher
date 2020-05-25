@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef proto_item;
+@@
+- proto_item *I0 = proto_tree_add_text(E1, E2, 0, 1,  "Unknown Diameter Version (decoding as RFC 3588)"); 
+- expert_add_info_format(E3, I0, PI_UNDECODED, PI_WARN,  "Unknown Diameter Version"); 
++ proto_item *pi_local = proto_tree_add_text(E1, E2, 0, 1,  "Unknown Diameter Version (decoding as RFC 3588)"); 
++ expert_add_info_format(E3, pi_local, PI_UNDECODED, PI_WARN,  "Unknown Diameter Version"); 
+// Infered from: (wireshark/{prevFiles/prev_f8e382_09868c_epan#dissectors#packet-diameter.c,revFiles/f8e382_09868c_epan#dissectors#packet-diameter.c}: dissect_diameter_common)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

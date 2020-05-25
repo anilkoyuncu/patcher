@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = PyUnicode_FromStringAndSize(E1, E2); 
++ E0 = PyUnicode_Decode(E1, E2, TZNAME_ENCODING, NULL); 
+// Infered from: (cpython/{prevFiles/prev_b98cda_e1a0d1_Modules#timemodule.c,revFiles/b98cda_e1a0d1_Modules#timemodule.c}: time_strftime)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

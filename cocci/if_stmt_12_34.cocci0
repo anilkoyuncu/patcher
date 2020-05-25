@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->sample_to_chunk[E1].id - 1 == E0->pseudo_stream_id)  
++ if (E0->pseudo_stream_id == -1 || E0->sample_to_chunk[E1].id - 1 == E0->pseudo_stream_id)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_978677_3c16e0_libavformat#mov.c,revFiles/978677_3c16e0_libavformat#mov.c}: mov_build_index)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

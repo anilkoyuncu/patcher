@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = strdup(config.outfile); 
++ E0 = config.outfile ? strdup(config.outfile) :NULL; 
+// Infered from: (curl/{prevFiles/prev_0a7215_3e6a35_src#main.c,revFiles/0a7215_3e6a35_src#main.c}: main)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+identifier I0;
+@@
+- char **I0 = g_new0(char *, MAX_TAP_QUEUES); 
+// Infered from: (qemu/{prevFiles/prev_fac7d7_a023b7_net#tap.c,revFiles/fac7d7_a023b7_net#tap.c}: net_init_tap)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

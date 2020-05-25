@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->yscale = av_q2d(E1); 
++ E0->yscale = av_q2d(av_inv_q(E1)); 
+// Infered from: (FFmpeg/{prevFiles/prev_cf6f17_826b3a_libavfilter#vf_vignette.c,revFiles/cf6f17_826b3a_libavfilter#vf_vignette.c}: config_props)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+identifier I0, I1;
+typedef vlc_cond_t;
+typedef vlc_mutex_t;
+@@
+- vlc_mutex_t I0; 
+- vlc_cond_t I1; 
++ struct vlc_mutex_t I0; 
++ struct vlc_cond_t I1; 
+// Infered from: (vlc/{prevFiles/prev_19e9de_e538b7_src#misc#mtime.c,revFiles/19e9de_e538b7_src#misc#mtime.c}: mwait)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gtk_scrolled_window_inner_allocation(E0, &E1, FALSE); 
++ gtk_scrolled_window_inner_allocation(E0, &E1, TRUE); 
+// Infered from: (gtk/{prevFiles/prev_e3bd1e_fa97b2_gtk#gtkscrolledwindow.c,revFiles/e3bd1e_fa97b2_gtk#gtkscrolledwindow.c}: gtk_scrolled_window_allocate_scrollbar)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

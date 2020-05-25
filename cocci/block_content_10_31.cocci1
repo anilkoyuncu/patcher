@@ -1,0 +1,26 @@
+@@
+@@
+- goto  regs_fail; 
++ goto  phyregs_fail; 
+// Infered from: (linux/{prevFiles/prev_20d436_8363658_drivers#net#ethernet#tundra#tsi108_eth.c,revFiles/20d436_8363658_drivers#net#ethernet#tundra#tsi108_eth.c}: tsi108_init_one)
+// False positives: (linux/revFiles/20d436_8363658_drivers#net#ethernet#tundra#tsi108_eth.c: tsi108_init_one)
+// Recall: 0.33, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.50
+// -- Node Change --
+// Recall: 0.67, Precision: 0.33
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_76975f8_304b469_net#x25#x25_forward.c: x25_forward_data
+ - linux/prevFiles/prev_20d436_8363658_drivers#net#ethernet#tundra#tsi108_eth.c: tsi108_check_phy
+ - linux/prevFiles/prev_20d436_8363658_drivers#net#ethernet#tundra#tsi108_eth.c: tsi108_init_one
+ - linux/prevFiles/prev_20d436_8363658_drivers#net#ethernet#tundra#tsi108_eth.c: tsi108_set_rx_mode
+*/
+
+// ---------------------------------------------

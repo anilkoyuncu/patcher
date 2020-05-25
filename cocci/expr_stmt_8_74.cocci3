@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- E0 = libvlc_media_new(E1, "samples/meta.sample", &ex); 
+- catch(); 
++ E0 = libvlc_media_new(E1, "samples/meta.sample"); 
++ assert(E0); 
+// Infered from: (vlc/{prevFiles/prev_09d5f89c_b639f7_test#libvlc#meta.c,revFiles/09d5f89c_b639f7_test#libvlc#meta.c}: test_meta)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.57, Precision: 1.00
+// -- Node Change --
+// Recall: 0.56, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_dd0247_6c150f_hw#i386#acpi-build.c: build_srat
+ - qemu/prevFiles/prev_e3b283_9e0a5d_arm-dis.c: 
+ - qemu/prevFiles/prev_e3b283_9e0a5d_arm-dis.c: floatformat_to_double
+*/
+
+// ---------------------------------------------

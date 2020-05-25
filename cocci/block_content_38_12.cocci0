@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- RETURN_LONG(mysql_thread_id(E0->mysql)); 
++ RETURN_LONG((long )mysql_thread_id(E0->mysql)); 
+// Infered from: (php-src/{prevFiles/prev_b3e899_f1fd86_ext#mysqli#mysqli_api.c,revFiles/b3e899_f1fd86_ext#mysqli#mysqli_api.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_f02ebe_31a1db_ext#mysqli#mysqli_api.c,revFiles/f02ebe_31a1db_ext#mysqli#mysqli_api.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

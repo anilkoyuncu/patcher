@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (sscanf(*E0, "%ux%u,%u,%u,%*u", &E1, &E2, &E3, &E4) != 4 && sscanf(  *E0, "%ux%u,%u,%u", &E1, &E2, &E3, &E4) != 4)  
++ if (sscanf(*E0, "%ux%u,%u,%u", &E1, &E2, &E3, &E4) != 4)  
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_e0961d_446fb0_layout-custom.c,revFiles/e0961d_446fb0_layout-custom.c}: layout_construct), (tmux/{prevFiles/prev_a060aa_2ac650_layout-custom.c,revFiles/a060aa_2ac650_layout-custom.c}: layout_construct)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

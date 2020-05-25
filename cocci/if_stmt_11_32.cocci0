@@ -1,0 +1,12 @@
+@@
+expression E3, E0, E1, E2;
+@@
+- if ((E0->features[E1->feature] & E1->bits) == E1->bits && ((E2 >> E3) & 1) != 0)  
++ if ((E0->features[E1->feature] & E1->bits) && ((E2 >> E3) & 1) != 0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_9646f4_2d5312_target-i386#cpu.c,revFiles/9646f4_2d5312_target-i386#cpu.c}: cpu_x86_cpuid), (qemu/{prevFiles/prev_9646f4_2d5312_target-i386#cpu.c,revFiles/9646f4_2d5312_target-i386#cpu.c}: cpu_x86_cpuid)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+@@
+- if (E0->checksum_size >= 1U << 28)  
++ if (E0->checksum_size >= 1U << 28 || !E0->checksum_size)  
+  {
+- av_log(E1, AV_LOG_ERROR, "data block size too large (%u)\n",  E0->checksum_size); 
++ av_log(E1, AV_LOG_ERROR, "data block size invalid (%u)\n", E0->checksum_size); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_7b2ebf_694be24_libavcodec#qdm2.c,revFiles/7b2ebf_694be24_libavcodec#qdm2.c}: qdm2_decode_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

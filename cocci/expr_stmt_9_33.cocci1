@@ -1,0 +1,25 @@
+@@
+identifier I1, I2, I3;
+expression E4, E0;
+@@
+- E0->sub2video.I1 = E0->dec_ctx->I2 = E0->I3 = E4; 
++ E0->sub2video.I1 = E0->I3 = E4; 
+// Infered from: (FFmpeg/{prevFiles/prev_72237e_b1f59b_ffmpeg_filter.c,revFiles/72237e_b1f59b_ffmpeg_filter.c}: sub2video_prepare), (FFmpeg/{prevFiles/prev_72237e_b1f59b_ffmpeg_filter.c,revFiles/72237e_b1f59b_ffmpeg_filter.c}: sub2video_prepare)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_306451_f940c8_libavcodec#vaapi_encode_h264.c: vaapi_encode_h264_init_picture_params
+ - FFmpeg/prevFiles/prev_94a404_0bc757_libavcodec#vaapi_encode_h264.c: vaapi_encode_h264_init_picture_params
+*/
+
+// ---------------------------------------------

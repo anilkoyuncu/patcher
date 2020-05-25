@@ -1,0 +1,25 @@
+@@
+expression E0;
+@@
+- if (Z_REFCOUNTED_P(E0))  
+- {
+- Z_ADDREF_P(E0); 
+- }
+// Infered from: (php-src/{prevFiles/prev_446c60_53b930_ext#mysqli#mysqli.c,revFiles/446c60_53b930_ext#mysqli#mysqli.c}: mysqli_object_get_debug_info)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_a3cfb4_578dc9_gtk#gtkeventcontrollerkey.c: update_focus
+*/
+
+// ---------------------------------------------

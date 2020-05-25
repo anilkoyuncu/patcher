@@ -1,0 +1,12 @@
+@@
+identifier I2, I1;
+expression E0;
+@@
+- set_irq_handler(E0, I1); 
+- set_irq_chip(E0, &I2); 
++ irq_set_handler(E0, I1); 
++ irq_set_chip(E0, &I2); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-clps711x#irq.c,revFiles/6845664a_25a566_arch#arm#mach-clps711x#irq.c}: clps711x_init_irq), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-clps711x#irq.c,revFiles/6845664a_25a566_arch#arm#mach-clps711x#irq.c}: clps711x_init_irq)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+typedef SUINT;
+@@
+- E0[E1] += E2[E1] * E3 + (1 << 2) >> 3; 
++ E0[E1] += (int )(E2[E1] * (SUINT )E3 + (1 << 2)) >> 3; 
+// Infered from: (FFmpeg/{prevFiles/prev_92188c8_24f655_libavcodec#dcadsp.c,revFiles/92188c8_24f655_libavcodec#dcadsp.c}: decor_c)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

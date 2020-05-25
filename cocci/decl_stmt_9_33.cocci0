@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef int64_t;
+@@
+- int64_t I0 = E1->in[E2].pts; 
++ int64_t I0 = E1->in[E2].pts + E1->delta_ts; 
+// Infered from: (FFmpeg/{prevFiles/prev_efcfcf_4ce87e_libavfilter#avf_concat.c,revFiles/efcfcf_4ce87e_libavfilter#avf_concat.c}: send_silence)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

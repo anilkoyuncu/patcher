@@ -1,0 +1,10 @@
+@@
+expression E1, E3, E0, E4, E5, E6, E7, E2;
+@@
+- E0->dsp.emulated_edge_mc(E1 + E2, E3, E4, 8, E5, E6 * 8, E7 * 8,  E0->width >> 1, E0->height >> 1); 
++ E0->dsp.emulated_edge_mc(E1 + E2, E3, E4, 8, E5, E6 * 8, E7 * 8,  (E0->width + 1) >> 1, (E0->height + 1) >> 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_4991cb_04064e1_libavcodec#mpegvideo_enc.c,revFiles/4991cb_04064e1_libavcodec#mpegvideo_enc.c}: encode_mb_internal), (FFmpeg/{prevFiles/prev_4991cb_04064e1_libavcodec#mpegvideo_enc.c,revFiles/4991cb_04064e1_libavcodec#mpegvideo_enc.c}: encode_mb_internal)
+// False positives: (FFmpeg/revFiles/4991cb_04064e1_libavcodec#mpegvideo_enc.c: encode_mb_internal)
+// Recall: 0.19, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

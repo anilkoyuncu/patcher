@@ -1,0 +1,32 @@
+@@
+expression E0, E1;
+@@
+- if (E0->p_fmt->i_cat == VIDEO_ES && E1->p_pcr_input->fmt.i_cat != VIDEO_ES)  
++ if (E0->p_fmt->i_cat == VIDEO_ES && (E1->p_pcr_input == NULL || E1->p_pcr_input->fmt.i_cat != VIDEO_ES))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_68af6f_7be2df_modules#mux#mpeg#ts.c,revFiles/68af6f_7be2df_modules#mux#mpeg#ts.c}: SelectPCRStream)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_97f1fc_422311_src#networking.c: clientCommand
+ - curl/prevFiles/prev_feacb4_fe3c87_src#main.c: operate
+*/
+
+// ---------------------------------------------

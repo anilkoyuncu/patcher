@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- add_assoc_string(E0, "table", E1, 1); 
++ add_assoc_string(E0, "table", E1); 
+// Infered from: (php-src/{prevFiles/prev_6489ed_26f9aa_ext#pdo_pgsql#pgsql_statement.c,revFiles/6489ed_26f9aa_ext#pdo_pgsql#pgsql_statement.c}: pgsql_stmt_get_column_meta)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

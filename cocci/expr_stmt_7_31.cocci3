@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+typedef Py_uintptr_t;
+typedef uint;
+@@
+- E0 = (uint )E1 & POOL_SIZE_MASK; 
++ E0 = (uint )((Py_uintptr_t )E1 & POOL_SIZE_MASK); 
+// Infered from: (cpython/{prevFiles/prev_efc118_770acd_Objects#obmalloc.c,revFiles/efc118_770acd_Objects#obmalloc.c}: new_arena)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

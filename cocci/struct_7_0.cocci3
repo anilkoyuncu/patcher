@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- ds1511_base = devm_ioremap(&E0->dev, E1->start, E2->size); 
+- if (!ds1511_base)  
+- {
+- return -ENOMEM; 
+- }
++ ds1511_base = devm_ioremap_resource(&E0->dev, E1); 
+// Infered from: (linux/{prevFiles/prev_7c1d69_1735be_drivers#rtc#rtc-ds1511.c,revFiles/7c1d69_1735be_drivers#rtc#rtc-ds1511.c}: ds1511_rtc_probe)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.36
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;E0 <= E1 - sizeof(long );E0 += sizeof(long ))  
++ for(E0 = 0;E0 <= E1 - (int )sizeof(long );E0 += sizeof(long ))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_454a11_86736f_libavcodec#dsputil.c,revFiles/454a11_86736f_libavcodec#dsputil.c}: add_bytes_c), (FFmpeg/{prevFiles/prev_454a11_86736f_libavcodec#dsputil.c,revFiles/454a11_86736f_libavcodec#dsputil.c}: diff_bytes_c), (FFmpeg/{prevFiles/prev_d1916d_0673ed_libavcodec#dsputil.c,revFiles/d1916d_0673ed_libavcodec#dsputil.c}: add_bytes_c), (FFmpeg/{prevFiles/prev_d1916d_0673ed_libavcodec#dsputil.c,revFiles/d1916d_0673ed_libavcodec#dsputil.c}: diff_bytes_c), (FFmpeg/{prevFiles/prev_d1916d_0673ed_libavcodec#pngdsp.c,revFiles/d1916d_0673ed_libavcodec#pngdsp.c}: add_bytes_l2_c), (FFmpeg/{prevFiles/prev_86736f_0b46d6_libavcodec#pngdsp.c,revFiles/86736f_0b46d6_libavcodec#pngdsp.c}: add_bytes_l2_c)
+// Recall: 0.24, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

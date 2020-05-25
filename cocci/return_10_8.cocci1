@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2;
+typedef sortinfo;
+typedef stat_node;
+@@
+- return stats_tree_sort_compare(*(stat_node **)E0, *(stat_node **)E1,  ((sortinfo *)E2)->sort_column,  ((sortinfo *)E2)->sort_descending); 
++ return stats_tree_sort_compare(*(const  stat_node **)E0,  *(const  stat_node **)E1,  ((sortinfo *)E2)->sort_column,  ((sortinfo *)E2)->sort_descending); 
+// Infered from: (wireshark/{prevFiles/prev_3ae2e5_8aebe1_epan#stats_tree.c,revFiles/3ae2e5_8aebe1_epan#stats_tree.c}: stat_node_array_sortcmp)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_d8e986_fdec86_epan#stats_tree.c: stat_node_array_sortcmp
+*/
+
+// ---------------------------------------------

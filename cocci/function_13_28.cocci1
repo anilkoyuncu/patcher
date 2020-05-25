@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+typedef orte_debugger_breakpoint_fn_t;
+@@
+- orte_debugger_breakpoint_fn_t I0; 
+  ...
+- I0 = E1; 
+// Infered from: (ompi/{prevFiles/prev_9dec10_e3a373_orte#tools#orterun#orterun.c,revFiles/9dec10_e3a373_orte#tools#orterun#orterun.c}: orterun)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

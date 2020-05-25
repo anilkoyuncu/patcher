@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- pino_protocols = g_list_prepend(pino_protocols, E0); 
++ protocols = g_list_prepend(protocols, E0); 
+// Infered from: (wireshark/{prevFiles/prev_99398c_a13d16_epan#proto.c,revFiles/99398c_a13d16_epan#proto.c}: proto_register_protocol_in_name_only)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.25, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/5(20%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_99398c_a13d16_epan#proto.c: 
+ - wireshark/prevFiles/prev_99398c_a13d16_epan#proto.c: proto_cleanup_base
+ - codeflaws/prevFiles/prev_189-B-1682083-1682218.c: func
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_6f022a_6ced26_plugins#asn1#packet-asn1.c: proto_reg_handoff_asn1
+*/
+
+// ---------------------------------------------

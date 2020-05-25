@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+@@
+- for(size_t I0 = 0;E1;I0++)  
++ for(size_t I0 = 0;I0 < E1;I0++)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_7bfd1d1_1dece2_modules#hw#vaapi#vlc_vaapi.c,revFiles/7bfd1d1_1dece2_modules#hw#vaapi#vlc_vaapi.c}: vlc_vaapi_InitializeInstanceDRM)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

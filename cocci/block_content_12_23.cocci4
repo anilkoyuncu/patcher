@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- int I0 = -1; 
++ long I0 = -1; 
+// Infered from: (curl/{prevFiles/prev_bb87b6_b0f6e7_lib#multi.c,revFiles/bb87b6_b0f6e7_lib#multi.c}: multistate)
+// False positives: (curl/revFiles/bb87b6_b0f6e7_lib#multi.c: curl_multi_fdset)
+// Recall: 0.09, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

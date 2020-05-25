@@ -1,0 +1,20 @@
+@@
+expression E0;
+@@
+- E0 = (char *)malloc(TARGET_PAGE_SIZE); 
+- memset(E0, 0, TARGET_PAGE_SIZE); 
++ E0 = g_try_malloc0(TARGET_PAGE_SIZE); 
+// Infered from: (qemu/{prevFiles/prev_c580de_217bfb_bsd-user#elfload.c,revFiles/c580de_217bfb_bsd-user#elfload.c}: copy_elf_strings), (qemu/{prevFiles/prev_7dd476_096685_linux-user#elfload.c,revFiles/7dd476_096685_linux-user#elfload.c}: copy_elf_strings)
+// Recall: 0.60, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

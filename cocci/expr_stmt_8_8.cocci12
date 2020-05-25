@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = gst_bin_new("bin"); 
++ E0 = gst_pipeline_new("pipeline"); 
+// Infered from: (gstreamer/{prevFiles/prev_978c38_528d8c_examples#helloworld#helloworld.c,revFiles/978c38_528d8c_examples#helloworld#helloworld.c}: main), (gstreamer/{prevFiles/prev_978c38_528d8c_tests#old#examples#helloworld#helloworld.c,revFiles/978c38_528d8c_tests#old#examples#helloworld#helloworld.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

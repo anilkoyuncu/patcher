@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (FIPS_mode() && (BN_num_bits(E0->p) < OPENSSL_DSA_FIPS_MIN_MODULUS_BITS))  
++ if (FIPS_mode() && !(E0->flags & DSA_FLAG_NON_FIPS_ALLOW) && (BN_num_bits(  E0->p) < OPENSSL_DSA_FIPS_MIN_MODULUS_BITS))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_ec7eb2_6d1d42_accel#tcg#translate-all.c,revFiles/ec7eb2_6d1d42_accel#tcg#translate-all.c}: tb_link_page), (openssl/{prevFiles/prev_69a80f_dc0350_crypto#dsa#dsa_ossl.c,revFiles/69a80f_dc0350_crypto#dsa#dsa_ossl.c}: dsa_do_verify)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- CRYPTO_free(E0); 
+// Infered from: (openssl/{prevFiles/prev_6a78ae_d6b55f_crypto#mem_sec.c,revFiles/6a78ae_d6b55f_crypto#mem_sec.c}: CRYPTO_secure_free)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.21, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch applied partially:
+ - openssl/prevFiles/prev_6a78ae_d6b55f_crypto#mem_sec.c: CRYPTO_secure_free
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_6adccb7_916b67_modules#video_output#win32#direct3d11.c: SetupQuadSphere
+ - vlc/prevFiles/prev_6adccb7_916b67_modules#video_output#win32#direct3d11.c: UpdateQuadPosition
+*/
+
+// ---------------------------------------------

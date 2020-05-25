@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (E1 - E2) / PHI; 
++ E0 = (E1 - E2) / 3; 
+// Infered from: (codeflaws/{prevFiles/prev_106-E-624485-624489.c,revFiles/106-E-624485-624489.c}: go)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

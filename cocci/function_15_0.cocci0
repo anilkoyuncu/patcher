@@ -1,0 +1,11 @@
+@@
+identifier I0, I2;
+expression E1;
+typedef MpegEncContext;
+@@
+  MpegEncContext *I0 = E1->priv_data; 
+- int I2; 
+// Infered from: (vlc/{prevFiles/prev_201cd9_38587a_modules#demux#wav.c,revFiles/201cd9_38587a_modules#demux#wav.c}: Open), (FFmpeg/{prevFiles/prev_f261a5_3f38d4_libavformat#mov.c,revFiles/f261a5_3f38d4_libavformat#mov.c}: mov_read_stsz), (FFmpeg/{prevFiles/prev_8e77f8_a57188_libavformat#mov.c,revFiles/8e77f8_a57188_libavformat#mov.c}: mov_read_stsz), (FFmpeg/{prevFiles/prev_22ddd6_922bc3_libavcodec#mpegvideo.c,revFiles/22ddd6_922bc3_libavcodec#mpegvideo.c}: MPV_encode_init)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

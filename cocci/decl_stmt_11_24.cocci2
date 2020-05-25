@@ -1,0 +1,31 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+typedef PCRE2_SPTR;
+@@
+- if ((E0->re = pcre2_compile(E1, PCRE2_ZERO_TERMINATED, PCRE2_NO_AUTO_CAPTURE,  &E2, &E3, E4)) == NULL)  
++ if ((E0->re = pcre2_compile((PCRE2_SPTR )E1, PCRE2_ZERO_TERMINATED,  PCRE2_NO_AUTO_CAPTURE, &E2, &E3, E4)) == NULL)  
+  {
+  ...
+- blacklist_report_regexp_error(E5, E3); 
++ blacklist_report_regexp_error((char *)E5, E3); 
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_20d930_13696d_ext#opcache#zend_accelerator_blacklist.c,revFiles/20d930_13696d_ext#opcache#zend_accelerator_blacklist.c}: zend_accel_blacklist_update_regexp)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_365a04_f71484_lib#media_player.c: libvlc_media_player_add_slave
+ - vlc/prevFiles/prev_365a04_f71484_lib#media_player.c: libvlc_media_player_navigate
+*/
+
+// ---------------------------------------------

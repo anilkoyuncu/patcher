@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2;
+@@
+- p_add_proto_data(wmem_file_scope(), E0, E1, 0, E2); 
++ p_add_proto_data(wmem_file_scope(), E0, E1, E0->curr_layer_num, E2); 
+// Infered from: (wireshark/{prevFiles/prev_6f255d_e4c154_epan#dissectors#packet-ssl-utils.c,revFiles/6f255d_e4c154_epan#dissectors#packet-ssl-utils.c}: ssl_add_record_info)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 9 rules):
+// -- Edit Location --
+// Recall: 0.89, Precision: 0.89
+// -- Node Change --
+// Recall: 0.90, Precision: 0.90
+// -- General --
+// Functions fully changed: 8/10(80%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_c9087c_14ae3b_linux-user#signal.c: setup_sigcontext
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_584f88_34e2ce_libavformat#riffenc.c: ff_parse_specific_params
+*/
+
+// ---------------------------------------------

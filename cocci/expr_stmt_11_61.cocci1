@@ -1,0 +1,8 @@
+@@
+@@
+- setenv(GIT_DIR_ENVIRONMENT, ".", 1); 
++ set_git_dir("."); 
+// Infered from: (git/{prevFiles/prev_717c39_ab3546_path.c,revFiles/717c39_ab3546_path.c}: enter_repo)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

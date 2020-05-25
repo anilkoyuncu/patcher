@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = (default_quantizers[E1] * E2 + 50) / 100; 
++ int I0 = (default_quantizers[E1] * S + 50) / 100; 
+// Infered from: (FFmpeg/{prevFiles/prev_edf548_159323_libavformat#rtpdec_jpeg.c,revFiles/edf548_159323_libavformat#rtpdec_jpeg.c}: create_default_qtables), (FFmpeg/{prevFiles/prev_e3e6a2_72e136_libavformat#rtpdec_jpeg.c,revFiles/e3e6a2_72e136_libavformat#rtpdec_jpeg.c}: create_default_qtables)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 0.83
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_e3e6a2_72e136_libavformat#rtpdec_jpeg.c: create_default_qtables
+ - FFmpeg/prevFiles/prev_edf548_159323_libavformat#rtpdec_jpeg.c: create_default_qtables
+*/
+
+// ---------------------------------------------

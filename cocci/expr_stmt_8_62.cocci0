@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- slavio_misc = slavio_misc_init(-1, E0->apc_base, E0->aux1_base,  E0->aux2_base, E1[E0->me_irq], E2, &E3); 
++ slavio_misc = slavio_misc_init(0, E0->apc_base, E0->aux1_base, E0->aux2_base,  E1[E0->me_irq], E2, &E3); 
+// Infered from: (qemu/{prevFiles/prev_ada24f_e44a3e_hw#sun4m.c,revFiles/ada24f_e44a3e_hw#sun4m.c}: sun4c_hw_init)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

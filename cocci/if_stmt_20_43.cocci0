@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->flags & CLIENT_READONLY && E1->flags & CMD_READONLY && nodeIsSlave(  myself) && myself->slaveof == E2)  
++ if (E0->flags & CLIENT_READONLY && (E1->flags & CMD_READONLY || E1->proc == evalCommand || E1->proc == evalShaCommand) && nodeIsSlave(  myself) && myself->slaveof == E2)  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_de276b_522760_src#cluster.c,revFiles/de276b_522760_src#cluster.c}: getNodeByQuery)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

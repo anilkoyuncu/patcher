@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- ans += (prime[E0] >= k && a <= E1); 
++ ans += (prime[E0] >= k && a <= prime[E0] * E1); 
+// Infered from: (codeflaws/{prevFiles/prev_83-D-495704-495738.c,revFiles/83-D-495704-495738.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

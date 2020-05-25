@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (E0->uuid.size == 0 || !dissector_try_string(bluetooth_uuid_table,  print_numeric_uuid(&E0->uuid),  E1, E2, E3, E4))  
++ if (E0 && (E0->uuid.size == 0 || !dissector_try_string(bluetooth_uuid_table,  print_numeric_uuid(  &E0->uuid), E1, E2,  E3, E4)))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_e99612_7533c7_epan#dissectors#packet-btrfcomm.c,revFiles/e99612_7533c7_epan#dissectors#packet-btrfcomm.c}: dissect_btrfcomm)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

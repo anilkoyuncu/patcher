@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef ngx_msec_t;
+@@
+- E0 = E1->sec * 1000 + E1->msec - E2->state->response_time; 
++ E0 = (ngx_msec_t )E1->sec * 1000 + E1->msec - E2->state->response_time; 
+// Infered from: (nginx/{prevFiles/prev_8b6844_67effa_src#http#ngx_http_upstream.c,revFiles/8b6844_67effa_src#http#ngx_http_upstream.c}: ngx_http_upstream_connect), (nginx/{prevFiles/prev_8b6844_67effa_src#http#ngx_http_upstream.c,revFiles/8b6844_67effa_src#http#ngx_http_upstream.c}: ngx_http_upstream_finalize_request)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0, I1 = {ABS ,SIZ };
+expression E2;
+typedef mp_size_t;
+@@
+- int I0 = I1(E2); 
++ mp_size_t I0 = I1(E2); 
+// Infered from: (gmp/{prevFiles/prev_ebde5d_0e6c3f_mpz#kronsz.c,revFiles/ebde5d_0e6c3f_mpz#kronsz.c}: mpz_si_kronecker), (gmp/{prevFiles/prev_ebde5d_0e6c3f_mpz#kronsz.c,revFiles/ebde5d_0e6c3f_mpz#kronsz.c}: mpz_si_kronecker)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

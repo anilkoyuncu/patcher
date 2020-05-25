@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef SCSIDevice;
+@@
+- E0 = DO_UPCAST(SCSIDevice , qdev, E1->child); 
++ E0 = SCSI_DEVICE(E1->child); 
+// Infered from: (qemu/{prevFiles/prev_e1dc68_1cb6d1_hw#scsi#virtio-scsi.c,revFiles/e1dc68_1cb6d1_hw#scsi#virtio-scsi.c}: virtio_scsi_do_tmf)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- addReplyNullArray(E0); 
++ addReply(E0, shared.emptyarray); 
+// Infered from: (redis/{prevFiles/prev_40acb4_2e2fe9_src#geo.c,revFiles/40acb4_2e2fe9_src#geo.c}: georadiusGeneric), (redis/{prevFiles/prev_74d6af_052e03_src#t_zset.c,revFiles/74d6af_052e03_src#t_zset.c}: genericZpopCommand)
+// False positives: (redis/revFiles/40acb4_2e2fe9_src#geo.c: geoposCommand), (redis/revFiles/74d6af_052e03_src#t_zset.c: blockingGenericZpopCommand)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

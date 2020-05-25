@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- g_warning("SaveFile           : %s", E0->save_file); 
++ g_warning("SaveFile           : %s", (E0->save_file) ? E0->save_file :""); 
+// Infered from: (wireshark/{prevFiles/prev_0b132c_778c9a_capture_opts.c,revFiles/0b132c_778c9a_capture_opts.c}: capture_opts_info)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

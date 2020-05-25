@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->height == dv_profiles[E1].height && E0->pix_fmt == dv_profiles[  E1].pix_fmt && E0->width == dv_profiles[E1].width)  
++ if (E0->coded_height == dv_profiles[E1].height && E0->pix_fmt == dv_profiles[  E1].pix_fmt && E0->coded_width == dv_profiles[E1].width)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_7b2dba_084bd1_libavcodec#dvdata.c,revFiles/7b2dba_084bd1_libavcodec#dvdata.c}: avpriv_dv_codec_profile)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

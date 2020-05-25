@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->_filename_ch2 = (char *)kmalloc(E1 + 1, GFP_KERNEL); 
++ E0->_filename_ch2 = kmalloc(E1 + 1, GFP_KERNEL); 
+// Infered from: (linux/{prevFiles/prev_324148_a05d08_drivers#staging#cx25821#cx25821-video-upstream-ch2.c,revFiles/324148_a05d08_drivers#staging#cx25821#cx25821-video-upstream-ch2.c}: cx25821_vidupstream_init_ch2), (linux/{prevFiles/prev_324148_a05d08_drivers#staging#cx25821#cx25821-video-upstream-ch2.c,revFiles/324148_a05d08_drivers#staging#cx25821#cx25821-video-upstream-ch2.c}: cx25821_vidupstream_init_ch2)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

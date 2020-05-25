@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef Tcl_WideInt;
+typedef Tcl_WideUInt;
+@@
+- Tcl_WideInt I0 = E1 * E2; 
++ Tcl_WideUInt I0 = E1 * E2; 
+// Infered from: (tcl/{prevFiles/prev_2ea20a_753e10_generic#tclCmdMZ.c,revFiles/2ea20a_753e10_generic#tclCmdMZ.c}: Tcl_TimeRateObjCmd)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- usage("diff-cache [-r] [-z] <tree sha1>"); 
++ usage(diff_cache_usage); 
+// Infered from: (git/{prevFiles/prev_c5bac1_80913d_diff-cache.c,revFiles/c5bac1_80913d_diff-cache.c}: main), (git/{prevFiles/prev_c5bac1_80913d_diff-cache.c,revFiles/c5bac1_80913d_diff-cache.c}: main)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

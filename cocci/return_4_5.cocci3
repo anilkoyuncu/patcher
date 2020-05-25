@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef uintptr_t;
+@@
+- return (E0 >= (uintptr_t )tcg_ctx.code_gen_buffer && E0 < (uintptr_t )(  tcg_ctx.code_gen_buffer + tcg_ctx.code_gen_buffer_max_size)); 
++ return (E0 >= (uintptr_t )tcg_ctx.code_gen_buffer && E0 < (uintptr_t )(  tcg_ctx.code_gen_buffer + tcg_ctx.code_gen_buffer_size)); 
+// Infered from: (qemu/{prevFiles/prev_52ae64_3f08ff_translate-all.c,revFiles/52ae64_3f08ff_translate-all.c}: is_tcg_gen_code)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

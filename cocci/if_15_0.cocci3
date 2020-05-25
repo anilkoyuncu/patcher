@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->psz_source; 
++ E0 = E1->psz_dupsource; 
+// Infered from: (vlc/{prevFiles/prev_65a153_461358_src#input#input.c,revFiles/65a153_461358_src#input#input.c}: InitThread)
+// False positives: (vlc/revFiles/65a153_461358_src#input#input.c: InitThread)
+// Recall: 0.04, Precision: 0.50, Matching recall: 0.33
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+identifier I2;
+expression E0, E1, E3;
+@@
+- if (E0 && compare_ether_addr(E1->I2, E3))  
++ if (E0 && !ether_addr_equal(E1->I2, E3))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_ac422d_8561cf9_net#wireless#scan.c,revFiles/ac422d_8561cf9_net#wireless#scan.c}: is_bss), (linux/{prevFiles/prev_6942df7_55d0ac5_drivers#scsi#fcoe#fcoe.c,revFiles/6942df7_55d0ac5_drivers#scsi#fcoe#fcoe.c}: fcoe_rcv), (linux/{prevFiles/prev_28b298_a599b0_net#802#stp.c,revFiles/28b298_a599b0_net#802#stp.c}: stp_pdu_rcv)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

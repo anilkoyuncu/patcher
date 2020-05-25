@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!pair_content(E0, &E1, &E2))  
++ if (pair_content(E0, &E1, &E2) == ERR)  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_b5e7ff_d1bada_Modules#_cursesmodule.c,revFiles/b5e7ff_d1bada_Modules#_cursesmodule.c}: PyCurses_Pair_Content)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

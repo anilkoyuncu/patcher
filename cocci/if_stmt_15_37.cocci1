@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 < E1 && E2 > E3)  
++ if (E0 <= E1 && E2 >= E3)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_469-B-8248222-8248281.c,revFiles/469-B-8248222-8248281.c}: main)
+// False positives: (php-src/revFiles/981026_902656_win32#ioutil.c: php_win32_ioutil_mkdir)
+// Recall: 0.38, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_ac4609_1bb6f4_gdk#x11#gdkdevice-core.c: impl_coord_in_window
+*/
+
+// ---------------------------------------------

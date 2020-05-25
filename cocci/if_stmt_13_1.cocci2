@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((E0 = input_CreateThreadExtended(E1, E2->vod.p_item, E3, NULL)))  
++ if ((E0 = input_CreateThreadExtended(E1->p_libvlc, E2->vod.p_item, E3, NULL)))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_1924363_9312c3_src#input#vlm.c,revFiles/1924363_9312c3_src#input#vlm.c}: vlm_OnMediaUpdate)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,31 @@
+@@
+identifier I0, I1, I2, I3, I4;
+expression E13, E6, E7, E9, E11, E5, E8, E10, E12;
+@@
+- char I0[128]; 
+- char I1[128]; 
++ char *I0; 
++ char *I1; 
+  ...
+- char I2[128]; 
+- char I3[128]; 
+- char I4[128]; 
++ char *I2; 
++ char *I3; 
++ char *I4; 
+  ...
+- snprintf(I1, sizeof(I1), E5, E6, E7); 
+  ...
+- snprintf(I2, sizeof(I2), E8, E6, E9); 
+  ...
+- snprintf(I4, sizeof(I4), E10, E6, E11); 
++ g_free(I2); 
++ I4 = g_strdup_printf(E10, E6, E11); 
+  ...
+- snprintf(I3, sizeof(I3), E12, E13); 
++ g_free(I4); 
++ I3 = g_strdup_printf(E12, E13); 
+// Infered from: (qemu/{prevFiles/prev_2fb513_853f8c_hw#ppc#e500.c,revFiles/2fb513_853f8c_hw#ppc#e500.c}: ppce500_load_device_tree)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------

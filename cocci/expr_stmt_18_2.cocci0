@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef uint8_t;
+@@
+- E0 = vvfat_read(E1->bs, cluster2sector(E1, E2), (uint8_t *)E3,  (E4 + 0x1ff) / 0x200); 
++ E0 = vvfat_read(E1->bs, cluster2sector(E1, E2), (uint8_t *)E3,  DIV_ROUND_UP(E4, 0x200)); 
+// Infered from: (qemu/{prevFiles/prev_78ee96_13f149_block#vvfat.c,revFiles/78ee96_13f149_block#vvfat.c}: commit_one_file)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

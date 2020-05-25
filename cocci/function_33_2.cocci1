@@ -1,0 +1,25 @@
+@@
+typedef MachineState;
+@@
+- return ((smp_cpus - 1) << 24) | (1 << 23); 
++ MachineState *ms = MACHINE(qdev_get_machine()); 
++ return ((ms->smp.cpus - 1) << 24) | (1 << 23); 
+// Infered from: (qemu/{prevFiles/prev_cc7d44_0e11fc_target#arm#cpu.c,revFiles/cc7d44_0e11fc_target#arm#cpu.c}: a15_l2ctlr_read)
+// Recall: 0.16, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.38, Precision: 1.00
+// -- Node Change --
+// Recall: 0.37, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/8(12%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_cc7d44_0e11fc_hw#arm#fsl-imx7.c: fsl_imx7_init
+ - qemu/prevFiles/prev_cc7d44_0e11fc_hw#arm#fsl-imx6ul.c: fsl_imx6ul_init
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef setTypeIterator;
+@@
+- setTypeIterator *I0 = zmalloc(sizeof(setIterator)); 
++ setTypeIterator *I0 = zmalloc(sizeof(setTypeIterator )); 
+// Infered from: (redis/{prevFiles/prev_740eee_674492_src#t_set.c,revFiles/740eee_674492_src#t_set.c}: setTypeInitIterator)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (ARG_COUNT(ht) != 1 || getParametersEx(ht, 1, &E0) == FAILURE)  
++ if (ARG_COUNT(ht) != 1 || getParametersEx(1, &E0) == FAILURE)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_97f105_d926d9_ext#standard#string.c,revFiles/97f105_d926d9_ext#standard#string.c}: PHP_FUNCTION)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

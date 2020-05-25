@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- DPRINTF("nak'ed addr=%08x\n", ntohl(E0->s_addr)); 
++ DPRINTF("nak'ed addr=%08x\n", ntohl(E0.s_addr)); 
+// Infered from: (qemu/{prevFiles/prev_24ac3a_4e6557_slirp#bootp.c,revFiles/24ac3a_4e6557_slirp#bootp.c}: bootp_reply)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

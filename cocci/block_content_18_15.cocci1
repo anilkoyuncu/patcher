@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- const  char *I0 = NULL; 
++ const  char *keyx_t = NULL; 
+// Infered from: (wireshark/{prevFiles/prev_f8e382_09868c_epan#dissectors#packet-dcerpc-rs_acct.c,revFiles/f8e382_09868c_epan#dissectors#packet-dcerpc-rs_acct.c}: rs_acct_dissect_lookup_rqst)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

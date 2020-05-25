@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- av_freep(&E0->p_context->extradata); 
++ av_free(E0->p_context->extradata); 
+// Infered from: (vlc/{prevFiles/prev_2cab85_4e54f2_modules#codec#avcodec#avcodec.c,revFiles/2cab85_4e54f2_modules#codec#avcodec#avcodec.c}: CloseDecoder)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

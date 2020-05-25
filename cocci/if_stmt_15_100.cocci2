@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- g_value_take_boxed(&E0, &E1); 
++ g_value_set_boxed(&E0, &E1); 
+// Infered from: (gtk/{prevFiles/prev_9573ed_8243b1_gtk#gtkcsscustomproperty.c,revFiles/9573ed_8243b1_gtk#gtkcsscustomproperty.c}: gtk_css_custom_property_create_initial_value), (gtk/{prevFiles/prev_9573ed_8243b1_gtk#gtkcsscustomproperty.c,revFiles/9573ed_8243b1_gtk#gtkcsscustomproperty.c}: gtk_css_custom_property_create_initial_value)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

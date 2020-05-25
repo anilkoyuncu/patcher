@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- char *I0 = malloc(strlen(PACKAGE) + strlen(VERSION) + 1); 
++ char *I0 = malloc(strlen(PACKAGE) + strlen(VERSION) + 2); 
+// Infered from: (vlc/{prevFiles/prev_8077a3_80566b_modules#control#dbus.c,revFiles/8077a3_80566b_modules#control#dbus.c}: DBUS_METHOD)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

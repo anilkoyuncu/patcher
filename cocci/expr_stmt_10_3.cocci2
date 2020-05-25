@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(&E0->dev, "%s: set interrupt aggregation to %d\n", __func__, E1); 
++ dev_err(&E0->dev, "set interrupt aggregation to %d\n", E1); 
+// Infered from: (linux/{prevFiles/prev_eb8562_3daf9d_drivers#staging#slicoss#slicoss.c,revFiles/eb8562_3daf9d_drivers#staging#slicoss#slicoss.c}: slic_ioctl)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

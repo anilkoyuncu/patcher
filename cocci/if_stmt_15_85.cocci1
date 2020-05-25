@@ -1,0 +1,26 @@
+@@
+expression E0, E1;
+@@
+- read_const_block_data(E0, E1); 
++ if (read_const_block_data(E0, E1) < 0)  
++ {
++ return -1; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_0ceca2_16c3cb_libavcodec#alsdec.c,revFiles/0ceca2_16c3cb_libavcodec#alsdec.c}: read_block)
+// Recall: 0.27, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.55, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_0ceca2_16c3cb_libavcodec#alsdec.c: read_const_block_data
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (fgets(E0, sizeof(E1) - 1, E2) == NULL)  
++ if (fgets(E0, sizeof(E0) - 1, E2) == NULL)  
+  {
+  ...
+  }
+// Infered from: (libtiff/{prevFiles/prev_670113_73cbf0_libtiff#mkversion.c,revFiles/670113_73cbf0_libtiff#mkversion.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

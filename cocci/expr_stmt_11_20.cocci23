@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "Invalid flash image size\n"); 
++ error_report("Invalid flash image size"); 
+// Infered from: (qemu/{prevFiles/prev_c0dbca_470bca_hw#arm#musicpal.c,revFiles/c0dbca_470bca_hw#arm#musicpal.c}: musicpal_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

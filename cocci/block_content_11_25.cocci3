@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1;
+@@
+- char *I0 = PyObject_MALLOC(E1); 
++ char *I0 = PyMem_MALLOC(E1); 
+  ...
+- return PyObject_REALLOC(I0, E1 + 1); 
++ return PyMem_REALLOC(I0, E1 + 1); 
+// Infered from: (cpython/{prevFiles/prev_08062d6_01b810_Parser#pgenmain.c,revFiles/08062d6_01b810_Parser#pgenmain.c}: PyOS_Readline)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

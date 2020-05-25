@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- col_append_str(E0->cinfo, COL_INFO, " UI, "); 
++ col_append_str(E0->cinfo, COL_INFO, ", UI, "); 
+  ...
+- col_append_fstr(E0->cinfo, COL_INFO, ", N(U) = %u, ", E1); 
++ col_append_fstr(E0->cinfo, COL_INFO, ", N(U) = %u", E1); 
+// Infered from: (wireshark/{prevFiles/prev_55e563_8b92f8_packet-gprs-llc.c,revFiles/55e563_8b92f8_packet-gprs-llc.c}: dissect_llcgprs)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.22
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- E0->I1 = vmalloc(E0->I2); 
++ E0->I1 = vzalloc(E0->I2); 
+  ...
+- memset(E0->I1, 0, E0->I2); 
+// Infered from: (linux/{prevFiles/prev_055831_d103adb_drivers#scsi#qla2xxx#qla_bsg.c,revFiles/055831_d103adb_drivers#scsi#qla2xxx#qla_bsg.c}: qla2x00_optrom_setup), (linux/{prevFiles/prev_bde70f_055831_drivers#scsi#bfa#bfad_debugfs.c,revFiles/bde70f_055831_drivers#scsi#bfa#bfad_debugfs.c}: bfad_debugfs_open_fwtrc), (linux/{prevFiles/prev_bde70f_055831_drivers#scsi#bfa#bfad_debugfs.c,revFiles/bde70f_055831_drivers#scsi#bfa#bfad_debugfs.c}: bfad_debugfs_open_fwsave), (linux/{prevFiles/prev_bde70f_055831_drivers#scsi#bfa#bfad.c,revFiles/bde70f_055831_drivers#scsi#bfa#bfad.c}: bfad_hal_mem_alloc)
+// Recall: 0.44, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

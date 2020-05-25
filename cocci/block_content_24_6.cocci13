@@ -1,0 +1,33 @@
+@@
+expression E0;
+typedef wchar_t;
+@@
+- OutputDebugStringW(ToWide(E0)); 
++ wchar_t *wmsg = ToWide(E0); 
++ OutputDebugStringW(wmsg); 
++ free(wmsg); 
+// Infered from: (vlc/{prevFiles/prev_88ed3d_5d1a07_src#misc#messages.c,revFiles/88ed3d_5d1a07_src#misc#messages.c}: Win32DebugOutputMsg)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 14 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.93
+// -- Node Change --
+// Recall: 0.88, Precision: 0.93
+// -- General --
+// Functions fully changed: 10/15(66%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_a1f3bb_13399a_backends#hostmem-file.c: file_memory_backend_set_pmem
+ - vlc/prevFiles/prev_943b5c_d94a5a_modules#access#cdda.c: GetCDDBInfo
+ - qemu/prevFiles/prev_266a88_67c1ea9_hw#hppa#machine.c: machine_hppa_init
+ - gstreamer/prevFiles/prev_a8acba_a405ae_tools#gst-inspect.c: print_pad_templates_info
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_a2a2b5_f12046_modules#audio_output#auhal.c: Close
+*/
+
+// ---------------------------------------------

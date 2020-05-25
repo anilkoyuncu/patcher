@@ -1,0 +1,26 @@
+@@
+identifier I1;
+expression E2, E0;
+@@
+- memset(E0.I1, E2, ETH_ALEN); 
++ eth_zero_addr(E0.sa_data); 
+// Infered from: (linux/{prevFiles/prev_47f0585_21f5690_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac_wx.c,revFiles/47f0585_21f5690_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac_wx.c}: ieee80211_wx_get_wap), (linux/{prevFiles/prev_21f5690_76f7369_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c,revFiles/21f5690_76f7369_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c}: notify_wx_assoc_event), (linux/{prevFiles/prev_76f7369_cdbaf3f_drivers#staging#rtl8192e#rtllib_softmac_wx.c,revFiles/76f7369_cdbaf3f_drivers#staging#rtl8192e#rtllib_softmac_wx.c}: rtllib_wx_get_wap), (linux/{prevFiles/prev_cdbaf3f_c5c15efb_drivers#staging#rtl8192e#rtllib_softmac.c,revFiles/cdbaf3f_c5c15efb_drivers#staging#rtl8192e#rtllib_softmac.c}: notify_wx_assoc_event)
+// False positives: (linux/revFiles/21f5690_76f7369_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c: ieee80211_probe_req), (linux/revFiles/cdbaf3f_c5c15efb_drivers#staging#rtl8192e#rtllib_softmac.c: rtllib_probe_req), (linux/revFiles/f80c1d5_7288cad_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c: ieee80211_probe_req)
+// Recall: 0.83, Precision: 0.59, Matching recall: 0.83
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.71
+// -- Node Change --
+// Recall: 1.00, Precision: 0.60
+// -- General --
+// Functions fully changed: 5/7(71%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_21f5690_76f7369_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c: ieee80211_probe_req
+ - linux/prevFiles/prev_cdbaf3f_c5c15efb_drivers#staging#rtl8192e#rtllib_softmac.c: rtllib_probe_req
+*/
+
+// ---------------------------------------------

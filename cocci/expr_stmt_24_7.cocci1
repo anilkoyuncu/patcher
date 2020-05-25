@@ -1,0 +1,20 @@
+@@
+expression E0;
+typedef uint64_t;
+@@
+- E0->l1_table = qemu_malloc(E0->l1_size * sizeof(uint64_t )); 
++ E0->l1_table = qemu_mallocz(align_offset(E0->l1_size * sizeof(uint64_t ), 512)); 
+// Infered from: (qemu/{prevFiles/prev_3f6a3e_c53ffc_block#qcow2.c,revFiles/3f6a3e_c53ffc_block#qcow2.c}: qcow_open)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

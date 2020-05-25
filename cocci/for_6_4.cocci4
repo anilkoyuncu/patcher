@@ -1,0 +1,48 @@
+@@
+identifier I0;
+expression E1;
+@@
+- for(int I0 = 0;testcase[E1].results[I0] != NULL;++I0)  
++ for(size_t I0 = 0;testcase[E1].results[I0] != NULL;++I0)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_979111_a4d6f82_src#test#mrl_helpers.c,revFiles/979111_a4d6f82_src#test#mrl_helpers.c}: main)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.81, Precision: 0.65
+// -- Node Change --
+// Recall: 0.68, Precision: 0.50
+// -- General --
+// Functions fully changed: 7/23(30%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_3d2049_979111_test#src#misc#epg.c: assert_events
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_4b7977_0b574d_src#libvlc.c: Usage
+ - vlc/prevFiles/prev_2b25f4_108e15_modules#access#satip.c: satip_thread
+ - vlc/prevFiles/prev_31fef8_f901bb_modules#packetizer#mlp.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_c8a17e_3800e5_modules#demux#asf#libasf.c: ASF_ReadObject_extended_content_description
+ - ompi/prevFiles/prev_8349e1_afde83_ompi#mca#btl#vader#btl_vader_module.c: vader_finalize
+ - vlc/prevFiles/prev_c8a17e_3800e5_modules#demux#asf#libasf.c: ASF_FreeObject_extended_content_description
+ - vlc/prevFiles/prev_c8a17e_3800e5_modules#demux#asf#libasf.c: ASF_ReadObjectRoot
+ - vlc/prevFiles/prev_c8a17e_3800e5_modules#demux#asf#libasf.c: ASF_FreeObject_extended_stream_properties
+ - vlc/prevFiles/prev_31fef8_f901bb_modules#packetizer#mlp.c: TrueHdChannels
+ - vlc/prevFiles/prev_c8a17e_3800e5_modules#demux#asf#libasf.c: AsfObjectHelperReadString
+ - vlc/prevFiles/prev_c8a17e_3800e5_modules#demux#asf#libasf.c: ASF_ReadObject_marker
+ - vlc/prevFiles/prev_31fef8_f901bb_modules#packetizer#mlp.c: SyncInfo
+ - vlc/prevFiles/prev_654886_c465b5_modules#hw#mmal#deinterlace.c: create_picture_pool
+ - vlc/prevFiles/prev_9b48c2_10d5d4_src#video_output#video_output.c: ThreadChangeFilters
+ - vlc/prevFiles/prev_4b7977_0b574d_src#libvlc.c: ListModules
+*/
+
+// ---------------------------------------------

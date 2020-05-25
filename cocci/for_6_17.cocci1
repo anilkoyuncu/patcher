@@ -1,0 +1,23 @@
+@@
+binary operator B2 = {< ,<= };
+expression E0, E1, E3;
+@@
+- for(E0 = E1;E0 B2 E3;E0++)  
++ for(E0 = 0;E0 B2 E3;E0++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_558-A-13728340-13728523.c,revFiles/558-A-13728340-13728523.c}: main), (codeflaws/{prevFiles/prev_32-A-11394309-11394324.c,revFiles/32-A-11394309-11394324.c}: main)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->t_env[E1 - 1] > E0->t_env[E1])  
++ if (E0->t_env[E1 - 1] >= E0->t_env[E1])  
+  {
+- av_log(E2->avctx, AV_LOG_ERROR, "Non monotone time borders\n"); 
++ av_log(E2->avctx, AV_LOG_ERROR, "Not strictly monotone time borders\n"); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_ff8816_d8f13e_libavcodec#aacsbr_template.c,revFiles/ff8816_d8f13e_libavcodec#aacsbr_template.c}: read_sbr_grid)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = read(E1, E2, E3 * E4); 
++ E0 = read(E1, E2, (READ_3RD_ARG)(E3 * E4)); 
+// Infered from: (curl/{prevFiles/prev_6a7feb_539a80_docs#examples#anyauthput.c,revFiles/6a7feb_539a80_docs#examples#anyauthput.c}: read_callback)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

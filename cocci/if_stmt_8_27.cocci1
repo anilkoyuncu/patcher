@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (1 > E0 || NULL == E1 || NULL == E2)  
++ if ((1 > E0) || (NULL == E1) || (NULL == E2))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_b8a35f_97515c_src#mpi#c#graph_create.c,revFiles/b8a35f_97515c_src#mpi#c#graph_create.c}: MPI_Graph_create)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,30 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1].pes.i_stream_type = E2->probed.i_type; 
++ E0[E1].pes.i_codec = E2->probed.i_fourcc; 
+// Infered from: (vlc/{prevFiles/prev_4a7f60_356a47_modules#demux#mpeg#ts.c,revFiles/4a7f60_356a47_modules#demux#mpeg#ts.c}: MissingPATPMTFixup)
+// False positives: (vlc/revFiles/4a7f60_356a47_modules#demux#mpeg#ts.c: MissingPATPMTFixup)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 0.80
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_d3cb36_5f8c04_modules#codec#libmpeg2.c: GetAR
+ - vlc/prevFiles/prev_6eae83_7bc6a2_modules#codec#libmpeg2.c: RunDecoder
+ - vlc/prevFiles/prev_3620e9_460ea1_modules#stream_out#transcode#audio.c: transcode_audio_process
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_4a7f60_356a47_modules#demux#mpeg#ts.c: MissingPATPMTFixup
+*/
+
+// ---------------------------------------------

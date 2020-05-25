@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = XMaxRequestSize(E1->dpy) - MAX(sz_xRenderCompositeGlyphs8Req,  MAX(sz_xRenderCompositeGlyphs16Req,  sz_xRenderCompositeGlyphs32Req)); 
++ int I0 = XMaxRequestSize(E1->dpy) * 4 - MAX(sz_xRenderCompositeGlyphs8Req,  MAX(sz_xRenderCompositeGlyphs16Req,  sz_xRenderCompositeGlyphs32Req)); 
+// Infered from: (cairo/{prevFiles/prev_db1b18_cf473f_src#cairo-xlib-surface.c,revFiles/db1b18_cf473f_src#cairo-xlib-surface.c}: _cairo_xlib_surface_emit_glyphs)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

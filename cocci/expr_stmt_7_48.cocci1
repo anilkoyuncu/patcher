@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef gint32;
+@@
+- E0 = (gint32 )tvb_get_ntohs(E1, E2); 
++ E0 = tvb_get_ntohis(E1, E2); 
+// Infered from: (wireshark/{prevFiles/prev_13f8f2_4b8141_epan#dissectors#packet-umts_fp.c,revFiles/13f8f2_4b8141_epan#dissectors#packet-umts_fp.c}: dissect_common_timing_adjustment)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

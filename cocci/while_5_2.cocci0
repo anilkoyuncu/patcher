@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- while (*E0)  
++ while (E0 && *E0)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_cf2051_3ce2a3_lib#pop3.c,revFiles/cf2051_3ce2a3_lib#pop3.c}: pop3_parse_url_options), (curl/{prevFiles/prev_cf2051_3ce2a3_lib#imap.c,revFiles/cf2051_3ce2a3_lib#imap.c}: imap_parse_url_options), (FFmpeg/{prevFiles/prev_c83002_b113d4_libavcodec#ass_split.c,revFiles/c83002_b113d4_libavcodec#ass_split.c}: ff_ass_split_override_codes), (php-src/{prevFiles/prev_64df92_313de6_main#main.c,revFiles/64df92_313de6_main#main.c}: php_hash_environment), (curl/{prevFiles/prev_cf2051_3ce2a3_lib#smtp.c,revFiles/cf2051_3ce2a3_lib#smtp.c}: smtp_parse_url_options)
+// False positives: (curl/revFiles/cf2051_3ce2a3_lib#imap.c: imap_atom)
+// Recall: 0.50, Precision: 0.83, Matching recall: 1.00
+
+// ---------------------------------------------

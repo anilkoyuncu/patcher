@@ -1,0 +1,41 @@
+@@
+expression E0;
+@@
+- for(E0 >>= 1;E0 > 0;E0--)  
++ for(;E0 > 0;E0--)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_4efbd7_6ec87f_libavcodec#pcm.c,revFiles/4efbd7_6ec87f_libavcodec#pcm.c}: pcm_decode_frame)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 17 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 0.88
+// -- Node Change --
+// Recall: 0.67, Precision: 0.82
+// -- General --
+// Functions fully changed: 13/26(50%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_516-A-11839864-11839881.c: main
+ - FFmpeg/prevFiles/prev_c92f55_e936c8_libavcodec#dvdsubdec.c: guess_palette
+ - wireshark/prevFiles/prev_687a2d_f77465_epan#dissectors#packet-t38.c: t38_add_address
+ - wireshark/prevFiles/prev_7ca19c_ba7c0c_epan#dissectors#packet-gtp.c: msisdn_to_str
+ - git/prevFiles/prev_6e1788_c5203b_builtin-mv.c: copy_pathspec
+ - FFmpeg/prevFiles/prev_2017b4_d1e187_libavfilter#vf_colorbalance.c: config_output
+ - ompi/prevFiles/prev_595dd6_661f50_ompi#tools#ompi_info#output.c: ompi_info_out
+ - wireshark/prevFiles/prev_32dfb9_27e2c8_epan#dissectors#packet-sip.c: sip_is_packet_resend
+ - codeflaws/prevFiles/prev_292-A-3793362-3793375.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_8d4acf_2cbd94_gdbstub.c: cpu_gdb_write_register
+ - FFmpeg/prevFiles/prev_33a183_56ffa3_libavcodec#indeo3.c: parse_bintree
+ - codeflaws/prevFiles/prev_368-A-13052898-13052963.c: main
+ - FFmpeg/prevFiles/prev_4b7fa5_ff80c6_libavcodec#indeo3.c: decode_cell
+*/
+
+// ---------------------------------------------

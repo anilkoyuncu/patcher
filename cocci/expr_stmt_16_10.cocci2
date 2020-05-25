@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- av_samples_copy(E0->extended_data, E1->extended_data, 0, 0, E1->nb_samples,  av_get_channel_layout_nb_channels(E1->channel_layout),  E1->format); 
++ av_samples_copy(E0->extended_data, E1->extended_data, 0, 0, E1->nb_samples,  av_frame_get_channels(E1), E1->format); 
+// Infered from: (FFmpeg/{prevFiles/prev_265d45_d84e63_libavfilter#avfilter.c,revFiles/265d45_d84e63_libavfilter#avfilter.c}: ff_filter_frame_framed)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "Warning: no scancode found for keysym %d\n", E0); 
++ warn_report("no scancode found for keysym %d", E0); 
+// Infered from: (qemu/{prevFiles/prev_8297be_2ab4b1_ui#keymaps.c,revFiles/8297be_2ab4b1_ui#keymaps.c}: keysym2scancode)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

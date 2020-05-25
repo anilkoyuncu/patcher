@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = zend_string_alloc(E1, 0); 
++ E0 = zend_string_safe_alloc(1, E1, 0, 0); 
+// Infered from: (php-src/{prevFiles/prev_ccc12e_c89b7a_ext#zip#php_zip.c,revFiles/ccc12e_c89b7a_ext#zip#php_zip.c}: php_zip_get_from)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

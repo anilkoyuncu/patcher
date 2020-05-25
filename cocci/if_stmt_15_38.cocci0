@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->pict_type == S_TYPE && E0->vol_sprite_usage == GMC_SPRITE && E0->num_sprite_warping_points)  
++ if (E0->pict_type == S_TYPE && E0->vol_sprite_usage == GMC_SPRITE)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_f56dd3_b401eb_libavcodec#h263.c,revFiles/f56dd3_b401eb_libavcodec#h263.c}: mpeg4_decode_video_packet_header)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

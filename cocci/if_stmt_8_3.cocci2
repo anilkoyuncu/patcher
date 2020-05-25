@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (bytestream2_get_bytes_left(E0) < 2 + E1 * 12)  
++ if (bytestream2_get_bytes_left(E0) < 2 + E1 * (12 + 8))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_70432e_c9415e_libavcodec#pngdec.c,revFiles/70432e_c9415e_libavcodec#pngdec.c}: decode_frame_lscr)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- g_snprintf(E0, 15, "%d.%2ds", E1 / 1000, (E1 / 10) % 100); 
++ g_snprintf(E0, 15, "%d.%02ds", E1 / 1000, (E1 / 10) % 100); 
+// Infered from: (wireshark/{prevFiles/prev_5040aa_3f2a49_gtk#io_stat.c,revFiles/5040aa_3f2a49_gtk#io_stat.c}: io_stat_draw)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

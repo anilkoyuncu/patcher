@@ -1,0 +1,47 @@
+@@
+expression E0;
+@@
+- if (E0->flags & G_PARAM_CONSTRUCT_ONLY)  
++ if (E0->flags & (G_PARAM_CONSTRUCT | G_PARAM_CONSTRUCT_ONLY))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_f430a7_6cee81_gtk#gtkbuilder.c,revFiles/f430a7_6cee81_gtk#gtkbuilder.c}: gtk_builder_get_parameters), (gtk/{prevFiles/prev_f430a7_6cee81_gtk#gtkbuilder.c,revFiles/f430a7_6cee81_gtk#gtkbuilder.c}: gtk_builder_get_parameters)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 0.90
+// -- Node Change --
+// Recall: 0.42, Precision: 0.85
+// -- General --
+// Functions fully changed: 7/19(36%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_3f07dd_1a054b_ffserver_config.c: ffserver_parse_config_stream
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_3f07dd_1a054b_ffserver_config.c: ffserver_apply_stream_config
+ - wireshark/prevFiles/prev_583a47_601dc7_epan#dissectors#packet-teamspeak2.c: ts2_standard_dissect
+ - codeflaws/prevFiles/prev_669-D-17491743-17492020.c: main
+ - ompi/prevFiles/prev_714b40_e49131_opal#runtime#opal_init.c: opal_init_util
+ - git/prevFiles/prev_cd1870_81e50e_diffcore-rename.c: estimate_similarity
+ - FFmpeg/prevFiles/prev_f3abdf_8b3aff_cmdutils.c: opt_default
+ - wireshark/prevFiles/prev_bd91ce_45ca43_ui#gtk#dfilter_expr_dlg.c: field_select_row_cb
+ - ompi/prevFiles/prev_366f9d_a78a7b_orte#mca#grpcomm#pmi#grpcomm_pmi_module.c: modex
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_15e3df_a1de93_lib#multi.c: curl_multi_remove_handle
+ - apr/prevFiles/prev_88b9e0_214e9b_test#testatomic.c: check_basic_atomics
+*/
+
+// ---------------------------------------------

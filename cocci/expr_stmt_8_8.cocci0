@@ -1,0 +1,8 @@
+@@
+@@
+- error_report("warning: disabling copy-on-read on read-only drive"); 
++ warn_report("disabling copy-on-read on read-only drive"); 
+// Infered from: (qemu/{prevFiles/prev_3dc6f8_97f403_blockdev.c,revFiles/3dc6f8_97f403_blockdev.c}: drive_new)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

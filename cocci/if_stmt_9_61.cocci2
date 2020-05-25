@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (ompi_mtl_mxm.bulk_disconnect && E0 == ompi_proc_world_size())  
++ if (ompi_mtl_mxm.bulk_disconnect && ((int )E0) == ompi_proc_world_size())  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_38c253c_0a9956_ompi#mca#mtl#mxm#mtl_mxm.c,revFiles/38c253c_0a9956_ompi#mca#mtl#mxm#mtl_mxm.c}: ompi_mtl_mxm_del_procs)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

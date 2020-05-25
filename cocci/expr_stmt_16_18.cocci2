@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef QString;
+@@
+- qdict_put_obj(E0, qstring_get_str(qobject_to_qstring(E1)), E2); 
++ qdict_put_obj(E0, qstring_get_str(qobject_to(QString , E1)), E2); 
+// Infered from: (qemu/{prevFiles/prev_7dc847_1a56b1_qobject#json-parser.c,revFiles/7dc847_1a56b1_qobject#json-parser.c}: parse_pair)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

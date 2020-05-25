@@ -1,0 +1,51 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- playlist_AddExt(E0, E1[E2], NULL, E2 == 0 && E3 != IPC_CMD_ENQUEUE, E4,  (const  char **)(E4 ? &E1[E2 + 1] :NULL),  VLC_INPUT_OPTION_TRUSTED, true); 
++ playlist_AddExt(E0, E1[E2], NULL, E2 == 0 && E3 != IPC_CMD_ENQUEUE, E4,  (const  char **)(E4 ? &E1[E2 + 1] :NULL),  VLC_INPUT_OPTION_TRUSTED); 
+// Infered from: (vlc/{prevFiles/prev_89b3a3_a03d51_src#os2#specific.c,revFiles/89b3a3_a03d51_src#os2#specific.c}: IPCHelperThread)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 21 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 0.84
+// -- Node Change --
+// Recall: 0.53, Precision: 0.82
+// -- General --
+// Functions fully changed: 30/56(53%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_660508_a842eb_packet-spnego.c: dissect_spnego_mechListMIC
+ - php-src/prevFiles/prev_0f4216_461add_ext#openssl#openssl.c: php_openssl_dh_pub_from_priv
+ - gtk/prevFiles/prev_550123_d2c8b6_gtk#gtktreeview.c: gtk_tree_view_draw_grid_lines
+ - FFmpeg/prevFiles/prev_dd3043d_459414_libavfilter#vf_setfield.c: init
+ - vlc/prevFiles/prev_f22f4e_f9e122_modules#mux#mpeg#ps.c: AddStream
+ - wireshark/prevFiles/prev_8c2002_0e2751_packet-smb-pipe.c: dissect_transact_next
+ - curl/prevFiles/prev_df3647_eb4968_tests#libtest#lib1536.c: test
+ - git/prevFiles/prev_e40a9e_1ed481_send-pack.c: rev_list
+ - wireshark/prevFiles/prev_8c2002_0e2751_packet-smb-pipe.c: dissect_pipe_lanman
+ - gtk/prevFiles/prev_2fed74_8644e5_tests#testlist3.c: create_row
+ - qemu/prevFiles/prev_82dc8b_3db34b_block.c: bdrv_open_common
+ - qemu/prevFiles/prev_053416_e5c15e_hw#debugcon.c: debugcon_ioport_read
+ - wireshark/prevFiles/prev_ee1fca_efc7fe5_epan#dissectors#packet-rtcp.c: dissect_rtcp_rtpfb_nack
+ - linux/prevFiles/prev_5df204_91c458_drivers#staging#rtl8723bs#hal#HalPhyRf_8723B.c: _PHY_PathADDAOn8723B
+ - wireshark/prevFiles/prev_8c2002_0e2751_packet-bgp.c: dissect_bgp
+ - php-src/prevFiles/prev_c9357f_598337_ext#zlib#zlib.c: PHP_FUNCTION
+ - qemu/prevFiles/prev_978d5d_1304ca_bt-host.c: bt_host_hci
+ - wireshark/prevFiles/prev_ee1fca_efc7fe5_epan#dissectors#packet-rtcp.c: dissect_rtcp_rtpfb
+ - qemu/prevFiles/prev_b10577_8b2d42_block#win32-aio.c: win32_aio_flush_cb
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_2471b2_3e90cf_modules#demux#asf#asf.c: SendPacket
+ - FFmpeg/prevFiles/prev_72cf47_eb4205_libavcodec#aacdec.c: decode_eld_specific_config
+ - wireshark/prevFiles/prev_93370c_088398_epan#plugins.c: plugins_scan_dir
+ - vlc/prevFiles/prev_2471b2_3e90cf_modules#demux#asf#asf.c: SeekIndex
+ - git/prevFiles/prev_e40a9e_1ed481_send-pack.c: main
+ - qemu/prevFiles/prev_b1d6d5_e9119c_tcg#ppc64#tcg-target.c: tcg_out_op
+ - vlc/prevFiles/prev_2471b2_3e90cf_modules#demux#asf#asf.c: Demux
+*/
+
+// ---------------------------------------------

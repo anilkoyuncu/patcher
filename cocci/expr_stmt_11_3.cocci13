@@ -1,0 +1,12 @@
+@@
+identifier I0 = {ares_waitperform ,secstotimestr };
+expression E1, E2, E4;
+binary operator B3 = {+ ,/ };
+@@
+- I0(E1, E2 B3 E4); 
++ I0(E1, (int )(E2 B3 E4)); 
+// Infered from: (vlc/{prevFiles/prev_4842d4_a0ffcd_src#playlist#item.c,revFiles/4842d4_a0ffcd_src#playlist#item.c}: playlist_ItemSetDuration), (curl/{prevFiles/prev_5c8fc7_e8d371_lib#hostares.c,revFiles/5c8fc7_e8d371_lib#hostares.c}: Curl_wait_for_resolv)
+// False positives: (curl/revFiles/5c8fc7_e8d371_lib#hostares.c: Curl_wait_for_resolv)
+// Recall: 0.03, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

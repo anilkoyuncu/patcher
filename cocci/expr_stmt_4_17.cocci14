@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (ptrdiff_t )E1 - (ptrdiff_t )READPTR(E2) + 1; 
++ E0 = (long )E1 - (long )READPTR(E2) + 1; 
+// Infered from: (php-src/{prevFiles/prev_31fe5e_2d08c8_main#network.c,revFiles/31fe5e_2d08c8_main#network.c}: php_sockop_gets)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

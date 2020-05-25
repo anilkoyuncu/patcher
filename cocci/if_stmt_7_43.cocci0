@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->last_in_time && E1 - E0->last_in_time > GST_SECOND)  
++ if (E0->last_in_time != -1 && E1 - E0->last_in_time > GST_SECOND)  
+  {
+  ...
+  }
+// Infered from: (gstreamer/{prevFiles/prev_13f804_cf4387_libs#gst#base#gstbasesink.c,revFiles/13f804_cf4387_libs#gst#base#gstbasesink.c}: gst_base_sink_is_too_late)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- *E0 = av_malloc(sizeof(*E0) * LUT_BUFF); 
++ *E0 = av_malloc(sizeof(**E0) * LUT_BUFF); 
+// Infered from: (FFmpeg/{prevFiles/prev_e4cb6a_4b39cc_libavcodec#bgmc.c,revFiles/e4cb6a_4b39cc_libavcodec#bgmc.c}: ff_bgmc_init), (FFmpeg/{prevFiles/prev_41bf94_45bd0d_libavcodec#bgmc.c,revFiles/41bf94_45bd0d_libavcodec#bgmc.c}: ff_bgmc_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

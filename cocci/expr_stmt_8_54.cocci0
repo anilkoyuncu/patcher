@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = qobject_from_jsonv(E1, &E2, NULL); 
++ E0 = qobject_from_jsonv(E1, &E2, &error_abort); 
+// Infered from: (qemu/{prevFiles/prev_53f991_99dbfd_tests#libqtest.c,revFiles/53f991_99dbfd_tests#libqtest.c}: qmp_fd_sendv)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

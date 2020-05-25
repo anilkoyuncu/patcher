@@ -1,0 +1,42 @@
+@@
+identifier I4, I5, I6, I7;
+expression E0, E1, E2, E3, E8;
+@@
+- gtk_widget_set_allocation(E0, E1); 
+- if (gtk_widget_get_realized(E0))  
+- {
+- gdk_window_move_resize(gtk_button_get_event_window(E2), E1->x, E1->y,  E1->width, E1->height); 
+- }
+- gtk_css_gadget_get_preferred_size(E3->indicator_gadget,  GTK_ORIENTATION_HORIZONTAL, -1, &I4, &I5,  NULL, NULL); 
+- gtk_css_gadget_get_preferred_size(E3->indicator_gadget,  GTK_ORIENTATION_VERTICAL, -1, &I6, &I7,  NULL, NULL); 
++ gtk_css_gadget_get_preferred_size(E3->indicator_gadget,  GTK_ORIENTATION_HORIZONTAL, -1, NULL,  &check_width, NULL, NULL); 
++ gtk_css_gadget_get_preferred_size(E3->indicator_gadget,  GTK_ORIENTATION_VERTICAL, -1, NULL,  &check_height, NULL, NULL); 
+  ...
+- E8.y = E1->y + (E1->height - I7) / 2; 
+- E8.width = I5; 
+- E8.height = I7; 
++ E8.y = E1->y + (E1->height - check_height) / 2; 
++ E8.width = check_width; 
++ E8.height = check_height; 
+// Infered from: (gtk/{prevFiles/prev_c0683d_f7236b_gtk#gtkcheckbutton.c,revFiles/c0683d_f7236b_gtk#gtkcheckbutton.c}: gtk_check_button_allocate)
+// Recall: 0.38, Precision: 1.00, Matching recall: 0.59
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.14, Precision: 1.00
+// -- Node Change --
+// Recall: 0.56, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/7(0%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_c0683d_f7236b_gtk#gtkcheckbutton.c: gtk_check_button_allocate
+*/
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_19a02b_432309_Objects#typeobject.c: type_set_bases
+*/
+
+// ---------------------------------------------

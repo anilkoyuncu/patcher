@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->fb == NULL)  
++ if (E0->primary->fb == NULL)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#psb_intel_display.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#gma500#psb_intel_display.c}: psb_intel_crtc_mode_set)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

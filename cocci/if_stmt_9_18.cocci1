@@ -1,0 +1,11 @@
+@@
+@@
+- if (!&SG(sapi_headers).headers)  
++ if (!&SG(sapi_headers).headers.count)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_55cefb_73a6e7_ext#standard#head.c,revFiles/55cefb_73a6e7_ext#standard#head.c}: PHP_FUNCTION)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

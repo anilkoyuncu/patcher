@@ -1,0 +1,31 @@
+@@
+expression E0;
+@@
+- fprintf(E0,  "# One of: RELATIVE, ABSOLUTE, ABSOLUTE_WITH_DATE, DELTA, EPOCH\n"); 
++ fprintf(E0,  "# One of: RELATIVE, ABSOLUTE, ABSOLUTE_WITH_DATE, DELTA, DELTA_DIS, EPOCH\n"); 
+// Infered from: (wireshark/{prevFiles/prev_b58863_2c07da_gtk#recent.c,revFiles/b58863_2c07da_gtk#recent.c}: write_recent)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.09, Precision: 1.00
+// -- Node Change --
+// Recall: 0.09, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/23(8%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_b58863_2c07da_gtk#recent.c: 
+ - wireshark/prevFiles/prev_6007c3_b1a1101_epan#dissectors#packet-ssl-utils.c: 
+ - redis/prevFiles/prev_abab0b_671b1f_src#redis-cli.c: findBigKeys
+ - git/prevFiles/prev_567523_d63bd9_builtin-gc.c: 
+ - FFmpeg/prevFiles/prev_c3bb6e_93671d_libavformat#hls.c: save_avio_options
+ - FFmpeg/prevFiles/prev_f37bfd_c3bb6e_libavformat#dashdec.c: save_avio_options
+ - ompi/prevFiles/prev_798f47_2a1e0a_ompi#mca#coll#hierarch#coll_hierarch.c: 
+ - gtk/prevFiles/prev_8430be_78eccd_gtk#inspector#general.c: add_device
+ - ompi/prevFiles/prev_798f47_2a1e0a_ompi#mca#coll#hierarch#coll_hierarch.c: mca_coll_hierarch_comm_query
+*/
+
+// ---------------------------------------------

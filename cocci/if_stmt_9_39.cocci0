@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- LocaleInit (E0); 
+// Infered from: (vlc/{prevFiles/prev_92871b_d4fc12_src#libvlc-common.c,revFiles/92871b_d4fc12_src#libvlc-common.c}: libvlc_InternalInit)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

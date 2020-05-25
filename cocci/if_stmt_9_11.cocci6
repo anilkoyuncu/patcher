@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+typedef gpointer;
+@@
+- if (!g_atomic_pointer_compare_and_exchange((gpointer *)&E0->elementfactory,  NULL, E1))  
++ if (!g_atomic_pointer_compare_and_exchange((gpointer) & E0->elementfactory,  NULL, E1))  
+  {
+  ...
+  }
+// Infered from: (gstreamer/{prevFiles/prev_4165cd_29170a_gst#gstelementfactory.c,revFiles/4165cd_29170a_gst#gstelementfactory.c}: gst_element_factory_create)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

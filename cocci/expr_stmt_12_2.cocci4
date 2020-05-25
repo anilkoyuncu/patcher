@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = IDirect3DDevice9Ex_StretchRect(E1->d3dctx.devex, E2->surface, NULL,  E1->dx_render, NULL, D3DTEXF_NONE); 
++ E0 = IDirect3DDevice9Ex_StretchRect(E1->d3dctx.devex, E2->surface, &rect,  E1->dx_render, NULL, D3DTEXF_NONE); 
+// Infered from: (vlc/{prevFiles/prev_849fe1_6068eb_modules#video_output#win32#direct3d9.c,revFiles/849fe1_6068eb_modules#video_output#win32#direct3d9.c}: GLConvUpdate)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

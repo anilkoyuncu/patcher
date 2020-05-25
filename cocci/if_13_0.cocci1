@@ -1,0 +1,28 @@
+@@
+typedef timer_t;
+@@
+- if (event_timer != -1)  
++ if (event_timer != (timer_t )-1)  
+  {
+  ...
+- event_timer = -1; 
++ event_timer = (timer_t )-1; 
+  }
+// Infered from: (nginx/{prevFiles/prev_6e8bc2_02d8e8_src#event#modules#ngx_eventport_module.c,revFiles/6e8bc2_02d8e8_src#event#modules#ngx_eventport_module.c}: ngx_eventport_done)
+// Recall: 0.36, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.73, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - nginx/prevFiles/prev_6e8bc2_02d8e8_src#event#modules#ngx_eventport_module.c: 
+*/
+
+// ---------------------------------------------

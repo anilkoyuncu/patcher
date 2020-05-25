@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = _cairo_surface_fill(E1, CAIRO_OPERATOR_IN, &E2.base, &E3->path,  E4->fill_rule, E4->tolerance, E4->antialias, NULL); 
++ E0 = _cairo_surface_fill(E1, CAIRO_OPERATOR_IN, &E2.base, &E3->path,  E3->fill_rule, E3->tolerance, E3->antialias, NULL); 
+// Infered from: (cairo/{prevFiles/prev_0a548d_8a323d_src#cairo-clip.c,revFiles/0a548d_8a323d_src#cairo-clip.c}: _cairo_clip_path_get_surface)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

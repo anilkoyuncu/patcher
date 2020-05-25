@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = FFALIGN(E1->lrange, 16) + E1->pstride * E1->lrange; 
++ E0 = FFALIGN(E1->lrange * E1->bypp, 16) + E1->pstride * E1->lrange; 
+// Infered from: (FFmpeg/{prevFiles/prev_def040_223a2c_libavcodec#zmbvenc.c,revFiles/def040_223a2c_libavcodec#zmbvenc.c}: encode_init)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

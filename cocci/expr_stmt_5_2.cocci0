@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1] = (E0[E1] << 14) + (E2 << 13); 
++ E0[E1] = (E0[E1] * (1 << 14)) + (E2 << 13); 
+// Infered from: (FFmpeg/{prevFiles/prev_cbbd33_c3f10e_libavcodec#alsdec.c,revFiles/cbbd33_c3f10e_libavcodec#alsdec.c}: read_var_block_data)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

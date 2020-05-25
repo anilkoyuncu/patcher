@@ -1,0 +1,35 @@
+@@
+expression E0, E1;
+@@
+- if (E0 - E1->psz_source == 1)  
++ if (E0 - E1->psz_dupsource == 1)  
+  {
+- msg_Warn(E1, "drive letter %c: found in source string", E1->psz_source[0]); 
++ msg_Warn(E1, "drive letter %c: found in source string", E1->psz_dupsource[0]); 
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_65a153_461358_src#input#input.c,revFiles/65a153_461358_src#input#input.c}: InitThread)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.90, Precision: 1.00
+// -- Node Change --
+// Recall: 0.79, Precision: 0.83
+// -- General --
+// Functions fully changed: 5/10(50%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_3c71a1_3ec322_lib#ssh.c: ssh_connect
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_65a153_461358_src#input#input.c: InitThread
+ - FFmpeg/prevFiles/prev_9806fb_d06497_libavcodec#binkaudio.c: decode_init
+ - FFmpeg/prevFiles/prev_136901_73b3b5_libavcodec#binkaudio.c: decode_init
+ - wireshark/prevFiles/prev_c09379_e2bcee_epan#prefs.c: pre_init_prefs
+*/
+
+// ---------------------------------------------

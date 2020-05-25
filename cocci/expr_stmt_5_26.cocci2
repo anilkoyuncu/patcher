@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- *E0 = *(++E1); 
++ *E0 = *E1; 
+// Infered from: (FFmpeg/{prevFiles/prev_a2a38d_bc5acf_avconv.c,revFiles/a2a38d_bc5acf_avconv.c}: parse_meta_type)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_a2a38d_bc5acf_avconv.c: opt_streamid
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- ans = min(ans, 86401 - dp[k]); 
++ ans = max(ans, 86400 - dp[k]); 
+// Infered from: (codeflaws/{prevFiles/prev_158-E-1314156-1314160.c,revFiles/158-E-1314156-1314160.c}: main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- if (ip_addr(E0, E1 - E0, &E2.mask) != 0)  
++ if (ip_addr(E0, (int )(E1 - E0), &E2.mask) != 0)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_33eaf2_a054e5_ares#ares_init.c,revFiles/33eaf2_a054e5_ares#ares_init.c}: config_sortlist)
+// False positives: (curl/revFiles/76241d_89227a_ares#ares_init.c: config_sortlist)
+// Recall: 0.09, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

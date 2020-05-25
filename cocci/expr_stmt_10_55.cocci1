@@ -1,0 +1,8 @@
+@@
+@@
+- RETURN_DOUBLE(NAN); 
++ RETURN_DOUBLE(php_get_nan()); 
+// Infered from: (php-src/{prevFiles/prev_7e8ec8_97317c7_ext#standard#math.c,revFiles/7e8ec8_97317c7_ext#standard#math.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_232ae3_5b8a97_ext#standard#math.c,revFiles/232ae3_5b8a97_ext#standard#math.c}: PHP_FUNCTION)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

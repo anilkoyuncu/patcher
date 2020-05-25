@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- return vlc_cond_wait_delay(E0, E1, (E2 - mdate()) / 1000); 
++ return vlc_cond_wait_delay(E0, E1, (E2 + 999 - mdate()) / 1000); 
+// Infered from: (vlc/{prevFiles/prev_113ded_5daf66_src#win32#thread.c,revFiles/113ded_5daf66_src#win32#thread.c}: vlc_cond_timedwait)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

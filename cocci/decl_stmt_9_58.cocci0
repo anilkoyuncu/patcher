@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef uint16_t;
+@@
+- uint16_t I0 = (le16_to_cpu(E1->tx.tcb_bytes) & 0x3fff); 
++ uint16_t I0 = E1->tx.tcb_bytes & 0x3fff; 
+// Infered from: (qemu/{prevFiles/prev_8f8e80_2ec405_hw#net#eepro100.c,revFiles/8f8e80_2ec405_hw#net#eepro100.c}: tx_command)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

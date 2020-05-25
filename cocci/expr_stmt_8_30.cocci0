@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- g_warning("adding flushing pad '%s' to running element '%s'",  GST_STR_NULL(E0), GST_ELEMENT_NAME(E1)); 
+// Infered from: (gstreamer/{prevFiles/prev_ae56d7_7c4e05_gst#gstelement.c,revFiles/ae56d7_7c4e05_gst#gstelement.c}: gst_element_add_pad)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

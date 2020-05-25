@@ -1,0 +1,8 @@
+@@
+@@
+- return VLC_EEXITSUCCESS; 
++ exit(0); 
+// Infered from: (vlc/{prevFiles/prev_91bef2_0c40a3_src#libvlc.c,revFiles/91bef2_0c40a3_src#libvlc.c}: libvlc_InternalInit)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

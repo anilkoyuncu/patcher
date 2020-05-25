@@ -1,0 +1,10 @@
+@@
+expression E2, E0, E1;
+@@
+- E0[E1][E2] <<= 1; 
++ E0[E1][E2] *= 2; 
+// Infered from: (FFmpeg/{prevFiles/prev_c722a6_181e13_libavcodec#vc1_block.c,revFiles/c722a6_181e13_libavcodec#vc1_block.c}: vc1_decode_b_mb), (FFmpeg/{prevFiles/prev_b153ba_da93e2_libavcodec#vc1_block.c,revFiles/b153ba_da93e2_libavcodec#vc1_block.c}: vc1_decode_p_mb), (FFmpeg/{prevFiles/prev_2f588c_9b533d_libavcodec#vc1_block.c,revFiles/2f588c_9b533d_libavcodec#vc1_block.c}: vc1_decode_p_mb), (FFmpeg/{prevFiles/prev_706757d_a9f3e4_libavcodec#mpeg12dec.c,revFiles/706757d_a9f3e4_libavcodec#mpeg12dec.c}: mpeg_decode_mb)
+// False positives: (FFmpeg/revFiles/2f588c_9b533d_libavcodec#vc1_block.c: vc1_decode_b_mb_intfi), (FFmpeg/revFiles/b153ba_da93e2_libavcodec#vc1_block.c: vc1_decode_b_mb), (FFmpeg/revFiles/b153ba_da93e2_libavcodec#vc1_block.c: vc1_decode_b_mb_intfi), (FFmpeg/revFiles/b153ba_da93e2_libavcodec#vc1_block.c: vc1_decode_i_blocks), (FFmpeg/revFiles/b153ba_da93e2_libavcodec#vc1_block.c: vc1_decode_p_mb), (FFmpeg/revFiles/c722a6_181e13_libavcodec#vc1_block.c: vc1_decode_b_mb_intfi), (FFmpeg/revFiles/c722a6_181e13_libavcodec#vc1_block.c: vc1_decode_p_mb)
+// Recall: 0.22, Precision: 0.42, Matching recall: 1.00
+
+// ---------------------------------------------

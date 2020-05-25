@@ -1,0 +1,32 @@
+@@
+expression E0, E1;
+@@
+- msg_Warn(E0, "rtmp.c:360 i_dts %d i_pts %d", E1->i_dts, E1->i_pts); 
+// Infered from: (vlc/{prevFiles/prev_a0b369_c88f84_modules#access_output#rtmp.c,revFiles/a0b369_c88f84_modules#access_output#rtmp.c}: Write)
+// Recall: 0.01, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.07, Precision: 0.75
+// -- Node Change --
+// Recall: 0.15, Precision: 0.80
+// -- General --
+// Functions fully changed: 5/92(5%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_a0b369_c88f84_modules#access_output#rtmp.c: Write
+*/
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_e9422b_17c5d0_tests#libtest#libntlmconnect.c: test
+ - cmake/prevFiles/prev_fbe5a2_e4092a_Source#kwsys#ProcessWin32.c: kwsysProcess_List__Update_NT4
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - libarchive/prevFiles/prev_c84e4e_a21777_libarchive#archive_read_disk_set_standard_lookup.c: cleanup
+ - libarchive/prevFiles/prev_c84e4e_a21777_libarchive#archive_read_disk_set_standard_lookup.c: lookup_name
+*/
+
+// ---------------------------------------------

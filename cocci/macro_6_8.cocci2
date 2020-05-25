@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- set_irq_type(E0, E1); 
++ irq_set_irq_type(E0, E1); 
+// Infered from: (linux/{prevFiles/prev_ec775d_7bfbc1f2_arch#powerpc#kernel#irq.c,revFiles/ec775d_7bfbc1f2_arch#powerpc#kernel#irq.c}: irq_create_of_mapping)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

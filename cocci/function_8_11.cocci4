@@ -1,0 +1,15 @@
+@@
+assignment operator A1;
+expression E0, E2;
+@@
+- if (E0)  
++ if (E0)  
+  {
+- FreeSDP(E0); 
++ FreeSDP(E0); 
+  }
+- E0 A1 E2; 
+// Infered from: (vlc/{prevFiles/prev_1965d8_c731e9_modules#services_discovery#sap.c,revFiles/1965d8_c731e9_modules#services_discovery#sap.c}: OpenDemux)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

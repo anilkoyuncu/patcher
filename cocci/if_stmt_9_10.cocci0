@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->name == NULL)  
++ if (E0 == NULL)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_86b2f69_5f6a34_epan#addr_resolv.c,revFiles/86b2f69_5f6a34_epan#addr_resolv.c}: add_ether_byip)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

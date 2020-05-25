@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->pix_fmt = (E1 == RT_FORMAT_RGB) ? PIX_FMT_RGB0 :PIX_FMT_BGR0; 
++ E0->pix_fmt = (E1 == RT_FORMAT_RGB) ? PIX_FMT_0RGB :PIX_FMT_0BGR; 
+// Infered from: (FFmpeg/{prevFiles/prev_19e72e_af55a9_libavcodec#sunrast.c,revFiles/19e72e_af55a9_libavcodec#sunrast.c}: sunrast_decode_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

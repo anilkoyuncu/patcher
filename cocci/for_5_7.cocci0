@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = 0;E0 < 8;E0++, E1 += 2, E2 += 4)  
++ for(E0 = 0;E0 < 8;E0++, E1 += 2, E2 += 8)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_00b2ac_22036a_target-sparc#ldst_helper.c,revFiles/00b2ac_22036a_target-sparc#ldst_helper.c}: helper_ldf_asi)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

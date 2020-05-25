@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "%s: bad transaction on Interrupt channel.\n", __func__); 
++ error_report("%s: bad transaction on Interrupt channel.", __func__); 
+// Infered from: (qemu/{prevFiles/prev_bf937a_c94a60_hw#bt#hid.c,revFiles/bf937a_c94a60_hw#bt#hid.c}: bt_hid_interrupt_sdu)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

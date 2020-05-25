@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->codec_tag == MKTAG('Y', 'V', '1', '2'))  
++ if (E0->codec_tag == MKTAG('Y', 'V', '1', '2') || E0->codec_tag == MKTAG(  'Y', 'V', 'U', '9'))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_71b065_f9928b_libavcodec#rawdec.c,revFiles/71b065_f9928b_libavcodec#rawdec.c}: raw_decode)
+// False positives: (FFmpeg/revFiles/83f028_0de215_libavcodec#rawdec.c: raw_decode)
+// Recall: 0.11, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

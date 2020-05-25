@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- for(int I0 = 0;I0 < E1->linesize[E2];I0++)  
++ for(int I0 = 0;I0 < E1->linesize[E2] / 2;I0++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_723d69_d4d6b7_libavfilter#vf_lagfun.c,revFiles/723d69_d4d6b7_libavfilter#vf_lagfun.c}: lagfun_frame16)
+// False positives: (FFmpeg/revFiles/723d69_d4d6b7_libavfilter#vf_lagfun.c: lagfun_frame8)
+// Recall: 0.04, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- avio_get_str(E0, sizeof(E1), E1, sizeof(E1)); 
++ avio_get_str(E0, INT_MAX, E1, sizeof(E1)); 
+// Infered from: (FFmpeg/{prevFiles/prev_f7a9b1_14d94a_libavformat#cafdec.c,revFiles/f7a9b1_14d94a_libavformat#cafdec.c}: read_info_chunk), (FFmpeg/{prevFiles/prev_f7a9b1_14d94a_libavformat#cafdec.c,revFiles/f7a9b1_14d94a_libavformat#cafdec.c}: read_info_chunk)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

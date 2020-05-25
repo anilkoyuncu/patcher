@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0 & 0xF) > 4)  
++ if ((E0 & 0xF) > 4 || (E0 & 0xF) == 3)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_c43605_e4efd4_libavcodec#pafvideo.c,revFiles/c43605_e4efd4_libavcodec#pafvideo.c}: paf_video_decode)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

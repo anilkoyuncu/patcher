@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!get_channel(&E0, &E1, E2))  
++ if (get_channel(&E0, &E1, E2) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e84361_8f629a_libavfilter#af_channelmap.c,revFiles/e84361_8f629a_libavfilter#af_channelmap.c}: channelmap_init)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

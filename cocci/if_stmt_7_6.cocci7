@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!strcmp(E0[0], "HEAD") && prefixcmp(E0[1], "refs/"))  
++ if (!strcmp(E0[0], "HEAD") && !starts_with(E0[1], "refs/"))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_595565_956623_builtin#symbolic-ref.c,revFiles/595565_956623_builtin#symbolic-ref.c}: cmd_symbolic_ref)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

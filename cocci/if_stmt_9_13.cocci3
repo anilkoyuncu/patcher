@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((E0 = sshbuf_get_cstring(E1, &E2)) != 0)  
++ if ((E0 = sshbuf_get_cstring(E1, &E2, NULL)) != 0)  
+  {
+  ...
+  }
+// Infered from: (openssh-portable/{prevFiles/prev_7aab10_380320_monitor_wrap.c,revFiles/7aab10_380320_monitor_wrap.c}: mm_skey_query)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

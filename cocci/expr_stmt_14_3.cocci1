@@ -1,0 +1,18 @@
+@@
+@@
+- sapi_cgi_flush(SG(server_context)); 
++ sapi_cgi_flush(); 
+// Infered from: (php-src/{prevFiles/prev_a8a36b_aed4b0_sapi#cgi#cgi_main.c,revFiles/a8a36b_aed4b0_sapi#cgi#cgi_main.c}: sapi_cgi_deactivate)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+
+// ---------------------------------------------

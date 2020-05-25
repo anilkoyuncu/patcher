@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- char I0[250]; 
+- curl_easy_getinfo(E1->cp, E2, I0); 
++ char *I0; 
++ curl_easy_getinfo(E1->cp, E2, &I0); 
+// Infered from: (php-src/{prevFiles/prev_f25ccb_41a2b5_ext#curl#curl.c,revFiles/f25ccb_41a2b5_ext#curl#curl.c}: PHP_FUNCTION)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

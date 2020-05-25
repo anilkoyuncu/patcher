@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+typedef gchar;
+@@
+- if (strcmp(E0, (gchar *)g_ptr_array_index(E1, E2)) == 0)  
++ if ((E0) && (strcmp(E0, (gchar *)g_ptr_array_index(E1, E2)) == 0))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_30a439_2d7828_epan#dissectors#packet-xml.c,revFiles/30a439_2d7828_epan#dissectors#packet-xml.c}: make_xml_hier)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

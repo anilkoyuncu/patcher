@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = E1->keyboard_mode && ((E1->active_menu_item && !E2) || (E1 == E3 && !E1->parent_menu_shell && gtk_widget_has_grab(  E1))); 
++ E0 = E1->keyboard_mode && ((E1->active_menu_item && !E2) || (E1 == E3 && !E1->parent_menu_shell && gtk_widget_has_grab(  GTK_WIDGET(  E1)))); 
+// Infered from: (gtk/{prevFiles/prev_2abf10_147240_gtk#gtkmenushell.c,revFiles/2abf10_147240_gtk#gtkmenushell.c}: _gtk_menu_shell_update_mnemonics), (gtk/{prevFiles/prev_134a8f_479c7b_gtk#gtkmenushell.c,revFiles/134a8f_479c7b_gtk#gtkmenushell.c}: _gtk_menu_shell_update_mnemonics)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- msg_Warn(E0, "invalid PPS (pps_id=%d sps_id=%d)", E1->i_id, E1->i_sps_id); 
++ msg_Warn(E0, "invalid PPS"); 
+// Infered from: (vlc/{prevFiles/prev_60d127_486121_modules#packetizer#h264.c,revFiles/60d127_486121_modules#packetizer#h264.c}: PutPPS)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

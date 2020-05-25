@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = (E1 - BONITO_REGBASE) >> 2; 
++ E0 = E1 >> 2; 
+// Infered from: (qemu/{prevFiles/prev_0ca4f9_b8df92_hw#pci-host#bonito.c,revFiles/0ca4f9_b8df92_hw#pci-host#bonito.c}: bonito_readl)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

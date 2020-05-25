@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return (E0 & BDRV_BLOCK_ALLOCATED); 
++ return !!(E0 & BDRV_BLOCK_ALLOCATED); 
+// Infered from: (qemu/{prevFiles/prev_01fb27_d40593_block.c,revFiles/01fb27_d40593_block.c}: bdrv_is_allocated)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

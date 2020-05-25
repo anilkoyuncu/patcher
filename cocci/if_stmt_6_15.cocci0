@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->flags & IW_ENCODE_MODE)  
++ if (!(E0->flags & IW_ENCODE_MODE))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_4de840_f0ad07_drivers#usb#usb-skeleton.c,revFiles/4de840_f0ad07_drivers#usb#usb-skeleton.c}: skel_read), (linux/{prevFiles/prev_7034ca4_88adc1_drivers#staging#rt2870#sta_ioctl.c,revFiles/7034ca4_88adc1_drivers#staging#rt2870#sta_ioctl.c}: rt_ioctl_siwencode), (linux/{prevFiles/prev_7034ca4_88adc1_drivers#staging#rt2860#sta_ioctl.c,revFiles/7034ca4_88adc1_drivers#staging#rt2860#sta_ioctl.c}: rt_ioctl_siwencode), (linux/{prevFiles/prev_2e9ab1_658ce9d_drivers#staging#vt6656#iwctl.c,revFiles/2e9ab1_658ce9d_drivers#staging#vt6656#iwctl.c}: iwctl_siwencode), (php-src/{prevFiles/prev_7a9424_960d10_ext#standard#http_fopen_wrapper.c,revFiles/7a9424_960d10_ext#standard#http_fopen_wrapper.c}: php_stream_url_wrap_http_ex)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef time_t;
+@@
+- const  time_t I0 = CT_POLICY_EVAL_CTX_get_time(E1) / 1000; 
++ const  time_t I0 = (time_t )(CT_POLICY_EVAL_CTX_get_time(E1) / 1000); 
+// Infered from: (openssl/{prevFiles/prev_bc278f_aa3439_test#ct_test.c,revFiles/bc278f_aa3439_test#ct_test.c}: test_default_ct_policy_eval_ctx_time_is_now)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0->dirs[0] = curl_easy_unescape(E1->data, E2 ? E3 :"/",  E2 ? curlx_sztosi(E4) :1, NULL); 
++ E0->dirs[0] = curl_easy_unescape(E1->data, E2 ? E3 :"/",  E2 ? curlx_uztosi(E4) :1, NULL); 
+// Infered from: (curl/{prevFiles/prev_30a097_733a44_lib#ftp.c,revFiles/30a097_733a44_lib#ftp.c}: ftp_parse_url_path)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

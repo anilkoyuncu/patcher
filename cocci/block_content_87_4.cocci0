@@ -1,0 +1,9 @@
+@@
+@@
+- return 0; 
++ goto  done; 
+// Infered from: (php-src/{prevFiles/prev_4c0cbe_9874ba_ext#gd#libgd#gdxpm.c,revFiles/4c0cbe_9874ba_ext#gd#libgd#gdxpm.c}: gdImageCreateFromXpm), (php-src/{prevFiles/prev_3ac3b4_b48f46_ext#gd#libgd#gdxpm.c,revFiles/3ac3b4_b48f46_ext#gd#libgd#gdxpm.c}: gdImageCreateFromXpm)
+// False positives: (php-src/revFiles/3ac3b4_b48f46_ext#gd#libgd#gdxpm.c: gdImageCreateFromXpm), (php-src/revFiles/4c0cbe_9874ba_ext#gd#libgd#gdxpm.c: gdImageCreateFromXpm)
+// Recall: 0.18, Precision: 0.50, Matching recall: 0.18
+
+// ---------------------------------------------

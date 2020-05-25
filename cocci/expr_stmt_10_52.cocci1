@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2;
+typedef int64_t;
+typedef uint64_t;
+@@
+- E0 += (int64_t )E1 * E2 - (E1 * E0 >> 8); 
++ E0 += (int64_t )E1 * E2 - ((int64_t )(E1 * (uint64_t )E0) >> 8); 
+// Infered from: (FFmpeg/{prevFiles/prev_60765c_6b5d3f_libavcodec#pixlet.c,revFiles/60765c_6b5d3f_libavcodec#pixlet.c}: read_high_coeffs)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_93a203_7592e8_libavcodec#ra144.c: add_wav
+*/
+
+// ---------------------------------------------

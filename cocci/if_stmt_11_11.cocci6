@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E3, E1, E2;
+typedef FT_BitmapGlyph;
+@@
+  const  FT_BitmapGlyph I0 = E1 == 0 ? E2->p_shadow :E1 == 1 ? E2->p_outline :E2->p_glyph; 
+  ...
+- if (E3)  
++ if (E1 == 2 && E2->i_line_thickness > 0 && I0->bitmap.rows)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_e12467_1b7e0d_modules#text_renderer#freetype.c,revFiles/e12467_1b7e0d_modules#text_renderer#freetype.c}: RenderAXYZ)
+// False positives: (vlc/revFiles/e12467_1b7e0d_modules#text_renderer#freetype.c: RenderAXYZ)
+// Recall: 0.03, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

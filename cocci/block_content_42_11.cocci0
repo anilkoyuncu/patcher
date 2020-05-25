@@ -1,0 +1,24 @@
+@@
+identifier I0, I1;
+expression E2, E3, E5, E6, E8, E4, E7, E9;
+typedef GSList;
+@@
+- GSList *I0 = NULL; 
+- GSList *I1 = NULL; 
+  ...
+- I0 = gtk_radio_button_get_group(GTK_RADIO_BUTTON(E2)); 
+  ...
+- E3 = gtk_radio_button_new_with_label(I0, E4); 
++ E3 = gtk_radio_button_new_with_label_from_widget(GTK_RADIO_BUTTON(E2), E4); 
+  ...
+- I1 = gtk_radio_button_get_group(GTK_RADIO_BUTTON(E5)); 
+  ...
+- E6 = gtk_radio_button_new_with_label(I1, E7); 
++ E6 = gtk_radio_button_new_with_label_from_widget(GTK_RADIO_BUTTON(E5),  "reversed    "); 
+  ...
+- E8 = gtk_radio_button_new_with_label(I1, E9); 
++ E8 = gtk_radio_button_new_with_label_from_widget(GTK_RADIO_BUTTON(E5), E9); 
+// Infered from: (wireshark/{prevFiles/prev_a2e7e3_0f310b_gtk#iax2_analysis.c,revFiles/a2e7e3_0f310b_gtk#iax2_analysis.c}: save_voice_as_cb), (wireshark/{prevFiles/prev_16fabc_9e3d46_gtk#rtp_analysis.c,revFiles/16fabc_9e3d46_gtk#rtp_analysis.c}: on_save_bt_clicked)
+// Recall: 0.62, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

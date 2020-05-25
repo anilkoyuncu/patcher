@@ -1,0 +1,19 @@
+@@
+identifier I0;
+expression E1;
+@@
+- static int I0 = 0; 
++ static int initialized = 0; 
+  ...
+- if (E1)  
++ if (!initialized)  
+  {
+- I0 = 1; 
++ initialized = 1; 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavcodec#msmpeg4.c,revFiles/5e5348_f1cc49_libavcodec#msmpeg4.c}: common_init)
+// False positives: (FFmpeg/revFiles/5e5348_f1cc49_libavcodec#msmpeg4.c: ff_msmpeg4_decode_init), (FFmpeg/revFiles/5e5348_f1cc49_libavcodec#msmpeg4.c: ff_msmpeg4_encode_init)
+// Recall: 0.33, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef int64_t;
+@@
+- OPAL_OUTPUT_VERBOSE((50, ompi_mtl_base_framework.framework_output, "Send %lu to %x,%x of length %d\n", E0->opcount, E1.phys.nid, E1.phys.pid, (  int )E2)); 
++ OPAL_OUTPUT_VERBOSE((50, ompi_mtl_base_framework.framework_output, "Send %lu to %x,%x of length %ld\n", E0->opcount, E1.phys.nid, E1.phys.pid, (  int64_t )E2)); 
+// Infered from: (ompi/{prevFiles/prev_8a4616_18b75b_ompi#mca#mtl#portals4#mtl_portals4_send.c,revFiles/8a4616_18b75b_ompi#mca#mtl#portals4#mtl_portals4_send.c}: ompi_mtl_portals4_send_start)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (&E0.len && E0.buf[E0.len - 1] == '\n')  
++ while (E0.len && E0.buf[E0.len - 1] == '\n')  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_66ec90_8b87cf_wt-status.c,revFiles/66ec90_8b87cf_wt-status.c}: read_and_strip_branch)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

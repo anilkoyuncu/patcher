@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = PyEval_CallMethod(E1, "_reduce_ex", "(Oi)", E2, E3); 
++ E0 = PyObject_CallMethod(E1, "_reduce_ex", "Oi", E2, E3); 
+// Infered from: (cpython/{prevFiles/prev_72dccd_72e81d_Objects#typeobject.c,revFiles/72dccd_72e81d_Objects#typeobject.c}: _common_reduce)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

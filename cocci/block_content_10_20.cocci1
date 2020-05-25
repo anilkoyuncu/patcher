@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- FormatInstruction(E0, E1, E2); 
++ numBytes = FormatInstruction(E0, E1, E2); 
+// Infered from: (tcl/{prevFiles/prev_4a275c_2d2f6e_generic#tclCompile.c,revFiles/4a275c_2d2f6e_generic#tclCompile.c}: TclPrintInstruction)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- lseek64(E0->fd_sys, E1, SEEK_SET); 
++ lseek(E0->fd_sys, E1, SEEK_SET); 
+// Infered from: (ompi/{prevFiles/prev_c93f1d_96c626_ompi#mca#io#romio#romio#adio#common#ad_write_nolock.c,revFiles/c93f1d_96c626_ompi#mca#io#romio#romio#adio#common#ad_write_nolock.c}: ADIOI_NOLOCK_WriteStrided)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

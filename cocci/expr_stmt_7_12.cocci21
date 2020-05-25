@@ -1,0 +1,10 @@
+@@
+type T0;
+expression E1, E2, E3;
+@@
+- orte_show_help("help-mpi-common-sm.txt", "mmap too small",  orte_process_info.nodename, (T0 )E1, (T0 )E2, (T0 )E3); 
++ orte_show_help("help-mpi-common-sm.txt", "mmap too small", 1,  orte_process_info.nodename, (T0 )E1, (T0 )E2, (T0 )E3); 
+// Infered from: (ompi/{prevFiles/prev_7654b3_181331_ompi#mca#common#sm#common_sm_mmap.c,revFiles/7654b3_181331_ompi#mca#common#sm#common_sm_mmap.c}: create_map)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

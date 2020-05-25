@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (E0->stream_codec_tag == AV_RL32("XVID") || E0->codec_tag == AV_RL32(  "XVID") || E0->codec_tag == AV_RL32("XVIX") || E0->codec_tag == AV_RL32(  "RMP4"))  
++ if (E0->stream_codec_tag == AV_RL32("XVID") || E0->codec_tag == AV_RL32(  "XVID") || E0->codec_tag == AV_RL32("XVIX") || E0->codec_tag == AV_RL32(  "RMP4") || E0->codec_tag == AV_RL32("SIPP"))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_d3752b_220f2b_libavcodec#h263dec.c,revFiles/d3752b_220f2b_libavcodec#h263dec.c}: ff_h263_decode_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

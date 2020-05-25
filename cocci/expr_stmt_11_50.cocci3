@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- dbx500_add_gpios(E0, ARRAY_AND_SIZE(db8500_gpio_base), IRQ_DB8500_GPIO0, &E1); 
++ dbx500_add_gpios(E0, db8500_gpio_base, ARRAY_SIZE(db8500_gpio_base),  IRQ_DB8500_GPIO0, &E1); 
+// Infered from: (linux/{prevFiles/prev_7abdcff_0a429fd_arch#arm#mach-ux500#cpu-db8500.c,revFiles/7abdcff_0a429fd_arch#arm#mach-ux500#cpu-db8500.c}: db8500_add_gpios)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

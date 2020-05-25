@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (Z_CONSTANT_P(RT_CONSTANT_EX(&E0->op_array, E0->op_array.opcodes[E1].op2)))  
++ if (Z_CONSTANT_P(RT_CONSTANT(&E0->op_array, E0->op_array.opcodes[E1].op2)))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_6f8273_d89834_ext#opcache#Optimizer#optimize_func_calls.c,revFiles/6f8273_d89834_ext#opcache#Optimizer#optimize_func_calls.c}: zend_try_inline_call)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

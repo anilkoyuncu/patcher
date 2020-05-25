@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 == E1))  
++ if (E0 == E1)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_6ad633_ecf8cb_epan#dissectors#packet-tcp.c,revFiles/6ad633_ecf8cb_epan#dissectors#packet-tcp.c}: scan_for_next_pdu), (linux/{prevFiles/prev_0d20dac_a58af1_drivers#staging#rtl8188eu#core#rtw_security.c,revFiles/0d20dac_a58af1_drivers#staging#rtl8188eu#core#rtw_security.c}: rtw_aes_encrypt), (linux/{prevFiles/prev_0d20dac_a58af1_drivers#staging#rtl8188eu#core#rtw_security.c,revFiles/0d20dac_a58af1_drivers#staging#rtl8188eu#core#rtw_security.c}: rtw_aes_decrypt), (vlc/{prevFiles/prev_32b9c5_afea01_modules#access#zip#unzip#unzip.c,revFiles/32b9c5_afea01_modules#access#zip#unzip#unzip.c}: unzReadCurrentFile), (linux/{prevFiles/prev_6dc5aa_13ce3b_drivers#net#ethernet#broadcom#bnx2.c,revFiles/6dc5aa_13ce3b_drivers#net#ethernet#broadcom#bnx2.c}: bnx2_rx_int), (linux/{prevFiles/prev_eb5d2f_6fbef9_drivers#net#wireless#broadcom#brcm80211#brcmsmac#phy#phy_cmn.c,revFiles/eb5d2f_6fbef9_drivers#net#wireless#broadcom#brcm80211#brcmsmac#phy#phy_cmn.c}: read_radio_reg), (wireshark/{prevFiles/prev_6ad633_ecf8cb_epan#dissectors#packet-xml.c,revFiles/6ad633_ecf8cb_epan#dissectors#packet-xml.c}: xml_get_tag), (wireshark/{prevFiles/prev_6ad633_ecf8cb_epan#dissectors#packet-xml.c,revFiles/6ad633_ecf8cb_epan#dissectors#packet-xml.c}: xml_get_cdata), (wireshark/{prevFiles/prev_2ff1e3_d82e43_epan#dissectors#packet-pw-fr.c,revFiles/2ff1e3_d82e43_epan#dissectors#packet-pw-fr.c}: dissect_pw_fr), (wireshark/{prevFiles/prev_d82e43_d8b480_epan#dissectors#packet-isup.c,revFiles/d82e43_d8b480_epan#dissectors#packet-isup.c}: dissect_isup_application_transport_parameter)
+// False positives: (linux/revFiles/cfed0a2c_9a8a02c_drivers#net#ethernet#mellanox#mlx4#port.c: __mlx4_register_mac), (wireshark/revFiles/2e84d2_eeafb4_epan#dissectors#packet-gtp.c: track_gtp_session)
+// Recall: 0.46, Precision: 0.83, Matching recall: 0.92
+
+// ---------------------------------------------

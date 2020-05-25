@@ -1,0 +1,11 @@
+@@
+assignment operator A1;
+expression E0, E2, E3, E4;
+@@
+- E0 A1 (E2 + E3) / E4; 
++ E0 A1 DIV_ROUND_UP(E2, E4); 
+// Infered from: (qemu/{prevFiles/prev_f0704d_0ef1ef_target#ppc#translate.c,revFiles/f0704d_0ef1ef_target#ppc#translate.c}: gen_lswi), (qemu/{prevFiles/prev_6402cb_206a0f_libdecnumber#decNumber.c,revFiles/6402cb_206a0f_libdecnumber#decNumber.c}: decDivideOp)
+// False positives: (qemu/revFiles/13f149_21cf3e_block#vpc.c: create_dynamic_disk), (qemu/revFiles/6402cb_206a0f_libdecnumber#decNumber.c: decMultiplyOp), (qemu/revFiles/659c90_78ee96_ui#vnc.c: vnc_sent_lossy_rect)
+// Recall: 0.50, Precision: 0.43, Matching recall: 0.75
+
+// ---------------------------------------------

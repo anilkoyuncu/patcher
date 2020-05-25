@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- printf("%s ", E0); 
+// Infered from: (codeflaws/{prevFiles/prev_489-C-17034948-17034962.c,revFiles/489-C-17034948-17034962.c}: main)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

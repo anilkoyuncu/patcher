@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- failf(E0, "socket error: %d", err); 
++ failf(E0, "socket error"); 
+// Infered from: (curl/{prevFiles/prev_7201a5_c6a0bb_lib#connect.c,revFiles/7201a5_c6a0bb_lib#connect.c}: Curl_connecthost)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

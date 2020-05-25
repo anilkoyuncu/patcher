@@ -1,0 +1,10 @@
+@@
+identifier I1 = {archive_entry_copy_hardlink_l ,archive_entry_copy_pathname_l }, I4, I5;
+expression E0, E2, E3;
+@@
+- E0 = I1(E2, E3->I4, E3->I5, E3->sconv_utf16be); 
++ E0 = I1(E2, (const  char *)E3->I4, E3->I5, E3->sconv_utf16be); 
+// Infered from: (libarchive/{prevFiles/prev_cf0a7f_507d6f_libarchive#archive_read_support_format_iso9660.c,revFiles/cf0a7f_507d6f_libarchive#archive_read_support_format_iso9660.c}: archive_read_format_iso9660_read_header), (libarchive/{prevFiles/prev_cf0a7f_507d6f_libarchive#archive_read_support_format_iso9660.c,revFiles/cf0a7f_507d6f_libarchive#archive_read_support_format_iso9660.c}: archive_read_format_iso9660_read_header)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

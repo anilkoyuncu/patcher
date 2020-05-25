@@ -1,0 +1,9 @@
+@@
+@@
+- goto  out2; 
++ goto  out3; 
+// Infered from: (linux/{prevFiles/prev_a2dc56_a1e9adc_sound#soc#nuc900#nuc900-ac97.c,revFiles/a2dc56_a1e9adc_sound#soc#nuc900#nuc900-ac97.c}: nuc900_ac97_drvprobe)
+// False positives: (linux/revFiles/a2dc56_a1e9adc_sound#soc#nuc900#nuc900-ac97.c: nuc900_ac97_drvprobe)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

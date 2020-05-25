@@ -1,0 +1,32 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = zend_hash_str_find_ptr(&ancillary_registry.ht, (char *)&E1,  sizeof(E1) - 1)) != NULL)  
++ if ((E0 = zend_hash_str_find_ptr(&ancillary_registry.ht, (char *)&E1,  sizeof(E1))) != NULL)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_0d6c24_398b30_ext#sockets#sendrecvmsg.c,revFiles/0d6c24_398b30_ext#sockets#sendrecvmsg.c}: get_ancillary_reg_entry)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.60, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_a30e77_66747a_libavformat#img2dec.c: 
+ - php-src/prevFiles/prev_5c53cd_cb856e_sapi#apache2filter#apache_config.c: apply_config
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,16 @@
+@@
+@@
+- if (!CryptAcquireContext(&hCryptProv, NULL, NULL, PROV_RSA_FULL, 0))  
++ if (!CryptAcquireContext(&hCryptProv, NULL, NULL, PROV_RSA_FULL,  CRYPT_MACHINE_KEYSET | CRYPT_VERIFYCONTEXT))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_762855_a10a61_win32#winutil.c,revFiles/762855_a10a61_win32#winutil.c}: php_win32_get_random_bytes), (php-src/{prevFiles/prev_96b5e6_01607c_win32#winutil.c,revFiles/96b5e6_01607c_win32#winutil.c}: php_win32_get_random_bytes), (php-src/{prevFiles/prev_b8251d_1ee8ff_win32#winutil.c,revFiles/b8251d_1ee8ff_win32#winutil.c}: php_win32_get_random_bytes)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

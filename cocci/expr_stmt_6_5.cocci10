@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0->p1 = E1[0]; 
++ E0->p1 = E1[1]; 
+// Infered from: (cairo/{prevFiles/prev_20cdb9_219d46_src#cairo-path-fixed.c,revFiles/20cdb9_219d46_src#cairo-path-fixed.c}: _cairo_path_fixed_iter_is_fill_box)
+// False positives: (cairo/revFiles/20cdb9_219d46_src#cairo-path-fixed.c: _cairo_path_fixed_is_box), (cairo/revFiles/20cdb9_219d46_src#cairo-path-fixed.c: _cairo_path_fixed_iter_is_fill_box)
+// Recall: 0.02, Precision: 0.33, Matching recall: 0.50
+
+// ---------------------------------------------

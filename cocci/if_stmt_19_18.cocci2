@@ -1,0 +1,27 @@
+@@
+expression E0;
+typedef AVFilterInOut;
+@@
+- E0 = av_mallocz(sizeof(AVFilterInOut )); 
++ if (!(E0 = av_mallocz(sizeof(AVFilterInOut ))))  
++ {
++ return AVERROR(ENOMEM); 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_00b3ca_42e7f6_libavfilter#graphparser.c,revFiles/00b3ca_42e7f6_libavfilter#graphparser.c}: parse_inputs)
+// Recall: 0.23, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.69, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_c01a46_1bf507_libavformat#rmdec.c: rm_read_packet
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef uuid_t;
+@@
+- return memcmp(E0, E1, sizeof(E0)) == 0; 
++ return memcmp(E0, E1, sizeof(uuid_t )) == 0; 
+// Infered from: (qemu/{prevFiles/prev_4f3669_42af9c_block#vdi.c,revFiles/4f3669_42af9c_block#vdi.c}: uuid_is_null)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

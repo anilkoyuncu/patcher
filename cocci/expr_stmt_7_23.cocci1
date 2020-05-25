@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef eword_t;
+@@
+- E0->rlw = E0->buffer + (E1 / sizeof(size_t )); 
++ E0->rlw = E0->buffer + (E1 / sizeof(eword_t )); 
+// Infered from: (git/{prevFiles/prev_68f4e1_69e4b3_ewah#ewah_bitmap.c,revFiles/68f4e1_69e4b3_ewah#ewah_bitmap.c}: buffer_grow)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

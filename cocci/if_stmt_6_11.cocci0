@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!*E0 && E1 && E1->av_class && av_opt_get(E1, "mime_type",  AV_OPT_SEARCH_CHILDREN, &E2) >= 0 && E2)  
++ if (!*E0 && E1->av_class && av_opt_get(E1, "mime_type",  AV_OPT_SEARCH_CHILDREN, &E2) >= 0 && E2)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_67c1b5_b688a28_libavformat#utils.c,revFiles/67c1b5_b688a28_libavformat#utils.c}: av_probe_input_buffer), (wireshark/{prevFiles/prev_4545d7_8fa686_gtk#graph_analysis.c,revFiles/4545d7_8fa686_gtk#graph_analysis.c}: dialog_graph_draw)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

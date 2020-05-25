@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- RETURN_STRING(E0, 1); 
++ RETURN_STRING(E0); 
+// Infered from: (php-src/{prevFiles/prev_5fe7f7_f2a2fc_ext#enchant#enchant.c,revFiles/5fe7f7_f2a2fc_ext#enchant#enchant.c}: PHP_FUNCTION)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

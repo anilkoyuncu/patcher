@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- g_return_val_if_fail(E0 == 0 || E1 == 0, 0); 
++ g_return_val_if_fail(E0 != 0 && E1 != 0, 0); 
+// Infered from: (gstreamer/{prevFiles/prev_c85704_8ca487_gst#gstutils.c,revFiles/c85704_8ca487_gst#gstutils.c}: gst_util_fraction_compare)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

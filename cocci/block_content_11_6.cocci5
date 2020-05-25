@@ -1,0 +1,33 @@
+@@
+identifier I0, I2;
+expression E1;
+@@
+- int I0 = bs_read(&E1, 2); 
+- int I2 = bs_read1(&E1); 
++ int I0; 
++ int I2; 
++ I0 = bs_read(&E1, 2); 
++ I2 = bs_read1(&E1); 
+// Infered from: (vlc/{prevFiles/prev_f9a829_bc6298_modules#packetizer#mpeg4video.c,revFiles/f9a829_bc6298_modules#packetizer#mpeg4video.c}: m4v_VOLParse)
+// Recall: 0.15, Precision: 1.00, Matching recall: 0.55
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.54, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/6(0%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_18d1ea_566a36_lib#imap.c: imap_state_login
+ - qemu/prevFiles/prev_fac7d7_a023b7_net#tap.c: net_init_tap
+ - php-src/prevFiles/prev_5ead61_dba3fe_Zend#zend_compile.c: zend_do_begin_class_declaration
+ - FFmpeg/prevFiles/prev_1e4f1c_9104cd_libavcodec#h264.c: xchg_mb_border
+ - vlc/prevFiles/prev_f9a829_bc6298_modules#packetizer#mpeg4video.c: m4v_VOLParse
+ - php-src/prevFiles/prev_68181b_113686_Zend#zend_compile.c: zend_do_begin_class_declaration
+*/
+
+// ---------------------------------------------

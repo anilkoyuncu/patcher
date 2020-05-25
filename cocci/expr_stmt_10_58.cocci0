@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 += E1->width * E1->height; 
++ E0 += (E1->width + 32LL) * (E1->height + 32LL); 
+// Infered from: (FFmpeg/{prevFiles/prev_591637_d21769_tools#target_dec_fuzzer.c,revFiles/591637_d21769_tools#target_dec_fuzzer.c}: LLVMFuzzerTestOneInput)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

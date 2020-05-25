@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- char I0[4]; 
++ char I0[4] = "xxx"; 
+// Infered from: (wireshark/{prevFiles/prev_8af708_f3bbbc_wiretap#dbs-etherwatch.c,revFiles/8af708_f3bbbc_wiretap#dbs-etherwatch.c}: parse_dbs_etherwatch_packet)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

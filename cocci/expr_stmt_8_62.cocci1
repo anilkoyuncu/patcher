@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0 = diff_delta(E1, E2, E3, E4, &E5, ~0UL); 
++ E0 = diff_delta(E1, E2, E3, E4, &E5, 0); 
+// Infered from: (git/{prevFiles/prev_3c8497_dcde55_diffcore-break.c,revFiles/3c8497_dcde55_diffcore-break.c}: should_break), (git/{prevFiles/prev_3c8497_dcde55_test-delta.c,revFiles/3c8497_dcde55_test-delta.c}: main)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

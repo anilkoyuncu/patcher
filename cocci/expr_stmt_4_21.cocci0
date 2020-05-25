@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- *E0++ = (float )*E1++ / -(float )FIXED32_MIN; 
++ *E0++ = (float )*E1++ / (float )FIXED32_ONE; 
+// Infered from: (vlc/{prevFiles/prev_5e1d56_b5ab49_modules#audio_filter#converter#fixed32tofloat32.c,revFiles/5e1d56_b5ab49_modules#audio_filter#converter#fixed32tofloat32.c}: DoWork)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

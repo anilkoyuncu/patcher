@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+typedef mca_coll_fca_c_cache_item_t;
+@@
+- while (NULL != (E0 = opal_list_remove_first(E1)))  
++ while (NULL != (E0 = (mca_coll_fca_c_cache_item_t *)opal_list_remove_first(  E1)))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_5a7dff_eabbcd_ompi#mca#coll#fca#coll_fca_component.c,revFiles/5a7dff_eabbcd_ompi#mca#coll#fca#coll_fca_component.c}: fca_close), (ompi/{prevFiles/prev_5a7dff_eabbcd_ompi#mca#coll#fca#coll_fca_component.c,revFiles/5a7dff_eabbcd_ompi#mca#coll#fca#coll_fca_component.c}: fca_close)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

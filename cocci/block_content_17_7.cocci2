@@ -1,0 +1,30 @@
+@@
+expression list E2;
+expression E1, E0;
+@@
+- E0 = E1(E2); 
+- return E0; 
++ return E1(E2); 
+// Infered from: (linux/{prevFiles/prev_55238d_b7aa39_drivers#staging#rtl8723bs#os_dep#ioctl_cfg80211.c,revFiles/55238d_b7aa39_drivers#staging#rtl8723bs#os_dep#ioctl_cfg80211.c}: rtw_cfg80211_monitor_if_xmit_entry), (linux/{prevFiles/prev_d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c,revFiles/d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c}: gpio_ctrl)
+// False positives: (linux/revFiles/d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c: __gc2235_set_exposure)
+// Recall: 0.78, Precision: 0.88, Matching recall: 0.78
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.88
+// -- Node Change --
+// Recall: 0.96, Precision: 0.90
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_55238d_b7aa39_drivers#staging#rtl8723bs#os_dep#ioctl_cfg80211.c: rtw_cfg80211_monitor_if_xmit_entry
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_d64fe0_87bb401_drivers#staging#media#atomisp#i2c#gc2235.c: __gc2235_set_exposure
+*/
+
+// ---------------------------------------------

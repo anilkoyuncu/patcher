@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- call_dissector(peek_handle, E0, E1, E2); 
++ call_dissector_with_data(peek_handle, E0, E1, E2, GUINT_TO_POINTER(IS_ARUBA)); 
+// Infered from: (wireshark/{prevFiles/prev_7e2e8e_8d46c4_epan#dissectors#packet-aruba-erm.c,revFiles/7e2e8e_8d46c4_epan#dissectors#packet-aruba-erm.c}: dissect_aruba_erm)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

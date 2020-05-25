@@ -1,0 +1,12 @@
+@@
+assignment operator A1;
+expression E0, E2, E3, E5;
+binary operator B4 = {* ,>> };
+@@
+- E0 A1 (E2 - E3) B4 E5; 
++ E0 A1 E2 B4 E5; 
+// Infered from: (codeflaws/{prevFiles/prev_417-A-10605529-10605538.c,revFiles/417-A-10605529-10605538.c}: main), (qemu/{prevFiles/prev_0ca4f9_b8df92_hw#pci-host#bonito.c,revFiles/0ca4f9_b8df92_hw#pci-host#bonito.c}: bonito_writel)
+// False positives: (gtk/revFiles/d000b21_5a8378_gtk#gtkrange.c: gtk_range_compute_slider_position)
+// Recall: 0.32, Precision: 0.60, Matching recall: 1.00
+
+// ---------------------------------------------

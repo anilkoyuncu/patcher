@@ -1,0 +1,11 @@
+@@
+identifier I3;
+expression E1, E2, E0;
+@@
+- ADDOP_O(E0, E1, E2, I3); 
+- Py_DECREF(E2); 
++ ADDOP_N(E0, E1, E2, I3); 
+// Infered from: (cpython/{prevFiles/prev_aa8e51_5a7092_Python#compile.c,revFiles/aa8e51_5a7092_Python#compile.c}: compiler_import_as), (cpython/{prevFiles/prev_aa8e51_5a7092_Python#compile.c,revFiles/aa8e51_5a7092_Python#compile.c}: compiler_nameop)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

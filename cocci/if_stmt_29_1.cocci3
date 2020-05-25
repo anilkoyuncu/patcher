@@ -1,0 +1,26 @@
+@@
+@@
+- fprintf(stderr, " %i, %i\n", selectfrm[max_selected].first,  selectfrm[max_selected].second); 
++ fprintf(stderr, " %u, %u\n", selectfrm[max_selected].first,  selectfrm[max_selected].second); 
+// Infered from: (wireshark/{prevFiles/prev_db1e0b_25dfe4_editcap.c,revFiles/db1e0b_25dfe4_editcap.c}: add_selection)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.71, Precision: 0.83
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_56fdfb_6ffa16_qapi#string-output-visitor.c: format_string
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_56fdfb_6ffa16_qapi#string-output-visitor.c: print_type_int
+*/
+
+// ---------------------------------------------

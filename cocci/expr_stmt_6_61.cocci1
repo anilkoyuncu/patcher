@@ -1,0 +1,20 @@
+@@
+type T2;
+expression E0, E1;
+@@
+- E0->segment.seg_len = E1.byte_len - ((T2 *)E0->segment.seg_len - (T2 *)E0->hdr); 
++ E0->segment.seg_len = E1.byte_len - ((T2 *)E0->segment.seg_addr.pval - (  T2 *)E0->hdr); 
+// Infered from: (ompi/{prevFiles/prev_48677e_6477eb_src#mca#bmi#ib#bmi_ib_component.c,revFiles/48677e_6477eb_src#mca#bmi#ib#bmi_ib_component.c}: mca_bmi_ib_component_progress)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+
+// ---------------------------------------------

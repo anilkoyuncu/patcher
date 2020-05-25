@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 != OMPI_SUCCESS)  
++ if (MPI_SUCCESS != E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#win_delete_attr_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#win_delete_attr_f.c}: mpi_win_delete_attr_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#type_create_keyval_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#type_create_keyval_f.c}: mpi_type_create_keyval_f), (ompi/{prevFiles/prev_cd8f55_eb8cba_src#mpi#f77#win_create_keyval_f.c,revFiles/cd8f55_eb8cba_src#mpi#f77#win_create_keyval_f.c}: mpi_win_create_keyval_f)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

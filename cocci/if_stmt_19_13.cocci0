@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- msg_Info(E0, E1); 
++ msg_Warn(E0, E1); 
+// Infered from: (vlc/{prevFiles/prev_dbb3a9_7f04d5_modules#services_discovery#mtp.c,revFiles/dbb3a9_7f04d5_modules#services_discovery#mtp.c}: AddDevice), (vlc/{prevFiles/prev_dbb3a9_7f04d5_modules#services_discovery#mtp.c,revFiles/dbb3a9_7f04d5_modules#services_discovery#mtp.c}: AddDevice)
+// False positives: (vlc/revFiles/dbb3a9_7f04d5_modules#services_discovery#mtp.c: Run)
+// Recall: 0.36, Precision: 0.62, Matching recall: 0.83
+
+// ---------------------------------------------

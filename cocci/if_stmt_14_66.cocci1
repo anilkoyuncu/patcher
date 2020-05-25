@@ -1,0 +1,31 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 && NOTEBOOK_IS_TAB_LABEL_PARENT (E1, E2))  
++ if (E0)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_cf172a_261abe_gtk#gtknotebook.c,revFiles/cf172a_261abe_gtk#gtknotebook.c}: gtk_notebook_real_remove)
+// False positives: (gtk/revFiles/cf172a_261abe_gtk#gtknotebook.c: gtk_notebook_calculate_shown_tabs)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 0.67
+// -- Node Change --
+// Recall: 0.67, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_174-A-4569708-4569724.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_cf172a_261abe_gtk#gtknotebook.c: gtk_notebook_calculate_shown_tabs
+*/
+
+// ---------------------------------------------

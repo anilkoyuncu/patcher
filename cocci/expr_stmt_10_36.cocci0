@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_item(E0, stun_att_length, E1, E2 + 2, E3, FALSE); 
++ proto_tree_add_item(E0, stun_att_value, E1, E2 + 4, E3, FALSE); 
+// Infered from: (wireshark/{prevFiles/prev_b135e5_17eff2_packet-stun.c,revFiles/b135e5_17eff2_packet-stun.c}: dissect_stun)
+// False positives: (wireshark/revFiles/b135e5_17eff2_packet-stun.c: dissect_stun)
+// Recall: 0.25, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

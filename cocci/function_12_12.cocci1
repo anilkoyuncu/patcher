@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- E0 = avformat_open_input(&E1, E2, E3, &E4); 
++ if ((E0 = avformat_open_input(&E1, E2, E3, &E4)) < 0)  
++ {
++ goto  fail; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_13551a_575c38_libavformat#utils.c,revFiles/13551a_575c38_libavformat#utils.c}: av_open_input_stream)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

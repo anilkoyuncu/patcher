@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- printf("%lld", (E0 + (long long )m) % (long long )m); 
++ printf("%lld", (E0 + 2 * (long long )m) % (long long )m); 
+// Infered from: (codeflaws/{prevFiles/prev_450-B-11607646-11607713.c,revFiles/450-B-11607646-11607713.c}: main)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/8(75%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_488-B-8843537-8843565.c: main
+ - codeflaws/prevFiles/prev_260-A-15451201-15451214.c: main
+*/
+
+// ---------------------------------------------

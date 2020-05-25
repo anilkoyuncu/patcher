@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0.type = gst_type_double_range; 
++ E0.type = gst_type_list; 
+// Infered from: (gstreamer/{prevFiles/prev_b121bf_63079b_gst#gstvalue.c,revFiles/b121bf_63079b_gst#gstvalue.c}: _gst_value_initialize)
+// False positives: (gstreamer/revFiles/b121bf_63079b_gst#gstvalue.c: _gst_value_initialize)
+// Recall: 0.33, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- g_slist_foreach(E0, drange_node_free_wrapper, NULL); 
++ g_slist_free_full(E0, g_free); 
+// Infered from: (wireshark/{prevFiles/prev_35d960_067a67_epan#dfilter#drange.c,revFiles/35d960_067a67_epan#dfilter#drange.c}: drange_node_free_list)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,25 @@
+@@
+expression E0;
+typedef Py_UNICODE;
+@@
+- E0->field = PyMem_Resize(E0->field, Py_UNICODE , E0->field_size); 
++ E0->field = PyMem_Resize(field, Py_UNICODE , E0->field_size); 
+// Infered from: (cpython/{prevFiles/prev_17a332_399df5_Modules#_csv.c,revFiles/17a332_399df5_Modules#_csv.c}: parse_grow_buff)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch applied partially:
+ - redis/prevFiles/prev_8521cd_ce1f9c_src#module.c: RM_FreeCallReply
+ - cpython/prevFiles/prev_17a332_399df5_Modules#_csv.c: parse_grow_buff
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+identifier I0;
+typedef regmatch_t;
+@@
+- regmatch_t I0[NS]; 
++ regmatch_t *I0; 
+// Infered from: (php-src/{prevFiles/prev_cc4b27_4214a0_ext#ereg#ereg.c,revFiles/cc4b27_4214a0_ext#ereg#ereg.c}: php_reg_replace), (php-src/{prevFiles/prev_cc4b27_4214a0_ext#standard#reg.c,revFiles/cc4b27_4214a0_ext#standard#reg.c}: php_reg_replace)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.18
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.55, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_cc4b27_4214a0_ext#ereg#ereg.c: php_reg_replace
+ - php-src/prevFiles/prev_cc4b27_4214a0_ext#standard#reg.c: php_ereg
+ - php-src/prevFiles/prev_cc4b27_4214a0_ext#standard#reg.c: php_reg_replace
+ - php-src/prevFiles/prev_cc4b27_4214a0_ext#ereg#ereg.c: php_ereg
+*/
+
+// ---------------------------------------------

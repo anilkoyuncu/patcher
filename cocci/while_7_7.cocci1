@@ -1,0 +1,33 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0; 
++ size_t nchars; 
+  ...
+- fread(&E1, 1, sizeof(E1), data_out_file) 
++ fread(&E1, 1, sizeof(E1), data_out_file) 
+  ... when any
+// Infered from: (wireshark/{prevFiles/prev_2fadd0_f2d36b_gtk#follow_dlg.c,revFiles/2fadd0_f2d36b_gtk#follow_dlg.c}: follow_stream_cb)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_2fadd0_f2d36b_gtk#follow_dlg.c: follow_stream_cb
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_2fadd0_f2d36b_gtk#follow_dlg.c: follow_read_stream
+ - vlc/prevFiles/prev_4a7e8a_f102b5_modules#video_filter#invert.c: Filter
+*/
+
+// ---------------------------------------------

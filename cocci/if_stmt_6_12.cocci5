@@ -1,0 +1,47 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((E0 = strchr(table64, E1[E2])) != 0)  
++ if ((E0 = strchr(table64, E1[E2])) != NULL)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_b039d8_b3401d_lib#base64.c,revFiles/b039d8_b3401d_lib#base64.c}: decodeQuantum)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.38, Precision: 0.89
+// -- Node Change --
+// Recall: 0.33, Precision: 0.89
+// -- General --
+// Functions fully changed: 8/22(36%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_e4e29d_2d3862_lib#decompress_unlzma.c: unlzma
+ - codeflaws/prevFiles/prev_492-C-16026643-16026665.c: main
+ - linux/prevFiles/prev_7401349_09557c0_drivers#tty#serial#68328serial.c: rs_fair_output
+ - qemu/prevFiles/prev_461a4b_3fee02_target#openrisc#mmu.c: openrisc_cpu_get_phys_page_debug
+ - linux/prevFiles/prev_eb465ea_118c07f_drivers#staging#media#atomisp#pci#atomisp2#css2400#runtime#queue#src#queue.c: ia_css_queue_get_size
+ - codeflaws/prevFiles/prev_246-B-6864879-6864890.c: main
+ - linux/prevFiles/prev_772775_ecca1a6_drivers#net#ethernet#nxp#lpc_eth.c: lpc_eth_drv_probe
+ - linux/prevFiles/prev_83aa53_2e6522c_arch#mips#kernel#ftrace.c: prepare_ftrace_return
+ - openssl/prevFiles/prev_a6ac1e_cbe9524_crypto#asn1#a_int.c: asn1_string_to_bn
+ - php-src/prevFiles/prev_e0c026_7f9819_main#network.c: php_sockop_read
+ - codeflaws/prevFiles/prev_46-A-16431297-16431329.c: main
+ - linux/prevFiles/prev_c526ec2_dd1c0f_drivers#staging#media#atomisp#pci#atomisp2#css2400#runtime#queue#src#queue.c: ia_css_queue_enqueue
+ - linux/prevFiles/prev_118c07f_c526ec2_drivers#staging#media#atomisp#pci#atomisp2#css2400#runtime#queue#src#queue.c: ia_css_queue_dequeue
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_461a4b_3fee02_target#openrisc#mmu.c: cpu_openrisc_raise_mmu_exception
+*/
+
+// ---------------------------------------------

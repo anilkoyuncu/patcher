@@ -1,0 +1,28 @@
+@@
+identifier I0 = {dissector_add ,dissector_delete };
+@@
+- I0("tcp.port", saved_sip_tcp_port, sip_handle); 
++ I0("tcp.port", saved_sip_tcp_port, sip_tcp_handle); 
+// Infered from: (wireshark/{prevFiles/prev_fdbc71_e8d1c6_epan#dissectors#packet-sip.c,revFiles/fdbc71_e8d1c6_epan#dissectors#packet-sip.c}: proto_reg_handoff_sip), (wireshark/{prevFiles/prev_fdbc71_e8d1c6_epan#dissectors#packet-sip.c,revFiles/fdbc71_e8d1c6_epan#dissectors#packet-sip.c}: proto_reg_handoff_sip)
+// Recall: 0.24, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.59, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/5(40%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_c68ea7_173d6c_linux-user#main.c: main
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_c68ea7_173d6c_linux-user#main.c: 
+ - wireshark/prevFiles/prev_a847fd_ea41f9_epan#dissectors#packet-tds.c: dissect_tds_query5_packet
+*/
+
+// ---------------------------------------------

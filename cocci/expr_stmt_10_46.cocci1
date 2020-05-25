@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- TIFFError("TIFFSetField",  "%s: Invalid %stag \"%s\" (not supported by codec)", E0->tif_name,  isPseudoTag(E1) ? "pseduo-" :"",  _TIFFFieldWithTag(E0, E1)->field_name); 
++ TIFFError("TIFFSetField",  "%s: Invalid %stag \"%s\" (not supported by codec)", E0->tif_name,  isPseudoTag(E1) ? "pseudo-" :"",  _TIFFFieldWithTag(E0, E1)->field_name); 
+// Infered from: (libtiff/{prevFiles/prev_f6c9c4_3e6470_libtiff#tif_dir.c,revFiles/f6c9c4_3e6470_libtiff#tif_dir.c}: _TIFFVSetField)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

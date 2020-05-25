@@ -1,0 +1,65 @@
+@@
+expression E0, E1;
+@@
+- while (E0 <= E1)  
++ while (E0 < E1)  
+  {
+  ...
+  }
+// Infered from: (tcl/{prevFiles/prev_66a974_89c9d6_unix#tclUnixInit.c,revFiles/66a974_89c9d6_unix#tclUnixInit.c}: SearchKnownEncodings), (wireshark/{prevFiles/prev_d65ca4e_9f6a38_asn1#gsmmap#packet-gsm_map-template.c,revFiles/d65ca4e_9f6a38_asn1#gsmmap#packet-gsm_map-template.c}: unpack_digits), (openssl/{prevFiles/prev_44bf71_c7b5b9_crypto#modes#ocb128.c,revFiles/44bf71_c7b5b9_crypto#modes#ocb128.c}: ocb_lookup_l), (codeflaws/{prevFiles/prev_652-A-18240573-18240594.c,revFiles/652-A-18240573-18240594.c}: main)
+// False positives: (FFmpeg/revFiles/b3dfeb_8bfb4d_libavformat#matroskadec.c: matroska_parse_flac), (FFmpeg/revFiles/b3dfeb_8bfb4d_libavformat#matroskadec.c: matroska_parse_wavpack), (FFmpeg/revFiles/dc0ad4_edfa89_libavcodec#ac3dsp.c: ac3_update_bap_counts_c), (codeflaws/revFiles/402-A-9220746-9220767.c: main), (codeflaws/revFiles/609-A-18281533-18281557.c: main), (codeflaws/revFiles/611-B-15553272-15553530.c: main), (libarchive/revFiles/da64ed_8a2f59_libarchive#archive_read_support_format_zip.c: archive_read_format_zip_streamable_read_header), (wireshark/revFiles/3cd277_3a92bf_epan#dissectors#packet-bgp.c: dissect_bgp_capability_item)
+// Recall: 0.13, Precision: 0.50, Matching recall: 0.72
+
+// ---------------------------------------------
+// Final metrics (for the combined 12 rules):
+// -- Edit Location --
+// Recall: 0.63, Precision: 0.89
+// -- Node Change --
+// Recall: 0.47, Precision: 0.57
+// -- General --
+// Functions fully changed: 17/53(32%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_17-A-9594458-9594472.c: printPrimes
+ - codeflaws/prevFiles/prev_29-B-126756-126759.c: main
+ - codeflaws/prevFiles/prev_198-A-9705111-9705146.c: main
+ - codeflaws/prevFiles/prev_476-A-17120700-17120704.c: main
+ - wireshark/prevFiles/prev_470a44_149627_epan#dissectors#packet-icmpv6.c: dissect_mpl_control
+ - codeflaws/prevFiles/prev_3-A-14796916-14796932.c: main
+ - codeflaws/prevFiles/prev_379-A-17479521-17479535.c: main
+ - libarchive/prevFiles/prev_da64ed_8a2f59_libarchive#archive_read_support_format_zip.c: archive_read_format_zip_read_data_skip
+ - codeflaws/prevFiles/prev_166-A-10686292-10686462.c: main
+ - codeflaws/prevFiles/prev_151-A-17894679-17894708.c: main
+ - FFmpeg/prevFiles/prev_53e9d0_631e8a_libavutil#md5.c: av_md5_final
+ - codeflaws/prevFiles/prev_198-A-9617580-9617604.c: main
+ - wireshark/prevFiles/prev_288168_0e3032_epan#dissectors#packet-couchbase.c: dissect_multipath_value
+ - openssl/prevFiles/prev_65caee_738554_crypto#x509v3#v3_utl.c: get_email
+ - codeflaws/prevFiles/prev_195-B-9094006-9094163.c: main
+ - git/prevFiles/prev_4a14f8_27a418_refs#packed-backend.c: find_reference_location
+ - codeflaws/prevFiles/prev_6-C-10865678-10865690.c: main
+ - codeflaws/prevFiles/prev_488-A-15872585-15891587.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - codeflaws/prevFiles/prev_13-A-14578265-14578281.c: main
+ - codeflaws/prevFiles/prev_359-B-5454813-5454814.c: main
+ - libarchive/prevFiles/prev_da64ed_8a2f59_libarchive#archive_read_support_format_zip.c: archive_read_format_zip_streamable_read_header
+ - wireshark/prevFiles/prev_4275845_7a2770_pcap-util.c: get_interface_list
+ - codeflaws/prevFiles/prev_581-C-13820162-13820185.c: main
+ - codeflaws/prevFiles/prev_137-A-11590458-11590515.c: main
+ - codeflaws/prevFiles/prev_263-B-4589098-4589276.c: main
+ - codeflaws/prevFiles/prev_140-D-8349631-8349655.c: main
+ - cpython/prevFiles/prev_5ae4f4_47dee1_Modules#_posixsubprocess.c: child_exec
+ - wireshark/prevFiles/prev_3cd277_3a92bf_epan#dissectors#packet-bgp.c: dissect_bgp_capability_item
+ - codeflaws/prevFiles/prev_441-B-6979392-6979398.c: main
+ - FFmpeg/prevFiles/prev_b3dfeb_8bfb4d_libavformat#matroskadec.c: matroska_parse_flac
+ - gstreamer/prevFiles/prev_04471c_5c7c485_gst#gstevent.c: gst_event_new_discontinuous
+ - vlc/prevFiles/prev_2952a4_c07d72_modules#demux#mjpeg.c: GetLine
+ - codeflaws/prevFiles/prev_611-B-15553272-15553530.c: main
+ - FFmpeg/prevFiles/prev_b3dfeb_8bfb4d_libavformat#matroskadec.c: matroska_parse_wavpack
+ - cairo/prevFiles/prev_5f386b_d48f31_perf#cairo-stats.c: _cairo_stats_compute
+ - FFmpeg/prevFiles/prev_b3dfeb_8bfb4d_libavformat#matroskadec.c: matroska_read_seek
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- msg_Warn(E0, "GPU blacklisted for %s codec", directx_va_GetDecoderName(E1)); 
++ char *psz_decoder_name = directx_va_GetDecoderName(E1); 
++ msg_Warn(E0, "GPU blacklisted for %s codec", psz_decoder_name); 
++ free(psz_decoder_name); 
+// Infered from: (vlc/{prevFiles/prev_0fd8cd_d88ee7_modules#codec#avcodec#dxva2.c,revFiles/0fd8cd_d88ee7_modules#codec#avcodec#dxva2.c}: DxSetupOutput)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

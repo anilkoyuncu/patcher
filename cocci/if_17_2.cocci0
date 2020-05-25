@@ -1,0 +1,25 @@
+@@
+expression E0;
+@@
+- if (topic_available(HELP_STATS_SUMMARY_DIALOG))  
++ if (topic_available(HELP_CAPTURE_INTERFACES_DETAILS_DIALOG))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+  ...
+- if (topic_available(HELP_STATS_SUMMARY_DIALOG))  
++ if (topic_available(HELP_CAPTURE_INTERFACES_DETAILS_DIALOG))  
+  {
+  ...
+- SIGNAL_CONNECT(E0, "clicked", topic_cb, HELP_STATS_SUMMARY_DIALOG); 
++ SIGNAL_CONNECT(E0, "clicked", topic_cb,  HELP_CAPTURE_INTERFACES_DETAILS_DIALOG); 
+  }
+// Infered from: (wireshark/{prevFiles/prev_9f0bf9_39674f_gtk#capture_if_details_dlg.c,revFiles/9f0bf9_39674f_gtk#capture_if_details_dlg.c}: capture_if_details_open_win)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,31 @@
+@@
+expression E0, E1, E2;
+@@
+- av_log(E0, AV_LOG_WARNING,  "Could not find codec parameters for stream (%s): %s\n", E1, E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_739ec7_a29354_libavformat#utils.c,revFiles/739ec7_a29354_libavformat#utils.c}: avformat_find_stream_info)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.21, Precision: 1.00
+// -- Node Change --
+// Recall: 0.10, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/14(0%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_30b5f0_ff20ed_epan#ftypes#ftype-integer.c: uinteger64_to_repr
+ - wireshark/prevFiles/prev_30b5f0_ff20ed_epan#ftypes#ftype-integer.c: integer64_to_repr
+ - FFmpeg/prevFiles/prev_739ec7_a29354_libavformat#utils.c: avformat_find_stream_info
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_7ea7d3_fea1c0_kvm-all.c: kvm_device_access
+ - cairo/prevFiles/prev_d47e05_a7ed3d_src#cairo-pdf-surface.c: _cairo_pdf_surface_emit_smask
+ - vlc/prevFiles/prev_05422a_f53645_src#audio_output#mixer.c: MixBuffer
+ - curl/prevFiles/prev_8a6dc5_af636c_src#main.c: getparameter
+*/
+
+// ---------------------------------------------

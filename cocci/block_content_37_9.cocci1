@@ -1,0 +1,28 @@
+@@
+identifier I4 = {PyInt_Check ,PyLong_Check }, I5 = {PyInt_AS_LONG ,PyLong_AS_LONG };
+expression E0, E1, E2, E3;
+@@
+- if (E0 != NULL && !PyNumber_Check(E0) || E1 != NULL && !PyNumber_Check(E1))  
++ if ((E0 != NULL && !PyNumber_Check(E0)) || (E1 != NULL && !PyNumber_Check(E1)))  
+  {
+  ...
+  }
+  ...
+- assert(E2 != PY_SSIZE_T_MAX && E0 == NULL && !E3 || E2 == PY_SSIZE_T_MAX && E0 != NULL && E3); 
+- assert(E3 || I4(E1) && I5(E1) == 1); 
++ assert((E2 != PY_SSIZE_T_MAX && E0 == NULL && !E3) || (E2 == PY_SSIZE_T_MAX && E0 != NULL && E3)); 
++ assert(E3 || (I4(E1) && I5(E1) == 1)); 
+// Infered from: (cpython/{prevFiles/prev_912fbc_94aaf9_Modules#itertoolsmodule.c,revFiles/912fbc_94aaf9_Modules#itertoolsmodule.c}: count_new), (cpython/{prevFiles/prev_873389_3e4cae_Modules#itertoolsmodule.c,revFiles/873389_3e4cae_Modules#itertoolsmodule.c}: count_new)
+// Recall: 0.75, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

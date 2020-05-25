@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->frame->nb_samples = E0->frames * MPA_FRAME_SIZE; 
++ E0->frame->nb_samples = MPA_FRAME_SIZE; 
+// Infered from: (FFmpeg/{prevFiles/prev_4e0738_7b5fdd_libavcodec#mpegaudiodec.c,revFiles/4e0738_7b5fdd_libavcodec#mpegaudiodec.c}: decode_frame_mp3on4)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

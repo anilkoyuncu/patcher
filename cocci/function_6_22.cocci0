@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- free(E0->p_sys); 
++ free(p_sys); 
+// Infered from: (vlc/{prevFiles/prev_98f134_c73675_modules#video_filter#bluescreen.c,revFiles/98f134_c73675_modules#video_filter#bluescreen.c}: Destroy)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.22
+
+// ---------------------------------------------

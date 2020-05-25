@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+@@
+- msg_Err(I0, E1); 
++ msg_Err(I0, "%s", E1); 
+// Infered from: (vlc/{prevFiles/prev_2f65bd_b11fb3_modules#access#cdda#access.c,revFiles/2f65bd_b11fb3_modules#access#cdda#access.c}: cdio_log_handler), (vlc/{prevFiles/prev_2f65bd_b11fb3_modules#access#vcdx#access.c,revFiles/2f65bd_b11fb3_modules#access#vcdx#access.c}: cdio_log_handler), (vlc/{prevFiles/prev_2f65bd_b11fb3_modules#access#vcdx#access.c,revFiles/2f65bd_b11fb3_modules#access#vcdx#access.c}: vcd_log_handler)
+// False positives: (vlc/revFiles/2f65bd_b11fb3_modules#access#cdda#access.c: CDDAOpen)
+// Recall: 0.27, Precision: 0.60, Matching recall: 0.27
+
+// ---------------------------------------------

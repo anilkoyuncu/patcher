@@ -1,0 +1,31 @@
+@@
+expression E2, E0, E1;
+@@
+- E0[E1] = -E2; 
++ E0[E1] = 1 - E2; 
+// Infered from: (cairo/{prevFiles/prev_c1fcbd_3898e4_src#cairo-quartz-surface.c,revFiles/c1fcbd_3898e4_src#cairo-quartz-surface.c}: CreateRepeatingRadialGradientFunction), (cairo/{prevFiles/prev_c1fcbd_3898e4_src#cairo-quartz-surface.c,revFiles/c1fcbd_3898e4_src#cairo-quartz-surface.c}: CreateRepeatingRadialGradientFunction)
+// False positives: (FFmpeg/revFiles/44a7e6_f28b10_libavcodec#h264.c: decode_mb_cabac), (FFmpeg/revFiles/44a7e6_f28b10_libavcodec#h264.c: decode_mb_cavlc), (FFmpeg/revFiles/44a7e6_f28b10_libavcodec#h264.c: pred_direct_motion), (FFmpeg/revFiles/44a7e6_f28b10_libavcodec#h264.c: quantize_c)
+// Recall: 0.29, Precision: 0.29, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 0.50
+// -- Node Change --
+// Recall: 0.86, Precision: 0.55
+// -- General --
+// Functions fully changed: 4/9(44%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_68d4bcf_244d7b_crypto#bio#b_print.c: fmtint
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_44a7e6_f28b10_libavcodec#h264.c: decode_mb_cabac
+ - FFmpeg/prevFiles/prev_44a7e6_f28b10_libavcodec#h264.c: decode_mb_cavlc
+ - FFmpeg/prevFiles/prev_44a7e6_f28b10_libavcodec#h264.c: pred_direct_motion
+ - FFmpeg/prevFiles/prev_44a7e6_f28b10_libavcodec#h264.c: quantize_c
+*/
+
+// ---------------------------------------------

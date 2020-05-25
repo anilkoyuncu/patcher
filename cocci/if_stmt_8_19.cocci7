@@ -1,0 +1,42 @@
+@@
+identifier I2, I3;
+expression E0, E4, E5, E1;
+typedef mca_base_component_t;
+typedef mca_base_module_t;
+@@
+- if (OPAL_SUCCESS != (E0 = mca_base_select(E1, I2, &I3,  (mca_base_module_t **)&E4,  (mca_base_component_t **)&E5)))  
++ if (OPAL_SUCCESS != mca_base_select(E1, I2, &I3, (mca_base_module_t **)&E4,  (mca_base_component_t **)&E5))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_1de50b_e8c8d0c_orte#mca#grpcomm#base#grpcomm_base_select.c,revFiles/1de50b_e8c8d0c_orte#mca#grpcomm#base#grpcomm_base_select.c}: orte_grpcomm_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_opal#mca#paffinity#base#paffinity_base_select.c,revFiles/1de50b_e8c8d0c_opal#mca#paffinity#base#paffinity_base_select.c}: opal_paffinity_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_opal#mca#crs#base#crs_base_select.c,revFiles/1de50b_e8c8d0c_opal#mca#crs#base#crs_base_select.c}: opal_crs_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_opal#mca#memchecker#base#memchecker_base_select.c,revFiles/1de50b_e8c8d0c_opal#mca#memchecker#base#memchecker_base_select.c}: opal_memchecker_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_ompi#mca#pubsub#base#pubsub_base_select.c,revFiles/1de50b_e8c8d0c_ompi#mca#pubsub#base#pubsub_base_select.c}: ompi_pubsub_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_opal#mca#maffinity#base#maffinity_base_select.c,revFiles/1de50b_e8c8d0c_opal#mca#maffinity#base#maffinity_base_select.c}: opal_maffinity_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_ompi#mca#crcp#base#crcp_base_select.c,revFiles/1de50b_e8c8d0c_ompi#mca#crcp#base#crcp_base_select.c}: ompi_crcp_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_ompi#mca#dpm#base#dpm_base_select.c,revFiles/1de50b_e8c8d0c_ompi#mca#dpm#base#dpm_base_select.c}: ompi_dpm_base_select), (ompi/{prevFiles/prev_1de50b_e8c8d0c_opal#mca#carto#base#carto_base_select.c,revFiles/1de50b_e8c8d0c_opal#mca#carto#base#carto_base_select.c}: opal_carto_base_select)
+// Recall: 0.30, Precision: 1.00, Matching recall: 0.42
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.85
+// -- Node Change --
+// Recall: 0.61, Precision: 0.83
+// -- General --
+// Functions fully changed: 9/20(45%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_opal#mca#carto#base#carto_base_select.c: opal_carto_base_select
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_opal#mca#crs#base#crs_base_select.c: opal_crs_base_select
+ - wireshark/prevFiles/prev_2d2109_43b089_epan#dissectors#packet-imf.c: dissect_imf
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_opal#mca#maffinity#base#maffinity_base_select.c: opal_maffinity_base_select
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_opal#mca#memchecker#base#memchecker_base_select.c: opal_memchecker_base_select
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_opal#mca#paffinity#base#paffinity_base_select.c: opal_paffinity_base_select
+ - ompi/prevFiles/prev_1de50b_e8c8d0c_ompi#mca#crcp#base#crcp_base_select.c: ompi_crcp_base_select
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_aa4782_2ecf94_cmdutils.c: opt_default
+ - wireshark/prevFiles/prev_0c598a9_5388b8_plugins#mate#mate_runtime.c: analyze_pdu
+ - FFmpeg/prevFiles/prev_aa4782_2ecf94_cmdutils.c: get_codecs_sorted
+ - wireshark/prevFiles/prev_92a02a_ad1486_epan#gcp.c: gcp_ctx
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0 && E1 >= (ULONG_MAX / 10L))  
++ if (!E0 && E1 >= ((ULONG_MAX - 80) / 10L))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_9fe51d_b79853_crypto#asn1#a_object.c,revFiles/9fe51d_b79853_crypto#asn1#a_object.c}: a2d_ASN1_OBJECT)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

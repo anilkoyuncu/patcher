@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->widget && _gtk_widget_is_toplevel(E0->widget))  
++ if (E0->widget && _gtk_widget_is_toplevel(E0->widget) && GTK_IS_CONTAINER(  E0->widget))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_6eb3d9_21a430_gtk#gtkcsswidgetnode.c,revFiles/6eb3d9_21a430_gtk#gtkcsswidgetnode.c}: gtk_css_widget_node_queue_validate), (gtk/{prevFiles/prev_6eb3d9_21a430_gtk#gtkcsswidgetnode.c,revFiles/6eb3d9_21a430_gtk#gtkcsswidgetnode.c}: gtk_css_widget_node_dequeue_validate)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

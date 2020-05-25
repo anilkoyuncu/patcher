@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- error_setg(E0, "cannot change property 'pmem' of %s '%s'",  object_get_typename(E1), object_get_canonical_path_component(  E1)); 
++ char *path = object_get_canonical_path_component(E1); 
++ error_setg(E0, "cannot change property 'pmem' of %s '%s'",  object_get_typename(E1), path); 
++ g_free(path); 
+// Infered from: (qemu/{prevFiles/prev_a1f3bb_13399a_backends#hostmem-file.c,revFiles/a1f3bb_13399a_backends#hostmem-file.c}: file_memory_backend_set_pmem)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef uint8_t;
+@@
+- return av_image_fill_pointers(E0, E1, E2, E3, E4); 
++ return av_image_fill_pointers(E0, E1, E2, (uint8_t *)E3, E4); 
+// Infered from: (FFmpeg/{prevFiles/prev_94c3e1_4f2549_libavutil#imgutils.c,revFiles/94c3e1_4f2549_libavutil#imgutils.c}: av_image_fill_arrays)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

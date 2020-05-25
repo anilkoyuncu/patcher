@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->codec->sample_rate || !E0->codec->bits_per_coded_sample || (  !E0->codec->codec_id && !E0->codec->codec_tag))  
++ if (!E0->codec->channels || !E0->codec->sample_rate || !E0->codec->bits_per_coded_sample || (  !E0->codec->codec_id && !E0->codec->codec_tag))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_8ff8de_2be3fe_libavformat#flvdec.c,revFiles/8ff8de_2be3fe_libavformat#flvdec.c}: flv_read_packet)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

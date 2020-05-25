@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON(E0),  capture_opts->has_autostop_filesize); 
++ gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON(E0),  capture_opts->has_autostop_filesize || !capture_opts->has_file_duration); 
+// Infered from: (wireshark/{prevFiles/prev_4889fc_50d0a1_gtk#capture_dlg.c,revFiles/4889fc_50d0a1_gtk#capture_dlg.c}: capture_prep_cb)
+// False positives: (wireshark/revFiles/4889fc_50d0a1_gtk#capture_dlg.c: capture_prep_cb)
+// Recall: 0.29, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_4889fc_50d0a1_gtk#capture_dlg.c: capture_prep_cb
+*/
+
+// ---------------------------------------------

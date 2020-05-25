@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- put_be32(E0, E1->sampleDuration); 
++ put_be32(E0, 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_aa1c1c_7b49ce_libavformat#movenc.c,revFiles/aa1c1c_7b49ce_libavformat#movenc.c}: mov_write_audio_tag)
+// False positives: (FFmpeg/revFiles/aa1c1c_7b49ce_libavformat#movenc.c: mov_write_edts_tag), (FFmpeg/revFiles/aa1c1c_7b49ce_libavformat#movenc.c: mov_write_stts_tag)
+// Recall: 0.15, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

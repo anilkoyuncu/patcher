@@ -1,0 +1,8 @@
+@@
+@@
+- x86_cpu_compat_kvm_no_autoenable(FEAT_KVM, KVM_FEATURE_PV_EOI); 
++ x86_cpu_compat_kvm_no_autoenable(FEAT_KVM, 1 << KVM_FEATURE_PV_EOI); 
+// Infered from: (qemu/{prevFiles/prev_0034a0_a46b3a_hw#i386#pc_piix.c,revFiles/0034a0_a46b3a_hw#i386#pc_piix.c}: pc_compat_1_2), (qemu/{prevFiles/prev_0034a0_a46b3a_hw#i386#pc_piix.c,revFiles/0034a0_a46b3a_hw#i386#pc_piix.c}: pc_init_isa)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,21 @@
+@@
+identifier I1, I4;
+expression E0, E2, E3;
+typedef uint64_t;
+@@
+- E0.u.s.ppc32.I1[E2] = ((uint64_t )E3->I4[1][E2] << 32) | E3->I4[0][E2]; 
++ E0.u.s.ppc32.I1[E2] = ((uint64_t )E3->I4[0][E2] << 32) | E3->I4[1][E2]; 
+// Infered from: (qemu/{prevFiles/prev_ef8beb_fb37c3_target-ppc#kvm.c,revFiles/ef8beb_fb37c3_target-ppc#kvm.c}: kvm_arch_put_registers), (qemu/{prevFiles/prev_ef8beb_fb37c3_target-ppc#kvm.c,revFiles/ef8beb_fb37c3_target-ppc#kvm.c}: kvm_arch_put_registers)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

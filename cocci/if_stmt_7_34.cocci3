@@ -1,0 +1,41 @@
+@@
+expression E0;
+@@
+- cliReadSingleLineReply(E0, 0); 
++ if (cliReadSingleLineReply(E0, 0))  
++ {
++ exit(1); 
++ }
++ printf("\n"); 
+// Infered from: (redis/{prevFiles/prev_e0e1c1_8fedd0_src#redis-cli.c,revFiles/e0e1c1_8fedd0_src#redis-cli.c}: cliSendCommand)
+// False positives: (redis/revFiles/e0e1c1_8fedd0_src#redis-cli.c: cliReadReply)
+// Recall: 0.13, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.29, Precision: 0.80
+// -- Node Change --
+// Recall: 0.33, Precision: 0.71
+// -- General --
+// Functions fully changed: 4/15(26%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_e0e1c1_8fedd0_src#redis-cli.c: cliReadLine
+ - qemu/prevFiles/prev_06b611_b6353b_qemu-io.c: openfile
+ - qemu/prevFiles/prev_a16c17_bd12ff_qemu-nbd.c: main
+ - redis/prevFiles/prev_09252f_357d36_src#replication.c: syncRead
+ - vlc/prevFiles/prev_c9bd42_220005_src#playlist#playlist.c: NextItem
+ - wireshark/prevFiles/prev_b80935_c285a1_gtk#new_packet_list.c: create_view_and_model
+ - cairo/prevFiles/prev_182b02_0e7376_src#cairo-win32-surface.c: _cairo_win32_save_initial_clip
+ - qemu/prevFiles/prev_0a1bec_087edb_hw#s390x#ipl.c: s390_ipl_init
+ - qemu/prevFiles/prev_b533f6_a443bc_kvm-all.c: kvm_physical_sync_dirty_bitmap
+ - wireshark/prevFiles/prev_853067_8e8d66_epan#dissectors#packet-sip.c: dissect_sip_tcp
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - redis/prevFiles/prev_e0e1c1_8fedd0_src#redis-cli.c: cliReadReply
+*/
+
+// ---------------------------------------------

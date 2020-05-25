@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = OPAL_ALIGN_PAD_AMOUNT(E1->des_src[0].seg_len, sizeof(void *)); 
++ E0 = OPAL_ALIGN_PAD_AMOUNT(E1->des_src[0].seg_len, sizeof(uint64_t)); 
+// Infered from: (ompi/{prevFiles/prev_fbda6a_1405ba_ompi#mca#osc#rdma#osc_rdma_data_move.c,revFiles/fbda6a_1405ba_ompi#mca#osc#rdma#osc_rdma_data_move.c}: ompi_osc_rdma_sendreq_send)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

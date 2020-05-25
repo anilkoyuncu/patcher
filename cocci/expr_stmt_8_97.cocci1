@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+typedef ByteCode;
+@@
+- E0->data.tebc.pc = ((ByteCode *)E0->data.tebc.codePtr)->codeStart + E1->pc; 
++ E0->data.tebc.pc = (char *)(((ByteCode *)E0->data.tebc.codePtr)->codeStart + E1->pc); 
+// Infered from: (tcl/{prevFiles/prev_81be02_c2de1b_generic#tclBasic.c,revFiles/81be02_c2de1b_generic#tclBasic.c}: TclArgumentGet)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_a2a45a_d74142_block#vdi.c: vdi_aio_write_cb
+ - qemu/prevFiles/prev_a2a45a_d74142_block#vdi.c: vdi_aio_read_cb
+*/
+
+// ---------------------------------------------

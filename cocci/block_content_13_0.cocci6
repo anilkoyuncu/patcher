@@ -1,0 +1,9 @@
+@@
+expression E1, E2, E0;
+@@
+- set_irq_chip_and_handler(E0, E1, E2); 
++ irq_set_chip_and_handler(E0, E1, E2); 
+// Infered from: (linux/{prevFiles/prev_ec775d_7bfbc1f2_arch#powerpc#platforms#52xx#mpc52xx_pic.c,revFiles/ec775d_7bfbc1f2_arch#powerpc#platforms#52xx#mpc52xx_pic.c}: mpc52xx_irqhost_map), (linux/{prevFiles/prev_ec775d_7bfbc1f2_arch#powerpc#platforms#52xx#mpc52xx_pic.c,revFiles/ec775d_7bfbc1f2_arch#powerpc#platforms#52xx#mpc52xx_pic.c}: mpc52xx_irqhost_map)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

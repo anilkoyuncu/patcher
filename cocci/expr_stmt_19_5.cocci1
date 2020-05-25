@@ -1,0 +1,21 @@
+@@
+identifier I0;
+expression E1;
+typedef bool;
+@@
+- bool I0 = (E1 == AMD_PG_STATE_GATE) ? true :false; 
++ bool I0 = (E1 == AMD_PG_STATE_GATE); 
+// Infered from: (linux/{prevFiles/prev_7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#gfx_v8_0.c,revFiles/7e91366_c98b5c_drivers#gpu#drm#amd#amdgpu#gfx_v8_0.c}: gfx_v8_0_set_powergating_state)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

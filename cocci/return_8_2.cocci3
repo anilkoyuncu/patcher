@@ -1,0 +1,25 @@
+@@
+identifier I0 = {gst_parse_launch_full ,gst_parse_launchv_full };
+expression E1, E2;
+@@
+- return I0(E1, NULL, 0, E2); 
++ return I0(E1, NULL, GST_PARSE_FLAG_NONE, E2); 
+// Infered from: (gstreamer/{prevFiles/prev_1db007_b26c5b_gst#gstparse.c,revFiles/1db007_b26c5b_gst#gstparse.c}: gst_parse_launchv), (gstreamer/{prevFiles/prev_1db007_b26c5b_gst#gstparse.c,revFiles/1db007_b26c5b_gst#gstparse.c}: gst_parse_launch)
+// False positives: (gstreamer/revFiles/1db007_b26c5b_gst#gstparse.c: gst_parse_launchv_full)
+// Recall: 0.33, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.86
+// -- Node Change --
+// Recall: 1.00, Precision: 0.86
+// -- General --
+// Functions fully changed: 6/7(85%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gstreamer/prevFiles/prev_1db007_b26c5b_gst#gstparse.c: gst_parse_launchv_full
+*/
+
+// ---------------------------------------------

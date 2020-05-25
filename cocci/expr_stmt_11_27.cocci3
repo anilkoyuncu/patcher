@@ -1,0 +1,9 @@
+@@
+expression E0, E2, E1;
+@@
+- gtk_action_connect_proxy(gtk_action_group_get_action(E0, E1), E2); 
++ gtk_activatable_set_related_action(GTK_ACTIVATABLE(E2),  gtk_action_group_get_action(E0, E1)); 
+// Infered from: (gtk/{prevFiles/prev_ac9ea0_ae94c3_tests#testmerge.c,revFiles/ac9ea0_ae94c3_tests#testmerge.c}: main), (gtk/{prevFiles/prev_ac9ea0_ae94c3_tests#testmerge.c,revFiles/ac9ea0_ae94c3_tests#testmerge.c}: main)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

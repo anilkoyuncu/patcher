@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- g_queue_pop_head(E0->out); 
++ send_queue_clean(E0->out); 
+// Infered from: (lighttpd2/{prevFiles/prev_8fa282_d84677_src#common#angel_connection.c,revFiles/8fa282_d84677_src#common#angel_connection.c}: angel_connection_io_cb)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

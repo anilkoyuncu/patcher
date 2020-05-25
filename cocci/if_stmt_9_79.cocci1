@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->global_locking)  
++ if (E0->global_locking && !qemu_mutex_iothread_locked())  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_8b8125_460b6c_accel#tcg#cputlb.c,revFiles/8b8125_460b6c_accel#tcg#cputlb.c}: io_readx), (qemu/{prevFiles/prev_8b8125_460b6c_accel#tcg#cputlb.c,revFiles/8b8125_460b6c_accel#tcg#cputlb.c}: io_writex)
+// Recall: 0.19, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

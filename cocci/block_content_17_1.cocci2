@@ -1,0 +1,47 @@
+@@
+expression E0, E1;
+@@
+- if (E0 != E1->cluster_size)  
++ if (E0 < 0)  
+  {
+- return -EIO; 
++ return E0; 
+  }
+// Infered from: (qemu/{prevFiles/prev_e14e8b_2eaa8f_block#qcow2-refcount.c,revFiles/e14e8b_2eaa8f_block#qcow2-refcount.c}: load_refcount_block)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.13, Precision: 1.00
+// -- Node Change --
+// Recall: 0.12, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/23(8%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_e14e8b_2eaa8f_block#qcow2-refcount.c: load_refcount_block
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_9b8152_568381_libavformat#oggdec.c: ogg_read_page
+ - FFmpeg/prevFiles/prev_08117a_9c7ee3_libavcodec#h264_slice.c: h264_slice_header_parse
+ - FFmpeg/prevFiles/prev_1be49cee_01370b_libavcodec#h264_slice.c: h264_field_start
+ - FFmpeg/prevFiles/prev_aa6aa2_057549_libavcodec#wmaenc.c: encode_superframe
+ - FFmpeg/prevFiles/prev_c01a46_1bf507_libavformat#rmdec.c: rm_read_packet
+ - FFmpeg/prevFiles/prev_66a7bc_cf410f_libavcodec#adpcm.c: adpcm_decode_frame
+ - FFmpeg/prevFiles/prev_8e51f3_cede38_libavformat#vividas.c: viv_read_header
+ - FFmpeg/prevFiles/prev_c62d17_861f47_libavformat#hlsenc.c: hls_start
+ - FFmpeg/prevFiles/prev_2e67a9_64ae08_libavfilter#vf_drawtext.c: draw_text
+ - FFmpeg/prevFiles/prev_8e51f3_cede38_libavformat#vividas.c: track_index
+ - FFmpeg/prevFiles/prev_21d8c6_6ae1a3_libavcodec#smacker.c: decode_header_trees
+ - FFmpeg/prevFiles/prev_aa6aa2_057549_libavcodec#wmaenc.c: apply_window_and_mdct
+ - FFmpeg/prevFiles/prev_edc34c_93f4b4_libavcodec#utils.c: update_frame_pool
+ - FFmpeg/prevFiles/prev_e976e6_2104e3_libavcodec#atrac3.c: decode_frame
+ - FFmpeg/prevFiles/prev_385fe9_a38758_libavcodec#snowenc.c: encode_frame
+ - FFmpeg/prevFiles/prev_2952d9_d96558_libavcodec#mvha.c: decode_frame
+ - FFmpeg/prevFiles/prev_46b865_b315a3_libavcodec#qdrw.c: decode_frame
+*/
+
+// ---------------------------------------------

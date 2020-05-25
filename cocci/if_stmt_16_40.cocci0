@@ -1,0 +1,11 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- E0->I1 = E0->I2 = 0; 
++ E0->I1 = 0; 
++ E0->I1 = 0; 
+// Infered from: (curl/{prevFiles/prev_73f407_4be7dc_lib#multi.c,revFiles/73f407_4be7dc_lib#multi.c}: Curl_expire)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

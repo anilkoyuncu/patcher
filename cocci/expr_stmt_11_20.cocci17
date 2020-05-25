@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "egl support is disabled\n"); 
++ error_report("egl support is disabled"); 
+// Infered from: (qemu/{prevFiles/prev_493d89_47d17c_vl.c,revFiles/493d89_47d17c_vl.c}: select_display)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

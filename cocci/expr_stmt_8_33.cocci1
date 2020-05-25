@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- alfabeto[E0] = f(alfabeto[E0]); 
++ alfabeto[E0] = f(6 - alfabeto[E0]); 
+// Infered from: (codeflaws/{prevFiles/prev_677-C-18262604-18262617.c,revFiles/677-C-18262604-18262617.c}: ini)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

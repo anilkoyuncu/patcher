@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- while (avio_tell(E0) + 12 <= E1)  
++ while (avio_tell(E0) + 12 <= E1 && !avio_feof(E0))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_675cfb_d171cd_libavformat#iff.c,revFiles/675cfb_d171cd_libavformat#iff.c}: parse_dsd_diin), (FFmpeg/{prevFiles/prev_675cfb_d171cd_libavformat#iff.c,revFiles/675cfb_d171cd_libavformat#iff.c}: parse_dsd_prop)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

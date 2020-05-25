@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0[E1].size == 0 || E2[E3].size == 0)  
++ if (E0[E1].size == 0 || E2[E1].size == 0)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_c93543_2daba9_gtk#gtkborderimage.c,revFiles/c93543_2daba9_gtk#gtkborderimage.c}: _gtk_border_image_render)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- msg_Dbg(E0, "bufsize: %d", (int )E1->i_buffer); 
++ msg_Dbg(E0, "bufsize: %zu", E1->i_buffer); 
+// Infered from: (vlc/{prevFiles/prev_a7f6a7_e07059_modules#codec#quicktime.c,revFiles/a7f6a7_e07059_modules#codec#quicktime.c}: DecodeVideo)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 12 rules):
+// -- Edit Location --
+// Recall: 0.94, Precision: 1.00
+// -- Node Change --
+// Recall: 0.93, Precision: 1.00
+// -- General --
+// Functions fully changed: 14/16(87%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_3e89cb_792b45_block#vvfat.c: print_mapping
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_3ba192_b69e48_cpu-exec.c: cpu_exec
+*/
+
+// ---------------------------------------------

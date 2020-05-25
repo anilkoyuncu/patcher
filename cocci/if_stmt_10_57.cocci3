@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2;
+@@
+- if (CreateProcess(NULL, E0, NULL, NULL, TRUE, CREATE_NEW_CONSOLE, NULL, NULL,  &E1, &E2))  
++ if (CreateProcess(NULL, E0, NULL, NULL, TRUE, 0, NULL, NULL, &E1, &E2))  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_155adb_2f10cb8_Modules#posixmodule.c,revFiles/155adb_2f10cb8_Modules#posixmodule.c}: _PyPopenCreateProcess)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+expression E0;
+@@
+- if (E0 < FCA_API_VER(FCA_API_ABI_MAJOR, FCA_API_ABI_MINOR))  
++ if (E0 != FCA_API_VER(FCA_API_ABI_MAJOR, FCA_API_ABI_MINOR))  
+  {
+- FCA_ERROR("Unsupported FCA version: %s Please upgrade FCA to at least v%d.%d",  mca_coll_fca_component.fca_ops.get_version_string(),  FCA_API_ABI_MAJOR, FCA_API_ABI_MINOR); 
++ FCA_ERROR("Unsupported FCA version: %s, please update FCA to v%d.%d",  mca_coll_fca_component.fca_ops.get_version_string(),  FCA_API_ABI_MAJOR, FCA_API_ABI_MINOR); 
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_f52524_cc627f_ompi#mca#coll#fca#coll_fca_component.c,revFiles/f52524_cc627f_ompi#mca#coll#fca#coll_fca_component.c}: mca_coll_fca_get_fca_lib)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

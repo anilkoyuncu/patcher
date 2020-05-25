@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- memory_region_init_iommu(&E0->iommu_mr, sizeof(E0->iommu_mr),  TYPE_S390_IOMMU_MEMORY_REGION, OBJECT(&E0->mr), E1,  E0->pal + 1); 
++ memory_region_init_iommu(&E0->iommu_mr, sizeof(E0->iommu_mr),  TYPE_S390_IOMMU_MEMORY_REGION, OBJECT(&E0->mr), E1,  E0->pal - E0->pba + 1); 
+// Infered from: (qemu/{prevFiles/prev_dbe9cf_d57d6a_hw#s390x#s390-pci-bus.c,revFiles/dbe9cf_d57d6a_hw#s390x#s390-pci-bus.c}: s390_pci_iommu_enable)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

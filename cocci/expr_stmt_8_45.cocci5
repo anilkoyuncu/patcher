@@ -1,0 +1,10 @@
+@@
+identifier I1, I3;
+expression E0, E2;
+@@
+- E0->I1 = (E2->display.I3 - E0->I3) / 2; 
++ E0->I1 = ((int )E2->display.I3 - (int )E0->I3) / 2; 
+// Infered from: (vlc/{prevFiles/prev_30efd3_3a6ce9_src#video_output#display.c,revFiles/30efd3_3a6ce9_src#video_output#display.c}: vout_display_PlacePicture), (vlc/{prevFiles/prev_30efd3_3a6ce9_src#video_output#display.c,revFiles/30efd3_3a6ce9_src#video_output#display.c}: vout_display_PlacePicture)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

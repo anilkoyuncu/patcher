@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (has_sha1_file(E0->sha1))  
++ if (has_sha1_pack(E0->sha1, NULL))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_efec43_5ced05_builtin-fsck.c,revFiles/efec43_5ced05_builtin-fsck.c}: check_reachable_object)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

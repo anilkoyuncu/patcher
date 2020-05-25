@@ -1,0 +1,20 @@
+@@
+expression E0;
+typedef uuid_t;
+@@
+- memset(E0, 0, sizeof(E0)); 
++ memset(E0, 0, sizeof(uuid_t )); 
+// Infered from: (qemu/{prevFiles/prev_4f3669_42af9c_block#vdi.c,revFiles/4f3669_42af9c_block#vdi.c}: uuid_generate)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

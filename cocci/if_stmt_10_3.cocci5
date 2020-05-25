@@ -1,0 +1,41 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((E0 = tvb_uncompress(E1, E2, E3)) != NULL)  
++ if ((E0 = tvb_child_uncompress(NULL, E1, E2, E3)) != NULL)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_324af9_11ef8a_epan#dissectors#packet-dmp.c,revFiles/324af9_11ef8a_epan#dissectors#packet-dmp.c}: dissect_dmp_message)
+// False positives: (wireshark/revFiles/199da7_c3da1f_epan#dissectors#packet-dmp.c: dissect_dmp_message)
+// Recall: 0.11, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 0.88
+// -- General --
+// Functions fully changed: 6/13(46%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_50cd71_2b75ef_target#arm#helper.c: do_ats_write
+ - wireshark/prevFiles/prev_752e54_51597c_epan#wslua#wslua_int64.c: Int64__tostring
+ - openssl/prevFiles/prev_d47c10_a7372f_crypto#ec#ec_print.c: EC_POINT_bn2point
+ - wireshark/prevFiles/prev_752e54_51597c_epan#wslua#wslua_int64.c: UInt64__tostring
+ - tcl/prevFiles/prev_4bb5a2_ba57d8_generic#tclPathObj.c: SetFsPathFromAny
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_53996f_658dd4_builtin-checkout.c: checkout_paths
+ - wireshark/prevFiles/prev_199da7_c3da1f_epan#dissectors#packet-dmp.c: dissect_dmp_message
+*/
+
+// ---------------------------------------------

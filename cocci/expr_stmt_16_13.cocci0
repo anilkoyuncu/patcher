@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- *E0 = E1 = xmalloc(sizeof(*E1) + E2); 
++ *E0 = E1 = xmalloc(st_add(sizeof(*E1), E2)); 
+// Infered from: (git/{prevFiles/prev_50a6c8_96ffc0_dir.c,revFiles/50a6c8_96ffc0_dir.c}: read_one_dir)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

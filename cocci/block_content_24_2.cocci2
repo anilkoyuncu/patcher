@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- memory_region_init_ram_from_file(&E0->mr, OBJECT(E0),  object_get_canonical_path(OBJECT(E0)),  E0->size, E1->share, E1->mem_path, E2); 
++ path = object_get_canonical_path(OBJECT(E0)); 
++ memory_region_init_ram_from_file(&E0->mr, OBJECT(E0), path, E0->size,  E1->share, E1->mem_path, E2); 
++ g_free(path); 
+// Infered from: (qemu/{prevFiles/prev_696b55_1a5512_backends#hostmem-file.c,revFiles/696b55_1a5512_backends#hostmem-file.c}: file_backend_memory_alloc)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

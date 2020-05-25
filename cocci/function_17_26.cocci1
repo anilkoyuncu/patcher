@@ -1,0 +1,44 @@
+@@
+identifier I0, I1;
+expression E2, E3, E4, E5, E6, E7;
+typedef BOOL;
+@@
+- int I0; 
+  ...
+- BOOL I1; 
+  ...
+- I0 = MultiByteToWideChar(E2, MB_PRECOMPOSED, E3, E4, NULL, 0); 
++ I0 = MultiByteToWideChar(E2, mbflag, E3, E4, NULL, 0); 
+  ...
+- I0 = MultiByteToWideChar(E2, MB_PRECOMPOSED, E3, E4, E5, I0); 
++ I0 = MultiByteToWideChar(E2, mbflag, E3, E4, E5, I0); 
+  ...
+- I0 = WideCharToMultiByte(E6, 0, E5, I0, NULL, 0, NULL, NULL); 
++ wslen = I0; 
++ I0 = WideCharToMultiByte(E6, 0, E5, wslen, NULL, 0, NULL, NULL); 
+  ...
+- I0 = WideCharToMultiByte(E6, 0, E5, I0, E7->s + E7->length, I0, NULL, &I1); 
++ I0 = WideCharToMultiByte(E6, 0, E5, wslen, E7->s + E7->length, I0, NULL, dp); 
+// Infered from: (libarchive/{prevFiles/prev_e4ac4a_136ef2_libarchive#archive_string.c,revFiles/e4ac4a_136ef2_libarchive#archive_string.c}: strncat_in_utf8)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.42
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.40, Precision: 0.67
+// -- Node Change --
+// Recall: 0.34, Precision: 0.76
+// -- General --
+// Functions fully changed: 0/6(0%)
+
+/*
+Functions where the patch applied partially:
+ - libarchive/prevFiles/prev_e4ac4a_136ef2_libarchive#archive_string.c: strncat_in_utf8
+ - libarchive/prevFiles/prev_d7d460_12558c_libarchive#archive_entry.c: __archive_entry_acl_parse_w
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - libarchive/prevFiles/prev_d7d460_12558c_libarchive#archive_entry.c: main
+*/
+
+// ---------------------------------------------

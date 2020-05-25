@@ -1,0 +1,19 @@
+@@
+identifier I0;
+@@
+- char I0[FLT_BUF_SIZE]; 
++ char I0[FLT_BUF_SIZE + 1]; 
+// Infered from: (wireshark/{prevFiles/prev_dd8518_d89ef8_gtk#follow_dlg.c,revFiles/dd8518_d89ef8_gtk#follow_dlg.c}: follow_read_stream)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

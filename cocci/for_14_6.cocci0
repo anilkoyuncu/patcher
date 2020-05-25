@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;E0 < E1->num_axes;E0++)  
++ for(E0 = 0;E0 < gdk_device_get_n_axes(E1);E0++)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_290ecb_c0aae6_gdk#win32#gdkdevice-wintab.c,revFiles/290ecb_c0aae6_gdk#win32#gdkdevice-wintab.c}: _gdk_device_wintab_translate_axes)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

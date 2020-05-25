@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_item(E0, hf_aim_string08, E1, E2, E3, ENC_UTF_8 | ENC_NA); 
+- E2 += E3; 
++ proto_tree_add_item(E0, hf_aim_string08, E1, E2, 1, ENC_UTF_8 | ENC_NA); 
++ E2 += (E3 + 1); 
+// Infered from: (wireshark/{prevFiles/prev_00041a_263840_epan#dissectors#packet-aim.c,revFiles/00041a_263840_epan#dissectors#packet-aim.c}: dissect_aim_tlv_value_string08_array)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- g_string_chunk_clear(E0->text); 
++ g_string_chunk_free(E0->text); 
++ E0->text = g_string_chunk_new(100); 
+// Infered from: (wireshark/{prevFiles/prev_7c1d96_1711f5_gtk#expert_dlg.c,revFiles/7c1d96_1711f5_gtk#expert_dlg.c}: expert_dlg_reset), (wireshark/{prevFiles/prev_7c1d96_1711f5_gtk#expert_comp_table.c,revFiles/7c1d96_1711f5_gtk#expert_comp_table.c}: reset_error_table_data)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

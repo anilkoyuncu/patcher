@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(logfile, "Trying to write priviledged spr %d %03x\n", E0, E0); 
++ fprintf(logfile, "Trying to write privileged spr %d %03x\n", E0, E0); 
+// Infered from: (qemu/{prevFiles/prev_7f75ff_dbe06e_target-ppc#translate.c,revFiles/7f75ff_dbe06e_target-ppc#translate.c}: gen_mtspr)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

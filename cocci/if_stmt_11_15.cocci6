@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->bits_per_coded_sample <= 8)  
++ if (E0->bits_per_coded_sample > 1 && E0->bits_per_coded_sample <= 8)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_445ee35_7b9157_libavcodec#msrle.c,revFiles/445ee35_7b9157_libavcodec#msrle.c}: msrle_decode_frame)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

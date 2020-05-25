@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+typedef mtime_t;
+@@
+- input_item_SetDuration(input_GetItem(E0->p_input), (mtime_t )E1); 
++ input_item_SetDuration(E0->p_input, (mtime_t )E1); 
+// Infered from: (vlc/{prevFiles/prev_dfef0e_8589b2_modules#access#cdda#info.c,revFiles/dfef0e_8589b2_modules#access#cdda#info.c}: CDDACreatePlaylistItem)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 8 rules):
+// -- Edit Location --
+// Recall: 0.90, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 0.77
+// -- General --
+// Functions fully changed: 8/10(80%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_91415c_c83ef6_ompi#mca#pml#base#pml_base_open.c: mca_pml_base_open
+*/
+
+// ---------------------------------------------

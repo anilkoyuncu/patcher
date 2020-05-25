@@ -1,0 +1,12 @@
+@@
+identifier I2, I0;
+expression E1;
+@@
+- convert_to_long(I0); 
+- E1->I2 = I0->value.lval; 
++ convert_to_long_ex(I0); 
++ E1->I2 = (*I0)->value.lval; 
+// Infered from: (php-src/{prevFiles/prev_7f7c14_1ca7f0_ext#dbase#dbase.c,revFiles/7f7c14_1ca7f0_ext#dbase#dbase.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_7f7c14_1ca7f0_ext#dbase#dbase.c,revFiles/7f7c14_1ca7f0_ext#dbase#dbase.c}: PHP_FUNCTION)
+// Recall: 0.16, Precision: 1.00, Matching recall: 0.30
+
+// ---------------------------------------------

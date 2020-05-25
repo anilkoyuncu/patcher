@@ -1,0 +1,24 @@
+@@
+expression E0, E1;
+@@
+- gtk_window_set_mnemonics_visible(GTK_WINDOW(gtk_widget_get_toplevel(GTK_WIDGET(  E0))),  E1); 
++ gtk_window_set_mnemonics_visible(GTK_WINDOW(toplevel), E1); 
+// Infered from: (gtk/{prevFiles/prev_ea7bd0_d3e91f_gtk#gtkmenushell.c,revFiles/ea7bd0_d3e91f_gtk#gtkmenushell.c}: _gtk_menu_shell_update_mnemonics), (gtk/{prevFiles/prev_3a9633_8f7c37_gtk#gtkmenushell.c,revFiles/3a9633_8f7c37_gtk#gtkmenushell.c}: _gtk_menu_shell_update_mnemonics)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_3a9633_8f7c37_gtk#gtkmenushell.c: _gtk_menu_shell_update_mnemonics
+ - gtk/prevFiles/prev_ea7bd0_d3e91f_gtk#gtkmenushell.c: _gtk_menu_shell_update_mnemonics
+*/
+
+// ---------------------------------------------

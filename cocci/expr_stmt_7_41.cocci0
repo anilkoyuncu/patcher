@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0.cap.max_recv_sge = mca_btl_openib_component.ib_sg_list_size; 
++ E0.cap.max_recv_sge = 1; 
+// Infered from: (ompi/{prevFiles/prev_dc3f14_a87aa4_ompi#mca#btl#openib#connect#btl_openib_connect_rdmacm.c,revFiles/dc3f14_a87aa4_ompi#mca#btl#openib#connect#btl_openib_connect_rdmacm.c}: rdmacm_setup_qp)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

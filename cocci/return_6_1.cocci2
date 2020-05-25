@@ -1,0 +1,27 @@
+@@
+@@
+- return APR_EEXIST; 
++ return GetLastError(); 
+// Infered from: (apr/{prevFiles/prev_23b98d_fd7603_threadproc#win32#thread.c,revFiles/23b98d_fd7603_threadproc#win32#thread.c}: ap_thread_join), (apr/{prevFiles/prev_23b98d_fd7603_threadproc#win32#thread.c,revFiles/23b98d_fd7603_threadproc#win32#thread.c}: ap_thread_detach)
+// False positives: (apr/revFiles/23b98d_fd7603_threadproc#win32#thread.c: ap_create_thread)
+// Recall: 0.44, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.56
+// -- Node Change --
+// Recall: 0.89, Precision: 0.44
+// -- General --
+// Functions fully changed: 4/9(44%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gstreamer/prevFiles/prev_ba6054_297407_plugins#elements#gstinputselector.c: gst_input_selector_query
+ - gstreamer/prevFiles/prev_ba6054_297407_plugins#elements#gstinputselector.c: gst_input_selector_set_active_pad
+ - gstreamer/prevFiles/prev_ba6054_297407_plugins#elements#gstinputselector.c: gst_input_selector_event
+ - gstreamer/prevFiles/prev_ba6054_297407_plugins#elements#gstinputselector.c: gst_selector_pad_iterate_linked_pads
+ - apr/prevFiles/prev_23b98d_fd7603_threadproc#win32#thread.c: ap_create_thread
+*/
+
+// ---------------------------------------------

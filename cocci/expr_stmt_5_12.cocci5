@@ -1,0 +1,29 @@
+@@
+identifier I0, I2;
+expression E1, E3, E4;
+@@
+  struct diff_filespec *I0 = E1->one; 
+  struct diff_filespec *I2 = E1->two; 
+  ...
+- E3 = E1->one->path; 
+- E4 = (strcmp(E3, E1->two->path) ? E1->two->path :NULL); 
++ E3 = I0->path; 
++ E4 = (strcmp(E3, I2->path) ? I2->path :NULL); 
+// Infered from: (git/{prevFiles/prev_f2d2a5_2cfb6c_diff.c,revFiles/f2d2a5_2cfb6c_diff.c}: run_diff)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 1.00
+// -- Node Change --
+// Recall: 0.90, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/7(85%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_4784a1_8bf701_libavcodec#tiff.c: tiff_decode_tag
+*/
+
+// ---------------------------------------------

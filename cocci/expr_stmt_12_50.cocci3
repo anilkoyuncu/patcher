@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0.args[1] = E1->cpu_index; 
++ E0.args[1] = kvm_arch_vcpu_id(E1); 
+// Infered from: (qemu/{prevFiles/prev_0f20ba_0ce470_hw#intc#openpic_kvm.c,revFiles/0f20ba_0ce470_hw#intc#openpic_kvm.c}: kvm_openpic_connect_vcpu)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_1bd9fb_6c841e_ffplay.c: stream_component_open
+*/
+
+// ---------------------------------------------

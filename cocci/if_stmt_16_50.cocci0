@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->block_align < 1 || E0->block_align % E0->channels)  
++ if (E0->block_align < 1 || E0->block_align % E0->channels || E0->block_align > INT_MAX - E0->channels)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_06f685_d31a12_libavcodec#vmdaudio.c,revFiles/06f685_d31a12_libavcodec#vmdaudio.c}: vmdaudio_decode_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

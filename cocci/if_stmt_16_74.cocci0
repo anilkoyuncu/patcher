@@ -1,0 +1,18 @@
+@@
+expression E4, E0, E1, E2, E3;
+@@
+- if (E0->api_cache[E1].last_jiffies && jiffies - E0->api_cache[E1].last_jiffies < msecs_to_jiffies(  1800000) && !memcmp(E2, E0->api_cache[E1].data,  sizeof(E0->api_cache[E1].data)))  
++ if (E0->api_cache[E1].last_jiffies && time_before(jiffies,  E0->api_cache[E1].last_jiffies + msecs_to_jiffies(  1800000)) && !memcmp(  E2, E0->api_cache[E1].data, sizeof(E0->api_cache[E1].data)))  
+  {
+  ...
+  }
+  ...
+- if (jiffies - E3 > E4)  
++ if (time_after(jiffies, E3 + E4))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_168c626_9e05c0f_drivers#media#video#ivtv#ivtv-mailbox.c,revFiles/168c626_9e05c0f_drivers#media#video#ivtv#ivtv-mailbox.c}: ivtv_api_call)
+// Recall: 0.60, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

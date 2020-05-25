@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- return proto_tree_add_uint_format(E0->bssgp_tree, hf_bssgp_ie_type, E0->tvb,  E1, E2->total_length, E2->iei, "%s", E3); 
++ return proto_tree_add_uint_format(E0->bssgp_tree, hf_bssgp_ie_type, E0->tvb,  E1, 1, E2->iei, "%s", E3); 
+// Infered from: (wireshark/{prevFiles/prev_86a6a0_8dea26_epan#dissectors#packet-bssgp.c,revFiles/86a6a0_8dea26_epan#dissectors#packet-bssgp.c}: bssgp_proto_tree_add_ie)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

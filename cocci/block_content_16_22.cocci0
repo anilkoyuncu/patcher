@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = get_bits(&E1, 32); 
++ E0 = get_bits_long(&E1, 32); 
+// Infered from: (FFmpeg/{prevFiles/prev_8a515d_6d45cb_libavcodec#vp3.c,revFiles/8a515d_6d45cb_libavcodec#vp3.c}: theora_decode_comments), (FFmpeg/{prevFiles/prev_8a515d_6d45cb_libavcodec#vp3.c,revFiles/8a515d_6d45cb_libavcodec#vp3.c}: theora_decode_comments), (FFmpeg/{prevFiles/prev_8a515d_6d45cb_libavcodec#vp3.c,revFiles/8a515d_6d45cb_libavcodec#vp3.c}: theora_decode_comments)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

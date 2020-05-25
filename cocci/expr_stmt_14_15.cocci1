@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- write_reg(E0, 0xA0, E1 | E2 | 1 << 4); 
++ write_reg(E0, 0xA0, E1 | E2 | BIT(4)); 
+// Infered from: (linux/{prevFiles/prev_36cbd6_46a49a_drivers#staging#fbtft#fb_ssd1351.c,revFiles/36cbd6_46a49a_drivers#staging#fbtft#fb_ssd1351.c}: set_var), (linux/{prevFiles/prev_36cbd6_46a49a_drivers#staging#fbtft#fb_ssd1351.c,revFiles/36cbd6_46a49a_drivers#staging#fbtft#fb_ssd1351.c}: set_var)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

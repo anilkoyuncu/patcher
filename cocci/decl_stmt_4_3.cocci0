@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef uint8_t;
+@@
+- static const  uint8_t I0[AVPROBE_PADDING_SIZE]; 
++ static uint8_t I0[AVPROBE_PADDING_SIZE]; 
+// Infered from: (FFmpeg/{prevFiles/prev_27cbe4_712235_libavformat#format.c,revFiles/27cbe4_712235_libavformat#format.c}: av_probe_input_format3)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

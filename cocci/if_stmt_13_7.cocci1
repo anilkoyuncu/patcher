@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!transforms[E0].inv_trans)  
++ if (E0 >= FF_ARRAY_ELEMS(transforms) || !transforms[E0].inv_trans)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_68fd07_3b327a_libavcodec#indeo4.c,revFiles/68fd07_3b327a_libavcodec#indeo4.c}: decode_band_hdr)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

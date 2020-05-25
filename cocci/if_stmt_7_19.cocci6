@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (!(E0->state != BIO_CONN_S_OK))  
++ if (E0->state != BIO_CONN_S_OK)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_d5fd72_c7474d_crypto#bio#bss_conn.c,revFiles/d5fd72_c7474d_crypto#bio#bss_conn.c}: conn_ctrl)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

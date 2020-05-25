@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- ff_socket_nonblock(E0, 1); 
++ if (ff_socket_nonblock(E0, 1) < 0)  
++ {
++ av_log(NULL, AV_LOG_DEBUG, "ff_socket_nonblock failed\n"); 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_743947_0f02ea_libavformat#network.c,revFiles/743947_0f02ea_libavformat#network.c}: ff_listen_bind), (FFmpeg/{prevFiles/prev_743947_0f02ea_libavformat#network.c,revFiles/743947_0f02ea_libavformat#network.c}: ff_listen_connect)
+// False positives: (FFmpeg/revFiles/c8faa47_2fe4b6_libavformat#network.c: ff_listen_bind), (FFmpeg/revFiles/c8faa47_2fe4b6_libavformat#network.c: ff_listen_connect)
+// Recall: 0.29, Precision: 0.50, Matching recall: 0.67
+
+// ---------------------------------------------

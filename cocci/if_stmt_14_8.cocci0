@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (0 <= E0->entry_count)  
++ if (0 <= E0->entry_count && has_sha1_file(E0->sha1))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_dd0c34_174482_cache-tree.c,revFiles/dd0c34_174482_cache-tree.c}: update_one)
+// False positives: (git/revFiles/dd0c34_174482_cache-tree.c: read_one), (git/revFiles/dd0c34_174482_cache-tree.c: write_one)
+// Recall: 0.11, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

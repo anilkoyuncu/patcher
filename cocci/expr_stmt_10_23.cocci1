@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->psz_name = E1 + 5; 
++ E0->psz_name = strdup(E1 + 5); 
+// Infered from: (vlc/{prevFiles/prev_2cfe99_4e4c2b_src#input#input.c,revFiles/2cfe99_4e4c2b_src#input#input.c}: Create)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

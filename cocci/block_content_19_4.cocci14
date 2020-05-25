@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef proto_item;
+@@
+- proto_item *I0 = proto_tree_add_string_format(E1, hf_rtcp_setup, E2, 0, 0,  "",  "Stream setup by %s (frame %d)",  E3->setup_method,  E3->setup_frame_number); 
++ proto_item *I0 = proto_tree_add_string_format(E1, hf_rtcp_setup, E2, 0, 0,  "",  "Stream setup by %s (frame %u)",  E3->setup_method,  E3->setup_frame_number); 
+// Infered from: (wireshark/{prevFiles/prev_763afd_31f25f_epan#dissectors#packet-rtcp.c,revFiles/763afd_31f25f_epan#dissectors#packet-rtcp.c}: show_setup_info)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

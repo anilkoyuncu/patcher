@@ -1,0 +1,8 @@
+@@
+@@
+- le_db = register_list_destructors(php_dbm_close, NULL); 
++ le_db = register_list_destructors(php_dbm_close, NULL, "dbm"); 
+// Infered from: (php-src/{prevFiles/prev_7b4983_a0cfab_ext#db#db.c,revFiles/7b4983_a0cfab_ext#db#db.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

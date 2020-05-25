@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = (struct fixup_entry *)malloc(sizeof(struct fixup_entry )); 
++ E0 = (struct fixup_entry *)calloc(1, sizeof(struct fixup_entry )); 
+// Infered from: (git/{prevFiles/prev_473d40_114203_tar-tree.c,revFiles/473d40_114203_tar-tree.c}: write_header), (libarchive/{prevFiles/prev_dc467a_3aa253_libarchive#archive_write_disk.c,revFiles/dc467a_3aa253_libarchive#archive_write_disk.c}: new_fixup)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

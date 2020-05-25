@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (unlikely(set_irq_wake(E0, 1)))  
++ if (unlikely(irq_set_irq_wake(E0, 1)))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_dced35_2a8f55_drivers#tty#serial#msm_serial_hs.c,revFiles/dced35_2a8f55_drivers#tty#serial#msm_serial_hs.c}: msm_hs_probe), (linux/{prevFiles/prev_dced35_2a8f55_drivers#tty#serial#msm_serial_hs.c,revFiles/dced35_2a8f55_drivers#tty#serial#msm_serial_hs.c}: msm_hs_probe)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

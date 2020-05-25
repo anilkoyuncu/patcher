@@ -1,0 +1,33 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+@@
+  int I0; 
+  ...
+- while (ff_interleave_new_audio_packet(E1, &E2, E3, E4))  
++ while ((I0 = ff_interleave_new_audio_packet(E1, &E2, E3, E4)) > 0)  
+  {
+  ...
+  }
++ if (I0 < 0)  
++ {
++ return I0; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_3ca8a2_bb5024_libavformat#audiointerleave.c,revFiles/3ca8a2_bb5024_libavformat#audiointerleave.c}: ff_audio_rechunk_interleave)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.86
+// -- Node Change --
+// Recall: 1.00, Precision: 0.86
+// -- General --
+// Functions fully changed: 6/7(85%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_378a5b_7fd651_ffserver.c: ffm_read_write_index
+*/
+
+// ---------------------------------------------

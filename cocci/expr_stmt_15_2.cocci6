@@ -1,0 +1,9 @@
+@@
+@@
+- libvlc_printerr("Not enough memory"); 
++ libvlc_printerr("%s", vlc_strerror_c(errno)); 
+// Infered from: (vlc/{prevFiles/prev_345afa_74167c_lib#media.c,revFiles/345afa_74167c_lib#media.c}: libvlc_media_new_path)
+// False positives: (vlc/revFiles/345afa_74167c_lib#media.c: libvlc_media_new_as_node), (vlc/revFiles/345afa_74167c_lib#media.c: libvlc_media_new_from_input_item), (vlc/revFiles/345afa_74167c_lib#media.c: libvlc_media_new_location)
+// Recall: 0.07, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------

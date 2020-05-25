@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- if (E0 == 72 || E0 == 57)  
++ if (E0 == 72 || E0 == 81 || E0 == 57)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_133-A-18158313-18158334.c,revFiles/133-A-18158313-18158334.c}: main)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

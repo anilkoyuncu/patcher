@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- addReplyMultiBulkLen(E0, E0->argc - 2); 
++ addReplyArrayLen(E0, E0->argc - 2); 
+// Infered from: (redis/{prevFiles/prev_9330bc_f07f3d_src#scripting.c,revFiles/9330bc_f07f3d_src#scripting.c}: scriptCommand)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

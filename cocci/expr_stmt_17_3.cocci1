@@ -1,0 +1,29 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- qemu_get_be32s(E0, &E1->I2); 
++ E1->I2 = qemu_get_be32(E0); 
+// Infered from: (qemu/{prevFiles/prev_e5ceb2_e41b39_target-i386#machine.c,revFiles/e5ceb2_e41b39_target-i386#machine.c}: cpu_load), (qemu/{prevFiles/prev_e5ceb2_e41b39_target-i386#machine.c,revFiles/e5ceb2_e41b39_target-i386#machine.c}: cpu_load)
+// False positives: (qemu/revFiles/e5ceb2_e41b39_target-i386#machine.c: cpu_load)
+// Recall: 0.50, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.33
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_bee8d6_b99dc0_hw#acpi.c: pm_save
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_e5ceb2_e41b39_target-i386#machine.c: cpu_load
+*/
+
+// ---------------------------------------------

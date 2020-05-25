@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- qemu_add_kbd_event_handler(usb_keyboard_event, &E0->kbd); 
++ qemu_add_kbd_event_handler(usb_keyboard_event, E0); 
+// Infered from: (qemu/{prevFiles/prev_926acf_966439_hw#usb-hid.c,revFiles/926acf_966439_hw#usb-hid.c}: usb_keyboard_handle_reset)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

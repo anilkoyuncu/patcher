@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef uint8_t;
+@@
+- net_checksum_calculate((uint8_t *)E0->data, E0->size); 
++ net_checksum_calculate((uint8_t *)E0->data + E0->vnet_hdr_len,  E0->size - E0->vnet_hdr_len); 
+// Infered from: (qemu/{prevFiles/prev_6ce310_cda4a3_net#filter-rewriter.c,revFiles/6ce310_cda4a3_net#filter-rewriter.c}: handle_primary_tcp_pkt), (qemu/{prevFiles/prev_6ce310_cda4a3_net#filter-rewriter.c,revFiles/6ce310_cda4a3_net#filter-rewriter.c}: handle_secondary_tcp_pkt)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

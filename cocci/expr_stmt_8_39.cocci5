@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- gst_buffer_copy_into(*E0, E1,  GST_BUFFER_COPY_FLAGS | GST_BUFFER_COPY_TIMESTAMPS, 0, 0); 
++ gst_buffer_copy_into(*E0, E1,  GST_BUFFER_COPY_FLAGS | GST_BUFFER_COPY_TIMESTAMPS, 0,  -1); 
+// Infered from: (gstreamer/{prevFiles/prev_121b82_9ff103_libs#gst#base#gstbasetransform.c,revFiles/121b82_9ff103_libs#gst#base#gstbasetransform.c}: gst_base_transform_prepare_output_buffer), (gstreamer/{prevFiles/prev_121b82_9ff103_libs#gst#base#gstbasetransform.c,revFiles/121b82_9ff103_libs#gst#base#gstbasetransform.c}: gst_base_transform_prepare_output_buffer)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.90, Precision: 1.00
+// -- Node Change --
+// Recall: 0.85, Precision: 0.92
+// -- General --
+// Functions fully changed: 8/10(80%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_9e406b_c46a62_modules#stream_out#rtp.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_53bc0d_364cac_libswscale#utils.c: sws_getContext
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E2, E3, E1;
+@@
+- sprintf (E0, E1, E2, E3); 
++ sprintf(E0, "diff-tree -r -z %s %s | xargs -0 gitdiff-do %s %s", E2, E3, E2,  E3); 
+// Infered from: (git/{prevFiles/prev_32347c_b12ec3_git-export.c,revFiles/32347c_b12ec3_git-export.c}: show_commit)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

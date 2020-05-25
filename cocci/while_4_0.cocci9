@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- while (E0 && E1 > E2)  
++ while (E0 && E1 >= E2)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_198-A-9623083-9623097.c,revFiles/198-A-9623083-9623097.c}: main), (codeflaws/{prevFiles/prev_617-A-18004157-18004168.c,revFiles/617-A-18004157-18004168.c}: main), (codeflaws/{prevFiles/prev_331-C1-4091950-4092415.c,revFiles/331-C1-4091950-4092415.c}: main), (codeflaws/{prevFiles/prev_581-C-13820162-13820185.c,revFiles/581-C-13820162-13820185.c}: main)
+// False positives: (FFmpeg/revFiles/b3dfeb_8bfb4d_libavformat#matroskadec.c: matroska_read_seek), (cairo/revFiles/5f386b_d48f31_perf#cairo-stats.c: _cairo_stats_compute), (codeflaws/revFiles/140-D-8349631-8349655.c: main), (codeflaws/revFiles/263-B-4589098-4589276.c: main), (codeflaws/revFiles/359-B-5454813-5454814.c: main), (codeflaws/revFiles/441-B-6979392-6979398.c: main), (codeflaws/revFiles/581-C-13820162-13820185.c: main), (codeflaws/revFiles/614-A-17036012-17036054.c: main), (cpython/revFiles/5ae4f4_47dee1_Modules#_posixsubprocess.c: child_exec), (gstreamer/revFiles/04471c_5c7c485_gst#gstevent.c: gst_event_new_discontinuous)
+// Recall: 0.16, Precision: 0.47, Matching recall: 0.62
+
+// ---------------------------------------------

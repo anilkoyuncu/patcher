@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if ((E0 = PySequence_GetItem(E1, E2)) || PyList_SetItem(E3, E2, E0) == -1)  
++ if (!(E0 = PySequence_GetItem(E1, E2)) || PyList_SetItem(E3, E2, E0) == -1)  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_e61093_fcc770_Objects#abstract.c,revFiles/e61093_fcc770_Objects#abstract.c}: PySequence_List)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

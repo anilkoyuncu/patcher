@@ -1,0 +1,8 @@
+@@
+@@
+- fprintf(stderr, "Kernel or Flash image must be specified\n"); 
++ error_report("Kernel or Flash image must be specified"); 
+// Infered from: (qemu/{prevFiles/prev_c0dbca_470bca_hw#arm#omap_sx1.c,revFiles/c0dbca_470bca_hw#arm#omap_sx1.c}: sx1_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

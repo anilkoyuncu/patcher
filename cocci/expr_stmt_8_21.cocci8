@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = fi_ep_bind(E1->ep, &E2->av->fid, NULL); 
++ E0 = fi_ep_bind(E1->ep, &E2->av->fid, 0); 
+// Infered from: (ompi/{prevFiles/prev_bf7534_50f928_opal#mca#btl#usnic#btl_usnic_module.c,revFiles/bf7534_50f928_opal#mca#btl#usnic#btl_usnic_module.c}: create_ep)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

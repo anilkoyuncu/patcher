@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- tcg_out_label(E0, E1[0], (long )E0->code_ptr); 
++ tcg_out_label(E0, E1[0], E0->code_ptr); 
+// Infered from: (php-src/{prevFiles/prev_0175d9_c2082e_Zend#zend_list.c,revFiles/0175d9_c2082e_Zend#zend_list.c}: zend_clean_module_rsrc_dtors_cb), (php-src/{prevFiles/prev_0175d9_c2082e_Zend#zend_list.c,revFiles/0175d9_c2082e_Zend#zend_list.c}: zend_clean_module_rsrc_dtors), (php-src/{prevFiles/prev_bc357e_0175d9_Zend#zend_exceptions.c,revFiles/bc357e_0175d9_Zend#zend_exceptions.c}: _build_trace_string), (qemu/{prevFiles/prev_9d6fca_f7cf5d_tcg#tcg.c,revFiles/9d6fca_f7cf5d_tcg#tcg.c}: tcg_gen_code_common)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

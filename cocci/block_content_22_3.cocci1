@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- setsockopt(E0, SOL_SOCKET, SO_REUSEADDR, &E1, sizeof(E1)); 
++ if (setsockopt(E0, SOL_SOCKET, SO_REUSEADDR, &E1, sizeof(E1)))  
++ {
++ av_log(NULL, AV_LOG_WARNING, "setsockopt(SO_REUSEADDR) failed\n"); 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_c8faa47_2fe4b6_libavformat#network.c,revFiles/c8faa47_2fe4b6_libavformat#network.c}: ff_listen_bind)
+// False positives: (FFmpeg/revFiles/8baa5b_6d953a_ffserver.c: socket_open_listen)
+// Recall: 0.24, Precision: 0.83, Matching recall: 0.83
+
+// ---------------------------------------------

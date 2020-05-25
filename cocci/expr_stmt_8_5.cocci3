@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef ogg_stream_t;
+@@
+- E0->p_sys = E1 = malloc(sizeof(ogg_stream_t )); 
++ E0->p_sys = E1 = calloc(1, sizeof(ogg_stream_t )); 
+// Infered from: (vlc/{prevFiles/prev_520b8f_aaee6e_modules#mux#ogg.c,revFiles/520b8f_aaee6e_modules#mux#ogg.c}: AddStream)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

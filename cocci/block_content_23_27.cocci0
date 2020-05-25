@@ -1,0 +1,19 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef guint32;
+@@
+- guint32 I0; 
+- for(I0 = 0;I0 < E1;I0++)  
++ guint32 idx; 
++ for(idx = 0;idx < E1;idx++)  
+  {
+  ...
+- E2[I0] = (char )tvb_get_ntohl(E3, E4); 
++ E2[idx] = (char )tvb_get_ntohl(E3, E4); 
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_0f7c74_fb5e9e_epan#dissectors#packet-afs.c,revFiles/0f7c74_fb5e9e_epan#dissectors#packet-afs.c}: OUT_RXStringV)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

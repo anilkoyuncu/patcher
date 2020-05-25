@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return LAM_ERRHANDLER_INVOKE(MPI_COMM_WORLD, MPI_ERR_GROUP, E0); 
++ (void )LAM_ERRHANDLER_INVOKE(MPI_COMM_WORLD, MPI_ERR_GROUP, E0); 
+// Infered from: (ompi/{prevFiles/prev_31ed42_6ad01a_src#mpi#c#group_f2c.c,revFiles/31ed42_6ad01a_src#mpi#c#group_f2c.c}: MPI_Group_f2c), (ompi/{prevFiles/prev_31ed42_6ad01a_src#mpi#c#group_f2c.c,revFiles/31ed42_6ad01a_src#mpi#c#group_f2c.c}: MPI_Group_f2c)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

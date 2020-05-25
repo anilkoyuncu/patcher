@@ -1,0 +1,9 @@
+@@
+@@
+- RETURN_FALSE; 
++ RETURN_EMPTY_STRING(); 
+// Infered from: (php-src/{prevFiles/prev_00b667_97fd0ac_ext#standard#string.c,revFiles/00b667_97fd0ac_ext#standard#string.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_00b667_97fd0ac_ext#standard#string.c,revFiles/00b667_97fd0ac_ext#standard#string.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/00b667_97fd0ac_ext#standard#string.c: PHP_FUNCTION), (php-src/revFiles/00b667_97fd0ac_ext#standard#string.c: php_hebrev)
+// Recall: 0.25, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

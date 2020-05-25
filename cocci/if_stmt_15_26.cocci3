@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->s.pict_type == I_TYPE && E0->dquant)  
++ if ((E0->s.pict_type == I_TYPE || E0->s.pict_type == BI_TYPE) && E0->dquant)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_b02482_d8b7b3_libavcodec#vc1.c,revFiles/b02482_d8b7b3_libavcodec#vc1.c}: vc1_parse_frame_header_adv)
+// Recall: 0.13, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

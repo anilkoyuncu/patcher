@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- E0 = extcap_get_extcap_paths_from_dir(E0,  get_persconffile_path("extcap", FALSE)); 
++ char *persconffile_path = get_persconffile_path("extcap", FALSE); 
++ E0 = extcap_get_extcap_paths_from_dir(E0, persconffile_path); 
++ g_free(persconffile_path); 
+// Infered from: (wireshark/{prevFiles/prev_1675e0_336110_extcap.c,revFiles/1675e0_336110_extcap.c}: extcap_get_extcap_paths)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

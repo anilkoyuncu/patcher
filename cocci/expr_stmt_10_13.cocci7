@@ -1,0 +1,8 @@
+@@
+@@
+- die("git diff header lacks filename information"); 
++ die("git diff header lacks filename information (line %d)", linenr); 
+// Infered from: (git/{prevFiles/prev_33f4d0_a48e1d_apply.c,revFiles/33f4d0_a48e1d_apply.c}: find_header)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

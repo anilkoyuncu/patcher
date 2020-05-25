@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- memory_listener_register(&E0->memory_listener, &address_space_memory); 
++ memory_listener_register(&E0->memory_listener, &E0->dev.bus_master_as); 
+// Infered from: (qemu/{prevFiles/prev_996051_7d5ad1_hw#xen#xen_pt.c,revFiles/996051_7d5ad1_hw#xen#xen_pt.c}: xen_pt_initfn)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

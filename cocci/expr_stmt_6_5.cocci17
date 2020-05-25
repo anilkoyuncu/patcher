@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1 * 2 + 2] = E0[E1 * 2 + 3] = E0[E1 * 3 + 2] = E0[E1 * 3 + 3] = E2->y[  2]; 
++ E0[E1 * 2 + 2] = E0[E1 * 2 + 3] = E0[E1 * 3 + 2] = E0[E1 * 3 + 3] = E2->y[  3]; 
+// Infered from: (FFmpeg/{prevFiles/prev_606975_05ce0f_libavcodec#roqvideo.c,revFiles/606975_05ce0f_libavcodec#roqvideo.c}: ff_apply_vector_4x4)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

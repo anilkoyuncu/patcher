@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0->stream_index = get_sindex(E1, E2, E3); 
++ E0->stream_index = stream_index; 
+// Infered from: (FFmpeg/{prevFiles/prev_6c1028_1ab05d_libavformat#gxf.c,revFiles/6c1028_1ab05d_libavformat#gxf.c}: gxf_packet)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.12, Precision: 0.67
+// -- Node Change --
+// Recall: 0.15, Precision: 0.60
+// -- General --
+// Functions fully changed: 0/17(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_6c1028_1ab05d_libavformat#gxf.c: gxf_packet
+ - FFmpeg/prevFiles/prev_40adcf_586ba2_libavformat#oggdec.c: ogg_get_length
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_9b8152_568381_libavformat#oggdec.c: ogg_read_page
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_9b8152_568381_libavformat#oggdec.c: ogg_get_length
+*/
+
+// ---------------------------------------------

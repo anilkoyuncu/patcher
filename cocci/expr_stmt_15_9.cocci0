@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = emalloc(E1 + 1); 
++ E0 = safe_emalloc(1, E1, 1); 
+// Infered from: (php-src/{prevFiles/prev_3e289b_379ab5_ext#soap#php_http.c,revFiles/3e289b_379ab5_ext#soap#php_http.c}: get_http_body), (php-src/{prevFiles/prev_0a1cc5_1551cc_ext#soap#php_http.c,revFiles/0a1cc5_1551cc_ext#soap#php_http.c}: get_http_body)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

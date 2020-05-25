@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- float *I0 = E1->saved + E2 * E3 * 2 + E3; 
++ float *I0 = E1->samples + E2 * E3 * 2 + E3; 
+// Infered from: (FFmpeg/{prevFiles/prev_f4e5e6_19b00c_libavcodec#vorbis_enc.c,revFiles/f4e5e6_19b00c_libavcodec#vorbis_enc.c}: window)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------

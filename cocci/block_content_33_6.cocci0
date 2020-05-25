@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- fprintf(E0, "%s, %d bytes (0x%x)\n", E1, (int )E2, (int )E2); 
++ fprintf(E0, "%s, %zu bytes (0x%zx)\n", E1, E2, E2); 
+// Infered from: (curl/{prevFiles/prev_df3647_eb4968_tests#libtest#lib552.c,revFiles/df3647_eb4968_tests#libtest#lib552.c}: dump)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

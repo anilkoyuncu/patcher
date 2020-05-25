@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- g_print("disposing of %s\n", E0); 
++ GST_DEBUG(GST_CAT_PLUGIN_INFO, "disposing of %s", E0); 
+// Infered from: (gstreamer/{prevFiles/prev_ae32b9_c79b1e_libs#gst#control#dparam.c,revFiles/ae32b9_c79b1e_libs#gst#control#dparam.c}: gst_dparam_dispose)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_eb42b02_6d817a_Python#codecs.c: _PyCodec_Lookup
+ - ompi/prevFiles/prev_a71b5dd_04a4cb_ompi#debuggers#ompi_common_dll.c: 
+*/
+
+// ---------------------------------------------

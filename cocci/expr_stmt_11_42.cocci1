@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- Curl_hash_clean_with_criterium(E0, NULL, free_all_entries); 
++ Curl_hash_clean(E0); 
+// Infered from: (curl/{prevFiles/prev_81ee1e_846f49_lib#hostip.c,revFiles/81ee1e_846f49_lib#hostip.c}: Curl_hostcache_clean)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

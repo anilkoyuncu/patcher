@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (E0->pict_type == B_TYPE && E0->low_delay && E0->vol_control_parameters == 0)  
++ if (E0->pict_type == B_TYPE && E0->low_delay && E0->vol_control_parameters == 0 && !(  E0->flags & CODEC_FLAG_LOW_DELAY))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e05604_27fc53_libavcodec#h263.c,revFiles/e05604_27fc53_libavcodec#h263.c}: decode_vop_header)
+// False positives: (FFmpeg/revFiles/2b2719_00a7d8_libavcodec#h263.c: decode_vop_header)
+// Recall: 0.11, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

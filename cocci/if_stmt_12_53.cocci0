@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!E0->decorated || !gtk_window_should_use_csd(E1) || !gtk_window_supports_client_shadow(  E1))  
++ if (!E0->decorated || (!gtk_window_should_use_csd(E1) && !E0->client_decorated) || !gtk_window_supports_client_shadow(  E1))  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_08e2f9_7c294f_gtk#gtkwindow.c,revFiles/08e2f9_7c294f_gtk#gtkwindow.c}: get_shadow_width)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

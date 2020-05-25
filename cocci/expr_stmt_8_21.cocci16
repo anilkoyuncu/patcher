@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- memory_region_init_alias(&E0->irom_alias_mem, "exynos4210.irom_alias",  &E0->irom_mem, EXYNOS4210_IROM_BASE_ADDR,  EXYNOS4210_IROM_SIZE); 
++ memory_region_init_alias(&E0->irom_alias_mem, "exynos4210.irom_alias",  &E0->irom_mem, 0, EXYNOS4210_IROM_SIZE); 
+// Infered from: (qemu/{prevFiles/prev_7892df_b631bc_hw#exynos4210.c,revFiles/7892df_b631bc_hw#exynos4210.c}: exynos4210_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

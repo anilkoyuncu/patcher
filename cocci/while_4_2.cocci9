@@ -1,0 +1,39 @@
+@@
+expression E0, E1;
+@@
+- while (E0 > E1)  
++ while (E0 > 1)  
+  {
+  ...
+  }
+// Infered from: (gstreamer/{prevFiles/prev_712189_10287a_tests#check#gst#gstghostpad.c,revFiles/712189_10287a_tests#check#gst#gstghostpad.c}: GST_START_TEST), (vlc/{prevFiles/prev_2120e7_b5416929_modules#mux#avi.c,revFiles/2120e7_b5416929_modules#mux#avi.c}: Mux)
+// False positives: (FFmpeg/revFiles/076215_30ffbe_libavcodec#webp.c: decode_entropy_coded_image), (FFmpeg/revFiles/076215_30ffbe_libavcodec#webp.c: read_huffman_code_normal), (FFmpeg/revFiles/076215_30ffbe_libavcodec#webp.c: webp_decode_frame), (codeflaws/revFiles/271-A-18358749-18358771.c: main), (codeflaws/revFiles/42-A-654542-654544.c: main), (php-src/revFiles/660a09_20d533_Zend#zend_hash.c: ), (php-src/revFiles/660a09_20d533_Zend#zend_hash.c: zend_hash_init), (wireshark/revFiles/9334a4_31bd48_epan#dissectors#packet-imap.c: dissect_imap)
+// Recall: 0.27, Precision: 0.36, Matching recall: 0.57
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.79, Precision: 0.79
+// -- Node Change --
+// Recall: 0.60, Precision: 0.56
+// -- General --
+// Functions fully changed: 6/17(35%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_359975_f6aa39_modules#audio_output#alsa.c: Probe
+ - FFmpeg/prevFiles/prev_6a7009_a74991_libavcodec#h263dec.c: h263_decode_init
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - codeflaws/prevFiles/prev_271-A-18358749-18358771.c: main
+ - FFmpeg/prevFiles/prev_076215_30ffbe_libavcodec#webp.c: decode_entropy_coded_image
+ - codeflaws/prevFiles/prev_42-A-654542-654544.c: main
+ - php-src/prevFiles/prev_660a09_20d533_Zend#zend_hash.c: 
+ - php-src/prevFiles/prev_660a09_20d533_Zend#zend_hash.c: zend_hash_init
+ - wireshark/prevFiles/prev_9334a4_31bd48_epan#dissectors#packet-imap.c: dissect_imap
+ - FFmpeg/prevFiles/prev_076215_30ffbe_libavcodec#webp.c: read_huffman_code_normal
+ - FFmpeg/prevFiles/prev_076215_30ffbe_libavcodec#webp.c: webp_decode_frame
+*/
+
+// ---------------------------------------------

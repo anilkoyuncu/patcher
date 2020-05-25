@@ -1,0 +1,12 @@
+@@
+identifier I2;
+expression E1, E3, E0, E4;
+@@
+- E0 = dma_pool_alloc(E1->I2, E3, &E4); 
++ E0 = dma_pool_zalloc(E1->I2, E3, &E4); 
+  ...
+- memset(E0, 0, sizeof(*E0)); 
+// Infered from: (linux/{prevFiles/prev_437645_305697_drivers#dma#fsldma.c,revFiles/437645_305697_drivers#dma#fsldma.c}: fsl_dma_alloc_descriptor), (linux/{prevFiles/prev_472d64_d0c15bd_drivers#crypto#marvell#tdma.c,revFiles/472d64_d0c15bd_drivers#crypto#marvell#tdma.c}: mv_cesa_dma_add_desc), (linux/{prevFiles/prev_1c85a8_4c4d7f87_drivers#dma#mmp_pdma.c,revFiles/1c85a8_4c4d7f87_drivers#dma#mmp_pdma.c}: mmp_pdma_alloc_descriptor), (linux/{prevFiles/prev_2ba4f8_48a59ed_drivers#dma#xilinx#xilinx_vdma.c,revFiles/2ba4f8_48a59ed_drivers#dma#xilinx#xilinx_vdma.c}: xilinx_vdma_alloc_tx_segment)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

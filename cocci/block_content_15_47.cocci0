@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- char *I0 = stream_ContentType(E1); 
++ char *I0 = stream_MimeType(E1); 
+// Infered from: (vlc/{prevFiles/prev_13943f_5cde0d_src#input#demux.c,revFiles/13943f_5cde0d_src#input#demux.c}: demux_NewAdvanced)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0;
+typedef guint8;
+@@
+- if (tvb_memeql(E0, 0, "YMSG", 4) == -1)  
++ if (tvb_memeql(E0, 0, (guint8 *)"YMSG", 4) == -1)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_85a464_4b0b2c_epan#dissectors#packet-ymsg.c,revFiles/85a464_4b0b2c_epan#dissectors#packet-ymsg.c}: dissect_ymsg)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,18 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = UNICODE_DEFAULT_ENCODING(E0); 
+- if (E0 == NULL)  
++ uarg = UNICODE_DEFAULT_ENCODING(E0); 
++ if (uarg == NULL)  
+  {
+  ...
+  }
+- *E1 = PyString_AS_STRING(E0); 
+- *E2 = PyString_GET_SIZE(E0); 
++ *E1 = PyString_AS_STRING(uarg); 
++ *E2 = PyString_GET_SIZE(uarg); 
+// Infered from: (cpython/{prevFiles/prev_77b8b6_bea3fb_Python#getargs.c,revFiles/77b8b6_bea3fb_Python#getargs.c}: convertsimple)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.89
+
+// ---------------------------------------------

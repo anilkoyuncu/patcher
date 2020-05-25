@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef VuVirtqInflightDesc;
+@@
+- E0->resubmit_list = malloc(sizeof(VuVirtqInflightDesc ) * E0->inuse); 
++ E0->resubmit_list = calloc(E0->inuse, sizeof(VuVirtqInflightDesc )); 
+// Infered from: (qemu/{prevFiles/prev_d9b3ad_39e282_contrib#libvhost-user#libvhost-user.c,revFiles/d9b3ad_39e282_contrib#libvhost-user#libvhost-user.c}: vu_check_queue_inflights)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

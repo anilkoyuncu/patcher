@@ -1,0 +1,30 @@
+@@
+identifier I0, I1;
+expression E2, E3;
+@@
+- palette_drop_item(GTK_TOOL_ITEM(I0), GTK_TOOL_ITEM_GROUP(I1),  E2 - GTK_WIDGET(I1)->allocation.x,  E3 - GTK_WIDGET(I1)->allocation.y); 
++ palette_drop_item(GTK_TOOL_ITEM(I0), I1, E2 - GTK_WIDGET(I1)->allocation.x,  E3 - GTK_WIDGET(I1)->allocation.y); 
+// Infered from: (gtk/{prevFiles/prev_06eb74_8f125f_demos#gtk-demo#toolpalette.c,revFiles/06eb74_8f125f_demos#gtk-demo#toolpalette.c}: palette_drag_data_received), (gtk/{prevFiles/prev_546969_e31a6d_demos#gtk-demo#toolpalette.c,revFiles/546969_e31a6d_demos#gtk-demo#toolpalette.c}: palette_drag_data_received)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - gtk/prevFiles/prev_06eb74_8f125f_demos#gtk-demo#toolpalette.c: palette_drag_data_received
+ - gtk/prevFiles/prev_546969_e31a6d_demos#gtk-demo#toolpalette.c: palette_drag_data_received
+*/
+/*
+Functions where the patch did not apply:
+ - gtk/prevFiles/prev_546969_e31a6d_demos#gtk-demo#toolpalette.c: palette_drop_group
+ - gtk/prevFiles/prev_06eb74_8f125f_demos#gtk-demo#toolpalette.c: palette_drop_group
+*/
+
+// ---------------------------------------------

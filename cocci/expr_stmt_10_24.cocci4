@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->lba = E1 >> BDRV_SECTOR_BITS; 
++ E0->lba = cpu_to_le64(E1 >> BDRV_SECTOR_BITS); 
+// Infered from: (qemu/{prevFiles/prev_4545d4_36bd42_block#vmdk.c,revFiles/4545d4_36bd42_block#vmdk.c}: vmdk_write_extent)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

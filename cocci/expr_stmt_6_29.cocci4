@@ -1,0 +1,30 @@
+@@
+expression E0, E1;
+@@
+- E0->filterA[E1] = E0->lastA[E1] + ((E0->filterA[E1] * 31) >> 5); 
++ E0->filterA[E1] = E0->lastA[E1] + ((int )(E0->filterA[E1] * 31U) >> 5); 
+// Infered from: (FFmpeg/{prevFiles/prev_5c072c_0c6166_libavcodec#apedec.c,revFiles/5c072c_0c6166_libavcodec#apedec.c}: predictor_update_3930)
+// False positives: (FFmpeg/revFiles/9d3dde_43b341_libavcodec#apedec.c: predictor_update_3930)
+// Recall: 0.12, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 0.62
+// -- Node Change --
+// Recall: 0.75, Precision: 0.60
+// -- General --
+// Functions fully changed: 5/9(55%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_48f775_2171df_libavcodec#wavpack.c: wv_unpack_stereo
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_6ea428_bd404e_libavcodec#dss_sp.c: dss_sp_shift_sq_add
+ - FFmpeg/prevFiles/prev_9d3dde_43b341_libavcodec#apedec.c: predictor_update_3930
+ - FFmpeg/prevFiles/prev_b92321_f2c539_libavcodec#hqxdsp.c: idct_row
+*/
+
+// ---------------------------------------------

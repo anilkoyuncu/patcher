@@ -1,0 +1,16 @@
+@@
+identifier I0, I1, I2, I3, I4, I5, I6;
+expression E7, E9, E8;
+typedef BN_ULONG;
+@@
+  void bn_mul_recursive(BN_ULONG *I0, BN_ULONG *I1, BN_ULONG *I2, int I3,  int I4, int I5, BN_ULONG *I6)  
+  {
+  ...
+- fprintf (E7, E8, E9, E9); 
++ fprintf(stderr, " bn_mul_recursive %d%+d * %d%+d\n", E9, I4, E9, I5); 
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_70ba4e_31f528_crypto#bn#bn_mul.c,revFiles/70ba4e_31f528_crypto#bn#bn_mul.c}: bn_mul_recursive)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

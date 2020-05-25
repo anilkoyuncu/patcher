@@ -1,0 +1,37 @@
+@@
+identifier I1 = {assoc_parse ,auth_parse };
+expression E2, E3, E4, E0;
+@@
+- if (0 == (E0 = I1(E2, E3, &E4)))  
++ E0 = I1(E2, E3, &E4); 
++ if (!E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_09adb6e_58c991d_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c,revFiles/09adb6e_58c991d_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c}: ieee80211_rx_frame_softmac), (curl/{prevFiles/prev_c142e7_4ff2fb_lib#curl_sasl.c,revFiles/c142e7_4ff2fb_lib#curl_sasl.c}: Curl_sasl_parse_url_auth_option)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.85, Precision: 0.85
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_c142e7_4ff2fb_lib#curl_sasl.c: Curl_sasl_parse_url_auth_option
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_88f585_051485_lib#curl_sasl.c: Curl_sasl_continue
+*/
+
+// ---------------------------------------------

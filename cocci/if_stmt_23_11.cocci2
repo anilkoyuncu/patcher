@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- dpy_update(E0->ds, E1, 0, E2, E0->xres); 
++ dpy_update(E0->ds, E1, 0, E2 - E1, E0->xres); 
+// Infered from: (qemu/{prevFiles/prev_b2bf03_f69866_hw#pxa2xx_lcd.c,revFiles/b2bf03_f69866_hw#pxa2xx_lcd.c}: pxa2xx_update_display)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- qio_channel_attach_aio_context(QIO_CHANNEL(E0->sioc), E1); 
++ qio_channel_attach_aio_context(QIO_CHANNEL(E0->ioc), E1); 
+// Infered from: (qemu/{prevFiles/prev_96d068_abc67e_block#nbd-client.c,revFiles/96d068_abc67e_block#nbd-client.c}: nbd_client_attach_aio_context)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

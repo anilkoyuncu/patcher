@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- return ssl_cipher_table_kx[E0].nid; 
++ return ssl_cipher_table_auth[E0].nid; 
+// Infered from: (openssl/{prevFiles/prev_8eb33e_52c14c_ssl#ssl_ciph.c,revFiles/8eb33e_52c14c_ssl#ssl_ciph.c}: SSL_CIPHER_get_auth_nid)
+// False positives: (openssl/revFiles/8eb33e_52c14c_ssl#ssl_ciph.c: SSL_CIPHER_get_kx_nid)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.71, Precision: 0.83
+// -- Node Change --
+// Recall: 0.71, Precision: 0.83
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_8bfa99_1307af_crypto#evp#evp_lib.c: EVP_MD_meth_get_flags
+ - codeflaws/prevFiles/prev_155-B-1384074-1384075.c: card_cmp
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - openssl/prevFiles/prev_8eb33e_52c14c_ssl#ssl_ciph.c: SSL_CIPHER_get_kx_nid
+*/
+
+// ---------------------------------------------

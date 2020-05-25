@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (ORTE_SUCCESS != (E0 = orte_dss.unpack(E1, &E2, &E3, ORTE_NAME)))  
++ if (ORTE_SUCCESS != (E0 = orte_dss.unpack(E1, E2, &E3, ORTE_NAME)))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_82a023_ee0df8_orte#mca#errmgr#base#errmgr_base_receive.c,revFiles/82a023_ee0df8_orte#mca#errmgr#base#errmgr_base_receive.c}: orte_errmgr_base_recv)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

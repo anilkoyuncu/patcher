@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (*E0 & 0xffffff == *E1 & 0xffffff)  
++ if ((*E0 & 0xffffff) == (*E1 & 0xffffff))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_5a9f7a_1bc7bc_gdk#broadway#broadway-demo.c,revFiles/5a9f7a_1bc7bc_gdk#broadway#broadway-demo.c}: diff_surfaces)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

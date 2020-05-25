@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > E1 || E0 > (UTLB_SIZE - 1))  
++ if ((E1 > 0 && E0 > E1) || E0 > (UTLB_SIZE - 1))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_927e3a_d905db_target-sh4#helper.c,revFiles/927e3a_d905db_target-sh4#helper.c}: increment_urc)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

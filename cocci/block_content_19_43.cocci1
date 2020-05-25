@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- if (E0[E1] == 'H' || E0[E1] == 'Q' || E0[E1] == '9' || E0[E1] == '+')  
++ if (E0[E1] == 'H' || E0[E1] == 'Q' || E0[E1] == '9')  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_133-A-18355672-18355701.c,revFiles/133-A-18355672-18355701.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - codeflaws/prevFiles/prev_133-A-18066416-18066518.c: main
+ - codeflaws/prevFiles/prev_133-A-18355672-18355701.c: main
+*/
+
+// ---------------------------------------------

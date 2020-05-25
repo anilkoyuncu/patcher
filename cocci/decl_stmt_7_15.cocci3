@@ -1,0 +1,38 @@
+@@
+identifier I0;
+@@
+- char I0[1024]; 
++ char I0[MAX_URL_SIZE]; 
+// Infered from: (FFmpeg/{prevFiles/prev_21a2b9_a072ac_libavformat#hls.c,revFiles/21a2b9_a072ac_libavformat#hls.c}: parse_playlist)
+// False positives: (redis/revFiles/b0c8d6_b27032_src#util.c: getAbsolutePath)
+// Recall: 0.09, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.36, Precision: 0.80
+// -- Node Change --
+// Recall: 0.32, Precision: 0.78
+// -- General --
+// Functions fully changed: 3/12(25%)
+
+/*
+Functions where the patch applied partially:
+ - codeflaws/prevFiles/prev_266-A-17993201-17993222.c: main
+*/
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_c38884_ef57f9_src#sentinel.c: createSentinelAddr
+ - git/prevFiles/prev_50c5cd_b3622a_sha1_file.c: 
+ - redis/prevFiles/prev_1ca400_93570e_src#redis.c: genRedisInfoString
+ - redis/prevFiles/prev_c38884_ef57f9_src#sentinel.c: sentinelCommand
+ - redis/prevFiles/prev_64722b_43fdf3_src#db.c: scanCommand
+ - wireshark/prevFiles/prev_6ba8b2_277728_epan#dissectors#packet-tcap.c: dissect_tcap_dlg_application_context_name
+ - wireshark/prevFiles/prev_6ba8b2_277728_epan#dissectors#packet-tcap.c: dissect_tcap_dlg_user_info
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - redis/prevFiles/prev_b0c8d6_b27032_src#util.c: getAbsolutePath
+*/
+
+// ---------------------------------------------

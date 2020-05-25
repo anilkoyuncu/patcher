@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0.h = E1; 
++ E0.h = FFMAX(E1, 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_69f589_fbfcc8_ffplay.c,revFiles/69f589_fbfcc8_ffplay.c}: video_image_display)
+// False positives: (FFmpeg/revFiles/69f589_fbfcc8_ffplay.c: fill_rectangle)
+// Recall: 0.10, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

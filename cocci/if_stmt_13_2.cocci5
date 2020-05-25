@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (Z_TYPE_P(E0) == IS_UNICODE)  
++ if (Z_TYPE_P(E0) == IS_UNICODE || Z_TYPE_P(E0) == IS_STRING)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_e87ae0_4603dd_Zend#zend_object_handlers.c,revFiles/e87ae0_4603dd_Zend#zend_object_handlers.c}: zend_std_cast_object_tostring)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

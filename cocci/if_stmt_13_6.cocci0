@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->mem->used == 0)  
++ if (E0->mem->used == 0 || E0->mem->used == 1)  
+  {
+  ...
+  }
+// Infered from: (lighttpd1.4/{prevFiles/prev_28f6aa_f3c92b_src#network_openssl.c,revFiles/28f6aa_f3c92b_src#network_openssl.c}: network_write_chunkqueue_openssl)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

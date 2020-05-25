@@ -1,0 +1,12 @@
+@@
+identifier I2 = {ep_alloc ,g_malloc0 };
+type T1;
+expression E0, E3;
+@@
+- E0 = (T1 *)I2(E3); 
++ E0 = (T1 *)wmem_alloc(wmem_packet_scope(), E3); 
+// Infered from: (wireshark/{prevFiles/prev_5f2f6a_83f281_epan#crypt#airpdcap_rijndael.c,revFiles/5f2f6a_83f281_epan#crypt#airpdcap_rijndael.c}: AES_unwrap), (wireshark/{prevFiles/prev_fe5238_a10254_epan#dissectors#packet-t30.c,revFiles/fe5238_a10254_epan#dissectors#packet-t30.c}: t30_get_string_numbers)
+// False positives: (wireshark/revFiles/2db3db_3ba56ce_epan#dissectors#packet-umts_rlc.c: rlc_channel_create), (wireshark/revFiles/6dd6ed_0a23ac_epan#dissectors#packet-xml.c: after_attrib), (wireshark/revFiles/6dd6ed_0a23ac_epan#dissectors#packet-xml.c: after_token), (wireshark/revFiles/6dd6ed_0a23ac_epan#dissectors#packet-xml.c: before_dtd_doctype), (wireshark/revFiles/6dd6ed_0a23ac_epan#dissectors#packet-xml.c: before_tag), (wireshark/revFiles/6dd6ed_0a23ac_epan#dissectors#packet-xml.c: before_xmpli), (wireshark/revFiles/6dd6ed_0a23ac_epan#dissectors#packet-xml.c: dissect_xml), (wireshark/revFiles/88dd7e_68c956_epan#exported_pdu.c: export_pdu_create_tags)
+// Recall: 0.09, Precision: 0.25, Matching recall: 0.62
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0, I2, I3;
+expression E1;
+typedef bool;
+@@
+- bool I0 = (bool )(E1->I2 == I3); 
++ bool I0 = (E1->I2 == I3) ? TRUE :FALSE; 
+// Infered from: (curl/{prevFiles/prev_a50210_eb44ac_lib#tftp.c,revFiles/a50210_eb44ac_lib#tftp.c}: tftp_set_timeouts), (curl/{prevFiles/prev_a50210_eb44ac_lib#formdata.c,revFiles/a50210_eb44ac_lib#formdata.c}: readfromfile), (curl/{prevFiles/prev_a50210_eb44ac_lib#socks.c,revFiles/a50210_eb44ac_lib#socks.c}: Curl_SOCKS5)
+// Recall: 0.75, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

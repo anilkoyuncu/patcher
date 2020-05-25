@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 > E1)  
++ if (E0 >= E1)  
+  {
+- av_log(E2->avctx, AV_LOG_ERROR, "invalid coupling range (%d > %d)\n", E0, E1); 
++ av_log(E2->avctx, AV_LOG_ERROR, "invalid coupling range (%d >= %d)\n", E0, E1); 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_1ac7d1_78ad66_libavcodec#ac3dec.c,revFiles/1ac7d1_78ad66_libavcodec#ac3dec.c}: decode_audio_block)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

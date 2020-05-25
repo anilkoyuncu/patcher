@@ -1,0 +1,16 @@
+@@
+identifier I0, I1, I2;
+expression E3;
+typedef MYSQLND_MEMORY_POOL_CHUNK;
+typedef uint64;
+@@
+- uint64 I0 = I1 = I2 = I2 * 5 / 3; 
+- I0 += E3->row_count; 
+- E3->row_buffers = mnd_perealloc(E3->row_buffers,  I0 * sizeof(MYSQLND_MEMORY_POOL_CHUNK *),  E3->persistent); 
++ uint64 total_allocated_rows = I1 = I2 = I2 * 11 / 10; 
++ total_allocated_rows += E3->row_count; 
++ E3->row_buffers = mnd_perealloc(E3->row_buffers,  total_allocated_rows * sizeof(MYSQLND_MEMORY_POOL_CHUNK *),  E3->persistent); 
+// Infered from: (php-src/{prevFiles/prev_7d4c51_877d5f_ext#mysqlnd#mysqlnd_result.c,revFiles/7d4c51_877d5f_ext#mysqlnd#mysqlnd_result.c}: mysqlnd_free_buffered_data), (php-src/{prevFiles/prev_7d4c51_877d5f_ext#mysqlnd#mysqlnd_result.c,revFiles/7d4c51_877d5f_ext#mysqlnd#mysqlnd_result.c}: mysqlnd_store_result_fetch_data), (php-src/{prevFiles/prev_0b77134_1ee42c_ext#mysqlnd#mysqlnd_result.c,revFiles/0b77134_1ee42c_ext#mysqlnd#mysqlnd_result.c}: mysqlnd_free_buffered_data), (php-src/{prevFiles/prev_0b77134_1ee42c_ext#mysqlnd#mysqlnd_result.c,revFiles/0b77134_1ee42c_ext#mysqlnd#mysqlnd_result.c}: mysqlnd_store_result_fetch_data)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.38
+
+// ---------------------------------------------

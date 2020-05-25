@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef uchar;
+@@
+- E0 = (uchar *)malloc(E1); 
++ E0 = (uchar *)emalloc(E1); 
+// Infered from: (php-src/{prevFiles/prev_a9f850_faaeee_ext#exif#exif.c,revFiles/a9f850_faaeee_ext#exif#exif.c}: scan_JPEG_header)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

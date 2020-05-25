@@ -1,0 +1,16 @@
+@@
+type T1;
+identifier I0, I2, I3, I4;
+expression E5, E6;
+@@
+  int handle_one_ref(const  char *I0, const  T1 *I2, int I3, void *I4)  
+  {
+  ...
+- add_pending_object(E5->all_revs, E6, ""); 
++ add_pending_object(E5->all_revs, E6, I0); 
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_3d1efd_fb9a54_revision.c,revFiles/3d1efd_fb9a54_revision.c}: handle_one_ref)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

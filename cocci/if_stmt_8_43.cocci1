@@ -1,0 +1,36 @@
+@@
+expression E0;
+@@
+- if (dnxhd_find_qscale(E0) < 0)  
++ if ((ret = dnxhd_find_qscale(E0)) < 0)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_857337_77077a_hw#sd#sd.c,revFiles/857337_77077a_hw#sd#sd.c}: sd_read_data), (FFmpeg/{prevFiles/prev_78532b_79cf2c_libavcodec#dnxhdenc.c,revFiles/78532b_79cf2c_libavcodec#dnxhdenc.c}: dnxhd_encode_variance)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 0.67
+// -- Node Change --
+// Recall: 0.33, Precision: 0.50
+// -- General --
+// Functions fully changed: 0/5(0%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_78532b_79cf2c_libavcodec#dnxhdenc.c: dnxhd_encode_variance
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_857337_77077a_hw#sd#sd.c: sd_read_data
+ - codeflaws/prevFiles/prev_408-B-9096840-9096851.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_78532b_79cf2c_libavcodec#dnxhdenc.c: dnxhd_encode_rdo
+ - FFmpeg/prevFiles/prev_78532b_79cf2c_libavcodec#dnxhdenc.c: dnxhd_find_qscale
+*/
+
+// ---------------------------------------------

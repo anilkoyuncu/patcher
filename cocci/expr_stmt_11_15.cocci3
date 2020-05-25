@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = gdk_device_get_window_at_position(E1, NULL, NULL); 
++ E0 = _gdk_device_window_at_position(E1, NULL, NULL, NULL, TRUE); 
+// Infered from: (gtk/{prevFiles/prev_ec65c6_e3012d_gdk#wayland#gdkdnd-wayland.c,revFiles/ec65c6_e3012d_gdk#wayland#gdkdnd-wayland.c}: _gdk_wayland_window_drag_begin)
+// False positives: (gtk/revFiles/ec65c6_e3012d_gdk#wayland#gdkdnd-wayland.c: gdk_wayland_drag_context_find_window)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

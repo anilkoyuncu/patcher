@@ -1,0 +1,10 @@
+@@
+identifier I2, I4;
+expression E1, E0, E3;
+@@
+- E0 = ompi_rte_send_buffer_nb(&E1->I2->proc_ompi->proc_name, E3, I4, 0,  xoob_rml_send_cb, NULL); 
++ E0 = ompi_rte_send_buffer_nb(&E1->I2->proc_ompi->proc_name, E3, I4,  xoob_rml_send_cb, NULL); 
+// Infered from: (ompi/{prevFiles/prev_96457d_63ac60_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c,revFiles/96457d_63ac60_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c}: xoob_send_connect_data), (ompi/{prevFiles/prev_96457d_63ac60_ompi#mca#common#ofacm#common_ofacm_xoob.c,revFiles/96457d_63ac60_ompi#mca#common#ofacm#common_ofacm_xoob.c}: xoob_send_connect_data)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

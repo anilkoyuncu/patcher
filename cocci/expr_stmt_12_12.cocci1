@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- playlist_CreateGroup (E0, strdup(E1)); 
++ playlist_CreateGroup(E0, "Normal"); 
+// Infered from: (vlc/{prevFiles/prev_4ae90d_89fd53_src#playlist#playlist.c,revFiles/4ae90d_89fd53_src#playlist#playlist.c}: __playlist_Create)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

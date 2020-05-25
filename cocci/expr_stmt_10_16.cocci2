@@ -1,0 +1,10 @@
+@@
+type T0;
+expression E1, E3, E2;
+@@
+- *((T0 *)&E1[E2]) = htons(E3); 
++ *((T0 *)&E1[E2]) = htons((T0 )E3); 
+// Infered from: (curl/{prevFiles/prev_be3c5f_e268e8_lib#socks.c,revFiles/be3c5f_e268e8_lib#socks.c}: Curl_SOCKS4), (curl/{prevFiles/prev_be3c5f_e268e8_lib#socks.c,revFiles/be3c5f_e268e8_lib#socks.c}: Curl_SOCKS5)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

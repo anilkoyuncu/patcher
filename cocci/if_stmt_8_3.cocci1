@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->bits_per_coded_sample <= 8)  
++ if ((E0->bits_per_coded_sample & 0x1f) <= 8)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_691dec_d63e99_libavcodec#8bps.c,revFiles/691dec_d63e99_libavcodec#8bps.c}: decode_frame)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

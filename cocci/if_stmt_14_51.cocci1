@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->pbdev[E1]->pdev == E2)  
++ if (E0->pbdev[E1] && E0->pbdev[E1]->pdev == E2)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_7fc0ab_510091_hw#s390x#s390-pci-bus.c,revFiles/7fc0ab_510091_hw#s390x#s390-pci-bus.c}: s390_pcihost_hot_unplug)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_9a1621_ba47d51_libavcodec#snow.c: ff_snow_release_buffer
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- aout_FifoInit(E0, &E1->mixer.fifo, E0->p_mixer->fmt.i_rate); 
++ aout_FifoInit(E0, &E1->mixer.fifo, E0->mixer_format.i_rate); 
+// Infered from: (vlc/{prevFiles/prev_ac5d4e_6c5dcb_src#audio_output#input.c,revFiles/ac5d4e_6c5dcb_src#audio_output#input.c}: aout_InputPlay)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.27
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.79, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_ac5d4e_6c5dcb_src#audio_output#input.c: aout_InputNew
+*/
+
+// ---------------------------------------------

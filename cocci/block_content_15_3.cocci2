@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->request.l2_table = qed_find_l2_cache_entry(&E1->l2_cache, E2->offset); 
++ E0->request.l2_table = qed_find_l2_cache_entry(&E1->l2_cache, l2_offset); 
+// Infered from: (qemu/{prevFiles/prev_e4fc87_d11cf8_block#qed.c,revFiles/e4fc87_d11cf8_block#qed.c}: qed_commit_l2_update)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.92, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_e4fc87_d11cf8_block#qed.c: qed_commit_l2_update
+*/
+
+// ---------------------------------------------

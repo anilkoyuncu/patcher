@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  char *I0 = E1->name; 
++ const  char *I0; 
+// Infered from: (linux/{prevFiles/prev_f3d8b2e_6c614a_net#bridge#netfilter#ebtables.c,revFiles/f3d8b2e_6c614a_net#bridge#netfilter#ebtables.c}: ebt_dev_check)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

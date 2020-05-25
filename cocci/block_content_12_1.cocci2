@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- set_irq_type(I0, IRQF_TRIGGER_HIGH); 
++ irq_set_irq_type(I0, IRQF_TRIGGER_HIGH); 
+// Infered from: (linux/{prevFiles/prev_e4ec79_9efbc3_arch#mips#txx9#rbtx4927#irq.c,revFiles/e4ec79_9efbc3_arch#mips#txx9#rbtx4927#irq.c}: rbtx4927_irq_setup), (linux/{prevFiles/prev_e4ec79_9efbc3_arch#mips#txx9#rbtx4938#irq.c,revFiles/e4ec79_9efbc3_arch#mips#txx9#rbtx4938#irq.c}: rbtx4938_irq_setup)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

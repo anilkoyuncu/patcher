@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef MONITORINFOEXA2;
+@@
+- E0.cbSize = sizeof(MONITORINFOEX); 
++ E0.cbSize = sizeof(MONITORINFOEXA2 ); 
+// Infered from: (gtk/{prevFiles/prev_ba6522_1914e6_gdk#win32#gdkdisplay-win32.c,revFiles/ba6522_1914e6_gdk#win32#gdkdisplay-win32.c}: enum_monitor)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

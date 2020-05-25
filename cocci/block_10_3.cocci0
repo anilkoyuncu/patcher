@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- RETVAL_STRING((char *)E0, 0); 
++ RETURN_STRING((char *)E0, 0); 
+// Infered from: (php-src/{prevFiles/prev_90a5af_9f5006_ext#tidy#tidy.c,revFiles/90a5af_9f5006_ext#tidy#tidy.c}: PHP_FUNCTION)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

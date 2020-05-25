@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- printf("%d CC: %d\n", (int )E0, E1); 
++ printf("%p CC: %d\n", E0, E1); 
+// Infered from: (cmake/{prevFiles/prev_66db91_0b3842_Modules#CheckForPthreads.c,revFiles/66db91_0b3842_Modules#CheckForPthreads.c}: runner)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

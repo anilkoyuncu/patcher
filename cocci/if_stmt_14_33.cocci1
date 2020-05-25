@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (!qht_remove(&tb_ctx.htable, E0, E1))  
++ if (!(E0->cflags & CF_NOCACHE) && !qht_remove(&tb_ctx.htable, E0, E1))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_ec7eb2_6d1d42_accel#tcg#translate-all.c,revFiles/ec7eb2_6d1d42_accel#tcg#translate-all.c}: do_tb_phys_invalidate)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+
+// ---------------------------------------------

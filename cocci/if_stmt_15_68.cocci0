@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[0] = get_sbits(E1, 9) << 6; 
++ E0[0] = get_sbits(E1, 9) * 64; 
+// Infered from: (FFmpeg/{prevFiles/prev_1283c4_2ef0f3_libavcodec#hq_hqa.c,revFiles/1283c4_2ef0f3_libavcodec#hq_hqa.c}: hq_decode_block), (FFmpeg/{prevFiles/prev_1283c4_2ef0f3_libavcodec#hq_hqa.c,revFiles/1283c4_2ef0f3_libavcodec#hq_hqa.c}: hq_decode_block)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if ((E0 != PT_UDP) || (E0 != PT_TCP) || (E0 != PT_SCTP) || (E0 != PT_DCCP))  
++ if ((E0 != PT_UDP) && (E0 != PT_TCP) && (E0 != PT_SCTP) && (E0 != PT_DCCP))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_0048fb_f4bcbe_epan#addr_resolv.c,revFiles/0048fb_f4bcbe_epan#addr_resolv.c}: serv_name_lookup)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

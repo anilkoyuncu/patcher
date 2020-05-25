@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- gtk_range_set_round_digits(GTK_RANGE(E0), E1); 
+// Infered from: (gtk/{prevFiles/prev_d9dd31_e4ede3_gtk#gtkscale.c,revFiles/d9dd31_e4ede3_gtk#gtkscale.c}: gtk_scale_set_draw_value), (gtk/{prevFiles/prev_d9dd31_e4ede3_gtk#gtkscale.c,revFiles/d9dd31_e4ede3_gtk#gtkscale.c}: gtk_scale_set_draw_value)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.17, Precision: 1.00
+// -- Node Change --
+// Recall: 0.29, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/12(16%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_29c655_059b3a_docs#examples#postinmemory.c: main
+ - FFmpeg/prevFiles/prev_f56dd3_b401eb_libavcodec#h263.c: decode_vop_header
+ - linux/prevFiles/prev_0791a5f_79c452_drivers#mtd#nand#nandsim.c: free_device
+ - linux/prevFiles/prev_644df1_d4929a_drivers#md#raid1.c: setup_conf
+ - linux/prevFiles/prev_adad44_70b49c_drivers#staging#rdma#hfi1#user_sdma.c: hfi1_user_sdma_free_queues
+ - linux/prevFiles/prev_d029810_5667ff5_drivers#gpu#drm#amd#display#dc#core#dc_resource.c: dc_destroy_resource_pool
+ - curl/prevFiles/prev_29c655_059b3a_tests#server#tftpd.c: parse_servercmd
+ - curl/prevFiles/prev_29c655_059b3a_tests#server#tftpd.c: main
+ - gtk/prevFiles/prev_d9dd31_e4ede3_gtk#gtkscale.c: gtk_scale_set_digits
+ - linux/prevFiles/prev_644df1_d4929a_drivers#md#raid1.c: raid1_free
+*/
+
+// ---------------------------------------------

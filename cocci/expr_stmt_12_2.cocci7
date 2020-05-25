@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- msg_Dbg(E0, "Direct3D created texture: %ix%i", E1->i_width, E1->i_height); 
++ msg_Dbg(E0, "Direct3D created texture: %ix%i", E1->i_visible_width,  E1->i_visible_height); 
+// Infered from: (vlc/{prevFiles/prev_9e19a0_bf2b76_modules#video_output#win32#direct3d9.c,revFiles/9e19a0_bf2b76_modules#video_output#win32#direct3d9.c}: Direct3D9CreateScene)
+// False positives: (vlc/revFiles/849fe1_6068eb_modules#video_output#win32#direct3d9.c: Direct3D9CreateScene)
+// Recall: 0.07, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

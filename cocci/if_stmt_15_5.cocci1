@@ -1,0 +1,10 @@
+@@
+identifier I2;
+expression E0, E1;
+@@
+- set_irq_chip_and_handler(E0, E1, I2); 
++ irq_set_chip_and_handler(E0, E1, I2); 
+// Infered from: (linux/{prevFiles/prev_ec775d_7bfbc1f2_arch#powerpc#sysdev#cpm2_pic.c,revFiles/ec775d_7bfbc1f2_arch#powerpc#sysdev#cpm2_pic.c}: cpm2_pic_host_map), (linux/{prevFiles/prev_b51804_778b54_drivers#gpio#vr41xx_giu.c,revFiles/b51804_778b54_drivers#gpio#vr41xx_giu.c}: vr41xx_set_irq_trigger), (linux/{prevFiles/prev_b51804_778b54_drivers#gpio#vr41xx_giu.c,revFiles/b51804_778b54_drivers#gpio#vr41xx_giu.c}: giu_probe)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

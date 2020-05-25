@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- ff_MPV_frame_start(E0, E1); 
++ if (ff_MPV_frame_start(E0, E1) < 0)  
++ {
++ return -1; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_5537c9_2472f3_libavcodec#mpegvideo_enc.c,revFiles/5537c9_2472f3_libavcodec#mpegvideo_enc.c}: ff_MPV_encode_picture)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

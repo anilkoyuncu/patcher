@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- error_report("Failed to parse URL : %s %s", E0, iscsi_get_error(E1)); 
++ error_report("Failed to parse URL : %s", E0); 
+// Infered from: (qemu/{prevFiles/prev_8da1e1_03a36f_block#iscsi.c,revFiles/8da1e1_03a36f_block#iscsi.c}: iscsi_open)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

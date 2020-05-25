@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6, E7, E8, E9;
+@@
+- if (E0 + E1 == E2 && E0 + E3 == E4 && E3 + E5 == E6 && E1 + E5 == E7 && E0 + E5 == E8 && E1 + E3 == E9 && E0 != E3 && E1 != E5 && E0 != E5 && E1 != E3)  
++ if (E0 + E1 == E2 && E0 + E3 == E4 && E3 + E5 == E6 && E1 + E5 == E7 && E0 + E5 == E8 && E1 + E3 == E9 && E0 != E3 && E1 != E5 && E0 != E5 && E1 != E3 && E0 != E1 && E3 != E5)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_143-A-12841677-12841745.c,revFiles/143-A-12841677-12841745.c}: main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

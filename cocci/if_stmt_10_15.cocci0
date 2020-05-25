@@ -1,0 +1,12 @@
+@@
+expression E2, E0, E1;
+@@
+- if (write_in_full(E0, E1, E2) != E2)  
++ if (write_in_full(E0, E1, E2) < 0)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_06f46f_68a423_refs.c,revFiles/06f46f_68a423_refs.c}: write_pseudoref), (git/{prevFiles/prev_06f46f_68a423_rerere.c,revFiles/06f46f_68a423_rerere.c}: write_rr), (git/{prevFiles/prev_06f46f_68a423_ll-merge.c,revFiles/06f46f_68a423_ll-merge.c}: create_temp), (git/{prevFiles/prev_06f46f_68a423_transport-helper.c,revFiles/06f46f_68a423_transport-helper.c}: sendline), (git/{prevFiles/prev_06f46f_68a423_transport-helper.c,revFiles/06f46f_68a423_transport-helper.c}: write_constant)
+// Recall: 0.83, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

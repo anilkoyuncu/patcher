@@ -1,0 +1,29 @@
+@@
+expression E0;
+@@
+- if (E0)  
+- {
+- BUG(); 
+- }
++ BUG_ON(E0); 
+// Infered from: (linux/{prevFiles/prev_02d9d3_6ec760_drivers#ata#pata_octeon_cf.c,revFiles/02d9d3_6ec760_drivers#ata#pata_octeon_cf.c}: octeon_cf_set_piomode), (linux/{prevFiles/prev_e01ea5e_2c0f83f_drivers#scsi#lpfc#lpfc_els.c,revFiles/e01ea5e_2c0f83f_drivers#scsi#lpfc#lpfc_els.c}: lpfc_cmpl_fabric_iocb), (linux/{prevFiles/prev_6e7f399_cb653f_drivers#video#fbdev#omap2#omapfb#dss#dss_features.c,revFiles/6e7f399_cb653f_drivers#video#fbdev#omap2#omapfb#dss#dss_features.c}: dss_feat_get_reg_field), (linux/{prevFiles/prev_044941_63d5fc0_arch#arm#mach-omap1#board-perseus2.c,revFiles/044941_63d5fc0_arch#arm#mach-omap1#board-perseus2.c}: omap_perseus2_init), (linux/{prevFiles/prev_044941_63d5fc0_arch#arm#mach-omap1#board-h2.c,revFiles/044941_63d5fc0_arch#arm#mach-omap1#board-h2.c}: h2_init), (linux/{prevFiles/prev_044941_63d5fc0_arch#arm#mach-omap1#board-fsample.c,revFiles/044941_63d5fc0_arch#arm#mach-omap1#board-fsample.c}: omap_fsample_init), (linux/{prevFiles/prev_b1f355_c9ec14_fs#ocfs2#alloc.c,revFiles/b1f355_c9ec14_fs#ocfs2#alloc.c}: ocfs2_rotate_leaf), (linux/{prevFiles/prev_debe26a_2d80b52_drivers#usb#host#oxu210hp-hcd.c,revFiles/debe26a_2d80b52_drivers#usb#host#oxu210hp-hcd.c}: ehci_quiesce), (linux/{prevFiles/prev_debe26a_2d80b52_drivers#usb#host#oxu210hp-hcd.c,revFiles/debe26a_2d80b52_drivers#usb#host#oxu210hp-hcd.c}: start_unlink_async), (linux/{prevFiles/prev_044941_63d5fc0_arch#arm#mach-omap1#board-h3.c,revFiles/044941_63d5fc0_arch#arm#mach-omap1#board-h3.c}: h3_init), (linux/{prevFiles/prev_68ebb7c_bc0195_drivers#pci#host#pcie-spear13xx.c,revFiles/68ebb7c_bc0195_drivers#pci#host#pcie-spear13xx.c}: spear13xx_pcie_irq_handler), (linux/{prevFiles/prev_bf3a35a_6d9164_drivers#mmc#host#sdhci.c,revFiles/bf3a35a_6d9164_drivers#mmc#host#sdhci.c}: sdhci_read_block_pio), (linux/{prevFiles/prev_bf3a35a_6d9164_drivers#mmc#host#sdhci.c,revFiles/bf3a35a_6d9164_drivers#mmc#host#sdhci.c}: sdhci_write_block_pio), (linux/{prevFiles/prev_f46bda_73fc60_drivers#video#fbdev#omap2#omapfb#dss#dss_features.c,revFiles/f46bda_73fc60_drivers#video#fbdev#omap2#omapfb#dss#dss_features.c}: dss_feat_get_reg_field), (linux/{prevFiles/prev_dc02e46_30e937_drivers#iommu#intel-iommu.c,revFiles/dc02e46_30e937_drivers#iommu#intel-iommu.c}: intel_iommu_unmap), (linux/{prevFiles/prev_6e6cfb_f7644c_drivers#iommu#msm_iommu.c,revFiles/6e6cfb_f7644c_drivers#iommu#msm_iommu.c}: __flush_iotlb)
+// False positives: (linux/revFiles/d6c8e0_5ae06c_drivers#cpufreq#speedstep-ich.c: speedstep_get), (linux/revFiles/e01ea5e_2c0f83f_drivers#scsi#lpfc#lpfc_els.c: lpfc_cmpl_fabric_iocb), (linux/revFiles/e01ea5e_2c0f83f_drivers#scsi#lpfc#lpfc_els.c: lpfc_issue_fabric_iocb)
+// Recall: 0.88, Precision: 0.88, Matching recall: 0.98
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.95, Precision: 0.90
+// -- Node Change --
+// Recall: 0.95, Precision: 0.81
+// -- General --
+// Functions fully changed: 17/21(80%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_9cef5b_272e0c_modules#mux#mp4#mp4.c: BuildMoov
+ - linux/prevFiles/prev_e01ea5e_2c0f83f_drivers#scsi#lpfc#lpfc_els.c: lpfc_cmpl_fabric_iocb
+ - linux/prevFiles/prev_e01ea5e_2c0f83f_drivers#scsi#lpfc#lpfc_els.c: lpfc_issue_fabric_iocb
+*/
+
+// ---------------------------------------------

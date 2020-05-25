@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- avio_read(E0, E1->data, 4); 
++ if (avio_read(E0, E1->data, 4) != 4)  
++ {
++ av_free_packet(E1); 
++ return AVERROR_INVALIDDATA; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_fde74d_8eb7621_libavformat#swfdec.c,revFiles/fde74d_8eb7621_libavformat#swfdec.c}: swf_read_packet)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

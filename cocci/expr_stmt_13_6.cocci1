@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- qdict_put(E0, E1, qint_from_int (E2)); 
++ qdict_put_int(E0, E1, E2); 
+// Infered from: (qemu/{prevFiles/prev_46f5ac_a92c21_monitor.c,revFiles/46f5ac_a92c21_monitor.c}: monitor_parse_arguments), (qemu/{prevFiles/prev_46f5ac_a92c21_monitor.c,revFiles/46f5ac_a92c21_monitor.c}: monitor_parse_arguments), (qemu/{prevFiles/prev_46f5ac_a92c21_monitor.c,revFiles/46f5ac_a92c21_monitor.c}: monitor_parse_arguments), (qemu/{prevFiles/prev_46f5ac_a92c21_monitor.c,revFiles/46f5ac_a92c21_monitor.c}: monitor_parse_arguments), (qemu/{prevFiles/prev_46f5ac_a92c21_monitor.c,revFiles/46f5ac_a92c21_monitor.c}: monitor_parse_arguments)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

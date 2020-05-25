@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- E0->buf = av_buffer_ref(E1->buf); 
+// Infered from: (FFmpeg/{prevFiles/prev_02a6b0_b94df2_libavcodec#avpacket.c,revFiles/02a6b0_b94df2_libavcodec#avpacket.c}: av_copy_packet)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

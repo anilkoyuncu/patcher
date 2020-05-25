@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- lua_insert(E0, 10); 
++ lua_pushvalue(E0, 3); 
+// Infered from: (vlc/{prevFiles/prev_6ee069_68c015_modules#misc#lua#libs#dialog.c,revFiles/6ee069_68c015_modules#misc#lua#libs#dialog.c}: vlclua_dialog_add_button)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.83
+// -- Node Change --
+// Recall: 1.00, Precision: 0.83
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_ed015f_856834a_libavcodec#ffv1.c: get_vlc_symbol
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef gboolean;
+@@
+- gboolean *I0 = ((gboolean *)(p_get_proto_data(wmem_file_scope(), E1,  proto_wlan, IS_DMG_KEY))); 
+- E2 = I0 ? *I0 :FALSE; 
++ E2 = GPOINTER_TO_INT(p_get_proto_data(wmem_file_scope(), E1, proto_wlan,  IS_DMG_KEY)); 
+// Infered from: (wireshark/{prevFiles/prev_bfd146_907d05_epan#dissectors#packet-ieee80211.c,revFiles/bfd146_907d05_epan#dissectors#packet-ieee80211.c}: add_tagged_field)
+// Recall: 0.60, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

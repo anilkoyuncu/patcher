@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!inet_pton(AF_INET, E0->url.psz_host, &E0->addr))  
++ if (E0->url.psz_host != NULL && !inet_pton(AF_INET, E0->url.psz_host,  &E0->addr))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_f11eaa_c60db7_modules#access#dsm#access.c,revFiles/f11eaa_c60db7_modules#access#dsm#access.c}: get_address)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

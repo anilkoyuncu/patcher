@@ -1,0 +1,32 @@
+@@
+identifier I0;
+expression E1;
+typedef CGContextRef;
+typedef cairo_bool_t;
+@@
+  cairo_bool_t _cairo_quartz_is_cgcontext_bitmap_context(CGContextRef I0)  
+  {
+  ...
+- return E1; 
++ return CGBitmapContextGetBitsPerPixel(I0) != 0; 
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_4588b0_2f9350_src#cairo-quartz-surface.c,revFiles/4588b0_2f9350_src#cairo-quartz-surface.c}: _cairo_quartz_is_cgcontext_bitmap_context)
+// False positives: (cairo/revFiles/4588b0_2f9350_src#cairo-quartz-surface.c: _cairo_quartz_is_cgcontext_bitmap_context)
+// Recall: 0.50, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.57
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_4588b0_2f9350_src#cairo-quartz-surface.c: _cairo_quartz_is_cgcontext_bitmap_context
+*/
+
+// ---------------------------------------------

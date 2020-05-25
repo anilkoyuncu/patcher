@@ -1,0 +1,31 @@
+@@
+identifier I0, I4, I6, I8;
+expression E3, E5, E1, E2, E7;
+typedef uint8_t;
+@@
+- uint8_t I0[ID3v2_HEADER_SIZE]; 
+  ...
+- E1 = get_buffer(E2->pb, I0, ID3v2_HEADER_SIZE); 
+- if (E3)  
+- {
+- int I4 = ff_id3v2_tag_len(I0); 
+- url_fseek(E2->pb, E5, I6); 
+- }
+- else
+- {
+- url_fseek(E2->pb, E7, I8); 
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_6612d8_113685_libavformat#flacdec.c,revFiles/6612d8_113685_libavformat#flacdec.c}: flac_read_header)
+// Recall: 0.47, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

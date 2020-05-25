@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef input_info_category_t;
+@@
+- input_info_category_t *I0 = input_InfoCategory(E1, "Vorbis Comment"); 
++ input_info_category_t *I0 = input_InfoCategory(E1, _("Vorbis Comment")); 
+// Infered from: (vlc/{prevFiles/prev_ae1b0c_dc1750_modules#codec#vorbis.c,revFiles/ae1b0c_dc1750_modules#codec#vorbis.c}: RunDecoder)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

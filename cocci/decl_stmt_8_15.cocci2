@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef int64_t;
+@@
+- int I0 = lrintf(E1 + E2 * 0.5); 
++ int64_t I0 = llrint(E1 + E2 * 0.5); 
+// Infered from: (FFmpeg/{prevFiles/prev_f742c7_bacebe_libavformat#utils.c,revFiles/f742c7_bacebe_libavformat#utils.c}: avformat_find_stream_info)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

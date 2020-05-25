@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->out)  
++ if (E0 != E0->main && E0->out)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_de2652_abe378_src#http#ngx_http_postpone_filter_module.c,revFiles/de2652_abe378_src#http#ngx_http_postpone_filter_module.c}: ngx_http_postpone_filter_output_postponed_request)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

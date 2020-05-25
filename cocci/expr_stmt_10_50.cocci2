@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- set_physical_link_state(E0,  PLS_OFFLINE | (OPA_LINKDOWN_REASON_SMA_DISABLED << 8)); 
++ set_physical_link_state(E0,  (OPA_LINKDOWN_REASON_SMA_DISABLED << 8) | PLS_OFFLINE); 
+// Infered from: (linux/{prevFiles/prev_bf6400_42d6ec1_drivers#staging#rdma#hfi1#chip.c,revFiles/bf6400_42d6ec1_drivers#staging#rdma#hfi1#chip.c}: handle_temp_err)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

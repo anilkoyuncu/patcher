@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- proto_tree_add_item(E0, hf_scsi_control, E1, E2, 1, 0); 
++ proto_tree_add_item(E0, hf_scsi_control, E1, E2, 1, ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_6d96a1_152afe_epan#dissectors#packet-scsi-osd.c,revFiles/6d96a1_152afe_epan#dissectors#packet-scsi-osd.c}: dissect_osd_opcode)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

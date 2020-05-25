@@ -1,0 +1,28 @@
+@@
+expression E0, E1, E2;
+typedef uint32_t;
+@@
+- convert_sps_pps(E0, E0->fmt_in.p_extra, E0->fmt_in.i_extra, E1->pBuffer,  E1->nAllocLen, (uint32_t *)&E1->nFilledLen,  &E2->i_nal_size_length); 
++ convert_sps_pps(E0, E0->fmt_in.p_extra, E0->fmt_in.i_extra, E1->pBuffer,  E1->nAllocLen, (uint32_t *)&E1->nFilledLen, NULL); 
+// Infered from: (vlc/{prevFiles/prev_39bdf3_5359dc_modules#codec#omxil#omxil.c,revFiles/39bdf3_5359dc_modules#codec#omxil#omxil.c}: OpenGeneric)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.44, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/9(44%)
+
+/*
+Functions where the patch did not apply:
+ - cairo/prevFiles/prev_282d77_aa616a_src#cairo-ps-surface.c: _cairo_ps_surface_emit_jpeg_image
+ - linux/prevFiles/prev_7e6437_a15f6e_drivers#watchdog#npcm_wdt.c: npcm_wdt_probe
+ - linux/prevFiles/prev_ca05c2e2_d6ab05_drivers#watchdog#ftwdt010_wdt.c: ftwdt010_wdt_probe
+ - linux/prevFiles/prev_737f64_139097a_drivers#input#mouse#navpoint.c: navpoint_probe
+ - cairo/prevFiles/prev_282d77_aa616a_src#cairo-pdf-surface.c: _cairo_pdf_surface_emit_jpeg_image
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = tvb_get_ntohl(E1, E2) && E3; 
++ E0 = tvb_get_ntohl(E1, E2) & 0x7FFFFFFF; 
+// Infered from: (wireshark/{prevFiles/prev_09e845_3398f7_epan#dissectors#packet-fcgi.c,revFiles/09e845_3398f7_epan#dissectors#packet-fcgi.c}: dissect_nv_pairs), (wireshark/{prevFiles/prev_09e845_3398f7_epan#dissectors#packet-fcgi.c,revFiles/09e845_3398f7_epan#dissectors#packet-fcgi.c}: dissect_nv_pairs)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

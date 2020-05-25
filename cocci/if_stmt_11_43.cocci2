@@ -1,0 +1,31 @@
+@@
+expression E0, E1;
+@@
+- if (E0->size_in_bits == 8 && E1->divx_version)  
++ if (E0->size_in_bits == 8 && (E1->divx_version || E1->xvid_build))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_c1e292_885e88_libavcodec#h263.c,revFiles/c1e292_885e88_libavcodec#h263.c}: ff_mpeg4_decode_picture_header)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_676e61_f7e1e6_libavcodec#h263dec.c: ff_h263_decode_frame
+*/
+
+// ---------------------------------------------

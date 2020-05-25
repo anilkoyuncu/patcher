@@ -1,0 +1,9 @@
+@@
+expression E0, E2, E1;
+@@
+- strlcpy(E0, E1, E2); 
++ strcpy(E0, E1); 
+// Infered from: (openssh-portable/{prevFiles/prev_ecf583_e772b6_fake-getnameinfo.c,revFiles/ecf583_e772b6_fake-getnameinfo.c}: getnameinfo), (openssh-portable/{prevFiles/prev_ecf583_e772b6_fake-getnameinfo.c,revFiles/ecf583_e772b6_fake-getnameinfo.c}: getnameinfo), (openssh-portable/{prevFiles/prev_ecf583_e772b6_fake-getnameinfo.c,revFiles/ecf583_e772b6_fake-getnameinfo.c}: getnameinfo)
+// Recall: 0.60, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

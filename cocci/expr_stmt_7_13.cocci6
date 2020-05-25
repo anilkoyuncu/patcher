@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = *(E1->next_cell_data++) << 1; 
++ E0 = *(E1->next_cell_data++); 
+// Infered from: (FFmpeg/{prevFiles/prev_4b7fa5_ff80c6_libavcodec#indeo3.c,revFiles/4b7fa5_ff80c6_libavcodec#indeo3.c}: parse_bintree)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

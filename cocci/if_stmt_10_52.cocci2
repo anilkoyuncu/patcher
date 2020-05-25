@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- GetWBE(&E0[4]); 
+// Infered from: (vlc/{prevFiles/prev_3dff081_695b9c_modules#demux#pva.c,revFiles/3dff081_695b9c_modules#demux#pva.c}: ParsePES)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.78, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_3dff081_695b9c_modules#demux#pva.c: Open
+*/
+
+// ---------------------------------------------

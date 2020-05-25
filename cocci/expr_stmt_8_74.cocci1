@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- libvlc_release(E0, &ex); 
++ libvlc_release(E0); 
+// Infered from: (vlc/{prevFiles/prev_f09786_b0d5c6_src#control#testapi.c,revFiles/f09786_b0d5c6_src#control#testapi.c}: test_media_list)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

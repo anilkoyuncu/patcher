@@ -1,0 +1,7 @@
+@@
+@@
+- prefs_register_obsolete_preference(mtp3_module, "mtp3_standard"); 
+// Infered from: (wireshark/{prevFiles/prev_231f28_081f25_packet-mtp3.c,revFiles/231f28_081f25_packet-mtp3.c}: proto_register_mtp3)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

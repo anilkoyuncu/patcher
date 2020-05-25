@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- opal_event_active(E0, E1 & E0->ev_events, 1); 
++ opal_event_active_i(E0, E1 & E0->ev_events, 1); 
+// Infered from: (ompi/{prevFiles/prev_3a7ede_24de93_opal#event#select.c,revFiles/3a7ede_24de93_opal#event#select.c}: select_dispatch), (ompi/{prevFiles/prev_3a7ede_24de93_opal#event#select.c,revFiles/3a7ede_24de93_opal#event#select.c}: select_dispatch), (ompi/{prevFiles/prev_3a7ede_24de93_opal#event#poll.c,revFiles/3a7ede_24de93_opal#event#poll.c}: poll_dispatch), (ompi/{prevFiles/prev_3a7ede_24de93_opal#event#poll.c,revFiles/3a7ede_24de93_opal#event#poll.c}: poll_dispatch)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

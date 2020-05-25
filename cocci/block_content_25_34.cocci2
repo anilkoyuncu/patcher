@@ -1,0 +1,30 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef GtkTooltips;
+@@
+- GtkTooltips *I0; 
+  ...
+- I0 = gtk_tooltips_new(); 
+  ...
+- gtk_tooltips_set_tip(I0, E1, E2, NULL); 
++ gtk_widget_set_tooltip_text(E1, E2); 
+// Infered from: (wireshark/{prevFiles/prev_ef84ed_49b924_gtk#follow_stream.c,revFiles/ef84ed_49b924_gtk#follow_stream.c}: follow_find_cb), (wireshark/{prevFiles/prev_fb1694_2aff1d_gtk#main_statusbar.c,revFiles/fb1694_2aff1d_gtk#main_statusbar.c}: profile_bar_new)
+// Recall: 0.36, Precision: 1.00, Matching recall: 0.36
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.68, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_ef84ed_49b924_gtk#follow_stream.c: follow_stream
+ - wireshark/prevFiles/prev_fb1694_2aff1d_gtk#main_statusbar.c: status_expert_new
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef PyObject;
+@@
+- return PyObject_CallFunctionObjArgs(Py_Type(E0), E0->default_factory, E0,  NULL); 
++ return PyObject_CallFunctionObjArgs((PyObject *)Py_Type(E0),  E0->default_factory, E0, NULL); 
+// Infered from: (cpython/{prevFiles/prev_2f2fff_3f6dd6_Modules#_collectionsmodule.c,revFiles/2f2fff_3f6dd6_Modules#_collectionsmodule.c}: defdict_copy), (cpython/{prevFiles/prev_c47cf7_06f806_Modules#_collectionsmodule.c,revFiles/c47cf7_06f806_Modules#_collectionsmodule.c}: defdict_copy)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

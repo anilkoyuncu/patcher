@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = E1->width * E1->bits_per_coded_sample / 8; 
++ int I0 = (E1->width * E1->bits_per_coded_sample + 7) / 8; 
+// Infered from: (FFmpeg/{prevFiles/prev_4fe796_27fbe3_libavcodec#msrle.c,revFiles/4fe796_27fbe3_libavcodec#msrle.c}: msrle_decode_frame)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

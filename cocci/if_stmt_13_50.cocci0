@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if ((E0 = ff_alloc_packet2(E1, E2, E3->nb_samples * 2 * E4->bps)) < 0)  
++ if ((E0 = ff_alloc_packet2(E1, E2,  E3->nb_samples * 2 * E1->channels * E4->bps)) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_bc2187_2b9590_libavcodec#ttaenc.c,revFiles/bc2187_2b9590_libavcodec#ttaenc.c}: tta_encode_frame)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

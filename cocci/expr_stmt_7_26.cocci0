@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef uint16_t;
+@@
+- ((uint16_t *)E0)[E1] = bswap_16(((uint16_t *)E2)[E1]); 
++ ((uint16_t *)E0)[E1] = bswap_16(((const  uint16_t *)E2)[E1]); 
+// Infered from: (FFmpeg/{prevFiles/prev_5090d8_a630ed_libswscale#swscale.c,revFiles/5090d8_a630ed_libswscale#swscale.c}: planarCopy)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

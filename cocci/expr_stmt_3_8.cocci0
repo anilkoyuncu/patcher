@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef uint64_t;
+@@
+- *E0 = -(uint64_t )E1; 
++ *E0 = 0 - (uint64_t )E1; 
+// Infered from: (openssl/{prevFiles/prev_68d4bcf_244d7b_crypto#asn1#a_int.c,revFiles/68d4bcf_244d7b_crypto#asn1#a_int.c}: asn1_get_int64)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

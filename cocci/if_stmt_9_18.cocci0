@@ -1,0 +1,11 @@
+@@
+@@
+- if (!quiet)  
++ if (!global_capture_opts.quiet)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_d3f832_7a630c_tshark.c,revFiles/d3f832_7a630c_tshark.c}: main), (php-src/{prevFiles/prev_3735b0_601407_Zend#zend_builtin_functions.c,revFiles/3735b0_601407_Zend#zend_builtin_functions.c}: ZEND_FUNCTION), (php-src/{prevFiles/prev_66877f_500839_Zend#zend_builtin_functions.c,revFiles/66877f_500839_Zend#zend_builtin_functions.c}: ZEND_FUNCTION)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

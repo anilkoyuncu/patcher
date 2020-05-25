@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- archive_set_error(&E0->archive, ARCHIVE_ERRNO_MISC,  "zip: unknown keyword ``%s''", E1); 
+// Infered from: (libarchive/{prevFiles/prev_57c71c_c16873_libarchive#archive_read_support_format_zip.c,revFiles/57c71c_c16873_libarchive#archive_read_support_format_zip.c}: archive_read_format_zip_options), (libarchive/{prevFiles/prev_f30dc3_1ecb1b_libarchive#archive_read_support_format_zip.c,revFiles/f30dc3_1ecb1b_libarchive#archive_read_support_format_zip.c}: archive_read_format_zip_options)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 0.60, Precision: 0.50
+// -- General --
+// Functions fully changed: 0/6(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - libarchive/prevFiles/prev_f30dc3_1ecb1b_libarchive#archive_read_support_format_zip.c: archive_read_format_zip_options
+ - libarchive/prevFiles/prev_f30dc3_1ecb1b_libarchive#archive_read_support_format_tar.c: archive_read_format_tar_options
+ - libarchive/prevFiles/prev_57c71c_c16873_libarchive#archive_read_support_format_zip.c: archive_read_format_zip_options
+ - libarchive/prevFiles/prev_f30dc3_1ecb1b_libarchive#archive_read_support_format_tar.c: pax_header
+ - libarchive/prevFiles/prev_57c71c_c16873_libarchive#archive_read_support_format_tar.c: pax_header
+ - libarchive/prevFiles/prev_57c71c_c16873_libarchive#archive_read_support_format_tar.c: archive_read_format_tar_options
+*/
+
+// ---------------------------------------------

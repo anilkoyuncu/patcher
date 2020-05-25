@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- I0 = p_hwcrhk_RSAUnloadKey(*E1, NULL); 
++ p_hwcrhk_RSAUnloadKey(*E1, NULL); 
+// Infered from: (openssl/{prevFiles/prev_c8bbd9_57ae37_engines#e_chil.c,revFiles/c8bbd9_57ae37_engines#e_chil.c}: hwcrhk_rsa_finish)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

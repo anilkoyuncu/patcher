@@ -1,0 +1,12 @@
+@@
+identifier I0;
+typedef gchar;
+typedef guchar;
+@@
+- guchar *I0; 
++ gchar *I0; 
+// Infered from: (gtk/{prevFiles/prev_a0faf5_1b9fa9_gdk#win32#gdkselection-win32.c,revFiles/a0faf5_1b9fa9_gdk#win32#gdkselection-win32.c}: _gdk_win32_display_convert_selection)
+// False positives: (gtk/revFiles/a0faf5_1b9fa9_gdk#win32#gdkselection-win32.c: _gdk_win32_display_convert_selection), (gtk/revFiles/a0faf5_1b9fa9_gdk#win32#gdkselection-win32.c: _gdk_win32_selection_convert_to_dib)
+// Recall: 0.06, Precision: 0.25, Matching recall: 0.50
+
+// ---------------------------------------------

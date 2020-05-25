@@ -1,0 +1,39 @@
+@@
+expression E0, E1;
+@@
+- if (E0 >= max[E1])  
++ if (E0 >= max[E1] - min[E1])  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_4-B-11482920-11482956.c,revFiles/4-B-11482920-11482956.c}: main)
+// False positives: (codeflaws/revFiles/557-A-12901400-12901414.c: main)
+// Recall: 0.23, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 0.75
+// -- Node Change --
+// Recall: 0.38, Precision: 0.62
+// -- General --
+// Functions fully changed: 2/7(28%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_ab3926_d96270_libavformat#utils.c: av_find_stream_info
+ - php-src/prevFiles/prev_f21ab2_bd0d48_ext#interbase#interbase.c: _php_ibase_attach_db
+ - codeflaws/prevFiles/prev_158-D-9851615-9851631.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - codeflaws/prevFiles/prev_388-A-10430828-10430842.c: ekle
+ - codeflaws/prevFiles/prev_557-A-12901400-12901414.c: main
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2, E3, E4;
+typedef u32;
+@@
+- E0 = qlcnic_83xx_ms_mem_write128(E1, E2, (u32 *)E3, E4 / 16); 
++ E0 = qlcnic_83xx_ms_mem_write128(E1, E2, E3, E4 / 16); 
+// Infered from: (linux/{prevFiles/prev_4e2e865_60f401_drivers#net#ethernet#qlogic#qlcnic#qlcnic_83xx_init.c,revFiles/4e2e865_60f401_drivers#net#ethernet#qlogic#qlcnic#qlcnic_83xx_init.c}: qlcnic_83xx_copy_fw_file)
+// False positives: (linux/revFiles/4e2e865_60f401_drivers#net#ethernet#qlogic#qlcnic#qlcnic_83xx_init.c: qlcnic_83xx_copy_bootloader)
+// Recall: 0.02, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

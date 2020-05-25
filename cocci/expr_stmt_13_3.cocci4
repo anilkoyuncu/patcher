@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- printf("%s", E0 & (E0 - 1) ? "YES" :"NO"); 
++ printf("%s", E0 & (E0 - 1) ? "NO" :"YES"); 
+// Infered from: (codeflaws/{prevFiles/prev_55-A-251673-251675.c,revFiles/55-A-251673-251675.c}: main)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

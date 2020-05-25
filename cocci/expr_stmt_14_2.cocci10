@@ -1,0 +1,33 @@
+@@
+expression E0, E1, E2;
+@@
+- msg_Warn(E0, "nothing to read %d:%d", E1, E2); 
++ msg_Warn(E0, "nothing to read %d:%d", (int )E1, (int )E2); 
+// Infered from: (vlc/{prevFiles/prev_f7d883_2e1869_modules#access#mms#mmstu.c,revFiles/f7d883_2e1869_modules#access#mms#mmstu.c}: NetFillBuffer)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 11 rules):
+// -- Edit Location --
+// Recall: 0.76, Precision: 1.00
+// -- Node Change --
+// Recall: 0.63, Precision: 1.00
+// -- General --
+// Functions fully changed: 13/21(61%)
+
+/*
+Functions where the patch applied partially:
+ - curl/prevFiles/prev_d4e9b1_ec0665_lib#splay.c: Curl_splayprint
+ - php-src/prevFiles/prev_4a60ee_941757_ext#standard#fsock.c: PHP_MINIT_FUNCTION
+ - qemu/prevFiles/prev_8f6038_ec9ea4_hw#zynq_slcr.c: zynq_slcr_write
+*/
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_8f6038_ec9ea4_hw#zynq_slcr.c: zynq_slcr_read
+ - qemu/prevFiles/prev_c69544_cfba8e_hw#cadence_ttc.c: cadence_ttc_read
+ - php-src/prevFiles/prev_89de34_1941fb_ext#curl#streams.c: php_curl_stream_read
+ - php-src/prevFiles/prev_c9357f_598337_sapi#phpdbg#phpdbg_wait.c: phpdbg_webdata_decompress
+ - libarchive/prevFiles/prev_f1aee4_a08a9f_libarchive#archive_read_support_format_iso9660.c: next_cache_entry
+*/
+
+// ---------------------------------------------

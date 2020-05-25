@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- strcpy(E0->filename, E1); 
++ pstrcpy(E0->filename, sizeof(E0->filename), E1); 
+// Infered from: (qemu/{prevFiles/prev_eba2af_95ce32_block.c,revFiles/eba2af_95ce32_block.c}: bdrv_open)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

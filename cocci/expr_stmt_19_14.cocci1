@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6, E7;
+@@
+- BIO_snprintf(E0, sizeof(E0), "%s:error:%s:%s:%s:%s:%d:%s\n", E1, E2, E3, E4,  E5, E6, E7); 
++ BIO_snprintf(E0, sizeof(E0), "%s:error:%s:%s:%s:%s:%d:%s\n",  E1 == NULL ? "<null>" :E1, E2, E3, E4, E5, E6, E7); 
+// Infered from: (openssl/{prevFiles/prev_17197a_c1ff59_crypto#err#err_prn.c,revFiles/17197a_c1ff59_crypto#err#err_prn.c}: ERR_print_errors_cb)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

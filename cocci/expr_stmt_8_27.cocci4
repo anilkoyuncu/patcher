@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0.extra_headers = strbuf_detach(&E1, 0); 
++ E0.extra_headers = strbuf_detach(&E1, NULL); 
+// Infered from: (git/{prevFiles/prev_2af202_a49eb1_builtin-log.c,revFiles/2af202_a49eb1_builtin-log.c}: cmd_format_patch)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

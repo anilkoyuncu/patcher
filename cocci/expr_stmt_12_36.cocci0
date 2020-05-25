@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef input_title_t;
+@@
+- *E0 = malloc(sizeof(input_title_t *)); 
++ *E0 = malloc(sizeof(*E0)); 
+// Infered from: (vlc/{prevFiles/prev_547fb0_c6942c_modules#access#vdr.c,revFiles/547fb0_c6942c_modules#access#vdr.c}: Control)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

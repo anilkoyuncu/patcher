@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2;
+@@
+- g_string_append_printf(E0, "File%d: %s \n", E1 + 1, E2[0].filename); 
++ g_string_append_printf(E0, "File%d: %s \n", E1 + 1, E2[E1].filename); 
+// Infered from: (wireshark/{prevFiles/prev_27a21c_b6ed0f_mergecap.c,revFiles/27a21c_b6ed0f_mergecap.c}: main)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.57, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_2c85a3_6b07d3_ui#gtk#io_stat.c: tap_iostat_packet
+ - codeflaws/prevFiles/prev_346-A-5781133-5781150.c: main
+*/
+
+// ---------------------------------------------

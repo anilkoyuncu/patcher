@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- free((void *)E0); 
++ free(E0); 
+// Infered from: (vlc/{prevFiles/prev_381f28_24adfd_modules#access_output#bonjour.c,revFiles/381f28_24adfd_modules#access_output#bonjour.c}: bonjour_start_service), (vlc/{prevFiles/prev_381f28_24adfd_modules#access_output#http.c,revFiles/381f28_24adfd_modules#access_output#http.c}: Open)
+// False positives: (libarchive/revFiles/c84e4e_a21777_libarchive#archive_read_disk_set_standard_lookup.c: cleanup), (libarchive/revFiles/c84e4e_a21777_libarchive#archive_read_disk_set_standard_lookup.c: lookup_name)
+// Recall: 0.04, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

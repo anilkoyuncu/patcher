@@ -1,0 +1,11 @@
+@@
+identifier I4;
+expression E0, E1, E2, E3;
+typedef gint;
+@@
+- gtk_text_buffer_insert_with_tags(E0, &E1, E2, E3, I4, NULL); 
++ gtk_text_buffer_insert_with_tags(E0, &E1, E2, (gint )E3, I4, NULL); 
+// Infered from: (wireshark/{prevFiles/prev_1582e0_36e002_gtk#follow_stream.c,revFiles/1582e0_36e002_gtk#follow_stream.c}: follow_add_to_gtk_text), (wireshark/{prevFiles/prev_1582e0_36e002_gtk#follow_stream.c,revFiles/1582e0_36e002_gtk#follow_stream.c}: follow_add_to_gtk_text)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

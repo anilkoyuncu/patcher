@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- fsnotify_move(E0->d_inode, E1->d_inode, E2, S_ISDIR(E3->d_inode->i_mode),  NULL, E3); 
++ fsnotify_move(E0->d_inode, E1->d_inode, E2, d_is_dir(E3), NULL, E3); 
+// Infered from: (linux/{prevFiles/prev_e36cb0_2c616d_fs#debugfs#inode.c,revFiles/e36cb0_2c616d_fs#debugfs#inode.c}: debugfs_rename)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

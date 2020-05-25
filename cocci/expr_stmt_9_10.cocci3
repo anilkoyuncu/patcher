@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gtk_css_node_insert_after(gtk_widget_get_css_node(GTK_WIDGET(E0)),  gtk_widget_get_css_node(E1), E0->priv->header_node); 
++ gtk_css_node_insert_after(gtk_widget_get_css_node(GTK_WIDGET(E0)),  gtk_widget_get_css_node(E1), E0->header_node); 
+// Infered from: (gtk/{prevFiles/prev_87502b_3644d3_gtk#gtktreeview.c,revFiles/87502b_3644d3_gtk#gtktreeview.c}: gtk_tree_view_put)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

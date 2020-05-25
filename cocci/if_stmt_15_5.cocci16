@@ -1,0 +1,35 @@
+@@
+expression E0;
+@@
+- if (irq_to_desc(E0->irq)->status & IRQ_LEVEL)  
++ if (irqd_is_level_type(E0))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_4adc19_a749f8a_arch#microblaze#kernel#intc.c,revFiles/4adc19_a749f8a_arch#microblaze#kernel#intc.c}: intc_enable_or_unmask)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 17 rules):
+// -- Edit Location --
+// Recall: 0.95, Precision: 0.91
+// -- Node Change --
+// Recall: 0.96, Precision: 0.91
+// -- General --
+// Functions fully changed: 19/23(82%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_c93f1d_96c626_ompi#mca#io#romio#romio#adio#common#ad_write_nolock.c: ADIOI_NOLOCK_WriteStrided
+*/
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_1daa25_560c25_lib#hostthre.c: Curl_getaddrinfo
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - curl/prevFiles/prev_1daa25_560c25_lib#hostthre.c: getaddrinfo_thread
+ - qemu/prevFiles/prev_66230e_9c9bb6_target-arm#translate.c: gen_vfp_uito
+*/
+
+// ---------------------------------------------

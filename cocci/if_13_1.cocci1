@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- if (E0)  
+- {
+- setbuf(logfile, (char *)NULL); 
+- }
+// Infered from: (curl/{prevFiles/prev_b21701_f0950a_lib#memdebug.c,revFiles/b21701_f0950a_lib#memdebug.c}: curl_dbg_memdebug)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

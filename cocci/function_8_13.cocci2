@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- box_text(E0, TEXT, 0, -E1.y_bearing); 
++ status = box_text(E0, TEXT, 0, -E1.y_bearing); 
++ if (status)  
++ {
++ return status; 
++ }
+// Infered from: (cairo/{prevFiles/prev_b18bc6_936ede_test#font-matrix-translation.c,revFiles/b18bc6_936ede_test#font-matrix-translation.c}: draw), (cairo/{prevFiles/prev_b18bc6_936ede_test#font-matrix-translation.c,revFiles/b18bc6_936ede_test#font-matrix-translation.c}: draw)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

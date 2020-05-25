@@ -1,0 +1,32 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- struct mysql_frame_data *I0; 
++ struct mysql_frame_data *mysql_frame_data_p; 
+  ...
+- I0 = p_get_proto_data(E1->fd, proto_mysql); 
+- if (!I0)  
++ mysql_frame_data_p = p_get_proto_data(E1->fd, proto_mysql); 
++ if (!mysql_frame_data_p)  
+  {
+- I0 = se_alloc(sizeof(struct mysql_frame_data )); 
+- I0->state = E2->state; 
+- p_add_proto_data(E1->fd, proto_mysql, I0); 
++ mysql_frame_data_p = se_alloc(sizeof(struct mysql_frame_data )); 
++ mysql_frame_data_p->state = E2->state; 
++ p_add_proto_data(E1->fd, proto_mysql, mysql_frame_data_p); 
+  ...
+  }
+- else
++ else
+  {
+  ...
+- E2->state = I0->state; 
++ E2->state = mysql_frame_data_p->state; 
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_c56146_f1d471_epan#dissectors#packet-mysql.c,revFiles/c56146_f1d471_epan#dissectors#packet-mysql.c}: dissect_mysql_pdu)
+// Recall: 0.24, Precision: 1.00, Matching recall: 0.88
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1 ? strlen(E1) :0; 
++ E0 = E1 ? (int )strlen(E1) :0; 
+// Infered from: (wireshark/{prevFiles/prev_1582e0_36e002_gtk#follow_udp.c,revFiles/1582e0_36e002_gtk#follow_udp.c}: follow_udp_stream_cb)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

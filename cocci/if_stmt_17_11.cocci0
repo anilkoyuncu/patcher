@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0.flags | BD_INTERRUPT)  
++ if (E0.flags & BD_INTERRUPT)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_9c749e_379e21_hw#net#fsl_etsec#rings.c,revFiles/9c749e_379e21_hw#net#fsl_etsec#rings.c}: etsec_walk_rx_ring), (qemu/{prevFiles/prev_9c749e_379e21_hw#net#fsl_etsec#rings.c,revFiles/9c749e_379e21_hw#net#fsl_etsec#rings.c}: etsec_walk_rx_ring)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

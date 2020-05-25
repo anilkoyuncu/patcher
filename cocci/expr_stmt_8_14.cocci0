@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- assert(E0 <= 8); 
++ av_assert2(E0 <= 13); 
+// Infered from: (FFmpeg/{prevFiles/prev_ed015f_856834a_libavcodec#ffv1.c,revFiles/ed015f_856834a_libavcodec#ffv1.c}: put_vlc_symbol)
+// False positives: (FFmpeg/revFiles/ed015f_856834a_libavcodec#ffv1.c: get_vlc_symbol)
+// Recall: 0.20, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

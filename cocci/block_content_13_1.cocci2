@@ -1,0 +1,11 @@
+@@
+expression E0, E1;
+@@
+- E0 = tvb_get_string(E1, 0, 2); 
++ E0 = tvb_get_ephemeral_string(E1, 0, 2); 
+  ...
+- g_free(E0); 
+// Infered from: (wireshark/{prevFiles/prev_d47443_a69226_epan#dissectors#packet-dcp-etsi.c,revFiles/d47443_a69226_epan#dissectors#packet-dcp-etsi.c}: dissect_dcp_etsi)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

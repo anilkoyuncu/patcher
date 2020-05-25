@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- msg_Err(E0, "could not rename %s: %s", E1, vlc_strerror_c(errno)); 
++ msg_Err(E0, "could not rename temp catalog: %s", vlc_strerror_c(errno)); 
+// Infered from: (vlc/{prevFiles/prev_75911f_34174c_modules#misc#addons#fsstorage.c,revFiles/75911f_34174c_modules#misc#addons#fsstorage.c}: WriteCatalog)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

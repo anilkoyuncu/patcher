@@ -1,0 +1,23 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- dhcpv6_domain(E0, E1, E2, hf_aftr_name, E3, E4 + 1, E5 - 1); 
++ dhcpv6_domain(E0, E1, E2, hf_aftr_name, E3, E4, E5); 
+// Infered from: (wireshark/{prevFiles/prev_5ae232_fe769e_epan#dissectors#packet-dhcpv6.c,revFiles/5ae232_fe769e_epan#dissectors#packet-dhcpv6.c}: dhcpv6_option)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.89, Precision: 0.89
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_92fdc8_072756_libavcodec#nvenc.c: nvenc_copy_frame
+*/
+
+// ---------------------------------------------

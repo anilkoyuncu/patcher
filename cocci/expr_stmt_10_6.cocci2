@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- atk_object_set_description(E0->icons[GTK_ENTRY_ICON_PRIMARY], ""); 
++ atk_object_set_description(E0->icons[GTK_ENTRY_ICON_SECONDARY], ""); 
+// Infered from: (gtk/{prevFiles/prev_4f9794_87532f_gtk#a11y#gtkentryaccessible.c,revFiles/4f9794_87532f_gtk#a11y#gtkentryaccessible.c}: gtk_entry_accessible_notify_gtk)
+// False positives: (gtk/revFiles/4f9794_87532f_gtk#a11y#gtkentryaccessible.c: gtk_entry_accessible_notify_gtk)
+// Recall: 0.05, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

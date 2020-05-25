@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->ctype_str = val_to_str(E0->ctype_value, vals_ctype, "Unknown Type %u"); 
++ E0->ctype_str = val_to_str_const(E0->ctype_value, vals_ctype, "Unknown Type"); 
+// Infered from: (wireshark/{prevFiles/prev_b1e0cb_5b385f_epan#dissectors#packet-coap.c,revFiles/b1e0cb_5b385f_epan#dissectors#packet-coap.c}: dissect_coap_opt_ctype)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

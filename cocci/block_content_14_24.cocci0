@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- ssize_t I0 = 100000; 
++ size_t I0 = 100000; 
+  ...
+- assertA(I0 == archive_write_data(E1, E2, I0)); 
++ assertA((ssize_t )I0 == archive_write_data(E1, E2, I0)); 
+// Infered from: (libarchive/{prevFiles/prev_9dec8c_e89c2e_libarchive#test#test_read_pax_truncated.c,revFiles/9dec8c_e89c2e_libarchive#test#test_read_pax_truncated.c}: DEFINE_TEST)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

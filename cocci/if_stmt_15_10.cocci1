@@ -1,0 +1,8 @@
+@@
+expression E0;
+@@
+- ID3D11Device_AddRef(E0->d3ddev); 
+// Infered from: (vlc/{prevFiles/prev_8d9859_da0a49_modules#codec#avcodec#d3d11va.c,revFiles/8d9859_da0a49_modules#codec#avcodec#d3d11va.c}: D3dCreateDevice)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

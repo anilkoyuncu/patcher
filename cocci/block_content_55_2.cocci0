@@ -1,0 +1,11 @@
+@@
+identifier I0, I4;
+expression E1, E2, E3;
+@@
+- I0 = PQgetvalue(E1, E2, E3); 
+- I4 = (I0 ? strlen(I0) :0); 
++ char *I0 = PQgetvalue(E1, E2, E3); 
+// Infered from: (php-src/{prevFiles/prev_824738_b0601e_ext#pgsql#pgsql.c,revFiles/824738_b0601e_ext#pgsql#pgsql.c}: php_pgsql_result2array), (php-src/{prevFiles/prev_969f81_6cfced_ext#pgsql#pgsql.c,revFiles/969f81_6cfced_ext#pgsql#pgsql.c}: php_pgsql_result2array)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------

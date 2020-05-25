@@ -1,0 +1,27 @@
+@@
+type T5;
+expression E0, E1, E2, E3, E4, E6;
+@@
+- E0->backend->load_truetype_table(E0->scaled_font_subset->scaled_font,  TT_TAG_hmtx,  (E1 - 1) * E2 + (E0->glyphs[E3].parent_index - E1) * E4,  (T5 *)(E6 + 1), &E4); 
++ E0->backend->load_truetype_table(E0->scaled_font_subset->scaled_font,  TT_TAG_hmtx,  E1 * E2 + (E0->glyphs[E3].parent_index - E1) * E4,  (T5 *)(E6 + 1), &E4); 
+// Infered from: (cairo/{prevFiles/prev_f91656_7c3062_src#cairo-truetype-subset.c,revFiles/f91656_7c3062_src#cairo-truetype-subset.c}: cairo_truetype_font_write_hmtx_table)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.20, Precision: 1.00
+// -- Node Change --
+// Recall: 0.17, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/5(20%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_80445e_bb8afe_epan#dissectors#packet-gsm_a_dtap.c: de_network_name
+ - wireshark/prevFiles/prev_80445e_bb8afe_epan#dissectors#packet-gsm_sms.c: dis_field_ud
+ - wireshark/prevFiles/prev_5388b8_ab38454_epan#dissectors#packet-l2tp.c: dissect_l2tp_udp
+ - qemu/prevFiles/prev_a4bb1d_7aea44_qemu-char.c: mux_chr_write
+*/
+
+// ---------------------------------------------

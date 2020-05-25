@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- free(E0->table); 
+- E0->table = NULL; 
++ Curl_safefree(E0->table); 
+// Infered from: (curl/{prevFiles/prev_14b77d_e125ee_lib#hash.c,revFiles/14b77d_e125ee_lib#hash.c}: Curl_hash_clean)
+// False positives: (curl/revFiles/14b77d_e125ee_lib#hash.c: Curl_hash_init)
+// Recall: 0.04, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

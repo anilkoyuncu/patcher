@@ -1,0 +1,9 @@
+@@
+identifier I2, I4;
+expression E0, E1, E3;
+@@
+- ff_formats_ref(E0, &E1->I2[E3]->I4); 
+// Infered from: (FFmpeg/{prevFiles/prev_6aaac2_8ededd_libavfilter#vf_paletteuse.c,revFiles/6aaac2_8ededd_libavfilter#vf_paletteuse.c}: query_formats), (FFmpeg/{prevFiles/prev_6aaac2_8ededd_libavfilter#vf_paletteuse.c,revFiles/6aaac2_8ededd_libavfilter#vf_paletteuse.c}: query_formats)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

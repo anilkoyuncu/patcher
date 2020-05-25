@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0 = malloc(E1); 
++ E0 = malloc(E1 + 1); 
+// Infered from: (php-src/{prevFiles/prev_9b3087_9190e7_phpdbg_prompt.c,revFiles/9b3087_9190e7_phpdbg_prompt.c}: phpdbg_init)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.62, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_9b3087_9190e7_phpdbg_prompt.c: phpdbg_init
+*/
+
+// ---------------------------------------------

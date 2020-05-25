@@ -1,0 +1,25 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- int I0; 
+  ...
+- if (fgets(E1, E2, E3) == NULL || (I0 = pclose(E3)) != 0)  
++ if (fgets(E1, E2, E3) == NULL || pclose(E3) != 0)  
+  {
+  ...
+  }
+// Infered from: (cpython/{prevFiles/prev_8b9c04_b166af_Python#getcwd.c,revFiles/8b9c04_b166af_Python#getcwd.c}: getcwd)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

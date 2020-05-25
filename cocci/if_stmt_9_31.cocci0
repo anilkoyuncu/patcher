@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->wrap_start && E0->wrap_start < E1->len)  
++ if (E0->wrap_start < E1->len)  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_32ca42_02edd5_pretty.c,revFiles/32ca42_02edd5_pretty.c}: rewrap_message_tail)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

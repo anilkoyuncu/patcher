@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->uuid.size != 0 && p_get_proto_data(E1->pool, E1, proto_bluetooth,  PROTO_DATA_BLUETOOTH_SERVICE_UUID) == NULL)  
++ if (E0 && E0->uuid.size != 0 && p_get_proto_data(E1->pool, E1,  proto_bluetooth,  PROTO_DATA_BLUETOOTH_SERVICE_UUID) == NULL)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_e99612_7533c7_epan#dissectors#packet-btrfcomm.c,revFiles/e99612_7533c7_epan#dissectors#packet-btrfcomm.c}: dissect_btrfcomm)
+// Recall: 0.10, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

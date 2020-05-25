@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > E1 * 9 || E0 == 0)  
++ if (E0 > E1 * 9 || (E1 != 1 && E0 == 0))  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_489-C-15304991-15305031.c,revFiles/489-C-15304991-15305031.c}: main)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

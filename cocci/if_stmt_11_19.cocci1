@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->pix_fmt == AV_PIX_FMT_RGBA || E0->pix_fmt == AV_PIX_FMT_YA8)  
++ if (E0->pix_fmt == AV_PIX_FMT_BGRA || E0->pix_fmt == AV_PIX_FMT_RGBA || E0->pix_fmt == AV_PIX_FMT_YA8)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_d08d8b_57214b_libavcodec#dds.c,revFiles/d08d8b_57214b_libavcodec#dds.c}: dds_decode)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

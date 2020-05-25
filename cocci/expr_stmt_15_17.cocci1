@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- aout_ChangeFilterString(VLC_OBJECT(E0), VLC_OBJECT(E1), "audio-filter", E2,  E3); 
++ aout_ChangeFilterString(VLC_OBJECT(E0), E1 ? VLC_OBJECT(E1) :NULL,  "audio-filter", E2, E3); 
+// Infered from: (vlc/{prevFiles/prev_af61af_f824c2_src#playlist#aout.c,revFiles/af61af_f824c2_src#playlist#aout.c}: playlist_EnableAudioFilter)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

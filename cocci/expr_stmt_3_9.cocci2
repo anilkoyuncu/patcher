@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[E1] = '0'; 
++ E0[E1] = 'O'; 
+// Infered from: (codeflaws/{prevFiles/prev_475-A-16393233-16393264.c,revFiles/475-A-16393233-16393264.c}: main)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

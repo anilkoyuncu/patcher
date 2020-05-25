@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->phys_hi = cpu_to_be32(E1->phys_hi | b_n(1)); 
++ E0->phys_hi = cpu_to_be32(be32_to_cpu(E1->phys_hi) | b_n(1)); 
+// Infered from: (qemu/{prevFiles/prev_382b6f_60594f_hw#ppc#spapr_pci.c,revFiles/382b6f_60594f_hw#ppc#spapr_pci.c}: populate_resource_props)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

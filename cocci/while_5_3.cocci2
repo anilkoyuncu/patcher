@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- while ((!E0 || E0 > 0 && E1 < E0) && E2 > 0)  
++ while ((!E0 || (E0 > 0 && E1 < E0)) && E2 > 0)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_142a01_e46187_ext#standard#string.c,revFiles/142a01_e46187_ext#standard#string.c}: php_hebrev)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I2, I0;
+expression E3, E1;
+@@
+- g_snprintf(I0, 100, E1, I2[E3].value); 
+- dlg.entries[0] = g_strdup(I0); 
++ dlg.entries[0] = g_strdup_printf(E1, I2[E3].value); 
+// Infered from: (wireshark/{prevFiles/prev_ce8ac3_650647_gtk#ansi_map_stat.c,revFiles/ce8ac3_650647_gtk#ansi_map_stat.c}: ansi_map_stat_gtk_cb), (wireshark/{prevFiles/prev_ce8ac3_650647_gtk#gsm_map_stat.c,revFiles/ce8ac3_650647_gtk#gsm_map_stat.c}: gsm_map_stat_gtk_cb)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

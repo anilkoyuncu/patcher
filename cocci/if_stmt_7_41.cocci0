@@ -1,0 +1,11 @@
+@@
+@@
+- if (K >= (N >> 1))  
++ if (K > (N - 1 >> 1))  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_417-C-6546859-6546862.c,revFiles/417-C-6546859-6546862.c}: main)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

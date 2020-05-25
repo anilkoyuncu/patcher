@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef gchar;
+@@
+- return tvb_get_ephemeral_string(E0, 0, tvb_length(E0)); 
++ return (gchar *)tvb_get_ephemeral_string(E0, 0, tvb_length(E0)); 
+// Infered from: (wireshark/{prevFiles/prev_ab8f58_ddddf2_epan#dissectors#packet-gtp.c,revFiles/ab8f58_ddddf2_epan#dissectors#packet-gtp.c}: dissect_radius_qos_umts)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

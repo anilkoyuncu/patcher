@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- proto_tree_add_bits_item(E0, hf_h263_not_dissected, E1, E2, E3 - E2, ENC_NA); 
++ proto_tree_add_bits_item(E0, hf_h263_not_dissected, E1, E2, E3 - E2,  ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_54b72021_6a5895_epan#dissectors#packet-h263.c,revFiles/54b72021_6a5895_epan#dissectors#packet-h263.c}: dissect_h263_picture_layer), (wireshark/{prevFiles/prev_54b72021_6a5895_epan#dissectors#packet-h263.c,revFiles/54b72021_6a5895_epan#dissectors#packet-h263.c}: dissect_h263_picture_layer)
+// Recall: 0.24, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

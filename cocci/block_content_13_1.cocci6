@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (char *)tvb_get_string(E1, E2, 4); 
++ E0 = (char *)tvb_get_ephemeral_string(E1, E2, 4); 
+// Infered from: (wireshark/{prevFiles/prev_d47443_a69226_epan#dissectors#packet-dcp-etsi.c,revFiles/d47443_a69226_epan#dissectors#packet-dcp-etsi.c}: dissect_tpl)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

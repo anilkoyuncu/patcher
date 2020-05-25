@@ -1,0 +1,31 @@
+@@
+identifier I0;
+expression E1;
+typedef uint32_t;
+typedef uint8_t;
+@@
+- uint32_t *I0 = (uint8_t *)(((size_t )E1 + 3) & ~3); 
++ uint32_t *I0 = (uint32_t *)(((size_t )E1 + 3) & ~3); 
+// Infered from: (FFmpeg/{prevFiles/prev_94c3e1_4f2549_libavutil#imgutils.c,revFiles/94c3e1_4f2549_libavutil#imgutils.c}: av_image_copy_to_buffer)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.69, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch applied partially:
+ - openssl/prevFiles/prev_226f2b_16bfe6_engines#e_devcrypto.c: cipher_ctrl
+*/
+/*
+Functions where the patch did not apply:
+ - cpython/prevFiles/prev_c47cf7_06f806_Modules#_collectionsmodule.c: deque_reduce
+ - apr/prevFiles/prev_a9841a_814818_threadproc#unix#signals.c: signal_thread_func
+*/
+
+// ---------------------------------------------

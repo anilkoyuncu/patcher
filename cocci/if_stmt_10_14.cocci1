@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+typedef int64_t;
+typedef uint64_t;
+@@
+- if (E0->mtime != (int64_t )E1->st_mtime || E0->size != (uint64_t )E1->st_size)  
++ if (E0 != NULL && (E0->mtime != (int64_t )E1->st_mtime || E0->size != (  uint64_t )E1->st_size))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_4d44e3_e8698d_src#modules#bank.c,revFiles/4d44e3_e8698d_src#modules#bank.c}: AllocatePluginFile)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

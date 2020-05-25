@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->sei.unregistered.x264_build != -1)  
++ if (E0->sei.unregistered.x264_build < 151U)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_06dda7_840b41_libavcodec#h264_mb.c,revFiles/06dda7_840b41_libavcodec#h264_mb.c}: hl_decode_mb_predict_luma)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

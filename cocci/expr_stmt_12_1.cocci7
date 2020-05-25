@@ -1,0 +1,11 @@
+@@
+expression E0;
+typedef QBool;
+@@
+- qobject_to_qbool(E0) 
++ qobject_to(QBool , E0) 
+  ... when any
+// Infered from: (qemu/{prevFiles/prev_7dc847_1a56b1_block#qapi.c,revFiles/7dc847_1a56b1_block#qapi.c}: dump_qobject), (qemu/{prevFiles/prev_7dc847_1a56b1_qobject#qbool.c,revFiles/7dc847_1a56b1_qobject#qbool.c}: qbool_is_equal), (qemu/{prevFiles/prev_7dc847_1a56b1_qobject#qbool.c,revFiles/7dc847_1a56b1_qobject#qbool.c}: qbool_destroy_obj)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.43
+
+// ---------------------------------------------

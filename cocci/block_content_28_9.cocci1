@@ -1,0 +1,27 @@
+@@
+identifier I3;
+expression E0, E1, E2;
+@@
+- E0 = devm_request_and_ioremap(E1, E2); 
+- if (!E0)  
++ E0 = devm_ioremap_resource(E1, E2); 
++ if (IS_ERR(E0))  
+  {
+- pr_err("%s: ERROR: memory mapping failed", __func__); 
+- return -I3; 
++ return PTR_ERR(E0); 
+  }
+// Infered from: (linux/{prevFiles/prev_5760f4_f9725c_drivers#net#ethernet#stmicro#stmmac#stmmac_platform.c,revFiles/5760f4_f9725c_drivers#net#ethernet#stmicro#stmmac#stmmac_platform.c}: stmmac_pltfr_probe)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- E0 = sg_phys(E1); 
++ E0 = sg_dma_address(E1); 
+// Infered from: (linux/{prevFiles/prev_cbb796c_12366ad_drivers#dma#amba-pl08x.c,revFiles/cbb796c_12366ad_drivers#dma#amba-pl08x.c}: pl08x_prep_slave_sg), (linux/{prevFiles/prev_cbb796c_12366ad_drivers#dma#amba-pl08x.c,revFiles/cbb796c_12366ad_drivers#dma#amba-pl08x.c}: pl08x_prep_slave_sg), (linux/{prevFiles/prev_cbb796c_12366ad_drivers#dma#coh901318_lli.c,revFiles/cbb796c_12366ad_drivers#dma#coh901318_lli.c}: coh901318_lli_fill_sg), (linux/{prevFiles/prev_cbb796c_12366ad_drivers#dma#coh901318_lli.c,revFiles/cbb796c_12366ad_drivers#dma#coh901318_lli.c}: coh901318_lli_fill_sg)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

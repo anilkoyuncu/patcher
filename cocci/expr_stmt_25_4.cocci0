@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->priv_data = av_mallocz(E1->priv_data_size); 
++ E0->priv_data = E1->priv_data_size ? av_mallocz(E1->priv_data_size) :NULL; 
+// Infered from: (FFmpeg/{prevFiles/prev_e7d4a2_c57fe4_libavcodec#bitstream_filter.c,revFiles/e7d4a2_c57fe4_libavcodec#bitstream_filter.c}: av_bitstream_filter_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

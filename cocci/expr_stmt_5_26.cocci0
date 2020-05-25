@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = strtol(E1, NULL, 10); 
++ E0 = strtol(E1 + 1, NULL, 10); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_598cdd_1ca52f_src#network.c,revFiles/598cdd_1ca52f_src#network.c}: network_server_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,35 @@
+@@
+expression E0, E1, E2, E3;
+typedef u32;
+@@
+- dev_dbg(&E0->netdev->dev, "txd[%u]: SOP 0x%Lx 0x%x 0x%x\n",  (u32 )((union Vmxnet3_GenericDesc *)E1.sop_txd - E2->tx_ring.base),  le64_to_cpu(E3->txd.addr), le32_to_cpu(E3->dword[2]),  le32_to_cpu(E3->dword[3])); 
++ dev_dbg(&E0->netdev->dev, "txd[%u]: SOP 0x%Lx 0x%x 0x%x\n",  (u32 )(E1.sop_txd - E2->tx_ring.base), le64_to_cpu(E3->txd.addr),  le32_to_cpu(E3->dword[2]), le32_to_cpu(E3->dword[3])); 
+// Infered from: (linux/{prevFiles/prev_c2fd03_2c20889_drivers#net#vmxnet3#vmxnet3_drv.c,revFiles/c2fd03_2c20889_drivers#net#vmxnet3#vmxnet3_drv.c}: vmxnet3_tq_xmit)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 15 rules):
+// -- Edit Location --
+// Recall: 0.81, Precision: 0.92
+// -- Node Change --
+// Recall: 0.81, Precision: 0.93
+// -- General --
+// Functions fully changed: 35/46(76%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_3f62bf_c7a66d_lib#mprintf.c: dprintf_Pass1
+ - FFmpeg/prevFiles/prev_4cbae5_4cd217_libavformat#assdec.c: event_cmp
+ - wireshark/prevFiles/prev_d403c1_5c1d50_ui#decode_as_utils.c: 
+ - linux/prevFiles/prev_c2fd03_2c20889_drivers#net#can#bfin_can.c: bfin_can_probe
+ - wireshark/prevFiles/prev_14c68a_0ced18_epan#funnel.c: 
+ - linux/prevFiles/prev_bf5d030_f4fa0370_drivers#staging#media#atomisp#pci#atomisp2#hmm#hmm.c: hmm_set
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_1851cb_45d18c_drivers#net#wireless#rtlwifi#rtl8723be#trx.c: rtl8723be_is_tx_desc_closed
+ - linux/prevFiles/prev_4e2e865_60f401_drivers#net#ethernet#qlogic#qlcnic#qlcnic_83xx_init.c: qlcnic_83xx_copy_bootloader
+ - linux/prevFiles/prev_b58f2f_e3e3bf_drivers#net#ethernet#intel#i40evf#i40e_common.c: i40evf_debug_aq
+*/
+
+// ---------------------------------------------

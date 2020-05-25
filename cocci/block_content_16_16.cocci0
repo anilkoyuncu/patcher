@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- add_assoc_stringl_ex(&E0, E1, E2, E3, E4, 0); 
++ add_assoc_stringl_ex(&E0, E1, E2, E3, E4, 1); 
++ efree(E3); 
+// Infered from: (php-src/{prevFiles/prev_a72a1b_045c5f_Zend#zend_closures.c,revFiles/a72a1b_045c5f_Zend#zend_closures.c}: zend_closure_get_debug_info)
+// Recall: 0.38, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

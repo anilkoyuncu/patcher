@@ -1,0 +1,31 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->p == NULL && E1 == NULL || E0->g == NULL && E2 == NULL)  
++ if ((E0->p == NULL && E1 == NULL) || (E0->g == NULL && E2 == NULL))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_b84e12_cf3404_crypto#dh#dh_lib.c,revFiles/b84e12_cf3404_crypto#dh#dh_lib.c}: DH_set0_pqg)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.78, Precision: 1.00
+// -- Node Change --
+// Recall: 0.70, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/9(66%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_b8a35f_97515c_src#mpi#c#graph_create.c: MPI_Graph_create
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_f407de_50491f_modules#codec#ffmpeg#demux.c: Control
+ - php-src/prevFiles/prev_15ba640_9981d0_ext#exif#exif.c: ProcessExifDir
+*/
+
+// ---------------------------------------------

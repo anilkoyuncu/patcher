@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- return E0(E1->buf, E2, E3); 
++ cf->linenr--; 
++ ret = E0(E1->buf, E2, E3); 
++ cf->linenr++; 
++ return ret; 
+// Infered from: (git/{prevFiles/prev_b3b3f6_8262aa_config.c,revFiles/b3b3f6_8262aa_config.c}: get_value), (wireshark/{prevFiles/prev_11c86e_d14fa0_dumpcap.c,revFiles/11c86e_d14fa0_dumpcap.c}: capture_loop_write_packet_cb), (wireshark/{prevFiles/prev_d2526d_0fe785_dumpcap.c,revFiles/d2526d_0fe785_dumpcap.c}: capture_loop_queue_packet_cb)
+// Recall: 0.16, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------

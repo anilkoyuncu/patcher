@@ -1,0 +1,33 @@
+@@
+identifier I0 = {MPN_COPY ,bdrv_reset_dirty };
+expression E1, E2, E3;
+@@
+- I0(E1, E2, E3); 
+// Infered from: (qemu/{prevFiles/prev_508249_dcfb3b_block#io.c,revFiles/508249_dcfb3b_block#io.c}: bdrv_co_discard), (gmp/{prevFiles/prev_c88052_678069_mpf#set.c,revFiles/c88052_678069_mpf#set.c}: mpf_set)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.25, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/8(0%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_03a36f_d60478_hw#virtio-rng.c: virtio_rng_init
+ - qemu/prevFiles/prev_508249_dcfb3b_block#io.c: bdrv_co_discard
+ - gmp/prevFiles/prev_c88052_678069_mpf#set.c: mpf_set
+ - ompi/prevFiles/prev_69d136_e0e924_ompi#mca#rte#pmix#rte_pmix_module.c: ompi_rte_init
+*/
+/*
+Functions where the patch did not apply:
+ - openssh-portable/prevFiles/prev_b2e3e5_58ceac_sshkey.c: sshkey_shield_private
+ - gtk/prevFiles/prev_8d9144_d1fbb5_modules#other#gail#gailtextcell.c: create_pango_layout
+ - vlc/prevFiles/prev_32a0f5_9d7a62_modules#video_output#win32#direct3d11.c: Direct3D11DestroyResources
+ - gtk/prevFiles/prev_8d9144_d1fbb5_modules#other#gail#gailtextcell.c: 
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,27 @@
+@@
+expression list E1;
+expression E0, E2, E3;
+@@
+- E0 = vnc_width (E1); 
+- E2 = vnc_height (E1); 
+- memset(E3->guest.dirty, 0x00, sizeof(E3->guest.dirty)); 
+- vnc_set_area_dirty(); 
+// Infered from: (qemu/{prevFiles/prev_b69a55_e00da5_ui#vnc.c,revFiles/b69a55_e00da5_ui#vnc.c}: vnc_dpy_switch)
+// Recall: 0.27, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.82, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_b69a55_e00da5_ui#vnc.c: vnc_dpy_switch
+ - qemu/prevFiles/prev_b69a55_e00da5_ui#vnc.c: vnc_update_server_surface
+*/
+
+// ---------------------------------------------

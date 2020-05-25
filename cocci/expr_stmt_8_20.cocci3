@@ -1,0 +1,10 @@
+@@
+expression E1, E0;
+@@
+- lua_rawseti(E0, 1, E1); 
++ lua_rawseti(E0, -2, E1); 
+// Infered from: (wireshark/{prevFiles/prev_f3ba31_222529_epan#wslua#wslua_dissector.c,revFiles/f3ba31_222529_epan#wslua#wslua_dissector.c}: Dissector_list), (wireshark/{prevFiles/prev_f3ba31_222529_epan#wslua#wslua_listener.c,revFiles/f3ba31_222529_epan#wslua#wslua_listener.c}: Listener_list), (wireshark/{prevFiles/prev_f3ba31_222529_epan#wslua#wslua_field.c,revFiles/f3ba31_222529_epan#wslua#wslua_field.c}: Field_list)
+// False positives: (wireshark/revFiles/f3ba31_222529_epan#wslua#wslua_dissector.c: dissector_tables_list_func), (wireshark/revFiles/f3ba31_222529_epan#wslua#wslua_dissector.c: heur_dissector_tables_list_func)
+// Recall: 0.16, Precision: 0.60, Matching recall: 1.00
+
+// ---------------------------------------------

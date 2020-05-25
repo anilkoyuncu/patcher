@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- unlink(E0->sm_common_module->module_seg_path); 
++ unlink(E0->sm_common_module->shmem_ds.seg_name); 
+// Infered from: (ompi/{prevFiles/prev_5501f8_7d39ee_ompi#mca#mpool#sm#mpool_sm_module.c,revFiles/5501f8_7d39ee_ompi#mca#mpool#sm#mpool_sm_module.c}: sm_module_finalize)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- strncat(E0->playpath, E1, PLAYPATH_MAX_LENGTH - 5); 
++ av_strlcat(E0->playpath, E1, PLAYPATH_MAX_LENGTH); 
+// Infered from: (FFmpeg/{prevFiles/prev_f06155_10ac70_libavformat#rtmpproto.c,revFiles/f06155_10ac70_libavformat#rtmpproto.c}: rtmp_open)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

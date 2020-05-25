@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!E0->ppmd7_valid || E0->ppmd7_stat < 0 || E1 < 0 || E2 <= 0)  
++ if (!E0->ppmd7_valid || E0->ppmd7_stat < 0 || E2 <= 0)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_c1db14_f96bf9_libarchive#archive_read_support_format_7zip.c,revFiles/c1db14_f96bf9_libarchive#archive_read_support_format_7zip.c}: decompress)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

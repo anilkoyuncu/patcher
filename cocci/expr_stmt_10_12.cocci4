@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- qdev_connect_gpio_out(E0, 4, E1[0x02]); 
++ qdev_connect_gpio_out(E0, 4, E1[0x03]); 
+// Infered from: (qemu/{prevFiles/prev_e13da4_edbe35_hw#ppc#mac_newworld.c,revFiles/e13da4_edbe35_hw#ppc#mac_newworld.c}: ppc_core99_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

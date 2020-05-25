@@ -1,0 +1,10 @@
+@@
+type T1, T2;
+expression E0, E3;
+@@
+- E0 += sizeof(T1 ) + ((T2 )E3[E0]) + (((T2 )E3[E0 + 1]) << 8); 
++ E0 += sizeof(T1 ) + ((T2 )E3[E0]) + (((size_t )((T2 )E3[E0 + 1])) << 8); 
+// Infered from: (curl/{prevFiles/prev_916695_7fc1cb_lib#smb.c,revFiles/916695_7fc1cb_lib#smb.c}: smb_recv_message)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

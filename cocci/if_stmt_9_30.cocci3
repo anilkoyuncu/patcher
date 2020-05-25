@@ -1,0 +1,32 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0[(E1 + 1) / 2] == E2)  
++ if (E0[(E1 + 1) / 2 - 1] == E2)  
+  {
+- printf("0\n"); 
++ printf("0\n"); 
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_166-C-1395810-1395933.c,revFiles/166-C-1395810-1395933.c}: main)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.86, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/7(85%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_14c126_ac05f34_hw#pl190.c: pl190_read
+*/
+
+// ---------------------------------------------

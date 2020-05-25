@@ -1,0 +1,10 @@
+@@
+type T0;
+expression E1, E2;
+@@
+- printf("Label @ %08x, %d: %s\n", (T0 )E1, E1->ll_nlabels,  PyGrammar_LabelRepr(E2)); 
++ printf("Label @ %8p, %d: %s\n", E1, E1->ll_nlabels, PyGrammar_LabelRepr(E2)); 
+// Infered from: (cpython/{prevFiles/prev_c69661_70d172_Parser#grammar.c,revFiles/c69661_70d172_Parser#grammar.c}: addlabel)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

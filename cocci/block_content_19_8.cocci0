@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = dma_alloc_coherent(&E1->dev, E2, &E3, GFP_KERNEL); 
++ E0 = dma_zalloc_coherent(&E1->dev, E2, &E3, GFP_KERNEL); 
+  ...
+- memset(E0, 0, E2); 
+// Infered from: (linux/{prevFiles/prev_aa006d_5f58df_drivers#net#ethernet#broadcom#bnxt#bnxt_dcb.c,revFiles/aa006d_5f58df_drivers#net#ethernet#broadcom#bnxt#bnxt_dcb.c}: bnxt_hwrm_set_dcbx_app), (linux/{prevFiles/prev_5f58df_3288ed6_drivers#net#ethernet#qlogic#qed#qed_cxt.c,revFiles/5f58df_3288ed6_drivers#net#ethernet#qlogic#qed#qed_cxt.c}: qed_ilt_blk_alloc), (linux/{prevFiles/prev_5f58df_3288ed6_drivers#net#ethernet#qlogic#qed#qed_cxt.c,revFiles/5f58df_3288ed6_drivers#net#ethernet#qlogic#qed#qed_cxt.c}: qed_cxt_dynamic_ilt_alloc), (linux/{prevFiles/prev_d78756_f48fca_drivers#infiniband#hw#ocrdma#ocrdma_verbs.c,revFiles/d78756_f48fca_drivers#infiniband#hw#ocrdma#ocrdma_verbs.c}: ocrdma_alloc_ucontext), (linux/{prevFiles/prev_d78756_f48fca_drivers#infiniband#hw#ocrdma#ocrdma_verbs.c,revFiles/d78756_f48fca_drivers#infiniband#hw#ocrdma#ocrdma_verbs.c}: ocrdma_build_pbl_tbl)
+// False positives: (linux/revFiles/5f58df_3288ed6_drivers#net#ethernet#qlogic#qed#qed_cxt.c: qed_cxt_src_t2_alloc)
+// Recall: 0.23, Precision: 0.83, Matching recall: 1.00
+
+// ---------------------------------------------

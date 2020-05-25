@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = gtk_css_style_get_value(E1, GTK_CSS_PROPERTY_ICON_PALETTE); 
++ E0 = _gtk_css_value_ref(gtk_css_style_get_value(E1,  GTK_CSS_PROPERTY_ICON_PALETTE)); 
+// Infered from: (gtk/{prevFiles/prev_77a6d9_b4bfba_gtk#gtkcssimagerecolor.c,revFiles/77a6d9_b4bfba_gtk#gtkcssimagerecolor.c}: gtk_css_image_recolor_compute)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

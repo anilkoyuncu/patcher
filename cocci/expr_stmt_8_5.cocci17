@@ -1,0 +1,8 @@
+@@
+@@
+- qmp_inject_nmi(NULL); 
++ nmi_monitor_handle(0, NULL); 
+// Infered from: (qemu/{prevFiles/prev_6af947_a77d20_hw#ipmi#ipmi.c,revFiles/6af947_a77d20_hw#ipmi#ipmi.c}: ipmi_do_hw_op)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 = lookupKeyReadOrReply(E1, E1->argv[1], shared.emptybulk)) == NULL || checkType(  E1, E0, OBJ_ZSET))  
++ if ((E0 = lookupKeyReadOrReply(E1, E1->argv[1], shared.nullbulk)) == NULL || checkType(  E1, E0, OBJ_ZSET))  
+  {
+  ...
+  }
+// Infered from: (redis/{prevFiles/prev_913070_8444b4_src#geo.c,revFiles/913070_8444b4_src#geo.c}: geodistCommand)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef tdata_t;
+@@
+- tdata_t *I0 = NULL; 
++ tdata_t I0 = NULL; 
+// Infered from: (libtiff/{prevFiles/prev_8aacb5_ec7407_libtiff#tif_aux.c,revFiles/8aacb5_ec7407_libtiff#tif_aux.c}: _TIFFCheckMalloc)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

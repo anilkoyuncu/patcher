@@ -1,0 +1,21 @@
+@@
+expression E0;
+@@
+- g_print("Rate of pad on sink2 : %d\n", gst_props_get_int(E0, "rate")); 
++ int rate; 
++ gst_props_get(E0, "rate", &rate); 
++ g_print("Rate of pad on sink2 : %d\n", rate); 
+// Infered from: (gstreamer/{prevFiles/prev_748e28_0f779b_tests#old#testsuite#elements#tee.c,revFiles/748e28_0f779b_tests#old#testsuite#elements#tee.c}: main), (gstreamer/{prevFiles/prev_748e28_0f779b_testsuite#elements#tee.c,revFiles/748e28_0f779b_testsuite#elements#tee.c}: main)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

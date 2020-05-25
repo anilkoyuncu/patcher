@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- tracked_request_begin(&E0, E1, E2, E3, BDRV_TRACKED_DISCARD); 
++ tracked_request_begin(&E0, E1, E2 << BDRV_SECTOR_BITS,  E3 << BDRV_SECTOR_BITS, BDRV_TRACKED_DISCARD); 
+// Infered from: (qemu/{prevFiles/prev_3a36e4_f1d3b99_block#io.c,revFiles/3a36e4_f1d3b99_block#io.c}: bdrv_co_discard)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- return wmem_strdup(NULL, E0); 
++ return (char *)wmem_strdup(NULL, E0); 
+// Infered from: (wireshark/{prevFiles/prev_c60fb3_a1f234_epan#geoip_db.c,revFiles/c60fb3_a1f234_epan#geoip_db.c}: geoip_db_lookup_ipv4), (wireshark/{prevFiles/prev_c60fb3_a1f234_epan#geoip_db.c,revFiles/c60fb3_a1f234_epan#geoip_db.c}: geoip_db_lookup_ipv6)
+// False positives: (wireshark/revFiles/c60fb3_a1f234_epan#geoip_db.c: db_val_to_utf_8), (wireshark/revFiles/c60fb3_a1f234_epan#geoip_db.c: geoip_db_lookup_ipv4), (wireshark/revFiles/c60fb3_a1f234_epan#geoip_db.c: geoip_db_lookup_ipv6)
+// Recall: 0.25, Precision: 0.40, Matching recall: 1.00
+
+// ---------------------------------------------

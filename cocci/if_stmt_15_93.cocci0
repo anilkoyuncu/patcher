@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E1;
+typedef GstBaseSinkPrivate;
+@@
+  GstBaseSinkPrivate *I0; 
+  ...
+- if (!E1)  
++ if (!E1 || !GST_CLOCK_TIME_IS_VALID(I0->last_in_time))  
+  {
+  ...
+  }
+// Infered from: (gstreamer/{prevFiles/prev_8cdf5a_4818f6_libs#gst#base#gstbasesink.c,revFiles/8cdf5a_4818f6_libs#gst#base#gstbasesink.c}: gst_base_sink_is_too_late)
+// False positives: (gstreamer/revFiles/8cdf5a_4818f6_libs#gst#base#gstbasesink.c: gst_base_sink_do_sync)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

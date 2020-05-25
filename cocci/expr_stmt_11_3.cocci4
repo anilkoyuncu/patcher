@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0 = zend_hash_get_current_key_ex(Z_ARRVAL_PP(E1), &E2, &E3, &E4, 0, &E5); 
++ E0 = zend_hash_get_current_key_ex(Z_ARRVAL_PP(E1), (char **)&E2, &E3, &E4, 0,  &E5); 
+// Infered from: (php-src/{prevFiles/prev_9be53a_30c3b1_ext#standard#array.c,revFiles/9be53a_30c3b1_ext#standard#array.c}: PHP_FUNCTION)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

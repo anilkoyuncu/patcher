@@ -1,0 +1,20 @@
+@@
+expression E0, E1, E2;
+typedef FILE;
+@@
+- *E0 = fdopen(E1->socket, E2->mode); 
++ *(FILE **)E0 = fdopen(E1->socket, E2->mode); 
+// Infered from: (php-src/{prevFiles/prev_16e705_b66957_main#streams#xp_socket.c,revFiles/16e705_b66957_main#streams#xp_socket.c}: php_sockop_cast)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/1(100%)
+
+
+// ---------------------------------------------

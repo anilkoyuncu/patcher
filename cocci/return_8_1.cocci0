@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return E0 * sqrtf(fabsf(E0)) * E1; 
++ return E0 * sqrtf(abs(E0)) * E1; 
+// Infered from: (FFmpeg/{prevFiles/prev_2d5176_a7ac1a_libavcodec#on2avc.c,revFiles/2d5176_a7ac1a_libavcodec#on2avc.c}: on2avc_scale)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

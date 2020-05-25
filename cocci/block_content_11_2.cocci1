@@ -1,0 +1,15 @@
+@@
+identifier I0, I2;
+expression E1;
+@@
+- int I0 = vlc_array_count(&E1); 
+- for(int I2 = 0;I2 < I0;++I2)  
++ size_t I0 = vlc_array_count(&E1); 
++ for(size_t I2 = 0;I2 < I0;++I2)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_be2b26_49af91_src#input#input.c,revFiles/be2b26_49af91_src#input#input.c}: InputStreamHandleAnchor)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

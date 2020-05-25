@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = blk_co_pwrite_zeroes(E1->target, E2 << BDRV_SECTOR_BITS,  E3 << BDRV_SECTOR_BITS, 0); 
++ E0 = blk_co_pwrite_zeroes(E1->target, E2 << BDRV_SECTOR_BITS,  E3 << BDRV_SECTOR_BITS, BDRV_REQ_MAY_UNMAP); 
+// Infered from: (qemu/{prevFiles/prev_a3d6ae_e0a597_qemu-img.c,revFiles/a3d6ae_e0a597_qemu-img.c}: convert_co_write)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

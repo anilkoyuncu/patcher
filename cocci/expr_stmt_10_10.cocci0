@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- *E0++ = av_clip_int16(E1->curr_sblock[E2 + 10] << 2); 
++ *E0++ = av_clip_int16(E1->curr_sblock[E2 + 10] * (1 << 2)); 
+// Infered from: (FFmpeg/{prevFiles/prev_53c0c6_77d988_libavcodec#ra144dec.c,revFiles/53c0c6_77d988_libavcodec#ra144dec.c}: ra144_decode_frame)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = (char *)malloc(2); 
++ E0 = (char *)malloc(3); 
+// Infered from: (ompi/{prevFiles/prev_7a8e64_43822c_opal#util#os_path.c,revFiles/7a8e64_43822c_opal#util#os_path.c}: opal_os_path)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

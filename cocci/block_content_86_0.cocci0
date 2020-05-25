@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (E0->ocx > E1->sx - E0->last_width)  
++ if (E0->ocx > E1->sx - width)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (tmux/{prevFiles/prev_d74e5b_54456d_tty.c,revFiles/d74e5b_54456d_tty.c}: tty_cmd_cell), (tmux/{prevFiles/prev_a9eb5e_164c2c_tty.c,revFiles/a9eb5e_164c2c_tty.c}: tty_cmd_cell)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.18
+
+// ---------------------------------------------

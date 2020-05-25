@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- return E0 - E1 % VLC_MSG_QSIZE; 
++ return (E0 - E1) % VLC_MSG_QSIZE; 
+// Infered from: (vlc/{prevFiles/prev_fc7795_056c9f_src#control#log.c,revFiles/fc7795_056c9f_src#control#log.c}: libvlc_log_count)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

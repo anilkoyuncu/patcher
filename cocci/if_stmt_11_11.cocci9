@@ -1,0 +1,44 @@
+@@
+expression E0;
+@@
+- if (E0->use_dr1)  
++ if (E0->use_dr1 && E0->frame->opaque)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_3a1aaf_a39bd4_ffplay.c,revFiles/3a1aaf_a39bd4_ffplay.c}: input_request_frame)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 10 rules):
+// -- Edit Location --
+// Recall: 0.56, Precision: 0.83
+// -- Node Change --
+// Recall: 0.53, Precision: 0.79
+// -- General --
+// Functions fully changed: 9/20(45%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_bbe26e_a46e57_libavcodec#h264.c: decode_slice
+ - redis/prevFiles/prev_b44c37_87b601_src#sentinel.c: releaseInstanceLink
+ - vlc/prevFiles/prev_e6f3d0_502d218_src#input#stream.c: AReadBlock
+ - lighttpd1.4/prevFiles/prev_acd5e4_558bfc_src#stat_cache.c: stat_cache_get_entry
+ - nginx/prevFiles/prev_61feb9_a94a10_src#http#ngx_http_request_body.c: ngx_http_discard_request_body
+ - nginx/prevFiles/prev_ad0d2f_bd9eda_src#http#ngx_http_upstream.c: ngx_http_upstream_intercept_errors
+ - php-src/prevFiles/prev_07f84d_f4be62_ext#oci8#oci8.c: _session_compare
+ - gtk/prevFiles/prev_babd13_cdf473_gtk#gtkapplicationwindow.c: gtk_application_window_real_realize
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_e12467_1b7e0d_modules#text_renderer#freetype.c: RenderAXYZ
+ - FFmpeg/prevFiles/prev_1bf6cb_ad6250_libavformat#applehttp.c: free_variant_list
+ - nginx/prevFiles/prev_ad0d2f_bd9eda_src#http#ngx_http_upstream.c: ngx_http_upstream_finalize_request
+*/
+
+// ---------------------------------------------

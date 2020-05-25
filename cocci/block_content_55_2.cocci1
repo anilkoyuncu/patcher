@@ -1,0 +1,30 @@
+@@
+identifier I0, I1, I2, I3;
+@@
+- I0 = safe_estrndup(I1, I2); 
+- I3 = I2; 
++ data_len = strlen(I1); 
++ data = safe_estrndup(I1, data_len); 
+// Infered from: (php-src/{prevFiles/prev_824738_b0601e_ext#pgsql#pgsql.c,revFiles/824738_b0601e_ext#pgsql#pgsql.c}: php_pgsql_result2array)
+// False positives: (php-src/revFiles/969f81_6cfced_ext#pgsql#pgsql.c: php_pgsql_result2array)
+// Recall: 0.19, Precision: 0.50, Matching recall: 0.19
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.48, Precision: 0.71
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_824738_b0601e_ext#pgsql#pgsql.c: php_pgsql_result2array
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_969f81_6cfced_ext#pgsql#pgsql.c: php_pgsql_result2array
+*/
+
+// ---------------------------------------------

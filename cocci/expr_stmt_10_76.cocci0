@@ -1,0 +1,11 @@
+@@
+identifier I0 = {_cairo_gl_operand_translate ,graphene_rect_inset };
+expression E1, E2, E3;
+@@
+- I0(&E1, E2, E3); 
++ I0(&E1, -E2, -E3); 
+// Infered from: (gtk/{prevFiles/prev_096581_5e8176_gtk#gtkscrolledwindow.c,revFiles/096581_5e8176_gtk#gtkscrolledwindow.c}: event_close_to_indicator), (cairo/{prevFiles/prev_748dcd_db4ee9_src#cairo-gl-spans-compositor.c,revFiles/748dcd_db4ee9_src#cairo-gl-spans-compositor.c}: copy_boxes)
+// False positives: (cairo/revFiles/748dcd_db4ee9_src#cairo-gl-spans-compositor.c: composite_boxes)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

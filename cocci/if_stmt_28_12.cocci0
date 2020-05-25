@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((E0->sRxDFCB[E1].bInUse == true) && (!compare_ether_addr(&(E0->sRxDFCB[  E1].abyAddr2[  0]),  &(E2->addr2[0]))))  
++ if ((E0->sRxDFCB[E1].bInUse == true) && ether_addr_equal(E0->sRxDFCB[  E1].abyAddr2,  E2->addr2))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_832941_eed8897_drivers#staging#vt6656#wctl.c,revFiles/832941_eed8897_drivers#staging#vt6656#wctl.c}: WCTLuSearchDFCB)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

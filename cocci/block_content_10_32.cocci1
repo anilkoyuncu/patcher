@@ -1,0 +1,30 @@
+@@
+expression E0, E1;
+@@
+- gen_op_movl_T0_im(E0); 
+- gen_movl_reg_T0(E1, 14); 
++ gen_op_movl_T1_im(E0); 
+// Infered from: (qemu/{prevFiles/prev_395247_2f2ecb_target-arm#translate.c,revFiles/395247_2f2ecb_target-arm#translate.c}: disas_arm_insn)
+// False positives: (qemu/revFiles/395247_2f2ecb_target-arm#translate.c: disas_arm_insn), (qemu/revFiles/395247_2f2ecb_target-arm#translate.c: disas_thumb_insn)
+// Recall: 0.38, Precision: 0.33, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 0.75, Precision: 0.50
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_479b82_0b37b9_ext#standard#formatted_print.c: php_formatted_print
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - qemu/prevFiles/prev_395247_2f2ecb_target-arm#translate.c: disas_thumb_insn
+ - qemu/prevFiles/prev_395247_2f2ecb_target-arm#translate.c: disas_arm_insn
+*/
+
+// ---------------------------------------------

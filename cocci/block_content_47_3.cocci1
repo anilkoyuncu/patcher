@@ -1,0 +1,36 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0[E1].buf = kmalloc(E0[E1].len, GFP_KERNEL); 
+- if (E0[E1].buf == NULL)  
++ E0[E1].buf = memdup_user(E2[E1], E0[E1].len); 
++ if (IS_ERR(E0[E1].buf))  
+  {
+- E3 = -ENOMEM; 
+- break; 
+- }
+- if (copy_from_user(E0[E1].buf, E2[E1], E0[E1].len))  
+- {
+- ++E1; 
+- E3 = -EFAULT; 
++ E3 = PTR_ERR(E0[E1].buf); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_f1c2e3_35a56c_drivers#i2c#i2c-dev.c,revFiles/f1c2e3_35a56c_drivers#i2c#i2c-dev.c}: i2cdev_ioctl_rdrw)
+// Recall: 0.27, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.80
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_f1c2e3_35a56c_drivers#i2c#i2c-dev.c: i2cdev_ioctl_rdrw
+*/
+
+// ---------------------------------------------

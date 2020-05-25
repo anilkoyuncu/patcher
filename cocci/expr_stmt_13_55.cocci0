@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1 - 1; 
++ E0 = FFMAX(E1 - 1, 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_c82b8e_1e3303_libavcodec#dvbsubdec.c,revFiles/c82b8e_1e3303_libavcodec#dvbsubdec.c}: compute_default_clut)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,42 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (E0 < E1)  
++ if (E0 < E1)  
+  {
+- E2 = E3 - E0 + 1; 
++ E2 = E0 - E3 + 1; 
+  }
+// Infered from: (codeflaws/{prevFiles/prev_68-A-527083-527088.c,revFiles/68-A-527083-527088.c}: main)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 20 rules):
+// -- Edit Location --
+// Recall: 0.73, Precision: 0.95
+// -- Node Change --
+// Recall: 0.69, Precision: 0.91
+// -- General --
+// Functions fully changed: 17/27(62%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_449089_f9cdcc_ext#standard#rand.c: PHP_FUNCTION
+*/
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_79-A-15633450-15633474.c: main
+ - codeflaws/prevFiles/prev_676-A-18247191-18247237.c: main
+ - vlc/prevFiles/prev_2229cd_b7f623_modules#video_output#android#android_window.c: FixSubtitleFormat
+ - codeflaws/prevFiles/prev_495-A-13892979-13893027.c: main
+ - vlc/prevFiles/prev_21a994_2acf64_modules#misc#notify#notify.c: ItemChange
+ - FFmpeg/prevFiles/prev_b998a5_5b5365_libavcodec#jpeg2000dec.c: jp2_find_codestream
+ - codeflaws/prevFiles/prev_305-B-7252797-7252809.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - codeflaws/prevFiles/prev_581-A-16943262-16943281.c: main
+ - qemu/prevFiles/prev_2e134c_5391d8_target-arm#op.c: op_mul_T0_T1
+*/
+
+// ---------------------------------------------

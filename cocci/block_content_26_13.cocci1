@@ -1,0 +1,31 @@
+@@
+identifier I1 = {pci_save_vc_state ,phy_write };
+expression list E2;
+binary operator B3 = {< ,!= };
+expression E0;
+@@
+- E0 = I1(E2); 
+- if (E0 B3 0)  
+- {
+- return E0; 
+- }
+- return 0; 
++ return I1(E2); 
+// Infered from: (linux/{prevFiles/prev_754834b_ff0387_drivers#pci#pci.c,revFiles/754834b_ff0387_drivers#pci#pci.c}: pci_save_state), (linux/{prevFiles/prev_8bc47e_a25cc43_drivers#net#phy#davicom.c,revFiles/8bc47e_a25cc43_drivers#net#phy#davicom.c}: dm9161_config_init)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.93, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_4a737e_bd60ac_drivers#staging#iio#cdc#ad7150.c: ad7150_write_event_params
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+expression E1, E2, E0;
+@@
+- irq_set_chained_handler(E0, E1); 
++ irq_set_chained_handler_and_data(E0, E1, E2); 
+  ...
+- irq_set_handler_data(E0, E2); 
+// Infered from: (linux/{prevFiles/prev_fb68ba_c49761_drivers#spmi#spmi-pmic-arb.c,revFiles/fb68ba_c49761_drivers#spmi#spmi-pmic-arb.c}: spmi_pmic_arb_remove), (linux/{prevFiles/prev_c30e304_3fb250_drivers#mfd#asic3.c,revFiles/c30e304_3fb250_drivers#mfd#asic3.c}: asic3_irq_probe), (linux/{prevFiles/prev_b34cc620_407a2c7_drivers#gpio#gpio-bcm-kona.c,revFiles/b34cc620_407a2c7_drivers#gpio#gpio-bcm-kona.c}: bcm_kona_gpio_probe), (linux/{prevFiles/prev_de7c9e0_b79f043_drivers#mfd#t7l66xb.c,revFiles/de7c9e0_b79f043_drivers#mfd#t7l66xb.c}: t7l66xb_detach_irq), (linux/{prevFiles/prev_3fb250_6218b8_drivers#gpio#gpio-msic.c,revFiles/3fb250_6218b8_drivers#gpio#gpio-msic.c}: platform_msic_gpio_probe), (linux/{prevFiles/prev_bb6d6d_1e10592_drivers#pinctrl#pinctrl-adi2.c,revFiles/bb6d6d_1e10592_drivers#pinctrl#pinctrl-adi2.c}: adi_gpio_pint_probe), (linux/{prevFiles/prev_079140_de7c9e0_drivers#mfd#tc6393xb.c,revFiles/079140_de7c9e0_drivers#mfd#tc6393xb.c}: tc6393xb_detach_irq), (linux/{prevFiles/prev_6d0786_206287_arch#arm#common#locomo.c,revFiles/6d0786_206287_arch#arm#common#locomo.c}: __locomo_remove), (linux/{prevFiles/prev_746ad9_08ece3_arch#mips#pci#pci-ar2315.c,revFiles/746ad9_08ece3_arch#mips#pci#pci-ar2315.c}: ar2315_pci_irq_init), (linux/{prevFiles/prev_6218b8_b34cc620_drivers#gpio#gpio-dwapb.c,revFiles/6218b8_b34cc620_drivers#gpio#gpio-dwapb.c}: dwapb_configure_irqs), (linux/{prevFiles/prev_623a65_0cfc45c_drivers#pinctrl#samsung#pinctrl-s3c64xx.c,revFiles/623a65_0cfc45c_drivers#pinctrl#samsung#pinctrl-s3c64xx.c}: s3c64xx_eint_gpio_init), (linux/{prevFiles/prev_623a65_0cfc45c_drivers#pinctrl#samsung#pinctrl-s3c64xx.c,revFiles/623a65_0cfc45c_drivers#pinctrl#samsung#pinctrl-s3c64xx.c}: s3c64xx_eint_eint0_init)
+// Recall: 0.43, Precision: 1.00, Matching recall: 0.93
+
+// ---------------------------------------------

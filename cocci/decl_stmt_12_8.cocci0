@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- int I0 = E1 * E2->ratio * 2; 
++ int I0 = FFMAX(E1 * E2->ratio * 2, 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_c44a02_1b2087_libavfilter#af_aresample.c,revFiles/c44a02_1b2087_libavfilter#af_aresample.c}: filter_samples)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

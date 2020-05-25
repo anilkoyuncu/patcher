@@ -1,0 +1,27 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- BN_from_montgomery(E0, E1, E2, E3); 
++ if (!BN_from_montgomery(E0, E1, E2, E3))  
++ {
++ goto  err; 
++ }
+// Infered from: (openssl/{prevFiles/prev_776654_d65225_crypto#bn#bn_exp2.c,revFiles/776654_d65225_crypto#bn#bn_exp2.c}: BN_mod_exp2_mont)
+// Recall: 0.18, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 0.83
+// -- Node Change --
+// Recall: 0.88, Precision: 0.71
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - cpython/prevFiles/prev_5c170f_a5a070_Modules#almodule.c: al_QueryValues
+ - cpython/prevFiles/prev_5c170f_a5a070_Modules#almodule.c: al_GetParams
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (!E0)  
++ if (!E0)  
+  {
+- IA_CSS_ERROR("out of memory"); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_309167_eab638_drivers#staging#media#atomisp#pci#atomisp2#css2400#sh_css_param_shading.c,revFiles/309167_eab638_drivers#staging#media#atomisp#pci#atomisp2#css2400#sh_css_param_shading.c}: ia_css_shading_table_alloc)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

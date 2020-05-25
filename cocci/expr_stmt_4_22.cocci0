@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0[E1] = 0; 
++ E0[E1] = '\0'; 
+// Infered from: (wireshark/{prevFiles/prev_73eb16_346c18_epan#dissectors#packet-socks.c,revFiles/73eb16_346c18_epan#dissectors#packet-socks.c}: display_string)
+// False positives: (ompi/revFiles/7a8e64_43822c_opal#util#os_path.c: opal_os_path)
+// Recall: 0.29, Precision: 0.67, Matching recall: 0.67
+
+// ---------------------------------------------

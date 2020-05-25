@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef cairo_perf_ticks_t;
+@@
+- E0->samples = xrealloc(E0->samples, E0->samples_size); 
++ E0->samples = xrealloc(E0->samples,  E0->samples_size * sizeof(cairo_perf_ticks_t )); 
+// Infered from: (cairo/{prevFiles/prev_439bf8_f6b400_perf#cairo-perf-diff-files.c,revFiles/439bf8_f6b400_perf#cairo-perf-diff-files.c}: cairo_perf_report_sort_and_compute_stats)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

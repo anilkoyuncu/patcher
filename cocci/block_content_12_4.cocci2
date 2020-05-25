@@ -1,0 +1,33 @@
+@@
+identifier I0;
+expression E1;
+typedef dbus_int32_t;
+typedef dbus_int64_t;
+@@
+- dbus_int32_t I0; 
++ dbus_int64_t I0; 
+  ...
+- dbus_message_get_args(p_from, &E1, DBUS_TYPE_INT32, &I0, DBUS_TYPE_INVALID); 
++ dbus_message_get_args(p_from, &E1, DBUS_TYPE_INT64, &I0, DBUS_TYPE_INVALID); 
+// Infered from: (vlc/{prevFiles/prev_0b9601_6385a3_modules#control#dbus#dbus_player.c,revFiles/0b9601_6385a3_modules#control#dbus#dbus_player.c}: DBUS_METHOD)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 0.75
+// -- Node Change --
+// Recall: 0.80, Precision: 0.80
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_21d7f1_fcd1b6_modules#misc#gnutls.c: gnutls_HandshakeAndValidate
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - cairo/prevFiles/prev_9fcb42_2c45fd_src#win32#cairo-win32-printing-surface.c: _cairo_win32_printing_surface_paint_linear_pattern
+*/
+
+// ---------------------------------------------

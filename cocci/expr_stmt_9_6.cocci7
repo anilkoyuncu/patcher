@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gtk_snapshot_push_clip(E0, gtk_css_boxes_get_padding_rect(&E1)); 
++ gtk_snapshot_push_rounded_clip(E0, gtk_css_boxes_get_padding_box(&E1)); 
+// Infered from: (gtk/{prevFiles/prev_9a1c69_884088_gtk#gtkwidget.c,revFiles/9a1c69_884088_gtk#gtkwidget.c}: gtk_widget_create_render_node)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

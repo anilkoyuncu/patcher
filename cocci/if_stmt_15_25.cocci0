@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->sdp_status == SDP_EXCHANGE_ANSWER_REJECT)  
++ if ((E0->sdp_status == SDP_EXCHANGE_ANSWER_REJECT) || (E0->sdp_status == SDP_EXCHANGE_ANSWER_ACCEPT))  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_823493_010c8f_epan#dissectors#packet-sdp.c,revFiles/823493_010c8f_epan#dissectors#packet-sdp.c}: setup_sdp_transport)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

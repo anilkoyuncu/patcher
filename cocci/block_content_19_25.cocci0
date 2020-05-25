@@ -1,0 +1,10 @@
+@@
+identifier I0;
+typedef my_ulonglong;
+@@
+- my_ulonglong I0; 
++ long I0; 
+// Infered from: (php-src/{prevFiles/prev_b3e899_f1fd86_ext#mysqli#mysqli_prop.c,revFiles/b3e899_f1fd86_ext#mysqli#mysqli_prop.c}: link_affected_rows_read), (php-src/{prevFiles/prev_b3e899_f1fd86_ext#mysqli#mysqli_prop.c,revFiles/b3e899_f1fd86_ext#mysqli#mysqli_prop.c}: stmt_affected_rows_read), (php-src/{prevFiles/prev_f02ebe_31a1db_ext#mysqli#mysqli_prop.c,revFiles/f02ebe_31a1db_ext#mysqli#mysqli_prop.c}: link_affected_rows_read), (php-src/{prevFiles/prev_f02ebe_31a1db_ext#mysqli#mysqli_prop.c,revFiles/f02ebe_31a1db_ext#mysqli#mysqli_prop.c}: stmt_affected_rows_read)
+// Recall: 0.27, Precision: 1.00, Matching recall: 0.31
+
+// ---------------------------------------------

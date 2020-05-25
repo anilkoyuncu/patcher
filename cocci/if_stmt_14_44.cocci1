@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (av_image_check_sar(E0->width, E0->height, E0->sample_aspect_ratio) < 0)  
++ if (E0->width && E0->height && av_image_check_sar(E0->width, E0->height,  E0->sample_aspect_ratio) < 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_fe43fa_0dceef_libavcodec#utils.c,revFiles/fe43fa_0dceef_libavcodec#utils.c}: ff_init_buffer_info)
+// False positives: (FFmpeg/revFiles/fe43fa_0dceef_libavcodec#utils.c: avcodec_open2)
+// Recall: 0.50, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_fe43fa_0dceef_libavcodec#utils.c: avcodec_open2
+*/
+
+// ---------------------------------------------

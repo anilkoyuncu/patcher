@@ -1,0 +1,11 @@
+@@
+identifier I1, I4;
+expression E0, E3, E2;
+@@
+- av_log(E0, I1, E2, E3->I4); 
++ av_log(E0, I1, E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_73ad35_229e33_libavformat#avidec.c,revFiles/73ad35_229e33_libavformat#avidec.c}: avi_read_header), (FFmpeg/{prevFiles/prev_5782e0_954e2b_libavcodec#jpeg2000dec.c,revFiles/5782e0_954e2b_libavcodec#jpeg2000dec.c}: get_siz)
+// False positives: (FFmpeg/revFiles/5782e0_954e2b_libavcodec#jpeg2000dec.c: get_cox), (FFmpeg/revFiles/5782e0_954e2b_libavcodec#jpeg2000dec.c: get_siz), (FFmpeg/revFiles/73ad35_229e33_libavformat#avidec.c: avi_read_header)
+// Recall: 0.10, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------

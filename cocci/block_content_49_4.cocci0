@@ -1,0 +1,15 @@
+@@
+identifier I0;
+expression E1, E3, E2;
+typedef VAAPIEncodeH264Context;
+@@
+  VAAPIEncodeH264Context *I0 = E1->priv_data; 
+  ...
+- E2.TopFieldOrderCnt = E3->display_order; 
+- E2.BottomFieldOrderCnt = E3->display_order; 
++ E2.TopFieldOrderCnt = E3->display_order - I0->last_idr_frame; 
++ E2.BottomFieldOrderCnt = E3->display_order - I0->last_idr_frame; 
+// Infered from: (FFmpeg/{prevFiles/prev_9b1db2_d08e02_libavcodec#vaapi_encode_h264.c,revFiles/9b1db2_d08e02_libavcodec#vaapi_encode_h264.c}: vaapi_encode_h264_init_picture_params), (FFmpeg/{prevFiles/prev_e72662_30ebab_libavcodec#vaapi_encode_h264.c,revFiles/e72662_30ebab_libavcodec#vaapi_encode_h264.c}: vaapi_encode_h264_init_picture_params)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.44
+
+// ---------------------------------------------

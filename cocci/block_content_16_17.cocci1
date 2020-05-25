@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- *(int *)CMSG_DATA(E0) = E1; 
++ *CMSG_DATA(E0) = E1; 
+// Infered from: (cpython/{prevFiles/prev_223f09_8f67d0_Modules#_multiprocessing#multiprocessing.c,revFiles/223f09_8f67d0_Modules#_multiprocessing#multiprocessing.c}: multiprocessing_sendfd), (cpython/{prevFiles/prev_4b8608_321b71_Modules#_multiprocessing#multiprocessing.c,revFiles/4b8608_321b71_Modules#_multiprocessing#multiprocessing.c}: multiprocessing_sendfd), (cpython/{prevFiles/prev_a25fc1e_e2b3bb_Modules#_multiprocessing#multiprocessing.c,revFiles/a25fc1e_e2b3bb_Modules#_multiprocessing#multiprocessing.c}: multiprocessing_sendfd)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 6/6(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- memcpy(&E0, E1, E2 > sizeof(E0) ? sizeof(E0) :E2); 
++ memcpy(&E0, E1, (E2 > sizeof(E0)) ? sizeof(E0) :E2); 
+// Infered from: (vlc/{prevFiles/prev_22f8e7_ea351f_src#network#rootbind.c,revFiles/22f8e7_ea351f_src#network#rootbind.c}: rootwrap_bind)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,24 @@
+@@
+identifier I3;
+binary operator B1 = {&& ,|| };
+expression E0, E2;
+@@
+- if (E0 B1 (E2->I3->s_flags & MS_RDONLY))  
++ if (E0 B1 sb_rdonly(E2->I3))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_bc98a4_94e92e_fs#nilfs2#mdt.c,revFiles/bc98a4_94e92e_fs#nilfs2#mdt.c}: nilfs_mdt_write_page), (linux/{prevFiles/prev_bc98a4_94e92e_fs#gfs2#glops.c,revFiles/bc98a4_94e92e_fs#gfs2#glops.c}: iopen_go_callback)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

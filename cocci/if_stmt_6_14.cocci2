@@ -1,0 +1,14 @@
+@@
+type T3;
+expression E0, E1, E2;
+typedef int64_t;
+@@
+- if (OPAL_ERR_VALUE_OUT_OF_BOUNDS == E0 || (MCA_BASE_VAR_TYPE_INT == E1->mbv_type && (  (int )E2 != (int64_t )E2)) || (  MCA_BASE_VAR_TYPE_UNSIGNED_INT == E1->mbv_type && ((T3 )E2 != E2)))  
++ if (OPAL_SUCCESS != E0 || (MCA_BASE_VAR_TYPE_INT == E1->mbv_type && (  (int )E2 != (int64_t )E2)) || (MCA_BASE_VAR_TYPE_UNSIGNED_INT == E1->mbv_type && (  (T3 )E2 != E2)))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_37e9e2_bca445_opal#mca#base#mca_base_var.c,revFiles/37e9e2_bca445_opal#mca#base#mca_base_var.c}: var_set_from_string)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

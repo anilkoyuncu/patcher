@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- long I0; 
+  ...
+- I0 = 0; 
+// Infered from: (linux/{prevFiles/prev_1e5a82_4b4a3e_drivers#staging#i4l#act2000#act2000_isa.c,revFiles/1e5a82_4b4a3e_drivers#staging#i4l#act2000#act2000_isa.c}: act2000_isa_download)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

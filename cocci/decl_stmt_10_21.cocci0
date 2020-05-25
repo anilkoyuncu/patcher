@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = qdict_get_int(E1, "force"); 
++ int I0 = qdict_get_try_bool(E1, "force", 0); 
+// Infered from: (qemu/{prevFiles/prev_eb159d_35006a_blockdev.c,revFiles/eb159d_35006a_blockdev.c}: do_eject)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

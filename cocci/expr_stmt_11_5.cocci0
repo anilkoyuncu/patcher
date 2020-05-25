@@ -1,0 +1,9 @@
+@@
+type T3;
+expression E2, E5, E6, E7, E0, E4, E1, E8;
+@@
+- msg_Dbg(E0, E1, E2, (T3 )E4, E5, E6, E7, E8); 
+// Infered from: (vlc/{prevFiles/prev_c35187_867456_modules#demux#avi#avi.c,revFiles/c35187_867456_modules#demux#avi#avi.c}: Open), (vlc/{prevFiles/prev_5274bd_0d1580_modules#demux#ts.c,revFiles/5274bd_0d1580_modules#demux#ts.c}: CheckPCR)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+typedef gchar;
+@@
+- if (strcmp(E0->dissector_short_name, dissector_handle_get_short_name(E1)) == 0)  
++ const  gchar *proto_short_name = dissector_handle_get_short_name(E1); 
++ if (proto_short_name && strcmp(E0->dissector_short_name, proto_short_name) == 0)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_849d87_28287e_ui#decode_as_utils.c,revFiles/849d87_28287e_ui#decode_as_utils.c}: change_dissector_if_matched)
+// Recall: 0.27, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

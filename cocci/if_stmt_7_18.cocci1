@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->fb == NULL || !E1->active)  
++ if (E0->primary->fb == NULL || !E1->active)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#cdv_intel_display.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#gma500#cdv_intel_display.c}: cdv_intel_pipe_enabled)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

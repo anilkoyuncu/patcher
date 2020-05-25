@@ -1,0 +1,36 @@
+@@
+expression E0;
+@@
+- if (E0->fb->depth == 15)  
++ if (E0->primary->fb->depth == 15)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#gma_display.c,revFiles/f4510a_2d82d18_drivers#gpu#drm#gma500#gma_display.c}: gma_pipe_set_base)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.25, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/4(25%)
+
+/*
+Functions where the patch applied partially:
+ - linux/prevFiles/prev_f4510a_2d82d18_drivers#gpu#drm#gma500#gma_display.c: gma_pipe_set_base
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_7b835c_0ecda6_modules#codec#avcodec#d3d11va.c: D3dCreateDevice
+ - gtk/prevFiles/prev_531d0d_ebf9b9_gtk#gtkmenushell.c: gtk_real_menu_shell_cycle_focus
+*/
+
+// ---------------------------------------------

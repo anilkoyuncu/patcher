@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (unlikely(!E0->flags & DMA_TEI_CAPABLE))  
++ if (unlikely(!(E0->flags & DMA_TEI_CAPABLE)))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_b2d7c7f_96de1a8_arch#sh#drivers#dma#dma-sh.c,revFiles/b2d7c7f_96de1a8_arch#sh#drivers#dma#dma-sh.c}: sh_dmac_request_dma)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- qemu_del_net_client(qemu_get_queue(E0->nic)); 
++ qemu_del_nic(E0->nic); 
+// Infered from: (qemu/{prevFiles/prev_3ffee3_8819c1_hw#net#vmxnet3.c,revFiles/3ffee3_8819c1_hw#net#vmxnet3.c}: vmxnet3_net_uninit)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

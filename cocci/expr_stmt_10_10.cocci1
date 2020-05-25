@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->bundle[BINK_SRC_SUB_BLOCK_TYPES].len = av_log2((E1 >> 4) + 511) + 1; 
++ E0->bundle[BINK_SRC_SUB_BLOCK_TYPES].len = av_log2(((E1 + 7) >> 4) + 511) + 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_b521f1_0f13cc_libavcodec#bink.c,revFiles/b521f1_0f13cc_libavcodec#bink.c}: init_lengths)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

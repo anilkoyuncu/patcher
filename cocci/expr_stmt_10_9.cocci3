@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+typedef gchar;
+typedef gsize;
+@@
+- E0 = g_strndup((gchar *)E1, (gsize )E2); 
++ E0 = g_strndup(E1, (gsize )E2); 
+// Infered from: (wireshark/{prevFiles/prev_5c79cb_5dd7b7_ui#cli#tap-iostat.c,revFiles/5c79cb_5dd7b7_ui#cli#tap-iostat.c}: iostat_draw)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

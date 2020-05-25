@@ -1,0 +1,10 @@
+@@
+expression E1, E0, E2;
+@@
+- tvb_get_ephemeral_unicode_string(E0, E1, E2 / 2, ENC_LITTLE_ENDIAN) 
++ tvb_get_ephemeral_unicode_string(E0, E1, E2, ENC_LITTLE_ENDIAN) 
+  ... when any
+// Infered from: (wireshark/{prevFiles/prev_80445e_bb8afe_epan#dissectors#packet-xml.c,revFiles/80445e_bb8afe_epan#dissectors#packet-xml.c}: dissect_xml_heur), (wireshark/{prevFiles/prev_80445e_bb8afe_epan#dissectors#packet-tnef.c,revFiles/80445e_bb8afe_epan#dissectors#packet-tnef.c}: dissect_counted_values), (wireshark/{prevFiles/prev_80445e_bb8afe_epan#dissectors#packet-tnef.c,revFiles/80445e_bb8afe_epan#dissectors#packet-tnef.c}: dissect_mapiprops)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

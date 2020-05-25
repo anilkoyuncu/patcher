@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- return mov_finalize_stsd_codec(E0, E1, E2, E3); 
++ return 0; 
+// Infered from: (FFmpeg/{prevFiles/prev_656feb_1a9513b_libavformat#mov.c,revFiles/656feb_1a9513b_libavformat#mov.c}: ff_mov_read_stsd_entries), (FFmpeg/{prevFiles/prev_defe30_3050da_libavformat#mov.c,revFiles/defe30_3050da_libavformat#mov.c}: ff_mov_read_stsd_entries)
+// Recall: 0.21, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

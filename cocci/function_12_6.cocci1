@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- out: 
+- kfree(E0); 
+// Infered from: (linux/{prevFiles/prev_0853699_8feffd1_drivers#power#88pm860x_battery.c,revFiles/0853699_8feffd1_drivers#power#88pm860x_battery.c}: pm860x_battery_probe)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

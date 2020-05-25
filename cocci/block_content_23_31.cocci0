@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- free(E0->page[E1]); 
++ g_free(E0->page[E1]); 
+// Infered from: (qemu/{prevFiles/prev_c580de_217bfb_bsd-user#elfload.c,revFiles/c580de_217bfb_bsd-user#elfload.c}: setup_arg_pages), (qemu/{prevFiles/prev_7dd476_096685_linux-user#elfload.c,revFiles/7dd476_096685_linux-user#elfload.c}: setup_arg_pages)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

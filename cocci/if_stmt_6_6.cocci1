@@ -1,0 +1,11 @@
+@@
+@@
+- if (BG(locale_string) && (!BG(locale_string)->len != 1 || !BG(locale_string)->val[  0] != 'C'))  
++ if (BG(locale_string) && (BG(locale_string)->len != 1 || BG(locale_string)->val[  0] != 'C'))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_d7fd94_1b4f7c_ext#pcre#php_pcre.c,revFiles/d7fd94_1b4f7c_ext#pcre#php_pcre.c}: pcre_get_compiled_regex_cache)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

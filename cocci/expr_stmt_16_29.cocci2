@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;E0 < (sizeof(E1) / sizeof(E1[0]));E0 += 2)  
++ for(E0 = 0;E0 < ARRAY_SIZE(E1);E0 += 2)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_9cbd7d_401c31_drivers#staging#ccree#ssi_sysfs.c,revFiles/9cbd7d_401c31_drivers#staging#ccree#ssi_sysfs.c}: ssi_sys_help_show)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

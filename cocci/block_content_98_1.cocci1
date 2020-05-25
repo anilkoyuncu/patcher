@@ -1,0 +1,31 @@
+@@
+@@
+- if (do_COM_invoke() == FAILURE)  
++ if (do_COM_invoke() == SUCCESS)  
+  {
+- RETVAL_FALSE; 
+- }
+- else
+- {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_fe84a2_830f09_ext#rpc#com#com_wrapper.c,revFiles/fe84a2_830f09_ext#rpc#com#com_wrapper.c}: php_COM_call_function_handler), (php-src/{prevFiles/prev_fe84a2_830f09_ext#com#COM.c,revFiles/fe84a2_830f09_ext#com#COM.c}: php_COM_call_function_handler)
+// False positives: (php-src/revFiles/fe84a2_830f09_ext#com#COM.c: php_COM_call_function_handler), (php-src/revFiles/fe84a2_830f09_ext#rpc#com#com_wrapper.c: php_COM_call_function_handler)
+// Recall: 0.21, Precision: 0.75, Matching recall: 0.21
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.21, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_fe84a2_830f09_ext#com#COM.c: php_COM_call_function_handler
+ - php-src/prevFiles/prev_fe84a2_830f09_ext#rpc#com#com_wrapper.c: php_COM_call_function_handler
+*/
+
+// ---------------------------------------------

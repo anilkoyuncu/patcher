@@ -1,0 +1,11 @@
+@@
+identifier I0;
+typedef FILE;
+typedef FILE_T;
+@@
+- FILE *I0; 
++ FILE_T I0; 
+// Infered from: (wireshark/{prevFiles/prev_c1efdf_79c2cf4_wiretap#file_access.c,revFiles/c1efdf_79c2cf4_wiretap#file_access.c}: wtap_dump_open), (wireshark/{prevFiles/prev_c1efdf_79c2cf4_wiretap#file_access.c,revFiles/c1efdf_79c2cf4_wiretap#file_access.c}: wtap_dump_fdopen)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- const  int I0 = FFMIN(E1->linesize[Y], E2->linesize[A]); 
++ const  int I0 = abs(FFMIN(E1->linesize[Y], E2->linesize[A])); 
+// Infered from: (FFmpeg/{prevFiles/prev_130c64_c3ad91_libavfilter#vf_alphaextract.c,revFiles/130c64_c3ad91_libavfilter#vf_alphaextract.c}: filter_frame)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

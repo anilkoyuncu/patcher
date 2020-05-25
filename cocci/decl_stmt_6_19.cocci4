@@ -1,0 +1,11 @@
+@@
+type T0;
+identifier I1;
+@@
+- T0 I1 = 0; 
++ T0 I1 = ACPI_PCIHP_BSEL_DEFAULT; 
+// Infered from: (qemu/{prevFiles/prev_f0c9d6_2607b6_hw#i386#acpi-build.c,revFiles/f0c9d6_2607b6_hw#i386#acpi-build.c}: acpi_set_pci_info)
+// False positives: (FFmpeg/revFiles/696c30_e3227b_libavformat#avs.c: avs_read_packet), (gstreamer/revFiles/d7d2be_1ec901_plugins#elements#gsttypefindelement.c: gst_type_find_element_activate), (gstreamer/revFiles/d7d2be_1ec901_plugins#elements#gsttypefindelement.c: gst_type_find_element_handle_event), (php-src/revFiles/2eab21_249d4c_ext#zlib#zlib.c: PHP_FUNCTION), (qemu/revFiles/f0c9d6_2607b6_hw#i386#acpi-build.c: acpi_build), (qemu/revFiles/f0c9d6_2607b6_hw#i386#acpi-build.c: build_dmar_q35)
+// Recall: 0.38, Precision: 0.33, Matching recall: 0.55
+
+// ---------------------------------------------

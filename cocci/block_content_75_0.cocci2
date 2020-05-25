@@ -1,0 +1,25 @@
+@@
+identifier I0, I1;
+@@
+  struct device_node *I0; 
+  ...
+- int I1 = 0; 
+// Infered from: (linux/{prevFiles/prev_0b25ff_97dc5bf_drivers#phy#phy-brcmstb-sata.c,revFiles/0b25ff_97dc5bf_drivers#phy#phy-brcmstb-sata.c}: brcm_sata_phy_probe), (linux/{prevFiles/prev_d0ca57_2bb80cc_drivers#phy#phy-berlin-sata.c,revFiles/d0ca57_2bb80cc_drivers#phy#phy-berlin-sata.c}: phy_berlin_sata_probe)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.09
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.36, Precision: 0.44
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - linux/prevFiles/prev_d0ca57_2bb80cc_drivers#phy#phy-berlin-sata.c: phy_berlin_sata_probe
+ - linux/prevFiles/prev_0b25ff_97dc5bf_drivers#phy#phy-brcmstb-sata.c: brcm_sata_phy_probe
+*/
+
+// ---------------------------------------------

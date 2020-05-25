@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 / E1) % 2 == 0)  
++ if ((E0 / 100) % 2 == 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_433-A-14400500-14400526.c,revFiles/433-A-14400500-14400526.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (link_top(E0) != &(stack_top(E0)->links))  
++ while (link_top(E0) != &stack_top(E0)->links)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_313895_1cb2f6_drivers#media#media-entity.c,revFiles/313895_1cb2f6_drivers#media#media-entity.c}: media_entity_graph_walk_next)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

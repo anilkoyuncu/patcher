@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- return gtk_print_settings_get_bool(E0, GTK_PRINT_SETTINGS_COLLATE); 
++ return gtk_print_settings_get_bool_with_default(E0,  GTK_PRINT_SETTINGS_COLLATE,  TRUE); 
+// Infered from: (gtk/{prevFiles/prev_7a8e37_d7cf9d_gtk#gtkprintsettings.c,revFiles/7a8e37_d7cf9d_gtk#gtkprintsettings.c}: gtk_print_settings_get_collate)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/4(100%)
+
+
+// ---------------------------------------------

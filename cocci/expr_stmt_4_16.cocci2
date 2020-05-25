@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1 = -1; 
++ E0 = E1 = 0; 
+// Infered from: (curl/{prevFiles/prev_e96371_dc1123_src#main.c,revFiles/e96371_dc1123_src#main.c}: getparameter)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

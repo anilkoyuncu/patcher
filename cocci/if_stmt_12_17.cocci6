@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->timescale > UINT16_MAX)  
++ if (E0->timescale > UINT16_MAX || !E0->par->channels)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_fa19fb_6cc6b6_libavformat#movenc.c,revFiles/fa19fb_6cc6b6_libavformat#movenc.c}: mov_write_audio_tag)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

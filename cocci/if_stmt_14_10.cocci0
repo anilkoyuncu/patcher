@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (strncmp((char *)tvb_get_string(wmem_packet_scope(), E0, E1, 3), "MMS", 3) != 0)  
++ if (strncmp((char *)tvb_get_string_enc(wmem_packet_scope(), E0, E1, 3,  ENC_ASCII),  "MMS", 3) != 0)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_971ffd_421d81_epan#dissectors#packet-ms-mms.c,revFiles/971ffd_421d81_epan#dissectors#packet-ms-mms.c}: dissect_msmms_command)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

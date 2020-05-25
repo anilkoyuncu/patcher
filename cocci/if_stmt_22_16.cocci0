@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0 = JCC_JNE; 
++ E0 = JCC_JE; 
+// Infered from: (qemu/{prevFiles/prev_bb210e_ac56dd_tcg#i386#tcg-target.c,revFiles/bb210e_ac56dd_tcg#i386#tcg-target.c}: tcg_out_brcond), (qemu/{prevFiles/prev_bb210e_ac56dd_tcg#x86_64#tcg-target.c,revFiles/bb210e_ac56dd_tcg#x86_64#tcg-target.c}: tcg_out_brcond)
+// False positives: (qemu/revFiles/bb210e_ac56dd_tcg#i386#tcg-target.c: tcg_out_brcond), (qemu/revFiles/bb210e_ac56dd_tcg#x86_64#tcg-target.c: tcg_out_brcond)
+// Recall: 0.40, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

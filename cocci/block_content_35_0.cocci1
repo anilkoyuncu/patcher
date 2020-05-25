@@ -1,0 +1,19 @@
+@@
+identifier I0;
+expression E1, E3, E5, E7, E2, E4, E6;
+@@
+- struct resource *I0; 
+  ...
+- I0 = platform_get_resource(E1, IORESOURCE_MEM, E2); 
+- E3 = devm_ioremap_resource(&E1->dev, I0); 
++ E3 = devm_platform_ioremap_resource(E1, E2); 
+  ...
+- I0 = platform_get_resource(E1, IORESOURCE_MEM, E4); 
+- E5 = devm_ioremap_resource(&E1->dev, I0); 
+  ...
+- I0 = platform_get_resource(E1, IORESOURCE_MEM, E6); 
+- E7 = devm_ioremap_resource(&E1->dev, I0); 
+// Infered from: (linux/{prevFiles/prev_7fdd7f7_42c184a_drivers#perf#xgene_pmu.c,revFiles/7fdd7f7_42c184a_drivers#perf#xgene_pmu.c}: acpi_pmu_probe_active_mcb_mcu_l3c)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

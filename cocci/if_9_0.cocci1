@@ -1,0 +1,12 @@
+@@
+@@
+- if (mca_btl_vader_component.segment_size > (1 << MCA_BTL_VADER_OFFSET_BITS))  
++ if (mca_btl_vader_component.segment_size > (1ul << MCA_BTL_VADER_OFFSET_BITS))  
+  {
+- mca_btl_vader_component.segment_size = 2 << MCA_BTL_VADER_OFFSET_BITS; 
++ mca_btl_vader_component.segment_size = 2ul << MCA_BTL_VADER_OFFSET_BITS; 
+  }
+// Infered from: (ompi/{prevFiles/prev_f45364_6dd29a_ompi#mca#btl#vader#btl_vader_component.c,revFiles/f45364_6dd29a_ompi#mca#btl#vader#btl_vader_component.c}: mca_btl_vader_component_init)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

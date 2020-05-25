@@ -1,0 +1,62 @@
+@@
+identifier I0;
+typedef uint32_t;
+@@
+- uint32_t I0 = ~0; 
++ uint32_t I0 = ~0U; 
+// Infered from: (git/{prevFiles/prev_952fba_d7a10c_vcs-svn#string_pool.c,revFiles/952fba_d7a10c_vcs-svn#string_pool.c}: pool_tok_seq)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.08, Precision: 0.75
+// -- Node Change --
+// Recall: 0.08, Precision: 0.75
+// -- General --
+// Functions fully changed: 3/39(7%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_976300_7baa87_modules#video_output#xcb#render.c: Prepare
+ - wireshark/prevFiles/prev_d35789_5fd2ec_epan#dissectors#packet-dcom-remunkn.c: 
+ - gtk/prevFiles/prev_288b15_7bd244_demos#gtk-demo#transparent.c: do_transparent
+ - FFmpeg/prevFiles/prev_c15642_0a9e78_libavcodec#sheervideo.c: decode_ybyr
+ - php-src/prevFiles/prev_73d533_22491f_sapi#cgi#fastcgi.c: fcgi_accept_request
+ - codeflaws/prevFiles/prev_620-B-17335093-17335131.c: 
+ - FFmpeg/prevFiles/prev_fd8a83_602e97_libavcodec#pngdec.c: 
+ - qemu/prevFiles/prev_569b49_8b47b7_target-arm#helper.c: register_cp_regs_for_features
+ - codeflaws/prevFiles/prev_495-A-14675479-14675501.c: main
+ - codeflaws/prevFiles/prev_495-A-13407847-13407860.c: main
+ - qemu/prevFiles/prev_f0d4dc_80765f_target-s390x#kvm.c: kvm_s390_crw_mchk
+ - codeflaws/prevFiles/prev_495-A-14848767-14848797.c: main
+ - codeflaws/prevFiles/prev_495-A-11531225-11531240.c: main
+ - FFmpeg/prevFiles/prev_ffe2c0_7a094c_libavcodec#xsubdec.c: 
+ - git/prevFiles/prev_952fba_d7a10c_test-treap.c: main
+ - ompi/prevFiles/prev_44b83e_931924_test#mca#ns#ns_nds.c: test2
+ - qemu/prevFiles/prev_91dbee_6e9965_hw#input#hid.c: 
+ - git/prevFiles/prev_952fba_d7a10c_vcs-svn#string_pool.c: 
+ - openssl/prevFiles/prev_6ed12ce_f650ab_ssl#statem#extensions.c: tls_psk_do_binder
+ - FFmpeg/prevFiles/prev_f0e7b0_9d3069_libavcodec#sheervideo.c: decode_argx
+ - qemu/prevFiles/prev_0ee4de5_ba4d26_hw#input#hid.c: 
+ - wireshark/prevFiles/prev_ae1213_d9a118_packet-dcerpc-remact.c: 
+ - cairo/prevFiles/prev_9fc3f1_722e97_src#cairo-cff-subset.c: 
+ - FFmpeg/prevFiles/prev_891f76_f0ff82_libavformat#movenc.c: ff_mov_write_packet
+ - qemu/prevFiles/prev_12004c_4246e2_hw#xtensa#xtfpga.c: xtensa_ml605_init
+ - openssl/prevFiles/prev_6e28b6_3b5c1d_ssl#d1_both.c: 
+ - FFmpeg/prevFiles/prev_e23a05_69619a_libavcodec#sp5xdec.c: 
+ - php-src/prevFiles/prev_da0952_e5ab51_sapi#cgi#fastcgi.c: fcgi_accept_request
+ - php-src/prevFiles/prev_38a632_303b62_ext#sockets#sockets.c: 
+ - qemu/prevFiles/prev_926de7_c2d306_audio#ossaudio.c: 
+ - qemu/prevFiles/prev_9bf502_5c6b48_hw#ppc#spapr.c: spapr_populate_pa_features
+ - FFmpeg/prevFiles/prev_19321a_e5de6d_libavformat#utils.c: ff_generate_avci_extradata
+ - wireshark/prevFiles/prev_5633f7_337ad4_epan#dissectors#packet-asterix.c: 
+ - ompi/prevFiles/prev_cc4bb4_9eb426_opal#mca#mpool#memkind#mpool_memkind_module.c: 
+ - vlc/prevFiles/prev_e59700_57847c_modules#hw#vdpau#display.c: RenderRegion
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_c15642_0a9e78_libavcodec#sheervideo.c: decode_frame
+*/
+
+// ---------------------------------------------

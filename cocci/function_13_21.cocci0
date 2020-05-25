@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->regs[15] = 0x80000000; 
++ qemu_register_reset(secondary_cpu_reset, E0); 
+// Infered from: (qemu/{prevFiles/prev_be0f20_97fe84_hw#realview.c,revFiles/be0f20_97fe84_hw#realview.c}: realview_init)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

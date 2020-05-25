@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (isspace(*E0))  
++ while (av_isspace(*E0))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_393dcb_9ad3cd_compat#strtod.c,revFiles/393dcb_9ad3cd_compat#strtod.c}: avpriv_strtod)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

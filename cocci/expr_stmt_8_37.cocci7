@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- add_boot_device_path(E0->qdev.conf.bootindex, &E1->qdev, ",0"); 
++ add_boot_device_path(E0->qdev.conf.bootindex, &E1->qdev, NULL); 
+// Infered from: (qemu/{prevFiles/prev_708282_00984e_hw#scsi-disk.c,revFiles/708282_00984e_hw#scsi-disk.c}: scsi_initfn)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

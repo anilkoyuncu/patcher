@@ -1,0 +1,10 @@
+@@
+identifier I1 = {ReadConsole ,ReadFile ,WriteConsole ,WriteFile };
+expression E5, E0, E2, E3, E4;
+@@
+- E0 = I1(E2, E3, E4, &E5, NULL); 
++ E0 = I1(E2, E3, curlx_uztoul(E4), &E5, NULL); 
+// Infered from: (curl/{prevFiles/prev_408872_d8273e_tests#server#sockfilt.c,revFiles/408872_d8273e_tests#server#sockfilt.c}: read_wincon), (curl/{prevFiles/prev_408872_d8273e_tests#server#sockfilt.c,revFiles/408872_d8273e_tests#server#sockfilt.c}: read_wincon), (curl/{prevFiles/prev_408872_d8273e_tests#server#sockfilt.c,revFiles/408872_d8273e_tests#server#sockfilt.c}: write_wincon), (curl/{prevFiles/prev_408872_d8273e_tests#server#sockfilt.c,revFiles/408872_d8273e_tests#server#sockfilt.c}: write_wincon)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

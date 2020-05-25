@@ -1,0 +1,9 @@
+@@
+@@
+- return _cairo_error(CAIRO_STATUS_NO_MEMORY); 
++ return CAIRO_INT_STATUS_UNSUPPORTED; 
+// Infered from: (cairo/{prevFiles/prev_c8dca5_3a94f4_src#cairo-xcb-shm.c,revFiles/c8dca5_3a94f4_src#cairo-xcb-shm.c}: _cairo_xcb_connection_allocate_shm_info)
+// False positives: (cairo/revFiles/c8dca5_3a94f4_src#cairo-xcb-shm.c: _cairo_xcb_connection_allocate_shm_info), (cairo/revFiles/c8dca5_3a94f4_src#cairo-xcb-shm.c: _cairo_xcb_shm_mem_pool_init)
+// Recall: 0.08, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

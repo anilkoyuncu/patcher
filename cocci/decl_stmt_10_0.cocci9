@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- platform_set_drvdata(E0, E1); 
+  ...
+- E2 = watchdog_register_device(E1); 
++ E2 = devm_watchdog_register_device(&E0->dev, E1); 
+// Infered from: (linux/{prevFiles/prev_396164_c8841a6_drivers#watchdog#intel-mid_wdt.c,revFiles/396164_c8841a6_drivers#watchdog#intel-mid_wdt.c}: mid_wdt_probe)
+// False positives: (linux/revFiles/80cb6b_d2a10c_drivers#watchdog#max63xx_wdt.c: max63xx_wdt_probe), (linux/revFiles/b42488b_16c4614_drivers#watchdog#twl4030_wdt.c: twl4030_wdt_probe)
+// Recall: 0.01, Precision: 0.56, Matching recall: 0.20
+
+// ---------------------------------------------

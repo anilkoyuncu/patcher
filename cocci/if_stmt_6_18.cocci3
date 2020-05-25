@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->headers_in.expect && E0->http_version < NGX_HTTP_VERSION_11)  
++ if (E0->headers_in.expect && E0->http_version > NGX_HTTP_VERSION_10)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_ce5595_40e226_src#http#ngx_http_core_module.c,revFiles/ce5595_40e226_src#http#ngx_http_core_module.c}: ngx_http_core_find_config_phase)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

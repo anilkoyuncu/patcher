@@ -1,0 +1,27 @@
+@@
+@@
+- return ORTE_ERR_IN_ERRNO; 
++ exit(01); 
+// Infered from: (ompi/{prevFiles/prev_9e840f_ac23fa_orte#mca#pls#rsh#pls_rsh_module.c,revFiles/9e840f_ac23fa_orte#mca#pls#rsh#pls_rsh_module.c}: orte_pls_rsh_probe)
+// False positives: (ompi/revFiles/9e840f_ac23fa_orte#mca#pls#rsh#pls_rsh_module.c: orte_pls_rsh_probe)
+// Recall: 0.33, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch did not apply:
+ - ompi/prevFiles/prev_9e840f_ac23fa_orte#mca#pls#rsh#pls_rsh_module.c: orte_pls_rsh_launch
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - ompi/prevFiles/prev_9e840f_ac23fa_orte#mca#pls#rsh#pls_rsh_module.c: orte_pls_rsh_probe
+*/
+
+// ---------------------------------------------

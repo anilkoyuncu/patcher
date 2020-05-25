@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- dissector_delete("tcp.port", E0, dissect_smtp); 
++ old_dissector_delete("tcp.port", E0, dissect_smtp); 
+// Infered from: (wireshark/{prevFiles/prev_296265_fe7540_packet-smtp.c,revFiles/296265_fe7540_packet-smtp.c}: proto_reg_handoff_smtp)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

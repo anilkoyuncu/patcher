@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = BIO_flush(SSL_get_wbio(E1)); 
++ E0 = BIO_flush(E1->wbio); 
+// Infered from: (openssl/{prevFiles/prev_2e7dc7_590ed3_ssl#statem#statem_dtls.c,revFiles/2e7dc7_590ed3_ssl#statem#statem_dtls.c}: dtls1_do_write)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

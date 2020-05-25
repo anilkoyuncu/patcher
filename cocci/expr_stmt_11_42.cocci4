@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+@@
+- playlist_Control(E0, PLAYLIST_VIEWPLAY, true, NULL,  playlist_ItemGetById(E0, E1)); 
++ playlist_ViewPlay(E0, NULL, playlist_ItemGetById(E0, E1)); 
+// Infered from: (vlc/{prevFiles/prev_f4dbb8_343817_modules#lua#libs#playlist.c,revFiles/f4dbb8_343817_modules#lua#libs#playlist.c}: vlclua_playlist_gotoitem)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 1.00
+// -- Node Change --
+// Recall: 0.42, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_81ee1e_846f49_lib#hostip.c: remove_entry_if_stale
+ - curl/prevFiles/prev_81ee1e_846f49_lib#hostip.c: fetch_addr
+ - curl/prevFiles/prev_81ee1e_846f49_lib#hostip.c: free_all_entries
+*/
+
+// ---------------------------------------------

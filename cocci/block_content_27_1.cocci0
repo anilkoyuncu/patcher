@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef ompi_communicator_t;
+@@
+- OMPI_ERRHANDLER_CHECK(E0, (ompi_communicator_t *)NULL, E0, E1); 
++ OMPI_ERRHANDLER_CHECK(E0, MPI_COMM_WORLD, E0, E1); 
+// Infered from: (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#test.c,revFiles/db2b35d_27874a_src#mpi#c#test.c}: MPI_Test), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#testsome.c,revFiles/db2b35d_27874a_src#mpi#c#testsome.c}: MPI_Testsome), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#testsome.c,revFiles/db2b35d_27874a_src#mpi#c#testsome.c}: MPI_Testsome), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#testany.c,revFiles/db2b35d_27874a_src#mpi#c#testany.c}: MPI_Testany), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#cancel.c,revFiles/db2b35d_27874a_src#mpi#c#cancel.c}: MPI_Cancel), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#waitsome.c,revFiles/db2b35d_27874a_src#mpi#c#waitsome.c}: MPI_Waitsome), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#waitsome.c,revFiles/db2b35d_27874a_src#mpi#c#waitsome.c}: MPI_Waitsome), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#waitall.c,revFiles/db2b35d_27874a_src#mpi#c#waitall.c}: MPI_Waitall), (ompi/{prevFiles/prev_db2b35d_27874a_src#mpi#c#waitany.c,revFiles/db2b35d_27874a_src#mpi#c#waitany.c}: MPI_Waitany)
+// Recall: 0.58, Precision: 1.00, Matching recall: 0.58
+
+// ---------------------------------------------

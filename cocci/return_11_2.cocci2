@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- return append_arg(0, E0, E1, g_strdup("-nodefaults -display none")); 
++ return append_arg(0, E0, E1, g_strdup("-nodefaults")); 
+// Infered from: (qemu/{prevFiles/prev_2ad645_06d22a_tests#hd-geo-test.c,revFiles/2ad645_06d22a_tests#hd-geo-test.c}: setup_common)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_572efd_53f996_gtk#webbrowser.c: filemanager_open_directory
+*/
+
+// ---------------------------------------------

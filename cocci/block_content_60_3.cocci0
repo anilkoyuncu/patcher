@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- *E0 = XR_TRANSFORM_ZERO; 
++ double t; 
+// Infered from: (cairo/{prevFiles/prev_ba6c49_91f096_src#xrtransform.c,revFiles/ba6c49_91f096_src#xrtransform.c}: XrTransformMultiply), (cairo/{prevFiles/prev_ba6c49_91f096_xrtransform.c,revFiles/ba6c49_91f096_xrtransform.c}: XrTransformMultiply)
+// Recall: 0.22, Precision: 1.00, Matching recall: 0.22
+
+// ---------------------------------------------

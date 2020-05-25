@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4;
+typedef proto_item;
+@@
+- proto_item *I0 = NULL; 
+  ...
+- proto_tree_add_uint_hidden(E1, hf_pktc_version_major, E2, E3, 1,  (E4 >> 4) & 0x0f); 
+- proto_tree_add_uint_hidden(E1, hf_pktc_version_minor, E2, E3, 1, (E4) & 0x0f); 
++ hidden_item = proto_tree_add_uint(E1, hf_pktc_version_major, E2, E3, 1,  (E4 >> 4) & 0x0f); 
++ PROTO_ITEM_SET_HIDDEN(hidden_item); 
++ hidden_item = proto_tree_add_uint(E1, hf_pktc_version_minor, E2, E3, 1,  (E4) & 0x0f); 
++ PROTO_ITEM_SET_HIDDEN(hidden_item); 
+// Infered from: (wireshark/{prevFiles/prev_b3aa52_558c1b_epan#dissectors#packet-pktc.c,revFiles/b3aa52_558c1b_epan#dissectors#packet-pktc.c}: dissect_pktc)
+// Recall: 0.27, Precision: 1.00, Matching recall: 0.86
+
+// ---------------------------------------------

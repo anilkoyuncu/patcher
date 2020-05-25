@@ -1,0 +1,40 @@
+@@
+identifier I0;
+expression E1;
+typedef mca_pml_cm_send_request_t;
+@@
+  mca_pml_cm_send_request_t *I0; 
+  ...
+- if (E1)  
++ if (I0->req_send.req_send_mode == MCA_PML_BASE_SEND_BUFFERED || NULL == ompi_mtl->mtl_send)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_9a1221_3d220c_ompi#mca#pml#cm#pml_cm_send.c,revFiles/9a1221_3d220c_ompi#mca#pml#cm#pml_cm_send.c}: mca_pml_cm_send)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 0.45, Precision: 0.83
+// -- Node Change --
+// Recall: 0.56, Precision: 0.83
+// -- General --
+// Functions fully changed: 5/12(41%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_a2e006_05a7af_modules#demux#mp4#mp4.c: MP4_TrackGetPos
+ - cairo/prevFiles/prev_b264ae_0ccbb8_src#cairo-xcb-surface-render.c: _clip_and_composite_boxes
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_838b8b_a6cf14_Zend#zend_compile.c: do_bind_function_or_class
+*/
+
+// ---------------------------------------------

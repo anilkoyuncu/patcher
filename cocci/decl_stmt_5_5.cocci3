@@ -1,0 +1,43 @@
+@@
+identifier I0;
+expression E1;
+typedef ucs4_t;
+@@
+- I0 = E1 * sizeof(ucs4_t ) + 15; 
++ I0 = E1 * sizeof(int ) + 15; 
+// Infered from: (php-src/{prevFiles/prev_0f1f635_55e2bb_ext#iconv#iconv.c,revFiles/0f1f635_55e2bb_ext#iconv#iconv.c}: php_iconv_string)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.31, Precision: 0.67
+// -- Node Change --
+// Recall: 0.27, Precision: 0.50
+// -- General --
+// Functions fully changed: 2/15(13%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_0f1f635_55e2bb_ext#iconv#iconv.c: php_iconv_string
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_f934bc_df9a7a0_wsutil#wsgetopt.c: _getopt_internal_r
+ - curl/prevFiles/prev_1038d0_f80a50_lib#pop3.c: Curl_pop3_write
+ - FFmpeg/prevFiles/prev_a4fe66_9b762e_libavformat#mov.c: mov_probe
+ - qemu/prevFiles/prev_b220cb_9c226a_linux-user#sparc#signal.c: 
+ - php-src/prevFiles/prev_03bf8c_e68788_ext#xmlrpc#xmlrpc-epi-php.c: determine_vector_type
+ - libarchive/prevFiles/prev_424f10_bcd97e_libarchive#test#test_sparse_basic.c: create_sparse_file
+ - wireshark/prevFiles/prev_f68734_ccdf52_epan#dissectors#packet-dcerpc-netlogon.c: netlogon_dissect_netrserverreqchallenge_rqst
+ - curl/prevFiles/prev_700335_368fd5_lib#hmac.c: Curl_HMAC_init
+ - vlc/prevFiles/prev_6ccfad_0c0ca7_modules#stream_out#standard.c: 
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_f934bc_df9a7a0_wsutil#wsgetopt.c: exchange
+ - php-src/prevFiles/prev_03bf8c_e68788_ext#xmlrpc#xmlrpc-epi-php.c: add_zval
+ - php-src/prevFiles/prev_5b9f3a_99e236_ext#standard#quot_print.c: php_quot_print_decode
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- gtk_widget_get_allocation(E0, &E1); 
++ gtk_widget_get_outer_allocation(E0, &E1); 
+// Infered from: (gtk/{prevFiles/prev_3dc6d2_2c2867_gtk#gtklistbox.c,revFiles/3dc6d2_2c2867_gtk#gtklistbox.c}: ensure_row_visible), (gtk/{prevFiles/prev_3dc6d2_2c2867_gtk#gtklistbox.c,revFiles/3dc6d2_2c2867_gtk#gtklistbox.c}: ensure_row_visible)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

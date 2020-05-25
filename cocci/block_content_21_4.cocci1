@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (!strcmp(vlc_internals(E0)->psz_name, E1))  
++ const  char *objname = vlc_internals(E0)->psz_name; 
++ if (objname && !strcmp(objname, E1))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_4041e2_167c59_src#misc#objects.c,revFiles/4041e2_167c59_src#misc#objects.c}: FindParentName)
+// Recall: 0.27, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

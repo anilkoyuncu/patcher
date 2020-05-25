@@ -1,0 +1,41 @@
+@@
+expression E3, E2, E1, E0;
+@@
+- if (E0 &  E1)  
+- {
+- return; 
+- }
+  ...
+- if (E2 &&  E3)  
+- {
+  ...
+- }
+// Infered from: (tmux/{prevFiles/prev_98967c_82760a_alerts.c,revFiles/98967c_82760a_alerts.c}: alerts_queue)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.60
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.46, Precision: 1.00
+// -- Node Change --
+// Recall: 0.39, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/13(30%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_5cd75c_b15aa97_builtin#branch.c: cmd_branch
+ - tmux/prevFiles/prev_98967c_82760a_alerts.c: alerts_queue
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_35daf3_eebde4_cmdutils.c: locate_option
+ - FFmpeg/prevFiles/prev_29ffee_da54ad_libavcodec#h264.c: decode_slice_header
+ - curl/prevFiles/prev_9aed99_b7e872_lib#vssh#libssh.c: myssh_block_statemach
+ - linux/prevFiles/prev_c14ea0ca6_90f5df_drivers#net#wan#pc300_drv.c: cpc_ioctl
+ - curl/prevFiles/prev_97c17e_69ea98_lib#ftp.c: AllowServerConnect
+ - curl/prevFiles/prev_7d5524_36fbb1_lib#vssh#libssh2.c: ssh_block_statemach
+ - linux/prevFiles/prev_4cb56b_93bc933_drivers#net#wan#pc300_drv.c: cpc_ioctl
+*/
+
+// ---------------------------------------------

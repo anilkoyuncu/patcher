@@ -1,0 +1,28 @@
+@@
+expression E0, E1, E2;
+@@
+- E0.buf = read_object_with_reference(E1, tree_type, &E0.size, E2); 
++ E0.buf = buffer = read_object_with_reference(E1, tree_type, &E0.size, E2); 
+// Infered from: (git/{prevFiles/prev_7e18e5_d249b4_builtin-tar-tree.c,revFiles/7e18e5_d249b4_builtin-tar-tree.c}: generate_tar)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 0.50, Precision: 0.50
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_7e18e5_d249b4_builtin-tar-tree.c: generate_tar
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - git/prevFiles/prev_7e18e5_d249b4_builtin-tar-tree.c: remote_tar
+ - vlc/prevFiles/prev_cd579f_a95457_modules#video_filter#logo.c: LogoListLoad
+*/
+
+// ---------------------------------------------

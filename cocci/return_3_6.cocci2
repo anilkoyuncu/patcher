@@ -1,0 +1,8 @@
+@@
+@@
+- return "Ti6er expired or retransmission count surpassed for INTERRUPT"; 
++ return "Timer expired or retransmission count surpassed for INTERRUPT"; 
+// Infered from: (wireshark/{prevFiles/prev_1d7f90_4df356_packet-x25.c,revFiles/1d7f90_4df356_packet-x25.c}: clear_diag)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

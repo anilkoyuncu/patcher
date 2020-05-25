@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (gdk_display_is_closed(E0->closed))  
++ if (gdk_display_is_closed(E0))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_f598f7_4a2860_gdk#x11#gdkcursor-x11.c,revFiles/f598f7_4a2860_gdk#x11#gdkcursor-x11.c}: gdk_cursor_new_from_pixmap)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- if (!E0->client_decorated)  
++ if (!E0->decorated || !E0->client_decorated)  
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_9ed2c8_9adfc8_gtk#gtkwindow.c,revFiles/9ed2c8_9adfc8_gtk#gtkwindow.c}: get_shadow_width)
+// False positives: (gtk/revFiles/9ed2c8_9adfc8_gtk#gtkwindow.c: gtk_window_realize)
+// Recall: 0.20, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,15 @@
+@@
+identifier I0, I1, I2;
+typedef uint8_t;
+@@
+  int null_read_packet(void *I0, uint8_t *I1, int I2)  
+  {
+  ...
+- return -1; 
++ return I2; 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_143bf7_ebd624_libavformat#mov.c,revFiles/143bf7_ebd624_libavformat#mov.c}: null_read_packet)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

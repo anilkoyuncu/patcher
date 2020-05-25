@@ -1,0 +1,9 @@
+@@
+typedef GFunc;
+@@
+- wmem_list_foreach(quic_connections, (GFunc )quic_connection_destroy, NULL); 
++ wmem_list_foreach(quic_connections, quic_connection_destroy, NULL); 
+// Infered from: (wireshark/{prevFiles/prev_875e34_42d43a_epan#dissectors#packet-quic.c,revFiles/875e34_42d43a_epan#dissectors#packet-quic.c}: quic_cleanup)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

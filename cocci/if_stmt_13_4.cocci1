@@ -1,0 +1,29 @@
+@@
+identifier I1;
+expression E0;
+@@
+- if (E0->I1->s_flags & MS_RDONLY)  
++ if (sb_rdonly(E0->I1))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_bc98a4_94e92e_fs#btrfs#root-tree.c,revFiles/bc98a4_94e92e_fs#btrfs#root-tree.c}: btrfs_find_orphan_roots), (linux/{prevFiles/prev_bc98a4_94e92e_fs#btrfs#volumes.c,revFiles/bc98a4_94e92e_fs#btrfs#volumes.c}: btrfs_cancel_balance), (linux/{prevFiles/prev_bc98a4_94e92e_fs#btrfs#dev-replace.c,revFiles/bc98a4_94e92e_fs#btrfs#dev-replace.c}: __btrfs_dev_replace_cancel), (linux/{prevFiles/prev_bc98a4_94e92e_fs#gfs2#quota.c,revFiles/bc98a4_94e92e_fs#gfs2#quota.c}: qd_fish), (linux/{prevFiles/prev_bc98a4_94e92e_fs#overlayfs#super.c,revFiles/bc98a4_94e92e_fs#overlayfs#super.c}: ovl_fill_super), (linux/{prevFiles/prev_bc98a4_94e92e_fs#btrfs#extent_io.c,revFiles/bc98a4_94e92e_fs#btrfs#extent_io.c}: repair_eb_io_failure), (linux/{prevFiles/prev_bc98a4_94e92e_fs#btrfs#extent_io.c,revFiles/bc98a4_94e92e_fs#btrfs#extent_io.c}: clean_io_failure), (linux/{prevFiles/prev_bc98a4_94e92e_fs#ext4#fsync.c,revFiles/bc98a4_94e92e_fs#ext4#fsync.c}: ext4_sync_file), (linux/{prevFiles/prev_bc98a4_94e92e_fs#btrfs#ioctl.c,revFiles/bc98a4_94e92e_fs#btrfs#ioctl.c}: btrfs_ioctl_dev_replace), (linux/{prevFiles/prev_bc98a4_94e92e_fs#cachefiles#bind.c,revFiles/bc98a4_94e92e_fs#cachefiles#bind.c}: cachefiles_daemon_add_cache), (linux/{prevFiles/prev_bc98a4_94e92e_fs#btrfs#sysfs.c,revFiles/bc98a4_94e92e_fs#btrfs#sysfs.c}: btrfs_feature_attr_store), (linux/{prevFiles/prev_bc98a4_94e92e_fs#btrfs#sysfs.c,revFiles/bc98a4_94e92e_fs#btrfs#sysfs.c}: btrfs_label_store), (linux/{prevFiles/prev_bc98a4_94e92e_fs#reiserfs#inode.c,revFiles/bc98a4_94e92e_fs#reiserfs#inode.c}: reiserfs_write_inode), (linux/{prevFiles/prev_bc98a4_94e92e_fs#gfs2#recovery.c,revFiles/bc98a4_94e92e_fs#gfs2#recovery.c}: gfs2_recover_func), (linux/{prevFiles/prev_bc98a4_94e92e_fs#nilfs2#inode.c,revFiles/bc98a4_94e92e_fs#nilfs2#inode.c}: nilfs_writepages), (linux/{prevFiles/prev_bc98a4_94e92e_fs#nilfs2#inode.c,revFiles/bc98a4_94e92e_fs#nilfs2#inode.c}: nilfs_writepage)
+// Recall: 0.76, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.85, Precision: 1.00
+// -- Node Change --
+// Recall: 0.81, Precision: 1.00
+// -- General --
+// Functions fully changed: 17/20(85%)
+
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_0983e5_6a55617_drivers#s390#char#tape_std.c: tape_std_mtsetblk
+ - linux/prevFiles/prev_0983e5_6a55617_drivers#s390#char#tape_char.c: tapechar_check_idalbuffer
+ - gtk/prevFiles/prev_10e49a_830eb6_gtk#gtkscrolledwindow.c: gtk_scrolled_window_measure
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,18 @@
+@@
+identifier I0;
+expression E1;
+@@
+- static int I0; 
++ static int initialized; 
+  ...
+- if (E1)  
++ if (!initialized)  
+  {
+- I0 = 1; 
++ initialized = 1; 
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavcodec#imgconvert.c,revFiles/5e5348_f1cc49_libavcodec#imgconvert.c}: img_convert)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

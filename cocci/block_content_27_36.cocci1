@@ -1,0 +1,27 @@
+@@
+identifier I0, I1;
+expression E2;
+@@
+- spprintf(&I0, 0, "Set-Cookie: %s=", I1); 
+- efree(E2); 
++ spprintf(&I0, 0, "Set-Cookie: %s=", I1->val); 
++ STR_FREE(I1); 
+// Infered from: (php-src/{prevFiles/prev_f07b41_0e8c20e_ext#session#session.c,revFiles/f07b41_0e8c20e_ext#session#session.c}: php_session_remove_cookie)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.57
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_1aecda_ca146a6_ext#standard#mail.c: php_mail
+ - php-src/prevFiles/prev_f07b41_0e8c20e_ext#session#session.c: php_session_remove_cookie
+*/
+
+// ---------------------------------------------

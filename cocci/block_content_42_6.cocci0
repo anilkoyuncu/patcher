@@ -1,0 +1,8 @@
+@@
+expression E1, E0;
+@@
+- E0[E1++] = '.'; 
+// Infered from: (nginx/{prevFiles/prev_fb9693_e2bc3c_src#http#ngx_http_spdy.c,revFiles/fb9693_e2bc3c_src#http#ngx_http_spdy.c}: ngx_http_spdy_alloc_large_header_buffer), (nginx/{prevFiles/prev_fb9693_e2bc3c_src#http#ngx_http_spdy.c,revFiles/fb9693_e2bc3c_src#http#ngx_http_spdy.c}: ngx_http_spdy_alloc_large_header_buffer), (nginx/{prevFiles/prev_fb9693_e2bc3c_src#http#ngx_http_spdy.c,revFiles/fb9693_e2bc3c_src#http#ngx_http_spdy.c}: ngx_http_spdy_alloc_large_header_buffer), (nginx/{prevFiles/prev_c01481_52e4dc_src#http#ngx_http_request.c,revFiles/c01481_52e4dc_src#http#ngx_http_request.c}: ngx_http_process_request_headers), (nginx/{prevFiles/prev_c01481_52e4dc_src#http#ngx_http_request.c,revFiles/c01481_52e4dc_src#http#ngx_http_request.c}: ngx_http_process_request_headers), (nginx/{prevFiles/prev_c01481_52e4dc_src#http#ngx_http_request.c,revFiles/c01481_52e4dc_src#http#ngx_http_request.c}: ngx_http_process_request_headers)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

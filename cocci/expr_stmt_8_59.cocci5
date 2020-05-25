@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- return gsm_mult(E0, E1) << 1; 
++ return gsm_mult(E0, E1) * 2; 
+// Infered from: (FFmpeg/{prevFiles/prev_e5aa6f_9ed53d_libavcodec#gsmdec_template.c,revFiles/e5aa6f_9ed53d_libavcodec#gsmdec_template.c}: decode_log_area)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.86
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - gstreamer/prevFiles/prev_a813aa_79570f_tests#check#elements#fakesink.c: GST_START_TEST
+*/
+
+// ---------------------------------------------

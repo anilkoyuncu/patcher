@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1] = lrintf(E2); 
++ E0[E1] = llrint(E2); 
+// Infered from: (FFmpeg/{prevFiles/prev_39e1b5_7a9d26_libavcodec#mpegaudiodec.c,revFiles/39e1b5_7a9d26_libavcodec#mpegaudiodec.c}: decode_init), (FFmpeg/{prevFiles/prev_39e1b5_7a9d26_libavcodec#mpegaudiodec.c,revFiles/39e1b5_7a9d26_libavcodec#mpegaudiodec.c}: decode_init)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+@@
+- E0 = ffurl_seek(E1->inner, E1->seek_pos, E1->seek_whence); 
+- if (E0 < 0)  
++ seek_ret = ffurl_seek(E1->inner, E1->seek_pos, E1->seek_whence); 
++ if (seek_ret < 0)  
+  {
+  ...
+- E1->io_error = E0; 
++ E1->io_error = (int )seek_ret; 
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+  ...
+- E1->seek_ret = E0; 
++ E1->seek_ret = seek_ret; 
+// Infered from: (FFmpeg/{prevFiles/prev_b821ae_1964ae_libavformat#async.c,revFiles/b821ae_1964ae_libavformat#async.c}: async_buffer_task)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.89
+
+// ---------------------------------------------

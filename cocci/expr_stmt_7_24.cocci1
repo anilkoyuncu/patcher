@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E3;
+binary operator B2 = {% ,& };
+@@
+- E0.nsecs = (E1 B2 E3) * 1000; 
++ E0.nsecs = (int )((E1 B2 E3) * 1000); 
+// Infered from: (wireshark/{prevFiles/prev_388e05_ebca64_wiretap#packetlogger.c,revFiles/388e05_ebca64_wiretap#packetlogger.c}: packetlogger_read), (wireshark/{prevFiles/prev_3d5ed0_f8693e_epan#proto.c,revFiles/3d5ed0_f8693e_epan#proto.c}: proto_tree_new_item)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

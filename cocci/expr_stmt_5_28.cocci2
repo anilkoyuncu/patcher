@@ -1,0 +1,35 @@
+@@
+expression E0;
+typedef gchar;
+@@
+- if (E0->ids.hf == -2)  
++ if (E0->ids.hf != -2)  
+  {
+- g_free(E0); 
++ return 0; 
+  }
++ g_free((gchar *)E0->abbrev); 
++ g_free((gchar *)E0->text); 
++ g_free(E0); 
+// Infered from: (wireshark/{prevFiles/prev_541afe_e8265f_epan#wslua#wslua_proto_expert.c,revFiles/541afe_e8265f_epan#wslua#wslua_proto_expert.c}: ProtoExpert__gc)
+// Recall: 0.38, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.69, Precision: 0.82
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_ace4a3_300eb8_ui#gtk#main_filter_toolbar.c: main_filter_packets
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_ace4a3_300eb8_ui#gtk#main_filter_toolbar.c: dfilter_entry_match
+*/
+
+// ---------------------------------------------

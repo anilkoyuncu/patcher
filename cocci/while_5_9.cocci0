@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- while (!E0->connected)  
++ while (!E0->ioc)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_1dc8a6_8afc224_qemu-char.c,revFiles/1dc8a6_8afc224_qemu-char.c}: tcp_chr_wait_connected)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

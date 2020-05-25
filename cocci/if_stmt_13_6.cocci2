@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->act && E0->cid_table->cid != 1256)  
++ if (E0->act && E0->cid_table->cid != 1256 && E0->cid_table->cid != 1270)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_66db50_118a3c_libavcodec#dnxhddec.c,revFiles/66db50_118a3c_libavcodec#dnxhddec.c}: dnxhd_decode_header)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

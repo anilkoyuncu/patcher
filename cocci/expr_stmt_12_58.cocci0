@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->i_length = E1->i_length; 
++ E0->i_length = E1->i_length * E0->i_buffer / E1->i_buffer; 
+// Infered from: (vlc/{prevFiles/prev_2b0cd8_ad50ef_modules#audio_filter#scaletempo.c,revFiles/2b0cd8_ad50ef_modules#audio_filter#scaletempo.c}: DoWork)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

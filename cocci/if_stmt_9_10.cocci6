@@ -1,0 +1,36 @@
+@@
+identifier I0;
+expression E1;
+typedef decoder_sys_t;
+@@
+  decoder_sys_t *I0 = malloc(sizeof(decoder_sys_t )); 
+  ...
+- if (E1->p_sys == NULL)  
++ if (I0 == NULL)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_0c284c_17494b_modules#codec#png.c,revFiles/0c284c_17494b_modules#codec#png.c}: OpenDecoder)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.53, Precision: 1.00
+// -- Node Change --
+// Recall: 0.52, Precision: 1.00
+// -- General --
+// Functions fully changed: 8/15(53%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_9c168f_079d553_libavfilter#af_afade.c: filter_frame
+ - FFmpeg/prevFiles/prev_51f316_488eec_libavcodec#cook.c: cook_decode_init
+ - vlc/prevFiles/prev_c3d7c3_eda87e_modules#demux#playlist#playlist.c: ProcessMRL
+ - wireshark/prevFiles/prev_fe6dc2_a358ec_epan#dissectors#packet-netflow.c: dissect_v9_options_template
+ - wireshark/prevFiles/prev_27f92a_ff783a_epan#emem.c: ep_check_canary_integrity
+ - gtk/prevFiles/prev_6166fc_908911_gtk#gtkfilesystemmodel.c: node_should_be_visible
+ - FFmpeg/prevFiles/prev_554cae_083d9b_libavcodec#cook.c: cook_decode_init
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef int16_t;
+@@
+- memcpy(dst1, dst0, E0); 
++ memcpy(dst1, dst0, sizeof(int16_t ) * E0); 
+// Infered from: (FFmpeg/{prevFiles/prev_09ce55_36eae4_tests#checkasm#hevc_add_res.c,revFiles/09ce55_36eae4_tests#checkasm#hevc_add_res.c}: check_add_res)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

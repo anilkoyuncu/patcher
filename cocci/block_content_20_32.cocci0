@@ -1,0 +1,12 @@
+@@
+identifier I0, I1;
+typedef GtkVButtonBox;
+@@
+- GtkVButtonBox *I0; 
+- I0 = g_object_new(I1, NULL); 
+- return GTK_WIDGET(I0); 
++ return g_object_new(I1, NULL); 
+// Infered from: (gtk/{prevFiles/prev_11ec2e_872152_gtk#gtkvbbox.c,revFiles/11ec2e_872152_gtk#gtkvbbox.c}: gtk_vbutton_box_new)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

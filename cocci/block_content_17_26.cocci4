@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && E0->last_frame == E1->fd->num)  
++ if (E0 != NULL && E0->last_frame == E1->fd->num)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_dae520_0bb81b_epan#dissectors#packet-bthci_acl.c,revFiles/dae520_0bb81b_epan#dissectors#packet-bthci_acl.c}: dissect_btacl)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

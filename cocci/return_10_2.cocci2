@@ -1,0 +1,8 @@
+@@
+expression list E0;
+@@
+- return cipher_init (E0); 
+// Infered from: (openssl/{prevFiles/prev_226f2b_16bfe6_engines#e_devcrypto.c,revFiles/226f2b_16bfe6_engines#e_devcrypto.c}: cipher_ctrl)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- const  char *I0 = E1->class_id; 
++ const  char *I0; 
+// Infered from: (wireshark/{prevFiles/prev_c47503_432e12_conditions.c,revFiles/c47503_432e12_conditions.c}: cnd_delete)
+// Recall: 0.04, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

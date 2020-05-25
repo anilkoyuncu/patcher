@@ -1,0 +1,7 @@
+@@
+@@
+- printf("AOF is not valid\n"); 
+// Infered from: (redis/{prevFiles/prev_11182a_fc7ecd_src#redis-check-aof.c,revFiles/11182a_fc7ecd_src#redis-check-aof.c}: redis_check_aof_main)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

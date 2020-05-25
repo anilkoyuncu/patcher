@@ -1,0 +1,15 @@
+@@
+expression E0, E1, E3, E2;
+@@
+- E0->init(E1, E2, E3); 
+- if (*E3)  
++ E0->init(E1, 8, &err); 
++ if (err)  
+  {
++ error_propagate(E3, err); 
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_f6166a4_bc0e33_hw#ipmi#isa_ipmi_bt.c,revFiles/f6166a4_bc0e33_hw#ipmi#isa_ipmi_bt.c}: isa_ipmi_bt_realize), (qemu/{prevFiles/prev_f6166a4_bc0e33_hw#ipmi#pci_ipmi_bt.c,revFiles/f6166a4_bc0e33_hw#ipmi#pci_ipmi_bt.c}: pci_ipmi_bt_realize), (qemu/{prevFiles/prev_f6166a4_bc0e33_hw#ipmi#pci_ipmi_kcs.c,revFiles/f6166a4_bc0e33_hw#ipmi#pci_ipmi_kcs.c}: pci_ipmi_kcs_realize), (qemu/{prevFiles/prev_f6166a4_bc0e33_hw#ipmi#isa_ipmi_kcs.c,revFiles/f6166a4_bc0e33_hw#ipmi#isa_ipmi_kcs.c}: ipmi_isa_realize)
+// Recall: 0.24, Precision: 1.00, Matching recall: 0.83
+
+// ---------------------------------------------

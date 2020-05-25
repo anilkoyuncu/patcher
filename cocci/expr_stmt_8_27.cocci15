@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- sprint_realloc_objid(&oid_string, &E0, &E1, 1, E2, E3); 
++ sprint_realloc_objid(&oid_string, &E0, &E1, TRUE, E2, E3); 
+// Infered from: (wireshark/{prevFiles/prev_f81651_4ecd26_asn1#snmp#packet-snmp-template.c,revFiles/f81651_4ecd26_asn1#snmp#packet-snmp-template.c}: format_oid), (wireshark/{prevFiles/prev_f81651_4ecd26_asn1#snmp#packet-snmp-template.c,revFiles/f81651_4ecd26_asn1#snmp#packet-snmp-template.c}: new_format_oid)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

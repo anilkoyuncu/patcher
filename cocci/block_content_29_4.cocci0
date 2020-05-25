@@ -1,0 +1,10 @@
+@@
+expression E1, E0, E3, E2;
+@@
+- object_initialize(&E0->soc, E1, E2); 
+- object_property_add_child(OBJECT(E3), "soc", OBJECT(&E0->soc), &error_abort); 
++ object_initialize_child(OBJECT(E3), "soc", &E0->soc, E1, E2, &error_abort,  NULL); 
+// Infered from: (qemu/{prevFiles/prev_8ff62f_5657c3_hw#riscv#spike.c,revFiles/8ff62f_5657c3_hw#riscv#spike.c}: spike_v1_10_0_board_init), (qemu/{prevFiles/prev_8ff62f_5657c3_hw#riscv#spike.c,revFiles/8ff62f_5657c3_hw#riscv#spike.c}: spike_v1_09_1_board_init), (qemu/{prevFiles/prev_54f314_e1ea55_hw#riscv#sifive_e.c,revFiles/54f314_e1ea55_hw#riscv#sifive_e.c}: riscv_sifive_e_init), (qemu/{prevFiles/prev_d03137_1b0ad56_hw#arm#raspi.c,revFiles/d03137_1b0ad56_hw#arm#raspi.c}: raspi_init), (qemu/{prevFiles/prev_1b0ad56_661488_hw#arm#aspeed.c,revFiles/1b0ad56_661488_hw#arm#aspeed.c}: aspeed_board_init), (qemu/{prevFiles/prev_d03137_1b0ad56_hw#arm#kzm.c,revFiles/d03137_1b0ad56_hw#arm#kzm.c}: kzm_init), (qemu/{prevFiles/prev_d03137_1b0ad56_hw#arm#imx25_pdk.c,revFiles/d03137_1b0ad56_hw#arm#imx25_pdk.c}: imx25_pdk_init), (qemu/{prevFiles/prev_d03137_1b0ad56_hw#arm#sabrelite.c,revFiles/d03137_1b0ad56_hw#arm#sabrelite.c}: sabrelite_init), (qemu/{prevFiles/prev_d03137_1b0ad56_hw#arm#xlnx-zcu102.c,revFiles/d03137_1b0ad56_hw#arm#xlnx-zcu102.c}: xlnx_zcu102_init), (qemu/{prevFiles/prev_4eea9d_54f314_hw#riscv#sifive_u.c,revFiles/4eea9d_54f314_hw#riscv#sifive_u.c}: riscv_sifive_u_init), (qemu/{prevFiles/prev_a993cb_4eea9d_hw#riscv#virt.c,revFiles/a993cb_4eea9d_hw#riscv#virt.c}: riscv_virt_board_init)
+// Recall: 0.79, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

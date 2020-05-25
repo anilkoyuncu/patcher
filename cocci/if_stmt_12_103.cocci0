@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (strstr(E0, "file://"))  
++ if (strncmp(E0, "file://", 7) == 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_1981b9_3047a3_src#input#access.c,revFiles/1981b9_3047a3_src#input#access.c}: access2_InternalNew)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

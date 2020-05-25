@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;*E1 != '\0' > 0;E1++)  
++ for(E0 = 0;*E1 != '\0';E1++)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_d557c6_d28a10_modules#misc#httpd.c,revFiles/d557c6_d28a10_modules#misc#httpd.c}: b64_decode)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

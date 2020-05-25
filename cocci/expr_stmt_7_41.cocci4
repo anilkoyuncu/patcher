@@ -1,0 +1,11 @@
+@@
+identifier I1, I2;
+expression E0;
+@@
+- E0.I1.I2 = mca_btl_openib_component.ib_sg_list_size; 
++ E0.I1.I2 = 1; 
+// Infered from: (ompi/{prevFiles/prev_dc3f14_a87aa4_ompi#mca#btl#openib#btl_openib.c,revFiles/dc3f14_a87aa4_ompi#mca#btl#openib#btl_openib.c}: create_srq), (ompi/{prevFiles/prev_dc3f14_a87aa4_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c,revFiles/dc3f14_a87aa4_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c}: xoob_send_qp_create)
+// False positives: (ompi/revFiles/dc3f14_a87aa4_ompi#mca#btl#openib#connect#btl_openib_connect_rdmacm.c: rdmacm_setup_qp), (ompi/revFiles/dc3f14_a87aa4_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c: xoob_send_qp_create)
+// Recall: 0.32, Precision: 0.60, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,22 @@
+@@
+@@
+- BUG("Invalid section name '%s'", cf->var.buf); 
++ return error("invalid section name '%s'", cf->var.buf); 
+// Infered from: (git/{prevFiles/prev_438a87_c71d8b_config.c,revFiles/438a87_c71d8b_config.c}: store_aux_event)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_e58491_45e5f8_libavformat#wc3movie.c: wc3_read_packet
+*/
+
+// ---------------------------------------------

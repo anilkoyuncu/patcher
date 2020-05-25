@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!repo_has_object_file(the_repository, &E0))  
++ if (!repo_has_object_file_with_flags(the_repository, &E0,  OBJECT_INFO_SKIP_FETCH_OBJECT))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_e362fa_6462d5_connected.c,revFiles/e362fa_6462d5_connected.c}: check_connected)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

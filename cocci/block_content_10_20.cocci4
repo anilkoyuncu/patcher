@@ -1,0 +1,26 @@
+@@
+expression E0, E1, E2;
+@@
+- nghttp2_bufs_remove_copy(&E0->nvbufs, E1 + E2->nv.namelen + 1); 
++ rv = nghttp2_bufs_remove_copy(&E0->nvbufs, E1 + E2->nv.namelen + 1); 
+// Infered from: (wireshark/{prevFiles/prev_cbeaf0_6fa0a4_epan#nghttp2#nghttp2_hd.c,revFiles/cbeaf0_6fa0a4_epan#nghttp2#nghttp2_hd.c}: hd_inflate_remove_bufs_with_name)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.77, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch applied partially:
+ - tcl/prevFiles/prev_4a275c_2d2f6e_generic#tclCompile.c: TclPrintInstruction
+ - wireshark/prevFiles/prev_841e3a_623861_randpkt.c: seed
+ - wireshark/prevFiles/prev_cbeaf0_6fa0a4_epan#nghttp2#nghttp2_hd.c: hd_inflate_remove_bufs_with_name
+ - ompi/prevFiles/prev_889bf6_089c63_ompi#mca#dpm#base#dpm_base_common_fns.c: ompi_dpm_base_disconnect_waitall
+*/
+
+// ---------------------------------------------

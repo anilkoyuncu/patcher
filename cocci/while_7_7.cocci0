@@ -1,0 +1,13 @@
+@@
+expression E0;
+typedef oob_comm_request_t;
+@@
+- while (E0 != opal_list_get_end(&memheap_oob.req_list))  
++ while (E0 != (oob_comm_request_t *)opal_list_get_end(&memheap_oob.req_list))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_6611f4c_07134f_oshmem#mca#memheap#base#memheap_base_mkey.c,revFiles/6611f4c_07134f_oshmem#mca#memheap#base#memheap_base_mkey.c}: oshmem_mkey_recv_cb), (ompi/{prevFiles/prev_26a828_f38f2a_oshmem#mca#memheap#base#memheap_base_mkey.c,revFiles/26a828_f38f2a_oshmem#mca#memheap#base#memheap_base_mkey.c}: oshmem_mkey_recv_cb)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

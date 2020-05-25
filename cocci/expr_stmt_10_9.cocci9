@@ -1,0 +1,11 @@
+@@
+identifier I2;
+expression E0, E1;
+typedef guint8;
+@@
+- memcpy((guint8 *)&E0, (guint8 *)E1->I2.data, E1->I2.len); 
++ memcpy((guint8 *)&E0, E1->I2.data, E1->I2.len); 
+// Infered from: (wireshark/{prevFiles/prev_62d05c_4120d7_epan#dissectors#packet-ipv6.c,revFiles/62d05c_4120d7_epan#dissectors#packet-ipv6.c}: dissect_routing6), (wireshark/{prevFiles/prev_62d05c_4120d7_epan#dissectors#packet-ipv6.c,revFiles/62d05c_4120d7_epan#dissectors#packet-ipv6.c}: dissect_routing6)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

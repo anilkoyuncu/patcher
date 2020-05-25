@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- *(E0++) = '\0'; 
++ *E0 = '\0'; 
+// Infered from: (lighttpd1.4/{prevFiles/prev_598cdd_1ca52f_src#network.c,revFiles/598cdd_1ca52f_src#network.c}: network_server_init)
+// False positives: (FFmpeg/revFiles/a2a38d_bc5acf_avconv.c: opt_streamid)
+// Recall: 0.33, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

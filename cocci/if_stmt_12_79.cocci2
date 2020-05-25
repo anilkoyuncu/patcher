@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if (handle_revision_arg(E0.buf, E1, 0, REVARG_CANNOT_BE_FILENAME))  
++ if (handle_revision_arg(xstrdup(E0.buf), E1, 0, REVARG_CANNOT_BE_FILENAME))  
+  {
+  ...
+  }
+// Infered from: (git/{prevFiles/prev_70d26c_7e2010_revision.c,revFiles/70d26c_7e2010_revision.c}: read_revisions_from_stdin)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

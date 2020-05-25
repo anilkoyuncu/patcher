@@ -1,0 +1,22 @@
+@@
+expression E0, E1, E2;
+@@
+- while (E0 >= E1->style->dash[E2])  
++ while (E0 > 0.0 && E0 >= E1->style->dash[E2])  
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_207855_5eaf71_src#cairo-path-stroke.c,revFiles/207855_5eaf71_src#cairo-path-stroke.c}: _cairo_stroker_start_dash)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

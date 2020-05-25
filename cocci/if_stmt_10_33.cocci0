@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- if (zend_hash_add(BG(user_filter_map), E0, E1 + 1, (void *)E2,  sizeof(*E2) + E3, NULL) == SUCCESS && php_stream_filter_register_factory_volatile(  ) == SUCCESS)  
++ if (zend_hash_add(BG(user_filter_map), E0, E1 + 1, (void *)E2, sizeof(  *E2), NULL) == SUCCESS && php_stream_filter_register_factory_volatile(  ) == SUCCESS)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_27c72f_496099_ext#standard#user_filters.c,revFiles/27c72f_496099_ext#standard#user_filters.c}: PHP_FUNCTION)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

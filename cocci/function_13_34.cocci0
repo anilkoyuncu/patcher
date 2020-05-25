@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- EVP_CIPHER_CTX_ctrl(E0, EVP_CTRL_GET_RC2_KEY_BITS, 0, &E1); 
++ if (EVP_CIPHER_CTX_ctrl(E0, EVP_CTRL_GET_RC2_KEY_BITS, 0, &E1) <= 0)  
++ {
++ return 0; 
++ }
+// Infered from: (openssl/{prevFiles/prev_434893_c20a76_crypto#evp#e_rc2.c,revFiles/434893_c20a76_crypto#evp#e_rc2.c}: rc2_meth_to_magic)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

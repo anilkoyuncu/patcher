@@ -1,0 +1,29 @@
+@@
+type T7;
+expression E0, E1, E2, E3, E4, E5, E6, E8, E9, E10, E11, E12, E13;
+@@
+- if (EVP_DigestInit_ex(E0, E1, NULL) <= 0 || EVP_DigestUpdate(E0, E2, E3) <= 0 || EVP_DigestFinal_ex(  E0, E4, &E5) <= 0 || !tls13_hkdf_expand(E6, E1,  E6->exporter_master_secret,  (const  T7 *)E8, E9, NULL, E10, 0) || !tls13_hkdf_expand(  E6, E1, E10, E11, sizeof(E11) - 1, E4, E12, E13))  
++ if (EVP_DigestInit_ex(E0, E1, NULL) <= 0 || EVP_DigestUpdate(E0, E2, E3) <= 0 || EVP_DigestFinal_ex(  E0, E4, &E5) <= 0 || !tls13_hkdf_expand(E6, E1,  E6->exporter_master_secret,  (const  T7 *)E8, E9, NULL, E10,  E5) || !tls13_hkdf_expand(  E6, E1, E10, E11, sizeof(E11) - 1, E4, E12, E13))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_4d89bf_48feac_ssl#tls13_enc.c,revFiles/4d89bf_48feac_ssl#tls13_enc.c}: tls13_export_keying_material)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.62, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_18d658_846203_src#redis-cli.c: cliIntegrateHelp
+ - openssl/prevFiles/prev_4d89bf_48feac_ssl#tls13_enc.c: tls13_export_keying_material
+ - wireshark/prevFiles/prev_835584_0314bd_epan#addr_resolv.c: host_name_lookup_process
+*/
+
+// ---------------------------------------------

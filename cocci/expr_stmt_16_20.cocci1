@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- OBD_FREE_PTR(E0); 
++ kfree(E0); 
+// Infered from: (linux/{prevFiles/prev_d72790_c9b429_drivers#staging#lustre#lustre#obdclass#llog_obd.c,revFiles/d72790_c9b429_drivers#staging#lustre#lustre#obdclass#llog_obd.c}: llog_ctxt_destroy)
+// Recall: 0.50, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

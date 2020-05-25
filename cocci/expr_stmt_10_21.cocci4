@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef tftp_conv_info_t;
+@@
+- E0 = se_new(tftp_conv_info_t ); 
++ E0 = wmem_new(wmem_file_scope(), tftp_conv_info_t ); 
+// Infered from: (wireshark/{prevFiles/prev_fe5238_a10254_epan#dissectors#packet-tftp.c,revFiles/fe5238_a10254_epan#dissectors#packet-tftp.c}: dissect_embeddedtftp_heur), (wireshark/{prevFiles/prev_fe5238_a10254_epan#dissectors#packet-tftp.c,revFiles/fe5238_a10254_epan#dissectors#packet-tftp.c}: dissect_tftp)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

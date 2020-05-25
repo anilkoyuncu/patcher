@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0->stats_out = av_mallocz(21 * MAX_N * 3 + 4); 
++ E0->stats_out = av_mallocz(STATS_OUT_SIZE); 
+// Infered from: (FFmpeg/{prevFiles/prev_599e62_a301bb_libavcodec#huffyuvenc.c,revFiles/599e62_a301bb_libavcodec#huffyuvenc.c}: encode_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

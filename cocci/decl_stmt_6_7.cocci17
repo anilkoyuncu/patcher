@@ -1,0 +1,10 @@
+@@
+identifier I0, I2;
+expression E1;
+@@
+- int I0 = E1->output.I2; 
++ int I0 = E1->fmt_out.I2; 
+// Infered from: (vlc/{prevFiles/prev_c37501_4cd0b0_modules#video_filter#osdmenu.c,revFiles/c37501_4cd0b0_modules#video_filter#osdmenu.c}: MouseEvent), (vlc/{prevFiles/prev_c37501_4cd0b0_modules#video_filter#osdmenu.c,revFiles/c37501_4cd0b0_modules#video_filter#osdmenu.c}: MouseEvent)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

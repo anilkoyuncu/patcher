@@ -1,0 +1,11 @@
+@@
+identifier I1;
+expression E0, E2;
+@@
+- E0 = I1 | E2; 
++ E0 = E2 | I1; 
+// Infered from: (linux/{prevFiles/prev_3cfc537_a75e7ac_drivers#staging#lustre#lustre#libcfs#hash.c,revFiles/3cfc537_a75e7ac_drivers#staging#lustre#lustre#libcfs#hash.c}: cfs_hash_multi_bd_findadd_locked), (linux/{prevFiles/prev_bf6400_42d6ec1_drivers#staging#rdma#hfi1#rc.c,revFiles/bf6400_42d6ec1_drivers#staging#rdma#hfi1#rc.c}: hfi1_rc_rcv), (linux/{prevFiles/prev_1aab14_265bee_drivers#net#ethernet#intel#fm10k#fm10k_pf.c,revFiles/1aab14_265bee_drivers#net#ethernet#intel#fm10k#fm10k_pf.c}: fm10k_iov_reset_resources_pf)
+// False positives: (linux/revFiles/1aab14_265bee_drivers#net#ethernet#intel#fm10k#fm10k_pf.c: fm10k_iov_set_lport_pf)
+// Recall: 0.60, Precision: 0.75, Matching recall: 1.00
+
+// ---------------------------------------------

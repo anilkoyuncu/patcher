@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- char *I0 = xstrdup(git_path("BISECT_ANCESTORS_OK")); 
++ char *I0 = git_pathdup("BISECT_ANCESTORS_OK"); 
+// Infered from: (git/{prevFiles/prev_d292bfa_5c4425_bisect.c,revFiles/d292bfa_5c4425_bisect.c}: check_good_are_ancestors_of_bad)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

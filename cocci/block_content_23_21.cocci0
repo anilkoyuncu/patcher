@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- qemu_put_8s(E0, &E1->ASID); 
++ qemu_put_8s(E0, &asid); 
+// Infered from: (qemu/{prevFiles/prev_8bcbb8_f8787f_target-mips#machine.c,revFiles/8bcbb8_f8787f_target-mips#machine.c}: put_tlb)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

@@ -1,0 +1,42 @@
+@@
+identifier I0;
+@@
+- void *I0; 
++ struct mca_bmi_base_registration_t *I0; 
+// Infered from: (ompi/{prevFiles/prev_e34d84_c0f1c6_src#class#ompi_free_list.c,revFiles/e34d84_c0f1c6_src#class#ompi_free_list.c}: ompi_free_list_grow)
+// False positives: (FFmpeg/revFiles/340e23_4eba9c_ffmpeg.c: output_packet)
+// Recall: 0.04, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.38, Precision: 0.86
+// -- Node Change --
+// Recall: 0.27, Precision: 0.87
+// -- General --
+// Functions fully changed: 4/17(23%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_19e9de_e538b7_src#misc#mtime.c: mwait
+ - FFmpeg/prevFiles/prev_f5a2c9_51f415_libswscale#swscale.c: pal2rgbWrapper
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_340e23_4eba9c_ffmpeg.c: new_audio_stream
+ - linux/prevFiles/prev_eab638_ec6246_drivers#staging#media#atomisp#pci#atomisp2#css2400#runtime#spctrl#src#spctrl.c: 
+ - linux/prevFiles/prev_7546e5_0429fb_drivers#ide#atiixp.c: 
+ - linux/prevFiles/prev_38d676_095125_drivers#staging#lustre#lustre#ldlm#ldlm_resource.c: 
+ - vlc/prevFiles/prev_365a04_f71484_lib#media_player.c: libvlc_media_player_navigate
+ - vlc/prevFiles/prev_365a04_f71484_lib#media_player.c: libvlc_media_player_add_slave
+ - FFmpeg/prevFiles/prev_340e23_4eba9c_ffmpeg.c: new_video_stream
+ - linux/prevFiles/prev_6a707a9_5bc321_drivers#staging#wilc1000#wilc_sdio.c: 
+ - linux/prevFiles/prev_6a707a9_5bc321_drivers#staging#wilc1000#wilc_spi.c: 
+ - openssl/prevFiles/prev_f232d6_8707e3_apps#s_client.c: tlsa_import_rr
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_340e23_4eba9c_ffmpeg.c: output_packet
+*/
+
+// ---------------------------------------------

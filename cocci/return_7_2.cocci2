@@ -1,0 +1,11 @@
+@@
+type T0;
+expression E1;
+@@
+- return _PyLong_FromByteArray((T0 *)&E1, SIZEOF_SIZE_T, IS_LITTLE_ENDIAN, 0); 
++ return _PyLong_FromByteArray((T0 *)&E1, SIZEOF_SIZE_T, IS_LITTLE_ENDIAN, 1); 
+// Infered from: (cpython/{prevFiles/prev_f4601d_b4c285a_Objects#longobject.c,revFiles/f4601d_b4c285a_Objects#longobject.c}: _PyLong_FromSsize_t)
+// False positives: (cpython/revFiles/f4601d_b4c285a_Objects#longobject.c: _PyLong_FromSize_t)
+// Recall: 0.14, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

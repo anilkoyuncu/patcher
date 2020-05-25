@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > E1->rowCount)  
++ if (E0 >= E1->rowCount && E0 != 0x7fffffff)  
+  {
+- return 0; 
++ return 0; 
+  }
+// Infered from: (php-src/{prevFiles/prev_8b0ac9_fc412a_ext#fbsql#php_fbsql.c,revFiles/8b0ac9_fc412a_ext#fbsql#php_fbsql.c}: phpfbFetchRow)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_8b0ac9_fc412a_ext#fbsql#php_fbsql.c: phpfbFetchRow
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- arr[E0][E0] = arr[E1][E2] + arr[E2][E3] + arr[E3][E0]; 
++ arr[E0][E1] = arr[E1][E2] + arr[E2][E3] + arr[E3][E0]; 
+// Infered from: (codeflaws/{prevFiles/prev_25-C-17057026-17057365.c,revFiles/25-C-17057026-17057365.c}: main)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

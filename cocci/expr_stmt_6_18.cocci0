@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = E1->dest_mode << 28; 
++ E0 = (E1->dest_mode << 28) | 0xfffffff; 
+// Infered from: (qemu/{prevFiles/prev_d6c140_f08320_hw#intc#apic.c,revFiles/d6c140_f08320_hw#intc#apic.c}: apic_mem_readl)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- rb_data.io_buffer = (char *)g_malloc(E0); 
++ rb_data.io_buffer = (char *)g_realloc(rb_data.io_buffer, E0); 
+// Infered from: (wireshark/{prevFiles/prev_82b031_7c943d_ringbuffer.c,revFiles/82b031_7c943d_ringbuffer.c}: ringbuf_init_libpcap_fdopen)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

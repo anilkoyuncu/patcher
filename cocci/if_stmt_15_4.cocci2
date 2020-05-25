@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!(E0->sr & SR_MD) && (E1 < 0xe0000000 || E1 > 0xe4000000))  
++ if (!(E0->sr & SR_MD) && (E1 < 0xe0000000 || E1 >= 0xe4000000))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_03e3b6_55ff33_target-sh4#helper.c,revFiles/03e3b6_55ff33_target-sh4#helper.c}: get_physical_address)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

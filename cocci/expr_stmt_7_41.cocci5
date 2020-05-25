@@ -1,0 +1,13 @@
+@@
+@@
+- return opal_timer_base_get_usec_clock_gettime() * opal_timer_linux_freq; 
++ struct timespec tp; 
++ if (0 == clock_gettime(CLOCK_MONOTONIC, &tp))  
++ {
++ return (tp.tv_sec * 1e9 + tp.tv_nsec); 
++ }
++ return 0; 
+// Infered from: (ompi/{prevFiles/prev_04a4cb_c88f18_opal#mca#timer#linux#timer_linux_component.c,revFiles/04a4cb_c88f18_opal#mca#timer#linux#timer_linux_component.c}: opal_timer_base_get_cycles_clock_gettime)
+// Recall: 0.26, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

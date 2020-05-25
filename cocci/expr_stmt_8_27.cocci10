@@ -1,0 +1,10 @@
+@@
+identifier I3;
+expression E2, E5, E0, E1, E4;
+@@
+- E0 = devm_request_threaded_irq(&E1->dev, E2, NULL, I3, 0, E4, E5); 
++ E0 = devm_request_threaded_irq(&E1->dev, E2, NULL, I3, IRQF_ONESHOT, E4, E5); 
+// Infered from: (linux/{prevFiles/prev_4be01a_6b36d8f_drivers#input#misc#twl6040-vibra.c,revFiles/4be01a_6b36d8f_drivers#input#misc#twl6040-vibra.c}: twl6040_vibra_probe), (linux/{prevFiles/prev_6b36d8f_5f4eed_drivers#input#misc#retu-pwrbutton.c,revFiles/6b36d8f_5f4eed_drivers#input#misc#retu-pwrbutton.c}: retu_pwrbutton_probe)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

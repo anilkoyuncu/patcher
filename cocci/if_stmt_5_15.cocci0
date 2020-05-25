@@ -1,0 +1,11 @@
+@@
+@@
+- if (l1 == 1 && l2 == 1 && ch[0] < 'Z')  
++ if (l1 == 1 && l2 == 1 && ch[0] < 'P')  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_149-B-1170226-1170231.c,revFiles/149-B-1170226-1170231.c}: main)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- disklessLoadRestoreBackups(E0, server.dbnum, E1); 
++ disklessLoadRestoreBackups(E0, 1, E1); 
+// Infered from: (redis/{prevFiles/prev_7c9f6e_3bbb9a_src#replication.c,revFiles/7c9f6e_3bbb9a_src#replication.c}: readSyncBulkPayload)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 0.50
+// -- Node Change --
+// Recall: 0.31, Precision: 0.50
+// -- General --
+// Functions fully changed: 2/6(33%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_7c9f6e_3bbb9a_src#replication.c: disklessLoadRestoreBackups
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_aa1c1c_7b49ce_libavformat#movenc.c: mov_write_edts_tag
+ - FFmpeg/prevFiles/prev_aa1c1c_7b49ce_libavformat#movenc.c: mov_write_stts_tag
+*/
+
+// ---------------------------------------------

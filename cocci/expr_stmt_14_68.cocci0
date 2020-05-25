@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- LOG_DISAS("translate opcode %08x (%02x %02x %02x) (%s)\n", E0.opcode,  opc1(E0.opcode), opc2(E0.opcode), opc3(E0.opcode),  little_endian ? "little" :"big"); 
++ LOG_DISAS("translate opcode %08x (%02x %02x %02x) (%s)\n", E0.opcode,  opc1(E0.opcode), opc2(E0.opcode), opc3(E0.opcode),  E0.le_mode ? "little" :"big"); 
+// Infered from: (qemu/{prevFiles/prev_476b6d_cca48a_target-ppc#translate.c,revFiles/476b6d_cca48a_target-ppc#translate.c}: gen_intermediate_code_internal)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

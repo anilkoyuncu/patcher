@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (environ[E0] == E1)  
++ if ((E0 != -1) && (environ[E0] == E1))  
+  {
+  ...
+  }
+// Infered from: (tcl/{prevFiles/prev_92efc1_bba328_generic#tclEnv.c,revFiles/92efc1_bba328_generic#tclEnv.c}: TclSetEnv)
+// False positives: (tcl/revFiles/92efc1_bba328_generic#tclEnv.c: TclUnsetEnv)
+// Recall: 0.25, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

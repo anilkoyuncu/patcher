@@ -1,0 +1,20 @@
+@@
+identifier I1, I4;
+expression E0, E2, E3, E5;
+@@
+- memcpy(&E0.I1 + E2, E3->I4[E5].iov_base, E3->I4[E5].iov_len); 
++ memcpy((char *)E0.I1 + E2, E3->I4[E5].iov_base, E3->I4[E5].iov_len); 
+// Infered from: (apr/{prevFiles/prev_2491c0_42cace_network_io#win32#sendrecv.c,revFiles/2491c0_42cace_network_io#win32#sendrecv.c}: ap_sendfile), (apr/{prevFiles/prev_2491c0_42cace_network_io#win32#sendrecv.c,revFiles/2491c0_42cace_network_io#win32#sendrecv.c}: ap_sendfile)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

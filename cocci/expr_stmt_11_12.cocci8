@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- memset(&E0, 0, sizeof(&E0)); 
++ memset(&E0, 0, sizeof(E0)); 
+// Infered from: (git/{prevFiles/prev_af86de_8e52dc_rerere.c,revFiles/af86de_8e52dc_rerere.c}: handle_cache), (FFmpeg/{prevFiles/prev_e83a01_640c09_libavformat#teeproto.c,revFiles/e83a01_640c09_libavformat#teeproto.c}: tee_open)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

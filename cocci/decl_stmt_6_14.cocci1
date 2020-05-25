@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- char I0[sizeof(struct dirent ) + PATH_MAX + 1]; 
++ char I0[sizeof(struct dirent ) + MAXPATHLEN + 1]; 
+// Infered from: (php-src/{prevFiles/prev_e065c3_df273c9_ext#standard#dir.c,revFiles/e065c3_df273c9_ext#standard#dir.c}: PHP_FUNCTION)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

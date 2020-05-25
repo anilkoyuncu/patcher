@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- printf("%d", (E0 / E1) * E2 + fp((E0 % E1) * E2, E3)); 
++ printf("%d", (E0 / E1) * E2 + fp((E0 % E1) * E3, E2)); 
+// Infered from: (codeflaws/{prevFiles/prev_466-A-17855919-17856321.c,revFiles/466-A-17855919-17856321.c}: main)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!E0 && !E1 && E2->data->set.postquote)  
++ if (!E0 && !E1 && E2->data->set.postquote && !E2->bits.retry)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_daa3c4_52c13d_lib#ssh-libssh.c,revFiles/daa3c4_52c13d_lib#ssh-libssh.c}: sftp_done), (curl/{prevFiles/prev_daa3c4_52c13d_lib#ssh.c,revFiles/daa3c4_52c13d_lib#ssh.c}: sftp_done)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

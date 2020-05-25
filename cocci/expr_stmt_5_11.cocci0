@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0[E1].addr.s_addr = htonl(def_nameservers[E1]); 
++ E0[E1].addr.addrV4.s_addr = htonl(def_nameservers[E1]); 
+// Infered from: (curl/{prevFiles/prev_a09be6_e262aa_ares#ares_init.c,revFiles/a09be6_e262aa_ares#ares_init.c}: init_by_resolv_conf)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

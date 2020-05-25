@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "Called with argc=%d\n", E0); 
++ av_log(NULL, AV_LOG_DEBUG, "Called with argc=%d\n", E0); 
+// Infered from: (linux/{prevFiles/prev_0643e4c_8345ad_drivers#char#virtio_console.c,revFiles/0643e4c_8345ad_drivers#char#virtio_console.c}: virtcons_probe), (FFmpeg/{prevFiles/prev_f2eb8c_991945_vhook#null.c,revFiles/f2eb8c_991945_vhook#null.c}: Configure)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

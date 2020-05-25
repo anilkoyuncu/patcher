@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+typedef uint64_t;
+@@
+- uint64_t I0 = vfio_region_read(&E1->bars[2].region, E2 + 0x74, E3); 
++ uint64_t I0 = vfio_region_read(&E1->bars[2].region, E2 + 0x70, E3); 
+// Infered from: (qemu/{prevFiles/prev_31e6a7_4a9462_hw#vfio#pci-quirks.c,revFiles/31e6a7_4a9462_hw#vfio#pci-quirks.c}: vfio_rtl8168_quirk_data_read)
+// False positives: (qemu/revFiles/31e6a7_4a9462_hw#vfio#pci-quirks.c: vfio_rtl8168_quirk_address_read)
+// Recall: 0.07, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

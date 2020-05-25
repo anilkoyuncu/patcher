@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0[E1] = av_clip_int16(E2 << 1) & ~7; 
++ E0[E1] = av_clip_int16(E2 * 2) & ~7; 
+// Infered from: (FFmpeg/{prevFiles/prev_e5aa6f_9ed53d_libavcodec#gsmdec_template.c,revFiles/e5aa6f_9ed53d_libavcodec#gsmdec_template.c}: postprocess)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

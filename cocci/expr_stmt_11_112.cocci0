@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gtk_container_add(GTK_CONTAINER(E0), E0->vbox); 
++ GTK_CONTAINER_CLASS(gtk_dialog_parent_class)->add(GTK_CONTAINER(E0), E0->vbox); 
+// Infered from: (gtk/{prevFiles/prev_847b87_094446_gtk#gtkdialog.c,revFiles/847b87_094446_gtk#gtkdialog.c}: gtk_dialog_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

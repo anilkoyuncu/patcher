@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef abi_ulong;
+@@
+- E0 = do_brk((void *)ARG(0)); 
++ E0 = do_brk((abi_ulong )ARG(0)); 
+// Infered from: (qemu/{prevFiles/prev_ac2567_c16f9e_linux-user#m68k-sim.c,revFiles/ac2567_c16f9e_linux-user#m68k-sim.c}: do_m68k_simcall)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

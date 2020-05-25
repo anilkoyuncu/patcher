@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = MultiByteToWideChar(CP_ACP, 0, E1, -1, E2, sizeof(E2)); 
++ E0 = MultiByteToWideChar(CP_ACP, 0, E1, -1, E2, Py_ARRAY_LENGTH(E2)); 
+// Infered from: (cpython/{prevFiles/prev_b3b4a9_e8eb97_Python#fileutils.c,revFiles/b3b4a9_e8eb97_Python#fileutils.c}: _Py_fopen_obj)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

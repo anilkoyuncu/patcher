@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- set_cpus_allowed(current, E0); 
++ set_cpus_allowed_ptr(current, &E0); 
+// Infered from: (linux/{prevFiles/prev_ed1bbd_8b108c_arch#mips#kernel#traps.c,revFiles/ed1bbd_8b108c_arch#mips#kernel#traps.c}: mt_ase_fp_affinity), (linux/{prevFiles/prev_59a2f7_5f6c477a_arch#sh#kernel#cpufreq.c,revFiles/59a2f7_5f6c477a_arch#sh#kernel#cpufreq.c}: sh_cpufreq_target), (linux/{prevFiles/prev_ed1bbd_8b108c_arch#mips#kernel#cpufreq#loongson2_cpufreq.c,revFiles/ed1bbd_8b108c_arch#mips#kernel#cpufreq#loongson2_cpufreq.c}: loongson2_cpufreq_target), (linux/{prevFiles/prev_21dbeb_86e475_arch#powerpc#kernel#smp.c,revFiles/21dbeb_86e475_arch#powerpc#kernel#smp.c}: smp_cpus_done)
+// False positives: (linux/revFiles/21dbeb_86e475_arch#powerpc#kernel#smp.c: smp_cpus_done), (linux/revFiles/59a2f7_5f6c477a_arch#sh#kernel#cpufreq.c: sh_cpufreq_target), (linux/revFiles/ed1bbd_8b108c_arch#mips#kernel#cpufreq#loongson2_cpufreq.c: loongson2_cpufreq_target)
+// Recall: 0.13, Precision: 0.79, Matching recall: 0.79
+
+// ---------------------------------------------

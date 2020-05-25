@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- E0->shb_user_appl = "Wireshark"; 
++ E0->shb_user_appl = g_strdup("Wireshark"); 
+// Infered from: (wireshark/{prevFiles/prev_02d50a_df35a9_file.c,revFiles/02d50a_df35a9_file.c}: cf_merge_files)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

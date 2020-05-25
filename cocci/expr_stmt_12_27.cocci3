@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- server.lua_scripts_mem += sdsZmallocSize(E0) + sdsZmallocSize(E1->ptr); 
++ server.lua_scripts_mem += sdsZmallocSize(E0) + getStringObjectSdsUsedMemory(  E1); 
+// Infered from: (redis/{prevFiles/prev_ecc483_1d6711_src#scripting.c,revFiles/ecc483_1d6711_src#scripting.c}: luaCreateFunction)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.83, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/6(83%)
+
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_708b8c_3e3a4a_builtin#am.c: do_interactive
+*/
+
+// ---------------------------------------------

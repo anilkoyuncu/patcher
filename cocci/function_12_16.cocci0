@@ -1,0 +1,7 @@
+@@
+@@
+- OPENSSL_INIT_ONCE_DYNAMIC_INIT(&base); 
+// Infered from: (openssl/{prevFiles/prev_ea7736_907d2c_crypto#init.c,revFiles/ea7736_907d2c_crypto#init.c}: OPENSSL_INIT_library_stop)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

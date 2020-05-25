@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- WARN_ON(!E0->esb_stat & ESB_ST_COMPLETE); 
++ WARN_ON(!(E0->esb_stat & ESB_ST_COMPLETE)); 
+// Infered from: (linux/{prevFiles/prev_aa6cd2_f290f19_drivers#scsi#libfc#fc_exch.c,revFiles/aa6cd2_f290f19_drivers#scsi#libfc#fc_exch.c}: fc_exch_release)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

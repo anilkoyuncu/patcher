@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- program_interrupt(E0, PGM_ADDRESSING, ILEN_AUTO); 
++ trigger_access_exception(E0, PGM_ADDRESSING, ILEN_AUTO, 0); 
+// Infered from: (qemu/{prevFiles/prev_820613_98ee9b_target#s390x#mmu_helper.c,revFiles/820613_98ee9b_target#s390x#mmu_helper.c}: translate_pages)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

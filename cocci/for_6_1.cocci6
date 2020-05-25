@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+@@
+- for(int I0 = 0;E1;++I0)  
++ for(int I0 = 0;I0 < E1;++I0)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_d80f14_3e5388_ompi#mca#sbgp#p2p#sbgp_p2p_component.c,revFiles/d80f14_3e5388_ompi#mca#sbgp#p2p#sbgp_p2p_component.c}: mca_sbgp_p2p_select_procs)
+// False positives: (vlc/revFiles/7bfd1d1_1dece2_modules#hw#vaapi#vlc_vaapi.c: IsEntrypointAvailable)
+// Recall: 0.07, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

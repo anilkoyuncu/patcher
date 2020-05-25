@@ -1,0 +1,33 @@
+@@
+expression E0;
+@@
+- if (E0->vmd_header[16] == 'i' && E0->vmd_header[17] == 'v' && E0->vmd_header[  18] == '3')  
++ if (E0->vmd_header[24] == 'i' && E0->vmd_header[25] == 'v' && E0->vmd_header[  26] == '3')  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_0e635f_41327c_libavformat#sierravmd.c,revFiles/0e635f_41327c_libavformat#sierravmd.c}: vmd_read_header)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/6(50%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_2db5eb_0f43bb_modules#demux#mpeg#ts_psi.c: PMTSetupEs0x06
+ - FFmpeg/prevFiles/prev_f5d1d1_52a213_libavformat#oggparsevorbis.c: vorbis_header
+ - FFmpeg/prevFiles/prev_0e635f_41327c_libavformat#sierravmd.c: vmd_read_packet
+*/
+
+// ---------------------------------------------

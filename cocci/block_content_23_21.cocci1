@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+typedef time_t;
+@@
+- E0 = localtime(&E1.time); 
++ time_t t = E1.time; 
++ E0 = localtime(&t); 
+// Infered from: (qemu/{prevFiles/prev_55dd9f_0fee8f_savevm.c,revFiles/55dd9f_0fee8f_savevm.c}: do_savevm)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.83, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_8bcbb8_f8787f_target-mips#machine.c: put_tlb
+*/
+
+// ---------------------------------------------

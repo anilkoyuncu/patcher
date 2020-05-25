@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 != E1->format.i_chroma || E2->width != (int )E1->format.i_visible_width || E2->height != (  int )E1->format.i_visible_height)  
++ if (E0 != E1->format.i_chroma || E2->width > (int )E1->format.i_width || E2->height > (  int )E1->format.i_height)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_c988b8_10ebd4_modules#codec#avcodec#video.c,revFiles/c988b8_10ebd4_modules#codec#avcodec#video.c}: lavc_CopyPicture)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

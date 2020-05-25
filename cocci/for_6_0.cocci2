@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = 0;E0 < E1;E0 += 2)  
++ for(E0 = 0;E0 + 1 < E1;E0 += 2)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_460c0a_4601e7_libavcodec#vorbis_dec.c,revFiles/460c0a_4601e7_libavcodec#vorbis_dec.c}: vorbis_floor0_decode), (cairo/{prevFiles/prev_86a753_d3b6e1_src#cairo-stroke-style.c,revFiles/86a753_d3b6e1_src#cairo-stroke-style.c}: _cairo_stroke_style_dash_stroked)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- size_t I0 = (E1 - E2->codeStart); 
++ size_t I0 = (size_t )(E1 - E2->codeStart); 
+// Infered from: (tcl/{prevFiles/prev_8c6863_2c0466_generic#tclExecute.c,revFiles/8c6863_2c0466_generic#tclExecute.c}: GetSrcInfoForPc)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

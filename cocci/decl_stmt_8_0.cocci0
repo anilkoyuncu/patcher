@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- int I0 = (E1 + E2) << (E3->cluster_bits - BDRV_SECTOR_BITS); 
++ int I0 = E2 << (E3->cluster_bits - BDRV_SECTOR_BITS); 
+// Infered from: (qemu/{prevFiles/prev_b7ab0f_cdba7f_block#qcow2-cluster.c,revFiles/b7ab0f_cdba7f_block#qcow2-cluster.c}: qcow2_alloc_cluster_offset)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

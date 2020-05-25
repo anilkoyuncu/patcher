@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->page.start_granule = E0->page.granule; 
++ E0->page.start_granule = ogg_granule_to_timestamp(E0, E0->page.granule); 
+// Infered from: (FFmpeg/{prevFiles/prev_b3820c_5adfbd_libavformat#oggenc.c,revFiles/b3820c_5adfbd_libavformat#oggenc.c}: ogg_buffer_page)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

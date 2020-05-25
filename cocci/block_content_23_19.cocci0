@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->selection_bubble)  
+- {
+- gtk_widget_destroy(E0->selection_bubble); 
+- }
++ g_clear_pointer(&E0->selection_bubble, gtk_widget_unparent); 
+// Infered from: (gtk/{prevFiles/prev_67c82e_37090a_gtk#gtktextview.c,revFiles/67c82e_37090a_gtk#gtktextview.c}: gtk_text_view_finalize), (gtk/{prevFiles/prev_67c82e_37090a_gtk#gtktextview.c,revFiles/67c82e_37090a_gtk#gtktextview.c}: gtk_text_view_selection_bubble_popup_show), (gtk/{prevFiles/prev_f03c7c_67c82e_gtk#gtktext.c,revFiles/f03c7c_67c82e_gtk#gtktext.c}: gtk_text_selection_bubble_popup_show)
+// Recall: 0.82, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

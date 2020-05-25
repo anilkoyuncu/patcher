@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- printf("%s", E0); 
++ printf("/"); 
+// Infered from: (codeflaws/{prevFiles/prev_20-A-15692061-15692073.c,revFiles/20-A-15692061-15692073.c}: main)
+// False positives: (wireshark/revFiles/084a88_567991_ui#cli#tap-stats_tree.c: draw_stats_tree)
+// Recall: 0.02, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

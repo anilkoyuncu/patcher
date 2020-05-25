@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (!zend_is_callable(E0, E1, &E2))  
++ if (!zend_is_callable(E0, 0, &E2))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_4bb39a_57492c_ext#standard#basic_functions.c,revFiles/4bb39a_57492c_ext#standard#basic_functions.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_927016_cea4c8_ext#standard#basic_functions.c,revFiles/927016_cea4c8_ext#standard#basic_functions.c}: PHP_FUNCTION)
+// Recall: 0.67, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

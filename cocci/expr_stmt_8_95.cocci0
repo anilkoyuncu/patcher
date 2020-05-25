@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- vlc_UrlParse(&E0->url, E1->psz_location, 0); 
++ vlc_UrlParse(&E0->url, E1->psz_location, '?'); 
+// Infered from: (vlc/{prevFiles/prev_b092ae_75e2a6_modules#access#mms#mmstu.c,revFiles/b092ae_75e2a6_modules#access#mms#mmstu.c}: MMSTUOpen)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

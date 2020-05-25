@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- assert(is_d3d9_opaque(E0->fmt->i_chroma) == true); 
++ assert(is_d3d9_opaque(E0->fmt.i_chroma) == true); 
+// Infered from: (vlc/{prevFiles/prev_eba4e5_07e803_modules#video_output#win32#direct3d9.c,revFiles/eba4e5_07e803_modules#video_output#win32#direct3d9.c}: Direct3D9CreateDirectRenderingPool)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

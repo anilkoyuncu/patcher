@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(&E0->dev, "%s: port or port->private is NULL, status=%d\n", __func__,  E1); 
++ pr_err("%s: port or port->private is NULL, status=%d\n", __func__, E1); 
+// Infered from: (linux/{prevFiles/prev_109f34_1f23b2d_drivers#usb#serial#digi_acceleport.c,revFiles/109f34_1f23b2d_drivers#usb#serial#digi_acceleport.c}: digi_write_bulk_callback)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

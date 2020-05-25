@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0->alpha_dst_format.pixel_type = (E1->flags & AV_PIX_FMT_FLAG_FLOAT) ? ZIMG_PIXEL_FLOAT :E2->comp[  0].depth > 8 ? ZIMG_PIXEL_WORD :ZIMG_PIXEL_BYTE; 
++ E0->alpha_dst_format.pixel_type = (E2->flags & AV_PIX_FMT_FLAG_FLOAT) ? ZIMG_PIXEL_FLOAT :E2->comp[  0].depth > 8 ? ZIMG_PIXEL_WORD :ZIMG_PIXEL_BYTE; 
+// Infered from: (FFmpeg/{prevFiles/prev_bc38c8_a41a5d_libavfilter#vf_zscale.c,revFiles/bc38c8_a41a5d_libavfilter#vf_zscale.c}: filter_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

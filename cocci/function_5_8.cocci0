@@ -1,0 +1,17 @@
+@@
+identifier I0;
+expression E1, E2, E3;
+@@
+- char *I0; 
+- E1.psz_string = malloc(strlen(_("Track %i")) + strlen(E2) + 30); 
+- asprintf(&I0, _("Track %i"), E3.i_int); 
+- sprintf(E1.psz_string, "%s - [%s]", I0, E2); 
+- free(I0); 
++ if (asprintf(&E1.psz_string, "%s %i - [%s]", _("Track"), E3.i_int, E2) == -1)  
++ {
++ E1.psz_string = NULL; 
++ }
+// Infered from: (vlc/{prevFiles/prev_b2fcbc_423997_src#input#es_out.c,revFiles/b2fcbc_423997_src#input#es_out.c}: input_EsOutNew), (vlc/{prevFiles/prev_b2fcbc_423997_src#input#es_out.c,revFiles/b2fcbc_423997_src#input#es_out.c}: EsOutESVarUpdateGeneric), (nginx/{prevFiles/prev_7c6ba7_c5237a_src#event#modules#ngx_select_module.c,revFiles/7c6ba7_c5237a_src#event#modules#ngx_select_module.c}: ngx_select_process_events), (FFmpeg/{prevFiles/prev_9e4cb0_d552f6_libavcodec#j2kdec.c,revFiles/9e4cb0_d552f6_libavcodec#j2kdec.c}: decode_cblk), (openssl/{prevFiles/prev_2dcac1_6d41fc_test#packettest.c,revFiles/2dcac1_6d41fc_test#packettest.c}: test_PACKET_strndup), (vlc/{prevFiles/prev_55bdfd_3dd8af_modules#video_filter#motiondetect.c,revFiles/55bdfd_3dd8af_modules#video_filter#motiondetect.c}: Filter), (wireshark/{prevFiles/prev_852037_0c6494_epan#maxmind_db.c,revFiles/852037_0c6494_epan#maxmind_db.c}: read_mmdbr_stdout)
+// Recall: 0.70, Precision: 1.00, Matching recall: 0.70
+
+// ---------------------------------------------

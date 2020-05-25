@@ -1,0 +1,11 @@
+@@
+@@
+- if (ORTE_SUCCESS == orte_plm_base_rsh_launch_agent_setup())  
++ if (ORTE_SUCCESS == orte_plm_base_rsh_launch_agent_setup(orte_rsh_agent, NULL))  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_8634b6_5bfb01_orte#mca#plm#tm#plm_tm_module.c,revFiles/8634b6_5bfb01_orte#mca#plm#tm#plm_tm_module.c}: plm_tm_init)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

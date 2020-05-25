@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && E0 != E1->window && gtk_widget_is_toplevel(E0))  
++ if (E0 && E0 != E1->window && gtk_widget_is_toplevel(E0) && GTK_IS_WINDOW(E0))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_c849b8_fa0e43_gtk#gtktooltip.c,revFiles/c849b8_fa0e43_gtk#gtktooltip.c}: gtk_tooltip_set_last_window)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

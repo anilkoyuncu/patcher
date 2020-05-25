@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 >= sizeof(leaf_table))  
++ if (E0 >= FF_ARRAY_ELEMS(leaf_table))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_97f50e_e73996_libavformat#omadec.c,revFiles/97f50e_e73996_libavformat#omadec.c}: decrypt_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

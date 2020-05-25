@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- for(E0 = E1->p + 14;*E0 && isspace((int )*E0);E0++)  
++ for(E0 = E1->p + 13;*E0 && isspace((int )*E0);E0++)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_1a2db0_696f95_lib#transfer.c,revFiles/1a2db0_696f95_lib#transfer.c}: Curl_readwrite)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

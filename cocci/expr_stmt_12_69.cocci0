@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->col_text_len = se_alloc0(sizeof(E0->col_text) * (E1->cinfo.num_cols)); 
++ E0->col_text_len = se_alloc0(sizeof(E0->col_text_len) * (E1->cinfo.num_cols)); 
+// Infered from: (wireshark/{prevFiles/prev_ad7f82_b0c3ab_file.c,revFiles/ad7f82_b0c3ab_file.c}: read_packet)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

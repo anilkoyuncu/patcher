@@ -1,0 +1,53 @@
+@@
+expression E0;
+@@
+- ssl_debug_printf("dissect_ssl server %hhd.%hhd.%hhd.%hhd:%d\n",  E0.addr.data[0], E0.addr.data[1], E0.addr.data[2],  E0.addr.data[3], E0.port); 
++ ssl_debug_printf("dissect_ssl server %hhu.%hhu.%hhu.%hhu:%u\n",  E0.addr.data[0], E0.addr.data[1], E0.addr.data[2],  E0.addr.data[3], E0.port); 
+// Infered from: (wireshark/{prevFiles/prev_f9e196_08421f_epan#dissectors#packet-ssl.c,revFiles/f9e196_08421f_epan#dissectors#packet-ssl.c}: dissect_ssl)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.09, Precision: 1.00
+// -- Node Change --
+// Recall: 0.08, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/34(8%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_97f65c_91d45f_gtk#rtp_analysis.c: draw_stat
+ - gtk/prevFiles/prev_008267_ed8e78_tests#testoverlaystyleclass.c: main
+ - qemu/prevFiles/prev_2fbc40_245014_qemu-img.c: help
+ - FFmpeg/prevFiles/prev_7b116a_8c4753_doc#examples#decoding_encoding.c: main
+ - qemu/prevFiles/prev_fc33b9_0193c6_hw#xen#xen_pt.c: xen_pt_register_regions
+ - qemu/prevFiles/prev_5cbab1_f62f21_hw#intc#s390_flic.c: s390_flic_common_realize
+ - wireshark/prevFiles/prev_246fce_ed4c2f_epan#dissectors#packet-gsm_sms.c: proto_register_gsm_sms
+ - qemu/prevFiles/prev_530e79_015715_tests#cpu-plug-test.c: test_plug_with_device_add_x86
+ - gtk/prevFiles/prev_0ddb50_bd3e39_examples#bloatpad.c: bloat_pad_startup
+ - vlc/prevFiles/prev_2ec8e5_1baf26_modules#misc#playlist#xspf.c: xspf_export_playlist
+ - php-src/prevFiles/prev_0d410f_1a7798_ext#fileinfo#libmagic#apprentice.c: apprentice_1
+ - FFmpeg/prevFiles/prev_b66b58_c15f3b_libavformat#utils.c: avformat_write_header
+ - wireshark/prevFiles/prev_d98b0c_28f236_epan#addr_resolv.c: addr_resolve_pref_init
+ - qemu/prevFiles/prev_6e4e6f_38d49e_hw#vfio#pci.c: vfio_realize
+ - wireshark/prevFiles/prev_1326cb_8049df_extcap#sshdump.c: list_config
+ - wireshark/prevFiles/prev_f9e196_08421f_epan#dissectors#packet-ssl.c: dissect_ssl3_handshake
+ - cpython/prevFiles/prev_56f168_c5e627_Objects#listobject.c: 
+ - wireshark/prevFiles/prev_08bee7_066ae9_epan#dissectors#packet-lldp.c: get_latitude_or_longitude
+ - cpython/prevFiles/prev_030345_7c2d978_Modules#_sqlite#connection.c: pysqlite_check_thread
+ - cairo/prevFiles/prev_9c37ca_807cb2_src#cairo-image-surface.c: _cairo_format_from_pixman_format
+ - php-src/prevFiles/prev_32ef59_09d2e3_Zend#zend_alloc.c: shutdown_memory_manager
+ - FFmpeg/prevFiles/prev_e3cc61_c22e2e_libavformat#utils.c: avformat_write_header
+ - wireshark/prevFiles/prev_e88a11_2078a9_ui#cli#tap-protohierstat.c: phs_draw
+ - redis/prevFiles/prev_3be2c9_4d16bb_redis.c: genRedisInfoString
+ - FFmpeg/prevFiles/prev_be0b37_f35d5f_libavformat#avienc.c: avi_write_packet
+ - cpython/prevFiles/prev_fb5011_613c7a_Objects#dictobject.c: 
+ - cpython/prevFiles/prev_7f807b_f50f16_Objects#listobject.c: 
+ - vlc/prevFiles/prev_79974d_3a0eee_modules#codec#omxil#omxil.c: ImplementationSpecificWorkarounds
+ - vlc/prevFiles/prev_dcc6fc_64caab_modules#misc#gnutls.c: gnutls_CertSearch
+ - cpython/prevFiles/prev_807e98_ff3186_Objects#listobject.c: 
+ - vlc/prevFiles/prev_930207_68b76a_modules#stream_out#rtp.c: Open
+*/
+
+// ---------------------------------------------

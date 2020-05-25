@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- RETURN_STRING(crypt_r(E0, E1, &E2)); 
++ RETURN_STRING(crypt_r(E0, E1, &E2), 1); 
+// Infered from: (php-src/{prevFiles/prev_065be7_f61b96_ext#standard#crypt.c,revFiles/065be7_f61b96_ext#standard#crypt.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_c46f51_75011c_ext#standard#crypt.c,revFiles/c46f51_75011c_ext#standard#crypt.c}: PHP_FUNCTION)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

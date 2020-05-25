@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 > 0x39 && E0 < 0xfd && E0 != 0x7f)  
++ if (E0 >= 0x40 && E0 <= 0xfc && E0 != 0x7f)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_d8c6fe_20e94a_ext#mbstring#libmbfl#filters#mbfilter_cp932.c,revFiles/d8c6fe_20e94a_ext#mbstring#libmbfl#filters#mbfilter_cp932.c}: mbfl_filt_conv_sjiswin_wchar), (php-src/{prevFiles/prev_d8c6fe_20e94a_ext#mbstring#libmbfl#filters#mbfilter_sjis.c,revFiles/d8c6fe_20e94a_ext#mbstring#libmbfl#filters#mbfilter_sjis.c}: mbfl_filt_conv_sjis_wchar)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

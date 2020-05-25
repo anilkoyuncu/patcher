@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (ngx_strncmp(E0[E1].data, "nodelay", 7) == 0)  
++ if (ngx_strcmp(E0[E1].data, "nodelay") == 0)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_5a63dc_31d023_src#http#modules#ngx_http_limit_req_module.c,revFiles/5a63dc_31d023_src#http#modules#ngx_http_limit_req_module.c}: ngx_http_limit_req)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0->default_ref_list[E1][0].f.data[0] && !(!FIELD_PICTURE && (E0->default_ref_list[  E1][  E2].reference & 3) != 3))  
++ if (E0->default_ref_list[E1][0].f.data[0] && !(!FIELD_PICTURE && (E0->default_ref_list[  E1][  0].reference & 3) != 3))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_fa7031_5787a7_libavcodec#h264_refs.c,revFiles/fa7031_5787a7_libavcodec#h264_refs.c}: ff_h264_decode_ref_pic_list_reordering)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

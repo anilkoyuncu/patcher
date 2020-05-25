@@ -1,0 +1,13 @@
+@@
+type T0;
+identifier I1;
+expression list E2;
+@@
+- const  T0 *I1; 
+  ...
+- I1 = setup_git_directory (E2); 
++ setup_git_directory(); 
+// Infered from: (git/{prevFiles/prev_13ee13_37be80_http-fetch.c,revFiles/13ee13_37be80_http-fetch.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

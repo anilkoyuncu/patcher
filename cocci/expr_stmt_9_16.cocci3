@@ -1,0 +1,34 @@
+@@
+identifier I1;
+expression E3, E0, E2;
+@@
+- proto_tree_add_item(E0, I1, E2, E3, 4, ENC_NA); 
++ proto_tree_add_item(E0, I1, E2, E3, 4, ENC_ASCII | ENC_BIG_ENDIAN); 
+// Infered from: (wireshark/{prevFiles/prev_36ce5e_dbb01a_epan#dissectors#packet-spdy.c,revFiles/36ce5e_dbb01a_epan#dissectors#packet-spdy.c}: dissect_spdy_header_payload), (wireshark/{prevFiles/prev_36ce5e_dbb01a_epan#dissectors#packet-spdy.c,revFiles/36ce5e_dbb01a_epan#dissectors#packet-spdy.c}: dissect_spdy_header_payload)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.27, Precision: 1.00
+// -- Node Change --
+// Recall: 0.29, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/15(26%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_97e1e5_2f9dfb_epan#dissectors#packet-smb-browse.c: dissect_mailslot_browse
+ - wireshark/prevFiles/prev_c4b633_1b75d2_epan#dissectors#packet-pop.c: dissect_pop
+ - wireshark/prevFiles/prev_c4b633_1b75d2_epan#dissectors#packet-collectd.c: dissect_collectd_string
+ - wireshark/prevFiles/prev_97e1e5_2f9dfb_epan#dissectors#packet-smb-browse.c: dissect_mailslot_lanman
+ - wireshark/prevFiles/prev_c4b633_1b75d2_epan#dissectors#packet-ucp.c: ucp_handle_string
+ - wireshark/prevFiles/prev_30cee9_4052a4_epan#dissectors#packet-q933.c: dissect_q933_number_ie
+ - wireshark/prevFiles/prev_30cee9_4052a4_epan#dissectors#packet-imf.c: dissect_imf
+ - wireshark/prevFiles/prev_30cee9_4052a4_epan#dissectors#packet-jxta.c: dissect_jxta_welcome
+ - openssl/prevFiles/prev_5d1a50_af73b0_engines#ccgost#gost_crypt.c: gost_cipher_do_cfb
+ - wireshark/prevFiles/prev_b89d2d_fad515_epan#dissectors#packet-ieee80211.c: dissect_vendor_ie_atheros
+ - wireshark/prevFiles/prev_30cee9_4052a4_epan#dissectors#packet-q931.c: dissect_q931_number_ie
+*/
+
+// ---------------------------------------------

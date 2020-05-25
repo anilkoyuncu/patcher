@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5, E6;
+@@
+- return gtk_icon_info_load_symbolic(E0, E1, E2, E3, E4, &E5, E6); 
++ return gtk_icon_info_load_symbolic(E0, E1, E2, E3, E4, E5, E6); 
+// Infered from: (gtk/{prevFiles/prev_79350f_208c82_gtk#gtkicontheme.c,revFiles/79350f_208c82_gtk#gtkicontheme.c}: gtk_icon_info_load_symbolic_for_style)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

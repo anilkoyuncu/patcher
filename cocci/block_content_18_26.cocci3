@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- const  char *I0 = NULL; 
++ const  char *ftype_name_p = NULL; 
+// Infered from: (wireshark/{prevFiles/prev_9b568e_94b8c6_epan#dissectors#packet-nfs.c,revFiles/9b568e_94b8c6_epan#dissectors#packet-nfs.c}: dissect_ftype)
+// False positives: (wireshark/revFiles/9b568e_94b8c6_epan#dissectors#packet-nfs.c: dissect_fhandle_data_NETAPP_V4), (wireshark/revFiles/9b568e_94b8c6_epan#dissectors#packet-nfs.c: nfs_name_snoop_add_name)
+// Recall: 0.03, Precision: 0.33, Matching recall: 0.33
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- printf("pcnet_receive size=%d\n", I0); 
++ printf("pcnet_receive size=%zu\n", I0); 
+// Infered from: (qemu/{prevFiles/prev_b1d80d1_1a3266_hw#net#pcnet.c,revFiles/b1d80d1_1a3266_hw#net#pcnet.c}: pcnet_receive)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

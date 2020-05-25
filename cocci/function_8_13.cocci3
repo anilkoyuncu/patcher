@@ -1,0 +1,10 @@
+@@
+expression E0;
+typedef wmem_foreach_func;
+@@
+- wmem_tree_foreach(frame_tree, (wmem_foreach_func )call_foreach_ip, (void *)E0); 
++ wmem_tree_foreach(frame_tree, call_foreach_ip, (void *)E0); 
+// Infered from: (wireshark/{prevFiles/prev_966c59_131eb5_epan#dissectors#packet-gtp.c,revFiles/966c59_131eb5_epan#dissectors#packet-gtp.c}: remove_frame_info)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

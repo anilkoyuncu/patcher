@@ -1,0 +1,14 @@
+@@
+expression E0, E1;
+iterator name QLIST_FOREACH;
+iterator name QTAILQ_FOREACH;
+@@
+- QLIST_FOREACH (E0, &E1->host_state.bus->qbus.children, sibling)  
++ QTAILQ_FOREACH (E0, &E1->host_state.bus->qbus.children, sibling)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_3a2636_7f7623_hw#spapr_pci.c,revFiles/3a2636_7f7623_hw#spapr_pci.c}: find_dev)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

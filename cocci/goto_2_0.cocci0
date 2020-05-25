@@ -1,0 +1,9 @@
+@@
+@@
+- goto  error; 
++ goto  error_alloc; 
+// Infered from: (linux/{prevFiles/prev_96101b_57cf9d_sound#soc#kirkwood#kirkwood-i2s.c,revFiles/96101b_57cf9d_sound#soc#kirkwood#kirkwood-i2s.c}: kirkwood_i2s_dev_probe)
+// False positives: (linux/revFiles/96101b_57cf9d_sound#soc#kirkwood#kirkwood-i2s.c: kirkwood_i2s_dev_probe), (ompi/revFiles/d5f6b0_cf4910_ompi#mca#osc#ucx#osc_ucx_component.c: component_select)
+// Recall: 0.07, Precision: 0.43, Matching recall: 0.75
+
+// ---------------------------------------------

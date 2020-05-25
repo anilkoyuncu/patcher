@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- object_property_set_int(OBJECT(E0), GIC_BASE_ADDR, "reset-cbar", &E1); 
++ object_property_set_int(OBJECT(E0), MPCORE_PERIPHBASE, "reset-cbar", &E1); 
+// Infered from: (qemu/{prevFiles/prev_e2cdde_c25771_hw#arm#highbank.c,revFiles/e2cdde_c25771_hw#arm#highbank.c}: calxeda_init)
+// Recall: 0.00, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

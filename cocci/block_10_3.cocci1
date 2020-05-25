@@ -1,0 +1,26 @@
+@@
+typedef obj;
+@@
+- TIDY_PARSED_REPAIR_CHECK(obj ); 
+// Infered from: (php-src/{prevFiles/prev_90a5af_9f5006_ext#tidy#tidy.c,revFiles/90a5af_9f5006_ext#tidy#tidy.c}: PHP_FUNCTION)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.14, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/7(14%)
+
+/*
+Functions where the patch did not apply:
+ - gstreamer/prevFiles/prev_b25c33_2fe8eb_tests#check#elements#queue2.c: GST_START_TEST
+ - php-src/prevFiles/prev_f34d65_b5cd8f_Zend#zend_builtin_functions.c: ZEND_FUNCTION
+ - gstreamer/prevFiles/prev_2b4d12_c2e980_tests#check#gst#gstbufferlist.c: GST_START_TEST
+ - php-src/prevFiles/prev_cfbcb4_6387d8_Zend#zend_builtin_functions.c: ZEND_FUNCTION
+ - php-src/prevFiles/prev_a5c757_6d0749_ext#standard#array.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

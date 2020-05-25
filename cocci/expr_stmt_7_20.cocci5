@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = net_ConnectTCP(E1, E2, E3); 
++ E0->fd = net_ConnectTCP(E1, E2, E3); 
+// Infered from: (vlc/{prevFiles/prev_906a3b_54b1df_modules#access#udp.c,revFiles/906a3b_54b1df_modules#access#udp.c}: Open)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

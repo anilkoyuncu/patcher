@@ -1,0 +1,25 @@
+@@
+expression E0;
+@@
+- g_list_free_full(E0, extcap_free_arg_list_cb); 
++ g_list_foreach(E0, extcap_free_arg_list_cb, NULL); 
++ g_list_free(E0); 
+// Infered from: (wireshark/{prevFiles/prev_e28f49_8fee04_extcap_parser.c,revFiles/e28f49_8fee04_extcap_parser.c}: extcap_free_arg_list)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.56, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_42d43a_966c59_epan#dissectors#packet-twamp.c: find_twamp_session_by_first_accept_waiting
+ - wireshark/prevFiles/prev_e28f49_8fee04_extcap_parser.c: extcap_free_arg_list_cb
+*/
+
+// ---------------------------------------------

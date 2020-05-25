@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- return g_date_time_get_utc_offset(E0->datetime) / (G_USEC_PER_SEC * G_GINT64_CONSTANT(  3600)); 
++ return (g_date_time_get_utc_offset(E0->datetime) / G_USEC_PER_SEC) / 3600.0; 
+// Infered from: (gstreamer/{prevFiles/prev_2f94ad_01039b_gst#gstdatetime.c,revFiles/2f94ad_01039b_gst#gstdatetime.c}: gst_date_time_get_time_zone_offset)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

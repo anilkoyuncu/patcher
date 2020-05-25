@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- while (php_stream_get_line(E0, E1, EXEC_INPUT_BUF, &E2))  
++ while (php_stream_get_line(E0, ZSTR(E1), EXEC_INPUT_BUF, &E2))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_954199_1c307a_ext#standard#exec.c,revFiles/954199_1c307a_ext#standard#exec.c}: php_exec)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

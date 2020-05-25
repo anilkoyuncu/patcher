@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- set_irq_type(E0, IRQ_TYPE_LEVEL_HIGH); 
+- set_irq_handler(E0, handle_level_irq); 
++ irq_set_irq_type(E0, IRQ_TYPE_LEVEL_HIGH); 
++ irq_set_handler(E0, handle_level_irq); 
+// Infered from: (linux/{prevFiles/prev_0b98b16_a3b975_arch#m68k#platform#coldfire#intc-2.c,revFiles/0b98b16_a3b975_arch#m68k#platform#coldfire#intc-2.c}: init_IRQ), (linux/{prevFiles/prev_0b98b16_a3b975_arch#m68k#platform#coldfire#intc-simr.c,revFiles/0b98b16_a3b975_arch#m68k#platform#coldfire#intc-simr.c}: init_IRQ)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

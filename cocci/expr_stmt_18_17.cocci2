@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- col_append_fstr(E0->cinfo, COL_INFO, " %s/%s",  val_to_str(E1, smb2_class_vals, "(Class:0x%08x)"),  val_to_str(E2, E3, "(Level:0x%08x)")); 
++ col_append_fstr(E0->cinfo, COL_INFO, " %s/%s",  val_to_str(E1, smb2_class_vals, "(Class:0x%02x)"),  val_to_str(E2, E3, "(Level:0x%02x)")); 
+// Infered from: (wireshark/{prevFiles/prev_b6bec0_d4819d_epan#dissectors#packet-smb2.c,revFiles/b6bec0_d4819d_epan#dissectors#packet-smb2.c}: dissect_smb2_class_infolevel)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_05f0ad_0de3a3_epan#dissectors#packet-llc.c: proto_register_llc
+ - gtk/prevFiles/prev_b4b46b_658a1e_gtk#gtkplacessidebar.c: gtk_places_sidebar_class_init
+*/
+
+// ---------------------------------------------

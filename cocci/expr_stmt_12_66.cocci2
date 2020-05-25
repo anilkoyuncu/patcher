@@ -1,0 +1,25 @@
+@@
+expression E0, E1;
+typedef INT_PCM;
+@@
+- E0 = aacDecoder_DecodeFrame(E1->handle, (INT_PCM *)E1->decoder_buffer,  E1->decoder_buffer_size, 0); 
++ E0 = aacDecoder_DecodeFrame(E1->handle, (INT_PCM *)E1->decoder_buffer,  E1->decoder_buffer_size / sizeof(INT_PCM ), 0); 
+// Infered from: (FFmpeg/{prevFiles/prev_ca6776_7c36ee_libavcodec#libfdk-aacdec.c,revFiles/ca6776_7c36ee_libavcodec#libfdk-aacdec.c}: fdk_aac_decode_frame), (FFmpeg/{prevFiles/prev_f61265_04f691_libavcodec#libfdk-aacdec.c,revFiles/f61265_04f691_libavcodec#libfdk-aacdec.c}: fdk_aac_decode_frame)
+// Recall: 0.31, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.62, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/6(66%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_2d6f89_cb5a7a_audio#audio.c: audio_process_options
+ - qemu/prevFiles/prev_2d6f89_cb5a7a_audio#audio.c: audio_alloc_prefix
+*/
+
+// ---------------------------------------------

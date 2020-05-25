@@ -1,0 +1,33 @@
+@@
+identifier I1 = {assoc_parse ,auth_parse };
+expression E2, E3, E4, E0;
+@@
+- if (0 == (E0 = I1(E2, E3, &E4)))  
++ E0 = I1(E2, E3, &E4); 
++ if (!E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_09adb6e_58c991d_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c,revFiles/09adb6e_58c991d_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c}: ieee80211_rx_frame_softmac), (linux/{prevFiles/prev_09adb6e_58c991d_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c,revFiles/09adb6e_58c991d_drivers#staging#rtl8192u#ieee80211#ieee80211_softmac.c}: ieee80211_rx_frame_softmac)
+// Recall: 0.36, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.79, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch did not apply:
+ - curl/prevFiles/prev_17da67_59a0fb_src#tool_getparam.c: getparameter
+*/
+
+// ---------------------------------------------

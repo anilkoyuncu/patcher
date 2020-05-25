@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- printf("EMEM tree type:%d name:%s tree:%p\n", E0->type, E0->name, E0->tree); 
++ printf("EMEM tree type:%d name:%s tree:%p\n", E0->type, E0->name,  (void *)(E0->tree)); 
+// Infered from: (wireshark/{prevFiles/prev_980b39_b25aa0_epan#emem.c,revFiles/980b39_b25aa0_epan#emem.c}: emem_print_tree)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

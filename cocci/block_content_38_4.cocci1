@@ -1,0 +1,33 @@
+@@
+expression E0;
+@@
+- date_Set(&E0->pts, 1); 
++ date_Set(&E0->pts, 0); 
+// Infered from: (vlc/{prevFiles/prev_88f65a_02ea19_modules#demux#cdg.c,revFiles/88f65a_02ea19_modules#demux#cdg.c}: Open)
+// False positives: (vlc/revFiles/5a0c17_f587ea_modules#demux#wav.c: Open), (vlc/revFiles/a6a7af_5a0c17_modules#demux#xa.c: Open), (vlc/revFiles/f587ea_b4d741_modules#demux#voc.c: Open)
+// Recall: 0.14, Precision: 0.25, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.62
+// -- Node Change --
+// Recall: 0.71, Precision: 0.62
+// -- General --
+// Functions fully changed: 1/8(12%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_88f65a_02ea19_modules#demux#cdg.c: Demux
+ - vlc/prevFiles/prev_f587ea_b4d741_modules#demux#voc.c: Demux
+ - vlc/prevFiles/prev_5a0c17_f587ea_modules#demux#wav.c: Demux
+ - vlc/prevFiles/prev_a6a7af_5a0c17_modules#demux#xa.c: Demux
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_f587ea_b4d741_modules#demux#voc.c: Open
+ - vlc/prevFiles/prev_5a0c17_f587ea_modules#demux#wav.c: Open
+ - vlc/prevFiles/prev_a6a7af_5a0c17_modules#demux#xa.c: Open
+*/
+
+// ---------------------------------------------

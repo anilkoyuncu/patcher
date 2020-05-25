@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!S_ISDIR(E0->d_inode->i_mode))  
++ if (!d_is_dir(E0))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_e36cb0_2c616d_fs#reiserfs#xattr.c,revFiles/e36cb0_2c616d_fs#reiserfs#xattr.c}: reiserfs_for_each_xattr)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

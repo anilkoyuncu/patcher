@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gtk_entry_buffer_set_max_length(gtk_entry_get_buffer(E0->text), 1000); 
++ gtk_entry_buffer_set_max_length(gtk_entry_get_buffer(GTK_ENTRY(E0->text)),  1000); 
+// Infered from: (gtk/{prevFiles/prev_6389f1_a27da3_modules#other#gail#tests#ferret.c,revFiles/6389f1_a27da3_modules#other#gail#tests#ferret.c}: _get_name_value)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

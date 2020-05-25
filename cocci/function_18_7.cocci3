@@ -1,0 +1,37 @@
+@@
+expression E0, E1;
+@@
+- ff_wma_init(E0, E1); 
++ if ((ret = ff_wma_init(E0, E1)) < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_19e456_a53fbd_libavcodec#wmaenc.c,revFiles/19e456_a53fbd_libavcodec#wmaenc.c}: encode_init)
+// Recall: 0.13, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.60
+// -- Node Change --
+// Recall: 0.74, Precision: 0.55
+// -- General --
+// Functions fully changed: 1/10(10%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_19e456_a53fbd_libavcodec#wmaenc.c: encode_init
+ - FFmpeg/prevFiles/prev_dc6b99_8cc6e9_libavformat#movenc.c: mov_write_wfex_tag
+ - FFmpeg/prevFiles/prev_73abc3_8888c7_libavcodec#aacdec.c: decode_audio_specific_config
+ - FFmpeg/prevFiles/prev_dc6b99_8cc6e9_libavformat#movenc.c: mov_write_ms_tag
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_4484c7_1146bbc_libavcodec#alsdec.c: decode_frame
+ - FFmpeg/prevFiles/prev_73abc3_8888c7_libavcodec#aacdec.c: aac_decode_frame
+ - FFmpeg/prevFiles/prev_dc6b99_8cc6e9_libavformat#movenc.c: mov_write_ac3_tag
+ - FFmpeg/prevFiles/prev_73abc3_8888c7_libavcodec#aacdec.c: latm_decode_frame
+ - FFmpeg/prevFiles/prev_dc6b99_8cc6e9_libavformat#movenc.c: mov_write_dvc1_structs
+*/
+
+// ---------------------------------------------

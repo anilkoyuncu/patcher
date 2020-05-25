@@ -1,0 +1,11 @@
+@@
+expression E0;
+@@
+- return GST_PAD_TEMPLATE_PRESENCE(E0) == GST_PAD_REQUEST; 
++ is_request = GST_PAD_TEMPLATE_PRESENCE(E0) == GST_PAD_REQUEST; 
++ gst_object_unref(E0); 
++ return is_request; 
+// Infered from: (gstreamer/{prevFiles/prev_36267c_162fc1_libs#gst#check#gstharness.c,revFiles/36267c_162fc1_libs#gst#check#gstharness.c}: gst_pad_is_request_pad)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

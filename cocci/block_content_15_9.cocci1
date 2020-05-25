@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- irq_set_chained_handler(E0, gpio_irq_handler); 
+- irq_set_handler_data(E0, &E1[E2 / 32]); 
++ irq_set_chained_handler_and_data(E0, gpio_irq_handler, &E1[E2 / 32]); 
+// Infered from: (linux/{prevFiles/prev_bdac2b_1765d6_drivers#gpio#gpio-davinci.c,revFiles/bdac2b_1765d6_drivers#gpio#gpio-davinci.c}: davinci_gpio_irq_setup), (linux/{prevFiles/prev_20483d_01e2d0_drivers#gpio#gpio-davinci.c,revFiles/20483d_01e2d0_drivers#gpio#gpio-davinci.c}: davinci_gpio_irq_setup)
+// Recall: 0.32, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

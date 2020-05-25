@@ -1,0 +1,27 @@
+@@
+expression E0;
+@@
+- if (E0->length < (sizeof(long ) + 1))  
++ if (E0->length < (int )(sizeof(long ) + 1))  
+  {
+  ...
+  }
+// Infered from: (openssl/{prevFiles/prev_275459_2ce90b_crypto#asn1#a_int.c,revFiles/275459_2ce90b_crypto#asn1#a_int.c}: ASN1_INTEGER_set), (openssl/{prevFiles/prev_275459_2ce90b_crypto#asn1#a_enum.c,revFiles/275459_2ce90b_crypto#asn1#a_enum.c}: ASN1_ENUMERATED_set)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.57, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - openssl/prevFiles/prev_275459_2ce90b_crypto#asn1#a_enum.c: ASN1_ENUMERATED_set
+ - openssl/prevFiles/prev_275459_2ce90b_crypto#asn1#a_int.c: ASN1_INTEGER_set
+*/
+
+// ---------------------------------------------

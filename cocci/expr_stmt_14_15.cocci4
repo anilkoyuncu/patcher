@@ -1,0 +1,19 @@
+@@
+expression E0;
+@@
+- do_div(E0, 1 << 27); 
++ do_div(E0, BIT(27)); 
+// Infered from: (linux/{prevFiles/prev_6082ac_58ff7e_drivers#staging#iio#impedance-analyzer#ad5933.c,revFiles/6082ac_58ff7e_drivers#staging#iio#impedance-analyzer#ad5933.c}: ad5933_show_frequency)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

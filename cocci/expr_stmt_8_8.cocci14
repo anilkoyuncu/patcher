@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- error_report("warning: CPU(s) not present in any NUMA nodes: %s", E0->str); 
++ warn_report("CPU(s) not present in any NUMA nodes: %s", E0->str); 
+// Infered from: (qemu/{prevFiles/prev_3dc6f8_97f403_hw#core#machine.c,revFiles/3dc6f8_97f403_hw#core#machine.c}: machine_numa_finish_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

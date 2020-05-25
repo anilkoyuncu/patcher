@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1, E2;
+typedef picture_pool_t;
+@@
+- picture_pool_t *I0 = vout_display_Pool(E1->display[E2], 1); 
++ picture_pool_t *I0 = vout_display_Pool(E1->display[E2], 3); 
+// Infered from: (vlc/{prevFiles/prev_63293a_dad30b_src#video_output#display.c,revFiles/63293a_dad30b_src#video_output#display.c}: SplitterPictureNew)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

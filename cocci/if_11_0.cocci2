@@ -1,0 +1,14 @@
+@@
+expression E0;
+@@
+- if (E0->que_attachments_req)  
++ if (E0->queue_attachments_req)  
+  {
+  ...
+- E0->que_attachments_req = 0; 
++ E0->queue_attachments_req = 0; 
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_491ca0_43adc6_ffplay.c,revFiles/491ca0_43adc6_ffplay.c}: read_thread)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

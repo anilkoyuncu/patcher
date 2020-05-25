@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2;
+@@
+- failf(E0, "Error reading ca cert path %s - mbedTLS: (-0x%04X) %s",  E0->set.str[STRING_SSL_CAPATH], -E1, E2); 
+- if (E0->set.ssl.verifypeer)  
++ failf(E0, "Error reading ca cert path %s - mbedTLS: (-0x%04X) %s",  E0->set.str[STRING_SSL_CAPATH_ORIG], -E1, E2); 
++ if (E0->set.ssl.primary.verifypeer)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_8cb872_cb4e2b_lib#vtls#mbedtls.c,revFiles/8cb872_cb4e2b_lib#vtls#mbedtls.c}: mbed_connect_step1)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.11
+
+// ---------------------------------------------

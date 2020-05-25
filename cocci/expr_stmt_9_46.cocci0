@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 |= ((70LL * 365 + 17) * 24 * 60 * 60 + E1.tv_sec) << 32; 
++ E0 |= ((UINT64_C(70) * 365 + 17) * 24 * 60 * 60 + E1.tv_sec) << 32; 
+// Infered from: (vlc/{prevFiles/prev_45f7b6_bf9b99_src#misc#mtime.c,revFiles/45f7b6_bf9b99_src#misc#mtime.c}: NTPtime64)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

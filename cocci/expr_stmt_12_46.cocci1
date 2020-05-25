@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->clks = kzalloc(E1->num_clocks * sizeof(struct clock *), GFP_KERNEL); 
++ E0->clks = kcalloc(E1->num_clocks, sizeof(struct clock *), GFP_KERNEL); 
+// Infered from: (linux/{prevFiles/prev_9ac04a_5869066a_drivers#staging#media#davinci_vpfe#vpfe_mc_capture.c,revFiles/9ac04a_5869066a_drivers#staging#media#davinci_vpfe#vpfe_mc_capture.c}: vpfe_enable_clock)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

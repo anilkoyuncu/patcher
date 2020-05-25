@@ -1,0 +1,24 @@
+@@
+expression E0;
+@@
+- g_object_class_install_property(G_OBJECT_CLASS(E0), ARG_MD5,  g_param_spec_pointer("md5", "md5",  "current value of the md5 sum",  G_PARAM_READABLE)); 
++ g_object_class_install_property(G_OBJECT_CLASS(E0), ARG_MD5,  g_param_spec_string("md5", "md5",  "current value of the md5 sum",  "", G_PARAM_READABLE)); 
+// Infered from: (gstreamer/{prevFiles/prev_194424_1d9413_plugins#elements#gstmd5sink.c,revFiles/194424_1d9413_plugins#elements#gstmd5sink.c}: gst_md5sink_class_init), (gstreamer/{prevFiles/prev_194424_1d9413_gst#elements#gstmd5sink.c,revFiles/194424_1d9413_gst#elements#gstmd5sink.c}: gst_md5sink_class_init)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch applied partially:
+ - gstreamer/prevFiles/prev_194424_1d9413_gst#elements#gstmd5sink.c: gst_md5sink_get_property
+ - gstreamer/prevFiles/prev_194424_1d9413_plugins#elements#gstmd5sink.c: gst_md5sink_get_property
+*/
+
+// ---------------------------------------------

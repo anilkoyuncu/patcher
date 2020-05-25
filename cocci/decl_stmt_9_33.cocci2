@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- const  double I0 = (double )(E1->position[0] - E2->origin[0] + E2->window / 2) / E2->tempo; 
++ const  double I0 = (double )(E1->position[0] - E2->origin[0] + E2->window / 2); 
+// Infered from: (FFmpeg/{prevFiles/prev_947fda_b7d9b4_libavfilter#af_atempo.c,revFiles/947fda_b7d9b4_libavfilter#af_atempo.c}: yae_adjust_position)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

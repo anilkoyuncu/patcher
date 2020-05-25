@@ -1,0 +1,22 @@
+@@
+expression E0;
+@@
+- E0->list_count++; 
+// Infered from: (FFmpeg/{prevFiles/prev_8b6aeb_5a1ac4_libavformat#segment.c,revFiles/8b6aeb_5a1ac4_libavformat#segment.c}: segment_list_close)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/5(60%)
+
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_8b6aeb_5a1ac4_libavformat#segment.c: 
+*/
+
+// ---------------------------------------------

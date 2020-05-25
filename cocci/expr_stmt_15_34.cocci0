@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- avio_wb16(E0, E1->codec->codec_type); 
++ avio_wb16(E0, E1 ? E1->codec->codec_type :0); 
+// Infered from: (FFmpeg/{prevFiles/prev_c92a2a_f06068b_libavformat#movenc.c,revFiles/c92a2a_f06068b_libavformat#movenc.c}: mov_write_tkhd_tag)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,32 @@
+@@
+identifier I0;
+typedef int64_t;
+typedef uint64_t;
+@@
+- uint64_t I0; 
++ int64_t I0; 
+  ...
+- if (I0 > UINT_MAX)  
++ if (I0 > INT_MAX)  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_ca1d6a_61bca2_qemu-io.c,revFiles/ca1d6a_61bca2_qemu-io.c}: create_iovec)
+// Recall: 0.22, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.60, Precision: 1.00
+// -- Node Change --
+// Recall: 0.44, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/5(20%)
+
+/*
+Functions where the patch applied partially:
+ - libarchive/prevFiles/prev_a1e0ee_3439b4_libarchive#archive_read_support_format_cab.c: lzx_translation
+ - libarchive/prevFiles/prev_db18e1_b263cc_libarchive#archive_read_support_format_cab.c: lzx_translation
+*/
+
+// ---------------------------------------------

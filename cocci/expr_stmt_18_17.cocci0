@@ -1,0 +1,8 @@
+@@
+@@
+- properties[PROP_POPULATE_ALL] = g_param_spec_boolean("populate-all",  P_("Show 'Other locations'"),  P_("Whether the sidebar includes an item to show external locations"),  FALSE, G_PARAM_READWRITE); 
++ properties[PROP_POPULATE_ALL] = g_param_spec_boolean("populate-all",  P_("Populate all"),  P_("Whether to emit ::populate-popup for popups that are not menus"),  FALSE, G_PARAM_READWRITE); 
+// Infered from: (gtk/{prevFiles/prev_b4b46b_658a1e_gtk#gtkplacessidebar.c,revFiles/b4b46b_658a1e_gtk#gtkplacessidebar.c}: gtk_places_sidebar_class_init)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

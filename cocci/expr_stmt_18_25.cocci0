@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0 = proto_tree_add_protocol_format(E1, proto_message_jxta, E2, E3, -1,  "JXTA Message, %s -> %s", E4, E5); 
++ E0 = proto_tree_add_protocol_format(E1, proto_message_jxta, E2, E3, -1,  "JXTA Message, %s -> %s", E4->str,  E5->str); 
+// Infered from: (wireshark/{prevFiles/prev_5f78aa_60d3b4_epan#dissectors#packet-jxta.c,revFiles/5f78aa_60d3b4_epan#dissectors#packet-jxta.c}: dissect_jxta_message)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

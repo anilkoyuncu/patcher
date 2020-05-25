@@ -1,0 +1,41 @@
+@@
+expression E0, E1;
+@@
+- msg_Dbg(E0, "reading %zu bytes at a time", E1->blocksize); 
+// Infered from: (vlc/{prevFiles/prev_f74724_3ebfe6_modules#access#v4l2#demux.c,revFiles/f74724_3ebfe6_modules#access#v4l2#demux.c}: InitVideo)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.41, Precision: 1.00
+// -- Node Change --
+// Recall: 0.21, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/17(0%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_d47fb8_0843ac_builtin-fast-export.c: export_marks
+ - qemu/prevFiles/prev_0bf9e3_c0a2a0_hw#usb-ohci.c: usb_ohci_init
+ - vlc/prevFiles/prev_f74724_3ebfe6_modules#access#v4l2#demux.c: InitVideo
+ - qemu/prevFiles/prev_0bf9e3_c0a2a0_hw#usb-ohci.c: ohci_service_td
+ - FFmpeg/prevFiles/prev_ccd322_7c428e_libavformat#asf.c: asf_build_simple_index
+ - vlc/prevFiles/prev_f22f4e_f9e122_modules#demux#demuxdump.c: Desactivate
+ - vlc/prevFiles/prev_da488a_c2a659_src#config#help.c: print_item
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_ccd322_7c428e_libavformat#asf.c: asf_read_seek
+ - qemu/prevFiles/prev_526ccb_c5f2f6_hw#sh7750.c: ignore_access
+ - FFmpeg/prevFiles/prev_1cef5a_d3abbb_ffmpeg.c: decode_video
+ - wireshark/prevFiles/prev_461b6d_e10101_epan#dissectors#packet-ssl.c: proto_register_ssl
+ - qemu/prevFiles/prev_a680f7_7b6c73_hw#qxl-logger.c: qxl_log_command
+ - php-src/prevFiles/prev_1f6612_763f86_ext#interbase#ibase_query.c: PHP_FUNCTION
+ - FFmpeg/prevFiles/prev_461628_bdb57a_libavformat#oggdec.c: ogg_packet
+ - vlc/prevFiles/prev_bdeabc_f5e753_src#config#dirs.c: config_GetConfDir
+ - qemu/prevFiles/prev_526ccb_c5f2f6_hw#sh7750.c: error_access
+ - gstreamer/prevFiles/prev_393033_2c4d0a_gst#gsttrace.c: gst_trace_text_flush
+*/
+
+// ---------------------------------------------

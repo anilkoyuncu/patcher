@@ -1,0 +1,14 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 < 20)  
++ if (E0 < 18)  
+  {
+- expert_add_info_format(E1, E2, PI_MALFORMED, PI_ERROR,  "Tag Length %u wrong, must be >= 20", E0); 
++ expert_add_info_format(E1, E2, PI_MALFORMED, PI_ERROR,  "Tag Length %u wrong, must be >= 18", E0); 
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_2bed64_6d044f_epan#dissectors#packet-ieee80211.c,revFiles/2bed64_6d044f_epan#dissectors#packet-ieee80211.c}: add_tagged_field)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

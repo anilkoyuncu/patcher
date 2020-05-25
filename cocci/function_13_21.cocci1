@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- E0->timer_src = NULL; 
+- g_source_unref(E0->open_source); 
+- E0->open_source = NULL; 
++ pty_chr_timer_cancel(E0); 
++ pty_chr_open_src_cancel(E0); 
+// Infered from: (qemu/{prevFiles/prev_4e4b57_c6caae_chardev#char-pty.c,revFiles/4e4b57_c6caae_chardev#char-pty.c}: pty_chr_timer)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

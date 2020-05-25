@@ -1,0 +1,36 @@
+@@
+identifier I0;
+expression E1;
+typedef intptr_t;
+typedef ompi_osc_rdma_state_t;
+@@
+- ompi_osc_rdma_state_t *I0 = (ompi_osc_rdma_state_t *)(intptr_t )E1->state; 
+// Infered from: (ompi/{prevFiles/prev_63e744_f690fc_ompi#mca#osc#rdma#osc_rdma_component.c,revFiles/63e744_f690fc_ompi#mca#osc#rdma#osc_rdma_component.c}: allocate_state_shared)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.05
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.20, Precision: 1.00
+// -- Node Change --
+// Recall: 0.12, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/10(10%)
+
+/*
+Functions where the patch applied partially:
+ - ompi/prevFiles/prev_63e744_f690fc_ompi#mca#osc#rdma#osc_rdma_component.c: allocate_state_shared
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_56e71f_e3aa96_modules#demux#asf#asf.c: ASF_fillup_es_priorities_ex
+ - vlc/prevFiles/prev_56e71f_e3aa96_modules#demux#asf#asf.c: ASF_fillup_es_bitrate_priorities_ex
+ - vlc/prevFiles/prev_8abecc_bb2cb7_src#input#stream.c: AStreamSeekStream
+ - FFmpeg/prevFiles/prev_6f3e4e_3b61ab_libavcodec#vc1.c: vc1_decode_intra_block
+ - FFmpeg/prevFiles/prev_c88afa_fb7b0347_libavcodec#mpeg4videodec.c: get_amv
+ - ompi/prevFiles/prev_3b7d6a_5733c5_src#mca#rmgr#base#rmgr_base_select.c: orte_rmgr_base_select
+ - FFmpeg/prevFiles/prev_072198_4b0300_libavformat#mov.c: mov_read_udta_string
+ - FFmpeg/prevFiles/prev_dd8351_ab6f57_libavcodec#exr.c: huf_decode
+*/
+
+// ---------------------------------------------

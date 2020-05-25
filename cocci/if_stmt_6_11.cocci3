@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0 && E0->abss_desc && g_str_has_suffix(E0->abss_desc, "Storage"))  
++ if (E0->abss_desc && g_str_has_suffix(E0->abss_desc, "Storage"))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_43b089_ed2510_epan#dissectors#packet-dcm.c,revFiles/43b089_ed2510_epan#dissectors#packet-dcm.c}: dissect_dcm_pdv_header)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

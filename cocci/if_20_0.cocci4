@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (!zend_stat(E0, &E1) && (E1.st_mode & S_IFREG))  
++ if (!php_sys_stat(E0, &E1) && (E1.st_mode & S_IFREG))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_2860fd_fbf46d_sapi#cli#php_cli_server.c,revFiles/2860fd_fbf46d_sapi#cli#php_cli_server.c}: php_cli_server_request_translate_vpath)
+// False positives: (php-src/revFiles/64fee0_736633_sapi#cli#php_cli_server.c: php_cli_server_request_translate_vpath)
+// Recall: 0.17, Precision: 0.75, Matching recall: 0.38
+
+// ---------------------------------------------

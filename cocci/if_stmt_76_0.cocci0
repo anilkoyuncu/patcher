@@ -1,0 +1,25 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 && !pci_set_dma_mask(E1, DMA_BIT_MASK(64)))  
++ if (E0 && !dma_set_mask(&E1->dev, DMA_BIT_MASK(64)))  
+  {
+- E2 = pci_set_consistent_dma_mask(E1, DMA_BIT_MASK(64)); 
++ E2 = dma_set_coherent_mask(&E1->dev, DMA_BIT_MASK(64)); 
+  ...
+  }
+- else
++ else
+  {
+  ...
+- E2 = pci_set_dma_mask(E1, DMA_BIT_MASK(32)); 
++ E2 = dma_set_mask(&E1->dev, DMA_BIT_MASK(32)); 
+  ...
+- E2 = pci_set_consistent_dma_mask(E1, DMA_BIT_MASK(32)); 
++ E2 = dma_set_coherent_mask(&E1->dev, DMA_BIT_MASK(32)); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_c54c719_9a1e75e_drivers#ata#ahci.c,revFiles/c54c719_9a1e75e_drivers#ata#ahci.c}: ahci_configure_dma_masks), (linux/{prevFiles/prev_c54c719_9a1e75e_drivers#ata#sata_qstor.c,revFiles/c54c719_9a1e75e_drivers#ata#sata_qstor.c}: qs_set_dma_masks), (linux/{prevFiles/prev_c54c719_9a1e75e_drivers#ata#acard-ahci.c,revFiles/c54c719_9a1e75e_drivers#ata#acard-ahci.c}: acard_ahci_configure_dma_masks)
+// Recall: 0.60, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

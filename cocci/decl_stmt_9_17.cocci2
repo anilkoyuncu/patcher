@@ -1,0 +1,32 @@
+@@
+identifier I0;
+@@
+- int I0[1000][1000]; 
++ int I0[100000][10]; 
+// Infered from: (codeflaws/{prevFiles/prev_248-A-13317382-13317394.c,revFiles/248-A-13317382-13317394.c}: main)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.23, Precision: 1.00
+// -- Node Change --
+// Recall: 0.23, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/13(23%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_3b644a_55b5b7_wiretap#catapult_dct2000.c: 
+ - codeflaws/prevFiles/prev_166-A-10687134-10687234.c: main
+ - codeflaws/prevFiles/prev_242-A-16499985-16500336.c: main
+ - codeflaws/prevFiles/prev_676-B-18134806-18134816.c: main
+ - codeflaws/prevFiles/prev_518-D-10002685-10002791.c: 
+ - codeflaws/prevFiles/prev_489-A-9817634-9817673.c: main
+ - codeflaws/prevFiles/prev_177-A2-3817845-3817851.c: main
+ - codeflaws/prevFiles/prev_625-C-15871818-15872029.c: 
+ - codeflaws/prevFiles/prev_242-A-16500031-16500336.c: main
+ - codeflaws/prevFiles/prev_415-D-6331272-6331501.c: 
+*/
+
+// ---------------------------------------------

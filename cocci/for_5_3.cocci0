@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- for(E0 = -255;E0 < 256;E0++)  
++ for(E0 = -256;E0 < 256;E0++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_2ed627_3c4f18_libavcodec#msmpeg4.c,revFiles/2ed627_3c4f18_libavcodec#msmpeg4.c}: init_h263_dc_for_msmpeg4)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

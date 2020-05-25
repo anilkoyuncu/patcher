@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- *E0++ <<= 8; 
++ *E0++ *= 256; 
+// Infered from: (FFmpeg/{prevFiles/prev_ebccd2_2921b4_libavcodec#tta.c,revFiles/ebccd2_2921b4_libavcodec#tta.c}: tta_decode_frame)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

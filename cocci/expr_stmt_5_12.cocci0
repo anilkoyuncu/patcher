@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->req_time = E1->fd->abs_ts; 
++ E0->req_time = E1->abs_ts; 
+// Infered from: (wireshark/{prevFiles/prev_21ac67_9141bd_asn1#ros#packet-ros-template.c,revFiles/21ac67_9141bd_asn1#ros#packet-ros-template.c}: ros_match_call_response)
+// Recall: 0.20, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

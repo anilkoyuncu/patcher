@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- mk_nt_hash(E0->data, E1, E2); 
++ if (mk_nt_hash(E0->data, E1, E2) == CURLE_OUT_OF_MEMORY)  
++ {
++ return CURLE_OUT_OF_MEMORY; 
++ }
+// Infered from: (curl/{prevFiles/prev_d46d99_1a0cc6_lib#http_ntlm.c,revFiles/d46d99_1a0cc6_lib#http_ntlm.c}: Curl_output_ntlm), (curl/{prevFiles/prev_d46d99_1a0cc6_lib#http_ntlm.c,revFiles/d46d99_1a0cc6_lib#http_ntlm.c}: Curl_output_ntlm)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

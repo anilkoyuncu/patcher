@@ -1,0 +1,12 @@
+@@
+identifier I2, I3, I4;
+expression E0, E1, E5;
+@@
+- extcap_base_set_util_info(E0, E1[0], I2, I3, I4, data_file_url(E5)); 
++ help_url = data_file_url(E5); 
++ extcap_base_set_util_info(E0, E1[0], I2, I3, I4, help_url); 
++ g_free(help_url); 
+// Infered from: (wireshark/{prevFiles/prev_2009dc_03a888_extcap#udpdump.c,revFiles/2009dc_03a888_extcap#udpdump.c}: main), (wireshark/{prevFiles/prev_2009dc_03a888_extcap#ciscodump.c,revFiles/2009dc_03a888_extcap#ciscodump.c}: main), (wireshark/{prevFiles/prev_2009dc_03a888_extcap#randpktdump.c,revFiles/2009dc_03a888_extcap#randpktdump.c}: main), (wireshark/{prevFiles/prev_2009dc_03a888_extcap#sshdump.c,revFiles/2009dc_03a888_extcap#sshdump.c}: main)
+// Recall: 0.36, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

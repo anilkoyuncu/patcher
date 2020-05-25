@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0->reload = E1; 
++ E0->reload = calculate_min_ticks(E0, E1); 
+// Infered from: (qemu/{prevFiles/prev_77a132_0710b2_hw#timer#aspeed_timer.c,revFiles/77a132_0710b2_hw#timer#aspeed_timer.c}: aspeed_timer_set_value)
+// False positives: (qemu/revFiles/77a132_0710b2_hw#timer#aspeed_timer.c: aspeed_timer_reset)
+// Recall: 0.10, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

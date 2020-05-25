@@ -1,0 +1,51 @@
+@@
+expression E0;
+@@
+- if (!g_error_matches(E0->original_error, G_IO_ERROR_NOT_FOUND))  
++ if (!g_error_matches(E0->original_error, G_IO_ERROR, G_IO_ERROR_NOT_FOUND))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (gtk/{prevFiles/prev_d68d97_2ebb72e_gtk#gtkfilechooserdefault.c,revFiles/d68d97_2ebb72e_gtk#gtkfilechooserdefault.c}: update_current_folder_get_info_cb)
+// False positives: (gtk/revFiles/d68d97_2ebb72e_gtk#gtkfilechooserdefault.c: _gtk_file_chooser_label_for_file)
+// Recall: 0.03, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.26, Precision: 0.86
+// -- Node Change --
+// Recall: 0.19, Precision: 0.86
+// -- General --
+// Functions fully changed: 6/24(25%)
+
+/*
+Functions where the patch did not apply:
+ - qemu/prevFiles/prev_33ef55_3fffc2_vl.c: qemu_chr_open_win
+ - cpython/prevFiles/prev_c0fd1c_ca42b1_Modules#parsermodule.c: build_node_children
+ - FFmpeg/prevFiles/prev_3f72db_5ffb5e_ffplay.c: video_thread
+ - vlc/prevFiles/prev_8bfc45f_abec6e_modules#codec#quicktime.c: DecodeVideo
+ - FFmpeg/prevFiles/prev_b2e57e_8f7c7f_libavcodec#mjpegdec.c: ljpeg_decode_yuv_scan
+ - FFmpeg/prevFiles/prev_455523_465eb0_libavcodec#mjpegdec.c: ljpeg_decode_rgb_scan
+ - FFmpeg/prevFiles/prev_b2e57e_8f7c7f_libavcodec#mjpegdec.c: ff_mjpeg_decode_sos
+ - qemu/prevFiles/prev_33ef55_3fffc2_vl.c: win_chr_init
+ - FFmpeg/prevFiles/prev_47a017_7730bac_libavcodec#rv10.c: rv10_decode_packet
+ - FFmpeg/prevFiles/prev_455523_465eb0_libavcodec#mjpegdec.c: ff_mjpeg_decode_sos
+ - libarchive/prevFiles/prev_dbc79e_3b4133_libarchive#test#test_archive_string_conversion.c: test_archive_string_normalization
+ - FFmpeg/prevFiles/prev_3f72db_5ffb5e_ffplay.c: configure_video_filters
+ - FFmpeg/prevFiles/prev_8c5070_1c4c78_libavcodec#vorbisdec.c: vorbis_residue_decode_internal
+ - FFmpeg/prevFiles/prev_47a017_7730bac_libavcodec#rv10.c: rv10_decode_frame
+ - FFmpeg/prevFiles/prev_8c5070_1c4c78_libavcodec#vorbisdec.c: setup_classifs
+ - vlc/prevFiles/prev_8bfc45f_abec6e_modules#codec#quicktime.c: DecodeAudio
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_d68d97_2ebb72e_gtk#gtkfilechooserdefault.c: _gtk_file_chooser_label_for_file
+*/
+
+// ---------------------------------------------

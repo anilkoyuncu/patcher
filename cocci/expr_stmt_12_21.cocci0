@@ -1,0 +1,12 @@
+@@
+identifier I1 = {OMPI_INT_2_FINT ,cpu_to_le32 ,g_strdup ,gst_caps_copy ,proto_item_get_parent ,strdup }, I2 = {PMPI_Comm_split_type ,PMPI_Imrecv ,basename ,gst_pad_get_pad_template_caps ,gtk_file_chooser_get_filename ,pci_map_single ,proto_tree_get_parent ,tvb_get_ephemeral_string };
+expression list E3;
+expression E0;
+@@
+- E0 = I1(I2(E3)); 
++ E0 = I2(E3); 
+// Infered from: (wireshark/{prevFiles/prev_0cb250_ce751d_epan#dissectors#packet-rtp.c,revFiles/0cb250_ce751d_epan#dissectors#packet-rtp.c}: dissect_rtp_data), (gstreamer/{prevFiles/prev_21455d_eba7fe_gst#gstdebugutils.c,revFiles/21455d_eba7fe_gst#gstdebugutils.c}: debug_dump_element_pad_link), (gstreamer/{prevFiles/prev_21455d_eba7fe_gst#gstdebugutils.c,revFiles/21455d_eba7fe_gst#gstdebugutils.c}: debug_dump_element_pad_link), (cairo/{prevFiles/prev_6662ee_8419c4_perf#cairo-perf-report.c,revFiles/6662ee_8419c4_perf#cairo-perf-report.c}: cairo_perf_report_load), (wireshark/{prevFiles/prev_c850c0_7d76eb_epan#dissectors#packet-multipart.c,revFiles/c850c0_7d76eb_epan#dissectors#packet-multipart.c}: base64_decode), (wireshark/{prevFiles/prev_0cb250_ce751d_epan#dissectors#packet-iax2.c,revFiles/0cb250_ce751d_epan#dissectors#packet-iax2.c}: desegment_iax), (linux/{prevFiles/prev_88b09a6_6654cf_drivers#net#ethernet#3com#3c59x.c,revFiles/88b09a6_6654cf_drivers#net#ethernet#3com#3c59x.c}: boomerang_start_xmit), (wireshark/{prevFiles/prev_bbe294_dd4957_gtk#file_dlg.c,revFiles/bbe294_dd4957_gtk#file_dlg.c}: file_selection_browse), (ompi/{prevFiles/prev_223e6c_020a59_ompi#mpi#fortran#mpif-h#imrecv_f.c,revFiles/223e6c_020a59_ompi#mpi#fortran#mpif-h#imrecv_f.c}: pompi_imrecv_f), (ompi/{prevFiles/prev_223e6c_020a59_ompi#mpi#fortran#mpif-h#comm_split_type_f.c,revFiles/223e6c_020a59_ompi#mpi#fortran#mpif-h#comm_split_type_f.c}: pompi_comm_split_type_f)
+// False positives: (linux/revFiles/88b09a6_6654cf_drivers#net#ethernet#3com#3c59x.c: boomerang_rx), (linux/revFiles/88b09a6_6654cf_drivers#net#ethernet#3com#3c59x.c: vortex_open)
+// Recall: 0.77, Precision: 0.83, Matching recall: 0.91
+
+// ---------------------------------------------

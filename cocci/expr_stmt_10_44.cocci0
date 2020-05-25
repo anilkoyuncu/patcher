@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->info->codec_info_duration_fields += E0->parser && E0->codec->ticks_per_frame == 2 ? E0->parser->repeat_pict + 1 :2; 
++ E0->info->codec_info_duration_fields += E0->parser && E0->need_parsing && E0->codec->ticks_per_frame == 2 ? E0->parser->repeat_pict + 1 :2; 
+// Infered from: (FFmpeg/{prevFiles/prev_038820_8349be8_libavformat#utils.c,revFiles/038820_8349be8_libavformat#utils.c}: avformat_find_stream_info)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

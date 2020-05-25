@@ -1,0 +1,12 @@
+@@
+expression E0;
+typedef cairo_pattern_t;
+@@
+- cairo_set_source(E0, cairo_pattern_create_rgb(0, 0, 0)); 
++ cairo_pattern_t *source = cairo_pattern_create_rgb(0, 0, 0); 
++ cairo_set_source(E0, source); 
++ cairo_pattern_destroy(source); 
+// Infered from: (cairo/{prevFiles/prev_9806f4_40201f_test#api-special-cases.c,revFiles/9806f4_40201f_test#api-special-cases.c}: test_cairo_set_source)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

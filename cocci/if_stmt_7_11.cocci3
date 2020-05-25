@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (av_strstart("https:", E0, NULL))  
++ if (av_strstart(E0, "https:", NULL))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_99867f_fddea3_libavformat#avio.c,revFiles/99867f_fddea3_libavformat#avio.c}: ffurl_alloc)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

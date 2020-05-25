@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- for(int I0 = E1;I0 < E2;++I0)  
++ for(I0 = E1;I0 < E2;++I0)  
+  {
+  ...
+  }
+// Infered from: (libarchive/{prevFiles/prev_11f5b7_7c3148_libarchive#test#test_write_format_gnutar_filenames.c,revFiles/11f5b7_7c3148_libarchive#test#test_write_format_gnutar_filenames.c}: DEFINE_TEST), (libarchive/{prevFiles/prev_11f5b7_7c3148_libarchive#test#test_write_format_gnutar_filenames.c,revFiles/11f5b7_7c3148_libarchive#test#test_write_format_gnutar_filenames.c}: DEFINE_TEST), (FFmpeg/{prevFiles/prev_e72f3d_c358a0_libavcodec#dnxhdenc.c,revFiles/e72f3d_c358a0_libavcodec#dnxhdenc.c}: dnxhd_10bit_dct_quantize), (FFmpeg/{prevFiles/prev_e72f3d_c358a0_libavcodec#dnxhdenc.c,revFiles/e72f3d_c358a0_libavcodec#dnxhdenc.c}: dnxhd_mb_var_thread)
+// Recall: 0.12, Precision: 1.00, Matching recall: 0.73
+
+// ---------------------------------------------

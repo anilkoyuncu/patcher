@@ -1,0 +1,28 @@
+@@
+identifier I0;
+expression E1, E2;
+@@
+- char I0[250]; 
++ char *I0; 
+  ...
+- curl_easy_getinfo(E1->cp, E2, I0); 
++ curl_easy_getinfo(E1->cp, E2, &I0); 
+// Infered from: (php-src/{prevFiles/prev_ea9ac6_f25ccb_ext#curl#curl.c,revFiles/ea9ac6_f25ccb_ext#curl#curl.c}: PHP_FUNCTION)
+// False positives: (php-src/revFiles/f25ccb_41a2b5_ext#curl#curl.c: PHP_FUNCTION)
+// Recall: 1.00, Precision: 0.67, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 0.67
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_f25ccb_41a2b5_ext#curl#curl.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

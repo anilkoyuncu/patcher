@@ -1,0 +1,20 @@
+@@
+identifier I2, I3;
+expression E0, E1;
+@@
+- E0 = E1.I2 + (int )fabs(E1.I3); 
++ E0 = E1.I2 + abs(E1.I3); 
+// Infered from: (php-src/{prevFiles/prev_5c844c_229010_ext#gd#libgd#gd_interpolation.c,revFiles/5c844c_229010_ext#gd#libgd#gd_interpolation.c}: gdTransformAffineCopy), (php-src/{prevFiles/prev_5c844c_229010_ext#gd#libgd#gd_interpolation.c,revFiles/5c844c_229010_ext#gd#libgd#gd_interpolation.c}: gdTransformAffineCopy)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

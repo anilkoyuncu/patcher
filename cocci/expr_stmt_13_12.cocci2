@@ -1,0 +1,25 @@
+@@
+expression E0;
+@@
+- memory_listener_register(&E0->memory_listener, &E0->dev.bus_master_as); 
++ memory_listener_register(&E0->memory_listener, &address_space_memory); 
+// Infered from: (qemu/{prevFiles/prev_842016_1dd6af_hw#xen#xen_pt.c,revFiles/842016_1dd6af_hw#xen#xen_pt.c}: xen_pt_realize)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.57, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/7(57%)
+
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_267e10_f399a9_modules#control#telnet.c: Open
+ - vlc/prevFiles/prev_a81102_d12f65_modules#misc#xml#libxml.c: ReaderCreate
+ - ompi/prevFiles/prev_6b34cc_d9b30e_orte#mca#iof#base#iof_base_setup.c: orte_iof_base_setup_output_files
+*/
+
+// ---------------------------------------------

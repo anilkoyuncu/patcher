@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->method & (NGX_HTTP_TRACE))  
++ if (E0->method & NGX_HTTP_TRACE)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_589fc7_7a6977_src#http#ngx_http_request.c,revFiles/589fc7_7a6977_src#http#ngx_http_request.c}: ngx_http_process_request_header)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

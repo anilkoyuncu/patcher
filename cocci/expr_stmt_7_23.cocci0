@@ -1,0 +1,12 @@
+@@
+expression E0;
+typedef ompi_osc_pt2pt_header_get_t;
+typedef ompi_osc_pt2pt_header_put_t;
+@@
+- E0 = sizeof(ompi_osc_pt2pt_header_put_t ) + 8; 
++ E0 = sizeof(ompi_osc_pt2pt_header_get_t ) + 8; 
+// Infered from: (ompi/{prevFiles/prev_39bcbe_c72688_ompi#mca#osc#pt2pt#osc_pt2pt_comm.c,revFiles/39bcbe_c72688_ompi#mca#osc#pt2pt#osc_pt2pt_comm.c}: ompi_osc_pt2pt_rget_internal)
+// False positives: (ompi/revFiles/39bcbe_c72688_ompi#mca#osc#pt2pt#osc_pt2pt_comm.c: ompi_osc_pt2pt_put_w_req)
+// Recall: 0.09, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

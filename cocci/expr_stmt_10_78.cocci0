@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = av_open_input_file(E1, E2); 
++ E0 = av_open_input_file(E1, NULL, E2, NULL); 
+// Infered from: (FFmpeg/{prevFiles/prev_63bdb0_a190b7_ffserver.c,revFiles/63bdb0_a190b7_ffserver.c}: open_input_stream)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,33 @@
+@@
+expression E0, E1;
+typedef zend_long;
+@@
+- E0 += (long )E1; 
++ E0 += (zend_long )E1; 
+// Infered from: (php-src/{prevFiles/prev_6809be_7496ba_ext#mbstring#mbstring.c,revFiles/6809be_7496ba_ext#mbstring#mbstring.c}: php_mb_stripos)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.33, Precision: 0.50
+// -- Node Change --
+// Recall: 0.33, Precision: 0.67
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_6809be_7496ba_ext#mbstring#mbstring.c: php_mb_stripos
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_6809be_7496ba_ext#mbstring#mbstring.c: php_mb_ord
+ - openssl/prevFiles/prev_bb61a6_79837e_fips#cmac#fips_cmac_selftest.c: FIPS_selftest_cmac
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_6809be_7496ba_ext#mbstring#mbstring.c: PHP_FUNCTION
+*/
+
+// ---------------------------------------------

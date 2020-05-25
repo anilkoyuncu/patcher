@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- opal_free_list_return_st(E0, E1); 
++ opal_free_list_return_st(E0, &E1->super); 
+// Infered from: (ompi/{prevFiles/prev_695dcd5_da85d5_orte#mca#oob#ud#oob_ud_req.c,revFiles/695dcd5_da85d5_orte#mca#oob#ud#oob_ud_req.c}: mca_oob_ud_msg_return)
+// Recall: 0.08, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

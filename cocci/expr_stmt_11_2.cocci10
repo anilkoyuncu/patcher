@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- msg_Warn(E0, "can't match format RAW video %4.4s", &E1.i_chroma); 
++ msg_Warn(E0, "can't match format RAW video %4.4s",  (const  char *)&E1.i_chroma); 
+// Infered from: (vlc/{prevFiles/prev_177175_78d3d6_modules#demux#avformat#mux.c,revFiles/177175_78d3d6_modules#demux#avformat#mux.c}: AddStream)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

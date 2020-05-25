@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (zend_get_parameters(ht, 1, &E0) == FAILURE)  
++ if (zend_get_parameters_ex(1, &E0) == FAILURE)  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_9322b9_36e57e_ext#pgsql#pgsql.c,revFiles/9322b9_36e57e_ext#pgsql#pgsql.c}: PHP_FUNCTION)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

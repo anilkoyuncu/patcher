@@ -1,0 +1,24 @@
+@@
+expression E0, E1, E2;
+typedef guint64;
+@@
+- *E0 = ((guint64 )E1 << 32) | E2; 
++ *E0 = ((guint64 )E2 << 32) | E1; 
+// Infered from: (wireshark/{prevFiles/prev_5ff8c3_a1a56b_epan#dissectors#packet-sccp.c,revFiles/5ff8c3_a1a56b_epan#dissectors#packet-sccp.c}: sccp_reassembly_get_id_pass1)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 4 rules):
+// -- Edit Location --
+// Recall: 0.80, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_3c3c16_a9e057_src#hyperloglog.c: hllSparseAdd
+*/
+
+// ---------------------------------------------

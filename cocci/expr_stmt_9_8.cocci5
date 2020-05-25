@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- sprintf(E0 + strlen(E0), "%li (%s)", E1[E2], E3[E2]); 
+// Infered from: (vlc/{prevFiles/prev_da488a_c2a659_src#config#help.c,revFiles/da488a_c2a659_src#config#help.c}: print_item)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

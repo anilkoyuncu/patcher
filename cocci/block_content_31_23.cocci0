@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0 = E1->c_coll.coll_bcast(E2, E3 * ompi_comm_size(E1), E4, 0, E1, E5); 
++ E0 = E1->c_coll.coll_bcast(E2, E3 * ompi_comm_size(E1), E4, 0, E1,  E1->c_coll.coll_bcast_module); 
+// Infered from: (ompi/{prevFiles/prev_2e6659_77f080_ompi#mca#coll#basic#coll_basic_allgather.c,revFiles/2e6659_77f080_ompi#mca#coll#basic#coll_basic_allgather.c}: mca_coll_basic_allgather_intra)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

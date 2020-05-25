@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- while (*E0 && !isspace(*E0) && *E1 != ',')  
++ while (*E0 && !isspace(*E0) && *E0 != ',')  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_0d3674_fce678_ares#ares_init.c,revFiles/0d3674_fce678_ares#ares_init.c}: config_nameserver)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

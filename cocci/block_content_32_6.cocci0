@@ -1,0 +1,13 @@
+@@
+identifier I3;
+expression E0, E1, E2;
+typedef RISCVCPU;
+@@
+- object_initialize(&E0->harts[E1], sizeof(RISCVCPU ), E0->cpu_type); 
++ object_initialize_child(OBJECT(E0), "harts[*]", &E0->harts[E1],  sizeof(RISCVCPU ), E0->cpu_type, &error_abort, NULL); 
+  ...
+- object_property_add_child(OBJECT(E0), E2, OBJECT(&E0->I3[E1]), &error_abort); 
+// Infered from: (qemu/{prevFiles/prev_5657c3_a993cb_hw#riscv#riscv_hart.c,revFiles/5657c3_a993cb_hw#riscv#riscv_hart.c}: riscv_harts_realize)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

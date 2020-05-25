@@ -1,0 +1,27 @@
+@@
+@@
+- proto_ISystemActivator = proto_register_protocol("ISystemActivator ISystemActivator Resolver",  "ISystemActivator",  "ISystemActivator"); 
++ proto_ISystemActivator = proto_register_protocol("ISystemActivator ISystemActivator Resolver",  "ISystemActivator",  "isystemactivator"); 
+// Infered from: (wireshark/{prevFiles/prev_9ead15a_e4f2f3_epan#dissectors#packet-dcom-sysact.c,revFiles/9ead15a_e4f2f3_epan#dissectors#packet-dcom-sysact.c}: proto_register_ISystemActivator)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/3(0%)
+
+/*
+Functions where the patch applied partially:
+ - wireshark/prevFiles/prev_86576c_e0e712_plugins#docsis#packet-regrsp.c: proto_register_docsis_regrsp
+ - wireshark/prevFiles/prev_9ead15a_e4f2f3_epan#dissectors#packet-dcom-sysact.c: proto_register_ISystemActivator
+*/
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_2a808a_083496_epan#dissectors#packet-megaco.c: proto_register_megaco
+*/
+
+// ---------------------------------------------

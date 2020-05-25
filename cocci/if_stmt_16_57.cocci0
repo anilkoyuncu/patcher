@@ -1,0 +1,17 @@
+@@
+expression E0, E1;
+@@
+- if (E0->size_in_bits == 8 && (E1->divx_version >= 0 || E1->xvid_build >= 0))  
++ if (E0->size_in_bits == 8 && (E1->divx_version >= 0 || E1->xvid_build >= 0) || E1->codec_tag == AV_RL32(  "QMP4"))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_be4c9a_66cd3c_libavcodec#mpeg4videodec.c,revFiles/be4c9a_66cd3c_libavcodec#mpeg4videodec.c}: ff_mpeg4_decode_picture_header)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

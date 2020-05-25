@@ -1,0 +1,21 @@
+@@
+expression list E2;
+identifier I0;
+expression E1;
+@@
+- char *I0 = E1->psz_current_dir; 
+- if (asprintf(E2) !=  -1)  
+- {
++ free(E1->psz_current_dir); 
++ E1->psz_current_dir = psz_path; 
+  ...
+- free(I0); 
+- }
+- else
+- {
+- E1->psz_current_dir = I0; 
+- }
+// Infered from: (vlc/{prevFiles/prev_d13717_d2dbed_modules#gui#ncurses.c,revFiles/d13717_d2dbed_modules#gui#ncurses.c}: HandleBrowseKey)
+// Recall: 0.32, Precision: 1.00, Matching recall: 0.44
+
+// ---------------------------------------------

@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- avcodec_close(E0); 
++ avcodec_free_context(&E0); 
+// Infered from: (FFmpeg/{prevFiles/prev_3c2457_3eff98_libavcodec#avdct.c,revFiles/3c2457_3eff98_libavcodec#avdct.c}: avcodec_dct_init)
+// Recall: 0.33, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 0.67
+// -- Node Change --
+// Recall: 1.00, Precision: 0.75
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch produced incorrect changes:
+ - php-src/prevFiles/prev_17dc89_a48b65_ext#pcre#php_pcre.c: preg_do_eval
+*/
+
+// ---------------------------------------------

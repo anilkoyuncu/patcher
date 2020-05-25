@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- dev_err(&E0->dev, "gdmwms: %s error: ret = %d\n", __func__, E1); 
++ dev_err(&E0->dev, "gdmwms:  error: ret = %d\n", E1); 
+// Infered from: (linux/{prevFiles/prev_99beca1_8c6ccb_drivers#staging#gdm72xx#gdm_sdio.c,revFiles/99beca1_8c6ccb_drivers#staging#gdm72xx#gdm_sdio.c}: send_sdio_pkt), (linux/{prevFiles/prev_99beca1_8c6ccb_drivers#staging#gdm72xx#gdm_sdio.c,revFiles/99beca1_8c6ccb_drivers#staging#gdm72xx#gdm_sdio.c}: send_sdio_pkt)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

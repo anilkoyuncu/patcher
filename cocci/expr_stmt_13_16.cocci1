@@ -1,0 +1,25 @@
+@@
+@@
+- ZEND_MAP_PTR_SET_BASE(pemalloc(CG(map_ptr_size) * sizeof(void *), 1)); 
+// Infered from: (php-src/{prevFiles/prev_dc02e6_d2110e_Zend#zend.c,revFiles/dc02e6_d2110e_Zend#zend.c}: zend_startup)
+// Recall: 0.14, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.43, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_dc02e6_d2110e_Zend#zend.c: zend_startup
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_dc02e6_d2110e_Zend#zend.c: compiler_globals_ctor
+*/
+
+// ---------------------------------------------

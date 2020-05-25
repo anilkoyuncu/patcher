@@ -1,0 +1,36 @@
+@@
+expression E2, E3, E5, E0, E1, E4;
+@@
+- for(E0 = 0;E0 < Z_STRLEN_P(E1);E0++)  
+- {
+- if (Z_STRVAL_P(E1)[E0] == '*' || Z_STRVAL_P(E1)[E0] == '?' || Z_STRVAL_P(  E1)[E0] == '.')  
+- {
+- break; 
+- }
+- }
+- ...
+- if (E0 == Z_STRLEN_P(E1))  
+- {
+- E2 = E3; 
+- return; 
+- }
+- E4 = E5; 
++ E4 = (char *)malloc(Z_STRLEN_P(E1) * 2 + 3); 
+// Infered from: (php-src/{prevFiles/prev_ab1124_1948b4_ext#standard#browscap.c,revFiles/ab1124_1948b4_ext#standard#browscap.c}: convert_browscap_pattern)
+// Recall: 0.70, Precision: 1.00, Matching recall: 0.78
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.80, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/2(50%)
+
+/*
+Functions where the patch applied partially:
+ - php-src/prevFiles/prev_ab1124_1948b4_ext#standard#browscap.c: convert_browscap_pattern
+*/
+
+// ---------------------------------------------

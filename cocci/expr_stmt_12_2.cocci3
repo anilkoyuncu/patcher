@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->outpic = avfilter_get_video_buffer(E0, AV_PERM_WRITE, E1->w, E1->h); 
++ E0->outpic = avfilter_get_video_buffer(E0, AV_PERM_WRITE, E0->w, E0->h); 
+// Infered from: (FFmpeg/{prevFiles/prev_b5eab66_ddd60f_libavfilter#defaults.c,revFiles/b5eab66_ddd60f_libavfilter#defaults.c}: avfilter_default_start_frame)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

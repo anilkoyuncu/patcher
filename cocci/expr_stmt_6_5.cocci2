@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0[1] = E0[1]; 
++ E0[1] = E0[0]; 
+// Infered from: (gtk/{prevFiles/prev_5c8a81_5b11d1_gtk#gtkcssprovider.c,revFiles/5c8a81_5b11d1_gtk#gtkcssprovider.c}: slice_parse_str)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

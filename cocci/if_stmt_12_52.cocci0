@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0 == 7 - E1 || E2 == 7 - E1 || E0 + E2 == 7)  
++ if (E0 == 7 - E1 || E0 == E1 || E2 == E1 || E2 == 7 - E1 || E0 + E2 == 7)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_225-A-2223063-2223121.c,revFiles/225-A-2223063-2223121.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

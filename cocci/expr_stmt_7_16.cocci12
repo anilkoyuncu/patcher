@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+@@
+- E0 = bdrv_open_common(E1, E2, E3, E4, &E5); 
++ E0 = bdrv_open_common(E1, E2, E3, &E5); 
+// Infered from: (qemu/{prevFiles/prev_82dc8b_3db34b_block.c,revFiles/82dc8b_3db34b_block.c}: bdrv_open_inherit)
+// Recall: 0.01, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

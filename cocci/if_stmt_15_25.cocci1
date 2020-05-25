@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0 & V_IRQ_MASK)  
++ if ((E0 & V_IRQ_MASK) || (env->intercept & INTERCEPT_VINTR))  
+  {
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_526216_40d059_target-i386#helper.c,revFiles/526216_40d059_target-i386#helper.c}: helper_vmrun)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->request_body == NULL || E0->request_body->temp_file)  
++ if (E0->request_body == NULL || E0->request_body->bufs == NULL || E0->request_body->temp_file)  
+  {
+  ...
+  }
+// Infered from: (nginx/{prevFiles/prev_430d42_93c483_src#http#ngx_http_variables.c,revFiles/430d42_93c483_src#http#ngx_http_variables.c}: ngx_http_variable_request_body)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

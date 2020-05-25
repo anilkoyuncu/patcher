@@ -1,0 +1,45 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = (E1->cr[0x09] & 0x80); 
+- if (E2 > 1)  
++ E0 = (E1->cr[0x09] >> 7); 
++ if (E2 != 1)  
+  {
+- E3 = (E1->cr[0x09] & 0x1f); 
++ E3 = (((E1->cr[0x09] & 0x1f) + 1) << E0) - 1; 
+  ...
+  }
+- else
++ else
+  {
+  ...
+- E3 = 0; 
++ E3 = E0; 
+  ...
+  }
+// Infered from: (qemu/{prevFiles/prev_f6c958_9bb34e_hw#vga.c,revFiles/f6c958_9bb34e_hw#vga.c}: vga_draw_graphic)
+// Recall: 0.16, Precision: 1.00, Matching recall: 0.62
+
+// ---------------------------------------------
+// Final metrics (for the combined 13 rules):
+// -- Edit Location --
+// Recall: 0.79, Precision: 1.00
+// -- Node Change --
+// Recall: 0.73, Precision: 1.00
+// -- General --
+// Functions fully changed: 14/19(73%)
+
+/*
+Functions where the patch applied partially:
+ - qemu/prevFiles/prev_f6c958_9bb34e_hw#vga.c: vga_draw_graphic
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_87148b_0e9d6c_ext#interbase#interbase.c: _php_ibase_free_blob
+ - git/prevFiles/prev_c3cb7b_52f689_compat#mingw.c: pipe
+ - codeflaws/prevFiles/prev_228-A-18047603-18047609.c: main
+ - FFmpeg/prevFiles/prev_cef7d7_b51021_libavcodec#aacdec.c: decode_scalefactors
+*/
+
+// ---------------------------------------------

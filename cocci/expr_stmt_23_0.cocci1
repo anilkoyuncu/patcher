@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- release_mem_region(E0->start, E0->end - E0->start + 1); 
++ release_mem_region(E0->start, resource_size(E0)); 
+// Infered from: (linux/{prevFiles/prev_72398e4_666cbe3_drivers#input#touchscreen#w90p910_ts.c,revFiles/72398e4_666cbe3_drivers#input#touchscreen#w90p910_ts.c}: w90x900ts_remove), (linux/{prevFiles/prev_72398e4_666cbe3_drivers#input#touchscreen#atmel_tsadcc.c,revFiles/72398e4_666cbe3_drivers#input#touchscreen#atmel_tsadcc.c}: atmel_tsadcc_remove), (linux/{prevFiles/prev_221199_8a8396a_drivers#mmc#host#wmt-sdmmc.c,revFiles/221199_8a8396a_drivers#mmc#host#wmt-sdmmc.c}: wmt_mci_remove)
+// Recall: 0.18, Precision: 1.00, Matching recall: 0.56
+
+// ---------------------------------------------

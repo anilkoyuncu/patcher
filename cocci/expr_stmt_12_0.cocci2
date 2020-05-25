@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- fprintf(stderr, "#   <int at %p, refcnt=%d, val=%ld>\n", E0, E0->ob_refcnt,  E0->ob_ival); 
++ fprintf(stderr, "#   <int at %p, refcnt=%ld, val=%ld>\n", E0,  (long )E0->ob_refcnt, E0->ob_ival); 
+// Infered from: (cpython/{prevFiles/prev_8b87a0_572a9f3_Objects#intobject.c,revFiles/8b87a0_572a9f3_Objects#intobject.c}: PyInt_Fini)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

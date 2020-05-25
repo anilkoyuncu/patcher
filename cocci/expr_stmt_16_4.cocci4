@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- ZEND_ASSERT(E0->flags & CONST_PERSISTENT); 
++ ZEND_ASSERT(ZEND_CONSTANT_FLAGS(E0) & CONST_PERSISTENT); 
+// Infered from: (php-src/{prevFiles/prev_ba8f06_6059ec_Zend#zend_constants.c,revFiles/ba8f06_6059ec_Zend#zend_constants.c}: copy_zend_constant)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

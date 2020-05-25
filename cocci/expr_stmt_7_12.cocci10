@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- gic_init(&E0->gic); 
++ gic_init(&E0->gic, 96); 
+// Infered from: (qemu/{prevFiles/prev_a32134_b09da0_hw#realview_gic.c,revFiles/a32134_b09da0_hw#realview_gic.c}: realview_gic_init)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

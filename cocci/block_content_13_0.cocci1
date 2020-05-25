@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- LocaleFree(E0); 
++ free(E0); 
+// Infered from: (vlc/{prevFiles/prev_5e3303_d69171_modules#demux#playlist#m3u.c,revFiles/5e3303_d69171_modules#demux#playlist#m3u.c}: Demux), (vlc/{prevFiles/prev_5e3303_d69171_modules#demux#playlist#m3u.c,revFiles/5e3303_d69171_modules#demux#playlist#m3u.c}: Demux)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

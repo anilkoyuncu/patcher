@@ -1,0 +1,23 @@
+@@
+expression E0;
+@@
+- msg_Info(E0, "added %zi tracks successfully", (size_t )E0->p_sys); 
+// Infered from: (vlc/{prevFiles/prev_0e1886_19b242_modules#demux#playlist#itml.c,revFiles/0e1886_19b242_modules#demux#playlist#itml.c}: parse_tracks_dict)
+// Recall: 0.25, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.50, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/2(0%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_3ccefd_266960_modules#access_filter#bandwidth.c: Read
+ - vlc/prevFiles/prev_0e1886_19b242_modules#demux#playlist#itml.c: parse_tracks_dict
+*/
+
+// ---------------------------------------------

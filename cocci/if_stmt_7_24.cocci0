@@ -1,0 +1,13 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == 0 && E1 == 0)  
++ if (E0 <= 0 || E1 <= 0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_7f8ffc_3a1cdc_libavformat#yuv4mpeg.c,revFiles/7f8ffc_3a1cdc_libavformat#yuv4mpeg.c}: yuv4_read_header)
+// False positives: (FFmpeg/revFiles/7f8ffc_3a1cdc_libavformat#yuv4mpeg.c: yuv4_read_header)
+// Recall: 0.12, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

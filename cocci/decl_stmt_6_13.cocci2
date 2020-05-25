@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- int I0 = 1 << (E1 + 1) - 1; 
++ int I0 = (1 << (E1 + 1)) - 1; 
+// Infered from: (codeflaws/{prevFiles/prev_526-B-10597230-10597317.c,revFiles/526-B-10597230-10597317.c}: main)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

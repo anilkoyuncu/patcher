@@ -1,0 +1,18 @@
+@@
+@@
+- set_irq_chained_handler(IRQ_ISA, bast_irq_pc104_demux); 
++ irq_set_chained_handler(IRQ_ISA, bast_irq_pc104_demux); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-s3c2410#bast-irq.c,revFiles/6845664a_25a566_arch#arm#mach-s3c2410#bast-irq.c}: bast_irq_init)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

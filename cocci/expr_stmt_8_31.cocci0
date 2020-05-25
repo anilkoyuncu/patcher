@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0->free_filename = 1; 
++ E0->free_filename = 0; 
+// Infered from: (php-src/{prevFiles/prev_466870_428ef5_sapi#phpdbg#phpdbg_list.c,revFiles/466870_428ef5_sapi#phpdbg#phpdbg_list.c}: phpdbg_init_compile_file)
+// Recall: 0.06, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

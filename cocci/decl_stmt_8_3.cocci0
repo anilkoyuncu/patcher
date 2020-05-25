@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- struct progress_data *I0 = E1; 
++ struct progress_data *I0 = (struct progress_data *)E1; 
+// Infered from: (libarchive/{prevFiles/prev_bbfb00_ff86dd_tar#read.c,revFiles/bbfb00_ff86dd_tar#read.c}: progress_func)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

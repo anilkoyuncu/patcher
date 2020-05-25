@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+typedef u16;
+@@
+- if ((E0 && !netif_running(E1)) || (!E0 && ((E2 & PCI_PM_CTRL_STATE_MASK) != PCI_D0)))  
++ if ((E0 && !netif_running(E1)) || (!E0 && ((E2 & PCI_PM_CTRL_STATE_MASK) != (  u16 )PCI_D0)))  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_c957d09_6da334_drivers#net#ethernet#broadcom#bnx2x#bnx2x_ethtool.c,revFiles/c957d09_6da334_drivers#net#ethernet#broadcom#bnx2x#bnx2x_ethtool.c}: bnx2x_is_nvm_accessible)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

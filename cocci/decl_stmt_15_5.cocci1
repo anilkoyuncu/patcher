@@ -1,0 +1,19 @@
+@@
+expression E0, E1;
+@@
+- rt288x_wdt_clk = devm_clk_get(&E0->dev, NULL); 
+  ...
+- rt288x_wdt_reset = devm_reset_control_get_exclusive(&E0->dev, NULL); 
+  ...
+- rt288x_wdt_dev.parent = &E0->dev; 
+- watchdog_init_timeout(&rt288x_wdt_dev, rt288x_wdt_dev.max_timeout, &E0->dev); 
++ rt288x_wdt_dev.parent = dev; 
++ watchdog_init_timeout(&rt288x_wdt_dev, rt288x_wdt_dev.max_timeout, dev); 
+  ...
+- E1 = watchdog_register_device(&rt288x_wdt_dev); 
++ watchdog_stop_on_reboot(&rt288x_wdt_dev); 
++ E1 = devm_watchdog_register_device(dev, &rt288x_wdt_dev); 
+// Infered from: (linux/{prevFiles/prev_570927d_6fef817e_drivers#watchdog#rt2880_wdt.c,revFiles/570927d_6fef817e_drivers#watchdog#rt2880_wdt.c}: rt288x_wdt_probe)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.64
+
+// ---------------------------------------------

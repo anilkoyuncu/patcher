@@ -1,0 +1,34 @@
+@@
+expression E0;
+typedef zend_auto_global;
+@@
+- free(Z_PTR_P(E0)); 
++ zend_auto_global *ag = Z_PTR_P(E0); 
++ zend_string_release(ag->name); 
++ free(ag); 
+// Infered from: (php-src/{prevFiles/prev_4c5566_cfe977_Zend#zend.c,revFiles/4c5566_cfe977_Zend#zend.c}: auto_global_dtor)
+// Recall: 0.19, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.78, Precision: 0.88
+// -- Node Change --
+// Recall: 0.76, Precision: 0.89
+// -- General --
+// Functions fully changed: 6/10(60%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_69f589_fbfcc8_ffplay.c: video_image_display
+*/
+/*
+Functions where the patch did not apply:
+ - FFmpeg/prevFiles/prev_6c4b87_2b1056_libavformat#thp.c: thp_read_packet
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_69f589_fbfcc8_ffplay.c: fill_rectangle
+*/
+
+// ---------------------------------------------

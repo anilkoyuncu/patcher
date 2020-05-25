@@ -1,0 +1,12 @@
+@@
+expression E1, E2, E0;
+@@
+- E0 = E1; 
+- if (E2)  
+- {
+- return AVERROR(EINVAL); 
+- }
+// Infered from: (FFmpeg/{prevFiles/prev_cbbefc_1c4936_libavfilter#vf_deshake.c,revFiles/cbbefc_1c4936_libavfilter#vf_deshake.c}: init)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

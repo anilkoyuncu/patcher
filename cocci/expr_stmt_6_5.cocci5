@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- E0->end_key[0] = UINT64_MAX; 
++ E0->end_key[1] = UINT64_MAX; 
+// Infered from: (redis/{prevFiles/prev_3ccdcb_d044e3_src#t_stream.c,revFiles/3ccdcb_d044e3_src#t_stream.c}: streamIteratorStart)
+// False positives: (redis/revFiles/3ccdcb_d044e3_src#t_stream.c: streamIteratorStart)
+// Recall: 0.02, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------

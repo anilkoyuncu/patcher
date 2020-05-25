@@ -1,0 +1,13 @@
+@@
+expression E0;
+@@
+- PyModule_AddIntConstant(E0, "version", Py_MARSHAL_VERSION); 
++ if (PyModule_AddIntConstant(E0, "version", Py_MARSHAL_VERSION) < 0)  
++ {
++ Py_DECREF(E0); 
++ return NULL; 
++ }
+// Infered from: (cpython/{prevFiles/prev_33b671_2e9690_Python#marshal.c,revFiles/33b671_2e9690_Python#marshal.c}: PyMarshal_Init)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

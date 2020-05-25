@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- E0 = process_vm_writev(E1->seg_ds.seg_cpid, &E2, 1, &E3, 1, 0); 
++ E0 = process_vm_writev(E1->seg_ds->seg_cpid, &E2, 1, &E3, 1, 0); 
+// Infered from: (ompi/{prevFiles/prev_53e012_b1c4da_opal#mca#btl#vader#btl_vader_put.c,revFiles/53e012_b1c4da_opal#mca#btl#vader#btl_vader_put.c}: mca_btl_vader_put)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

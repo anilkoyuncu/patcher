@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if ('-' != E0[0])  
++ if (E0 && ('-' != E0[0]))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_3b91db_ab9dfa_src#main.c,revFiles/3b91db_ab9dfa_src#main.c}: parseconfig)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

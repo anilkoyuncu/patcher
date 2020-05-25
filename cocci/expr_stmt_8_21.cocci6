@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- ngx_log_error(NGX_LOG_INFO, E0->log, ngx_socket_errno,  "client closed connection"); 
++ ngx_log_error(NGX_LOG_INFO, E0->log, 0, "client closed connection"); 
+// Infered from: (nginx/{prevFiles/prev_092355_f1b6e4_src#http#ngx_http_request.c,revFiles/092355_f1b6e4_src#http#ngx_http_request.c}: ngx_http_wait_request_handler)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

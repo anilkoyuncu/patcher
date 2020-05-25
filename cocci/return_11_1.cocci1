@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- return es_out_Control(E0->p_out, ES_OUT_GET_ES_STATE, E1, E2); 
++ return es_out_Control(E0->p_out, ES_OUT_GET_ES_STATE, E1->p_es, E2); 
+// Infered from: (vlc/{prevFiles/prev_b8525b_0ea70b_src#input#es_out_timeshift.c,revFiles/b8525b_0ea70b_src#input#es_out_timeshift.c}: ControlLocked)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

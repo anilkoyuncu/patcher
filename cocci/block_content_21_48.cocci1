@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+typedef uint64_t;
+@@
+- av_frac_add(&E0->next_pts, E1->pts_den * E0->st->codec.frame_rate_base); 
++ av_frac_add(&E0->next_pts,  (uint64_t )E1->pts_den * E0->st->codec.frame_rate_base); 
+// Infered from: (FFmpeg/{prevFiles/prev_fd0f45_3f4185_ffmpeg.c,revFiles/fd0f45_3f4185_ffmpeg.c}: av_encode)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.25
+
+// ---------------------------------------------

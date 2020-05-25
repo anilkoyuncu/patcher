@@ -1,0 +1,35 @@
+@@
+identifier I0, I1;
+expression E2;
+@@
+- int I0 = 0; 
++ size_t I0 = 0; 
+  ...
+- for(int I1 = 0;I1 <= E2->i_count;++I1)  
++ for(size_t I1 = 0;I1 <= E2->i_count;++I1)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_0c17ee_ab0b7e_modules#text_renderer#freetype#text_layout.c,revFiles/0c17ee_ab0b7e_modules#text_renderer#freetype#text_layout.c}: LayoutTextBlock)
+// False positives: (vlc/revFiles/0c17ee_ab0b7e_modules#text_renderer#freetype#text_layout.c: LayoutTextBlock)
+// Recall: 0.17, Precision: 0.50, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 0.80
+// -- General --
+// Functions fully changed: 1/3(33%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_7eee6b_324958_modules#access#satip.c: satip_teardown
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_0c17ee_ab0b7e_modules#text_renderer#freetype#text_layout.c: LayoutTextBlock
+*/
+
+// ---------------------------------------------

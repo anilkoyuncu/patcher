@@ -1,0 +1,22 @@
+@@
+expression E0, E1;
+@@
+- if ((E0 & E1->interlaced) == 0 && E0 < E1->height - 2)  
++ if ((E0 & E1->interlaced) == 0 && E0 < E1->height - 1 - E1->interlaced)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_fc0be5_61c7c3_libavcodec#huffyuv.c,revFiles/fc0be5_61c7c3_libavcodec#huffyuv.c}: decode_frame)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

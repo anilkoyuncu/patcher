@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->stderr_msg = g_strdup_printf("%s", E1); 
++ E0->stderr_msg = g_strdup(E1); 
+// Infered from: (wireshark/{prevFiles/prev_fc17bf_779003_extcap.c,revFiles/fc17bf_779003_extcap.c}: extcap_if_cleanup)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

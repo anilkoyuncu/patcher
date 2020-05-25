@@ -1,0 +1,36 @@
+@@
+identifier I0;
+typedef gchar;
+@@
+- gchar *I0 = (gchar *)ep_alloc(BUF_SIZE); 
++ gchar *I0 = (gchar *)wmem_alloc(wmem_packet_scope(), BUF_SIZE); 
+// Infered from: (wireshark/{prevFiles/prev_fe5238_a10254_epan#dissectors#packet-t30.c,revFiles/fe5238_a10254_epan#dissectors#packet-t30.c}: dissect_t30_partial_page_request)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 14 rules):
+// -- Edit Location --
+// Recall: 0.90, Precision: 0.68
+// -- Node Change --
+// Recall: 0.96, Precision: 0.74
+// -- General --
+// Functions fully changed: 19/30(63%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_910bc0_e94553_plugins#epan#transum#packet-transum.c: init_globals
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - wireshark/prevFiles/prev_2db3db_3ba56ce_epan#dissectors#packet-umts_rlc.c: rlc_sdu_frags_delete
+ - wireshark/prevFiles/prev_6dd6ed_0a23ac_epan#dissectors#packet-xml.c: before_tag
+ - wireshark/prevFiles/prev_6dd6ed_0a23ac_epan#dissectors#packet-xml.c: before_xmpli
+ - wireshark/prevFiles/prev_2db3db_3ba56ce_epan#dissectors#packet-umts_rlc.c: rlc_channel_create
+ - wireshark/prevFiles/prev_6dd6ed_0a23ac_epan#dissectors#packet-xml.c: before_dtd_doctype
+ - wireshark/prevFiles/prev_6dd6ed_0a23ac_epan#dissectors#packet-xml.c: dissect_xml
+ - wireshark/prevFiles/prev_6dd6ed_0a23ac_epan#dissectors#packet-xml.c: after_token
+ - wireshark/prevFiles/prev_6dd6ed_0a23ac_epan#dissectors#packet-xml.c: after_attrib
+ - wireshark/prevFiles/prev_2db3db_3ba56ce_epan#dissectors#packet-umts_rlc.c: rlc_frag_delete
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,36 @@
+@@
+expression E0, E1, E2, E3, E4, E5;
+typedef guint8;
+@@
+- E0 = E1->index + E1->length; 
+- E2 = (guint8 *)wmem_alloc(E3->pool, E1->index + E1->length); 
++ E0 = E1->idx + E1->length; 
++ E2 = (guint8 *)wmem_alloc(E3->pool, E1->idx + E1->length); 
+  ...
+- if (E1->index > 0 && E1->length > 0)  
++ if (E1->idx > 0 && E1->length > 0)  
+  {
+  ...
+- E4 = tvb_new_child_real_data(E5, E2, E1->index + E1->length,  E1->index + E1->length); 
++ E4 = tvb_new_child_real_data(E5, E2, E1->idx + E1->length,  E1->idx + E1->length); 
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_2be382_32e785_epan#dissectors#packet-bthsp.c,revFiles/2be382_32e785_epan#dissectors#packet-bthsp.c}: dissect_bthsp), (wireshark/{prevFiles/prev_2be382_32e785_epan#dissectors#packet-bthfp.c,revFiles/2be382_32e785_epan#dissectors#packet-bthfp.c}: dissect_bthfp)
+// Recall: 0.57, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.86, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/4(50%)
+
+/*
+Functions where the patch did not apply:
+ - wireshark/prevFiles/prev_2be382_32e785_epan#dissectors#packet-bthsp.c: 
+ - wireshark/prevFiles/prev_2be382_32e785_epan#dissectors#packet-bthfp.c: 
+*/
+
+// ---------------------------------------------

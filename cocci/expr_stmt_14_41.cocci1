@@ -1,0 +1,25 @@
+@@
+identifier I0, I1, I2, I3;
+expression E5, E4, E6;
+@@
+  size_t _php_curl_passwd(void *I0, char *I1, char *I2, int I3)  
+  {
+  ...
+- strncpy(E4, E5, Z_STRLEN_P (E6)); 
++ strlcpy(E4, Z_STRVAL_P(E6), I3); 
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_0ac0f6_5aec59_ext#curl#curl.c,revFiles/0ac0f6_5aec59_ext#curl#curl.c}: _php_curl_passwd)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

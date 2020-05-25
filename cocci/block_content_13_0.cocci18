@@ -1,0 +1,9 @@
+@@
+expression E1, E2, E0;
+@@
+- apr_pool_userdata_setn((const  void *)E0, E1, apr_pool_cleanup_null,  E2->process->pool); 
++ apr_pool_userdata_set((const  void *)E0, E1, apr_pool_cleanup_null,  E2->process->pool); 
+// Infered from: (php-src/{prevFiles/prev_b75932_b67baf_sapi#apache2filter#sapi_apache2.c,revFiles/b75932_b67baf_sapi#apache2filter#sapi_apache2.c}: php_apache_server_startup), (php-src/{prevFiles/prev_b75932_b67baf_sapi#apache2filter#sapi_apache2.c,revFiles/b75932_b67baf_sapi#apache2filter#sapi_apache2.c}: php_apache_server_startup)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

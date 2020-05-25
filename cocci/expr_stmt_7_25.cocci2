@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->rq = E1->next; 
++ E0->rq = E1; 
+// Infered from: (qemu/{prevFiles/prev_20a81e_7d7d97_hw#virtio-blk.c,revFiles/20a81e_7d7d97_hw#virtio-blk.c}: virtio_blk_load)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

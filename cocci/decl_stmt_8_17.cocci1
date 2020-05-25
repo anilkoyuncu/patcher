@@ -1,0 +1,22 @@
+@@
+expression E0, E2, E3, E1, E4;
+@@
+- if (E0->meta_flow[E1].token == E2)  
+- {
+- E3 = E4; 
+- }
+- else
+- {
+- if (E0->meta_flow[E4].token == E2)  
+- {
+- E3 = E1; 
+- }
+- else
+- {
+- DISSECTOR_ASSERT_NOT_REACHED(); 
+- }
+- }
+// Infered from: (wireshark/{prevFiles/prev_782191_ad52a3_epan#dissectors#packet-tcp.c,revFiles/782191_ad52a3_epan#dissectors#packet-tcp.c}: mptcp_get_meta_from_token)
+// Recall: 0.43, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

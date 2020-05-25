@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- BTL_VERBOSE(("XOOB Send pack srq[%d] num  = %d", E0, E1->endpoint_btl->qps[  E0].u.src_qp.xrc->xrc_srq_num)); 
++ BTL_VERBOSE(("XOOB Send pack srq[%d] num  = %d", E0, E1->endpoint_btl->qps[  E0].u.srq_qp.srq->xrc_srq_num)); 
+// Infered from: (ompi/{prevFiles/prev_2ffbe8_218adb_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c,revFiles/2ffbe8_218adb_ompi#mca#btl#openib#connect#btl_openib_connect_xoob.c}: xoob_send_connect_data)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,11 @@
+@@
+identifier I0;
+expression E1;
+typedef QDict;
+@@
+- QDict *I0 = qobject_to_qdict(E1); 
++ QDict *I0 = qobject_to(QDict , E1); 
+// Infered from: (qemu/{prevFiles/prev_7dc847_1a56b1_block#qapi.c,revFiles/7dc847_1a56b1_block#qapi.c}: dump_qobject)
+// Recall: 0.02, Precision: 1.00, Matching recall: 0.20
+
+// ---------------------------------------------

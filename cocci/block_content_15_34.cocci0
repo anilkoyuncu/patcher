@@ -1,0 +1,18 @@
+@@
+expression E0, E1;
+@@
+- if (E0 && E1)  
++ DEBUGASSERT(E0); 
++ if (E1)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_39c296_dd7d71_lib#gopher.c,revFiles/39c296_dd7d71_lib#gopher.c}: gopher_do)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

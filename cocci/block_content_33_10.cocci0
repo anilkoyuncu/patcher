@@ -1,0 +1,10 @@
+@@
+expression E0;
+@@
+- qdev_connect_gpio_out(E0->gpio, TOSA_GPIO_ON_RESET, E0->reset); 
++ reset = qemu_allocate_irq(tosa_reset, E0, 0); 
++ qdev_connect_gpio_out(E0->gpio, TOSA_GPIO_ON_RESET, reset); 
+// Infered from: (qemu/{prevFiles/prev_d26a10_14da58_hw#arm#tosa.c,revFiles/d26a10_14da58_hw#arm#tosa.c}: tosa_gpio_setup)
+// Recall: 0.21, Precision: 1.00, Matching recall: 0.75
+
+// ---------------------------------------------

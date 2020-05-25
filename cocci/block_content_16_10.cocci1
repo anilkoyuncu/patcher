@@ -1,0 +1,32 @@
+@@
+identifier I0, I1;
+expression E2;
+typedef GMainContext;
+typedef GSource;
+@@
+  GMainContext *I0; 
+  GSource *I1; 
+  ...
+- g_source_remove(E2); 
++ if ((I1 = g_main_context_find_source_by_id(I0, E2)))  
++ {
++ g_source_destroy(I1); 
++ }
+// Infered from: (gstreamer/{prevFiles/prev_47679c_9f669e_tests#check#gst#gstbus.c,revFiles/47679c_9f669e_tests#check#gst#gstbus.c}: GST_START_TEST)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - redis/prevFiles/prev_121796_d0cceb_redis.c: sortCommand
+*/
+
+// ---------------------------------------------

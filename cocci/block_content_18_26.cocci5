@@ -1,0 +1,13 @@
+@@
+identifier I6;
+assignment operator A1;
+expression E2, E0, E3, E4, E5;
+@@
+- E0 A1 E2; 
+- proto_tree_add_text(E3, E4, E5 + CMD_KEEP_ALIVE_RANDOM, 4, "Random: 0x%08x",  I6); 
++ randomx = tvb_get_letohl(E4, E5 + CMD_KEEP_ALIVE_RANDOM); 
++ proto_tree_add_text(E3, E4, E5 + CMD_KEEP_ALIVE_RANDOM, 4, "Random: 0x%08x",  randomx); 
+// Infered from: (wireshark/{prevFiles/prev_33af75_d897f4_epan#dissectors#packet-icq.c,revFiles/33af75_d897f4_epan#dissectors#packet-icq.c}: icqv5_cmd_keep_alive)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------

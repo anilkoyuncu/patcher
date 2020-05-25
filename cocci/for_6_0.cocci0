@@ -1,0 +1,13 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = 0;E0 < E1->linesize[E2];E0++)  
++ for(E0 = 0;E0 < E1->linesize[E2] / 2;E0++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_a12899_0b360c_libavfilter#vf_mix.c,revFiles/a12899_0b360c_libavfilter#vf_mix.c}: process_frame)
+// False positives: (FFmpeg/revFiles/a12899_0b360c_libavfilter#vf_mix.c: process_frame)
+// Recall: 0.04, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

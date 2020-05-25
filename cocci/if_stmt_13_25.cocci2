@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E3, E2;
+@@
+- E0[E1] = E2 | ((E3[E1] * 17) << 24); 
++ E0[E1] = E2 | ((E3[E1] * 17U) << 24); 
+// Infered from: (FFmpeg/{prevFiles/prev_61ee2c_afe950_libavcodec#dvdsubdec.c,revFiles/61ee2c_afe950_libavcodec#dvdsubdec.c}: guess_palette), (FFmpeg/{prevFiles/prev_61ee2c_afe950_libavcodec#dvdsubdec.c,revFiles/61ee2c_afe950_libavcodec#dvdsubdec.c}: guess_palette)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

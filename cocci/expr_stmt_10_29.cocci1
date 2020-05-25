@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2, E3;
+@@
+- printf("%d ", (E0 - E1 + 1) * (E2 - 1) + E0 * (E1 - 1) + E3); 
++ printf("%d ", (E0 - E1 + 1) * (E2 - 1) + E0 * (E1 - 1) + E3 - E1 + 1); 
+// Infered from: (codeflaws/{prevFiles/prev_625-C-15880087-15880175.c,revFiles/625-C-15880087-15880175.c}: main)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

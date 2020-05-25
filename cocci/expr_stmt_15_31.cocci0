@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = AV_RB16(E1); 
++ E0 = sign_extend(AV_RB16(E1), 16); 
+// Infered from: (FFmpeg/{prevFiles/prev_729fa5_1a5f1b_libavformat#matroskadec.c,revFiles/729fa5_1a5f1b_libavformat#matroskadec.c}: matroska_parse_block)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

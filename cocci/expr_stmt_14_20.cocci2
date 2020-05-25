@@ -1,0 +1,19 @@
+@@
+expression E0, E1, E2;
+@@
+- g_print("%s (%s, rank %u): %s\n", GST_OBJECT_NAME(E0), E1,  gst_plugin_feature_get_rank(GST_PLUGIN_FEATURE(E0)), E2); 
++ g_print("%s (%s, rank %u): %s\n",  gst_plugin_feature_get_name(GST_PLUGIN_FEATURE(E0)), E1,  gst_plugin_feature_get_rank(GST_PLUGIN_FEATURE(E0)), E2); 
+// Infered from: (gstreamer/{prevFiles/prev_b9c582_3e1b2f_tools#gst-inspect.c,revFiles/b9c582_3e1b2f_tools#gst-inspect.c}: print_all_uri_handlers)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

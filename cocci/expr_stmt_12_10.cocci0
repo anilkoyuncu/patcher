@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- DEBUG_ARG("m0 = %lx", (long )E0); 
++ DEBUG_ARG("m0 = %p", E0); 
+// Infered from: (qemu/{prevFiles/prev_ecc804c_31e49a_slirp#ip_output.c,revFiles/ecc804c_31e49a_slirp#ip_output.c}: ip_output)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

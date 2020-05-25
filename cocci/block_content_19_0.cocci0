@@ -1,0 +1,14 @@
+@@
+identifier I0;
+expression E1;
+@@
+- for(int I0 = 0;I0 < E1;I0++)  
++ int I0; 
++ for(I0 = 0;I0 < E1;I0++)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_79a19f_967bdb_libavcodec#pthread.c,revFiles/79a19f_967bdb_libavcodec#pthread.c}: ff_thread_flush), (FFmpeg/{prevFiles/prev_c495f4_a92f8e_libavformat#mxfdec.c,revFiles/c495f4_a92f8e_libavformat#mxfdec.c}: mxf_add_metadata_stream), (FFmpeg/{prevFiles/prev_c495f4_a92f8e_libavformat#mxfdec.c,revFiles/c495f4_a92f8e_libavformat#mxfdec.c}: mxf_get_opatom_stream), (FFmpeg/{prevFiles/prev_97751e_e48fb4_libavformat#replaygain.c,revFiles/97751e_e48fb4_libavformat#replaygain.c}: ff_replaygain_export_raw), (FFmpeg/{prevFiles/prev_3715d841_20a7d3_libavcodec#aacenc.c,revFiles/3715d841_20a7d3_libavcodec#aacenc.c}: WINDOW_FUNC), (FFmpeg/{prevFiles/prev_3715d841_20a7d3_libavcodec#aacenc.c,revFiles/3715d841_20a7d3_libavcodec#aacenc.c}: alloc_buffers), (FFmpeg/{prevFiles/prev_08ec82_d76838_libavcodec#vorbisenc.c,revFiles/08ec82_d76838_libavcodec#vorbisenc.c}: spawn_empty_frame), (FFmpeg/{prevFiles/prev_08ec82_d76838_libavcodec#vorbisenc.c,revFiles/08ec82_d76838_libavcodec#vorbisenc.c}: vorbis_encode_frame), (FFmpeg/{prevFiles/prev_851bac4_17106a_libavfilter#vf_hqdn3d.c,revFiles/851bac4_17106a_libavfilter#vf_hqdn3d.c}: config_input), (FFmpeg/{prevFiles/prev_48f524_cfda1b_libavfilter#vaf_spectrumsynth.c,revFiles/48f524_cfda1b_libavfilter#vaf_spectrumsynth.c}: try_push_frame), (FFmpeg/{prevFiles/prev_cd0982_096809_libavformat#isom.c,revFiles/cd0982_096809_libavformat#isom.c}: mov_rewrite_dvd_sub_extradata), (FFmpeg/{prevFiles/prev_6d7b22_1481d2_libavformat#isom.c,revFiles/6d7b22_1481d2_libavformat#isom.c}: mov_rewrite_dvd_sub_extradata), (FFmpeg/{prevFiles/prev_6cc4c4_4448f1_libavcodec#ccaption_dec.c,revFiles/6cc4c4_4448f1_libavcodec#ccaption_dec.c}: process_cc608), (FFmpeg/{prevFiles/prev_e240d0_3e73d1_libavformat#matroskadec.c,revFiles/e240d0_3e73d1_libavformat#matroskadec.c}: webm_dash_manifest_compute_bandwidth), (FFmpeg/{prevFiles/prev_74d2bb_92ae4a_libavcodec#opusenc_psy.c,revFiles/74d2bb_92ae4a_libavcodec#opusenc_psy.c}: celt_search_for_tf)
+// Recall: 0.66, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

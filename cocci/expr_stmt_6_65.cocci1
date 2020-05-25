@@ -1,0 +1,26 @@
+@@
+expression E0, E1;
+@@
+- if (!ether_addr_equal(E0->addr3, E1->common.curbssid) || !E1->common.curaid)  
++ if (!ether_addr_equal_64bits(E0->addr3, E1->common.curbssid) || !E1->common.curaid)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_1283ac1_631c527_drivers#net#wireless#ath#carl9170#rx.c,revFiles/1283ac1_631c527_drivers#net#wireless#ath#carl9170#rx.c}: carl9170_ps_beacon)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - codeflaws/prevFiles/prev_454-C-7452422-7452449.c: maxExpected
+*/
+
+// ---------------------------------------------

@@ -1,0 +1,16 @@
+@@
+expression E0, E1;
+@@
+- if (E0 == -1)  
+- {
+- E1 = ngx_errno; 
+- }
+- else
+- {
+- E1 = 0; 
+- }
++ E1 = (E0 == -1) ? ngx_errno :0; 
+// Infered from: (nginx/{prevFiles/prev_8e7e69_79fb30_src#event#modules#ngx_devpoll_module.c,revFiles/8e7e69_79fb30_src#event#modules#ngx_devpoll_module.c}: ngx_devpoll_process_events), (nginx/{prevFiles/prev_8e7e69_79fb30_src#event#modules#ngx_epoll_module.c,revFiles/8e7e69_79fb30_src#event#modules#ngx_epoll_module.c}: ngx_epoll_process_events), (nginx/{prevFiles/prev_8e7e69_79fb30_src#event#modules#ngx_poll_module.c,revFiles/8e7e69_79fb30_src#event#modules#ngx_poll_module.c}: ngx_poll_process_events), (nginx/{prevFiles/prev_8e7e69_79fb30_src#event#modules#ngx_kqueue_module.c,revFiles/8e7e69_79fb30_src#event#modules#ngx_kqueue_module.c}: ngx_kqueue_process_events)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

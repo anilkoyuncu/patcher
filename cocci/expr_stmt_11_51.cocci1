@@ -1,0 +1,19 @@
+@@
+expression E1, E0;
+@@
+- E0->columns[E1] = wmem_alloc(wmem_packet_scope(), sizeof(struct _tds_col )); 
++ E0->columns[E1] = wmem_new(wmem_packet_scope(), struct _tds_col ); 
+// Infered from: (wireshark/{prevFiles/prev_e5bac8_d1ee49_epan#dissectors#packet-tds.c,revFiles/e5bac8_d1ee49_epan#dissectors#packet-tds.c}: dissect_tds_col_info_token), (wireshark/{prevFiles/prev_e5bac8_d1ee49_epan#dissectors#packet-tds.c,revFiles/e5bac8_d1ee49_epan#dissectors#packet-tds.c}: read_results_tds5)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/3(100%)
+
+
+// ---------------------------------------------

@@ -1,0 +1,24 @@
+@@
+identifier I3 = {tvb_ip6_to_str ,tvb_ip_to_str };
+expression E1, E2, E0;
+@@
+- return wmem_strdup_printf(wmem_packet_scope(), E0, tvb_get_ntohs(E1, E2 + 4),  tvb_get_ntohs(E1, E2 + 10), I3(E1, E2 + 12)); 
++ return wmem_strdup_printf(wmem_packet_scope(), E0, tvb_get_ntohl(E1, E2 + 4),  tvb_get_ntohs(E1, E2 + 10), I3(E1, E2 + 12)); 
+// Infered from: (wireshark/{prevFiles/prev_4afbd6_b66bdb_epan#dissectors#packet-rsvp.c,revFiles/4afbd6_b66bdb_epan#dissectors#packet-rsvp.c}: summary_session), (wireshark/{prevFiles/prev_4afbd6_b66bdb_epan#dissectors#packet-rsvp.c,revFiles/4afbd6_b66bdb_epan#dissectors#packet-rsvp.c}: summary_session)
+// Recall: 0.36, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.91, Precision: 1.00
+// -- General --
+// Functions fully changed: 3/4(75%)
+
+/*
+Functions where the patch applied partially:
+ - gstreamer/prevFiles/prev_7bf7d8_727725_gst#gstpad.c: gst_pad_collect_valist
+*/
+
+// ---------------------------------------------

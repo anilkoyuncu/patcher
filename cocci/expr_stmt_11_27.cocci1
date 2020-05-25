@@ -1,0 +1,10 @@
+@@
+identifier I1;
+expression E0, E2, E3;
+@@
+- gtk_widget_get_desired_size(E0->I1, E2, E3); 
++ gtk_extended_layout_get_desired_size(GTK_EXTENDED_LAYOUT(E0->I1), E2, E3); 
+// Infered from: (gtk/{prevFiles/prev_68c38e_ef3219_gtk#gtkplug.c,revFiles/68c38e_ef3219_gtk#gtkplug.c}: gtk_plug_size_allocate), (gtk/{prevFiles/prev_68c38e_ef3219_gtk#gtksocket.c,revFiles/68c38e_ef3219_gtk#gtksocket.c}: gtk_socket_extended_layout_get_desired_size), (gtk/{prevFiles/prev_68c38e_ef3219_gtk#gtkbox.c,revFiles/68c38e_ef3219_gtk#gtkbox.c}: gtk_box_get_desired_size)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

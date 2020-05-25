@@ -1,0 +1,10 @@
+@@
+identifier I1 = {aprintf ,ff_hevc_extract_rbsp };
+expression E0, E2, E5, E3, E4;
+@@
+- E0 = I1(E2, E3, E4, E5); 
++ E0 = I1(E3, E4, E5); 
+// Infered from: (FFmpeg/{prevFiles/prev_492d22_3ce198_libavcodec#qsvenc_hevc.c,revFiles/492d22_3ce198_libavcodec#qsvenc_hevc.c}: generate_fake_vps), (curl/{prevFiles/prev_93227d_cedf99_lib#vtls#curl_darwinssl.c,revFiles/93227d_cedf99_lib#vtls#curl_darwinssl.c}: darwinssl_connect_step1)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

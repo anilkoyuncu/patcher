@@ -1,0 +1,11 @@
+@@
+identifier I0 = {cpu_to_le32_array ,le32_to_cpu_array }, I2;
+expression E1;
+typedef u32;
+@@
+- I0(E1->I2, sizeof(E1->I2) / sizeof(u32 )); 
++ I0(E1->I2, ARRAY_SIZE(E1->I2)); 
+// Infered from: (linux/{prevFiles/prev_31a61bf_0426c16_crypto#md4.c,revFiles/31a61bf_0426c16_crypto#md4.c}: md4_transform_helper), (linux/{prevFiles/prev_31a61bf_0426c16_crypto#md4.c,revFiles/31a61bf_0426c16_crypto#md4.c}: md4_final)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

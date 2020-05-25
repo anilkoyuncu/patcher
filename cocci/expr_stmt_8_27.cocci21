@@ -1,0 +1,39 @@
+@@
+expression E0, E1;
+@@
+- adns_submit(ads, E0, adns_r_ptr, 0, NULL, &E1->query); 
++ adns_submit(ads, E0, adns_r_ptr, adns_qf_none, NULL, &E1->query); 
+// Infered from: (wireshark/{prevFiles/prev_835584_0314bd_epan#addr_resolv.c,revFiles/835584_0314bd_epan#addr_resolv.c}: host_name_lookup_process)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 22 rules):
+// -- Edit Location --
+// Recall: 0.76, Precision: 0.91
+// -- Node Change --
+// Recall: 0.77, Precision: 0.90
+// -- General --
+// Functions fully changed: 27/41(65%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_7d0d4a9_994431_modules#codec#libass.c: Create
+*/
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_2af202_a49eb1_builtin-log.c: 
+ - vlc/prevFiles/prev_4db956_d62036_modules#video_filter#blend.c: BlendI420R16
+ - git/prevFiles/prev_c2e86a_08c8d5_builtin#notes.c: notes_copy_from_stdin
+ - wireshark/prevFiles/prev_6addd9_5aa20f_epan#dissectors#packet-gtpv2.c: dissect_gtpv2_secondary_rat_usage_data_report
+ - wireshark/prevFiles/prev_835584_0314bd_epan#addr_resolv.c: host_name_lookup_init
+ - php-src/prevFiles/prev_2a8a18_df3a14_ext#standard#var.c: php_array_element_dump
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - vlc/prevFiles/prev_c07066_d35651_modules#stream_out#transcode.c: transcode_spu_new
+ - vlc/prevFiles/prev_c07066_d35651_modules#stream_out#transcode.c: transcode_video_new
+ - vlc/prevFiles/prev_c07066_d35651_modules#stream_out#transcode.c: transcode_audio_new
+ - vlc/prevFiles/prev_c07066_d35651_modules#stream_out#transcode.c: transcode_video_process
+*/
+
+// ---------------------------------------------

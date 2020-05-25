@@ -1,0 +1,28 @@
+@@
+expression E0;
+@@
+- E0->param.cpu &= ~(X264_CPU_SSE | X264_CPU_SSE2); 
++ E0->param.cpu &= ~X264_CPU_SSE; 
+// Infered from: (vlc/{prevFiles/prev_ddc857_b0e2ac_modules#codec#x264.c,revFiles/ddc857_b0e2ac_modules#codec#x264.c}: Open)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.40
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.50, Precision: 1.00
+// -- Node Change --
+// Recall: 0.33, Precision: 1.00
+// -- General --
+// Functions fully changed: 0/4(0%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_ddc857_b0e2ac_modules#codec#x264.c: Open
+ - libtiff/prevFiles/prev_a94d5b_c2d7ef_tools#ras2tiff.c: main
+*/
+/*
+Functions where the patch did not apply:
+ - vlc/prevFiles/prev_ddc857_b0e2ac_modules#codec#x264.c: 
+*/
+
+// ---------------------------------------------

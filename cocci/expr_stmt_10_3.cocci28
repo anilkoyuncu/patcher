@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- report_failure("could not obtain stats_tree abbr (%s) from arg '%s'", E0, E1); 
++ report_failure("could not obtain stats_tree from arg '%s'", E1); 
+// Infered from: (wireshark/{prevFiles/prev_084a88_567991_ui#cli#tap-stats_tree.c,revFiles/084a88_567991_ui#cli#tap-stats_tree.c}: init_stats_tree)
+// Recall: 0.02, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

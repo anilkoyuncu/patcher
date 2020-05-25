@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = welcome_button(WIRESHARK_STOCK_CAPTURE_INTERFACES, "Interface List",  "Life list of the capture interfaces (counts incoming packets)",  GTK_SIGNAL_FUNC(capture_if_cb), NULL); 
++ E0 = welcome_button(WIRESHARK_STOCK_CAPTURE_INTERFACES, "Interface List",  "Live list of the capture interfaces (counts incoming packets)",  GTK_SIGNAL_FUNC(capture_if_cb), NULL); 
+// Infered from: (wireshark/{prevFiles/prev_cc1da6_22ae89_gtk#main_welcome.c,revFiles/cc1da6_22ae89_gtk#main_welcome.c}: welcome_new)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

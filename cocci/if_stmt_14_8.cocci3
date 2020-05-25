@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (filename_number_test(E0->filename) >= 0)  
++ if (filename_number_test(E0->filename) >= 0 && guess_image_format(E0->filename))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_94d883e_7481e9_libavformat#img.c,revFiles/94d883e_7481e9_libavformat#img.c}: image_probe)
+// Recall: 0.11, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

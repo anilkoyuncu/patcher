@@ -1,0 +1,42 @@
+@@
+expression E0, E1;
+@@
+- return (write_in_full(E0, write_buffer, E1) != E1) ? -1 :0; 
++ return (write_in_full(E0, write_buffer, E1) < 0) ? -1 :0; 
+// Infered from: (git/{prevFiles/prev_06f46f_68a423_read-cache.c,revFiles/06f46f_68a423_read-cache.c}: ce_flush)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 0.16, Precision: 1.00
+// -- Node Change --
+// Recall: 0.15, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/19(10%)
+
+/*
+Functions where the patch applied partially:
+ - git/prevFiles/prev_06f46f_68a423_read-cache.c: ce_flush
+*/
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_06f46f_68a423_http-backend.c: copy_request
+ - FFmpeg/prevFiles/prev_22a7e1_8cb724c_libavformat#raw.c: rawvideo_read_packet
+ - git/prevFiles/prev_06f46f_68a423_builtin#unpack-file.c: create_temp_file
+ - git/prevFiles/prev_06f46f_68a423_read-cache.c: ce_write_flush
+ - git/prevFiles/prev_06f46f_68a423_wrapper.c: write_file_buf
+ - codeflaws/prevFiles/prev_71-A-18237773-18237785.c: main
+ - git/prevFiles/prev_06f46f_68a423_t#helper#test-delta.c: cmd_main
+ - git/prevFiles/prev_06f46f_68a423_config.c: git_config_rename_section_in_file
+ - php-src/prevFiles/prev_343846_07d775_ext#exif#exif.c: exif_iif_add_value
+ - git/prevFiles/prev_06f46f_68a423_diff.c: prep_temp_blob
+ - git/prevFiles/prev_06f46f_68a423_http-backend.c: inflate_request
+ - FFmpeg/prevFiles/prev_6e77fe_116758_libavcodec#h264.c: ff_h264_decode_extradata
+ - php-src/prevFiles/prev_af871b_6af321_ext#exif#exif.c: exif_iif_add_value
+ - FFmpeg/prevFiles/prev_108f31_3de33b_libavcodec#h264.c: ff_h264_decode_extradata
+ - git/prevFiles/prev_06f46f_68a423_builtin#receive-pack.c: run_and_feed_hook
+ - git/prevFiles/prev_06f46f_68a423_fast-import.c: cat_blob_write
+*/
+
+// ---------------------------------------------

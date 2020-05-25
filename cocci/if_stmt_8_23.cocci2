@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if ((int )strlen((char *)E0) != E1)  
++ if (E0 && ((int )strlen((char *)E0) != E1))  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_35eb9f_df0908_lib#ssluse.c,revFiles/35eb9f_df0908_lib#ssluse.c}: verifyhost)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+expression E3, E5, E0, E1, E2, E6;
+binary operator B4 = {>> ,& };
+@@
+- g_snprintf(E0, 1024 - (E0 - E1), E2, val_to_str(E3 B4 E5, E6, "Unknown")); 
++ g_snprintf(E0, (gulong)(1024 - (E0 - E1)), E2,  val_to_str(E3 B4 E5, E6, "Unknown")); 
+// Infered from: (wireshark/{prevFiles/prev_c2ae79_f0eeb0_epan#value_string.c,revFiles/c2ae79_f0eeb0_epan#value_string.c}: decode_enumerated_bitfield), (wireshark/{prevFiles/prev_c2ae79_f0eeb0_epan#value_string.c,revFiles/c2ae79_f0eeb0_epan#value_string.c}: decode_enumerated_bitfield_shifted)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,10 @@
+@@
+identifier I0;
+@@
+- struct curltime I0; 
++ struct timeval I0; 
+// Infered from: (curl/{prevFiles/prev_920f77_013954_tests#server#util.c,revFiles/920f77_013954_tests#server#util.c}: wait_ms)
+// False positives: (curl/revFiles/920f77_013954_tests#server#util.c: logmsg), (curl/revFiles/920f77_013954_tests#server#util.c: wait_ms)
+// Recall: 0.20, Precision: 0.33, Matching recall: 1.00
+
+// ---------------------------------------------

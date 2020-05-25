@@ -1,0 +1,11 @@
+@@
+identifier I0 = {VirtualFree ,quick_sort };
+expression E1, E2, E3;
+@@
+- I0(E1, E2, E3); 
++ I0(E1, 0, E3); 
+// Infered from: (codeflaws/{prevFiles/prev_368-A-10056259-10056302.c,revFiles/368-A-10056259-10056302.c}: main), (cpython/{prevFiles/prev_725e66_24e33ac_Objects#obmalloc.c,revFiles/725e66_24e33ac_Objects#obmalloc.c}: _PyObject_ArenaVirtualFree)
+// False positives: (codeflaws/revFiles/368-A-10056259-10056302.c: quick_sort)
+// Recall: 0.07, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

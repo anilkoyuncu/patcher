@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2, E3, E4;
+@@
+- if (E0[E1 - 1] >= E2[E3 - E4 - 1])  
++ if (E0[E1 - 1] >= E2[E3 - E4])  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_572-A-17031100-17031127.c,revFiles/572-A-17031100-17031127.c}: main)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,12 @@
+@@
+identifier I0;
+expression E1;
+@@
+- if (I0)  
+- {
+- g_hash_table_destroy (E1); 
+- }
+// Infered from: (wireshark/{prevFiles/prev_ea46cf_7ce77c_epan#dissectors#packet-h223.c,revFiles/ea46cf_7ce77c_epan#dissectors#packet-h223.c}: circuit_chain_init)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

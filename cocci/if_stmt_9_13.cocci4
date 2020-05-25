@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (_cairo_pattern_is_opaque(E0))  
++ if (_cairo_pattern_is_opaque(E0, NULL))  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (cairo/{prevFiles/prev_b3ba61_386ca5_src#cairo-win32-printing-surface.c,revFiles/b3ba61_386ca5_src#cairo-win32-printing-surface.c}: _cairo_win32_printing_surface_analyze_operation)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

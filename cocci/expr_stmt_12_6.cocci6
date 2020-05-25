@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- sprintf(E0, "unavailable"); 
++ snprintf(E0, sizeof(E0), "unavailable"); 
+// Infered from: (qemu/{prevFiles/prev_a10ea3_7c2a9d0_qemu-img.c,revFiles/a10ea3_7c2a9d0_qemu-img.c}: img_info)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = (E1 <= 8) ? E2->name[E1] :E2->extension[E1 - 8]; 
++ E0 = (E1 < 8) ? E2->name[E1] :E2->extension[E1 - 8]; 
+// Infered from: (qemu/{prevFiles/prev_2aa326_cdbae8_block#vvfat.c,revFiles/2aa326_cdbae8_block#vvfat.c}: fat_chksum)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

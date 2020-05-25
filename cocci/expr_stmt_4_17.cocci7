@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->oap_brw_flags = OBD_BRW_SYNC | E1; 
++ E0->oap_brw_flags = E1 | OBD_BRW_SYNC; 
+// Infered from: (linux/{prevFiles/prev_40daf5_9c5d9f_drivers#staging#lustre#lustre#osc#osc_page.c,revFiles/40daf5_9c5d9f_drivers#staging#lustre#lustre#osc#osc_page.c}: osc_page_submit)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

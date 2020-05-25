@@ -1,0 +1,13 @@
+@@
+identifier I0;
+expression E1, E3, E2;
+typedef lsi_request;
+@@
+  lsi_request *I0 = E1->current; 
+  ...
+- DPRINTF (E2, E3); 
++ DPRINTF("Queueing tag=0x%x\n", I0->tag); 
+// Infered from: (qemu/{prevFiles/prev_aa2b1e_333d50_hw#lsi53c895a.c,revFiles/aa2b1e_333d50_hw#lsi53c895a.c}: lsi_queue_command)
+// Recall: 0.05, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

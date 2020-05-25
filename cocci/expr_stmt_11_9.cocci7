@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- createClient(E0->obuf, sdslen(E0->obuf)); 
++ createClient(E0->obuf, sdslen(E0->obuf) / config.pipeline); 
+// Infered from: (redis/{prevFiles/prev_f6da15_b94742_src#redis-benchmark.c,revFiles/f6da15_b94742_src#redis-benchmark.c}: createMissingClients)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

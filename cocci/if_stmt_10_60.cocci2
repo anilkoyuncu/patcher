@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!PG(safe_mode) || strcasecmp(E0->param->name, "authorization"))  
++ if (!PG(safe_mode) || strncasecmp(E0->param->name, "authorization", 13))  
+  {
+  ...
+  }
+// Infered from: (php-src/{prevFiles/prev_72aa28_c0bd98_sapi#nsapi#nsapi.c,revFiles/72aa28_c0bd98_sapi#nsapi#nsapi.c}: PHP_FUNCTION), (php-src/{prevFiles/prev_72aa28_c0bd98_sapi#nsapi#nsapi.c,revFiles/72aa28_c0bd98_sapi#nsapi#nsapi.c}: sapi_nsapi_register_server_variables)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

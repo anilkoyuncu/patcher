@@ -1,0 +1,15 @@
+@@
+expression list E4;
+identifier I0;
+assignment operator A3;
+expression E1, E2;
+typedef AVCodecContext;
+@@
+  AVCodecContext *I0 = E1->codec; 
+  ...
+- E2 A3 av_get_bits_per_pixel (E4); 
++ E2 = av_get_bits_per_pixel(av_pix_fmt_desc_get(I0->pix_fmt)); 
+// Infered from: (FFmpeg/{prevFiles/prev_6f557a_a29134_libavdevice#caca.c,revFiles/6f557a_a29134_libavdevice#caca.c}: caca_write_header)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

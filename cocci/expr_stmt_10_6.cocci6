@@ -1,0 +1,46 @@
+@@
+expression E0, E1;
+@@
+- if (!E0->b_enable && E1->p_tref_chap)  
++ if (E1->p_tref_chap)  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_70ecb6_f83021_modules#demux#mp4#mp4.c,revFiles/70ecb6_f83021_modules#demux#mp4#mp4.c}: MP4_TrackCreate)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 7 rules):
+// -- Edit Location --
+// Recall: 0.37, Precision: 0.88
+// -- Node Change --
+// Recall: 0.36, Precision: 0.78
+// -- General --
+// Functions fully changed: 5/20(25%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_70ecb6_f83021_modules#demux#mp4#mp4.c: MP4_TrackCreate
+*/
+/*
+Functions where the patch did not apply:
+ - linux/prevFiles/prev_6796cd_fea386_drivers#staging#greybus#tools#loopback_test.c: open_poll_files
+ - qemu/prevFiles/prev_e6a6df_704aec_vl.c: drive_init
+ - linux/prevFiles/prev_a1889c0_2a1690d_net#ipv4#igmp.c: ip_mc_add_src
+ - wireshark/prevFiles/prev_d92335_63e8f1_ui#gtk#sctp_chunk_stat.c: sctpstat_draw
+ - wireshark/prevFiles/prev_e47ea6_4e9361_ui#gtk#sctp_chunk_stat.c: sctpstat_draw
+ - linux/prevFiles/prev_193634_e72be3f_drivers#staging#ath6kl#miscdrv#ar3kps#ar3kpsparser.c: AthCreateCommandList
+ - vlc/prevFiles/prev_70ecb6_f83021_modules#demux#mp4#mp4.c: LoadChapter
+ - redis/prevFiles/prev_aa0512_610224_src#replication.c: replicationFeedSlaves
+ - codeflaws/prevFiles/prev_469-A-18122777-18122796.c: main
+ - qemu/prevFiles/prev_f10c31_026459_linux-user#main.c: cpu_loop
+ - FFmpeg/prevFiles/prev_e20f2d_1d1787_ffmpeg.c: print_report
+ - codeflaws/prevFiles/prev_660-B-17504454-17504716.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_4f9794_87532f_gtk#a11y#gtkentryaccessible.c: gtk_entry_accessible_notify_gtk
+ - gtk/prevFiles/prev_afa60d_5f0dce_gtk#gtkwidget.c: gtk_widget_set_can_focus
+*/
+
+// ---------------------------------------------

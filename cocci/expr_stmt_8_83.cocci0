@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0 = cpu_to_le32((E1->num_queues - 1) | ((E1->num_queues - 1) << 16)); 
++ E0 = cpu_to_le32((E1->num_queues - 2) | ((E1->num_queues - 2) << 16)); 
+// Infered from: (qemu/{prevFiles/prev_cdd346_248b23_hw#block#nvme.c,revFiles/cdd346_248b23_hw#block#nvme.c}: nvme_get_feature), (qemu/{prevFiles/prev_cdd346_248b23_hw#block#nvme.c,revFiles/cdd346_248b23_hw#block#nvme.c}: nvme_set_feature)
+// Recall: 0.40, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+expression E0, E1, E2;
+@@
+- paste_replace(&global_buffers, E0, E1, E2); 
+// Infered from: (tmux/{prevFiles/prev_6daf06_69b7c4_window-copy.c,revFiles/6daf06_69b7c4_window-copy.c}: window_copy_copy_buffer)
+// Recall: 0.17, Precision: 1.00, Matching recall: 0.33
+
+// ---------------------------------------------

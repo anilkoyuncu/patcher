@@ -1,0 +1,28 @@
+@@
+expression E0, E1;
+@@
+- E0->gather.pp_last = &E1->u.p_pes->gather.p_data; 
++ E0->gather.pp_last = &E0->gather.p_data; 
+// Infered from: (vlc/{prevFiles/prev_01423a_e2805c_modules#demux#mpeg#ts.c,revFiles/01423a_e2805c_modules#demux#mpeg#ts.c}: PushPESBlock)
+// Recall: 0.05, Precision: 1.00, Matching recall: 0.67
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.09, Precision: 1.00
+// -- Node Change --
+// Recall: 0.11, Precision: 1.00
+// -- General --
+// Functions fully changed: 1/23(4%)
+
+/*
+Functions where the patch applied partially:
+ - vlc/prevFiles/prev_01423a_e2805c_modules#demux#mpeg#ts.c: PushPESBlock
+*/
+/*
+Functions where the patch did not apply:
+ - php-src/prevFiles/prev_78fdeb_a2a69a_main#streams#filter.c: php_stream_filter_create
+ - FFmpeg/prevFiles/prev_f82dd4_d2fc24_libavcodec#hevcdec.c: pred_weight_table
+*/
+
+// ---------------------------------------------

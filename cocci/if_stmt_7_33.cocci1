@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (OMPI_SUCCESS != E0->o_f_to_c_index)  
++ if (0 > E0->o_f_to_c_index)  
+  {
+  ...
+  }
+// Infered from: (ompi/{prevFiles/prev_c63c4d_499b90_ompi#op#op.c,revFiles/c63c4d_499b90_ompi#op#op.c}: ompi_op_create_user)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

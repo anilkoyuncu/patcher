@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (strcasecmp(E0, ".dv") && (!E1->psz_demux || strcmp(E1->psz_demux, "rawdv")))  
++ if ((!E0 || strcasecmp(E0, ".dv")) && (!E1->psz_demux || strcmp(E1->psz_demux,  "rawdv")))  
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_768b2e_0efaba_modules#demux#rawdv.c,revFiles/768b2e_0efaba_modules#demux#rawdv.c}: Activate)
+// Recall: 0.10, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

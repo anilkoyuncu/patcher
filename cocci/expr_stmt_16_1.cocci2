@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = ((E1 + 7) / 8) * E2; 
++ E0 = (DIV_ROUND_UP(E1, 8)) * E2; 
+// Infered from: (qemu/{prevFiles/prev_659c90_78ee96_ui#vnc-enc-tight.c,revFiles/659c90_78ee96_ui#vnc-enc-tight.c}: send_mono_rect)
+// False positives: (qemu/revFiles/659c90_78ee96_ui#vnc.c: vnc_refresh_server_surface)
+// Recall: 0.25, Precision: 0.75, Matching recall: 0.75
+
+// ---------------------------------------------

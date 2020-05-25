@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (!E0->url_list)  
++ if (!E0->url_list || !E0->url_list->url)  
+  {
+  ...
+  }
+// Infered from: (curl/{prevFiles/prev_82bc76_18b9b0_src#main.c,revFiles/82bc76_18b9b0_src#main.c}: operate)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

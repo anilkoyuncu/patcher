@@ -1,0 +1,17 @@
+@@
+expression E0, E1, E2;
+@@
+- if ((E0 + E1->i_base_line - E2) < 0)  
++ if ((E0 + E1->i_base_line - E2) < 0 || E1->i_base_line <= E1->i_height)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (vlc/{prevFiles/prev_24a593_a2ab8b_modules#text_renderer#freetype.c,revFiles/24a593_a2ab8b_modules#text_renderer#freetype.c}: RenderBackground)
+// Recall: 0.07, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,20 @@
+@@
+identifier I0;
+type T1;
+@@
+- I0 = av_realloc(I0, size_of_array * sizeof(T1 )); 
++ I0 = av_realloc_f(I0, size_of_array, sizeof(T1 )); 
+// Infered from: (FFmpeg/{prevFiles/prev_ff17c7_bdd07d_tests#api#api-seek-test.c,revFiles/ff17c7_bdd07d_tests#api#api-seek-test.c}: add_crc_to_array), (FFmpeg/{prevFiles/prev_ff17c7_bdd07d_tests#api#api-seek-test.c,revFiles/ff17c7_bdd07d_tests#api#api-seek-test.c}: add_crc_to_array)
+// Recall: 0.67, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/2(100%)
+
+
+// ---------------------------------------------

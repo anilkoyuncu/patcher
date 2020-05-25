@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (!(E0->status & IRQ_DISABLED) && E1->irq_unmask)  
++ if (!irqd_irq_disabled(&E0->irq_data) && E1->irq_unmask)  
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_98488db_68f20f_arch#powerpc#platforms#embedded6xx#hlwd-pic.c,revFiles/98488db_68f20f_arch#powerpc#platforms#embedded6xx#hlwd-pic.c}: hlwd_pic_irq_cascade)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

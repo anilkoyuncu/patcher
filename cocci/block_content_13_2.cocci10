@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = GetEnvironmentVariable(E1, E2, sizeof(E2)); 
++ E0 = GetEnvironmentVariableA(E1, E2, sizeof(E2)); 
+// Infered from: (curl/{prevFiles/prev_d40f4e_2d4413_src#tool_homedir.c,revFiles/d40f4e_2d4413_src#tool_homedir.c}: GetEnv)
+// Recall: 0.03, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

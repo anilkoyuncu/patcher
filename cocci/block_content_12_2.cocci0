@@ -1,0 +1,16 @@
+@@
+identifier I0;
+@@
+- static int I0; 
+- if (I0)  
++ static int initialized; 
++ if (initialized)  
+  {
+  ...
+  }
+- I0 = 1; 
++ initialized = 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavcodec#allcodecs.c,revFiles/5e5348_f1cc49_libavcodec#allcodecs.c}: avcodec_register_all), (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavformat#allformats.c,revFiles/5e5348_f1cc49_libavformat#allformats.c}: av_register_all), (FFmpeg/{prevFiles/prev_5e5348_f1cc49_libavdevice#alldevices.c,revFiles/5e5348_f1cc49_libavdevice#alldevices.c}: avdevice_register_all)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

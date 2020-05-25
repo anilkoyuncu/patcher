@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- E0 = GUEST_BASE ? E0 :0; 
++ E0 = GUEST_BASE ? TCG_GUEST_BASE_REG :0; 
+// Infered from: (qemu/{prevFiles/prev_a71836_c62bbc_tcg#ppc#tcg-target.c,revFiles/a71836_c62bbc_tcg#ppc#tcg-target.c}: tcg_out_qemu_st)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

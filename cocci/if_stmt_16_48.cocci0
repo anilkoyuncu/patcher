@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (strcmp(E0, "recvfrom: Network is down") == 0 || strcmp(E0,  "read: Device not configured") == 0 || strcmp(  E0, "read: I/O error") == 0)  
++ if (strcmp(E0, "recvfrom: Network is down") == 0 || strcmp(E0,  "read: Device not configured") == 0 || strcmp(  E0, "read: I/O error") == 0 || strcmp(E0,  "read error: PacketReceivePacket failed") == 0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_3595bb_2bb0b3_dumpcap.c,revFiles/3595bb_2bb0b3_dumpcap.c}: capture_loop_start)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

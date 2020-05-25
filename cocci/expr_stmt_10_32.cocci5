@@ -1,0 +1,35 @@
+@@
+type T1;
+expression E0, E2;
+@@
+- E0.s_addr = (T1 )(*E2)->value.lval; 
++ E0.s_addr = htonl((T1 )(*E2)->value.lval); 
+// Infered from: (php-src/{prevFiles/prev_65bb19_08c677_ext#standard#basic_functions.c,revFiles/65bb19_08c677_ext#standard#basic_functions.c}: PHP_FUNCTION)
+// Recall: 0.08, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.42, Precision: 0.71
+// -- Node Change --
+// Recall: 0.46, Precision: 0.75
+// -- General --
+// Functions fully changed: 5/14(35%)
+
+/*
+Functions where the patch did not apply:
+ - git/prevFiles/prev_2239617_6a6df8_builtin#checkout-index.c: cmd_checkout_index
+ - gtk/prevFiles/prev_656061_a7f95d_gtk#gtkclist.c: abort_column_resize
+ - gtk/prevFiles/prev_e11e51_52711b_gtk#gtknotebook.c: gtk_notebook_set_tab_label_packing
+ - git/prevFiles/prev_2239617_6a6df8_builtin#checkout-index.c: option_parse_stage
+ - gtk/prevFiles/prev_629bb5a_c0e950_gtk#gtkcellview.c: gtk_cell_view_cell_layout_pack_start
+ - gtk/prevFiles/prev_629bb5a_c0e950_gtk#gtkcellview.c: gtk_cell_view_cell_layout_pack_end
+ - php-src/prevFiles/prev_fa0634_88e884_ext#standard#string.c: PHP_FUNCTION
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - gtk/prevFiles/prev_2f0c61_a9a6fb_gtk#gtkentrycompletion.c: gtk_entry_completion_set_text_column
+ - gtk/prevFiles/prev_2f0c61_a9a6fb_gtk#gtkentrycompletion.c: gtk_entry_completion_clear
+*/
+
+// ---------------------------------------------

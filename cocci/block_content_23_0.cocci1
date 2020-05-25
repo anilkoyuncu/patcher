@@ -1,0 +1,12 @@
+@@
+expression E0, E1, E2;
+@@
+- E0 = dma_pool_alloc(E1->s_dma_pool, GFP_KERNEL, &E2); 
++ E0 = dma_pool_zalloc(E1->s_dma_pool, GFP_KERNEL, &E2); 
+  ...
+- memset(E0, 0, sizeof(struct access_chip_84xx )); 
+// Infered from: (linux/{prevFiles/prev_08eb7f_df2f772_drivers#scsi#qla2xxx#qla_bsg.c,revFiles/08eb7f_df2f772_drivers#scsi#qla2xxx#qla_bsg.c}: qla84xx_mgmt_cmd)
+// False positives: (linux/revFiles/08eb7f_df2f772_drivers#scsi#qla2xxx#qla_bsg.c: qla84xx_updatefw)
+// Recall: 0.04, Precision: 0.50, Matching recall: 1.00
+
+// ---------------------------------------------

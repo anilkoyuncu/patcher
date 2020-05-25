@@ -1,0 +1,12 @@
+@@
+expression E0, E1;
+@@
+- if (E0->codec_id == AV_CODEC_ID_H263 && (!E1 || !E1->oformat->priv_class || !av_opt_flag_is_set(  E1->priv_data, "rtpflags", "rfc2190")))  
++ if (E0->codec_id == AV_CODEC_ID_H263 && (!E1 || !E1->oformat->priv_class || !E1->priv_data || !av_opt_flag_is_set(  E1->priv_data, "rtpflags", "rfc2190")))  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_e90820_cf29f49_libavformat#rtp.c,revFiles/e90820_cf29f49_libavformat#rtp.c}: ff_rtp_get_payload_type)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

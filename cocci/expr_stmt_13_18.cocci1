@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- memset(E0, 0, sizeof(E0)); 
++ memset(E0, 0, 4); 
+// Infered from: (wireshark/{prevFiles/prev_06a370_83c012_epan#dissectors#packet-bootp.c,revFiles/06a370_83c012_epan#dissectors#packet-bootp.c}: get_opt60_tlv)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

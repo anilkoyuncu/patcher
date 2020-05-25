@@ -1,0 +1,9 @@
+@@
+identifier I0, I1;
+@@
+- set_irq_chained_handler(I0, I1); 
++ irq_set_chained_handler(I0, I1); 
+// Infered from: (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-s3c64xx#irq-eint.c,revFiles/6845664a_25a566_arch#arm#mach-s3c64xx#irq-eint.c}: s3c64xx_init_irq_eint), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-s3c64xx#irq-eint.c,revFiles/6845664a_25a566_arch#arm#mach-s3c64xx#irq-eint.c}: s3c64xx_init_irq_eint), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-s3c64xx#irq-eint.c,revFiles/6845664a_25a566_arch#arm#mach-s3c64xx#irq-eint.c}: s3c64xx_init_irq_eint), (linux/{prevFiles/prev_6845664a_25a566_arch#arm#mach-s3c64xx#irq-eint.c,revFiles/6845664a_25a566_arch#arm#mach-s3c64xx#irq-eint.c}: s3c64xx_init_irq_eint)
+// Recall: 0.43, Precision: 1.00, Matching recall: 0.43
+
+// ---------------------------------------------

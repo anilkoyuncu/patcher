@@ -1,0 +1,14 @@
+@@
+identifier I3;
+expression E0, E2, E1;
+@@
+- init_get_bits8(E0, E1, E2->I3); 
++ ret = init_get_bits8(E0, E1, E2->I3); 
++ if (ret < 0)  
++ {
++ return ret; 
++ }
+// Infered from: (FFmpeg/{prevFiles/prev_f1593e_cbd3cd_libavcodec#tta.c,revFiles/f1593e_cbd3cd_libavcodec#tta.c}: tta_decode_init), (FFmpeg/{prevFiles/prev_bd6610_194dd1_libavcodec#hevc_parser.c,revFiles/bd6610_194dd1_libavcodec#hevc_parser.c}: parse_nal_units), (FFmpeg/{prevFiles/prev_6ae1a3_a51d42_libavcodec#sonic.c,revFiles/6ae1a3_a51d42_libavcodec#sonic.c}: sonic_decode_init)
+// Recall: 0.40, Precision: 1.00, Matching recall: 0.80
+
+// ---------------------------------------------

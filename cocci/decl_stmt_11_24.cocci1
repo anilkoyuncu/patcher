@@ -1,0 +1,10 @@
+@@
+type T2;
+expression E0, E1, E3, E4, E5, E6, E7;
+@@
+- E0 = PKCS5_PBKDF2_HMAC_fast((char *)E1.buf, E1.len, (T2 *)E3.buf, E3.len, E4,  E5, E6, (T2 *)E7); 
++ E0 = PKCS5_PBKDF2_HMAC_fast((char *)E1.buf, (int )E1.len, (T2 *)E3.buf,  E3.len, E4, E5, E6, (T2 *)E7); 
+// Infered from: (cpython/{prevFiles/prev_c1a57d_e990c6_Modules#_hashopenssl.c,revFiles/c1a57d_e990c6_Modules#_hashopenssl.c}: pbkdf2_hmac)
+// Recall: 0.17, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

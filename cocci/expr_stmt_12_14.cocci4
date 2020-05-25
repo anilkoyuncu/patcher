@@ -1,0 +1,17 @@
+@@
+expression E0;
+@@
+- if (E0->nb_entries >= E0->size)  
++ if (E0->size && E0->nb_entries >= E0->size)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_561bfce_5972bc_libavformat#hlsenc.c,revFiles/561bfce_5972bc_libavformat#hlsenc.c}: append_entry)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- printf("NE2000: received len=%d\n", I0); 
++ printf("NE2000: received len=%zu\n", I0); 
+// Infered from: (qemu/{prevFiles/prev_fdc89e_7da2d9_hw#net#ne2000.c,revFiles/fdc89e_7da2d9_hw#net#ne2000.c}: ne2000_receive)
+// Recall: 0.09, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

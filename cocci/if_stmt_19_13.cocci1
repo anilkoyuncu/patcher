@@ -1,0 +1,10 @@
+@@
+expression E0, E1;
+@@
+- E0 = HASH_OF(E1); 
++ E0 = Z_ARRVAL_P(E1); 
+// Infered from: (php-src/{prevFiles/prev_ad4fa8_abf6a0_ext#wddx#wddx.c,revFiles/ad4fa8_abf6a0_ext#wddx#wddx.c}: php_wddx_serialize_array)
+// False positives: (php-src/revFiles/a811b5_2524ab_ext#xmlrpc#xmlrpc-epi-php.c: PHP_to_XMLRPC_worker), (php-src/revFiles/ad4fa8_abf6a0_ext#wddx#wddx.c: php_wddx_add_var), (php-src/revFiles/ad4fa8_abf6a0_ext#wddx#wddx.c: php_wddx_serialize_object)
+// Recall: 0.21, Precision: 0.30, Matching recall: 0.75
+
+// ---------------------------------------------

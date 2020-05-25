@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1;
+@@
+- struct client *I0 = E1->cmdclient; 
++ struct client *I0; 
+// Infered from: (tmux/{prevFiles/prev_d644e5_589322_cmd-save-buffer.c,revFiles/d644e5_589322_cmd-save-buffer.c}: cmd_save_buffer_exec), (tmux/{prevFiles/prev_1e2015_4621a5_cmd-save-buffer.c,revFiles/1e2015_4621a5_cmd-save-buffer.c}: cmd_save_buffer_exec)
+// Recall: 0.29, Precision: 1.00, Matching recall: 0.29
+
+// ---------------------------------------------

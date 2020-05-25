@@ -1,0 +1,9 @@
+@@
+expression E0, E1;
+@@
+- E0->value = strdup(E1 ? "On" :"Off"); 
++ E0->value = strdup(E1 ? "1" :"0"); 
+// Infered from: (php-src/{prevFiles/prev_10a112_36103d_sapi#fpm#fpm#fpm_conf.c,revFiles/10a112_36103d_sapi#fpm#fpm#fpm_conf.c}: fpm_conf_set_array), (php-src/{prevFiles/prev_b4ccb69_fadba4_sapi#fpm#fpm#fpm_conf.c,revFiles/b4ccb69_fadba4_sapi#fpm#fpm#fpm_conf.c}: fpm_conf_set_array)
+// Recall: 0.14, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

@@ -1,0 +1,8 @@
+@@
+@@
+- le_curl = register_list_destructors(_php_curl_close, NULL); 
++ le_curl = register_list_destructors(_php_curl_close, NULL, "curl"); 
+// Infered from: (php-src/{prevFiles/prev_7b4983_a0cfab_ext#curl#curl.c,revFiles/7b4983_a0cfab_ext#curl#curl.c}: PHP_MINIT_FUNCTION)
+// Recall: 0.03, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

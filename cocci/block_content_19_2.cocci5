@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- log_error_write(E0, __FILE__, __LINE__, "s", "FastCGI: header to small"); 
++ log_error_write(E0, __FILE__, __LINE__, "s", "FastCGI: header too small"); 
+// Infered from: (lighttpd1.4/{prevFiles/prev_8cf82a_e48576_src#mod_fastcgi.c,revFiles/8cf82a_e48576_src#mod_fastcgi.c}: fastcgi_get_packet)
+// Recall: 0.04, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

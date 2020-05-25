@@ -1,0 +1,36 @@
+@@
+expression E0, E1, E2;
+@@
+- if (fabs(E0 - E1) > 2 || fabs(E0 - E2) > 2 || fabs(E1 - E2) > 2)  
++ if (fabs(E0 - E1) >= 2 || fabs(E0 - E2) >= 2 || fabs(E1 - E2) >= 2)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_368-C-5252850-5253019.c,revFiles/368-C-5252850-5253019.c}: main)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 6 rules):
+// -- Edit Location --
+// Recall: 0.75, Precision: 1.00
+// -- Node Change --
+// Recall: 0.75, Precision: 0.86
+// -- General --
+// Functions fully changed: 5/8(62%)
+
+/*
+Functions where the patch did not apply:
+ - openssl/prevFiles/prev_211a68_579415_apps#opt.c: opt_progname
+ - codeflaws/prevFiles/prev_393-A-14052177-14052206.c: main
+*/
+/*
+Functions where the patch produced incorrect changes:
+ - FFmpeg/prevFiles/prev_7f8ffc_3a1cdc_libavformat#yuv4mpeg.c: yuv4_read_header
+*/
+
+// ---------------------------------------------

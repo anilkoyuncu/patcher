@@ -1,0 +1,23 @@
+@@
+expression E0, E1;
+@@
+- E0->pictq[E1].reallocate = 1; 
++ E0->pictq.queue[E1].reallocate = 1; 
+// Infered from: (FFmpeg/{prevFiles/prev_9ffa70_22a20d_ffplay.c,revFiles/9ffa70_22a20d_ffplay.c}: toggle_full_screen)
+// Recall: 0.33, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 2 rules):
+// -- Edit Location --
+// Recall: 0.67, Precision: 1.00
+// -- Node Change --
+// Recall: 0.67, Precision: 1.00
+// -- General --
+// Functions fully changed: 2/3(66%)
+
+/*
+Functions where the patch did not apply:
+ - lighttpd1.4/prevFiles/prev_bde657_0cccf3_src#mod_fastcgi.c: fcgi_spawn_connection
+*/
+
+// ---------------------------------------------

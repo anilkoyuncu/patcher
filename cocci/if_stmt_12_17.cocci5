@@ -1,0 +1,12 @@
+@@
+expression E0;
+@@
+- if (E0->codec.codec_id == CODEC_ID_RAWVIDEO && !E0->codec.codec_tag)  
++ if (E0->codec.codec_id == CODEC_ID_RAWVIDEO && !E0->codec.codec_tag && !E0->codec.bits_per_sample)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_1b307f_7ca609_libavformat#utils.c,revFiles/1b307f_7ca609_libavformat#utils.c}: av_find_stream_info)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

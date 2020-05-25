@@ -1,0 +1,10 @@
+@@
+identifier I0;
+expression E1, E2, E3, E4, E5, E6, E7;
+@@
+- int I0 = (getnameinfo)(E1, E2, E3, E4, E5, E6, E7); 
++ int I0 = (int )(getnameinfo)(E1, E2, E3, E4, E5, E6, E7); 
+// Infered from: (curl/{prevFiles/prev_c94f3e_1e5f6c_lib#hostip6.c,revFiles/c94f3e_1e5f6c_lib#hostip6.c}: curl_dogetnameinfo)
+// Recall: 0.09, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

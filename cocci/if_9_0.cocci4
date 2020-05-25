@@ -1,0 +1,27 @@
+@@
+expression E0, E1;
+@@
+- if (E0 > 257 - E1)  
++ if (E0 > 256 - E1)  
+  {
+- E0 = 257 - E1; 
++ E0 = 256 - E1; 
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_2d71f3_b53f89_libavcodec#lagarith.c,revFiles/2d71f3_b53f89_libavcodec#lagarith.c}: lag_read_prob_header)
+// Recall: 0.15, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 5 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 0.77, Precision: 1.00
+// -- General --
+// Functions fully changed: 4/5(80%)
+
+/*
+Functions where the patch applied partially:
+ - FFmpeg/prevFiles/prev_b81dbd_6b081e_libavcodec#h264_parser.c: parse_nal_units
+*/
+
+// ---------------------------------------------

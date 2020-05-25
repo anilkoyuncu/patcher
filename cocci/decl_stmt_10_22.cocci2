@@ -1,0 +1,26 @@
+@@
+type T0;
+identifier I1, I2, I3;
+expression E4;
+@@
+  void pmu_irq_handler(T0 I1, struct irq_desc *I2)  
+  {
+  ...
+- struct pmu_data *I3 = irq_get_handler_data(E4); 
++ struct pmu_data *I3 = irq_desc_get_handler_data(I2); 
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_523034_391de7f_drivers#soc#dove#pmu.c,revFiles/523034_391de7f_drivers#soc#dove#pmu.c}: pmu_irq_handler)
+// Recall: 0.20, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
+// Final metrics (for the combined 3 rules):
+// -- Edit Location --
+// Recall: 1.00, Precision: 1.00
+// -- Node Change --
+// Recall: 1.00, Precision: 1.00
+// -- General --
+// Functions fully changed: 5/5(100%)
+
+
+// ---------------------------------------------

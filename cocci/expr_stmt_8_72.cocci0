@@ -1,0 +1,9 @@
+@@
+expression E0;
+@@
+- memcpy(E0->inbuf, E0->inbuf + 1, E0->inbuf_ptr - E0->inbuf - 1); 
++ memmove(E0->inbuf, E0->inbuf + 1, E0->inbuf_ptr - E0->inbuf - 1); 
+// Infered from: (FFmpeg/{prevFiles/prev_228ef9_758cf5_libavcodec#mpegaudiodec.c,revFiles/228ef9_758cf5_libavcodec#mpegaudiodec.c}: decode_frame), (FFmpeg/{prevFiles/prev_228ef9_758cf5_libavcodec#mpegaudiodec.c,revFiles/228ef9_758cf5_libavcodec#mpegaudiodec.c}: decode_frame)
+// Recall: 0.25, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

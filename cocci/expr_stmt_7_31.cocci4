@@ -1,0 +1,10 @@
+@@
+expression E0, E1, E2;
+typedef uint64_t;
+@@
+- E0 = E1->used * TARGET_PAGE_SIZE + E2->packet_len; 
++ E0 = ((uint64_t )E1->used) * TARGET_PAGE_SIZE + E2->packet_len; 
+// Infered from: (qemu/{prevFiles/prev_4fcefd_3bae15_migration#ram.c,revFiles/4fcefd_3bae15_migration#ram.c}: multifd_send_pages)
+// Recall: 0.12, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

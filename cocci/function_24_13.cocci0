@@ -1,0 +1,8 @@
+@@
+expression E0, E1;
+@@
+- memset(E0, 0, E1 * sizeof(*E0)); 
+// Infered from: (FFmpeg/{prevFiles/prev_d208d1_79a60c_libavcodec#hevc_mvs.c,revFiles/d208d1_79a60c_libavcodec#hevc_mvs.c}: ff_hevc_luma_mv_merge_mode), (linux/{prevFiles/prev_cab80d_4fad17_drivers#staging#lustre#lustre#libcfs#linux#linux-tcpip.c,revFiles/cab80d_4fad17_drivers#staging#lustre#lustre#libcfs#linux#linux-tcpip.c}: libcfs_ipif_enumerate)
+// Recall: 0.29, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

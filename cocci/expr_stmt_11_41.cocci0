@@ -1,0 +1,9 @@
+@@
+expression E1, E0;
+@@
+- add_assoc_stringl(E0, E1, "unlimited", 9, 0); 
++ add_assoc_string(E0, E1, "unlimited", 1); 
+// Infered from: (php-src/{prevFiles/prev_791cda_d84c5a_ext#posix#posix.c,revFiles/791cda_d84c5a_ext#posix#posix.c}: posix_addlimit), (php-src/{prevFiles/prev_791cda_d84c5a_ext#posix#posix.c,revFiles/791cda_d84c5a_ext#posix#posix.c}: posix_addlimit)
+// Recall: 0.50, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------
