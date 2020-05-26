@@ -6,9 +6,6 @@ Deprecated==1.2.10
 git-pull-request==5.0.1
 idna==2.9
 joblib==0.14.1
-mkl-fft==1.0.15
-mkl-random==1.1.0
-mkl-service==2.3.0
 networkx==2.1
 numpy==1.18.1
 pandas==1.0.3
