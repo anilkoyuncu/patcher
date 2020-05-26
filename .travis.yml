@@ -2,21 +2,21 @@ sudo: required
 dist: bionic
 language: python
 python:
-- '3.7'
+  - '3.7'
 os: linux
 install:
-# - test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
-- pip install -r requirements.txt
+  # - test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
+  - pip install -r requirements.txt
 before_script:
-- echo $GITHUB_TOKEN
-- ccache --version
-- ccache --zero-stats
-- export USE_CCACHE=1
+  - brew install hub
+  - echo $GITHUB_TOKEN
+  - ccache --version
+  - ccache --zero-stats
+  - export USE_CCACHE=1
 
-addons:
-  homebrew:
-    packages:
-    - hub
+before_install:
+  - git clone https://github.com/Linuxbrew/brew.git ~/.linuxbrew
+  - export HOMEBREW_FORCE_VENDOR_RUBY=1
 script:
 # - bash -ex .travis-opam.sh
 # - eval $(opam env)
