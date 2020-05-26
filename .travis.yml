@@ -2,13 +2,12 @@ sudo: required
 dist: bionic
 language: python
 os: linux
-# install: test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
+install: test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
 
-addons:
-  apt:
-    packages:
-      - opam
-      - ocaml
+# addons:
+#   apt:
+#     packages:
+#       - coccinelle
 before_script:
     - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
     - bash miniconda.sh -b -p $HOME/miniconda
@@ -20,15 +19,12 @@ before_script:
     - export USE_CCACHE=1
     - conda env create -f environment.yml
     - conda activate fixminerEnv
-    - opam init -y
-    - eval $(opam env)
-    - opam update 
-    - opam install "coccinelle>=1.0.8" -y
     # - git submodule update --init
 #     - bash build_dependencies.sh
 script:
-    # - bash -ex .travis-opam.sh
-
+    - bash -ex .travis-opam.sh
+    - eval $(opam env)
+    - opam install coccinelle -y
     - echo $TRAVIS_COMMIT_RANGE
     - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
     - echo $CHANGED_FILES
@@ -38,7 +34,7 @@ script:
     - conda activate fixminerEnv
     - bash patcher.sh $CHANGED_FILES
 #     - make build
-# env:
-    # - OCAML_VERSION=4.05 DISTRO=ubuntu
+env:
+    - OCAML_VERSION=4.05 DISTRO=ubuntu
 after_success:
     - more /home/travis/build/anilkoyuncu/patcher/patches/inflate.cfor_14_10.cocci.txt
