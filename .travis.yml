@@ -12,11 +12,12 @@ before_script:
 - ccache --version
 - ccache --zero-stats
 - export USE_CCACHE=1
-- git remote set-url origin https://${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
+
 script:
 # - bash -ex .travis-opam.sh
 # - eval $(opam env)
 # - opam install coccinelle -y
+- git remote set-url origin https://${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
 - echo $TRAVIS_COMMIT_RANGE
 - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
 - echo $CHANGED_FILES
