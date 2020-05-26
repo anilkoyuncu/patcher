@@ -1,12 +1,11 @@
 sudo: required
 dist: bionic
 language: c
-language: minimal
+
 os: linux
 git:
   clone: false
-install:
-- test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
+
 # - pip install -r requirements.txt
 before_script:
 - git config --global credential.helper 'cache --timeout=3600'
@@ -30,6 +29,7 @@ before_script:
 - export USE_CCACHE=1
 
 script:
+- test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
 - bash -ex .travis-opam.sh
 - eval $(opam env)
 - opam install coccinelle -y
