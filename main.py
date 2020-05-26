@@ -26,20 +26,44 @@ if __name__ == '__main__':
 		print(os.listdir())
 
 
+		cmd = 'git checkout -b '+ patchName+'_'+spfile+' --track origin/master'
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
 
-		cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
+		with open(join(ROOT_DIR,'cocci',spfile),mode='r') as commitMessage:
+			commit_str = commitMessage.read()
+
+
+		# cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
+		cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath
 		print(cmd)
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
 
-		fils = get_filepaths(join(ROOT_DIR,'patches'), '.c')
-		print(fils)
-		print(join(ROOT_DIR, 'patches', patchName + spfile + '.txt'))
-		cmd = 'more '+join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
+		cmd = 'git commit -a -m '+ 'Generated patch for\n' + commit_str
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
+
+		cmd = 'git config  core.editor cat'
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
+
+		cmd = 'git pull-request'
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
+
+		# fils = get_filepaths(join(ROOT_DIR,'patches'), '.c')
+		# print(fils)
+		# print(join(ROOT_DIR, 'patches', patchName + spfile + '.txt'))
+		# cmd = 'more '+join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
+		# output, e = shellGitCheckout(cmd)
+		# print(output)
+		# print(e)
 		# g = Github("access_token")
 
 	except Exception as e:

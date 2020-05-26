@@ -10,3 +10,7 @@ dependencies:
   - scikit-learn
   - networkx=2.1
   - conda-forge::pygithub
+  - pip
+  - pip:
+    # works for regular pip packages
+    - git-pull-request
