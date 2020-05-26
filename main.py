@@ -62,7 +62,7 @@ if __name__ == '__main__':
 		print(output)
 		print(e)
 
-		cmd = 'git pull-request'
+		cmd = 'git pull-request  --debug'
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)

@@ -1,8 +1,6 @@
 sudo: required
 dist: bionic
-language: python
-python:
-- '3.7'
+language: c
 os: linux
 # install:
 # # - test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
