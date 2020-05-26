@@ -13,6 +13,10 @@ before_script:
 - ccache --zero-stats
 - export USE_CCACHE=1
 
+addons:
+  homebrew:
+    packages:
+    - hub
 script:
 # - bash -ex .travis-opam.sh
 # - eval $(opam env)
