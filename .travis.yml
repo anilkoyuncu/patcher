@@ -17,6 +17,7 @@ before_script:
 - ccache --version
 - ccache --zero-stats
 - export USE_CCACHE=1
+- git clone https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
 - conda env create -f environment.yml
 - conda activate fixminerEnv
 - echo $GITHUB_TOKEN
@@ -28,7 +29,6 @@ script:
 # - bash -ex .travis-opam.sh
 # - eval $(opam env)
 # - opam install coccinelle -y
-- git clone https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
 # - git remote set-url origin https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
 - echo $TRAVIS_COMMIT_RANGE
 - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
