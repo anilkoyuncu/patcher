@@ -15,8 +15,7 @@ before_script:
   - export USE_CCACHE=1
 
 before_install:
-  - git clone https://github.com/Linuxbrew/brew.git ~/.linuxbrew
-  - export HOMEBREW_FORCE_VENDOR_RUBY=1
+  - apt install linuxbrew-wrapper
 script:
 # - bash -ex .travis-opam.sh
 # - eval $(opam env)
