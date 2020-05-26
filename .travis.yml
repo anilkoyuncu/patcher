@@ -2,20 +2,27 @@ sudo: required
 dist: bionic
 language: python
 python:
-  - '3.7'
+- '3.7'
 os: linux
-install:
-  # - test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
-  - pip install -r requirements.txt
+# install:
+# # - test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
+# - pip install -r requirements.txt
 before_script:
-  - brew install hub
-  - echo $GITHUB_TOKEN
-  - ccache --version
-  - ccache --zero-stats
-  - export USE_CCACHE=1
+- wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+- bash miniconda.sh -b -p $HOME/miniconda
+- source "$HOME/miniconda/etc/profile.d/conda.sh"
+- hash -r
+- conda config --set always_yes yes --set changeps1 no
+- ccache --version
+- ccache --zero-stats
+- export USE_CCACHE=1
+- conda env create -f environment.yml
+- conda activate fixminerEnv
+- echo $GITHUB_TOKEN
+- ccache --version
+- ccache --zero-stats
+- export USE_CCACHE=1
 
-before_install:
-  - apt install linuxbrew-wrapper
 script:
 # - bash -ex .travis-opam.sh
 # - eval $(opam env)
