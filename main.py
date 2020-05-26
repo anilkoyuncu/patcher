@@ -25,7 +25,7 @@ if __name__ == '__main__':
 		print(os.listdir())
 
 
-		cmd = 'git checkout -b '+ patchName+'_'+spfile #+' --track origin/master'
+		cmd = 'git checkout -b '+ patchName+'_'+spfile+' --track origin/master'
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
@@ -62,7 +62,8 @@ if __name__ == '__main__':
 		print(output)
 		print(e)
 
-		cmd = 'git pull-request  --debug'
+		# cmd = 'git pull-request  --debug'
+		cmd = 'git config -l'
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
