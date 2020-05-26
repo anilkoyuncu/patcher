@@ -350,7 +350,7 @@ int *m;                 /* maximum lookup bits, returns actual */
 
   /* Find minimum and maximum length, bound *m by those */
   l = *m;
-  for (j = BMAX; j >= 1; j--)
+  for (j = 1; j <= BMAX; j++)
     if (c[j])
       break;
   k = j;                        /* minimum code length */
