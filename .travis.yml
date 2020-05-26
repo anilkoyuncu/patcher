@@ -3,6 +3,8 @@ dist: bionic
 language: c
 language: minimal
 os: linux
+git:
+  clone: false
 # install:
 # # - test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
 # - pip install -r requirements.txt
@@ -26,7 +28,8 @@ script:
 # - bash -ex .travis-opam.sh
 # - eval $(opam env)
 # - opam install coccinelle -y
-- git remote set-url origin https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
+- git clone https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
+# - git remote set-url origin https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
 - echo $TRAVIS_COMMIT_RANGE
 - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
 - echo $CHANGED_FILES
