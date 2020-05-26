@@ -45,7 +45,7 @@ if __name__ == '__main__':
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
-
+		
 		cmd = 'git remote -v'
 		output, e = shellGitCheckout(cmd)
 		print(output)
