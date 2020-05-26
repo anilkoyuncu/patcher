@@ -5,7 +5,7 @@ python:
 - '3.7'
 os: linux
 install:
-- test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
+# - test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
 - pip install -r requirements.txt
 before_script:
 - echo $GITHUB_TOKEN
@@ -13,9 +13,9 @@ before_script:
 - ccache --zero-stats
 - export USE_CCACHE=1
 script:
-- bash -ex .travis-opam.sh
-- eval $(opam env)
-- opam install coccinelle -y
+# - bash -ex .travis-opam.sh
+# - eval $(opam env)
+# - opam install coccinelle -y
 - echo $TRAVIS_COMMIT_RANGE
 - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
 - echo $CHANGED_FILES

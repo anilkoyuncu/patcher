@@ -1,6 +1,5 @@
 from common.commons import *
 
-from github import Github
 
 
 
@@ -36,8 +35,18 @@ if __name__ == '__main__':
 
 
 		# cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
-		cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath
-		print(cmd)
+		# cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath
+		# print(cmd)
+		# output, e = shellGitCheckout(cmd)
+		# print(output)
+		# print(e)
+
+		cmd = 'rm ' + patchName
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
+
+		cmd = 'git remote -v'
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
