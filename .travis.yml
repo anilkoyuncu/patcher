@@ -1,12 +1,14 @@
 sudo: required
 dist: bionic
 language: python
+# 
 python:
   - "3.7"
 os: linux
 install: 
   - test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
   - pip install -r requirements.txt
+  - composer install --dev --prefer-dist
 
 before_install:
   - composer config --global github-oauth.github.com "$GITHUB_TOKEN"
