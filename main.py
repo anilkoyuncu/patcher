@@ -51,7 +51,7 @@ if __name__ == '__main__':
 		print(output)
 		print(e)
 
-		cmd = 'git commit -a -m '+ "' Generated patch for\n" + commit_str + "'"
+		cmd = 'git commit -a -m '+ "' Generated patch for \n\n\r\n " + commit_str + "'"
 		print(cmd)
 		output, e = shellGitCheckout(cmd)
 		print(output)

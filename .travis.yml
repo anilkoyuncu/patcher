@@ -5,8 +5,8 @@ language: minimal
 os: linux
 git:
   clone: false
-# install:
-# # - test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
+install:
+- test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
 # - pip install -r requirements.txt
 before_script:
 - git config --global credential.helper 'cache --timeout=3600'
@@ -30,9 +30,9 @@ before_script:
 - export USE_CCACHE=1
 
 script:
-# - bash -ex .travis-opam.sh
-# - eval $(opam env)
-# - opam install coccinelle -y
+- bash -ex .travis-opam.sh
+- eval $(opam env)
+- opam install coccinelle -y
 # - git remote set-url origin https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
 - echo $TRAVIS_COMMIT_RANGE
 - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
