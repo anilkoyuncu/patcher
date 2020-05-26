@@ -62,6 +62,10 @@ if __name__ == '__main__':
 		print(output)
 		print(e)
 
+		cmd = 'git config --add git-pull-request.hosttype github'
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
 		cmd = 'git pull-request  --debug'
 		# cmd = 'git config -l'
 		output, e = shellGitCheckout(cmd)
