@@ -11,14 +11,14 @@ if __name__ == '__main__':
 		args = getRun()
 		sys.path.append(args.root)
 		files = args.job
-		print('test')
-		print(args)
+		# print('test')
+		# print(args)
 		print(files)
-		logging.info(files)
+		# logging.info(files)
 		ROOT_DIR = args.root
 		spfile = 'for_14_10.cocci'
 
-		os.mkdir(join(ROOT_DIR,'patches'))
+		# os.mkdir(join(ROOT_DIR,'patches'))
 		patchName = 'inflate.c'
 		srcPath = 'inflate.c'
 
@@ -35,21 +35,21 @@ if __name__ == '__main__':
 
 
 		# cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
-		# cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath
+		cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath
 		# print(cmd)
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
+
+		# cmd = 'rm ' + patchName
 		# output, e = shellGitCheckout(cmd)
 		# print(output)
 		# print(e)
-
-		cmd = 'rm ' + patchName
-		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
 		
-		cmd = 'git remote -v'
-		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
+		# cmd = 'git remote -v'
+		# output, e = shellGitCheckout(cmd)
+		# print(output)
+		# print(e)
 
 		cmd = 'git commit -a -m '+ "' Generated patch for \n\n\r\n " + commit_str + "'"
 		print(cmd)
@@ -66,7 +66,7 @@ if __name__ == '__main__':
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
-		cmd = 'git pull-request  --debug'
+		cmd = 'git pull-request'
 		# cmd = 'git config -l'
 		output, e = shellGitCheckout(cmd)
 		print(output)
