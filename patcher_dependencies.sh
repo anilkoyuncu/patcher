@@ -16,8 +16,11 @@ ccache --version
 ccache --zero-stats
 export USE_CCACHE=1
 
-test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
-bash -ex .travis-opam.sh
+# test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
+curl -L https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-ocaml.sh
+  | sh
+eval $(opam config env)
+# bash -ex .travis-opam.sh
 # eval $(opam env)
 opam install coccinelle -y
 # - git remote set-url origin https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
