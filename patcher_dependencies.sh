@@ -17,8 +17,8 @@ ccache --zero-stats
 export USE_CCACHE=1
 
 # test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
-curl -L https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-ocaml.sh
-  | sh
+test -e .travis-ocaml.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-ocaml.sh
+bash -ex .travis-ocaml.sh
 eval $(opam config env)
 # bash -ex .travis-opam.sh
 # eval $(opam env)
