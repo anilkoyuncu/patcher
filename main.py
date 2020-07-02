@@ -12,7 +12,7 @@ if __name__ == '__main__':
 		sys.path.append(args.root)
 		commitRange = args.job
 		print(commitRange)
-		
+
 		# print('test')
 		# print(args)
 		# cmd = 'git -C ' + 'anilkoyuncu/php-src'+ ' show ' + x + " --pretty=\"format:\" --stat -M100%"
