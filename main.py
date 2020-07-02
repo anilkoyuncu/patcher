@@ -10,10 +10,14 @@ if __name__ == '__main__':
 	try:
 		args = getRun()
 		sys.path.append(args.root)
-		files = args.job
+		commitRange = args.job
+		print(commitRange)
+		
 		# print('test')
 		# print(args)
-		print(files)
+		# cmd = 'git -C ' + 'anilkoyuncu/php-src'+ ' show ' + x + " --pretty=\"format:\" --stat -M100%"
+		#
+		# print(files)
 		# logging.info(files)
 		ROOT_DIR = args.root
 		spfile = 'for_14_10.cocci'
