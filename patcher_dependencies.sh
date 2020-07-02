@@ -2,6 +2,7 @@
 
 # - git config --global credential.helper store
 # wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+echo $RANGE
 wget https://repo.anaconda.com/miniconda/Miniconda2-latest-Windows-x86.exe -O miniconda.sh;
 bash miniconda.sh -b -p $HOME/miniconda
 source "$HOME/miniconda/etc/profile.d/conda.sh"
@@ -26,8 +27,7 @@ eval $(opam config env)
 # eval $(opam env)
 opam install coccinelle -y
 # - git remote set-url origin https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
-echo $TRAVIS_COMMIT_RANGE
-RANGE=$TRAVIS_COMMIT_RANGE
+
 # CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
 # echo $CHANGED_FILES
 # echo ${GH_TOKEN}
