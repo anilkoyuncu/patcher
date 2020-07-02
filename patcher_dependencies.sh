@@ -15,6 +15,7 @@ conda activate fixminerEnv
 ccache --version
 ccache --zero-stats
 export USE_CCACHE=1
+export OCAML_VERSION=4.05 
 
 # test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
 test -e .travis-ocaml.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-ocaml.sh
