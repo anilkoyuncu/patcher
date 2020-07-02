@@ -16,7 +16,7 @@ if __name__ == '__main__':
 		# print('test')
 		# print(args)
 		# cmd = 'git -C ' + 'anilkoyuncu/php-src'+ ' show ' + x + " --pretty=\"format:\" --stat -M100%"
-		#
+		# 
 		# print(files)
 		# logging.info(files)
 		ROOT_DIR = args.root
