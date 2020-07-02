@@ -25,10 +25,12 @@ eval $(opam config env)
 # eval $(opam env)
 opam install coccinelle -y
 # - git remote set-url origin https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
-echo $TRAVIS_COMMIT_RANGE
-CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
-echo $CHANGED_FILES
-echo ${GH_TOKEN}
-echo $GH_TOKEN
-# spatch --version
-bash patcher.sh $CHANGED_FILES
+# echo $TRAVIS_COMMIT_RANGE
+# CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
+# echo $CHANGED_FILES
+# echo ${GH_TOKEN}
+# echo $GH_TOKEN
+# # spatch --version
+# bash patcher.sh $CHANGED_FILES
+echo $1
+bash patcher.sh $1
