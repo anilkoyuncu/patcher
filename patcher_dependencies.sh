@@ -24,7 +24,8 @@ ccache --zero-stats
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-export OCAML_VERSION=4.05 
+brew unlink binutils
+ 
 brew install coccinelle
 spatch --version
 
