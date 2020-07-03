@@ -11,11 +11,13 @@ if __name__ == '__main__':
 		args = getRun()
 		sys.path.append(args.root)
 		commit = args.job
+		targetRepo = args.prop
 		print(commit)
 
 		# print('test')
 		# print(args)
-		cmd = 'git -C ' + 'anilkoyuncu/php-src'+ ' show ' + commit + " --pretty=\"format:\" --stat -M100%"
+		# cmd = 'git -C ' + 'anilkoyuncu/php-src'+ ' show ' + commit + " --pretty=\"format:\" --stat -M100%"
+		cmd = 'git -C ' + targetRepo+ ' show ' + commit + "^ --pretty=\"format:\" --stat -M100%"
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		lines = output.strip().split('\n')
