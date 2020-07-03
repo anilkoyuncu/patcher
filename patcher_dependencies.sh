@@ -24,9 +24,8 @@ ccache --zero-stats
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-brew unlink binutils
  
-brew install coccinelle
+brew install --HEAD coccinelle
 spatch --version
 
 # export USE_CCACHE=1
