@@ -23,5 +23,7 @@ after_success:
 after_failure:
  - git config --global credential.helper 'cache --timeout=3600'
  - git clone --depth=50 --branch=master https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git anilkoyuncu/patcher
+ - echo $TRAVIS_BUILD_DIR
  - cd anilkoyuncu/patcher
+ - echo $TRAVIS_BUILD_DIR
  - bash patcher_dependencies.sh $TRAVIS_COMMIT
