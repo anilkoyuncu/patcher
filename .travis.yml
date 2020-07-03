@@ -8,10 +8,11 @@ git:
 
 
 script:
-- git config --global credential.helper 'cache --timeout=3600'
-- git clone --depth=50 --branch=master https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git anilkoyuncu/patcher
-- cd anilkoyuncu/patcher
-- bash -ex patcher_dependencies.sh
+# - git config --global credential.helper 'cache --timeout=3600'
+# - git clone --depth=50 --branch=master https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git anilkoyuncu/patcher
+# - cd anilkoyuncu/patcher
+# - bash -ex patcher_dependencies.sh
+  - return 1
 env:
   matrix:
   - OCAML_VERSION=4.05 DISTRO=ubuntu
