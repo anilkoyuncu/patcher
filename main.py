@@ -10,25 +10,33 @@ if __name__ == '__main__':
 	try:
 		args = getRun()
 		sys.path.append(args.root)
-		commitRange = args.job
-		print(commitRange)
+		commit = args.job
+		print(commit)
 
-		# # print('test')
-		# # print(args)
-		# # cmd = 'git -C ' + 'anilkoyuncu/php-src'+ ' show ' + x + " --pretty=\"format:\" --stat -M100%"
-		# #
-		# # print(files)
-		# # logging.info(files)
-		# ROOT_DIR = args.root
-		# spfile = 'for_14_10.cocci'
+		# print('test')
+		# print(args)
+		cmd = 'git -C ' + 'anilkoyuncu/php-src'+ ' show ' + commit + " --pretty=\"format:\" --stat -M100%"
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		lines = output.strip().split('\n')
+		filenames = []
+		for line in lines[:-1]:
+			fname, ftype = line.split('|')
+			fname = fname.strip()
+			filenames.append(fname)
 		#
-		# # os.mkdir(join(ROOT_DIR,'patches'))
-		# patchName = 'inflate.c'
-		# srcPath = 'inflate.c'
-		#
-		# print(os.listdir())
-		#
-		#
+		print(filenames)
+		# logging.info(files)
+		ROOT_DIR = args.root
+		spfile = 'for_14_10.cocci'
+
+		# os.mkdir(join(ROOT_DIR,'patches'))
+		patchName = 'inflate.c'
+		srcPath = 'inflate.c'
+
+		print(os.listdir())
+
+
 		# cmd = 'git checkout -b '+ patchName+'_'+spfile+' --track origin/master'
 		# output, e = shellGitCheckout(cmd)
 		# print(output)
