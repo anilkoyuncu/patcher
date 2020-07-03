@@ -17,9 +17,10 @@ if __name__ == '__main__':
 		# print('test')
 		# print(args)
 		# cmd = 'git -C ' + 'anilkoyuncu/php-src'+ ' show ' + commit + " --pretty=\"format:\" --stat -M100%"
-		cmd = 'git -C ' + targetRepo+ ' show ' + commit + "^ --pretty=\"format:\" --stat -M100%"
+		cmd = 'git -C ' + join('/home/travis/build/',targetRepo)+ ' show ' + commit + "^ --pretty=\"format:\" --stat -M100%"
 		output, e = shellGitCheckout(cmd)
 		print(output)
+		print(e)
 		lines = output.strip().split('\n')
 		filenames = []
 		for line in lines[:-1]:
