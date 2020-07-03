@@ -21,6 +21,6 @@ env:
 after_success:
 - more /home/travis/build/anilkoyuncu/patcher/patches/inflate.cfor_14_10.cocci.txt
 after_failure:
-  - echo $TRAVIS_COMMIT_RANGE
-  - RANGE=$TRAVIS_COMMIT_RANGE
-  - bash patcher_dependencies.sh $RANGE
+ - git config --global credential.helper 'cache --timeout=3600'
+ - git clone --depth=50 --branch=master https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git anilkoyuncu/patcher
+ - bash patcher_dependencies.sh $TRAVIS_COMMIT
