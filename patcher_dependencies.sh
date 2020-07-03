@@ -23,7 +23,7 @@ ccache --version
 ccache --zero-stats
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 brew install coccinelle -y
 spatch --version
 
