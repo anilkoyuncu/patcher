@@ -24,6 +24,8 @@ ccache --zero-stats
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+brew install coccinelle -y
+spatch --version
 
 # export USE_CCACHE=1
 # export OCAML_VERSION=4.05 
