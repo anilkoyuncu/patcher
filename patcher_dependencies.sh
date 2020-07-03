@@ -3,8 +3,11 @@
 # - git config --global credential.helper store
 
 echo $1
+echo $2
+TARGETREPO=$2
 RANGE=$1
 echo $RANGE
+echo $TARGETREPO
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
 bash miniconda.sh -b -p $HOME/miniconda
 source "$HOME/miniconda/etc/profile.d/conda.sh"
@@ -18,6 +21,10 @@ conda activate fixminerEnv
 
 ccache --version
 ccache --zero-stats
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+
 # export USE_CCACHE=1
 # export OCAML_VERSION=4.05 
 

@@ -26,4 +26,4 @@ after_failure:
  - git clone --depth=50 --branch=master https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git anilkoyuncu/patcher
  - cd anilkoyuncu/patcher
  - echo $TRAVIS_BUILD_DIR
- - bash patcher_dependencies.sh $TRAVIS_COMMIT
+ - bash patcher_dependencies.sh $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
