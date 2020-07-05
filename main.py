@@ -7,7 +7,7 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 	output, e = shellGitCheckout(cmd)
 	print(output)
 	print(e)
-	
+
 	targetBranch = patchName.replace('/','_')
 	cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
 	print(cmd)
@@ -59,6 +59,12 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 		print(e)
 
 		cmd = 'git -C '+targetPath+' config  core.editor cat'
+		print(cmd)
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
+
+		cmd = 'git -C '+targetPath+' config remote.origin.fetch  +refs/heads/*:refs/remotes/origin/*'
 		print(cmd)
 		output, e = shellGitCheckout(cmd)
 		print(output)
