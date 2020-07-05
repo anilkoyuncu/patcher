@@ -28,10 +28,4 @@ after_failure:
  - cd anilkoyuncu/patcher
  - pwd
  - echo $TRAVIS_BUILD_DIR
- - git checkout -b test123456
- - touch test
- - git add .
- - git commit -m 'test'
- - git config --add git-pull-request.hosttype github
- - git pull-request
- # - bash patcher_dependencies.sh $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
+ - bash patcher_dependencies.sh $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
