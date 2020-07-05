@@ -2,12 +2,13 @@ from common.commons import *
 
 
 def patchCore(targetPath,patchName,spfile,ROOT_DIR):
-	
+
+	targetBranch = patchName.replace('/','_')
 	cmd = 'git -C '+targetPath+ ' checkout -b '+ patchName+'_'+spfile + ' --track origin/master'
-	# print(cmd)
+	print(cmd)
 	output, e = shellGitCheckout(cmd)
-	# print(output)
-	# print(e)
+	print(output)
+	print(e)
 
 
 
@@ -39,7 +40,7 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 	# print(e)
 
 	if output.strip() != '':
-
+		print(output)
 		cmd = 'git -C ' +targetPath+ ' commit -a -m '+ "' Generated patch for \n\n\r\n " + commit_str + "'"
 		print(cmd)
 		output, e = shellGitCheckout(cmd)
