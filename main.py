@@ -1,12 +1,14 @@
 from common.commons import *
 
 
-def patchCore(targetPath,patchName,spfile):
+def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 	cmd = 'git -C '+targetPath+ ' checkout -b '+ patchName+'_'+spfile
 	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
 	print(e)
+
+
 
 	with open(join(ROOT_DIR,'cocci',spfile),mode='r') as commitMessage:
 		commit_str = commitMessage.read()
@@ -72,6 +74,7 @@ if __name__ == '__main__':
 		commit = args.job
 		targetRepo = args.prop
 		print(commit)
+		print(args.root)
 
 		PATH = '/home/travis/build/'
 		# print('test')
@@ -95,8 +98,8 @@ if __name__ == '__main__':
 		spfile = 'for_14_10.cocci'
 		for filename in filenames:
 			print(filename)
-			patchCore(join(PATH,targetRepo),filename,spfile)
-		ROOT_DIR = args.root
+			patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'))
+
 
 
 		# os.mkdir(join(ROOT_DIR,'patches'))
