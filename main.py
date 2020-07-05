@@ -51,12 +51,6 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 	# print(e)
 
 	if output.strip() != '':
-		print(output)
-		cmd = 'git -C ' +targetPath+ ' commit -a -m '+ "' Generated patch for \n\n\r\n " + commit_str + "'"
-		print(cmd)
-		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
 
 		cmd = 'git -C '+targetPath+' config  core.editor cat'
 		print(cmd)
@@ -75,9 +69,24 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
+
+
+		print(output)
+		cmd = 'git -C ' +targetPath+ ' commit -a -m '+ "' Generated patch for \n\n\r\n " + commit_str + "'"
+		print(cmd)
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
+
 		cmd = 'git -C '+ targetPath+' pull-request' # --target-remote origin --target-branch ' + targetBranch+'_'+spfile
 		print(cmd)
 		# cmd = 'git config -l'
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
+
+		cmd = 'git -C ' + targetPath + ' config -l'
+		print(cmd)
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)

@@ -19,33 +19,26 @@ export USE_CCACHE=1
 conda env create -f environment.yml
 conda activate fixminerEnv
 
-git checkout -b test123456
-touch test
-git add .
-git commit -m 'test'
-git config --add git-pull-request.hosttype github
-git pull-request
+ccache --version
+ccache --zero-stats
+export USE_CCACHE=1
+export OCAML_VERSION=4.05 
 
-# ccache --version
-# ccache --zero-stats
-# export USE_CCACHE=1
-# export OCAML_VERSION=4.05 
+# test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
+test -e .travis-ocaml.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-ocaml.sh
+bash -ex .travis-ocaml.sh
+eval $(opam config env)
+# bash -ex .travis-opam.sh
+# eval $(opam env)
+opam install coccinelle -y
+# - git remote set-url origin https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
 
-# # test -e .travis-opam.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
-# test -e .travis-ocaml.sh || wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-ocaml.sh
-# bash -ex .travis-ocaml.sh
-# eval $(opam config env)
-# # bash -ex .travis-opam.sh
-# # eval $(opam env)
-# opam install coccinelle -y
-# # - git remote set-url origin https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git
-
-# # # CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
-# # # echo $CHANGED_FILES
-# # # echo ${GH_TOKEN}
-# # # echo $GH_TOKEN
-# # # # spatch --version
-# # # bash patcher.sh $CHANGED_FILES
-# echo $RANGE
-# echo $TARGETREPO
-# bash patcher.sh $RANGE $TARGETREPO
+# # CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
+# # echo $CHANGED_FILES
+# # echo ${GH_TOKEN}
+# # echo $GH_TOKEN
+# # # spatch --version
+# # bash patcher.sh $CHANGED_FILES
+echo $RANGE
+echo $TARGETREPO
+bash patcher.sh $RANGE $TARGETREPO
