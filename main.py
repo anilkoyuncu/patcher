@@ -2,7 +2,8 @@ from common.commons import *
 
 
 def patchCore(targetPath,patchName,spfile):
-	cmd = 'git -C '+targetPath+ ' checkout -b '+ patchName+'_'+spfile+' --track origin/master'
+	cmd = 'git -C '+targetPath+ ' checkout -b '+ patchName+'_'+spfile
+	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
 	print(e)
@@ -13,7 +14,7 @@ def patchCore(targetPath,patchName,spfile):
 	srcPath = join(targetPath,patchName)
 	# cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
 	cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath
-	# print(cmd)
+	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
 	print(e)
@@ -35,15 +36,18 @@ def patchCore(targetPath,patchName,spfile):
 	print(e)
 
 	cmd = 'git -C '+targetPath+' config  core.editor cat'
+	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
 	print(e)
 
 	cmd = 'git -C '+targetPath+' config --add git-pull-request.hosttype github'
+	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
 	print(e)
 	cmd = 'git -C '+ targetPath+' pull-request'
+	print(cmd)
 	# cmd = 'git config -l'
 	output, e = shellGitCheckout(cmd)
 	print(output)
