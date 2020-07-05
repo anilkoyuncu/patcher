@@ -31,29 +31,37 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 	# print(output)
 	# print(e)
 
-	cmd = 'git -C ' +targetPath+ ' commit -a -m '+ "' Generated patch for \n\n\r\n " + commit_str + "'"
+	cmd = 'git -C ' +targetPath+' status --porcelain'
 	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
 	print(e)
 
-	cmd = 'git -C '+targetPath+' config  core.editor cat'
-	print(cmd)
-	output, e = shellGitCheckout(cmd)
-	print(output)
-	print(e)
+	if output.strip() != '':
 
-	cmd = 'git -C '+targetPath+' config --add git-pull-request.hosttype github'
-	print(cmd)
-	output, e = shellGitCheckout(cmd)
-	print(output)
-	print(e)
-	cmd = 'git -C '+ targetPath+' pull-request'
-	print(cmd)
-	# cmd = 'git config -l'
-	output, e = shellGitCheckout(cmd)
-	print(output)
-	print(e)
+		cmd = 'git -C ' +targetPath+ ' commit -a -m '+ "' Generated patch for \n\n\r\n " + commit_str + "'"
+		print(cmd)
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
+
+		cmd = 'git -C '+targetPath+' config  core.editor cat'
+		print(cmd)
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
+
+		cmd = 'git -C '+targetPath+' config --add git-pull-request.hosttype github'
+		print(cmd)
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
+		cmd = 'git -C '+ targetPath+' pull-request'
+		print(cmd)
+		# cmd = 'git config -l'
+		output, e = shellGitCheckout(cmd)
+		print(output)
+		print(e)
 
 	# fils = get_filepaths(join(ROOT_DIR,'patches'), '.c')
 	# print(fils)
@@ -95,10 +103,16 @@ if __name__ == '__main__':
 		# logging.info(files)
 		filenames = [i for i in filenames if i.endswith('.c')]
 
-		spfile = 'for_14_10.cocci'
-		for filename in filenames:
-			print(filename)
-			patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'))
+		# spfile = 'for_14_10.cocci'
+		
+		spfiles = listdir(join(PATH,'anilkoyuncu/patcher/cocci'))
+
+		print(spfiles)
+		for spfile in spfiles:
+			print(spfile)
+			for filename in filenames:
+				print(filename)
+				patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'))
 
 
 
