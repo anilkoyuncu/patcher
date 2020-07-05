@@ -3,10 +3,10 @@ from common.commons import *
 
 def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 	cmd = 'git -C '+targetPath+ ' checkout -b '+ patchName+'_'+spfile
-	print(cmd)
+	# print(cmd)
 	output, e = shellGitCheckout(cmd)
-	print(output)
-	print(e)
+	# print(output)
+	# print(e)
 
 
 
@@ -16,10 +16,10 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 	srcPath = join(targetPath,patchName)
 	# cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
 	cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath
-	print(cmd)
+	# print(cmd)
 	output, e = shellGitCheckout(cmd)
-	print(output)
-	print(e)
+	# print(output)
+	# print(e)
 
 	# cmd = 'rm ' + patchName
 	# output, e = shellGitCheckout(cmd)
@@ -32,10 +32,10 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 	# print(e)
 
 	cmd = 'git -C ' +targetPath+' status --porcelain'
-	print(cmd)
+	# print(cmd)
 	output, e = shellGitCheckout(cmd)
-	print(output)
-	print(e)
+	# print(output)
+	# print(e)
 
 	if output.strip() != '':
 
@@ -90,8 +90,8 @@ if __name__ == '__main__':
 		# cmd = 'git -C ' + 'anilkoyuncu/php-src'+ ' show ' + commit + " --pretty=\"format:\" --stat -M100%"
 		cmd = 'git -C ' + join(PATH,targetRepo)+ ' show ' + commit + "^ --pretty=\"format:\" --stat -M100%"
 		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
+		# print(output)
+		# print(e)
 		lines = output.strip().split('\n')
 		filenames = []
 		for line in lines[:-1]:
@@ -99,19 +99,19 @@ if __name__ == '__main__':
 			fname = fname.strip()
 			filenames.append(fname)
 		#
-		print(filenames)
+		# print(filenames)
 		# logging.info(files)
 		filenames = [i for i in filenames if i.endswith('.c')]
 
 		# spfile = 'for_14_10.cocci'
-		
+
 		spfiles = listdir(join(PATH,'anilkoyuncu/patcher/cocci'))
 
 		print(spfiles)
-		for spfile in spfiles:
-			print(spfile)
-			for filename in filenames:
-				print(filename)
+		for filename in filenames:
+			# print(filename)
+			for spfile in spfiles:
+				# print(spfile)
 				patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'))
 
 
@@ -120,7 +120,7 @@ if __name__ == '__main__':
 		# patchName = 'inflate.c'
 		# srcPath = 'inflate.c'
 
-		print(os.listdir())
+		# print(os.listdir())
 
 
 	except Exception as e:
