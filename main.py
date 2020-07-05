@@ -2,9 +2,20 @@ from common.commons import *
 
 
 def patchCore(targetPath,patchName,spfile,ROOT_DIR):
-
+	cmd = 'git -C '+targetPath+ ' config -l'
+	print(cmd)
+	output, e = shellGitCheckout(cmd)
+	print(output)
+	print(e)
+	
 	targetBranch = patchName.replace('/','_')
 	cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
+	print(cmd)
+	output, e = shellGitCheckout(cmd)
+	print(output)
+	print(e)
+
+	cmd = 'git -C '+targetPath+ ' config -l'
 	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
