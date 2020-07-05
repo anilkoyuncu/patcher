@@ -23,7 +23,15 @@ after_success:
 after_failure:
  - echo $TRAVIS_REPO_SLUG
  - git config --global credential.helper 'cache --timeout=3600'
+ - cd /home/travis/build/
  - git clone --depth=50 --branch=master https://anilkoyuncu:${GITHUB_TOKEN}@github.com/anilkoyuncu/patcher.git anilkoyuncu/patcher
  - cd anilkoyuncu/patcher
+ - pwd
  - echo $TRAVIS_BUILD_DIR
- - bash patcher_dependencies.sh $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
+ - git checkout -b test123456
+ - touch test
+ - git add .
+ - git commit -m 'test'
+ - git config --add git-pull-request.hosttype github
+ - git pull-request
+ # - bash patcher_dependencies.sh $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
