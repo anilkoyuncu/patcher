@@ -9,7 +9,8 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 	print(e)
 
 	targetBranch = patchName.replace('/','_')
-	cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
+	# cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
+	cmd = 'git -C '+targetPath+ ' checkout --track '+ targetBranch+'_'+spfile
 	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
