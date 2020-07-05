@@ -2,7 +2,8 @@ from common.commons import *
 
 
 def patchCore(targetPath,patchName,spfile,ROOT_DIR):
-	cmd = 'git -C '+targetPath+ ' checkout -b '+ patchName+'_'+spfile
+	
+	cmd = 'git -C '+targetPath+ ' checkout -b '+ patchName+'_'+spfile + ' --track origin/master'
 	# print(cmd)
 	output, e = shellGitCheckout(cmd)
 	# print(output)
@@ -103,14 +104,14 @@ if __name__ == '__main__':
 		# logging.info(files)
 		filenames = [i for i in filenames if i.endswith('.c')]
 
-		# spfile = 'for_14_10.cocci'
+		spfile = 'expr_stmt_9_97.cocci1'
 
-		spfiles = listdir(join(PATH,'anilkoyuncu/patcher/cocci'))
+		# spfiles = listdir(join(PATH,'anilkoyuncu/patcher/cocci'))
 
-		print(spfiles)
+		# print(spfiles)
 		for filename in filenames:
 			# print(filename)
-			for spfile in spfiles:
+			# for spfile in spfiles:
 				# print(spfile)
 				patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'))
 
