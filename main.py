@@ -4,7 +4,7 @@ from common.commons import *
 def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 
 	targetBranch = patchName.replace('/','_')
-	cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile 
+	cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
 	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
@@ -58,7 +58,7 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
-		cmd = 'git -C '+ targetPath+' pull-request'
+		cmd = 'git -C '+ targetPath+' pull-request --target-branch ' + targetBranch+'_'+spfile 
 		print(cmd)
 		# cmd = 'git config -l'
 		output, e = shellGitCheckout(cmd)
