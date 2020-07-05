@@ -4,7 +4,7 @@ from common.commons import *
 def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 
 	targetBranch = patchName.replace('/','_')
-	cmd = 'git -C '+targetPath+ ' checkout -b '+ patchName+'_'+spfile + ' --track origin/master'
+	cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile 
 	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
