@@ -83,7 +83,7 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch,targetRepo):
 			# print(e)
 
 			cmd = 'git -C '+ targetPath+' pull-request --no-fork --target-remote origin --target-branch ' + branch
-			# print(cmd)
+			print(cmd)
 			# cmd = 'git config -l'
 			output, e = shellGitCheckout(cmd)
 			# print(output)
