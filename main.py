@@ -147,6 +147,9 @@ if __name__ == '__main__':
 			for spfile in spfiles:
 				# print(spfile)
 				patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'),branch,targetRepo)
+				cmd = 'git -C ' + join(PATH,targetRepo) + ' checkout -f ' + branch
+				# print(cmd)
+				output, e = shellGitCheckout(cmd)
 
 
 
