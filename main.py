@@ -73,7 +73,7 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch):
 
 
 		print(output)
-		cmd = 'git -C ' +targetPath+ ' commit -a -m '+ "' Generated patch for \n\n\r\n " + commit_str + "'"
+		cmd = 'git -C ' +targetPath+ ' commit -a -m '+ "' "+branch+" fix candidate \n\n\r\n " + commit_str + "'"
 		print(cmd)
 		output, e = shellGitCheckout(cmd)
 		print(output)
@@ -134,14 +134,14 @@ if __name__ == '__main__':
 		# logging.info(files)
 		filenames = [i for i in filenames if i.endswith('.c')]
 
-		spfile = 'expr_stmt_9_97.cocci1'
+		# spfile = 'expr_stmt_9_97.cocci1'
 
-		# spfiles = listdir(join(PATH,'anilkoyuncu/patcher/cocci'))
+		spfiles = listdir(join(PATH,'anilkoyuncu/patcher/cocci'))
 
 		# print(spfiles)
 		for filename in filenames:
 			# print(filename)
-			# for spfile in spfiles:
+			for spfile in spfiles:
 				# print(spfile)
 				patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'),branch)
 
