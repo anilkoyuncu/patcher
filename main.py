@@ -5,6 +5,8 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch,targetRepo):
 
 	targetBranch = patchName.replace('/','_')
 
+	targetBranch = branch + "_"+ targetBranch
+
 	cmd = 'git -C ls-remote --heads https://github.com/'+targetRepo+ ' ' + targetBranch
 	print(cmd)
 	output, e = shellGitCheckout(cmd)
