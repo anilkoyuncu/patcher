@@ -49,4 +49,4 @@ git pull-request
 # # bash patcher.sh $CHANGED_FILES
 echo $RANGE
 echo $TARGETREPO
-bash patcher.sh $RANGE $TARGETREPO $BRANCH
+# bash patcher.sh $RANGE $TARGETREPO $BRANCH
