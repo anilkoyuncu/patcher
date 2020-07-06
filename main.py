@@ -8,17 +8,17 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch,targetRepo):
 	targetBranch = branch + "_"+ targetBranch
 
 	cmd = 'git -C '+targetPath+' ls-remote --heads https://github.com/'+targetRepo+ ' ' + targetBranch
-	print(cmd)
+	# print(cmd)
 	output, e = shellGitCheckout(cmd)
-	print(output)
-	print(e)
+	# print(output)
+	# print(e)
 	if output.strip() == '':
 		# cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
 		cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
-		print(cmd)
+		# print(cmd)
 		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
+		# print(output)
+		# print(e)
 
 		# cmd = 'git -C '+targetPath+ ' config -l'
 		# print(cmd)
@@ -33,7 +33,7 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch,targetRepo):
 
 		srcPath = join(targetPath,patchName)
 		# cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
-		cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath
+		cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath + ' --very-quiet --no-show-diff '
 		# print(cmd)
 		output, e = shellGitCheckout(cmd)
 		# print(output)
@@ -58,37 +58,36 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch,targetRepo):
 		if output.strip() != '':
 
 			cmd = 'git -C '+targetPath+' config  core.editor cat'
-			print(cmd)
+			# print(cmd)
 			output, e = shellGitCheckout(cmd)
-			print(output)
-			print(e)
+			# print(output)
+			# print(e)
 
 			cmd = 'git -C '+targetPath+' config remote.origin.fetch  +refs/heads/*:refs/remotes/origin/*'
-			print(cmd)
+			# print(cmd)
 			output, e = shellGitCheckout(cmd)
-			print(output)
-			print(e)
+			# print(output)
+			# print(e)
 
 			cmd = 'git -C '+targetPath+' config --add git-pull-request.hosttype github'
-			print(cmd)
+			# print(cmd)
 			output, e = shellGitCheckout(cmd)
-			print(output)
-			print(e)
+			# print(output)
+			# print(e)
 
 
-			print(output)
 			cmd = 'git -C ' +targetPath+ ' commit -a -m '+ "' "+branch+" fix candidate \n\n\r\n " + commit_str + "'"
-			print(cmd)
+			# print(cmd)
 			output, e = shellGitCheckout(cmd)
-			print(output)
-			print(e)
+			# print(output)
+			# print(e)
 
 			cmd = 'git -C '+ targetPath+' pull-request --no-fork --target-remote origin --target-branch ' + branch
-			print(cmd)
+			# print(cmd)
 			# cmd = 'git config -l'
 			output, e = shellGitCheckout(cmd)
-			print(output)
-			print(e)
+			# print(output)
+			# print(e)
 
 			# cmd = 'git -C ' + targetPath + ' config -l'
 			# print(cmd)
