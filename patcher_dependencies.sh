@@ -14,6 +14,7 @@ echo $TARGETREPO
 
 if [[ $BRANCH =~ cocci[0-9]* ]]; then
     git push origin --delete $BRANCH
+    exit 1
 fi
 
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
