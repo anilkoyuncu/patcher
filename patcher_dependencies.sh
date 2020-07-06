@@ -4,8 +4,11 @@
 
 echo $1
 echo $2
+echo $3
+BRANCH=$3
 TARGETREPO=$2
 RANGE=$1
+echo $BRANCH
 echo $RANGE
 echo $TARGETREPO
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
@@ -41,4 +44,4 @@ opam install coccinelle -y
 # # bash patcher.sh $CHANGED_FILES
 echo $RANGE
 echo $TARGETREPO
-bash patcher.sh $RANGE $TARGETREPO
+bash patcher.sh $RANGE $TARGETREPO $BRANCH

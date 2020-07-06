@@ -1,7 +1,7 @@
 from common.commons import *
 
 
-def patchCore(targetPath,patchName,spfile,ROOT_DIR):
+def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch):
 	cmd = 'git -C '+targetPath+ ' config -l'
 	print(cmd)
 	output, e = shellGitCheckout(cmd)
@@ -10,7 +10,7 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 
 	targetBranch = patchName.replace('/','_')
 	# cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
-	cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile 
+	cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
 	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
@@ -79,7 +79,7 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR):
 		print(output)
 		print(e)
 
-		cmd = 'git -C '+ targetPath+' pull-request' # --target-remote origin --target-branch ' + targetBranch+'_'+spfile
+		cmd = 'git -C '+ targetPath+' pull-request --target-branch ' + branch
 		print(cmd)
 		# cmd = 'git config -l'
 		output, e = shellGitCheckout(cmd)
@@ -110,8 +110,10 @@ if __name__ == '__main__':
 		sys.path.append(args.root)
 		commit = args.job
 		targetRepo = args.prop
+		branch = args.branch
 		print(commit)
 		print(args.root)
+		print(branch)
 
 		PATH = '/home/travis/build/'
 		# print('test')
@@ -141,7 +143,7 @@ if __name__ == '__main__':
 			# print(filename)
 			# for spfile in spfiles:
 				# print(spfile)
-				patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'))
+				patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'),branch)
 
 
 

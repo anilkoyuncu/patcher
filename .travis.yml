@@ -29,4 +29,4 @@ after_failure:
  - pwd
  - echo $TRAVIS_BRANCH
  - echo $TRAVIS_BUILD_DIR
- # - bash patcher_dependencies.sh $TRAVIS_COMMIT $TRAVIS_REPO_SLUG
+ - bash patcher_dependencies.sh $TRAVIS_COMMIT $TRAVIS_REPO_SLUG $TRAVIS_BRANCH

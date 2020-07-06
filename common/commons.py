@@ -167,6 +167,7 @@ def getRun():
     parser.add_argument('-root', dest='root', help='root folder')
     parser.add_argument('-job',dest='job',help='job name')
     parser.add_argument('-prop',dest='prop',help='property file')
+    parser.add_argument('-branch',dest='branch',help='branchname')
 
 
     args = parser.parse_args()
