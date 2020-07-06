@@ -5,7 +5,7 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch,targetRepo):
 
 	targetBranch = patchName.replace('/','_')
 
-	targetBranch = branch + "_"+ targetBranch
+	targetBranch = branch + "_"+ targetBranch +'_'+spfile
 
 	cmd = 'git -C '+targetPath+' ls-remote --heads https://github.com/'+targetRepo+ ' ' + targetBranch
 	# print(cmd)
@@ -14,7 +14,7 @@ def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch,targetRepo):
 	# print(e)
 	if output.strip() == '':
 		# cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
-		cmd = 'git -C '+targetPath+ ' checkout -f -b '+ targetBranch+'_'+spfile
+		cmd = 'git -C '+targetPath+ ' checkout -f -b '+ targetBranch
 		# print(cmd)
 		output, e = shellGitCheckout(cmd)
 		# print(output)
