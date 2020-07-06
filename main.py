@@ -1,105 +1,107 @@
 from common.commons import *
 
 
-def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch):
-	cmd = 'git -C '+targetPath+ ' config -l'
-	print(cmd)
-	output, e = shellGitCheckout(cmd)
-	print(output)
-	print(e)
+def patchCore(targetPath,patchName,spfile,ROOT_DIR,branch,targetRepo):
 
 	targetBranch = patchName.replace('/','_')
-	# cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
-	cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
+
+	cmd = 'git -C ls-remote --heads https://github.com/'+targetRepo+ ' ' + targetBranch
 	print(cmd)
 	output, e = shellGitCheckout(cmd)
 	print(output)
 	print(e)
-
-	cmd = 'git -C '+targetPath+ ' config -l'
-	print(cmd)
-	output, e = shellGitCheckout(cmd)
-	print(output)
-	print(e)
-
-
-
-	with open(join(ROOT_DIR,'cocci',spfile),mode='r') as commitMessage:
-		commit_str = commitMessage.read()
-
-	srcPath = join(targetPath,patchName)
-	# cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
-	cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath
-	# print(cmd)
-	output, e = shellGitCheckout(cmd)
-	# print(output)
-	# print(e)
-
-	# cmd = 'rm ' + patchName
-	# output, e = shellGitCheckout(cmd)
-	# print(output)
-	# print(e)
-
-	# cmd = 'git remote -v'
-	# output, e = shellGitCheckout(cmd)
-	# print(output)
-	# print(e)
-
-	cmd = 'git -C ' +targetPath+' status --porcelain'
-	# print(cmd)
-	output, e = shellGitCheckout(cmd)
-	# print(output)
-	# print(e)
-
-	if output.strip() != '':
-
-		cmd = 'git -C '+targetPath+' config  core.editor cat'
+	if output.strip() == '':
+		# cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
+		cmd = 'git -C '+targetPath+ ' checkout -b '+ targetBranch+'_'+spfile
 		print(cmd)
 		output, e = shellGitCheckout(cmd)
 		print(output)
 		print(e)
 
-		cmd = 'git -C '+targetPath+' config remote.origin.fetch  +refs/heads/*:refs/remotes/origin/*'
-		print(cmd)
+		# cmd = 'git -C '+targetPath+ ' config -l'
+		# print(cmd)
+		# output, e = shellGitCheckout(cmd)
+		# print(output)
+		# print(e)
+
+
+
+		with open(join(ROOT_DIR,'cocci',spfile),mode='r') as commitMessage:
+			commit_str = commitMessage.read()
+
+		srcPath = join(targetPath,patchName)
+		# cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' --patch -o' + join(ROOT_DIR,'patches',patchName) + ' > ' + join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
+		cmd = 'spatch --sp-file ' + join(ROOT_DIR,'cocci',spfile) + ' ' + srcPath + ' -o ' + srcPath
+		# print(cmd)
 		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
+		# print(output)
+		# print(e)
 
-		cmd = 'git -C '+targetPath+' config --add git-pull-request.hosttype github'
-		print(cmd)
+		# cmd = 'rm ' + patchName
+		# output, e = shellGitCheckout(cmd)
+		# print(output)
+		# print(e)
+
+		# cmd = 'git remote -v'
+		# output, e = shellGitCheckout(cmd)
+		# print(output)
+		# print(e)
+
+		cmd = 'git -C ' +targetPath+' status --porcelain'
+		# print(cmd)
 		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
+		# print(output)
+		# print(e)
+
+		if output.strip() != '':
+
+			cmd = 'git -C '+targetPath+' config  core.editor cat'
+			print(cmd)
+			output, e = shellGitCheckout(cmd)
+			print(output)
+			print(e)
+
+			cmd = 'git -C '+targetPath+' config remote.origin.fetch  +refs/heads/*:refs/remotes/origin/*'
+			print(cmd)
+			output, e = shellGitCheckout(cmd)
+			print(output)
+			print(e)
+
+			cmd = 'git -C '+targetPath+' config --add git-pull-request.hosttype github'
+			print(cmd)
+			output, e = shellGitCheckout(cmd)
+			print(output)
+			print(e)
 
 
-		print(output)
-		cmd = 'git -C ' +targetPath+ ' commit -a -m '+ "' "+branch+" fix candidate \n\n\r\n " + commit_str + "'"
-		print(cmd)
-		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
+			print(output)
+			cmd = 'git -C ' +targetPath+ ' commit -a -m '+ "' "+branch+" fix candidate \n\n\r\n " + commit_str + "'"
+			print(cmd)
+			output, e = shellGitCheckout(cmd)
+			print(output)
+			print(e)
 
-		cmd = 'git -C '+ targetPath+' pull-request --no-fork --target-remote origin --target-branch ' + branch
-		print(cmd)
-		# cmd = 'git config -l'
-		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
+			cmd = 'git -C '+ targetPath+' pull-request --no-fork --target-remote origin --target-branch ' + branch
+			print(cmd)
+			# cmd = 'git config -l'
+			output, e = shellGitCheckout(cmd)
+			print(output)
+			print(e)
 
-		cmd = 'git -C ' + targetPath + ' config -l'
-		print(cmd)
-		output, e = shellGitCheckout(cmd)
-		print(output)
-		print(e)
+			# cmd = 'git -C ' + targetPath + ' config -l'
+			# print(cmd)
+			# output, e = shellGitCheckout(cmd)
+			# print(output)
+			# print(e)
 
-	# fils = get_filepaths(join(ROOT_DIR,'patches'), '.c')
-	# print(fils)
-	# print(join(ROOT_DIR, 'patches', patchName + spfile + '.txt'))
-	# cmd = 'more '+join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
-	# output, e = shellGitCheckout(cmd)
-	# print(output)
-	# print(e)
-	# g = Github("access_token")
+		# fils = get_filepaths(join(ROOT_DIR,'patches'), '.c')
+		# print(fils)
+		# print(join(ROOT_DIR, 'patches', patchName + spfile + '.txt'))
+		# cmd = 'more '+join(ROOT_DIR, 'patches', patchName + spfile + '.txt')
+		# output, e = shellGitCheckout(cmd)
+		# print(output)
+		# print(e)
+		# g = Github("access_token")
 
 
 if __name__ == '__main__':
@@ -143,7 +145,7 @@ if __name__ == '__main__':
 			# print(filename)
 			for spfile in spfiles:
 				# print(spfile)
-				patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'),branch)
+				patchCore(join(PATH,targetRepo),filename,spfile,join(PATH,'anilkoyuncu/patcher'),branch,targetRepo)
 
 
 
